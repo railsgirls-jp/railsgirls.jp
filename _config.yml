@@ -1,8 +1,21 @@
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile", "Gemfile.lock"]
+auto: true
+pygments: true
+
+title : Rails Girls Guide -Japanese-
+tagline: Site Tagline
+author :
+  name : Yoko Harada
+  email : yokolet@gmail.com
+  github : railsgirls-jp
+  twitter : username
+  feedburner : feedname
+
+production_url : http://railsgirls-jp.github.com
+
 destination: ./_site
-auto:        false
 lsi:         false
 server_port: 4000
-pygments:    true
 markdown:    maruku
 permalink:   pretty
 maruku:
@@ -10,3 +23,7 @@ maruku:
   use_divs:   false
   png_dir:    images/latex
   png_url:    /images/latex
+
+JB :
+  version : 0.2.13
+  BASE_PATH : false
