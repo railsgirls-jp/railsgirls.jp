@@ -4,29 +4,33 @@ title: Guides
 permalink: guide
 ---
 
-# The How to Guide
+# Rails Girls イベントを開催するには
 
 
-## Hosting your first Rails Girls event
+## はじめてRails Girlsイベントを開催しようとしている方へ
 
-Our aim is to give tools for women to understand technology. The Rails Girls events do this by providing a great first experience on building the Internet.
+Rails Girlsは女性がプログラミングを理解するための道具を提供することを目的にしています。自分が作ったRailsアプリをインターネット上に公開するという、これまでにない経験をしてもらうのがRails Girlsです。
 
-Rails Girls was founded in end of 2010 in Helsinki. Originally intended as a onetime event, we never thought we'd see so many local chapters all around the world! This guide has been put together to help you get started.
+Rails Girlsは2010年末にヘルシンキで設立されました。当初は一回限りのイベントと考えていたので、現在のように世界各地で数々のRails Girlsイベントが開催されるとは思っていませんでした。この手引きはどうやってイベントをはじめたらいいかの情報を集めたものです。
 
-Please contact us at [contact@railsgirls.com](mailto:contact@railsgirls.com) if you want to organize a local chapter or have feedback on the guides. The roadmap for future events can be seen at [www.railsgirls.com](http://railsgirls.com).
+あなたの地域でRails Girlsを開催したい、あるいは何かフィードバックしたい場合には、[contact@railsgirls.com](mailto:contact@railsgirls.com)まで、ご連絡ください。今後のイベント開催予定は[www.railsgirls.com](http://railsgirls.com)でご覧になれます。
 
 
-### The Basics
-Rails Girls events are non-profit. We don’t charge the participants and do not pay for coaches or speakers. Participants don’t need any previous knowledge about programming and there are no age-limitations. All the participants need is a laptop and some curiosity. 
-  
-The two-day event includes a lot of small group working and short focused talks on programming, design and web. No panel discussions or podium-talks - the spirit should be informal and hands-on. The more you can remove abstractions and add inclusivity the better.
+### Rails Girlsの概要
+Rails Girlsイベントは非営利目的で開催されます。Rails Girlsは参加費を徴収することはありません。また、コーチやスピーカにお金を払うこともありません。イベントに参加するにあたり、プログラミングの知識は一切問いません。また、年齢制限もありません。参加するには自分のノートパソコンを持ってくること、やる気を持ってやってくることです。
 
-#### Rails Girls philosophy
+2日間のイベントでは少人数のグループに分かれて課題に取り組んだり、プログラミングとは何かやどのようにプログラムをデザインするか、また、ウェブプログラミングとは何かについての話を少しずつ聞いたりします。パネルディスカッションや誰かが話をするのを単に聞くのではありません。大切なのは気楽な雰囲気の中で、実際に手を動かして試してみることです。なんとなくしかわかっていなかったところから、具体的にイメージがわくところまでくればかなりいいと言えるでしょう。
 
-* Show sparks, personality and keep in mind the big picture. Explain, repeat and always tie what you're telling into a larger context.
-* Internet was made by people and it doesn’t break by a little tinkering. Continuously show the human side: encourage coaches to talk about open source communities, their programming idols and their aspirations.
-* Copy-pasting rules. Programming per se isn’t central - you can't really learn to speak chinese in one day, in a similar manner you can only learn the basic vocabulary and expressions in coding. The goal of every event is to make something visible!
-* Girls run this world! But also women, ladies, even boys are allowed in. More than semantics we're interested in a mindset. Both founders were born in the Spice Girls era, they don't see the word girl as condescending or cutesy-cute.
+#### Rails Girlsの方針
+
+* 情熱を持って、自分らしく取り組んでください。また、大きな目標を思い描いてください。自分が何を説明しているのかが参加者にわかるように、よく説明し、また、繰り返し説明し、前後の関係がわかるようにしてください。
+
+* インターネットの世界は多くの人たちによって作り上げられてきたもので、ちょっとしたことで壊れるものではありません。常に、人間が関わってきたことに触れてください。特に、コーチにはオープンソースコミュニティについて語ってくれるようにお願いします。コーチ自身の意欲や尊敬するプログラマが誰かとかを語ってください。
+
+* コピーペーストをしてもよいというルールについて。プログラミングすること自体がイベントの中心ではありません。たった一日で中国語を話せるようにはならないのと同じで、たったの一日ではコーディングの基本的な用語やシンタックスを学べる程度です。このイベントのゴールは実際にうごくものを作ることですよ！
+
+* この世界を動かしているのはガール(女子）です！でも、女性、レディ、場合によっては男子も参加できます。Rails Girlsという名前は言語的な意味というよりは、心意気のほうに注目したものです。Rails Girlsの創設者は二人とも、Spice Girls全盛時代に生まれました。創設者はガールという単語をかわいらしいの意味だとは考えていません。
+
 
 ### Example Program
 
