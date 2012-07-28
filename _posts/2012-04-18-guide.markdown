@@ -66,24 +66,30 @@ Rails Girlsのイベントは必ずインストレーション・フェストか
 
 09:00 - 10:00 レジストレーションとコーヒーのサービス
 
-*Hint* Reserve enough time for people to mingle and to solve any problems there might be with installations. Give out workbooks, collect acronyms for the Bento exercise. 
+*ヒント* 十分な時間をとって参加者同士やコーチといろいろな話をできるようにしましょう。インストレーションの問題があれば解決するようにしましょう。ワークブックを手渡したり、弁当箱モデルの練習問題で英語の頭文字だけで書かれている用語を集めてみるのもいいでしょう。
 
-10:00 - 10:10 Welcoming words
-*Hint* Mention sponsors, show what we'll build, tell what programming is. 
+10:00 - 10:10 開会の言葉
 
-10:30 - 11:00 UX workshop
+*ヒント* スポンサーに言及してください。何を作るのか、プログラミングとは何かについても説明してください。
 
-11:00 - 11:30 Introduction to programming
-*Hint* Ask one of the coaches to do this. Explain why learning Ruby basics is important even though they'll be using Rails.
+10:30 - 11:00 UX(User Experience: ユーザ体験）ワークショップ
 
-Themes to cover:
-+ The difference between dynamic and static websites: what are web apps?
-+ What are programming languages? What is Rails? 
-+ The tools we’ll be using: browser, terminal, code editor, folder structure
+11:00 - 11:30 プログラミング入門
 
-Show & tell with <a href="http://tryruby.org">tryruby.org</a>, first three-four exercises all together. 
+*ヒント* このレクチャは誰か他のコーチに頼んでもいいでしょう。Railsの勉強をしようとしているので、なぜ、Rubyの基本を学ぶことが大切なのかを説明してください。
 
-11:30 - 13:00 Workshop time
+ここで話すべき項目:
+
++ 動的／静的ウェブサイトの違い。ウェブ・アプリとは何か？
+
++ プログラミング言語とは何か？Railsとは何か？
+
++ ワークショップで使うツール類（ブラウザ、ターミナル、エディタ、フォルダー階層など）について説明する。
+
++ Rubyを試せる <a href="http://tryruby.org">tryruby.org</a> を見せて説明する。最初の３～４個の練習問題を全員で同時進行で試してみる。
+
+11:30 - 13:00 ワークショップ
+
 Going (slowly!) through the curriculum at <a href="http://railsgirls.com/app">railsgirls.com/app</a>. Stop to explain what you’re doing and what the different concepts mean. 
 
 Try to aim for simple explanations even with the cost of accuracy. You don’t need to talk about all underlying concepts. Just try to answer questions when they arise, or move on if they’re too hard or out of scope. You are not here to teach perfect coding skills but to show how to get stuff done. One has to learn how to build web apps before learning how to do it well.
