@@ -17,51 +17,55 @@ Rails Girlsは2010年末にヘルシンキで設立されました。当初は�
 
 
 ### Rails Girlsの概要
-Rails Girlsイベントは非営利目的で開催されます。Rails Girlsは参加費を徴収することはありません。また、コーチやスピーカにお金を払うこともありません。イベントに参加するにあたり、プログラミングの知識は一切問いません。また、年齢制限もありません。参加するには自分のノートパソコンを持ってくること、やる気を持ってやってくることです。
+Rails Girlsイベントは非営利目的で開催されます。Rails Girlsは参加費を徴収することはありません。また、コーチやスピーカにお金を払うこともありません。イベントに参加するにあたり、プログラミングの知識は一切問いません。また、年齢制限もありません。参加するには自分のノートパソコンを持ってくること、やる気を持ってやってくることだけです。
 
-2日間のイベントでは少人数のグループに分かれて課題に取り組んだり、プログラミングとは何かやどのようにプログラムをデザインするか、また、ウェブプログラミングとは何かについての話を少しずつ聞いたりします。パネルディスカッションや誰かが話をするのを単に聞くのではありません。大切なのは気楽な雰囲気の中で、実際に手を動かして試してみることです。なんとなくしかわかっていなかったところから、具体的にイメージがわくところまでくればかなりいいと言えるでしょう。
+2日間のイベントでは少人数のグループに分かれて課題に取り組んだり、プログラミングとは何かやどのようにプログラムをデザインするか、また、ウェブプログラミングとは何かについての話を少しずつ聞いたりします。パネルディスカッションや誰かが話をするのを単に聞くのではありません。大切なのは気楽な雰囲気の中で、実際に手を動かしてものを作ってみることです。なんとなくしかわかっていなかったところから、具体的にイメージがわくところまでくればいいでしょう。
 
 #### Rails Girlsの方針
 
 * 情熱を持って、自分らしく取り組んでください。また、大きな目標を思い描いてください。自分が何を説明しているのかが参加者にわかるように、よく説明し、また、繰り返し説明し、前後の関係がわかるようにしてください。
 
-* インターネットの世界は多くの人たちによって作り上げられてきたもので、ちょっとしたことで壊れるものではありません。常に、人間が関わってきたことに触れてください。特に、コーチにはオープンソースコミュニティについて語ってくれるようにお願いします。コーチ自身の意欲や尊敬するプログラマが誰かとかを語ってください。
+* インターネットの世界は多くの人たちによって作り上げられてきたもので、ちょっとしたことで壊れるものではありません。多くの人間が関わってきたことに常に触れてください。特に、コーチにはオープンソースコミュニティについて語ってくれるようにお願いします。コーチ自身の意欲や尊敬するプログラマが誰かとかを語ってください。
 
-* コピーペーストをしてもよいというルールについて。プログラミングすること自体がイベントの中心ではありません。たった一日で中国語を話せるようにはならないのと同じで、たったの一日ではコーディングの基本的な用語やシンタックスを学べる程度です。このイベントのゴールは実際にうごくものを作ることですよ！
+* コピーペーストをしてもよいというルールについて。プログラミングすること自体がイベントの中心ではありません。たった一日で中国語を話せるようにはならないのと同じです。たったの一日ではコーディングの基本的な用語やシンタックスを学べる程度です。このイベントのゴールは実際に動くものを作ることですよ！
 
-* この世界を動かしているのはガール(女子）です！でも、女性、レディ、場合によっては男子も参加できます。Rails Girlsという名前は言語的な意味というよりは、心意気のほうに注目したものです。Rails Girlsの創設者は二人とも、Spice Girls全盛時代に生まれました。創設者はガールという単語をかわいらしいの意味だとは考えていません。
-
-
-### Example Program
-
-Every Rails Girls event starts with an installation-fest where the setup is pre-installed to the girls computers. See [railsgirls.com/install](http://railsgirls.com/install) for readymade instructions. The installation-fest can include short talks, but the main point is to offer some sparkling wine, get everything set for the next day and the girls to know each other. The timeframe is tentative - you know your audience and what suits them best. We've hosted events both during weekend and weekdays. Also, doing two evenings (4PM - 22 PM) might be a more suitable solution for your community needs.
-
-#### Learning objectives of the workshop:
-
-* Understanding the difference between a dynamic and static web page.
-* Vocabulary of the web: developing a basic understanding of what components make a web application. Understanding the ABCs of coding: strings, methods, variables, arrays, exclamations, chaining, hashed, symbols, blocks.. as well as the tools (terminal, browser, text editor). Creating a conceptual understanding of the web's building blocks: programming languages, frameworks, databases, infrastructure.
-* Have an idea of how to move forward in the programming world: both online and offline.
-
-#### Friday evening: Installation
-
-19:00 - 21:00 Installations and getting to know each other
-*Hint*: Have a coach table where problematic computers can be brought. 
-
-Some installations will fail: be prepared to set girls in pairs, don't use endless amounts of time.
-
-Decorate the place with balloons and posters. Put a fun <a href="http://open.spotify.com/user/lindaliukas/playlist/1fgkUFCFDrSn621kf4iHhr">playlist</a> together for the evening. 
-
-Come up with activities to break the ice: ask the girls to write why they are attending the event on post-its or to draw and describe their dream web app. 
-
-Remember to do a [http://www.fridayhug.com] (www.fridayhug.com)! 
-
-21 -> Coach dinner
-Go through the application with the coaches during dinner. 
+* この世界を動かしているのはガール(女子）です！でも、女性、レディ、場合によっては男子も参加できます。Rails Girlsという名前は言語的な意味というよりは、その言葉が醸し出す心意気の方からとったものです。Rails Girlsの創設者は二人とも、Spice Girls全盛時代に生まれました。創設者はガールという言葉を単なるかわいらしいとか幼いとかの意味だとは考えていません。
 
 
-#### Saturday: Workshop
+### 一般的なカリキュラム
 
-09:00 - 10:00 Registration and coffee
+Rails Girlsのイベントは必ずインストレーション・フェストから始まります。インストレーション・フェストとは参加者のコンピュータにRailsを動かせるだけの環境をインストールする前準備のことです。インストレーションについてはあらかじめ用意されている[railsgirls-jp.github.com/install](http://railsgirls-jp.github.com/install)をご覧ください。インストレーション・フェストでは短時間ならレクチャーを行ってもいいですが、なんといっても目玉はスパークリング・ワインをご馳走することです。そして、翌日のワークショップに備えて、環境設定を全て終わらせること、同時に参加者同士が知り合いになることです。どのくらいの時間を割くかは場合によりけりです。実際にイベントを開催側が参加者の状況を把握して判断すればいいと思います。これまでの例ではイベントはウィークデイのこともありましたし、週末のこともありました。また、夕方から夜にかけての時間帯(午後2時から10時まで）で二日というケースもありました。開催地などの状況に合わせてちょうどいい日程を選んでください。
+
+#### ワークショップで学んでもらう内容:
+
+* 動的なウェブページと静的なウェブページの違いを理解してもらう。
+
+* ウェブアプリケーションの基礎知識: ウェブアプリケーションがどのような要素から出来上がっているかの基本を理解してもらう。コーディングの基本も学んでもらう。例えば、文字列やメソッド、変数、配列、！(バング）、チェイニング、ハッシュ、シンボル、ブロックなど。同時に、ターミナル、ブラウザ、テキストエディタのようなツールについても、学んでもらう。ウェブアプリケーションがどのようにして作られるのかを理解してもらう。例えば、プログラミング言語、フレームワーク、データベース、インフラストラクチャなど。
+
+* プログラミングの世界でどうやって次のステップに進めばいいかをしっかりと理解してもらう。インターネットに接続できる／できない両方の環境で、できるようにしたい。
+
+#### 金曜夜: インストレーション・フェスト
+
+19:00 - 21:00 必要なソフトウェア・ツールをインストールすると同時に参加者同士が知り合いなる日。
+*ヒント*: コーチ用のテーブルを用意するといい。問題のあるノートパソコンが持ち込まれる可能性があるので。
+
+インストールがうまくいかない場合がよくある。コーチと参加者がペアになってインストール作業を進められるように準備しておくといい。無限に時間を費やさないように気をつけるべき。
+
+ワークショップ会場を風船やポスターで飾りましょう。Put a fun <a href="http://open.spotify.com/user/lindaliukas/playlist/1fgkUFCFDrSn621kf4iHhr">playlist</a> together for the evening. 
+
+参加者がリラックスできるような何かをしてください。例えば、どうしてイベントに参加しようと思ったかをポストイットに書いてもらうとか、夢のウェブアプリを思い描いてもらうとかです。
+
+そしてフライデイ・ハグ[http://www.fridayhug.com] (www.fridayhug.com)を忘れないで！
+
+21:00 -> コーチ・ディナー
+
+ディナータイムにはたのコーチとともに、例題となるアプリケーションに一通り目を通す。
+
+
+#### 土曜日: ワークショップ
+
+09:00 - 10:00 レジストレーションとコーヒーのサービス
+
 *Hint* Reserve enough time for people to mingle and to solve any problems there might be with installations. Give out workbooks, collect acronyms for the Bento exercise. 
 
 10:00 - 10:10 Welcoming words
