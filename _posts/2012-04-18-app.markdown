@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Rails Girls App Tutorial
+title: Rails Girls アプリ・チュートリアル
 permalink: app
 ---
 
-# Rails Girls App Tutorial
+# Rails Girls アプリ・チュートリアル
 
 *Created by Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
       

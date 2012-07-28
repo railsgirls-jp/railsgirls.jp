@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Guides
+title: ガイド
 permalink: guide
 ---
 
@@ -90,51 +90,86 @@ Rails Girlsのイベントは必ずインストレーション・フェストか
 
 11:30 - 13:00 ワークショップ
 
-Going (slowly!) through the curriculum at <a href="http://railsgirls.com/app">railsgirls.com/app</a>. Stop to explain what you’re doing and what the different concepts mean. 
+ワークショップは <a href="http://railsgirls-jp.github.com/app">railsgirls-jp.github.com/app</a> のカリキュラムにしたがって進めてください。（ゆっくり！ね）
+先を急がずに、今、何をしているのかを説明する時間をとってください。何か新しい概念がでてきたときにも、その意味を説明してください。
 
-Try to aim for simple explanations even with the cost of accuracy. You don’t need to talk about all underlying concepts. Just try to answer questions when they arise, or move on if they’re too hard or out of scope. You are not here to teach perfect coding skills but to show how to get stuff done. One has to learn how to build web apps before learning how to do it well.
+正確さに欠くようなことになったとしても、シンプルな説明になるように気をつてください。
+以下に、説明すべき項目をあげますが、全てを説明する必要はありません。質問がでたときに説明するだけでもいいかもしれません。
+質問が難しすぎる場合や、見当はずれのことを聞いているとしたら、先に進んでもいいでしょう。
+あなたは完璧なコーディングスキルを教えるためにこのイベントを開催しているのではありません。どのようにすればウェブアプリが
+できあがるのかを教えるためにこのイベントがあります。参加者はどのようにウェブアプリを作るのかを学ぶために来ている
+のであり、よりよい方法を学ぶのは次のステップです。
 
-Concepts to cover:
-+ Rails Generators
-+ Scaffolds: Rails App Structure
-+ Gem Management
-+ MVC, REST/Resources
-+ Models and Active Record
-+ Controllers and ActionController
-+ Views and ERB
+説明するべき概念:
++ Rails ジェネレータ
++ スキャフォールド: Rails アプリのフォルダ構成
++ Gem 管理
++ MVC, REST/リソース
 
-*Tips:* Coaches are people too. They are doing this for the first time too. Teaching might be hard and intimidating, so remember to be available to help coaches or groups with difficult situations or just provide support and encouragement.
++ モデルとアクティブ・レコード
 
-13:00 - 14:00 Lunch
++ コントローラとアクション・コントローラ
 
-14:00 - 14:30 Bentobox exercise
-Putting technical jargon into a context with a conceptual model called Bentobox. 
 
-Two exercises: 1) Going through the 10 technical concepts with the physical Bentobox boards.  2) Going through the words the girls have themselves submitted with the coaches. 
++ ビューとERB
+
+
+*Tips:* コーチたちも参加者同様、かつては、はじめてこのような概念を学んだときがあったはずです。
+教えるということは簡単ではありませんし、及び腰になることもあるかもしれません。
+ですから、難しい状況に陥ったときには他のコーチたちや参加者のグループをいつでも助けてあげられるようにしておきましょう。
+助けてあげられないとしても、サポートするとか励ますとかでもいいでしょう。
+
+13:00 - 14:00 お昼
+
+14:00 - 14:30 弁当箱モデルの練習問題
+
+技術的な用語を概念的な弁当箱モデルの中に分類してみます。
+
+ここでは２つの練習問題に取り組みます:
+
+1) 実際に弁当箱をホワイトボードに書いて10個の技術的な概念を分類してみましょう。
+
+2) コーチと一緒に参加者から何かの技術用語を出してもらい、ボード上の弁当箱に書き込みましょう。
+
+参考
 
 + [Bentobox slidedeck](http://speakerdeck.com/u/railsgirls/p/rails-girls-bentobox-exercise)
 + [Instruction video](http://vimeo.com/39049632)
 
-14:30 - 18:00 Workshop time. 
 
-Time to continue working on the applications. Monitor the situation: when it seems like people have a hard time concentrating, have the coaches or other speakers give quick lightning talks. 
+14:30 - 18:00 ワークショップ
 
-Example topics for lighting talks: 
-+ Real (female) programmers telling what their career has been like.
-+ Design: UX & UI. Making mockups together either with paper or computer. 
-+ Fun ways of explaining technical concepts and recent frameworks: what is CoffeeScript explained in 80s pop songs? How would you describe GitHub? What coding and creative writing have in common?
-+ Show us something real: don’t speak in abstractions, be specific and tell stories.
+引き続き、アプリ作成の作業を続けます。進行状況を注意深く見てください: 参加者の集中力が続かない場合には、
+コーチかスピーカに即席でライトニング・トークをしてもらうのもいいでしょう。
 
-Once everyone has finished their app, there is time to extend the application by modifying the CSS, implementing commenting systems etc. Allow enough time for experimentation. 
+ライトニング・トークのトピック例:
 
-19:00 After party
-*Hint:*
-Invite everyone, also the local developers, boys, those who weren't accepted, to join! 
++ 実在の女性プログラマを取り上げ、彼女たちの人生がどのようなものかについて話しをする。
 
-[Fork this project on GitHub][github], add yourself, and send us a pull request.
++ デザイン: UX(User Experience) と UI(User Interface)。紙でもいいし、コンピュータ上でもいいのでモックアップを作ってみる。
 
-[self]: http://guides.railsgirls.com/ "The Rails Girls Guide"
-[github]: https://github.com/railsgirls/railsgirls.github.com "Fork on GitHub"
++ 技術的な概念や近頃のフレームワークについてたのしい解説をしてみる。たとえば、CoffeeScriptは80年代のポップソングであるとか？
+それならば、GitHubはどのように表現する？とか、コーディングとクリエイティブ物書きの共通点は？など。
+
++ 何か実際に動くものを見せる: この場合には、概要を述べるのではなく、詳細を解説したり、思いを語るなどをしてみましょう。
+
+全員がアプリ作りを終わったら、次はアプリに手を入れてみましょう。例えば、CSSを修正するとか、コメントを書き込むシステムを
+実装してみるとかがあるでしょう。この実験には十分な時間をとってください。
+
+
+19:00 - アフター・パーティ
+
+*ヒント:*
+参加者全員を招待してください。地元のディベロッパーや、Rails Girlsに参加を許されていない男子にも参加してもらいましょう！
+
+
+[GitHubでRails Girlsプロジェクトをフォークして](https://github.com/railsgirls/railsgirls.github.com), プル・リクエストを送ってください。
+
+
+[GitHubでRails Girlsプロジェクトをフォークする（日本語版）](https://github.com/railsgirls-jp/railsgirls-jp.github.com)
+
+[self]: http://railsgirlsーjp.github.com/ "The Rails Girls Guide 日本語版"
+[github]: https://github.com/railsgirls-jp/railsgirls-jp.github.com "Fork on GitHub"
 
 #### Materials
 

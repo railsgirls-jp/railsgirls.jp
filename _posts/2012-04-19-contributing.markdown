@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Contributing a Guide
+title: 自分流の手引きを送る手順
 permalink: contributing
 ---
 
-# Contributing a Guide
+# 自分流の手引きを送る手順
 
 The guides site uses [jekyll](https://github.com/mojombo/jekyll) to power the site and all the documents are written using [markdown](http://daringfireball.net/projects/markdown/). To contribute a guide, you just need to follow these simple steps.
 

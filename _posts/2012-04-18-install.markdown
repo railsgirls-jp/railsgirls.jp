@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Setup recipe for Rails Girls
+title: Rails Girls インストール・レシピ
 permalink: install
 ---
 
-# Setup recipe for Rails Girls
+# Rails Girls インストール・レシピ
 <span class="muted">Cooking time: 5min active / 15-30min passive</span>
 
 To build apps and other things with Ruby on Rails, we need to setup some software and the developer environment for your computer.

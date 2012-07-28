@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Rails Girls on Heroku
+title: Rails Girls Heroku にアップ
 permalink: heroku
 ---
 
-# Put Your App Online With Heroku
+# Heroku に Rails アプリをアップ
 
 *Created by Terence Lee, [@hone02](https://twitter.com/hone02)*
 
