@@ -4,6 +4,9 @@ Rails Girls Guideの邦訳です。
 
 翻訳に参加する場合は、issueを開いて、どの部分を翻訳しているかを書きましょう。翻訳が終わってpushしたらissueを close します。
 
+Rails Girls Tokyo開催に向けて話しあうメーリングリストは　https://groups.google.com/forum/#!forum/rails-girls-tokyo です。
+MLは公開していないので、参加リクエストをください。
+
 以下、オリジナルのREADMEそのままです。
 
 Our aim is to give tools for women to understand technology. The Rails Girls events do this by providing a great first experience on building the Internet.
