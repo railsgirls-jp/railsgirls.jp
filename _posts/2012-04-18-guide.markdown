@@ -328,84 +328,150 @@ __スポンサーのメリット__
 
 #### Rails Girls ワークショップを開催していいのはだれ？
 
-Anyone. What we look for is a group of people dedicated in making this a stellar first experience in the world of web making for girls. What we hope to see is some (not all) of the following:
+だれでも開催できます。
+女性にウェブアプリプログラミングの世界がすばらしいことを経験してもらいたいと頑張る人たちに出会えることを楽しみにしています。
+主催者は以下のような人が適切だと思いますが、すべてに当てはまる必要はありません。
 
-* Contacts to the local developer scene. We are pretty technology agnostic, so it doesn’t have to be purely Ruby & Rails people. In practice every event needs 5 or more coaches that have basic knowledge of Rails and two days to contribute. In general the events have been around 25 - 40 people strong.
-* Event organisation know-how. Not heaps, but some practicalities under the belt.
-* An inkling of an idea where to look for girls interested in technology. University, literature, arts, sports - we try to look for people who are interested in Internet, but do not have experience in coding.
-* Willingness to guide the girls in the future if they have questions or want to organize their own events or find local developer gatherings.
+* 地域のディベロッパーに知り合いがいる。特定のプログラミング言語に固執しないので、必ずしもRubyやRailsを知っている必要は
+ありません。実際には、イベントには最低でも５人のコーチが必要です。
+このコーチたちはRailsの基本がわかっていて、２日間のイベントに実際に参加できる人たちです。
+これまでのイベントでは、おおそよ25-40人の参加者がやってきています。
 
-Start by filling out [railsgirls.com/inyourcity](http://railsgirls.com/inyourcity) and someone from our team will be in contact
+* イベント開催のノウハウを知っている。精通している必要はありませんが、過去に何度かうまくやってきた経験があるといいでしょう。
 
-#### Where can I find all the materials for posters, nametags, sample presentations and such?
-Check out below, and let us know if something is missing!
+* プログラミングに興味をもっている女性をどこから探しだせるかについてわずかでもあてがある。
+たとえば大学なら、文学、芸術、スポーツと言った分野です。インターネットには興味をもっているけれど、コーディングの
+経験がないような人たちを探しています。
+
+* 今後、イベントを開催したいと思う女性たちの質問に答えたり、地域のディベロッパーの集まりを紹介してあげるようなことに
+積極的に取り組んでくれる人。
+
+まずは、[railsgirls.com/inyourcity](http://railsgirls.com/inyourcity)からイベントを登録してください。
+登録されると、私たちのうちの誰かから連絡がいきます。
+
+
+#### 資料や、ポスター、ネームタグ、プレゼンの見本、といったたぐいのものはどこかにある？
+
+以下のリンクをクリックしてください。何か足りないものがあれば、ご連絡ください！
+
 + [Download materials](http://www.speakerdeck.com/u/railsgirls)
 
-#### What kind of venue is needed?
+#### どのようなイベント会場が必要？
 
-We recommend choosing a venue with a built-in infrastructure for around 30-50 persons. For a programming event, this means:
-* High-speed, tested Internet. There’s going to be over 30 computers online all the time. Add to that mobilephones, streaming music, funny videos and you get the picture!
-* Space for 4-6 person groups to gather together: chairs and tables, sometimes big pillows will do! This doesn’t have to be in the same room.
-* Possibility to set up extension chords and a projector.
-* Location for food and beverage setup - lunch space for catering or a nearby lunch venue.
-* External monitors for teams are encouraged but not mandatory, helps the coaches show what is happening in the code.
+30-50人規模の人数のためのインフラが整っている会場を選ぶようにしてください。これはつまり、プログラミングの
+イベントという性質からすると:
 
-Ask where local developer meetings are usually hosted. Often co-working spaces are also willing to negotiate deals to gain some visibility among new people.
+* 実績のある高速インターネットが使える。会場では30くらいのコンピュータが一斉にインターネットに接続しようとします。
+これに加えて、携帯や音楽のストリーミング、笑えるビデオ、あるいは写真を送信してもらったりしますから。
 
-#### What is expected from the coaches?
+* 4-6人のグループに分かれて作業ができるようなスペースが必要です。いすと、机と、大きなまくら(!)ということもあります。
+全てが一つの部屋の中に収まらないといけないというわけではありません。
 
-Rails Girls events are organized around small groups, ideally maximum of 4-5 persons per one coach. The coaches don’t need to be hardcore experts on Rails - basic knowledge and willingness to explain trumps expertise. We are looking for people who like answering questions and can keep an upbeat and positive atmosphere through a period of 8 hours!
+* 延長コードやプロジェクタが使えるとよい。
 
-You can get to know the curriculum by checking out [railsgirls.com/app](http://railsgirls.com/app). There is also always a pre-event coach dinner where we’ll go through some pedagogical suggestions and check everyone knows what is happening. Avoid jargon, tie examples to what your doing, encourage asking questions. The installation instructions can be found at [railsgirls.com/install](http://railsgirls.com/install). We also understand that coaches are human and that for most of the people this is the first time teaching something. Worry not - the girls have always been really happy with whatever they learn and just the chance to ask questions is enough. 
+* 食べ物や飲み物をおく場所を確保できる。お昼ご飯の場所があるか、近くにお昼ご飯を食べられる場所があること。
+
+* モニタが使えると便利ですが、必須ではありません。モニタがあるとコーチはどのようなコードを書くと、どのような
+ことが起きるのかを説明しやすくなります。
 
 
-We hope the coaches are ok with having their name and twitter-id/github/some mean of contact on railsgirls.com so the girls always have a local face to answer their questions.
+地域のディベロッパー会が通常、どこで開催されるのかを聞いてみてください。いくつかの会社が一つの部屋を分割して使っている
+ような環境では初めて会った人でも協力者になってくれることがよくあります。
 
-In addition, we encourage coaches to come up with additional exercises for the group. After completing the ideation app many girls will want to try tweaking the look & feel of the site, implementing commenting, Facebook sharing, pushing the app to Heroku, etc. 
 
-##### Sample letter for potential coaches
+#### コーチは何をしてくれると思えばいい？
 
-"Dear community member, 
+Rails Girlsイベントは小さなグループに分かれて進めていきます。一つのグループは理想的には4-5人の参加者にコーチ一人という
+構成です。コーチがRailsのすごいエキスパートでなければいけないということはありません。
+基本的な知識と熱意を持っていて、参加者に説明できるのであればいいのです。
+参加者の質問にちゃんと答えてあげられる人、また、８時間！という長いワークショップ中、終止、明るく前向きの態度で
+あり続けられる人がコーチに適しています。
 
-We wish to invite you to take part in the Rails Girls event on (insert date). The event is aimed for girls and women with no previous programming experience, but a lot of passion to building things. Rails Girls is an international non-profit, volunteer-based workshop. We've had events in Shanghai, Berlin, Helsinki, and Singapore. We expect to receive around a 100 applications.
+カリキュラムについては[railsgirls-jp.github.com/app](http://railsgirls-jp.github.com/app)を読んでください。
+コーチ・ディナーのプリイベントはいつも実行しています。このディナータイムに教育という点から意見を出し合ったり、
+全員で、これから何が始まるを確認しています。
+専門用語の使用を避け、今試そうとしていることに例題をうまく繋げ、質問するようにしむけましょう。
+インストールの説明資料は[railsgirlsーjp.github.com/install](http://railsgirls-jp.github.com/install)にあります。
+わたしたちはコーチたちは特別な人ではなく、教えるのははじめてという場合が多いことを理解しています。
+心配しないでください。女性たちはイベントで勉強できることを嬉しいと思ってくれます。また、質問できるという点に満足してくれます。
 
-In addition to giving a safe and fun first experience to coding for the girls we want to engage them with local developers, open source, and the startup scene. We've attached some information on what coaching requires in practice. In addition, we have room for small lightning talks on technical subjects. If you have something you'd like to speak about, let us know.
+コーチには名前、ツイッタ名、GitHubか他の何かをrailsgirls.comに書いてもいいと言ってほしいと思います。
+これは、常に近いところに疑問に答えてくれる人がいるこ安心感を参加者に与えるためです。
 
-For more information about the non-profit event, check railsgirls.com or guides.railsgirls.com
+さらに、コーチにはもう一段上の練習問題を自分が担当しているグループに与えるようにお願いします。
+ひととりウェブアプリを作り終えてしまうと、参加者はウェブサイトのルック・アンド・フィールなどを少し変えたくなってきます。
+あるいは、コメントを付けられるようにするとか、フェイスブックでシェアするとかHerokuにアプリを登録するなどもあるでしょう。
 
-(You can also include the chapter "What is expected from the coaches" to the mail)"
+
+##### コーチをお願いするメールのサンプル
+
+こんにちは、
+コミュニティメンバーのみなさま、
+
+(日付をここに)に開催されるRails Girlsイベントにコーチとして参加していただけないでしょうか。
+このイベントはプログラミングの経験はないけれど、何かを作りたいという熱意を持っているご婦人や女子を対象としています。
+Rails Girlsは国際的な非営利、ボランティアによるワークショップです。
+これまでに、上海、ベルリン、ヘルシンキ、シンガポールなどで開催されてきました。
+Rails Girlsは100人くらいの参加者を見込んでいます。
+
+女性プログラミングを始めるきっかけとなるような心地よく楽しい経験をしてもらう他、地域のディベロッパーや
+オープンソース、スタートアップ企業などとのつながりを持ってほしいと思っています。
+実際にコーチには何が要求されるかの情報を添付しました。
+教えるだけではなく、技術的なトピックについて話すラインとニングトークの時間も設けてあります。
+何か話したいことがあれば、お知らせください。
+
+この非営利イベントについて詳しく知りたい場合は、railsgirls.comかguide.railsgirls.com（日本語版: railsgirls-jp.github.com）を
+ご覧ください。
+
+（"コーチは何をしてくれると思えばいい？"の部分をこのメールに追加してもいいかもしれません）
 
 ---
 
 
 
-#### What materials do I get?
+#### どのような資料が手に入る?
 
-Each Rails Girls event gets a specific webpage.
+各Rails Girlsイベントは独自のウェブサイトを持っています。
 
-In addition we’ll help you out with the goodie bags, poster templates, workbooks and other swag like stickers, reflectors and so forward. All of the materials can be found on this site. You can also ask the sponsors to include some sponsor materials if they wish. We are always looking for creative outlets for the Rails Girls brand, if you have ideas, let us know!
+参加者に配れるようなポスターのテンプレート、ワークブック、ステッカーや蛍光シールといった小物があります。
+これらは全て、Rails Girlsのウェブサイトにあります。
+スポンサーにお願いして、ノベルティグッズを入れてもいいかもしれません。
+私たちは常に、Rails Girlsブランドのクリエイティブな作品を募集しています。もしなにかアイディアがあったら教えてください！
 
-So far we've had
+現時点であるものは
 
-* Stickers
-* Reflectors
-* Tattoos
+* ステッカー
+* 蛍光シール
+* タトゥー
 
-Also, check out:
+以下のURLもご覧になってください:
 
 + [Download materials](http://www.speakerdeck.com/u/railsgirls)
 
-#### How do I choose attendees?
 
-In the form we ask only two questions: do you have any previous background in coding and why would you be a good participant for Rails Girls
+#### 何を基準に参加者を選べばいい？
 
-Rails Girls is intended for anyone and we want to keep it flexible enough for learners any age. However, make clear to the attendees what to expect: Rails Girls won’t make anyone into a coder, so people looking for i.e career change will be disappointed. On the other hand we like people with very diverse backgrounds and loads of enthusiasm.
+参加申し込むフォームには次の２つの質問を用意します。
+「プログラムを書いた経験はありますか？」
+「なぜ、自分がRails Girlsイベントにふさわしい参加者だと思いましたか？」
 
-After selecting participants we generally split them into three groups:
+Rails Girlsは参加者に条件をつけていません。全ての年齢の女性が学べるように柔軟に対応したいと思っています。
+ただし、参加者が何を期待できるかについては明確にしておいてください。
+Rails Girlsは参加者をプログラマにするためのイベントではありません。
+新しいキャリアを求めてやってくる人がいたら、おそらくがっかりするでしょう。
+一方で、様々な職業・専門の人たちをイベントに集めたいと思っています。
 
-1. people with no previous programming experience
-2. people with some front-end experience (HTML, CSS, Javascript) and
-3. people with a little experience in programming or a background in computer sciences. You can use the different name-tags for each group if you want to (rubies, foxes, octocats, rails..)
+参加者を選出したら、通常、参加者を３つのグループに分けます:
+
+１. まったくプログラミングの経験が無い人
+
+２. フロント・エンド(HTML, CSS, Javascript)の経験なら少しはある人
+
+３. プログラミングの経験わずかにあるかコンピュータ・サイエンスを勉強したことがある人。
+
+グループによって違うネームタグを使うといいかもしれません。
+例えば、ルビー、キツネ、オクトキャット、Railsなど。
+
 
 
 ##### Sample letter of acceptance
