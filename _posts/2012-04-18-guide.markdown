@@ -171,107 +171,162 @@ Rails Girlsのイベントは必ずインストレーション・フェストか
 [self]: http://railsgirlsーjp.github.com/ "The Rails Girls Guide 日本語版"
 [github]: https://github.com/railsgirls-jp/railsgirls-jp.github.com "Fork on GitHub"
 
-#### Materials
+#### 参考資料
 
-+ [Download materials](http://www.speakerdeck.com/u/railsgirls)
++ [参考資料のダウンロード](https://www.speakerdeck.com/u/railsgirls)
 
-### Promotion of Rails Girls
+### Rails Girlsの宣伝
 
-Every Rails Girls workshop will get a custom website at railsgirls.com/city where the information is collected and then stored. For past cities, see [railsgirls.com/events](railsgirls.com/events)
+どこで開催されるRails Girlsイベントでも、それぞれがrailsgirls.com/cityというウェブサイトを作れます。
+このウェブサイトに開催情報を載せられます。
+これまでにRails Girlsが開催された都市は[railsgirls.com/events](railsgirls.com/events)に一覧があります。
 
-While the event is underway, remember to take pictures, collect tweets and ask questions of the participants. We love to write blog posts about the speaker and participant experiences. A list of the coaches is also required.
-
-+ [Download materials](http://www.speakerdeck.com/u/railsgirls)
-
-#### How to find local developers?
-
-* Google. Almost every country has some sort of a Rails or Ruby community (sometimes called Ruby Brigade or Ruby Tuesday). Look for [Hackernews](http://news.ycombinator.com) meetups, [GitHub](http://www.github.com) contributors or [Dribbble](http://dribbble) draftees. Find the local open source scene. Surf the technology conferences (here's [a list](http://rubythere.com/) of Ruby-themed ones, but others are cool too) and meetups at [meetup.com](http://www.meetup.com). Call software development houses, big and small. Don't forget IRC and podcasts!
-
-* Check out hashtags like #rails #ruby and #opensource from [Twitter search](https://twitter.com/#!/search-home). To find people from, say, close to NYC, use the following search operators "near:NYC within:15mi". Some countries have specific hashtags like #Rubysur and #RubyArg they use, remember to ask!
-
-* Startup community. Startup Digest is a good beginning point for events and communities.
-
-* Often there are one or two key people who will be able to introduce you further. The technology world is surprisingly connected.
-
-#### How to find participants?
-
-* Use social media: Facebook, Twitter & local networks such as Weibo. Friends, girlfriends, co-workers!
-
-* Local [Girls in Tech](https://twitter.com/#!/gitweet), [DevChix](http://www.devchix.com/), [Geek Girl](http://geekgirlmeetup.com/) chapters etc. Check out also [Meetup.com](http://www.meetup.com/). Twitter lists like @anitaborg's [Tech Women Programs](https://twitter.com/#!/anitaborg_org/tech-women-programs) and similar.
-
-* Think outside the box: universities, book clubs, music stores, design agencies, [Etsy](http://www.etsy.com). We want girls who are interested in technology, but they can still have very varied backgrounds.
-
-#### How to get press?
-
-One of the big aims of Rails Girls is to make it more mainstream for girls to build the web. That’s why we like to engage the local press and highlight the participants and their enthusiasm. We’d be happy to help prepare a press-release for the media. Check out [railsgirls.com/press](http://railsgirls.com/press) for more.
-
-### Sponsorships
-
-Rails Girls talks to a demographic that might be hard to reach other ways: women who have an interest in technology, who are possible users, employees or partners of the sponsoring company.
-
-We are looking for sponsors who are active participants in the local technology scene, whether it’s a startup or a big corporation, a non-profit or a government organization. 
-
-Also non-traditional technology companies can be approached: kids stores, universities, women's magazines, beverage brands etc. They all should however have some affiliation or interest in technology. 
-
-Rails Girls should always be kept non-profit: if there's money left, it should be used to support the future activities of the attendees. Don’t forget that you don’t need that much funding and even a two-person startup could be very willing to chip in.
-
-### Example letter for sponsors
-
-Dear xxx, 
-
-We are organizing a Rails Girls programming workshop in (insert city) on (insert dates). 
-
-Rails Girls is a two-day non-profit event for women and girls to give them a great first experience in software craftmanship. We aim to give the tools to understand technology along with the community and inspiration to get started.  
-
-Rails Girls is not just about programming, it’s about building things. During the workshop, we’ll build an application and also have inspiring lightning talks and exercises.
-
-For a closer look, please see www.railsgirls.com for past events and coverage.Here’s also a short video on the Berlin event held in April 2012: [http://vimeo.com/40852182](http://vimeo.com/40852182) 
-
-We are now looking for sponsors to help us realize this all. 
-We’d love to have your support! 
-
-Yours, name
+イベントが行われている最中には、必ず写真をとってください。また、ツイートを集めたり、参加者に質問したりしましょう。
+スピーカや参加者の感想についてブログを書きたいと思います。このときにはコーチの名前一覧が必要なので、教えてください。
 
 
++ [参考資料のダウンロード](https://www.speakerdeck.com/u/railsgirls)
 
-### How much does it cost? 
+#### どのようにして協力してくれる地元のディベロッパーを見つけるか
 
-The costs below are estimated for 30 participants, 10 coaches - but they may vary a lot. It's easiest to try to get a local sponsor to pay the bills directly or partner with someone who has a set account to handle money. These calculations are done in Finland, in €, where food & alcohol is very expensive, but spaces are often free. All in all you should be able to organise an event easily for a little over a thousand euros.  				
+* ググりましょう。大抵は、どこの国にもRailsやRubyのコミュニティかそれ相応のグループがあります。
+（場合によってはRuby BrigadeとかRuby Tuesdayなどど呼ばれているかも）。[Hackernews](http://news.ycombinator.com)の
+集まりを調べる、[GitHub](http://www.github.com) のコントリビュータをサーチする、[Dribbble](http://dribbble.com/)の
+drafteeのところから見つけるなどもいいでしょう。
 
-+ **Sparkling wine + cups** for the installation festival. 6 bottles, 6 euros a bottle. 36 euros. 
+* [ツイッタ・サーチ](https://twitter.com/#!/search-home)で #rails や #ruby、#opensource のようなハッシュタグを探してみましょう。
+例えば、ニューヨークの市街地に近いところで探そうと思ったら、"near:NYC within:15mi"というサーチオペレータを追加すると検索の精度をあげられます。
+国によっては、#Rubysur や #RubyArgのような独自のハッシュタグを使っていることがあります。とにかく、頼んでみるということを忘れないで！
 
-+ **Breakfast Coffee**, pastry. 40 times around 5 euros. 200 euros
+* Rails Girlsのためのコミュニティを作って、情報をこまめに流しましょう。これがイベントやコミュニティ作りのきっかけになります。
 
-+ **Lunch.** Catered lunch can be around 15 euros, but you can do with a lot less by cooking yourself.  Add some water and coffee (50 euros). 650 euros. 		
 
-+ **Marketing materials.** Printing workbooks, ordering stickers, posters and other swag. Again, varies a lot, maybe you can use someones printer, but at least around 200 should be reserved.
+* 一人か二人くらいですが、キーパーソンとなる人がイベント開催に向けて手伝ってくれる人がいるケースがよくあります。
+プログラミングの世界ではいろいろな人が意外にも近いところにいるものです。
 
-+ **Coach dinner.** At a restaurant or homemade. A way to say thank you to the coaches for their volunteer work. Around 20 euros per head. 200 euros. 		
 
-+ **Space.** Try to get this one sponsored/free, they can be really expensive. Often startups are co-operative and can offer their space for use (esp. on weekends).	0 - XXXX euros. 
+#### どのようにして参加者を見つけるか
 
-+ **Afterparty.** It's nice if you can throw a good party with free beverages, but can also be done low-key in a local bar or on set/ in the park!	0 - XXXX euros. 	
+* フェイスブックやツイッタのようなソーシャルメディアを使うか、あるいはWeiboのようなローカルなネットワークを使いましょう。
+友達や、知り合いの彼女、会社の同僚などに声をかけるのもいいでしょう。
 
-+ **Travel expenses.**	If you don't have any RG-team members in your country, consider inviting us over. We don't need fancy hotels, promise! Same if you want to invite speakers to your event. 	0 - XXX		
+* [Girls in Tech](https://twitter.com/#!/gitweet), [DevChix](http://www.devchix.com/), [Geek Girl](http://geekgirlmeetup.com/)
+なども役に立つかもしれません。[Meetup.com](http://www.meetup.com/)、
+ツイッタの@anitaborg's [Tech Women Programs](https://twitter.com/#!/anitaborg_org/tech-women-programs)やその手のもの
+を調べてみるといいかもしれません。
 
-+ *Total 1286 euros*.
+* 身時かなところから探すとしたら、大学や読書クラブ、ミュージックストア、デザイン会社、[Etsy](http://www.etsy.com)があるでしょう。
+Rails Girlsはプログラミングに興味をもっているけれど、まだ始められない、まったく違う畑でやってきたような参加者を期待しています。
 
-__What do sponsors get?__
 
-* Logo on event website
-* Table space at event, opportunity to distribute handouts and/or swag
-* A chance to speak to attendees for 5 minutes
-* In most events there are official pictures taken that the sponsors can use afterwards
+#### どのようにしてプレスリリースするか
 
-Don’t give out the participant info, but sponsors are free to hang out at the event and be sure to include a short message to the sponsor in a thank-you note. Sponsor swag may be included in the goodie bag to an extent, but it should be something tasteful, not trashy and related to girls.
+Rails Girlsの大きな目標はイベントを女性たちのメインストリームにして、ウェブアプリ作り入門の定番にすることです。
+そのために、Rails Girlsは各地域のメディアでプレスリリースをしてきました。プレスリリースでは参加者がどのような
+人たちか、また、彼女たちの熱意を紹介してきました。詳細については
+[railsgirls.com/press](http://railsgirls.com/press)　をご覧ください。
 
+
+### スポンサー
+
+Rails Girlsは見つけるのが難しいような人たちを対象にしています: 女性で、プログラミングに興味がある人たちです。
+もしかすると、スポンサーになってくれる会社の製品のユーザかもしれないし、従業員、パートナーのこともあるでしょう。
+
+私たちは地域のプログラミングコミュニティに積極的に参加してくれるスポンサーを探しています。ベンチャー企業でも、
+大企業でもいいですし、非営利団体でも政府の組織でもいいです。
+
+いわゆるプログラミングの会社ではないところも歓迎します。例えば、こどものものを扱う店とか、大学、女性向け雑誌、
+飲み物のブランドなどです。とはいっても、プログラミングに感心があって、関わっていこうとしている企業になるでしょう。
+
+ただし、Rails Girlsは常に非営利目的で開催されます。開催後に予算が余ったら、そのお金は参加者の今後の活動のために
+使うべきです。お金はあまり必要ないことを覚えておいてください。たった二人だけで小さくイベントを始めてるのもいいでしょう。
+
+
+### スポンサーをお願いするメールの例
+
+XXX 様、
+
+Rails Girlsというプログラミングのワークショップを（場所）で（日程）に開催したいと考えています。
+
+Rails Girls2日間かけて開催する非営利イベントで、御婦人と女子をターゲットに、
+ソフトウェアを通じたものづくりへ足を踏み出す最初の一歩として素晴しい体験を提供しようという意気込みで、
+世界各国の都市で開催されております。
+
+Rails Girlsは単なるプログラミングではなく、ものづくりであることを目指しています。
+もちろんワークショップを通じて、アプリケーションを構築しますが、
+それ以外にもライトニングトークや演習もおこないます。
+
+詳細は、[www.railsgirls.com] (www.railsgirls.com)
+で過去の開催を掲載しておりますので、是非ご覧ください。また、2012年4月に開催された、ベルリンでの開催の様子のビデオもvimeoでご覧になれます:
+[http://vimeo.com/40852182] (http://vimeo.com/40852182)
+
+Rails Girlsイベントを実現されるために、現在、スポンサーを捜しているところです。
+恐縮ですが、お手伝いいただけないでしょうか。
+
+よろしくお願いします。
+
+（名前）
+
+
+### どのくらいの費用が必要か
+
+以下の費用は30人の参加者と10人のコーチがいると想定して算出したものです。必要な費用はイベントによりけりです。
+スポンサーの会社にお願いして直接費用の支払いをするか、経費の支払いを担当している人にお願いする方法が最も
+簡単でしょう。
+
+コストの計算はフィンランドの物価でユーロで計算したものです。フィンランドは物価が高く、食べ物やアルコール飲料
+などはとても高いところです。これに対して、イベントのためのスペースは通常、無料です。
+
+場合によっては1000ユーロを若干超える程度でイベントを開催できるかもしれません。
+
+
++ **スパークリング・ワインとコップ** インストレーション・フェストのときに飲みます。6 本, 単価 6 ユーロ。合計 36 ユーロ.
+
++ **朝のコーヒー**, パン。約 5 ユーロの 40 倍。200ユーロ。
+
++ **お昼** ランチのケータリングは約 15 ユーロ。ただし、自分で料理するなどすれば、もっと安くできる。
+水とコーヒー(50 ユーロ)も用意するとして、650 ユーロ。
+
++ **宣伝用グッズ** ワークブックの印刷とステッカーやポスターんなどを作る費用。やはりこれもイベントによりまちまち。
+誰かのプリンタを使わせてもらうと安くあがる。とはいっても、200 ユーロくらいは用意しておくべき。
+
++ **コーチのディナー** レストランかあるいはどこかのお宅で。コーチたちにありがとうをいう場。
+ボランティアでコーチをしてくれた労をねぎらうためのディナー。だいたい、一人あたり 20 ユーロで、合計 200 ユーロくらい。
+
++ **会場** スポンサーに提供してもらうか、費用を負担してもらうように努力してください。場所代はかなり高くつくはずです。
+一般的に、ベンチャー企業は協力的なので、会社の部屋を使わせてくれるかもしれません。（特に、週末ならば） 0 - XXXX ユーロ。
+
++ **アフター・パーティ** フリードリンクのパーティを開けたら素敵です。とはいっても、近くの店に行くとか、
+公園にいってもいいかもしれません。0 - XXXX ユーロ。
+but can also be done low-key in a local bar or on set/ in the park!	0 - XXXX euros.
+
++ **旅費**	あなたの国にひとりも Rails Girlsのメンバーがいなかったら、私たちを招待する計画を立ててください。
+私たちは、素敵なホテルに泊まりたいとは思いません。絶対に！あなたのイベントにやってくるスピーカと同程度で十分です。0 - XXX ユーロ。
+
+
++ *合計 1286 ユーロ*.
+
+__スポンサーのメリット__
+
+* イベントのウェブサイトに会社のロゴを載せられます。
+
+* イベント会場にテーブルを置いて、パンフレットやノベルティを配れます。
+
+* 5分くらいですが、スピーチの時間が与えられます。
+
+* ほとんどのRails Girlsイベントではオフィシャルな写真を撮影しますが、スポンサーはこの写真を何かのときに使えます。
+
+参加者の情報は漏らさないように注意してください。ただし、スポンサーはイベント中いつでもやってきていいことに
+なっています。スポンサーへのありがとうの言葉を忘れないようにしてください。
+スポンサーは会社のノベルティグッズを参加者に渡すバッグか何かに入れていいことになっています。
+ただし、いかにも女の子向けなものではなく、何か意味のあるものにしていただきたいと思います。
 
 
 ---
 
 ## FAQ
 
-#### Who can organise a Rails Girls workshop?
+#### Rails Girls ワークショップを開催していいのはだれ？
 
 Anyone. What we look for is a group of people dedicated in making this a stellar first experience in the world of web making for girls. What we hope to see is some (not all) of the following:
 
