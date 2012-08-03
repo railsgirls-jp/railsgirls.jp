@@ -508,6 +508,7 @@ Railsをインストールしておきます。
 また、随時、ウェブページ(URLのここに)を更新していますので、ご覧ください。
 
 それでは、
+
 （署名）
 
 
@@ -529,36 +530,62 @@ twitter.com/railsgirls　や　facebook.com/railsgirlsをフォローしてく�
 キャンセルが出た場合は、参加可能の連絡をさしあげます。
 
 それでは、
+
 （署名）
 
 
-##### Sample thank you letter for participants
+##### 参加者へのお礼のメールのサンプル
 
-Dear Rails Girls,
+こんにちは、Rails Girls のみなさま
 
-Thank you for taking part in the Rails Girls event. We truly felt lucky to have such a talented & enthusiastic crowd of people with us and hope many of you will continue working with Rails in the future - you have the tools, now build something cool!
+Rails Girls イベントに参加していただいてありがとうございます。
+イベントでは才能があるばかりではなく、とても熱心なみなさまと出会えてたいへんうれしく思います。
+みなさまが将来に向けて Rails を引き続き勉強しつづけていることを願っています。
+すでに Rails という道具を手にしたので、ぜひおもしろいウェブアプリ作りにチャレンジしてください！
 
-(Say a few words about the sponsors and coaches - thank you for the community)
+(スポンサーやコーチについてふれる。ー　コミュニティに感謝)
+
  
-Three things we want to share: 
+３つのお願い：
 
-Workshop Materials
-(Almost all) materials can be found in the guides section at http://guides.railsgirls.com. You can find presentations, materials and instructions from the workshop. If you took pictures or blogged about the event - let us know! We'll be publishing regularly on blog.railsgirls.com
+- ワークショップ・マテリアル
 
-Make Rails Girls better - give us feedback!
-We want to hear from you! Give us feedback about the workshop or how we can make the event better – it’s really quick, and it’ll help us improve our workshop at railsgirls.com/feedback
+(ほとんどすべての)マテリアルは http://guides.railsgirls.com/ にあります。
+例えば、プレゼンテーション、マテリアル、ワークショップの解説書などがあります。
+もし、イベントの写真あるとかブログを書いたといった場合は、ぜひ教えてください！
+Rails Girlsは定期的に blog.railsgirls.com を更新しています。
 
-Keep on coding!
-We realize there was quite a lot of stuff in todays lecture and for most of you it all felt a little overwhelming. We strongly recommend trying out Rails for Zombies exercise at http://www.codeschool.com/ latest by next weekend, it'll refreshen all you've learned so far and teach you some more. 
 
-Two things to keep you going: 
-- (Insert here a couple of community events that the participants should take part in)
+- Rails Girlsをもっとすばらしいイベントにするために　ー　フィードバックをください！
 
-There was a LOT of interest in doing follow-up events. If you have ideas for this or want to volunteer for the organizing team, let us know and sign up for the group e-mailing list at http://groups.google.com/group/rails-girls-team!
- 
-And thats all for now,
-Your Rails Girls team 
+感想をお聞かせください！
+ワークショップがどうだったか、また、どのようにイベントを改善できるかといったフィードバックをください。
+あまり時間はかかりません。今後のイベントをよりよくするために、railsgirls.com/feedback まで
+ご意見、感想などをおよせください。
 
+
+- プログラムを書き続けて！
+
+今日のレクチャでは消化できないくらいたくさんのあれこれがあったことは十分承知しています。
+ほとんどの参加者のみなさまはとてもこなしきれないと思ったはずです。
+まずは、来週末までに Rails for Zombies の練習問題 http://www.codeschool.com/ にトライすることをお勧めします。
+練習問題にトライすることでワークショップで学んだことを思い出すはずですし、新しいことも学べます。
+
+
+コミュニティにかかわっていくために２つ:
+
+- (ここに参加者がいけそうなコミュティのイベントをいくつか列挙する。)
+
+- フォローアップのイベントに興味をもったら、
+
+何かアイディアがあれはそれを、あるいは Rails Girls チームのためにボランティアをしたいと思ったら、
+お知らせください。グループのメーリングリスト http://groups.google.com/group/rails-girls-team に
+登録してください！
+
+
+以上です。
+
+Rails Girls チーム
 
 
 
@@ -572,7 +599,7 @@ Your Rails Girls team
 * 他の演習問題、たとえば [Codecademy](http://www.codecademy.com/)のようなところで引き続き、
 勉強し続けるように励ます。
 
-* 今後開催予定、コーチが行きそうなディベロッパー向けイベントをすくなくても２つ紹介する。
+* 今後開催予定、コーチが行きそうなディベロッパー向けイベントを少なくても２つ紹介する。
 ディベロッパーの集まりに参加者を誘う。
 
 * フェイスブックのグループに招待して、質問できる場を作ってあげる。
