@@ -326,7 +326,7 @@ __スポンサーのメリット__
 
 ## FAQ
 
-#### Rails Girls ワークショップを開催していいのはだれ？
+#### Rails Girls ワークショップを開催していいのはだれですか？
 
 だれでも開催できます。
 女性にウェブアプリプログラミングの世界がすばらしいことを経験してもらいたいと頑張る人たちに出会えることを楽しみにしています。
@@ -350,13 +350,13 @@ __スポンサーのメリット__
 登録されると、私たちのうちの誰かから連絡がいきます。
 
 
-#### 資料や、ポスター、ネームタグ、プレゼンの見本、といったたぐいのものはどこかにある？
+#### 資料や、ポスター、ネームタグ、プレゼンの見本、といったたぐいのものはどこかにありますか？
 
 以下のリンクをクリックしてください。何か足りないものがあれば、ご連絡ください！
 
 + [Download materials](http://www.speakerdeck.com/u/railsgirls)
 
-#### どのようなイベント会場が必要？
+#### どのようなイベント会場が必要ですか？
 
 30-50人規模の人数のためのインフラが整っている会場を選ぶようにしてください。これはつまり、プログラミングの
 イベントという性質からすると:
@@ -379,7 +379,7 @@ __スポンサーのメリット__
 ような環境では初めて会った人でも協力者になってくれることがよくあります。
 
 
-#### コーチは何をしてくれると思えばいい？
+#### コーチは何をしてくれると思えばいいですか？
 
 Rails Girlsイベントは小さなグループに分かれて進めていきます。一つのグループは理想的には4-5人の参加者にコーチ一人という
 構成です。コーチがRailsのすごいエキスパートでなければいけないということはありません。
@@ -429,7 +429,7 @@ Rails Girlsは100人くらいの参加者を見込んでいます。
 
 
 
-#### どのような資料が手に入る?
+#### どのような資料が手に入りますか?
 
 各Rails Girlsイベントは独自のウェブサイトを持っています。
 
@@ -449,7 +449,7 @@ Rails Girlsは100人くらいの参加者を見込んでいます。
 + [Download materials](http://www.speakerdeck.com/u/railsgirls)
 
 
-#### 何を基準に参加者を選べばいい？
+#### 何を基準に参加者を選べばいいですか？
 
 参加申し込むフォームには次の２つの質問を用意します。
 「プログラムを書いた経験はありますか？」
@@ -474,126 +474,203 @@ Rails Girlsは参加者をプログラマにするためのイベントではあ
 
 
 
-##### Sample letter of acceptance
+##### 参加承認メールのサンプル
 
-Title: Rails Girls workshop - welcome!
+タイトル: Rails Girls ワークショップにお越し下さい
 
-Dear attendee, 
+こんにちは、参加者のみなさま。
 
-Congratulations! We’re happy to invite you to join in on the  Rails Girls workshop in (insert city). We hope that this workshop will provide you a great first experience on building web apps. 
+Rails Girls Tokyo　ワークショップへの参加が認められましたので、お知らせいたします。おめでとうございます。
+このワークショップがよいきっかけになって、将来ウェブアプリ開発に携わることになることを願っています。
 
-What happens next?
+ワークショップについて
 
-(Insert date for installation fest) starts at (insert time) with an installation fest - so please bring your laptop with you! You should also try to pre-install Rails with instructions from <http://guides.railsgirls.com/install/>
+（インストレーション・フェストの日付をここに）、（開始時間）にインストレーション・フェストが始まります。
+ご自分のノートパソコンをお持ちください。
+ワークショップの前に <http://railsgirls-jp.github.com/install/> のインストール・ガイドに従って
+Railsをインストールしておきます。
 
-We will hold the event in (insert address)
+会場は　（会場の住所）
 
-On (insert date) we’ll dive into development. We’ll work in small groups with four to six person teams. Your team members will have about the same experience level as you. We'll be all developing a simple listing application. We'll wrap the day around (insert time). There's also going to be an evening party.
+（ワークショップの日付をここに）にウェブアプリ作りにトライします。
+ワークショップでは経験を考慮して、４〜６人程度の少人数のグループに別れ、
+各グループのメンバーが同じようなレベルになるようにします。
 
-We have a lot of people wanting to get to the class, so if you can’t make it this time, let us know as soon as possible!
+どのグループも、簡単なリスト作成アプリケーション作りを行います。
+ワークショップ後、（アフターパーティの時間）からアフターパーティがあります。
+アフターパーティは一日のワークショップの内容を振り返ったり、聞き逃したことの確認などを
+行います。
 
-If you have any questions, please don't hesitate to contact me. We'll also be updating the website at (insert address)!
+大勢の方がこのワークショップへの参加を希望しています。
+もし、参加できないような状況になった場合は、できる限り早くお知らせください。
 
-Best, 
+質問があれば、気軽に質問してください。
+また、随時、ウェブページ(URLのここに)を更新していますので、ご覧ください。
 
-(Signature)
+それでは、
 
-##### Sample letter of not being accepted
+（署名）
 
-Title: Rails Girls - not accepted this time
 
-Dear applicant,
+##### 参加お断りメールのサンプル
 
-Unfortunately we couldn’t fit you in the workshop this time. To be able to give personal guidance to each participant, we could only take a fraction of the applicants. This time we prioritized women with no previous programming experience. 
+タイトル: 次回の Rails Girls Tokyo にお申し込みください
 
-However, you're warmly welcome to the official afterparty. (Insert details). 
+応募者のみなさま、
 
-We'll also be most likely organizing more events in your city. Follow twitter.com/railsgirls or facebook.com/railsgirls for more information. 
+たいへん申し訳ありませんが、今回のワークショップへの参加を見送らせていただきます。
+参加者数には制限があるため、そこにあうような申込者の適正を考慮した結果です。
+今回は、プログラミング経験の無い女性を優先させていただきました。
 
-There's always cancellations and we fill all available places, so we might still be taking in a couple of people! 
+ただし、オフィシャル・パーティへの参加は可能です。（詳細をここに）
 
-Best,
+おそらく、同じ都市で今後もRails Girlsワークショップを何度か開催するはずです。
+twitter.com/railsgirls　や　facebook.com/railsgirlsをフォローしてください。
 
-(Signature)
+キャンセルが出た場合は、参加可能の連絡をさしあげます。
 
-##### Sample thank you letter for participants
+それでは、
 
-Dear Rails Girls,
+（署名）
 
-Thank you for taking part in the Rails Girls event. We truly felt lucky to have such a talented & enthusiastic crowd of people with us and hope many of you will continue working with Rails in the future - you have the tools, now build something cool!
 
-(Say a few words about the sponsors and coaches - thank you for the community)
+##### 参加者へのお礼のメールのサンプル
+
+こんにちは、Rails Girls のみなさま
+
+Rails Girls イベントに参加していただいてありがとうございます。
+イベントでは才能があるばかりではなく、とても熱心なみなさまと出会えてたいへんうれしく思います。
+みなさまが将来に向けて Rails を引き続き勉強しつづけていることを願っています。
+すでに Rails という道具を手にしたので、ぜひおもしろいウェブアプリ作りにチャレンジしてください！
+
+(スポンサーやコーチについてふれる。ー　コミュニティに感謝)
+
  
-Three things we want to share: 
+３つのお願い：
 
-Workshop Materials
-(Almost all) materials can be found in the guides section at http://guides.railsgirls.com. You can find presentations, materials and instructions from the workshop. If you took pictures or blogged about the event - let us know! We'll be publishing regularly on blog.railsgirls.com
+- ワークショップ・マテリアル
 
-Make Rails Girls better - give us feedback!
-We want to hear from you! Give us feedback about the workshop or how we can make the event better – it’s really quick, and it’ll help us improve our workshop at railsgirls.com/feedback
-
-Keep on coding!
-We realize there was quite a lot of stuff in todays lecture and for most of you it all felt a little overwhelming. We strongly recommend trying out Rails for Zombies exercise at http://www.codeschool.com/ latest by next weekend, it'll refreshen all you've learned so far and teach you some more. 
-
-Two things to keep you going: 
-- (Insert here a couple of community events that the participants should take part in)
-
-There was a LOT of interest in doing follow-up events. If you have ideas for this or want to volunteer for the organizing team, let us know and sign up for the group e-mailing list at http://groups.google.com/group/rails-girls-team!
- 
-And thats all for now,
-Your Rails Girls team 
+(ほとんどすべての)マテリアルは http://guides.railsgirls.com/ にあります。
+例えば、プレゼンテーション、マテリアル、ワークショップの解説書などがあります。
+もし、イベントの写真あるとかブログを書いたといった場合は、ぜひ教えてください！
+Rails Girlsは定期的に blog.railsgirls.com を更新しています。
 
 
+- Rails Girlsをもっとすばらしいイベントにするために　ー　フィードバックをください！
+
+感想をお聞かせください！
+ワークショップがどうだったか、また、どのようにイベントを改善できるかといったフィードバックをください。
+あまり時間はかかりません。今後のイベントをよりよくするために、railsgirls.com/feedback まで
+ご意見、感想などをおよせください。
+
+
+- プログラムを書き続けて！
+
+今日のレクチャでは消化できないくらいたくさんのあれこれがあったことは十分承知しています。
+ほとんどの参加者のみなさまはとてもこなしきれないと思ったはずです。
+まずは、来週末までに Rails for Zombies の練習問題 http://www.codeschool.com/ にトライすることをお勧めします。
+練習問題にトライすることでワークショップで学んだことを思い出すはずですし、新しいことも学べます。
+
+
+コミュニティにかかわっていくために２つ:
+
+- (ここに参加者がいけそうなコミュティのイベントをいくつか列挙する。)
+
+- フォローアップのイベントに興味をもったら、
+
+何かアイディアがあれはそれを、あるいは Rails Girls チームのためにボランティアをしたいと思ったら、
+お知らせください。グループのメーリングリスト http://groups.google.com/group/rails-girls-team に
+登録してください！
+
+
+以上です。
+
+Rails Girls チーム
 
 
 
-#### What happens after the event?
 
-Inviting real developers to coach is Rails Girls sessions not only gives the participants a chance for hands-on education, but also makes the barrier to enter the technology world lower. How to keep the girls coding?
+#### ワークショップ後のフォローアップはありますか?
 
-* Encourage them to continue practicing by trying different exercises like Codecademy and such.
-* Mention at least two forthcoming developer events where the local coaches will be. Try to get the girls to attend actual developer meetups
-* Invite everyone to the Facebook Group where they can ask questions.
-* Invite the girls together again within a month. You can host these meetups at the Rails Girls global meetup page http://www.meetup.com/Rails-Girls/ - we’ll be happy to promote events. However, it doesn't matter under which brand you want to continue meeting - the important thing'
+実際に開発に携わっているディベロッパーをコーチしてもらうのは Rails Girls参加者にプログラミングを体験する機会を
+与えるばかりではなく、プログラミングの世界に入って行く敷居を低くする意味もあります。
+どのようにして、その後もコーディングし続けられるようにしてあがられるでしょうか？
 
+* 他の演習問題、たとえば [Codecademy](http://www.codecademy.com/)のようなところで引き続き、
+勉強し続けるように励ます。
+
+* 今後開催予定、コーチが行きそうなディベロッパー向けイベントを少なくても２つ紹介する。
+ディベロッパーの集まりに参加者を誘う。
+
+* フェイスブックのグループに招待して、質問できる場を作ってあげる。
+
+* 1ヶ月以内ににもう一度、参加者を招待する。こ
+のような集まりは Rails Girlsグローバル・ミートアップ・ページ[Rails Girls Meetup Everywhere](http://www.meetup.com/Rails-Girls/)
+で企画できます。よろこんで、イベントを宣伝します。
+ただし、どのようなブランドのもとでミーティングを開き続けるかは開催者の自由です。これは重要です。
 
 
 ---
 
-## Checklist
+## チェックリスト
 
-This is a small checklist for your event. Rails Girls can be thrown together in a matter of weeks, but to truly have time to make a good event, prepare at least two months. Not all of these steps are of course mandatory and they are here just to help you remember.
+以下にイベントのチェックリストを簡単にまとめました。
+Rails Girls 数週間あれば準備できますが、
+すばらしいイベントにするためには少なくても２ヶ月の準備期間が必要でしょう。
+以下のステップ全てが必須というわけではありませんが参考になるでしょう。
 
-### Before the event:
 
-* Fill in the [application](railsgirls.com/inyourcity) and the team will contact you!
-* Start working with the project plan template on Google Docs
-* Decide dates and set a venue
-* Reach out for the local coaches - try finding five people who commit to taking part
-* Release the website: write the copy and suggest a theme
-  1. Dates and location.
-  2. Application deadlines.
-  3. Short introductory text, around 200 characters. Check out the past events for inspiration!
-  4. Speakers of the day
-  5. Partners - a two parapgraph sentence and a logo (100 x 100px or 250 x 90px and in png format)
-  6. Coaches with twitter-handle
+### イベント前:
 
-* Start marketing the event, you can use materials from [here](http://www.speakerdeck.com/u/railsgirls)
-* Start looking for sponsors
-* Reach out for press and write a pre-event story
-* E-mail accepted participants and non-accepted applicants
-* E-mail installation instructions and last minute event details
-* Set a date for coach dinner and send them instructions
+* [application](railsgirls.com/inyourcity) に書き込む。Rails Girls Team の誰かが連絡します！
 
-#### During the event
+* Google Docsのテンプレートに従って、動き始める。
 
-* Tweet!
-* Remember to take photos
-* Interview participants and speakers about their experiences
+* 日程と会場を決める。
 
-#### After the event
+* 地元のコーチに声をかける。手伝ってくれる人を５人以上見つけるようにしてください。
 
-* Update website to include pictures and possible blogposts
-* Invite active participants to [global e-mail list](https://groups.google.com/group/rails-girls-team)
-* Send a thank you note to participants and ask for [feedback](http://www.railsgirls.com/feedback)
-* Send a thank you note for organizers
+* 以下の項目を含むウェブサイトをリリースする。
+
+  1. 日程と場所
+
+  2. 申し込み締め切り日
+
+  3. 200文字程度の簡単な紹介文。過去のイベントを眺めるとアイディアが浮かびますよ！
+
+  4. スピーカー
+
+  5. パートナー　ー　２段落程度の文章とロゴ (100 x 100px あるいは 250 x 90px  png フォーマット)
+
+  6. コーチとコーチのツイッター名
+
+* イベントを宣伝する。[ここ](http://www.speakerdeck.com/u/railsgirls) のマテリアルを使えます。
+
+* スポンサーを探し始める。
+
+* プレスに声をかける。プレイベントにまつわる話しを書く。
+
+* 応募者に参加承認／見送りのメールを出す。
+
+* インストール方法とイベントの詳細をメールする。
+
+* コーチ・ディナーの日程を決めて、メールする。
+
+#### イベント中
+
+* ツィート!
+
+* 写真を撮るのを忘れない。
+
+* 参加者とスピーカーに彼らの経験をインタビューする。
+
+
+#### イベント後
+
+* 写真付きでブログを掲載する。
+
+* [global e-mail list](https://groups.google.com/group/rails-girls-team)に積極的だった参加者を招待する。
+
+* 参加のお礼メールをだして、フィードバックしてもらう。[feedback](http://www.railsgirls.com/feedback)
+
+* オーガナイザーにありがとうをいう。
