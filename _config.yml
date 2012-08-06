@@ -23,7 +23,3 @@ maruku:
   use_divs:   false
   png_dir:    images/latex
   png_url:    /images/latex
-
-JB :
-  version : 0.2.13
-  BASE_PATH : false

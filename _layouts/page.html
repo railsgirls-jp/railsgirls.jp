@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <title>Rails Girls - Japanese</title>
+  <!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="/js/prefixfree.min.js"></script>
+  <link href="/css/bootstrap.css" rel="stylesheet"/>
+  <link href="/css/code.css" rel="stylesheet"/>
+  <link href="/css/custom.css" rel="stylesheet"/>
+  <link href="/favicon.png" rel="shortcut icon"/>
+</head>
+{% include header.html %}
+<article class="container">
+  <div class="main">
+    <ol class="posts">
+      <li>
+        <div id="aside">
+          <span>
+            <img src="/images/star-red.png" alt="★" />
+            <img src="/images/star-red.png" alt="★" />
+            <img src="/images/star-red.png" alt="★" />
+          </span>
+        </div>
+        <div class="post_content">
+          <h1 class="title">{{ page.title }}</h1>
+          <p>{{ content }}</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</article>
+{% include footer.html %}
