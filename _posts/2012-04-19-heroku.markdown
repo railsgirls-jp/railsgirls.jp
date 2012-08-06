@@ -8,17 +8,17 @@ permalink: heroku
 
 *Created by Terence Lee, [@hone02](https://twitter.com/hone02)*
 
-### Get Heroku
+### Heroku の準備
 
-Follow steps 1 through 3 of the [quickstart guide](https://devcenter.heroku.com/articles/quickstart) to sign up, install the toolbelt, and login.
+[quickstart guide](https://devcenter.heroku.com/articles/quickstart) の 1から3 を実施して、サインアップ、ログインしましょう。toolbelt のインストールもしてください。
 
-__COACH__: Talk about the benefits of deploying to Heroku vs traditional servers.
+__COACHより__: Heroku か、従来のサーバーか、デプロイの利点について話してみましょう。
 
-### Preparing your app
+### アプリの準備
 
-#### Updating our database
+#### データベースのアップデート
 
-First, we need to get our database to work on Heroku, which uses a different database. Please change the following in the Gemfile:
+まず、 Heroku で動くデータベースが必要です。いつものデータベースとは違います。 Gemfile を次のように変更しましょう。 :
 
 {% highlight ruby %}
 gem 'sqlite3'
@@ -35,13 +35,13 @@ group :production do
 end
 {% endhighlight %}
 
-Run `bundle install --without production` to setup your dependencies.
+そして、 `bundle install --without production` を実行してセットアップしてください。
 
-__COACH__: You can talk about RDBMS and the different ones out there.
+__COACHより__: RDBMS とそうでないものについて話してみましょう。
 
-#### Version Control Systems
+#### バージョン管理(git)
 
-We need to add our code to version control. You can do this by running the following in the terminal:
+バージョン管理が必要です。ターミナルで次のコマンドを実行すれば大丈夫です。(訳者注：gitのインストールは別途必要です。) :
 
 {% highlight sh %}
 git init
@@ -49,14 +49,14 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__COACH__: This would be a good time to talk about version control systems and git.
+__COACHより__: バージョン管理と git について話すいい機会ですね。
 
 
-### Deploying your app
+### アプリのデプロイ
 
-#### App creation
+#### アプリのcreate
 
-We need to create our heroku app by typing `heroku create` in the terminal and see something like this:
+Heroku のアプリを作りましょう。ターミナルで `heroku create` と入力したら、次のようなものが見られます。 :
 
 {% highlight sh %}
 Creating evening-sky-7498... done, stack is cedar
@@ -64,11 +64,11 @@ http://evening-sky-7498.herokuapp.com/ | git@heroku.com:evening-sky-7498.git
 Git remote heroku added
 {% endhighlight %}
 
-In this case "evening-sky-7498" is your app name.
+この場合では、 "evening-sky-7498" がアプリの名前です。
 
-#### Pushing the code
+#### コードをpush
 
-Next we need to push our code to heroku by typing `git push heroku master`. You'll see push output like the following:
+さて、 Heroku にコードをプッシュしましょう。 `git push heroku master` と入力してください。そうすると、こんな出力が見られるはずです。 :
 
 {% highlight sh %}
 Counting objects: 134, done.
@@ -87,11 +87,11 @@ Total 134 (delta 26), reused 0 (delta 0)
        http://evening-sky-7498.herokuapp.com deployed to Heroku
 {% endhighlight %}
 
-You'll know the app is done being pushed, when you see the "Launching..." text like above.
+アプリのプッシュが終わってるのがわかりますか？ "Launching..." というテキストのところです。
 
-#### Migrate database
+#### データベースのマイグレート
 
-Next we need to migrate our database like we did locally during the workshop: `heroku run rake db:migrate`
+そして、ワークショップでローカルにやったように、データベースのマイグレートをする必要があります。 : `heroku run rake db:migrate`
 
-When that command is finished being run, you can hit the app based on the url. For this example app, you can go to [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com). You can also type `heroku open` in the terminal to visit the page.
+そのコマンドが実行されたら、 url でアプリを見ることができます。このアプリの例では、 [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com) です。もしくは、ターミナルで `heroku open` と入力すれば、そのページを見に行くことができます。
 
