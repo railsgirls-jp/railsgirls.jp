@@ -5,8 +5,8 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  background: #fff;
-  color: #333;
+  background: #ffffff;
+  color: #ffffcc;
   text-rendering: optimizeLegibility;
   font-size: 15px;
   line-height: 1.6;
@@ -73,15 +73,15 @@ header #logo {
 }
 
 nav {
-    margin: 0 0 0 200px;
-    padding-top: -10px;
-    float: right;
-    color: #ffffcc;
-    font-size: 20px;
+  margin: 0 0 0 200px;
+  padding-top: 0px;
+  float: right;
+  color: #ffffcc;
+  font-size: 20px;
 }
 
 nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 300;
   font-size: 20px;
@@ -98,7 +98,7 @@ nav a:last-child: after {
   content: none;
 }
 
-nav a:hover {
+nav a:hover{
   color: #ffffcc;
   text-decoration: underline;
 }
@@ -196,4 +196,118 @@ footer a {
 .hero {
   padding: 20px 320px 20px 0;
   background: url(../images/guides-hero.png) right 80px no-repeat;
+}
+
+.main .posts ul li,
+.main .posts ol li {
+    margin-bottom: 0.5em;
+}
+
+.main {
+    display: inline;
+    float: left;
+    margin-right: 20px;
+    margin: 0 20px 0 0;
+    overflow: visible;
+    padding-left: 80px;
+    position: relative;
+    width: 640px;
+}
+
+.main h2,
+.main h3,
+.main h4,
+.main h5 {
+    margin-bottom: 0.2em;
+}
+
+.main h2 {
+    padding-top: 0;
+}
+
+.main h3 {
+    line-height: 1.08em;
+    margin: 2px 0;
+}
+
+.main h4 {
+    margin: -3px 0 -1px 0;
+}
+
+.main a {
+    font-weight: bold;
+}
+
+.main a:visited {
+    color: #d53C2E;
+}
+
+.main a:visited:hover,
+.main .pagination a:hover {
+    color: #D53C2E;
+}
+
+.main .posts .tags li {
+    list-style: none;
+    margin-bottom: 0.8em;
+}
+
+.posts h1.title {
+    color: #D53C2E;
+    display: block;
+    font-size: 30px;
+    line-height: 120%;
+    margin: -15px 0 0.3em 0;
+}
+
+#aside {
+    color: #999;
+    float: left;
+    font: bold 0.875em "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 150px;
+}
+
+#aside p {
+    color: #bbb;
+    margin-bottom: 0.5em;
+}
+
+span.date,
+p.date {
+    color: #2c2c2c;
+    display: block;
+    font: italic 120% "Palatino", "Times New Roman", Times, serif;
+    fonr-size: 20px;
+    margin-bottom: 0.5em;
+}
+
+ol.posts > li {
+    float: left;
+    left: -160px;
+    list-style: none;
+    position: relative;
+    width: 800px;
+    margin-bottom: 50px;
+}
+
+.post_content {
+    border-bottom: 1px solid #ececec;
+    float: left;
+}
+
+div.post_content {
+    display: inline;
+    color: #6e6e6e;
+    float: left;
+    line-height: 16px;
+    width: 600px;
+}
+
+div.post_content p {
+    font-size: 18px;
+    font: "Palatino", "Times New Roman", Times, serif;
+    margin-bottom: 0;
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <title>Rails Girls - Japanese</title>
+  <!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="/js/prefixfree.min.js"></script>
+  <link href="/css/bootstrap.css" rel="stylesheet"/>
+  <link href="/css/code.css" rel="stylesheet"/>
+  <link href="/css/custom.css" rel="stylesheet"/>
+  <link href="/favicon.png" rel="shortcut icon"/>
+</head>
+{% include header.html %}
+<article class="container">
+  <div class="main">
+    <ol class="posts">
+      {% for post in site.posts limit:5 %}
+      {% if post.permalink %} {% else %}
+      <li>
+        <div id="aside"><span>{{ post.date | date:"%Y-%m-%d" }}</span></div>
+        <div class="post_content">
+          <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          <p>{{ post.content }}</p>
+        </div>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ol>
+  </div>
+</article>
+{% include footer.html %}
