@@ -3,7 +3,7 @@ layout: page
 title: "Rails Girls 日本語版について"
 ---
 
-This site has a Japanse version of [Rails Girls Guide](guide.railsgirls.com). <br/>
+This site has a Japanse version of [Rails Girls Guide](http://guides.railsgirls.com/). <br/>
 We created this site since we need Japanese documents for Japanese girls to get started.
 In general, Japanese people don't read nor speak English. The Japanese version will cut down
 obstacles for girls to get in to a technology world.

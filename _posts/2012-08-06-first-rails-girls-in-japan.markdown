@@ -27,7 +27,7 @@ I moved the place to Tokyo. Origanizing an event in Tokyo is very easy compared 
 Many Rubyists and Rails developers are in Tokyo, while not many in Sapporo. Besides, Rubyists in Sapporo
 are all super busy for RubyKaigi. Choosing a place is also easy in Tokyo since
 there are many possible places to have the Rails Girls event.
-Among them, I chose COOKPAD. COOKPAD was a diamond sponcer at RailsConf 2012 and
+Among them, I chose COOKPAD. COOKPAD was a diamond sponsor at RailsConf 2012 and
 orignizes meetups for Rubyists regularly. I've talked with some COOKPAD develepers in person.
 When Kakutani-san, a Rails Girls Tokyo organizer, contacted COOKPAD, they immediately said OK to use a room.
 Of course, it's free with free internet connection.
