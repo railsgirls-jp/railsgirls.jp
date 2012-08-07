@@ -23,3 +23,8 @@ maruku:
   use_divs:   false
   png_dir:    images/latex
   png_url:    /images/latex
+
+comments :
+  provider : disqus
+  disqus :
+    short_name : railsgirls-jp

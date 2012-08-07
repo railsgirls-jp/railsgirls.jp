@@ -4,6 +4,7 @@ title: "The First Rails Girls In Japan"
 description: ""
 category: 
 tags: []
+comments: true
 ---
 
 I'm so pleased to annouce the very first Rails Girls event in Japan is about to happen.
