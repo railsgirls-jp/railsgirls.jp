@@ -16,7 +16,7 @@ production_url : http://railsgirls-jp.github.com
 destination: ./_site
 lsi:         false
 server_port: 4000
-markdown:    maruku
+markdown:    kramdown
 permalink:   pretty
 maruku:
   use_tex:    false
