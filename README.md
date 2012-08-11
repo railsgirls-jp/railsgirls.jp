@@ -7,6 +7,26 @@ Rails Girls Guideの邦訳です。
 Rails Girls Tokyo開催に向けて話しあうメーリングリストは　https://groups.google.com/forum/#!forum/rails-girls-tokyo です。
 MLは公開していないので、参加リクエストをください。
 
+Rails Girls JP(Japanese) のサイトにブログを追加する場合は
+
+```
+rake post title="my fabulous post"
+```
+
+を実行すると、year-month-date-my-fabulous-post.markdown というテンプレートが _post ディレクトリに作られるので、
+これを編集する。_post ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして
+扱われる。permalinkがある場合は、どこかのページから permalink で指定した URL へリンクする。
+
+このサイトの About や Event のような独立したページを作りたい場合は
+
+```
+rake page name="something"
+```
+
+を実行する。この場合、something/index.html という名前でテンプレートが作られるので、これを編集する。
+このファイルも、どこかのページからリンクする。
+
+
 以下、オリジナルのREADMEそのままです。
 
 Our aim is to give tools for women to understand technology. The Rails Girls events do this by providing a great first experience on building the Internet.
