@@ -15,6 +15,8 @@ Rails Girlsは2010年末にヘルシンキで設立されました。当初は�
 
 あなたの地域でRails Girlsを開催したい、あるいは何かフィードバックしたい場合には、[contact@railsgirls.com](mailto:contact@railsgirls.com)まで、ご連絡ください。今後のイベント開催予定は[www.railsgirls.com](http://railsgirls.com)でご覧になれます。
 
+(日本で Rails Girls を開催したい方は [こちら](/getting-started-jp)もご覧ください。)
+
 
 ### Rails Girlsの概要
 Rails Girlsイベントは非営利目的で開催されます。Rails Girlsは参加費を徴収することはありません。また、コーチやスピーカにお金を払うこともありません。イベントに参加するにあたり、プログラミングの知識は一切問いません。また、年齢制限もありません。参加するには自分のノートパソコンを持ってくること、やる気を持ってやってくることだけです。
