@@ -1,87 +1,97 @@
 ---
 layout: default
-title: Commenting functionality for the Rails Girls app
+title: Rails Girls アプリのコメント機能
 permalink: commenting
 ---
-# Commenting for Rails Girls App
+# Rails Girls アプリのコメント機能
 *Created by Janika Liiv, [@janikaliiv](https://twitter.com/janikaliiv)*
 
-We are going to add the possibility to comment ideas in your *railsgirls* application.
+*railsgirls* アプリのideas へコメントができるような追加をします。
+Rails のインストールと ideas アプリ構築についての手順は、 [こちら](/app) を参照ください。
 
-The instructions for installing rails and building the ideas app can be found [here](/app)
+## Step 1: foreigner gem の追加
 
-## Step 1: Add foreigner gem
-
-Add to Gemfile
+Gemfile に次の gem を追加します。
 {% highlight ruby %}
 gem 'foreigner'
 {% endhighlight %}
 
-In your terminal stop the server if it's running and type
+もしターミナルでサーバーが動いていれば止め、次のコマンドを実行します。
 {% highlight sh %}
 bundle install
 {% endhighlight %}
 
-## Step 2: Create comment scaffold
+## Step 2: Comment の scaffold をする
 
-Create comment scaffold, with the commentator name, the comment body (contents of the comment) and with the reference to the ideas table (idea_id). 
+Comment のコメント者名、コメント本文(コメント内容)、Idea テーブルへの関係 (idea_id) を scaffold しましょう。
 {% highlight sh %}
 rails g scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
 
-## Step 3: Add foreign key connections
-Add to migration the foreing key  connection. Open db/migrate/ and the file, which name ends with 'create_comments.rb'. After
+## Step 3: 外部キー (foreign key) を追加する
+migration に外部キー (foreing key) を追加します。db/migrate/ 内のファイル名の最後が 'create_comments.rb' というファイルを開いて、
 {% highlight ruby %}
 t.timestamps
 end
 {% endhighlight %}
 
-add
+の下に、次のコードを追記してください。
+
 {% highlight ruby %}
 add_foreign_key :comments, :ideas
 {% endhighlight %}
 
-Now migrate the database changes by typing in your terminal
+そして、ターミナルで次のように入力して、データベースを変更する migrate を実行します。
+
 {% highlight sh %}
 rake db:migrate
 {% endhighlight %}
 
-start your server with:
+サーバーをスタートさせましょう。
+
 {% highlight sh %}
 rails s
 {% endhighlight %}
 
-## Step 4: Add relations to models
+## Step 4: モデルに関係 (relations) を追加する
 
-You need to make sure that Rails knows the connection between objects (ideas and comments). 
-As one idea can have many comments we need to make sure the idea model knows that. 
-Open app/models/idea.rb and after the row
+ideas と comments オブジェクト間の接続を Rails に認識させる必要があります。
+一つの idea はたくさんの comments を所有することができるものとして、Idea モデルに認識させます。
+app/models/idea.rb を開いて、
+
 {% highlight ruby %}
 class Idea < ActiveRecord::Base
 {% endhighlight %}
-add
+
+この行のあとに、次のコードを追加します。
+
 {% highlight ruby %}
 has_many :comments
 {% endhighlight %}
 
-The comment also has to know that it belongs to an idea.So open app/models/comment.rb and after
+また、comment は、ある idea に属するものとして認識させます。
+app/models/comment.rb を開いて、
+
 {% highlight ruby %}
 class Comment < ActiveRecord::Base
 {% endhighlight %}
 
-add the row
+この行のあとに、次のコードを追加します。
+
 {% highlight ruby %}
 belongs_to :idea
 {% endhighlight %}
 
-## Step 5: Render the comment form and existing comments
+## Step 5: コメントフォームの表示と編集
 
-Open app/views/ideas/show.html and after the image_tag
+app/views/ideas/show.html を開いて、
+
 {% highlight erb %}
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 {% endhighlight %}
 
-add
+この行のあとに、次のコードを追加します。
+
 {% highlight erb %}
 <h3>Comments</h3>
 <% @idea.comments.each do |comment| %>
@@ -94,17 +104,20 @@ add
 <%= render 'comments/form' %>
 {% endhighlight %}
 
-In app/controllers/ideas_controller.rb add to show action after the row
+app/controllers/ideas_controller.rb の show action には、
+
 {% highlight ruby %}
 @idea = Idea.find(params[:id])
 {% endhighlight %}
 
-this
+この次のあとに、こちらを追加します。
+
 {% highlight ruby %}
 @comment = @idea.comments.build
 {% endhighlight %}
 
-Open comments/_form.html and after
+最後に、 comments/_form.html を開いて、
+
 {% highlight erb %}
   <div class="field">
     <%= f.label :body %><br />
@@ -112,9 +125,10 @@ Open comments/_form.html and after
   </div>
 {% endhighlight %}
 
+このあとに、次のタグを追加します。
 
-add the row
 {% highlight erb %}
 <%= f.hidden_field :idea_id %>
 {% endhighlight %}
-That's it. Now view an idea you have inserted to your application and there you should see the form for inserting a comment
+
+これだけで、今加えた idea アプリケーションが表示され、comment 挿入フォームが見えるはずです。
