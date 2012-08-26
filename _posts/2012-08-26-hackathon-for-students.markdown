@@ -4,6 +4,7 @@ title: "学生向けハッカソンのお知らせ"
 description: ""
 category: 
 tags: [info]
+comments: true
 ---
 
 Rails Girlsはプログラミング経験が無いかそれに近い人たち向けのイベントですが、
