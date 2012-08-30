@@ -8,7 +8,7 @@ permalink: contributing
 
 このサイトは、[markdown](http://daringfireball.net/projects/markdown/)で書かれたドキュメントを[jekyll](https://github.com/mojombo/jekyll)を利用して提供されています。手引きを投稿するには、次の手順に従って送ってください。
 
-1.　この [repository on github](https://github.com/railsgirls/railsgirls.github.com) の"Fork"ボタンをクリックしてForkしてください。
+1.　この [repository on github](https://github.com/railsgirls-jp/railsgirls-jp.github.com) の"Fork"ボタンをクリックしてForkしてください。
 
 2.　あなたがForkしたrepositoryを `git clone` しましょう。
 
