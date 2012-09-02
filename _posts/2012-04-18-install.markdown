@@ -128,7 +128,7 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
-[RailsInstaller](http://rubyforge.org/frs/download.php/75346/railsinstaller-2.0.0.exe) をダウンロードして、実行する。
+[RailsInstaller](http://rubyforge.org/frs/download.php/75894/railsinstaller-2.1.0.exe) をダウンロードして、実行する。
 インストールのオプションは全てディフォルトを選択する。
 
 コードを編集するためのテキストエディタが必要になる。
