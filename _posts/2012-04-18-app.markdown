@@ -25,7 +25,7 @@ permalink: app
 まず、ターミナルまたはコマンドプロンプトを開いてください。
 
 * OS X: Spotlightで *Terminal* と入力して出てきたターミナルをクリックしてください。
-* Windows: スタートメニューをクリックして *Command Prompt* を探し、 *Command Prompt with Ruby on Rails*をクリックしてください。
+* Windows: スタートメニューをクリックして *Command Prompt* を探し、 *Command Prompt with Ruby on Rails*をクリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Command Prompt with Ruby on Rails* を入力し検索してください。)
 
 そして、次のコマンドを入力します。 :
 
