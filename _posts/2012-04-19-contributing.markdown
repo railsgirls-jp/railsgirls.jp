@@ -15,13 +15,13 @@ permalink: contributing
 3.　Fork -> cloneした中の `_posts` ディレクトリに、ファイル名を `YYYY-MM-DD-guide_name.markdown` としてファイルを作ります。
 
 4.　このファイルでは、ファイルの先頭にYAMLで次のような記述が必要です。:
-{% highlight yaml %}
+``` yaml
 ---
 layout: default
 title: Name of the Guide
 permalink: one-word-summary.html
 ---
-{% endhighlight %}
+```
 5.　作成した新しい手引きをcommitします。
 
 6.　commitしたら、あなたのgithubのリポジトリにpushしてください。
