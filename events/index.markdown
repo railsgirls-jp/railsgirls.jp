@@ -6,8 +6,8 @@ description: ""
 
 ### Rails Girls Tokyo 開催
 <br/>
-日本初の [Rails Girls](railsgirls.com) ワークショップを東京で開催します。
-詳細は [Rails Girls Tokyo](railsgirls.com/tokyo.html) をご覧ください。
+日本初の [Rails Girls](http://railsgirls.com) ワークショップを東京で開催します。
+詳細は [Rails Girls Tokyo](http://railsgirls.com/tokyo.html) をご覧ください。
 <br/>
 <br/>
 #### 日程
