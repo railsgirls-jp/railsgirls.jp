@@ -29,13 +29,13 @@ permalink: app
 
 そして、次のコマンドを入力します。 :
 
-{% highlight sh %}
+``` sh
 mkdir projects
 cd projects
 rails new railsgirls
 cd railsgirls
 rails s
-{% endhighlight %}
+``` 
 
 ブラウザで [http://localhost:3000](http://localhost:3000) にアクセスしてください。
 
@@ -51,11 +51,11 @@ Rails の scaffold 機能を使って、最初の一歩となる list, add, remo
 
 **Coachより:** scaffold とはなんでしょう (1. ただのコマンド, 2. モデル名でDBテーブルと関係があるもの;命名規約 , 3. 属性や型)？ また、migration 機能が何で、いつ必要なものですか？それはいつですか？なぜ？
 
-{% highlight sh %}
+``` sh
 rails generate scaffold idea name:string description:text picture:string
 rake db:migrate
 rails s
-{% endhighlight %}
+```
 
 ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。
 
@@ -69,35 +69,35 @@ rails s
 
 app/views/layouts/application.html.erb を開くと、次の行があります。
 
-{% highlight erb %}
+``` erb
 <%= stylesheet_link_tag "application" %>
-{% endhighlight %}
+```
 
 この1行前に次のタグを追記してください。
 
-{% highlight erb %}
+``` erb
 <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
-{% endhighlight %}
+```
 
 そして、この部分、
 
-{% highlight erb %}
+``` erb
 <%= yield %>
-{% endhighlight %}
+```
 
 これを次のように置き換えてください。
 
-{% highlight erb %}
+``` erb
 <div class="container">
     <%= yield %>
 </div>
-{% endhighlight %}
+```
 
 そして、トップバーとフッターをレイアウトに追加して、ideasの表も変えてしまいましょう。
 
 application.html.erb 内の `<body>` の下に追加するものです。 :
 
-{% highlight html %}
+``` html
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -108,21 +108,21 @@ application.html.erb 内の `<body>` の下に追加するものです。 :
         </div>
     </div>
 </div>
-{% endhighlight %}
+```
 
 `</body>` の前に追加するものです。 :
 
-{% highlight html %}
+``` html
 <footer>
     <div class="container">
         Rails Girls 2012
     </div>
 </footer>
-{% endhighlight %}
+```
 
 app/assets/stylesheets/application.css を開いて、コードの一番下に次のcssを追加しましょう。 :
 
-{% highlight css %}
+``` css
 #logo { 
     font-size: 20px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -135,7 +135,7 @@ table, td, th { vertical-align: middle !important; border: none !important; }
 th { border-bottom: 1px solid #DDD !important; }
 td.picture { width: 140px; }
 td.picture img { width: 140px; }
-{% endhighlight %}
+```
 
 **Coachより:** CSSとレイアウトについてちょっと話してみましょう。
 
@@ -146,82 +146,82 @@ td.picture img { width: 140px; }
 
 プロジェクト内の Gemfile を開いて、次のgemを追加します。
 
-{% highlight ruby %}
+``` ruby
 gem 'carrierwave'
-{% endhighlight %}
+```
 
 この 'sqlite3' の次あたりに書くといいです。
 
-{% highlight ruby %}
+``` ruby
 gem 'sqlite3'
-{% endhighlight %}
+```
 
 **Coachより:** 何のライブラリがあって、どう使われているものかわかりますか？いくつかはオープンソースの名前ですよね？
 
 さて、写真を処理するコードを生成します。Terminal/Command Prompt で、次のコマンドを実行してください。 :
 
-{% highlight sh %}
+``` sh
 bundle
-{% endhighlight %}
+```
 
 **ここで、Terminal/Command Prompt 上の rails server プロセスをリスタートする必要があります。** 追加した gem をアプリにロードさせるためです。
 
 そうすると、次のコマンドで写真をアップロードする準備ができます。 :
 
-{% highlight sh %}
+``` sh
 rails generate uploader Picture
-{% endhighlight %}
+```
 
 app/models/idea.rb を開いて、次のコードを追記してください。
 
-{% highlight ruby %}
+``` ruby
 mount_uploader :picture, PictureUploader
-{% endhighlight %}
+```
 
 この class... の下に書いてくださいね。
 
-{% highlight ruby %}
+``` ruby
 class Idea < ActiveRecord::Base
-{% endhighlight %}
+```
 
 そして、app/views/ideas/_form.html.erb を開いて２か所編集します。
 
-{% highlight erb %}
+``` erb
 <%= f.text_field :picture %>
-{% endhighlight %}
+```
 
 &nbsp;&nbsp;&#8595;
 
-{% highlight erb %}
+``` erb
 <%= f.file_field :picture %>
-{% endhighlight %}
+```
 
 それと、
 
-{% highlight erb %}
+``` erb
 <%= form_for(@idea) do |f| %>
-{% endhighlight %}
+```
 
 &nbsp;&nbsp;&#8595;
 
-{% highlight erb %}
+``` erb
 <%= form_for(@idea, :html => {:multipart => true}) do |f| %>
-{% endhighlight %}
+```
 
 
 それと、このviewはよくないですね。ファイルのpathだけを表示してるので、これもいじってみましょう。
 
 app/views/ideas/show.html.erb を開いて編集します。
 
-{% highlight erb %}
+``` erb
 <%= @idea.picture %>
-{% endhighlight %}
+```
 
 &nbsp;&nbsp;&#8595;
 
-{% highlight erb %}
+``` erb
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
-{% endhighlight %}
+```
 
 
 **Coachより:** HTML についてちょっと話してみましょう。
@@ -233,21 +233,21 @@ app/views/ideas/show.html.erb を開いて編集します。
 
 OS X と Linux は、ターミナルで次のコマンドを実行します。 :
 
-{% highlight sh %}
+``` sh
 rm public/index.html
-{% endhighlight %}
+```
 
 Windows は、コマンドプロンプトで次のように実行してください。 :
 
-{% highlight bat %}
+``` bat
 del public\index.html
-{% endhighlight %}
+```
 
 そして、 config/routes.rb を開いて、次のコードをファイルの1行目のあとに追記してください。 :
 
-{% highlight ruby %}
+``` ruby
 root :to => redirect("/ideas")
-{% endhighlight %}
+```
 
 **Coachより:** routes について話してみましょう。
 

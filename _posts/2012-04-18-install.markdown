@@ -34,13 +34,13 @@ Spotlight (右上の虫眼鏡のアイコン)をクリックして、*Terminal* 
 
 **ステップ 2.** 以下の行をターミナルにコピー・ペーストしてEnterキーを押す。
 
-{% highlight sh %}
+``` sh
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-osx.sh)
-{% endhighlight %}
+```
 
 次のように表示され、数分で終了する。
 
-{% highlight sh %}
+``` sh
 Downloading Tokaido.app
 ######################################################################## 100.0%
 Setting up Tokaido.app
@@ -60,7 +60,7 @@ Now we are going to print some information to check that everything is done:
 
 Done!
 Please restart your terminal.
-{% endhighlight %}
+```
 
 無事に終了したら、あたらしいターミナルを開く。この時点でRuby on Railsプログラミングのための設定は
 完了している。おめでとう！
@@ -111,9 +111,9 @@ Appleメニューをクリックして *About This Mac* (図 1) を選ぶ。
 インストーラーがアドミニストレーターのパスワードを聞いてくることがある。
 始める前に、飲み物を用意して、こころの準備をするといいですよ！
 
-{% highlight sh %}
+``` sh
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-osx-rvm.sh)
-{% endhighlight %}
+```
 
  ![You've done it](/images/complete.png "You've done it")
 
@@ -146,9 +146,9 @@ Ruby on Railsの開発環境をインストールするには、以下の行を�
 多数のテキストが画面に出てくるのを楽しもう。全てが終了するまで、少し待つ。
 始める前に、飲み物を用意して、こころの準備をするとよい。
 
-{% highlight sh %}
+``` sh
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
-{% endhighlight %}
+```
 
 コードを編集するためのテキストエディタが必要になる。
 このワークショップでは無償で利用できる Komodo エディタを推奨している。
