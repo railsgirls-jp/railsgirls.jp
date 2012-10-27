@@ -8,26 +8,27 @@ permalink: app
 
 *Created by Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
 
-[**まず、Railsがインストールされていることを確認してください。もしくはこちらのリンクを見てください。**](/install)
+**まず、Railsがインストールされていることを確認してください。** [** もしくはこちらのリンクを見てインストールしてください。**](/install)
 
 
 ## Step 0: ツールを知る
 
-* テキストエディタ (Gedit, Vim, Emacs, Komodo Edit, Sublime Text) は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
-* ターミナル (Terminal; Windowsではコマンドプロンプトと言う) は、rails serverを起動したりコマンドを実行したりするものです。
-* ウェブブラウザ (Firefox, Safari, Chrome) アプリケーションを表示するためのものです。
+* テキストエディタ: [Sublime Text](http://www.sublimetext.com), [Komodo Edit](http://www.activestate.com/komodo-edit), Vim や Emacs, Gedit は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
+* ターミナル (Terminal; Windowsではコマンドプロンプトと言う): rails serverを起動したりコマンドを実行したりするものです。
+* ウェブブラウザ (Firefox, Safari, Chrome): アプリケーションを表示するためのものです。
 
 
 ## Step 1: アプリケーションを作る
 
-*railsgirls* という名前のアプリを作りましょう。
+*railsgirls* という名前の Rails アプリを作っていきます。
 
 まず、Terminal を開いてください。
 
 * OS X: Spotlightで *Terminal* と入力して出てきた Terminal をクリックしてください。
 * Windows: スタートメニューをクリックして *Command Prompt* を探し、 *Command Prompt with Ruby on Rails*をクリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Command Prompt with Ruby on Rails* を入力し検索してください。)
+* Linux (Ubuntu): Dashホームで *Terminal* を探して、*Terminal* をクリックしてください。
 
-そして、次のコマンドを入力します。 :
+そして、Terminal上で次のコマンドを入力します。 :
 
 {% highlight sh %}
 mkdir projects
@@ -37,19 +38,19 @@ cd railsgirls
 rails server
 {% endhighlight %}
 
-ブラウザで [http://localhost:3000](http://localhost:3000) にアクセスしてください。
+自分のパソコン上のブラウザで [http://localhost:3000](http://localhost:3000) にアクセスしてください。
 
-Terminal 上で CTRL-C を実行してサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
+Terminal 上で CTRL-C（CTRL(Control)キーとCを同時に押す)を実行してサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
 **Coachより:** それぞれのコマンドが何なのか説明してみましょう。何が生成されましたか？そしてサーバーは何をしますか？
 
 
 ## Step 2: Idea の scaffold をする
 
-Rails の scaffold 機能を使って、最初の一歩となる list, add, remove, edit, view を生成します。
+Rails の scaffold 機能を使って、list, add, remove, edit, view を生成します。これが Rails アプリの最初の一歩です。
 ここでは ideas という名前で作ります。
 
-**Coachより:** scaffold とはなんでしょう (1. ただのコマンド, 2. モデル名でDBテーブルと関係があるもの;命名規約 , 3. 属性や型)？ また、migration 機能が何で、いつ必要なものですか？それはいつですか？なぜ？
+**Coachより:** scaffold とはなんでしょう？ (コマンドの説明をしてください。1. ただのコマンド, 2. モデル名でDBテーブルと関係があるもの;命名規約 , 3. 属性や型) また、migration 機能が何で、なぜ必要のか。
 
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
@@ -59,15 +60,15 @@ rails s
 
 ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。
 
-いろいろクリックしてみたりしたら、 CTRL-C でサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
+いろいろクリックしてみたりしたら、 CTRL-C を押して、サーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
 ## Step 3: デザインする
 
 **Coachより:** HTML と Railsの関係について話してみましょう。views のどの部分が HTML で、どこが Embedded Ruby (ERB)ですか？どうやってこれらが MVC (モデルとコントローラが、動的に HTML や views を生成するロジックを管理しているもの) と関連づけられていますか？
 
-そのままのデザインはイケてないので、何かやってみましょう。Twitter&#8217;s Bootstrap は、ホント簡単に、いい感じのスタイルを提供してくれますよ。
+そのままのデザインはイケてないので、何かやってみましょう。Twitter Bootstrapフレームワークを使うと、ホント簡単に、いい感じのスタイルに変えられます。
 
-app/views/layouts/application.html.erb を開くと、次の行があります。
+テキストエディタで app/views/layouts/application.html.erb を開くと、次の行があります。
 
 {% highlight erb %}
 <%= stylesheet_link_tag "application" %>
@@ -89,38 +90,37 @@ app/views/layouts/application.html.erb を開くと、次の行があります�
 
 {% highlight erb %}
 <div class="container">
-    <%= yield %>
+  <%= yield %>
 </div>
 {% endhighlight %}
 
-そして、トップバーとフッターをレイアウトに追加して、ideasの表も変えてしまいましょう。
-
-application.html.erb 内の `<body>` の下に追加するものです。 :
+次に、ナビゲーションバーとフッターをレイアウトに追加してみましょう。同じファイルの`<body>`の直後に以下を追加してください。
 
 {% highlight html %}
 <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="/">The Idea app</a>
-            <ul class="nav">
-                <li class="active"><a href="/ideas">Ideas</a></li>
-            </ul>
-        </div>
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">The Idea app</a>
+      <ul class="nav">
+        <li class="active"><a href="/ideas">Ideas</a></li>
+      </ul>
     </div>
+  </div>
 </div>
 {% endhighlight %}
 
-`</body>` の前に追加するものです。 :
+さらに、`</body>` の直前に以下を追加してください。
 
 {% highlight html %}
 <footer>
-    <div class="container">
-        Rails Girls 2012
-    </div>
+  <div class="container">
+    Rails Girls 2012
+  </div>
 </footer>
 {% endhighlight %}
 
-app/assets/stylesheets/application.css を開いて、コードの一番下に次のcssを追加しましょう。 :
+ここで、ideasの表のスタイルも変更してみましょう。app/assets/stylesheets/application.css を開いて、コードの一番下に次のcssを追加しましょう。
+
 
 {% highlight css %}
 #logo { 
@@ -137,54 +137,54 @@ td.picture { width: 140px; }
 td.picture img { width: 140px; }
 {% endhighlight %}
 
-**Coachより:** CSSとレイアウトについてちょっと話してみましょう。
+**Coachより:** CSSとレイアウトについてちょっと話しをしてください。
 
 
 ## Step 4: 写真アップロード機能を追加する
 
-画像処理をするのに、追加でライブラリをインストールする必要があります。
+Rails にファイルをアップロードする機能を追加するには、ライブラリをインストールする必要があります。
 
-プロジェクト内の Gemfile を開いて、次のgemを追加します。
-
-{% highlight ruby %}
-gem 'carrierwave'
-{% endhighlight %}
-
-この 'sqlite3' の次あたりに書くといいです。
+プロジェクトディレクトリ内の `Gemfile` を開いて、この行
 
 {% highlight ruby %}
 gem 'sqlite3'
 {% endhighlight %}
 
-**Coachより:** 何のライブラリがあって、どう使われているものかわかりますか？いくつかはオープンソースの名前ですよね？
+の直後に、次の一行を追加します。
 
-さて、写真を処理するコードを生成します。Terminal で、次のコマンドを実行してください。 :
+{% highlight ruby %}
+gem 'carrierwave'
+{% endhighlight %}
+
+**Coachより:** 何のライブラリがあって、なぜ便利なのかを説明してください。オープンソースソフトウェアが何なのかも説明してください。
+
+Terminal で、次のコマンドを実行してください。 :
 
 {% highlight sh %}
 bundle
 {% endhighlight %}
 
-**ここで、Terminal で動いている rails server プロセスをリスタートする必要があります。** 追加した gem をアプリにロードさせるためです。
+ここで、Terminal 上で **Rails server プロセスをリスタート** する必要があります。追加したライブラリをアプリにロードさせるためです。
 
-そうすると、次のコマンドで写真をアップロードする準備ができます。 :
+そうすると、次のコマンドでアップロードを実行するコードを生成できます。 :
 
 {% highlight sh %}
 rails generate uploader Picture
 {% endhighlight %}
 
-app/models/idea.rb を開いて、次のコードを追記してください。
-
-{% highlight ruby %}
-mount_uploader :picture, PictureUploader
-{% endhighlight %}
-
-この class... の下に書いてくださいね。
+`app/models/idea.rb` を開いて、次の行
 
 {% highlight ruby %}
 class Idea < ActiveRecord::Base
 {% endhighlight %}
 
-そして、app/views/ideas/_form.html.erb を開いて２か所編集します。
+の直後に、
+
+{% highlight ruby %}
+mount_uploader :picture, PictureUploader
+{% endhighlight %}
+
+を追加します。さらに、`app/views/ideas/_form.html.erb` を開いて２か所編集します。
 
 {% highlight erb %}
 <%= f.text_field :picture %>
@@ -209,9 +209,9 @@ class Idea < ActiveRecord::Base
 {% endhighlight %}
 
 
-それと、このviewはよくないですね。ファイルのpathだけを表示してるので、これもいじってみましょう。
+画像をアップロードするとわかりますが、これだけでは見栄えのいいものではありません。ファイルのpathだけを表示してるので、これもいじってみましょう。
 
-app/views/ideas/show.html.erb を開いて編集します。
+`app/views/ideas/show.html.erb` を開いて編集します。
 
 {% highlight erb %}
 <%= @idea.picture %>
@@ -224,14 +224,14 @@ app/views/ideas/show.html.erb を開いて編集します。
 {% endhighlight %}
 
 
-**Coachより:** HTML についてちょっと話してみましょう。
+**Coachより:** HTML についてちょっと話してください。
 
 
 ## Step 5: routes を調整する
 
 [http://localhost:3000](http://localhost:3000) を開いても、まだデフォルトページが見えると思います。ideas ページにリダイレクトするようにしましょう。
 
-OS X と Linux は、Terminal で次のコマンドを実行します。 :
+Mac OS X と Linux は、Terminal で次のコマンドを実行します。 :
 
 {% highlight sh %}
 rm public/index.html
@@ -243,13 +243,13 @@ Windows は、コマンドプロンプトで次のように実行してくださ
 del public\index.html
 {% endhighlight %}
 
-そして、 config/routes.rb を開いて、次のコードをファイルの1行目のあとに追記してください。 :
+そして、 `config/routes.rb` を開いて、最初の行の次に以下のコードを追記してください。 :
 
 {% highlight ruby %}
-root :to => redirect("/ideas")
+root :to => redirect('/ideas')
 {% endhighlight %}
 
-**Coachより:** routes について話してみましょう。
+**Coachより:** routes について話してください。
 
 
 ## 次は？
