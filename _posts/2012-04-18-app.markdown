@@ -14,7 +14,7 @@ permalink: app
 ## Step 0: ツールを知る
 
 * テキストエディタ (Gedit, Vim, Emacs, Komodo Edit, Sublime Text) は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
-* ターミナル/コマンドプロンプトは、rails serverを起動したりコマンドを実行したりするものです。
+* ターミナル (Terminal; Windowsではコマンドプロンプトと言う) は、rails serverを起動したりコマンドを実行したりするものです。
 * ウェブブラウザ (Firefox, Safari, Chrome) アプリケーションを表示するためのものです。
 
 
@@ -22,9 +22,9 @@ permalink: app
 
 *railsgirls* という名前のアプリを作りましょう。
 
-まず、ターミナルまたはコマンドプロンプトを開いてください。
+まず、Terminal を開いてください。
 
-* OS X: Spotlightで *Terminal* と入力して出てきたターミナルをクリックしてください。
+* OS X: Spotlightで *Terminal* と入力して出てきた Terminal をクリックしてください。
 * Windows: スタートメニューをクリックして *Command Prompt* を探し、 *Command Prompt with Ruby on Rails*をクリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Command Prompt with Ruby on Rails* を入力し検索してください。)
 
 そして、次のコマンドを入力します。 :
@@ -34,12 +34,12 @@ mkdir projects
 cd projects
 rails new railsgirls
 cd railsgirls
-rails s
+rails server
 {% endhighlight %}
 
 ブラウザで [http://localhost:3000](http://localhost:3000) にアクセスしてください。
 
-CTRL-C でターミナル/コマンドプロンプト上のサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
+Terminal 上で CTRL-C を実行してサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
 **Coachより:** それぞれのコマンドが何なのか説明してみましょう。何が生成されましたか？そしてサーバーは何をしますか？
 
@@ -158,13 +158,13 @@ gem 'sqlite3'
 
 **Coachより:** 何のライブラリがあって、どう使われているものかわかりますか？いくつかはオープンソースの名前ですよね？
 
-さて、写真を処理するコードを生成します。Terminal/Command Prompt で、次のコマンドを実行してください。 :
+さて、写真を処理するコードを生成します。Terminal で、次のコマンドを実行してください。 :
 
 {% highlight sh %}
 bundle
 {% endhighlight %}
 
-**ここで、Terminal/Command Prompt 上の rails server プロセスをリスタートする必要があります。** 追加した gem をアプリにロードさせるためです。
+**ここで、Terminal で動いている rails server プロセスをリスタートする必要があります。** 追加した gem をアプリにロードさせるためです。
 
 そうすると、次のコマンドで写真をアップロードする準備ができます。 :
 
@@ -231,7 +231,7 @@ app/views/ideas/show.html.erb を開いて編集します。
 
 [http://localhost:3000](http://localhost:3000) を開いても、まだデフォルトページが見えると思います。ideas ページにリダイレクトするようにしましょう。
 
-OS X と Linux は、ターミナルで次のコマンドを実行します。 :
+OS X と Linux は、Terminal で次のコマンドを実行します。 :
 
 {% highlight sh %}
 rm public/index.html
