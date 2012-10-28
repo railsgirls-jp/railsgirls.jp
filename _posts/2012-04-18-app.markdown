@@ -119,22 +119,14 @@ rails s
 </footer>
 {% endhighlight %}
 
-ここで、ideasの表のスタイルも変更してみましょう。app/assets/stylesheets/application.css を開いて、コードの一番下に次のcssを追加しましょう。
+ここで、ideasの表のスタイルも変更してみましょう。`app/assets/stylesheets/application.css` を開いて、コードの一番下に次のcssを追加しましょう。
 
 
 {% highlight css %}
-#logo { 
-    font-size: 20px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    float: left;
-    padding: 10px;
-}
 body { padding-top: 100px; }
 footer { margin-top: 100px; }
 table, td, th { vertical-align: middle !important; border: none !important; }
 th { border-bottom: 1px solid #DDD !important; }
-td.picture { width: 140px; }
-td.picture img { width: 140px; }
 {% endhighlight %}
 
 **Coachより:** CSSとレイアウトについてちょっと話しをしてください。
@@ -264,4 +256,4 @@ root :to => redirect('/ideas')
 
 * GUIDE 1: [Add commenting by Janika Liiv](/commenting)
 * GUIDE 2: [Put your app online with Heroku by Terence Lee](/heroku)
-* GUIDE 3: [Build a map of workshop participants by Rails Girls Berlin](http://blog.railsgirlsberlin.de/apptutorial/)
+* Guide 3: [Build a map of workshop participants by Rails Girls Berlin](http://railsgirlsberlin.de/apptutorial/)
