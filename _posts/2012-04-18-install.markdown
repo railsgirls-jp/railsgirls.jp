@@ -15,66 +15,12 @@ Ruby on Rails上にアプリケーションを作るためには、
 コーチに声をかけてください。コーチと一緒に問題を解決しましょう。
 
 * [OS X 用セットアップ](#setup_for_os_x)
-* [古い OS X 用セットアップ](#setup_for_os_x_old)
 * [Windows 用セットアップ](#setup_for_windows)
 * [Ubuntu 用セットアップ](#setup_for_ubuntu)
 
 <hr />
 
 ## <a id="setup_for_os_x">OS X 用セットアップ</a>
-
-**ステップ 1.** ターミナルを開く。
-
-Spotlight (右上の虫眼鏡のアイコン)をクリックして、*Terminal* とタイプする。
-プルダウンメニューの中から Terminal を選択する。(図 1)
-
-![Spotlight](/images/3.png "Spotlight")
-
-図 1
-
-**ステップ 2.** 以下の行をターミナルにコピー・ペーストしてEnterキーを押す。
-
-{% highlight sh %}
-bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-osx.sh)
-{% endhighlight %}
-
-次のように表示され、数分で終了する。
-
-{% highlight sh %}
-Downloading Tokaido.app
-######################################################################## 100.0%
-Setting up Tokaido.app
-
-- - - - - - - - -
-
-Now we are going to print some information to check that everything is done:
-
- ,;;;, ,;;;,
-;;;' ';' ';;; Should be ruby 1.9.3p194: ruby 1.9.3p194
-;;;       ;;;
- ';;,   ,;;'  Should be Rails 3.2.3: Rails 3.2.3
-   ';;,;;'
-     ';'
-
-- - - - - - - - -
-
-Done!
-Please restart your terminal.
-{% endhighlight %}
-
-無事に終了したら、あたらしいターミナルを開く。この時点でRuby on Railsプログラミングのための設定は
-完了している。おめでとう！
-
-ただし、これだけではなく、コードを編集するためにテキストエディタも必要。
-ワークショップでは無償で使える、Komodoというエディタを利用する。
-
-* [Komodo エディタをダウンロードしてインストールする](http://www.activestate.com/komodo-edit/downloads)
-
-<hr />
-
-## <a id="setup_for_os_x_old">古い OS X 用セットアップ</a>
-
-Rails アプリ開発に必要なソフトウェアをインストールするための汎用的なツールを最初にインストールする。
 
 **ステップ 1.** オペレーティング・システムのバージョンを調べる。
 
@@ -85,56 +31,43 @@ Appleメニューをクリックして *About This Mac* (図 1) を選ぶ。
 図 1
 
 **ステップ 2.** 開いたウィンドウに使用しているオペレーティング・システムのバージョンが表示される。(図 2)。
-バージョン番号が 10.6 あるいは 10.7 で始まっていたら、このドキュメントに従って進める。
-これ以上に古いバージョンだったら、イベントでコーチと一緒にセットアップする。
+バージョン番号が 10.6, 10.7, 10.8 で始まっていたら、このドキュメントに従って進める。
+これ以外のバージョンだったら、イベントでコーチと一緒にセットアップする。
 
 ![About this Mac dialog](/images/2.png "About this Mac dialog")
 
 図 2
 
-**ステップ 3.** 以下の２つのうち、使用しているオペレーティング・システムのバージョン用ツールをインストールする。
+**ステップ 3.** 使用している OS Xのバージョン用 RailsInstaller ダウンロードする。
 
-* [10.7用インストーラー](https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.7-v2.pkg) <span class="muted">(273Mb)</span>
+* [10.7, 10.8 用 RailsInstaller](https://github.com/downloads/railsinstaller/railsinstaller-nix/RailsInstaller-1.0.3-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
+* [10.6 用 RailsInstaller](https://github.com/downloads/railsinstaller/railsinstaller-nix/RailsInstaller-1.0.3-osx-10.6.app.tgz) <span class="muted">(224MB)</span>
 
-* [10.6用インストーラー](https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.6.pkg) <span class="muted">(273Mb)</span>
-
-**ステップ 4.** インストーラーを実行したら、新しいターミナルを開く。
-スポットライト(右上の端にある虫眼鏡のアイコン)をクリックして, *Terminal* とタイプするといくつか表示されるので、
-その中からターミナルを選ぶ。(図 3).
-
-![Spotlight](/images/3.png "Spotlight")
-
-図 3
-
-**ステップ 5.** 以下の行をターミナルにコピー・ペーストして、Enterキーを押す。
-多数のテキストが画面に出てくるのを楽しもう。全てが終了するまで、少し待つ。(約 30 分).
-インストーラーがアドミニストレーターのパスワードを聞いてくることがある。
-始める前に、飲み物を用意して、こころの準備をするといいですよ！
-
-{% highlight sh %}
-bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-osx-rvm.sh)
-{% endhighlight %}
-
- ![You've done it](/images/complete.png "You've done it")
-
-全てうまく行けば、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了。おめでとう！
+ダウンロードしたファイルをダブルクリックするとカレントディレクトリに解凍される。
+この解凍された'RailsInstaller-1.0.3-osx-10.7.app' あるいは 'RailsInstaller-1.0.3-osx-10.6.app' を
+ダブルクリックしてインストラクションに従ってインストールする。インストーラが 'Rails Installer OS X'と冒頭に書いて
+あるREADMEファイルを開くが、このインストラクションは **無視** してください。
 
 **最後のステップ** コードを編集するのに必要なテキストエディタをインストールする。
-このワークショップでは無償で利用できる Komodo エディタを推奨している。
+このワークショップでは Sublime Text エディタを推奨している。
 
-* [Komodo エディタをダウンロードしてインストールする](http://www.activestate.com/komodo-edit/downloads)
+* [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
+
+これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了。おめでとう！
 
 <hr />
 
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
-[RailsInstaller](http://rubyforge.org/frs/download.php/75346/railsinstaller-2.0.0.exe) をダウンロードして、実行する。
+[RailsInstaller](http://rubyforge.org/frs/download.php/75346/railsinstaller-2.1.0.exe) をダウンロードして、実行する。
 インストールのオプションは全てディフォルトを選択する。
 
-コードを編集するためのテキストエディタが必要になる。
-このワークショップでは無償で利用できる Komodo エディタを推奨している。
+[Heroku で Rails アプリを公開する](/heroku) 場合は Git と SSH-key もインストールしなければならない。
 
-* [Komodo エディタをダウンロードしてインストールする](http://www.activestate.com/komodo-edit/downloads)
+**最後のステップ** コードを編集するためのテキストエディタが必要になる。
+このワークショップでは Sublime Text エディタを推奨している。
+
+* [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了。おめでとう！
 
@@ -150,7 +83,9 @@ Ruby on Railsの開発環境をインストールするには、以下の行を�
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
-コードを編集するためのテキストエディタが必要になる。
-このワークショップでは無償で利用できる Komodo エディタを推奨している。
+**最後のステップ** コードを編集するためのテキストエディタが必要になる。
+このワークショップでは Sublime Text エディタを推奨している。
 
-* [Komodo エディタをダウンロードしてインストールする](http://www.activestate.com/komodo-edit/downloads)
+* [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
+
+これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了。おめでとう！
