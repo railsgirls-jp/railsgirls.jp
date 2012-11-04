@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "イベント"
-description: ""
+description: "event"
 ---
 
 ### Rails Girls Tokyo 開催

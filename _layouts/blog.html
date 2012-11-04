@@ -4,7 +4,7 @@
   <div class="main">
     <ol class="posts">
       {% for post in site.posts limit:5 %}
-      {% if post.permalink %} {% else %}
+      {% unless post.permalink or post.description == "event" %}
       <li>
         <div id="aside"><span>{{ post.date | date:"%Y-%m-%d" }}</span></div>
         <div class="post_content">
@@ -12,7 +12,7 @@
           <p>{{ post.content }}</p>
         </div>
       </li>
-      {% endif %}
+      {% endunless %}
       {% endfor %}
     </ol>
   </div>
