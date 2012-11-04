@@ -181,7 +181,7 @@ Rails Girlsのイベントは必ずインストレーション・フェストか
 
 どこで開催されるRails Girlsイベントでも、それぞれがrailsgirls.com/cityというウェブサイトを作れます。
 このウェブサイトに開催情報を載せられます。
-これまでにRails Girlsが開催された都市は[railsgirls.com/events](railsgirls.com/events)に一覧があります。
+これまでにRails Girlsが開催された都市は[railsgirls.com/events](http://railsgirls.com/events)に一覧があります。
 
 イベントが行われている最中には、必ず写真をとってください。また、ツイートを集めたり、参加者に質問したりしましょう。
 スピーカや参加者の感想についてブログを書きたいと思います。このときにはコーチの名前一覧が必要なので、教えてください。
@@ -632,7 +632,7 @@ Rails Girls 数週間あれば準備できますが、
 
 ### イベント前:
 
-* [application](railsgirls.com/inyourcity) に書き込む。Rails Girls Team の誰かが連絡します！
+* [application](http://railsgirls.com/inyourcity) に書き込む。Rails Girls Team の誰かが連絡します！
 
 * Google Docsのテンプレートに従って、動き始める。
 

@@ -23,7 +23,7 @@ our [issue tracker](https://github.com/railsgirls-jp/railsgirls-jp.github.com/is
 Thank you!
 <br/>
 <br/>
-このサイトは [Rails Girls Guide](guide.railsgirls.com) の日本語版を公開するために作られました。<br/>
+このサイトは [Rails Girls Guide](http://guides.railsgirls.com) の日本語版を公開するために作られました。<br/>
 オリジナルのドキュメントは全て英語でかかれています。日本人の場合、日常的に英語を読む・話す人はあまりいないのが
 実情で、プログラミングを始めようとする女性の敷居を低くするために、日本語版を用意しました。
 <br/>
