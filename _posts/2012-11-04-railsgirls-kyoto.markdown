@@ -7,7 +7,7 @@ description: "event"
 ### Rails Girls Kyoto 開催
 <br/>
 日本で２回目となる [Rails Girls](http://railsgirls.com) ワークショップを京都で開催します。<br/>
-詳細は間もなく発表となりますので、もうしばらくお待ちください。<br/>
+詳細は [Rails Girls Kyoto](http://railsgirls.com/kyoto.html) をご覧ください。<br/>
 <br/>
 
 #### 日程
@@ -26,6 +26,6 @@ description: "event"
 
 #### 参加申し込み
 
-Coming Soon!
+[申し込みフォーム](http://railsgirls-kyoto.doorkeeper.jp/events/1965)
 
 <br/>
