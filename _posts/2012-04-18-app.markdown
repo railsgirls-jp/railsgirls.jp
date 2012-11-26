@@ -25,7 +25,7 @@ permalink: app
 まず、Terminal を開いてください。
 
 * OS X: Spotlightで *Terminal* と入力して出てきた Terminal をクリックしてください。
-* Windows: スタートメニューをクリックして *Command Prompt* を探し、 *Command Prompt with Ruby on Rails*をクリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Command Prompt with Ruby on Rails* を入力し検索してください。)
+* Windows: スタートメニューをクリックして、すべてのプログラムから *RailsInstaller* を探し、*Command Prompt with Ruby on Rails*をクリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Command Prompt with Ruby on Rails* を入力し検索してください。)
 * Linux (Ubuntu): Dashホームで *Terminal* を探して、*Terminal* をクリックしてください。
 
 そして、Terminal上で次のコマンドを入力します。 :
@@ -54,6 +54,11 @@ Rails の scaffold 機能を使って、list, add, remove, edit, view を生成�
 
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
+{% endhighlight %}
+
+長いコマンドなので、実行する前にミスがないか確認してから実行して下さい。
+
+{% highlight sh %}
 rake db:migrate
 rails s
 {% endhighlight %}
@@ -68,10 +73,10 @@ rails s
 
 そのままのデザインはイケてないので、何かやってみましょう。Twitter Bootstrapフレームワークを使うと、ホント簡単に、いい感じのスタイルに変えられます。
 
-テキストエディタで app/views/layouts/application.html.erb を開くと、次の行があります。
+テキストエディタで `app/views/layouts/application.html.erb` (Windowsの場合  `app¥views¥layouts¥application.html.erb`) を開くと、次の行があります。
 
 {% highlight erb %}
-<%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "application", :media => "all" %>
 {% endhighlight %}
 
 この1行前に次のタグを追記してください。
@@ -247,13 +252,14 @@ root :to => redirect('/ideas')
 ## 次は？
 
 * HTML や CSS を使ってデザインを追加しましょう。 
-* 写真の評価機能を追加しましょう。
+* アイデアの素晴らしさ評価値の項目を追加しましょう。
 * CoffeeScript (or JavaScript) を使って動きをつけてみましょう。 
 * 写真のロードを早くするために、適切な写真のリサイズ機能を追加しましょう。
       
 
 ## その他の手引き
 
-* GUIDE 1: [Add commenting by Janika Liiv](/commenting)
-* GUIDE 2: [Put your app online with Heroku by Terence Lee](/heroku)
+* Guide 1: [Add commenting by Janika Liiv](/commenting)
+* Guide 2: [Put your app online with Heroku by Terence Lee](/heroku)
 * Guide 3: [Build a map of workshop participants by Rails Girls Berlin](http://railsgirlsberlin.de/apptutorial/)
+* Guide 4: [Create thumbnail images for the uploads by Miha Filej](/thumbnails)

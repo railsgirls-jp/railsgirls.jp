@@ -1,0 +1,70 @@
+---
+layout: default
+title: Rails Girls アプリを sqale で動かしてみよう
+permalink: sqale
+---
+
+# Rails Girls アプリを sqale で動かしてみよう
+
+*Created by Hiroshi SHIBATA, [@hsbt](https://twitter.com/hsbt)*
+
+### Sqale のアカウントとアプリケーションを作成しよう
+
+[Ruby on Rails サンプルアプリケーションを Sqale でうごかしてみよう！ Mac 編](https://sqale.jp/support/manual/sample-rails-sftp-mac)の Step.1 から 4 までを実行してアカウントの作成と開発環境の準備をしましょう。Windows を使用している場合は [Windows 編](https://sqale.jp/support/manual/sample-rails-sftp-win)に沿って準備をしましょう。
+
+__COACHより__: Sqale や Heroku のような PaaS と従来のサーバーを比べてデプロイの利点について話してみましょう。
+
+### アプリの準備
+
+#### データベースのアップデート
+
+Sqale を利用してアプリケーションを公開するにはデータベースの設定を変更する必要があります。Gemfile を次のように変更しましょう。 :
+
+変更前
+
+{% highlight ruby %}
+gem 'sqlite3'
+{% endhighlight %}
+
+変更後
+
+{% highlight ruby %}
+group :development do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'mysql2'
+end
+{% endhighlight %}
+
+__COACHより__: sqlite3 と MySQL/PostgreSQL の違いについて話してみましょう。
+
+### アプリケーションのデプロイ
+
+アカウント作成のチュートリアルの Step.8 と 9 を実行してアプリケーションをデプロイしましょう。
+
+以上で手元で作成した Rails Girls アプリケーションを公開する事ができました。
+
+### アプリケーションのデプロイ、もう一つの方法
+
+Sqale では簡単にアプリケーションを公開する方法の他にも他の PaaS と同様にバージョン管理システムの git を使ったデプロイが可能です。Rails Girls アプリケーションの何処かを変更してから試してみましょう。
+
+git を使ってデプロイするにはアプリケーションに git の情報を設定します。まず最初にターミナルで次のコマンドを実行します。:
+
+{% highlight sh %}
+git init
+git add .
+git commit -m "initial commit"
+{% endhighlight %}
+
+__COACHより__: バージョン管理と git について、プログラミングをする時に何が便利かを話してみましょう。
+
+次にアプリケーションのダッシュボードにある Git の SSH という項目をコピーしてから、次のコマンドを実行します。
+
+{% highlight sh %}
+git remote add origin [ダッシュボードからコピーした値]
+{% endhighlight %}
+
+#### コードをpush
+
+最後に、Sqale にコードをプッシュしましょう。 `git push origin master` と入力してください。プッシュ後にダッシュボードを確認してアプリケーションのデプロイが完了したという表示が出ていれば成功です。
