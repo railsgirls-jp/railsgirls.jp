@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Rails Girls Kyoto 1st after, english version"
+title: "The first, memorable RailsGirls Kyoto"
 description: ""
 category:
 tags: []
@@ -10,51 +10,90 @@ tags: []
 
 <br /><br />
 
-Rails Girls Kyoto 1st<br />
-The first Rails Girls event in Japan has been held in Tokyo at [Cookpad](http://cookpad.com/) last Semptember. And we had the second Rails Girls event in Japan, which took place in Kyoto at [hatena](http://www.hatena.ne.jp/) on 14th and 15th, December, 2012.
+"Rails Girls Kyoto, 1st"<br />
+Following the first RailsGirls event in Japan, which was held in Tokyo at [Cookpad](http://cookpad.com/) last Semptember,
+the second RailsGirls event took place in Kyoto at [hatena](http://www.hatena.ne.jp/) on December 14 & 15, 2012.
 <br /><br />
 
-There were 22 girls as well as 16 couches to help them learn Ruby on Rails. The girls came from many cities like Kyoto, Osaka and even Matsue, the Ruby city where Matz lives.
+RailsGirls Kyoto had 22 girls from many cities in western Japan such as Kyoto, Osaka and even Matsue!
+Matsue is a famous city among Rubyists for Matz' hometown (Matz should organize RailsGirls Matsue ;) ).
+For 22 girls, 16 coaches helped learning Ruby on Rails. Some were RailsGirls Tokyo coaches, also.
 <br /><br />
 
-Like many other Rails Girls events, we had a quite similar time table. The first day was Install Party, and there were several sessions including TryRuby, BentoBox, lightning talks from coaches and an after party in the second day.
+Like many other RailsGirls events, it was a two-day event.
+The first day was a "Install Party," and the second day was a workshop filled with several sessions:
+TryRuby, BentoBox, lightning talks by coaches. Then, the end was an after party!
 <br /><br />
 
+The Day One:<br />
+The first thing we did on this day was the Friday hug,
+which should be the most important thing to do on Fridays.
+Before we took this picture, @kakutani explained what is the friday hug since almost everybody didn't know about that.<br/>
 <img src="/images/8275760609_e0fd6daa2f_o.jpg" width="500" alt="first day Friday Hug"/><br/>
 
-The first thing we did was the friday hug(which is most important on fridays). @kakutani explained what is the friday hug about, and we got started by having a picture taken with everyone. After that, every girl started trying installing Ruby on Rails on their own machine.
+After the Friday hug, attendees started installing Ruby on Rails on their own machine.
 <br/><br/>
 
+
+The Day Two:<br />
 <img src="/images/8283308145_404d217419_o.jpg" width="500" alt="workshop"/><br/>
 
-The second day<br />
-Because so many Rubyist in Kyoto and out of Kyoto gave thier hands, Thankfully Every 1 or 2 girls could always rely on 1 coach.
+Attendees tackled to create thier first Rails app.
+They were lucky because RailsGirls Kyoto could have many coaches.
+Most of coaches were local, and the rest were from various area.
+As a result, the attendee/coach ratio was 1-2 to 1.
 <br/><br/>
 
-As soon as the girls started TryRuby, we heard "The mascot of TryRuby is so cute!" many times from everywhere in the room. This implies that cuteness really excites girls, which makes learning really a fun thing.
+As soon as the girls started TryRuby, we heard girls' shouts of "The mascot of TryRuby is so cute!"
+many times here an there in the room.
+It is true for a material being cute makes girls really excited, which changes learning programming fun.
 <br/><br/>
 
+
+Lightning Talks:<br/>
 <img src="/images/8276785808_1d2c671999_o.jpg" width="500" alt="LT"/><br/>
 
-Lightning Talks<br/>
-"Rails girls has big potential. And I belive Rails Girls Kyoto has even bigger potential! You don't have to come from Kyoto, you don't even have to live in Kyoto. We are all connected with this great community. Let's have fun with Ruby and Rails!" said @spring_aki.
+@spring_aki, the co-orignizer of RailsGirls Kyoto, was among lightning talks speakers.
+Aki said,
+"RailsGirls has a big potential since it is a combination of Ruby, Rails and Girls.
+ Adding one more word, Kyoto, this event got a name, RailsGirlsKyoto.
+ That's why I believe this event has an even bigger potential by one more word!
+ You are not necessary Kyoto locals. We all have been connected by this great event
+ and Ruby community. Let's have fun with Ruby and Rails!"
 <br/><br/>
 
+After Party:<br/>
 <img src="/images/8284365856_af7ca692c8_o.jpg" width="500" alt="after party"/><br/>
 
-After Party<br/>
-The hacobu kitchen, on-site restaurant company in Kyoto, is also one of the partners who made thie event awesome. Since there were many female attendees, they served many kinds of food that looked so cute. their food and cakes made girls fun and exited very much. We really appriciate them!
+We ordered catering for the after party.
+The hacobu kitchen, on-site restaurant company in Kyoto, was one of the partners who made this event awesome.
+Since they knew most of attendees were female, they served many kinds of food that looked so cute.
+Their food and cakes made girls happy and exited so much. We really appriciate them!
 <br/><br/>
 
+The passionate talk by the co-organizer continues:<br/>
 <img src="/images/8283304913_533f43b677_o.jpg" width="500" alt="organizer's talk"/><br/>
 
-The passion of the organizer<br/>
-Sachiko Imaoka(@papilio17), the organizer of Rails Girls Kyoto, wanted to attend the last Rails Girls Tokyo event, but she couldn't make it. So she was wondering if such an event would be held in Kyoto. Then she came up with the idea: "Why not doing it by myself?". This was how Rails Girls Kyoto was started. In this event, she was both the organizer and an attendee at the same time. She talked about her thoughts and passion on it in the lightning talk session, but 5-minute talk wasn't probably enough to talk about everything.
+Sachiko Imaoka(@papilio17), the co-organizer of Rails Girls Kyoto,
+talked her episode passionately during the after party.
+She wanted to attend the recent RailsGirls Tokyo event. However she couldn't make it.
+At that time, the idea came across to Sachiko's mind: "Why not doing it by myself?"
+Her feeling of disappointment pushed her to organize the event in Kyoto.
+This was how RailsGirls Kyoto was started.
+In this event, she was both the co-organizer and an attendee.
+She already talked about her thoughts and passion on it in the lightning talks session,
+but 5-minute talk wasn't probably enough to talk about everything.
 <br/><br/>
 
+
+The last shot:
 <img src="/images/8283306141_7f4a35317d_o.jpg" width="500" alt="last day Friday Hug"/><br/>
 
-After the workshop, we had a picture taken with the whole members again and everyone looks excited in the photo. Thankfully, every girl could build their own Rails applications by themselves. I wish Ruby and Rails make their lives more fun. Enjoy!<br/>
+After the workshop, we took a picture again including whole members.
+As the picture tells, everyone was very excited.
+Yeah, look at thier smiles. This is the RailsGirls event.
+Thankfully, every girl could build their own Rails applications by themselves.
+We wish Ruby and Rails make their lives more delightful. Enjoy!<br/>
 
 <br/>
 
