@@ -11,7 +11,7 @@ tags: []
 <br /><br />
 
 Rails Girls Kyoto 1st<br />
-The first Rails Girls event in Japan has been held in Tokyo at Cookpad last Semptember. And ee had the second Rails Girls event in Japan, which took place in Kyoto at hatena on 14th and 15th, December, 2012.
+The first Rails Girls event in Japan has been held in Tokyo at [Cookpad](http://cookpad.com/) last Semptember. And we had the second Rails Girls event in Japan, which took place in Kyoto at [hatena](http://www.hatena.ne.jp/) on 14th and 15th, December, 2012.
 <br /><br />
 
 There were 22 girls as well as 16 couches to help them learn Ruby on Rails. The girls came from many cities like Kyoto, Osaka and even Matsue, the Ruby city where Matz lives.
@@ -22,7 +22,7 @@ Like many other Rails Girls events, we had a quite similar time table. The first
 
 <img src="/images/8275760609_e0fd6daa2f_o.jpg" width="500" alt="first day Friday Hug"/><br/>
 
-The first thing we did was the friday hug(which is most important on fridays). @kakitani explained what is the friday hug about, and we got started by having a picture taken with everyone. After that, every girl started trying installing Ruby on Rails on their own machine.
+The first thing we did was the friday hug(which is most important on fridays). @kakutani explained what is the friday hug about, and we got started by having a picture taken with everyone. After that, every girl started trying installing Ruby on Rails on their own machine.
 <br/><br/>
 
 <img src="/images/8283308145_404d217419_o.jpg" width="500" alt="workshop"/><br/>
@@ -43,13 +43,13 @@ Lightning Talks<br/>
 <img src="/images/8284365856_af7ca692c8_o.jpg" width="500" alt="after party"/><br/>
 
 After Party<br/>
-The hacobu kitchen, on-site restaurant company in Kyoto, is also one of the partners who made thie event awesome. Since there were many female attendees, they served many kinds of food that looked so cute. their food and cakes made girls fun and exited verry much. We really appriciate them!
+The hacobu kitchen, on-site restaurant company in Kyoto, is also one of the partners who made thie event awesome. Since there were many female attendees, they served many kinds of food that looked so cute. their food and cakes made girls fun and exited very much. We really appriciate them!
 <br/><br/>
 
 <img src="/images/8283304913_533f43b677_o.jpg" width="500" alt="organizer's talk"/><br/>
 
 The passion of the organizer<br/>
-Sachiko Imaoka, the organizer of Rails Girls Kyoto, wanted to attend the last Rails Girls Tokyo event, but she couldn't make it. So she was wondering if such an event would be held in Kyoto. Then she came up with the idea: "Why not doing it by myself?". This was how Rails Girls Kyoto was started. In this event, she was both the organizer and an attendee at the same time. She talked about her thoughts and passion on it in the lightning talk session, but 5-minute talk wasn't probably enough to talk about everything.
+Sachiko Imaoka(@papilio17), the organizer of Rails Girls Kyoto, wanted to attend the last Rails Girls Tokyo event, but she couldn't make it. So she was wondering if such an event would be held in Kyoto. Then she came up with the idea: "Why not doing it by myself?". This was how Rails Girls Kyoto was started. In this event, she was both the organizer and an attendee at the same time. She talked about her thoughts and passion on it in the lightning talk session, but 5-minute talk wasn't probably enough to talk about everything.
 <br/><br/>
 
 <img src="/images/8283306141_7f4a35317d_o.jpg" width="500" alt="last day Friday Hug"/><br/>
