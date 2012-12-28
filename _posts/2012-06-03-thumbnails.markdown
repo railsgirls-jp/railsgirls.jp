@@ -1,61 +1,56 @@
 ---
 layout: default
-title: Show thumbnails when listing ideas
+title: アイデア一覧を表示したときにサムネイル表示してみよう
 permalink: thumbnails
 ---
 
-# Create thumbnails with Carrierwave
+# Carrierwave を使ってサムネイルを作る前の準備
 
-*Created by Miha Filej, [@mfilej](https://twitter.com/mfilej)*
+*Created by Miha Filej, [@mfilej](https://twitter.com/mfilej), Translated by Hiroshi SHIBATA*
 
-__Coach__: Explain what specifying the image width in HTML at the end of Step
-4 does and how it differs from resizing images on the server.
+__コーチへ__: 始めてのRailsアプリのStep4 でHTML の img タグの width を指定したことについて説明しましょう。また、それがサーバーで画像サイズを変更することの違いも話しあってみましょう。
 
-## Installing ImageMagick
+## ImageMagickのインストール
 
-* OS X: run `brew install imagemagick`
-* Windows: download and run the [ImageMagick installer][im-win] (use the first
-  *download* link).
-* Linux: On Ubuntu and Debian, run `sudo apt-get install imagemagick`. Use the
-  appropriate package manager instead of `apt-get` for other distributions.
+* OS X: `brew install imagemagick` を実行します
+* Windows: [ImageMagick installer][im-win] をインストールします。(先頭にある *download* リンクをクリックします)
+* Linux: Ubuntu か Debian を使っているなら `sudo apt-get install imagemagick` を実行します。他のディストリビューションを使っている場合は `apt-get` の代わりに適切なパッケージマネージャ(yum等)を使います。
 
   [im-win]: http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
 
-__Coach__: What is ImageMagick and how is it different from libraries/gems we
-used before?
+__コーチへ__: ImageMagick とは何をするものかを話しあいましょう。ImageMagick と gem(ライブラリ)と異なる部分や gem を追加する前に何故インストールしたかについても話してみましょう。
 
-Open `Gemfile` in the project and add
-
-{% highlight ruby %}
-gem 'mini_magick'
-{% endhighlight %}
-
-under the line
+Rails アプリケーションの `Gemfile` を開いて
 
 {% highlight ruby %}
 gem 'carrierwave'
 {% endhighlight %}
 
-In the Terminal run:
+の下に
+
+{% highlight ruby %}
+gem 'mini_magick'
+{% endhighlight %}
+
+を追加します。その後に Terminal で以下のコマンドを実行します。
 
 {% highlight sh %}
 bundle
 {% endhighlight %}
 
-## Telling our app to create thumbnails when an image is uploaded
+## 画像をアップロードした時にサムネイルを作成しよう
 
-Open `app/uploaders/picture_uploader.rb` and find the line that looks like
-this:
+`app/uploaders/picture_uploader.rb` を開いて、以下の行を探しましょう。
 
 {% highlight ruby %}
   # include CarrierWave::MiniMagick
 {% endhighlight %}
 
-Remove the `#` sign.
+上の行の `#` を削除します。
 
-__Coach__: Explain the concept of comments in code.
+__コーチへ__: コード上のコメントの用途やどのような時に使うかを説明しましょう
 
-Below the line you just changed, add:
+削除した場所のすぐ下に以下を追加します。
 
 {% highlight ruby %}
 version :thumb do
@@ -63,23 +58,20 @@ version :thumb do
 end
 {% endhighlight %}
 
-The images uploaded from now on should be resized, but the ones we already
-have weren't affected. So edit one of the existing ideas and re-add a picture.
+これで画像をアップロードするとリサイズするようになりました。しかし、もうアップロード済みの画像は変更されません。もう一度 idea を編集して画像をアップロードしなおしてください。
 
-## Displaying the thumbnails
+## サムネイルを表示してみよう
 
-To see if the uploaded picture was resized open
-`app/views/ideas/index.html.erb`. Change the line 
+`app/views/ideas/index.html.erb` を開いて、もし画像がアップロードされていればリサイズした画像を表示するようにしましょう。
 
 {% highlight erb %}
 <td><%= idea.picture %></td>
 {% endhighlight %}
 
-to
+を下のように変更します。
 
 {% highlight erb %}
 <td><%= image_tag idea.picture_url(:thumb) if idea.picture? %></td>
 {% endhighlight %}
 
-Take a look at the list of ideas in the browser to see if the thumbnail is
-there.
+これで、idea の一覧を開いた時にサムネイルが表示されるようになりました。
