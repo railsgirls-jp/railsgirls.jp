@@ -1,6 +1,6 @@
 ---
 layout: default
-title: HTML & CSS を使ってデザインしてみよう
+title: HTML と CSS を使ってデザインしてみよう
 permalink: design
 ---
 
