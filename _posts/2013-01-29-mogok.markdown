@@ -33,7 +33,7 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 
 正常にgitのローカルリポジトリが作成できているかはを確認するには「.git」ディレクトリが作成されていることを確認し、以下のコマンドを実行して下さい。
 
-` git status`
+`> git status`
 
 以下のような表示がでれば、正常です。
 
@@ -63,7 +63,7 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 #### ローカルリポジトリのデータをMOGOKのgitサーバへと送りましょう
 以下のコマンドを実行します。
 
-` git push mogok master`
+`> git push mogok master`
 
 - 登録したユーザIDとパスワードが求められます
 
@@ -72,12 +72,12 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 
 
 #### サーバ上でbundle installを実行する為に以下のMOGOKコマンドを実行します。
-` mogok build`
+`> mogok build`
  
 - これでサーバ上でbundle installが実行されます
 
 ### rake db:migrateの実行
-` mogok rake db:migrate`
+`> mogok rake db:migrate`
 
 - これでMOGOK上で、db:migrateが実行されます
 
@@ -89,7 +89,7 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 
 
 ### 公開アプリケーションの確認
-` > mogok info` を実行します。
+`> mogok info` を実行します。
 
 [リポジトリ情報とあなたのアプリケーションのURLが表示されます。](https://portal.mogok.jp/documents/rails_deployment_guide/operation_check/)
 ブラウザでアクセスしてみましょう！！
