@@ -1,0 +1,95 @@
+---
+layout: default
+title: Rails Girls アプリを MOGOK で動かしてみよう
+permalink: MOGOK
+---
+
+# Rails Girls アプリを MOGOK で動かしてみよう
+
+*Created by Hiroshi ABE, [@hirolovesbeer](https://twitter.com/hirolovesbeer)*
+
+### MOGOK のアカウントを作成しよう
+[サインアップ画面](https://auth.mogok.jp/signup)からアカウントを作成しましょう。
+数分待つと、確認＆登録用URL付きメールが届きますのでサインアップをしましょう。
+
+
+### MOGOKコマンドラインツールをインストールしましょう
+MOGOKを利用するには「MOGOKコマンドラインツール」をインストールする必要があります。
+[ポータル画面](https://portal.mogok.jp/)から登録したログインID＆パスワードでログインし、[ダウンロードページ](https://portal.mogok.jp/download)からmogok-1.0.X.gemというファイルをダウンロードします。
+
+`> gem install mogok-1.0.X.gem` を実行します。
+
+これで、MOGOKコマンドを実行することができます。
+
+
+### 作成したRailsアプリケーションをローカルのgitリポジトリに登録しよう
+[アプリケーションを作成したディレクトリで以下のgitコマンドを実行します](https://portal.mogok.jp/documents/rails_deployment_guide/create_git_repository/)
+
+`> git init`
+
+`> git add .`
+
+`> git commit -m "my first commit"`
+
+正常にgitのローカルリポジトリが作成できているかはを確認するには「.git」ディレクトリが作成されていることを確認し、以下のコマンドを実行して下さい。
+
+`> git status`
+
+以下のような表示がでれば、正常です。
+
+`# On branch master`
+
+`nothing to commit (working directory clean)`
+
+
+
+### 作成したRailsアプリケーションをMOGOKに登録しよう
+[アプリケーション名の決定とプログラムの登録](https://portal.mogok.jp/documents/rails_deployment_guide/create_mogok_app/)
+
+#### アプリケーション名の登録
+`> mogok create your-app-name` を実行
+
+- 登録したユーザIDとパスワードが求められます
+- 同じアプリケーション名があった場合にはエラーが表示されるので、名前を変えましょう。
+
+`> git remote -v` で確認
+
+`mogok   http://git.mogok.jp/mogok-sample-1234.git (fetch)` 
+
+`mogok   http://git.mogok.jp/mogok-sample-1234.git (push)`
+
+- 上記のように表示されると成功です！！
+
+#### ローカルリポジトリのデータをMOGOKのgitサーバへと送りましょう
+以下のコマンドを実行します。
+
+`> git push mogok master`
+
+- 登録したユーザIDとパスワードが求められます
+
+### MOGOKへとアプリケーションのデプロイをしましょう
+[デプロイとdb:migrateの実行](https://portal.mogok.jp/documents/rails_deployment_guide/deployment/)
+
+
+#### サーバ上でbundle installを実行する為に以下のMOGOKコマンドを実行します。
+`> mogok build`
+ 
+- これでサーバ上でbundle installが実行されます
+
+### rake db:migrateの実行
+`> mogok rake db:migrate`
+
+- これでMOGOK上で、db:migrateが実行されます
+
+
+### MOGOKでアプリケーションを公開しましょう
+`> mogok start`
+
+- これであなたのアプリケーションは、世界中に公開されました！！
+
+
+### 公開アプリケーションの確認
+`> mogok info` を実行します。
+
+[リポジトリ情報とあなたのアプリケーションのURLが表示されます。](https://portal.mogok.jp/documents/rails_deployment_guide/operation_check/)
+ブラウザでアクセスしてみましょう！！
