@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Rails Girls アプリを MOGOK で動かしてみよう
-permalink: MOGOK
+permalink: mogok
 ---
 
 # Rails Girls アプリを MOGOK で動かしてみよう
