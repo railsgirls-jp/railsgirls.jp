@@ -19,6 +19,10 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 
 `> gem install mogok-1.0.X.gem` を実行します。
 
+（mogok-1.0.X.gemファイルは、作業ディレクトリへと保存して下さい。）
+
+![gem install](http://dl.dropbox.com/u/908641/starting-mogok/kanazawa_rb_06.017.png)
+
 これで、MOGOKコマンドを実行することができます。
 
 
@@ -43,6 +47,31 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 
 
 
+### MOGOKでアプリケーションを動作させるためのおまじない
+MOGOKはデータベースにMySQLを利用しています。みなさんのローカル環境ではSQLiteを利用して開発をしている方が多いでしょう。SQLiteで開発したアプリケーションを問題なくMOGOKで動作させるおまじないを書きます。
+
+#### Gemfileの書き換え
+Gemfileに以下のGemが記述されていない場合には追記します。(既に記述がある場合にはskipしてかまいません。)
+
+ - gem 'therubyracer'
+ - gem 'mysql2'
+
+![Gemfile](http://dl.dropbox.com/u/908641/starting-mogok/kanazawa_rb_06.013.png)
+
+#### assets:precompileの有効化
+「config/environments/production.rb」ファイルに対して、以下の変更を行ないます。 本設定変更により、MOGOK上のproduction環境で、スタイルシート等が読み込まれるようにします。
+
+- 書き換え前
+
+  `config.serve_static_assets = false`
+
+- 書き換え後
+
+  `config.serve_static_assets = true`
+
+![asset:precompile](http://dl.dropbox.com/u/908641/starting-mogok/kanazawa_rb_06.013.png)
+
+
 ### 作成したRailsアプリケーションをMOGOKに登録しよう
 [アプリケーション名の決定とプログラムの登録](https://portal.mogok.jp/documents/rails_deployment_guide/create_mogok_app/)
 
@@ -51,6 +80,7 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 
 - 登録したユーザIDとパスワードが求められます
 - 同じアプリケーション名があった場合にはエラーが表示されるので、名前を変えましょう。
+- アプリケーション名は「英小文字、数字、ハイフンからなる1文字以上60文字以下の文字列」で定義できます。
 
 `> git remote -v` で確認
 
@@ -59,6 +89,7 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 `mogok   http://git.mogok.jp/mogok-sample-1234.git (push)`
 
 - 上記のように表示されると成功です！！
+
 
 #### ローカルリポジトリのデータをMOGOKのgitサーバへと送りましょう
 以下のコマンドを実行します。
@@ -76,10 +107,17 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
  
 - これでサーバ上でbundle installが実行されます
 
+![mogok build](http://dl.dropbox.com/u/908641/starting-mogok/fig_deployment_1.png)
+
+- 「Package creating... Done!」が表示されれば、bundle installが成功になります。
+
+
 ### rake db:migrateの実行
 `> mogok rake db:migrate`
 
 - これでMOGOK上で、db:migrateが実行されます
+
+![mogok build](http://dl.dropbox.com/u/908641/starting-mogok/fig_deployment_2.png)
 
 
 ### MOGOKでアプリケーションを公開しましょう
@@ -87,9 +125,13 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 
 - これであなたのアプリケーションは、世界中に公開されました！！
 
+![ mogok start](https://dl.dropbox.com/u/10442024/mogolog/20121220/20121220-4.png)
+
 
 ### 公開アプリケーションの確認
 `> mogok info` を実行します。
+
+![mogok info](https://dl.dropbox.com/u/10442024/mogolog/20121220/20121220-9.png)
 
 [リポジトリ情報とあなたのアプリケーションのURLが表示されます。](https://portal.mogok.jp/documents/rails_deployment_guide/operation_check/)
 ブラウザでアクセスしてみましょう！！
