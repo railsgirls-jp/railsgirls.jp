@@ -22,7 +22,8 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 
 `> gem install mogok-1.0.X.gem` を実行します。
 
-（mogok-1.0.X.gemファイルは、作業ディレクトリへと保存して下さい。）
+- mogok-1.0.X.gemファイルは、作業ディレクトリへと保存して下さい。
+- mogok-1.0.X.gemのXはダウンロードした最新ver.の数字を入れてください
 
 ![gem install](http://dl.dropbox.com/u/908641/starting-mogok/kanazawa_rb_06.017.png)
 
@@ -50,7 +51,7 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 
 
 
-## 3. MOGOKでアプリケーションを動作させるためのおまじない
+## 3. MOGOKでアプリケーションを動作させるための準備
 MOGOKはデータベースにMySQLを利用しています。みなさんのローカル環境ではSQLiteを利用して開発をしている方が多いでしょう。SQLiteで開発したアプリケーションを問題なくMOGOKで動作させるおまじないを書きます。
 
 ### Gemfileの書き換え
