@@ -8,12 +8,12 @@ permalink: MOGOK
 
 *Created by Hiroshi ABE, [@hirolovesbeer](https://twitter.com/hirolovesbeer)*
 
-### MOGOK のアカウントを作成しよう
+## MOGOK のアカウントを作成しよう
 [サインアップ画面](https://auth.mogok.jp/signup)からアカウントを作成しましょう。
 数分待つと、確認＆登録用URL付きメールが届きますのでサインアップをしましょう。
 
 
-### MOGOKコマンドラインツールをインストールしましょう
+## 1. MOGOKコマンドラインツールをインストールしましょう
 MOGOKを利用するには「MOGOKコマンドラインツール」をインストールする必要があります。
 [ポータル画面](https://portal.mogok.jp/)から登録したログインID＆パスワードでログインし、[ダウンロードページ](https://portal.mogok.jp/download)からmogok-1.0.X.gemというファイルをダウンロードします。
 
@@ -29,7 +29,7 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 これで、MOGOKコマンドを実行することができます。
 
 
-### 作成したRailsアプリケーションをローカルのgitリポジトリに登録しよう
+## 2. 作成したRailsアプリケーションをローカルのgitリポジトリに登録しよう
 [アプリケーションを作成したディレクトリで以下のgitコマンドを実行します](https://portal.mogok.jp/documents/rails_deployment_guide/create_git_repository/)
 
 `> git init`
@@ -50,10 +50,10 @@ MOGOKを利用するには「MOGOKコマンドラインツール」をインス�
 
 
 
-### MOGOKでアプリケーションを動作させるためのおまじない
+## 3. MOGOKでアプリケーションを動作させるためのおまじない
 MOGOKはデータベースにMySQLを利用しています。みなさんのローカル環境ではSQLiteを利用して開発をしている方が多いでしょう。SQLiteで開発したアプリケーションを問題なくMOGOKで動作させるおまじないを書きます。
 
-#### Gemfileの書き換え
+### Gemfileの書き換え
 Gemfileに以下のGemが記述されていない場合には追記します。(既に記述がある場合にはskipしてかまいません。)
 
  - gem 'therubyracer'
@@ -61,7 +61,7 @@ Gemfileに以下のGemが記述されていない場合には追記します。(
 
 ![Gemfile](http://dl.dropbox.com/u/908641/starting-mogok/kanazawa_rb_06.013.png)
 
-#### assets:precompileの有効化
+### assets:precompileの有効化
 「config/environments/production.rb」ファイルに対して、以下の変更を行ないます。 本設定変更により、MOGOK上のproduction環境で、スタイルシート等が読み込まれるようにします。
 
 - 書き換え前
@@ -75,8 +75,8 @@ Gemfileに以下のGemが記述されていない場合には追記します。(
 ![asset:precompile](http://dl.dropbox.com/u/908641/starting-mogok/kanazawa_rb_06.014.png)
 
 
-### 作成したRailsアプリケーションをMOGOKに登録しよう
-#### アプリケーション名の登録
+## 4. 作成したRailsアプリケーションをMOGOKに登録しよう
+### アプリケーション名の登録
 `> mogok create your-app-name` を実行
 
 - 登録したユーザIDとパスワードが求められます
@@ -92,7 +92,7 @@ Gemfileに以下のGemが記述されていない場合には追記します。(
 - 上記のように表示されると成功です！！
 
 
-#### ローカルリポジトリのデータをMOGOKのgitサーバへと送りましょう
+### ローカルリポジトリのデータをMOGOKのgitサーバへと送りましょう
 以下のコマンドを実行します。
 
 `> git push mogok master`
@@ -101,8 +101,8 @@ Gemfileに以下のGemが記述されていない場合には追記します。(
 
 [参考：アプリケーション名の決定とプログラムの登録(MOGOKオンラインマニュアル)](https://portal.mogok.jp/documents/rails_deployment_guide/create_mogok_app/)
 
-### MOGOKへとアプリケーションのデプロイをしましょう
-#### サーバ上でbundle installを実行する為に以下のMOGOKコマンドを実行します。
+## 5. MOGOKへとアプリケーションのデプロイをしましょう
+### サーバ上でbundle installを実行する為に以下のMOGOKコマンドを実行します。
 `> mogok build`
  
 - これでサーバ上でbundle installが実行されます
@@ -114,7 +114,7 @@ Gemfileに以下のGemが記述されていない場合には追記します。(
 [参考：デプロイとdb:migrateの実行(MOGOKオンラインマニュアル)](https://portal.mogok.jp/documents/rails_deployment_guide/deployment/)
 
 
-#### rake db:migrateの実行
+### rake db:migrateの実行
 `> mogok rake db:migrate`
 
 - これでMOGOK上で、db:migrateが実行されます
@@ -122,13 +122,13 @@ Gemfileに以下のGemが記述されていない場合には追記します。(
 ![mogok build](http://dl.dropbox.com/u/908641/starting-mogok/fig_deployment_2.png)
 
 
-### MOGOKでアプリケーションを公開しましょう
+## 6. MOGOKでアプリケーションを公開しましょう
 `> mogok start`
 
 - これであなたのアプリケーションは、世界中に公開されました！！
 
 
-### 公開アプリケーションの確認
+## 公開アプリケーションの確認
 `> mogok info` を実行します。
 
 ![mogok info](https://dl.dropbox.com/u/10442024/mogolog/20121220/20121220-9.png)
