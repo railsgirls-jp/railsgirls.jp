@@ -60,7 +60,7 @@ rails generate scaffold idea name:string description:text picture:string
 
 {% highlight sh %}
 rake db:migrate
-rails s
+rails server
 {% endhighlight %}
 
 ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。
