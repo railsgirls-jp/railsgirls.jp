@@ -134,7 +134,7 @@ table, td, th { vertical-align: middle !important; border: none !important; }
 th { border-bottom: 1px solid #DDD !important; }
 {% endhighlight %}
 
-**Coachより:** CSSとレイアウトについてちょっと話しをしてください。
+**Coachより:** CSSとレイアウトについてちょっと話をしてください。
 
 
 ## Step 4: 写真アップロード機能を追加する
