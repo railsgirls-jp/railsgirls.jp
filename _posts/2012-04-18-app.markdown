@@ -10,15 +10,25 @@ permalink: app
 
 **まず、Railsがインストールされていることを確認してください。** [** もしくはこちらのリンクを見てインストールしてください。**](/install)
 
+## ツールを知る
 
-## Step 0: ツールを知る
+<div class="indent" markdown="1">
 
-* テキストエディタ: [Sublime Text](http://www.sublimetext.com), [Komodo Edit](http://www.activestate.com/komodo-edit), Vim や Emacs, Gedit は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
-* ターミナル (Terminal; Windowsではコマンドプロンプトと言う): rails serverを起動したりコマンドを実行したりするものです。
-* ウェブブラウザ (Firefox, Safari, Chrome): アプリケーションを表示するためのものです。
+<h3><i class="icon-text-editor">&nbsp;</i></h3>
+### テキストエディタ
+[Sublime Text](http://www.sublimetext.com), [Komodo Edit](http://www.activestate.com/komodo-edit), Vim, Emacs, and Gedit are examples of text editors your can use for writing code and editing files.
 
+<h3><i class="icon-prompt">&nbsp;</i></h3>
+### ターミナル (Windows の場合はコマンドプロンプト)
+Where you start the rails server and run commands.
 
-## Step 1: アプリケーションを作る
+<h3><i class="icon-browser">&nbsp;</i></h3>
+### Webブラウザ
+(Firefox, Safari, Chrome) for viewing your application.
+
+</div>
+
+## *1.*アプリケーションを作る
 
 *railsgirls* という名前の Rails アプリを作っていきます。
 
@@ -45,7 +55,7 @@ Terminal 上で CTRL-C（CTRL(Control)キーとCを同時に押す)を実行し�
 **Coachより:** それぞれのコマンドが何なのか説明してみましょう。何が生成されましたか？そしてサーバーは何をしますか？
 
 
-## Step 2: Idea の scaffold をする
+## *2.*Idea の scaffold をする
 
 Rails の scaffold 機能を使って、list, add, remove, edit, view を生成します。これが Rails アプリの最初の一歩です。
 ここでは ideas という名前で作ります。
@@ -67,7 +77,7 @@ rails server
 
 いろいろクリックしてみたりしたら、 CTRL-C を押して、サーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
-## Step 3: デザインする
+## *3.*デザインする
 
 **Coachより:** HTML と Railsの関係について話してみましょう。views のどの部分が HTML で、どこが Embedded Ruby (ERB)ですか？どうやってこれらが MVC (モデルとコントローラが、動的に HTML や views を生成するロジックを管理しているもの) と関連づけられていますか？
 
@@ -137,7 +147,7 @@ th { border-bottom: 1px solid #DDD !important; }
 **Coachより:** CSSとレイアウトについてちょっと話をしてください。
 
 
-## Step 4: 写真アップロード機能を追加する
+## *4.*写真アップロード機能を追加する
 
 Rails にファイルをアップロードする機能を追加するには、ライブラリをインストールする必要があります。
 
@@ -224,7 +234,7 @@ mount_uploader :picture, PictureUploader
 **Coachより:** HTML についてちょっと話してください。
 
 
-## Step 5: routes を調整する
+## *5.*routes を調整する
 
 [http://localhost:3000](http://localhost:3000) を開いても、まだデフォルトページが見えると思います。ideas ページにリダイレクトするようにしましょう。
 
