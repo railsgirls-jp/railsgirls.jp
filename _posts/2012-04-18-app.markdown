@@ -253,7 +253,7 @@ rm public/index.html
 Windows は、コマンドプロンプトで次のように実行してください。 :
 
 {% highlight bat %}
-del public\index.html
+del public¥index.html
 {% endhighlight %}
 
 そして、 `config/routes.rb` を開いて、最初の行の次に以下のコードを追記してください。 :
