@@ -66,7 +66,7 @@ Terminal 上で CTRL-C（CTRL(Control)キーとCを同時に押す)を実行し�
 Rails の scaffold 機能を使って、list, add, remove, edit, view を生成します。これが Rails アプリの最初の一歩です。
 ここでは ideas という名前で作ります。
 
-**Coachより:** scaffold とはなんでしょう？ (コマンドの説明をしてください。1. ただのコマンド, 2. モデル名でDBテーブルと関係があるもの;命名規約 , 3. 属性や型) また、migration 機能が何で、なぜ必要のか。
+**Coachより:** scaffold とはなんでしょう？ (コマンドの説明をしてください。1. ただのコマンド, 2. モデル名でDBテーブルと関係があるもの;命名規約, 3. 属性や型) また、migration 機能が何で、なぜ必要のか。
 
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
