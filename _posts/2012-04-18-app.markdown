@@ -72,7 +72,7 @@ Rails の scaffold 機能を使って、list, add, remove, edit, view を生成�
 rails generate scaffold idea name:string description:text picture:string
 {% endhighlight %}
 
-長いコマンドなので、実行する前にミスがないか確認してから実行して下さい。
+長いコマンドなので、実行する前にミスがないか確認してから実行して下さい。なお、":string"(「文字列」の意味) はデフォルトの型なので、打ち込むのが面倒だったら省略しても構いません。
 
 {% highlight sh %}
 rake db:migrate
