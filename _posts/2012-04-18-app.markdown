@@ -209,18 +209,6 @@ mount_uploader :picture, PictureUploader
 <%= f.file_field :picture %>
 {% endhighlight %}
 
-それと、
-
-{% highlight erb %}
-<%= form_for(@idea) do |f| %>
-{% endhighlight %}
-
-&nbsp;&nbsp;&#8595;
-
-{% highlight erb %}
-<%= form_for(@idea, html: {multipart: true}) do |f| %>
-{% endhighlight %}
-
 
 画像をアップロードするとわかりますが、これだけでは見栄えのいいものではありません。ファイルのpathだけを表示してるので、これもいじってみましょう。
 
