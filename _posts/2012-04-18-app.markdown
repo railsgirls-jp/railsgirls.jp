@@ -15,16 +15,22 @@ permalink: app
 <div class="indent" markdown="1">
 
 <h3><i class="icon-text-editor">&nbsp;</i></h3>
+
 ### テキストエディタ
-[Sublime Text](http://www.sublimetext.com), [Komodo Edit](http://www.activestate.com/komodo-edit), Vim, Emacs, and Gedit are examples of text editors your can use for writing code and editing files.
+
+[Sublime Text](http://www.sublimetext.com), [Komodo Edit](http://www.activestate.com/komodo-edit), Vim や Emacs, Gedit は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
 
 <h3><i class="icon-prompt">&nbsp;</i></h3>
+
 ### ターミナル (Windows の場合はコマンドプロンプト)
-Where you start the rails server and run commands.
+
+rails serverを起動したりコマンドを実行したりするものです。
 
 <h3><i class="icon-browser">&nbsp;</i></h3>
-### Webブラウザ
-(Firefox, Safari, Chrome) for viewing your application.
+
+### Webブラウザ (Firefox, Safari, Chrome)
+
+アプリケーションを表示するためのものです。
 
 </div>
 
