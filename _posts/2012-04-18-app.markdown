@@ -255,11 +255,11 @@ root to: redirect('/ideas')
 
 ## 次は？
 
-* HTML や CSS を使ってデザインを追加しましょう。 
+* HTML や CSS を使ってデザインを追加しましょう。
 * アイデアの素晴らしさ評価値の項目を追加しましょう。
-* CoffeeScript (or JavaScript) を使って動きをつけてみましょう。 
+* CoffeeScript (or JavaScript) を使って動きをつけてみましょう。
 * 写真のロードを早くするために、適切な写真のリサイズ機能を追加しましょう。
-      
+
 
 ## その他の手引き
 
