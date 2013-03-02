@@ -177,13 +177,13 @@ Terminal で、次のコマンドを実行してください。 :
 bundle
 {% endhighlight %}
 
-ここで、Terminal 上で **Rails server プロセスをリスタート** する必要があります。追加したライブラリをアプリにロードさせるためです。
-
 そうすると、次のコマンドでアップロードを実行するコードを生成できます。 :
 
 {% highlight sh %}
 rails generate uploader Picture
 {% endhighlight %}
+
+ここで、Terminal 上で **Rails server プロセスをリスタート** する必要があります。追加したライブラリをアプリにロードさせるためです。
 
 `app/models/idea.rb` を開いて、次の行
 
@@ -197,7 +197,7 @@ class Idea < ActiveRecord::Base
 mount_uploader :picture, PictureUploader
 {% endhighlight %}
 
-を追加します。さらに、`app/views/ideas/_form.html.erb` を開いて２か所編集します。
+を追加します。さらに、`app/views/ideas/_form.html.erb` を開いて２か所?編集します。
 
 {% highlight erb %}
 <%= f.text_field :picture %>
