@@ -65,10 +65,12 @@ Appleメニューをクリックして *About This Mac* (図 1) を選ぶ。
 [Heroku で Rails アプリを公開する](/heroku) 場合は Git と SSH-key もインストールしなければならない。
 
 **最後のステップ** コードを編集するためのテキストエディタが必要になる。
-このワークショップでは Sublime Text エディタを推奨している。( Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題がある。気になる場合は別のエディタ、たとえば Komodo Edit を使ってもよい。 ) 
+このワークショップでは Sublime Text エディタを推奨している。( Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題がある。気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールするか、あるいは別のエディタ、たとえば [Komodo Edit エディタ](http://www.activestate.com/komodo-edit/downloads) を使ってもよい。 )
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
-* [Komodo Edit エディタをダウンロードしてインストールする](http://www.activestate.com/komodo-edit/downloads)
+* [Sublime Text 日本語入力パッチをダウンロード](https://github.com/chikatoike/IMESupport/archive/master.zip)
+
+Sublime Text 日本語入力パッチをダウンロードします。Sublime Text アプリメニューの Preferences から Browse Packeges を選び、フォルダを表示させます。 ダウンロードしたzipを解凍してできたフォルダ(IMESupport-master)をここへコピーします。Sublime Text が起動している場合は再起動します。
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了。おめでとう！
 
