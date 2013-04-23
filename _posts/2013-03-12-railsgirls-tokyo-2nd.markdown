@@ -65,8 +65,7 @@ tags: []
 <br/>
 
 <p>
-  RailsGirlsの創始者Lindaから動画のメッセージが届き、世界にひらかれたRailsGirlsの空気が参加者にも伝わります。 <br/>
-  （動画URL)
+  [RailsGirlsの創始者Lindaから動画のメッセージ](http://youtu.be/-dOmgFib-ko)が届き、世界にひらかれたRailsGirlsの空気が参加者にも伝わります。 <br/>
   動画は、L.A.で開かれていたHerokuのカンファレンスから届きました。 <br/>
 </p>
 <br/>
