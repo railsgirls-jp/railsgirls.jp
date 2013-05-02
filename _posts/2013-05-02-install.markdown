@@ -16,7 +16,7 @@ Ruby on Rails上にアプリケーションを作るためには、
 
 * [OS X 用セットアップ](#setup_for_os_x)
 * [Windows 用セットアップ](#setup_for_windows)
-* [Ubuntu 用セットアップ](#setup_for_ubuntu)
+* [Linux 用セットアップ](#setup_for_ubuntu)
 
 <hr />
 
@@ -76,14 +76,20 @@ Sublime Text 日本語入力パッチをダウンロードします。Sublime Te
 
 <hr />
 
-## <a id="setup_for_ubuntu">Ubuntu 用セットアップ</a>
+## <a id="setup_for_ubuntu">Linux 用セットアップ</a>
 
-Ruby on Railsの開発環境をインストールするには、以下の行をターミナルにコピーペーストして Enterキーを押す。
-多数のテキストが画面に出てくるのを楽しもう。全てが終了するまで、少し待つ。
-始める前に、飲み物を用意して、こころの準備をするとよい。
+To install the Ruby on Rails development environment you just need to copy the line below for your Linux distribution (Ubuntu or Fedora), paste it in the Terminal and press Enter. Enjoy the text flying on the screen; it will take quite some time. Grabbing a refreshing drink before starting is encouraged.
+
+** Ubuntuの場合:**
 
 {% highlight sh %}
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
+{% endhighlight %}
+
+** Fedoraの場合:**
+
+{% highlight sh %}
+bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
 
 **最後のステップ** コードを編集するためのテキストエディタが必要になる。
@@ -92,3 +98,5 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了。おめでとう！
+
+<hr />
