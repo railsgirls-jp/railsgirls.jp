@@ -666,6 +666,8 @@ Rails Girls 数週間あれば準備できますが、
 
 * コーチ・ディナーの日程を決めて、メールする。
 
+* Check if there are other events taking place the same weekend
+
 #### イベント中
 
 * ツィート!
@@ -674,6 +676,9 @@ Rails Girls 数週間あれば準備できますが、
 
 * 参加者とスピーカーに彼らの経験をインタビューする。
 
+* Do a Friday Hug! Learn more about Friday hugs at [Fridayhug.com](http://fridayhug.com)
+
+* Have a Skype with other Rails Girls chapters hosting events at the same time
 
 #### イベント後
 

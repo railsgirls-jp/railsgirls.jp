@@ -16,7 +16,7 @@ Ruby on Rails上にアプリケーションを作るためには、
 
 * [OS X 用セットアップ](#setup_for_os_x)
 * [Windows 用セットアップ](#setup_for_windows)
-* [Ubuntu 用セットアップ](#setup_for_ubuntu)
+* [Linux 用セットアップ](#setup_for_linux)
 
 <hr />
 
@@ -40,8 +40,8 @@ Appleメニューをクリックして *About This Mac* (図 1) を選ぶ。
 
 **ステップ 3.** 使用している OS Xのバージョン用 RailsInstaller ダウンロードする。
 
-* [10.7, 10.8 用 RailsInstaller](https://github.com/downloads/railsinstaller/railsinstaller-nix/RailsInstaller-1.0.3-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
-* [10.6 用 RailsInstaller](https://github.com/downloads/railsinstaller/railsinstaller-nix/RailsInstaller-1.0.3-osx-10.6.app.tgz) <span class="muted">(224MB)</span>
+* [10.7, 10.8 用 RailsInstaller](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
+* [10.6 用 RailsInstaller](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.6.app.tgz) <span class="muted">(224MB)</span>
 
 ダウンロードしたファイルをダブルクリックするとカレントディレクトリに解凍される。
 この解凍された'RailsInstaller-1.0.3-osx-10.7.app' あるいは 'RailsInstaller-1.0.3-osx-10.6.app' を
@@ -59,7 +59,7 @@ Appleメニューをクリックして *About This Mac* (図 1) を選ぶ。
 
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
-[RailsInstaller](http://rubyforge.org/frs/download.php/75894/railsinstaller-2.1.0.exe) をダウンロードして、実行する。
+[RailsInstaller](http://rubyforge.org/frs/download.php/76855/railsinstaller-2.2.0.exe) をダウンロードして、実行する。
 インストールのオプションは全てディフォルトを選択する。
 
 [Heroku で Rails アプリを公開する](/heroku) 場合は Git と SSH-key もインストールしなければならない。
@@ -76,14 +76,20 @@ Sublime Text 日本語入力パッチをダウンロードします。Sublime Te
 
 <hr />
 
-## <a id="setup_for_ubuntu">Ubuntu 用セットアップ</a>
+## <a id="setup_for_linux">Linux 用セットアップ</a>
 
-Ruby on Railsの開発環境をインストールするには、以下の行をターミナルにコピーペーストして Enterキーを押す。
-多数のテキストが画面に出てくるのを楽しもう。全てが終了するまで、少し待つ。
-始める前に、飲み物を用意して、こころの準備をするとよい。
+あなたの Linux ディストリビューション(Ubuntu や Fedora)に Ruby on Rails を開発する環境をインストールするには下の1行をコピーしてターミナルに貼り付け、Enter キーを押す必要があります。スクリーンに流れるテキストを眺めて少しの時間の間、楽しみに待って下さい。次に進むまでの間、飲み物を等を飲んで休憩するとよいでしょう。
+
+** Ubuntuの場合:**
 
 {% highlight sh %}
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
+{% endhighlight %}
+
+** Fedoraの場合:**
+
+{% highlight sh %}
+bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
 
 **最後のステップ** コードを編集するためのテキストエディタが必要になる。
@@ -92,3 +98,5 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了。おめでとう！
+
+<hr />
