@@ -183,6 +183,16 @@ Rails Girlsのイベントは必ずインストレーション・フェストか
 このウェブサイトに開催情報を載せられます。
 これまでにRails Girlsが開催された都市は[railsgirls.com/events](http://railsgirls.com/events)に一覧があります。
 
+You can also set up your own Facebook and Twitter page (remember to add links to your workshop's page!) or whatever service is popular in you community. Promoting the event through social media can go a long way these days, but make sure you have somebody to take care of the chosen channels. Some tips:
+
+* Keep the tone of posts friendly, positive and welcoming. Be direct in inviting fans/followers to share the event with their friends.
+* Photos are especially powerful messengers. Create your own graphics (*some ideas: "I'm a Rails Girl" Facebook cover for the event, word cloud with first names of girls who signed up, an infographic of applications*) or promote photos from other workshops if this is your event. Follow other Rails Girls pages and account to get ideas for content and pass it along to your community. 
+* Try various pitches for events to attract different types of girls; some will be in it for the fun and meeting new people, some to learn new things, some will be fueled by the desire to show guys girls can do anything. No need to focus on just one group!
+* Don't be afraid to publicly thank girls, coaches, blogs, media and other supporters who help you spread the word about your workshop for their support.
+* If your language supports it, use feminine forms when addressing girls.
+
+While the event is underway, remember to take pictures, collect tweets and ask questions of the participants. You'll be thankful for all of that for your next event. We love to write blog posts about the speaker and participant experiences. A list of the coaches is also required.
+
 イベントが行われている最中には、必ず写真をとってください。また、ツイートを集めたり、参加者に質問したりしましょう。
 スピーカや参加者の感想についてブログを書きたいと思います。このときにはコーチの名前一覧が必要なので、教えてください。
 
@@ -234,8 +244,10 @@ Rails Girlsはプログラミングに興味をもっているけれど、まだ
 Rails Girlsの大きな目標はイベントを女性たちのメインストリームにして、ウェブアプリ作り入門の定番にすることです。
 そのために、Rails Girlsは各地域のメディアでプレスリリースをしてきました。プレスリリースでは参加者がどのような
 人たちか、また、彼女たちの熱意を紹介してきました。詳細については
-[railsgirls.com/press](http://railsgirls.com/press)　をご覧ください。
+[railsgirls.com/press](http://railsgirls.com/press)　をご覧ください。 If you're working with a big company as a sponsor, their PR department might be able to help you spread the message about the workshop.
 
+
+Send the press release to local blogs, find contact at various media outlets. The more doors you knock on, the greater you chance of getting through. Make a list of journalists and bloggers you contact, mark those that respond to your emails, so they can be the first ones to receive your next press release. You can also write a press release after the event that includes photos and statements from satisfied participants.
 
 ### スポンサー
 
@@ -379,15 +391,21 @@ __スポンサーのメリット__
 
 * 延長コードやプロジェクタが使えるとよい。
 
+* Enough electric outlets to spare. Some girls might have older laptops that will need to be plugged in at all times.
+
 * 食べ物や飲み物をおく場所を確保できる。お昼ご飯の場所があるか、近くにお昼ご飯を食べられる場所があること。
 
 * モニタが使えると便利ですが、必須ではありません。モニタがあるとコーチはどのようなコードを書くと、どのような
 ことが起きるのかを説明しやすくなります。
 
+* Whiteboards can be helpful for coaches to explain more abstract concept. Alternatively, paper and pen work just fine. Just have something at hand people can draw on.
 
 地域のディベロッパー会が通常、どこで開催されるのかを聞いてみてください。いくつかの会社が一つの部屋を分割して使っている
 ような環境では初めて会った人でも協力者になってくれることがよくあります。
 
+#### How to find coaches?
+
+Ask around, ask sponsors (tech companies), ask anyone to help you out. Once you do get some coaches on board, they can help you out with their own contacts. Influential bloggers or Twitter users in your local dev community can help you out by broadcasting a call for coaches. *Hint: You can also thank coaches for their help by providing a spot at the workshop for their girlfriends ;)*
 
 #### コーチは何をしてくれると思えばいいですか？
 
@@ -597,9 +615,6 @@ Rails Girlsは定期的に blog.railsgirls.com を更新しています。
 
 Rails Girls チーム
 
-
-
-
 #### ワークショップ後のフォローアップはありますか?
 
 実際に開発に携わっているディベロッパーをコーチしてもらうのは Rails Girls参加者にプログラミングを体験する機会を
@@ -686,6 +701,8 @@ Rails Girls 数週間あれば準備できますが、
 
 * [global e-mail list](https://groups.google.com/group/rails-girls-team)に積極的だった参加者を招待する。
 
-* 参加のお礼メールをだして、フィードバックしてもらう。[feedback](http://www.railsgirls.com/feedback)
+* 参加のお礼メールをだして、フィードバックしてもらう。[feedback](http://www.railsgirls.com/feedback) (you can also create your own feedback form in your local language)
+
+* Send a thank you note to coaches
 
 * オーガナイザーにありがとうをいう。
