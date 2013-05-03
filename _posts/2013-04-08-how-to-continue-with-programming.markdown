@@ -36,6 +36,9 @@ and was published on
 ### 書籍
 
 * [Rails Tutorial](http://ruby.railstutorial.org/) - HTML ならば無料、印刷された書籍ならば有料のとても素晴らしい本です。この本は RailsGirls のワークショップではカバーすることが出来なかった沢山の事柄をあなたに教えてくれることでしょう。
+
+### 書籍（日本語）
+
 * [HerokuではじめるRailsプログラミング入門](http://www.amazon.co.jp/dp/4797371838) - 日本語で書かれたRails初心者向けの書籍です。簡単なWebアプリケーションをつくり、Herokuにデプロイする手順を丁寧に解説しています。
 
 ### スクリーンキャスト
