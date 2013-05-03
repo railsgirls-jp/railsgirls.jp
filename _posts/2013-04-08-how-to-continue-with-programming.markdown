@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "After The Event: How To Continue With Programming"
+title: "イベントの後: どのようにプログラミングを続けて行くか"
 permalink: how-to-continue-with-programming
 ---
 
-# After The Event: How To Continue With Programming
+# イベントの後: どのようにプログラミングを続けて行くか
 
 *Created and edited for general use by Daniel Puglisi, [@danielpuglisi](http://twitter.com/danielpuglisi).*
 
@@ -12,19 +12,17 @@ permalink: how-to-continue-with-programming
 and was published on
 [Daniel Puglisi's personal blog](http://danielpuglisi.com/articles/2013/04/rails-girls-after-the-event-how-to-continue-with-programming).*
 
-Unfortunately (!) the event is already over and I've written this
-blog post to help you find the best way to keep going with learning on
-how to program!
+*Translated by Hiroshi SHIBATA [@hsbt](http://twitter.com/hsbt)*
 
-There are 4 steps which I've come up with and I encourage you to
-really take them to your heart and do them.
+残念なこと(!)に楽しいイベントは終わってしまいました。そこで私はこのブログエントリであなたがどのようにプログラミングを学び続けて行くのが一番かを見つける手助けをしたいと思います。
 
-Originally this article was planned as a talk for the end of the Rails Girls Basel event but the girls
-were so focused on coding that we just didn't wanted to interrupt them. :)
+私はあなたを勇気づけて、関心を引くような4つのポイントを用意しました。
 
-So here it goes:
+もともとこの記事は Rails Girls Basel のイベントの最後で参加した皆さんがコードを書くということに関心を持てるように、そしてコードを書くのをやめて欲しくないという思いから話した内容です。
 
-## 1. Keep on Coding
+では見ていきましょう。:
+
+## 1. コードを書き続ける
 
 Mastering a craft requires constant repeating and perseverance.
 This also applies to programming. I encourage you to repeat the Rails
@@ -34,29 +32,29 @@ it some more.
 After that here are some free and paid resources which will help you
 to take things to the next level:
 
-### Courses
+### 学習教材
 
 * [Rails for Zombies](http://railsforzombies.org/) - A Rails Screencast which was created by [Codeschool](http://codeschool.com). Its free and Codeschool provides also a series of paid [Ruby and Rails](http://www.codeschool.com/paths/ruby#starting-rails) courses which are awesome. You should really try them!
 * [Codecademy](http://www.codecademy.com/) - The world isn't just created with rubiez. There are also plenty of other languages like HTML/CSS, JavaScript, Python and so on. Try them out.
 
-### Books
+### 書籍
 
 * [Rails Tutorial](http://ruby.railstutorial.org/) - A awesome book which has a free HTML version and a paid print version. The book provides you with a lot of great material which we couldn't cover at the Rails Girls workshop.
 
-### Screencasts & Videos
+### 動画
 
 * [Railscasts](http://railscasts.com/) - Short and simple screencasts about Rails by Ryan Bates.
 * [Confreaks](http://www.confreaks.com/) - Talks from conferences all over the world.
 * [Peepcode](https://peepcode.com/) - Paid Screencasts by Geoffrey Grosenbach.
 * [Richard Schneems Screencast](http://www.youtube.com/user/schneems/videos)
 
-### MOAR
+### 他の情報源
 
 * [Thoughtbot Trail-Map](https://github.com/thoughtbot/trail-map) - Guides to different topics.
 
 > If you have any other good resources, [hit me](mailto:daniel@codegestalt.com) so I can put them into the list.
 
-## 2. Build something real
+## 2. 実際に何か作ってみる
 
 Build something real means you should try to create something which is actually needed in the end.
 The hardest part will be to find a real project.
@@ -72,7 +70,7 @@ If you still have trouble finding something you can work on I have an idea for y
 Build a Rails Girls website for your country or city. In Switzerland we encourage the girls to work
 on our swiss wide Rails Girls website: [railsgirls.ch](http://railsgirls.ch/).
 
-## 3. Get in touch
+## 3. 他の人と話してみる
 
 Its always easier when you have someone you can ask.
 With this in mind, go out and find someone who you can talk to.
@@ -110,7 +108,7 @@ Try to setup such a list for your event too, this way its a lot easier to stay i
 with the people who sat around the same table as you did.
 If you don't know how, ask someone of the organizers of the event if she or he could do it.
 
-## 4. Have fun
+## 4. 楽しむ
 
 Last but not least, have fun.
 If you don't enjoy programming it is probably not the right thing for you.
