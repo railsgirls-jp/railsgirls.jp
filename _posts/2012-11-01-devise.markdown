@@ -26,7 +26,7 @@ gem 'devise'
 bundle install
 {% endhighlight %}
 
-gem のインストールができました。
+gem のインストールができました。Rails のサーバーを再起動するのを忘れずに!
 
 
 ## Step 1: アプリに devise をセットアップ
