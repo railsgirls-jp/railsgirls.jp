@@ -24,103 +24,78 @@ and was published on
 
 ## 1. コードを書き続ける
 
-Mastering a craft requires constant repeating and perseverance.
-This also applies to programming. I encourage you to repeat the Rails
-Girls tutorial which we did at the event and try to play around with
-it some more.
+技術を極めるためには絶えない努力と反復学習が必要とされます。これはプログラミングにも言えることです。私は RailsGirls のチュートリアルをイベントが終わった後にもう一度読み返すことともう一度やってみるということをお勧めします。
 
-After that here are some free and paid resources which will help you
-to take things to the next level:
+その後に様々な無料、有料の学習教材があなたの助けになるはずです。
 
 ### 学習教材
 
-* [Rails for Zombies](http://railsforzombies.org/) - A Rails Screencast which was created by [Codeschool](http://codeschool.com). Its free and Codeschool provides also a series of paid [Ruby and Rails](http://www.codeschool.com/paths/ruby#starting-rails) courses which are awesome. You should really try them!
-* [Codecademy](http://www.codecademy.com/) - The world isn't just created with rubiez. There are also plenty of other languages like HTML/CSS, JavaScript, Python and so on. Try them out.
+* [Rails for Zombies](http://railsforzombies.org/) - [Codeschool](http://codeschool.com) が作った Rails のスクリーンキャスト(動画による学習教材). これは無料で Codeschool が提供しているとても素晴らしい有料の [Ruby and Rails](http://www.codeschool.com/paths/ruby#starting-rails) コースの一つです。これは是非やるべきです!
+* [Codecademy](http://www.codecademy.com/) - 世界は Ruby によってだけ作られているわけではありません。HTML/CSS, JavaScript, Python のような沢山の言語があります。是非それらも試してみて下さい。
 
 ### 書籍
 
-* [Rails Tutorial](http://ruby.railstutorial.org/) - A awesome book which has a free HTML version and a paid print version. The book provides you with a lot of great material which we couldn't cover at the Rails Girls workshop.
+* [Rails Tutorial](http://ruby.railstutorial.org/) - HTML ならば無料、印刷された書籍ならば有料のとても素晴らしい本です。この本は RailsGirls のワークショップではカバーすることが出来なかった沢山の事柄をあなたに教えてくれることでしょう。
 
-### 動画
+### スクリーンキャスト
 
-* [Railscasts](http://railscasts.com/) - Short and simple screencasts about Rails by Ryan Bates.
-* [Confreaks](http://www.confreaks.com/) - Talks from conferences all over the world.
-* [Peepcode](https://peepcode.com/) - Paid Screencasts by Geoffrey Grosenbach.
+* [Railscasts](http://railscasts.com/) - Ryan Bates による Rails の短く、簡潔なスクリーンキャストです。
+* [Confreaks](http://www.confreaks.com/) - 世界中のカンファレンスの発表を見ることができます。
+* [Peepcode](https://peepcode.com/) - Geoffrey Grosenbach による有料のスクリーンキャストです。
 * [Richard Schneems Screencast](http://www.youtube.com/user/schneems/videos)
 
 ### 他の情報源
 
-* [Thoughtbot Trail-Map](https://github.com/thoughtbot/trail-map) - Guides to different topics.
+* [Thoughtbot Trail-Map](https://github.com/thoughtbot/trail-map) - 様々なトピックについてのガイドです。
 
-> If you have any other good resources, [hit me](mailto:daniel@codegestalt.com) so I can put them into the list.
+> もし、あなたが他の情報源を持っているなら, [私に教えてください](mailto:daniel@codegestalt.com), 私はこのリストに追加しようと思います。
 
 ## 2. 実際に何か作ってみる
 
-Build something real means you should try to create something which is actually needed in the end.
-The hardest part will be to find a real project.
-If you have no idea, try to think of something that really upsets you.
-Do you have to use something in your daily life that pisses you off?
-Write an application for it and try to solve that pain.
-This way you will be more motivated than by just following tutorials.
+実際に何かを作るということは、あなたが生涯を終えるまでに現実に必要としている何かについて作って見るということを意味しています。最も難しい部分は何を作るかというのを見つけることです。
 
-And don't forget to show your application to your friends and the world.
-Ask for feedback and keep on learning.
+もし、あなたにアイデアが無ければ, あなたが最も困ることは何だろうと考えてみてください。あなたは毎日の暮らしでイライラさせたりするものはなんでしょうか?
 
-If you still have trouble finding something you can work on I have an idea for you:
-Build a Rails Girls website for your country or city. In Switzerland we encourage the girls to work
-on our swiss wide Rails Girls website: [railsgirls.ch](http://railsgirls.ch/).
+それらの辛いことを解決するためにアプリケーションを書いてみましょう。この方法がチュートリアルをやるよりも、よりやる気が高まる方法です。同時に忘れてはいけないことは、あなたの友達や世界中のみんなにあなたのアプリケーションを見せるということです。フィードバックを聞いたり、教わったりすることを続けましょう。
+
+もし、あなたが問題を抱えている誰かを見つけたなら、私に良いアイデアがあります。是非、あなたの国や街の RailsGirls サイトを作ってみて下さい。もし、スイスに住んでいるなら私達が作った [railsgirls.ch](http://railsgirls.ch/) というサイトを見てください。
+
+> 訳注: 日本には http://railsgirls-jp.github.io というサイトがあります。
 
 ## 3. 他の人と話してみる
 
-Its always easier when you have someone you can ask.
-With this in mind, go out and find someone who you can talk to.
-Now is the best time for it,
-because you just got to know a lot of like minded people which have more or less the same level as you.
-There are a lot of ways to communicate nowadays,
-e.g. host a local meetup group, use Google Talk, create Facebook Groups or write a good ol' letter :)
+気軽に相談できる相手を持つというのはいつでも簡単な方法です。そう思ったら、外に出て話すことができる相手を見つけましょう。今がもっとも良い時です。なぜなら、沢山の自分と同じくらいの沢山の人達を知っているはずだからです。
 
-From my experience, knowing some people who have the same interests as you is one of the most important parts.
-Try to convince people, that programming is fun.
-If you have a brother or a sister, show them what you've learned.
-Or show it to your parents, children or friends.
-Just try to build a circle of people with the same interest in programming and technology.
+最近ではコミュニケーションを取るために沢山の方法があります。例えば、地域のミートアップ(勉強会など)や Google Talk を使ったり、facebook グループを作ったり、中に書き込んだり、色んな方法があります。
 
-Also try to find something like a mentor.
-Programming can be really intimidating sometimes,
-so it can help to know someone which has more experience and can help you with your problems.
-For example: ask someone of the Coaches who attended at the Event.
+私の経験では、同じ興味を持っている人を知るということはもっとも大事なポイントです。その人達にプログラミングの楽しさを伝えてみてください。もし、あなたに兄弟や姉妹、また両親やパートナー、子供や友達に、あなたが既に学んだことを教えてあげてください。
 
-If you don't have the time to host your own meetup group, thats ok.
-There are already a few groups which you can join:
+是非、技術とプログラミングについて同じように興味を持ってくれる人の輪を作ってください。
 
-* [Ruvetia](http://ruvetia.org/) - Ruvetia is a meetup (or drinkup) where we will come together every now and then and just socialize. This meetup is not about content, its about getting to know the people in the community. Every meetup is in a different city so check out the Ruvetia website from time to time where the next meetup will take place.
-* [Railshöck](http://www.meetup.com/rubyonrails-ch/events/80098992/) - A Rails meetup in Zurich
-* [Geneva Ruby Brigade](http://genevarb.com/) - Ruby group based in Geneva
+そこからメンターと呼ばれる人を探してください。プログラミングは時には本当に辛くなる時があります。その時に、より経験を持った誰かがあなたと、あなたの問題の手助けをしてくれるはずです。例えば、イベントの時に来てくれたコーチなどに聞いてみましょう。
 
-> This list is Switzerland related and only used as an example, ask the organizers and coaches of your event for a list of local groups and meetups.
+もし、あなたがミートアップを主催する時間が無いとしても大丈夫です。なぜなら既にあるいくつかのグループに行ってみると良いでしょう。
 
-One of the girls at the Rails Girls Basel event (thanks [Helena](https://twitter.com/HBobbiRo)!) had the great idea
-that we could put up a list with all the attendees, coaches and organizers of the event.
-We created this list and its on [Github](https://github.com/RailsGirlsSwitzerland/attendees) now, check it out [here](http://railsgirlsswitzerland.github.io/attendees/site/2013_04_basel.html).
-Feel free to fork the repository and adjust it to the needs of your Rails Girls event.
+* [Ruvetia](http://ruvetia.org/) - Ruvetia は世界中のあちこちでいつも開催されているミートアップ(もしくは飲み会)を見つけることができます。このミートアップは何かをやるというのが目的ではなく、コミュニティの人々を知るということが目的です。違う都市で開催されるミートアップもRuvetia の Web サイトを見ることでいつ、何処で開催されるかがわかります。
+* [Railshöck](http://www.meetup.com/rubyonrails-ch/events/80098992/) - Zurich のミートアップです。
+* [Geneva Ruby Brigade](http://genevarb.com/) - Geneva を中心とする Ruby のグループです。
 
-Try to setup such a list for your event too, this way its a lot easier to stay in contact with everyone than just
-with the people who sat around the same table as you did.
-If you don't know how, ask someone of the organizers of the event if she or he could do it.
+> このリストはスイスに関係しているものの一例です。あなたが参加したイベントのオーガナイザやコーチに地域のグループやミートアップについて聞いてみてください。
+
+RailsGirls Basel の一人の女性([Helena](https://twitter.com/HBobbiRo)ありがとう!) が素晴らしいアイデアを持っていました。
+
+それは参加者、コーチ、オーガナイザー全員のリストを作る事ができたということです。私達はこのリストを [Github](https://github.com/RailsGirlsSwitzerland/attendees) から作りました。今は [ここ](http://railsgirlsswitzerland.github.io/attendees/site/2013_04_basel.html)にあります。このリポジトリを fork して必要ならあなたの RailsGirls イベントで使ってみてください。
+
+あなたのイベントでもこのリストを準備するなら、あなたは簡単にみんなや同じテーブルに座った人などに連絡することができます。もし、このリストの作り方などが何かことかわからなかったら、オーガナイザーに聞いてみてください。
 
 ## 4. 楽しむ
 
-Last but not least, have fun.
-If you don't enjoy programming it is probably not the right thing for you.
-But thats the same story for every profession or hobby.
-Not only for technology related topics.
-But if you just read this I think you are perfectly made for programming,
-otherwise you wouldn't be here in the first place ;)
+最後ですが一番大事な事は楽しむということです。
 
-So, if you liked the workshop and the event - you're in the right spot.
+もしあなたがプログラミングを楽しめないなら、多分何かが間違っているはずです。しかしこれは全ての仕事や趣味についても同じ事が言えますし、技術に関する話というだけではないです。
 
-If you have any further questions, don't hesitate to ask.
-You can do this via [Twitter](https://twitter.com/railsgirls) or email.
-Ask the organizers and coaches of your event for their email addresses and if they would like to help you.
+しかし、あなたがここを読んでいるということは、おそらくプログラミングだけで暮らすことができると思います。もしそうでなければ、あなたの最初の場所はここではないかもしれません。もし、あなたがワークショップとイベントを楽しめたなら、あなたはとても良い場所にいます。
 
-Thats it, keep on coding and let's build the future!
+もっと質問があるなら、躊躇する必要はありません、[Twitter](https://twitter.com/railsgirls)や電子メールを使って質問してください。あなたのイベントのオーガナイザーやコーチにメールで聞いてみてください。
+
+以上です。コーディングを続けて未来を作りましょう!
