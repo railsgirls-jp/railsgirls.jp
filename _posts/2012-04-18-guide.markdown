@@ -36,13 +36,23 @@ Rails Girlsイベントは非営利目的で開催されます。Rails Girlsは�
 
 ### 一般的なカリキュラム
 
-Rails Girlsのイベントは必ずインストレーション・フェストから始まります。インストレーション・フェストとは参加者のコンピュータにRailsを動かせるだけの環境をインストールする前準備のことです。インストレーションについてはあらかじめ用意されている[railsgirls-jp.github.com/install](http://railsgirls-jp.github.com/install)をご覧ください。インストレーション・フェストでは短時間ならレクチャーを行ってもいいですが、なんといっても目玉はスパークリング・ワインをご馳走することです。そして、翌日のワークショップに備えて、環境設定を全て終わらせること、同時に参加者同士が知り合いになることです。どのくらいの時間を割くかは場合によりけりです。実際にイベントを開催側が参加者の状況を把握して判断すればいいと思います。これまでの例ではイベントはウィークデイのこともありましたし、週末のこともありました。また、夕方から夜にかけての時間帯(午後2時から10時まで）で二日というケースもありました。開催地などの状況に合わせてちょうどいい日程を選んでください。
+Rails Girlsのイベントは必ずインストレーション・フェストから始まります。インストレーション・フェストとは参加者のコンピュータにRailsを動かせるだけの環境をインストールする前準備のことです。
+
+インストレーションについてはあらかじめ用意されている[railsgirls-jp.github.com/install](http://railsgirls-jp.github.com/install)をご覧ください。インストレーション・フェストでは短時間ならレクチャーを行ってもいいですが、なんといっても目玉はスパークリング・ワインをご馳走することです。そして、翌日のワークショップに備えて、環境設定を全て終わらせること、同時に参加者同士が知り合いになることです。
+
+どのくらいの時間を割くかは場合によりけりです。実際にイベントを開催側が参加者の状況を把握して判断すればいいと思います。これまでの例ではイベントはウィークデイのこともありましたし、週末のこともありました。また、夕方から夜にかけての時間帯(午後2時から10時まで）で二日というケースもありました。開催地などの状況に合わせてちょうどいい日程を選んでください。
 
 #### ワークショップで学んでもらう内容:
 
 * 動的なウェブページと静的なウェブページの違いを理解してもらう。
 
-* ウェブアプリケーションの基礎知識: ウェブアプリケーションがどのような要素から出来上がっているかの基本を理解してもらう。コーディングの基本も学んでもらう。例えば、文字列やメソッド、変数、配列、！(バング）、チェイニング、ハッシュ、シンボル、ブロックなど。同時に、ターミナル、ブラウザ、テキストエディタのようなツールについても、学んでもらう。ウェブアプリケーションがどのようにして作られるのかを理解してもらう。例えば、プログラミング言語、フレームワーク、データベース、インフラストラクチャなど。
+* ウェブアプリケーションの基礎知識: ウェブアプリケーションがどのような要素から出来上がっているかの基本を理解してもらう。
+
+* コーディングの基本も学んでもらう。例えば、文字列やメソッド、変数、配列、！(バング）、チェイニング、ハッシュ、シンボル、ブロックなど。
+
+* 同時に、ターミナル、ブラウザ、テキストエディタのようなツールについても、学んでもらう。
+
+* ウェブアプリケーションがどのようにして作られるのかを理解してもらう。例えば、プログラミング言語、フレームワーク、データベース、インフラストラクチャなど。
 
 * プログラミングの世界でどうやって次のステップに進めばいいかをしっかりと理解してもらう。インターネットに接続できる／できない両方の環境で、できるようにしたい。
 
@@ -93,10 +103,11 @@ Rails Girlsのイベントは必ずインストレーション・フェストか
 
 11:30 - 13:00 ワークショップ
 
-ワークショップは <a href="http://railsgirls-jp.github.com/app">railsgirls-jp.github.com/app</a> のカリキュラムにしたがって進めてください。（ゆっくり！ね）
-先を急がずに、今、何をしているのかを説明する時間をとってください。何か新しい概念がでてきたときにも、その意味を説明してください。
+ワークショップは <a href="http://railsgirls-jp.github.com/app">railsgirls-jp.github.com/app</a> のカリキュラムにしたがって進めてください。（ゆっくり！ね）先を急がずに、今、何をしているのかを説明する時間をとってください。何か新しい概念がでてきたときにも、その意味を説明してください。
 
-正確さに欠くようなことになったとしても、シンプルな説明になるように気をつてください。以下に、説明すべき項目をあげますが、全てを説明する必要はありません。質問がでたときに説明するだけでもいいかもしれません。質問が難しすぎる場合や、見当はずれのことを聞いているとしたら、先に進んでもいいでしょう。あなたは完璧なコーディングスキルを教えるためにこのイベントを開催しているのではありません。どのようにすればウェブアプリができあがるのかを教えるためにこのイベントがあります。参加者はどのようにウェブアプリを作るのかを学ぶために来ているのであり、よりよい方法を学ぶのは次のステップです。
+正確さに欠くようなことになったとしても、シンプルな説明になるように気をつてください。以下に、説明すべき項目をあげますが、全てを説明する必要はありません。質問がでたときに説明するだけでもいいかもしれません。質問が難しすぎる場合や、見当はずれのことを聞いているとしたら、先に進んでもいいでしょう。
+
+あなたは完璧なコーディングスキルを教えるためにこのイベントを開催しているのではありません。どのようにすればウェブアプリができあがるのかを教えるためにこのイベントがあります。参加者はどのようにウェブアプリを作るのかを学ぶために来ているのであり、よりよい方法を学ぶのは次のステップです。
 
 説明するべき概念:
 
@@ -162,19 +173,19 @@ Rails Girlsのイベントは必ずインストレーション・フェストか
 
 どこで開催されるRails Girlsイベントでも、それぞれがrailsgirls.com/cityというウェブサイトを作れます。このウェブサイトに開催情報を載せられます。これまでにRails Girlsが開催された都市は[railsgirls.com/events](http://railsgirls.com/events)に一覧があります。
 
-You can also set up your own Facebook and Twitter page (remember to add links to your workshop's page!) or whatever service is popular in you community. Promoting the event through social media can go a long way these days, but make sure you have somebody to take care of the chosen channels. Some tips:
+自分の Facebook や Twitter で宣伝することもよいでしょう(ワークショップページへのリンクを忘れずに!)。もしくは、あなたの所属するコミュニティのサービス(訳注: ATND など)を使ってもよいでしょう。ソーシャルメディアを使ったイベントの宣伝は最近ではよく使われますが、選んだ方法を適切に使用する必要があります。いくつか秘訣を並べます。
 
-* Keep the tone of posts friendly, positive and welcoming. Be direct in inviting fans/followers to share the event with their friends.
+* 投稿する内容は友達に送るように、前向きかつ歓迎するようにしましょう。ソーシャルメディアを見ている人達と彼ら・彼女らの友達にイベント情報を直接共有し招待するような内容にしましょう。
 
-* Photos are especially powerful messengers. Create your own graphics (*some ideas: "I'm a Rails Girl" Facebook cover for the event, word cloud with first names of girls who signed up, an infographic of applications*) or promote photos from other workshops if this is your event. Follow other Rails Girls pages and account to get ideas for content and pass it along to your community. 
+* 写真や画像は特に強力なメッセージです。あなた独自の画像を作りましょう(*アイデアの例: "私は　RailsGirl です"という言葉を添えた Facebook ページのトップ画像のようなものを、申し込みページに用意して登録した人の名前と共に表示するなど*)。また、イベントのオーガナイザなら宣伝用の写真を他のワークショップから使っても良いでしょう。是非、他の RailsGirls ページやアカウントがどのようにしているかを見て、あなたのコミュニティに活用してください。
 
-* Try various pitches for events to attract different types of girls; some will be in it for the fun and meeting new people, some to learn new things, some will be fueled by the desire to show guys girls can do anything. No need to focus on just one group!
+* 是非、色んなタイプの女性を集めるために色んな人達に投げかけてください。新しい人達を集めて楽しんでもらうことで新しいことを学べます。何かをやりたいという情熱は男女を問わず何かを見せるはずです。一つのグループに固執する必要はありません。
 
-* Don't be afraid to publicly thank girls, coaches, blogs, media and other supporters who help you spread the word about your workshop for their support.
+* あなたを助けてくれたサポーター、コーチ、ブログ、メディア、参加してくれた女性に公にお礼を言うことを恐れる必要はありません。
 
-* If your language supports it, use feminine forms when addressing girls.
+* 参加女性が登録するフォームに、以下のような言葉を添えると役に立つかも知れません。
 
-While the event is underway, remember to take pictures, collect tweets and ask questions of the participants. You'll be thankful for all of that for your next event. We love to write blog posts about the speaker and participant experiences. A list of the coaches is also required.
+イベントを通じて写真を撮ったり、参加者の質問内容や tweets を集めるということを忘れないでください。それらはもしあなたが次回のイベントを開催する時にとても役に立ちます。私達はスピーカーや参加した人が感想などをブログに書いてくれるととても嬉しいです。(スピーカーについてはおそらくコーチのリストが必要となるでしょう)
 
 イベントが行われている最中には、必ず写真をとってください。また、ツイートを集めたり、参加者に質問したりしましょう。スピーカや参加者の感想についてブログを書きたいと思います。このときにはコーチの名前一覧が必要なので、教えてください。
 
@@ -206,9 +217,9 @@ contact(a)railsgirls.com にメールを出してプライベートなリポジ�
 
 #### どのようにしてプレスリリースするか
 
-Rails Girlsの大きな目標はイベントを女性たちのメインストリームにして、ウェブアプリ作り入門の定番にすることです。そのために、Rails Girlsは各地域のメディアでプレスリリースをしてきました。プレスリリースでは参加者がどのような人たちか、また、彼女たちの熱意を紹介してきました。詳細については[railsgirls.com/press](http://railsgirls.com/press)　をご覧ください。 If you're working with a big company as a sponsor, their PR department might be able to help you spread the message about the workshop.
+Rails Girlsの大きな目標はイベントを女性たちのメインストリームにして、ウェブアプリ作り入門の定番にすることです。そのために、Rails Girlsは各地域のメディアでプレスリリースをしてきました。プレスリリースでは参加者がどのような人たちか、また、彼女たちの熱意を紹介してきました。詳細については[railsgirls.com/press](http://railsgirls.com/press)　をご覧ください。 もしあなたがスポンサーとなっている大企業で働いているなら、会社の広報部門があなたのワークショップの内容を拡散することを助けてくれるはずです。
 
-Send the press release to local blogs, find contact at various media outlets. The more doors you knock on, the greater you chance of getting through. Make a list of journalists and bloggers you contact, mark those that respond to your emails, so they can be the first ones to receive your next press release. You can also write a press release after the event that includes photos and statements from satisfied participants.
+ブログにプレスリリースを載せたら、メディアの拡散場所へのコンタクト方法を探しましょう。あなたが彼らに連絡を取るというのはとてもよい機会です。コンタクトしたジャーナリストやブロガーをリストにして、返事が来た方に印を付けましょう。彼らは次に何かプレスリリースを出すときに最初に連絡するとよいでしょう。あなたはおそらく、イベントの後に参加者からの感謝の声や写真を載せたプレスリリースを書くはずですよね。
 
 ### スポンサー
 
@@ -226,16 +237,12 @@ XXX 様、
 
 Rails Girlsというプログラミングのワークショップを（場所）で（日程）に開催したいと考えています。
 
-Rails Girls2日間かけて開催する非営利イベントで、御婦人と女子をターゲットに、
-ソフトウェアを通じたものづくりへ足を踏み出す最初の一歩として素晴しい体験を提供しようという意気込みで、
-世界各国の都市で開催されております。
+Rails Girls2日間かけて開催する非営利イベントで、御婦人と女子をターゲットに、ソフトウェアを通じたものづくりへ足を踏み出す最初の一歩として素晴しい体験を提供しようという意気込みで、世界各国の都市で開催されております。
 
-Rails Girlsは単なるプログラミングではなく、ものづくりであることを目指しています。
-もちろんワークショップを通じて、アプリケーションを構築しますが、
-それ以外にもライトニングトークや演習もおこないます。
+Rails Girlsは単なるプログラミングではなく、ものづくりであることを目指しています。もちろんワークショップを通じて、アプリケーションを構築しますが、それ以外にもライトニングトークや演習もおこないます。
 
-詳細は、[www.railsgirls.com] (www.railsgirls.com)
-で過去の開催を掲載しておりますので、是非ご覧ください。また、2012年4月に開催された、ベルリンでの開催の様子のビデオもvimeoでご覧になれます:
+詳細は、[www.railsgirls.com] (www.railsgirls.com)で過去の開催を掲載しておりますので、是非ご覧ください。また、2012年4月に開催された、ベルリンでの開催の様子のビデオもvimeoでご覧になれます:
+
 [http://vimeo.com/40852182] (http://vimeo.com/40852182)
 
 Rails Girlsイベントを実現されるために、現在、スポンサーを捜しているところです。
@@ -320,19 +327,20 @@ __スポンサーのメリット__
 
 * 延長コードやプロジェクタが使えるとよい。
 
-* Enough electric outlets to spare. Some girls might have older laptops that will need to be plugged in at all times.
+* 電源アダプタを置くのに十分なスペース. 若干古いノートPCを持ってきた女性がいる時、ノートPC
+は常にコンセントを差しておく必要があります。
 
 * 食べ物や飲み物をおく場所を確保できる。お昼ご飯の場所があるか、近くにお昼ご飯を食べられる場所があること。
 
 * モニタが使えると便利ですが、必須ではありません。モニタがあるとコーチはどのようなコードを書くと、どのようなことが起きるのかを説明しやすくなります。
 
-* Whiteboards can be helpful for coaches to explain more abstract concept. Alternatively, paper and pen work just fine. Just have something at hand people can draw on.
+* ホワイトボードは抽象的な概念をコーチが説明する時に助けになります。さらに紙とペンがあると何か書こうとした時に便利です。
 
 地域のディベロッパー会が通常、どこで開催されるのかを聞いてみてください。いくつかの会社が一つの部屋を分割して使っているような環境では初めて会った人でも協力者になってくれることがよくあります。
 
-#### How to find coaches?
+#### どのようにコーチを見つけますか?
 
-Ask around, ask sponsors (tech companies), ask anyone to help you out. Once you do get some coaches on board, they can help you out with their own contacts. Influential bloggers or Twitter users in your local dev community can help you out by broadcasting a call for coaches. *Hint: You can also thank coaches for their help by providing a spot at the workshop for their girlfriends ;)*
+周りやスポンサー(ソフトウェア開発の会社)、あなたを助けてくれる人に聞いてみましょう。募集から誰かコーチが見つかったのなら、その人のツテがあなたを助けてくれます。あなたの開発コミュニティで影響力のあるブロガーや Twitter ユーザーはあなたがコーチを探しているということを拡散する助けになります。*(ヒント: おそらくコーチを見つけたら彼らのガールフレンドがワークショップの宣伝を助けてくれるはずです。)*
 
 #### コーチは何をしてくれると思えばいいですか？
 
@@ -358,14 +366,9 @@ Rails Girlsは国際的な非営利、ボランティアによるワークショ
 これまでに、上海、ベルリン、ヘルシンキ、シンガポールなどで開催されてきました。
 Rails Girlsは100人くらいの参加者を見込んでいます。
 
-女性プログラミングを始めるきっかけとなるような心地よく楽しい経験をしてもらう他、地域のディベロッパーや
-オープンソース、スタートアップ企業などとのつながりを持ってほしいと思っています。
-実際にコーチには何が要求されるかの情報を添付しました。
-教えるだけではなく、技術的なトピックについて話すラインとニングトークの時間も設けてあります。
-何か話したいことがあれば、お知らせください。
+女性プログラミングを始めるきっかけとなるような心地よく楽しい経験をしてもらう他、地域のディベロッパーやオープンソース、スタートアップ企業などとのつながりを持ってほしいと思っています。実際にコーチには何が要求されるかの情報を添付しました。教えるだけではなく、技術的なトピックについて話すライトニングトークの時間も設けてあります。何か話したいことがあれば、お知らせください。
 
-この非営利イベントについて詳しく知りたい場合は、railsgirls.comかguide.railsgirls.com（日本語版: railsgirls-jp.github.com）を
-ご覧ください。
+この非営利イベントについて詳しく知りたい場合は、railsgirls.comかguide.railsgirls.com（日本語版: railsgirls-jp.github.com）をご覧ください。
 
 （"コーチは何をしてくれると思えばいい？"の部分をこのメールに追加してもいいかもしれません）
 
@@ -422,27 +425,17 @@ Rails Girls Tokyo　ワークショップへの参加が認められましたの
 
 ワークショップについて
 
-（インストレーション・フェストの日付をここに）、（開始時間）にインストレーション・フェストが始まります。
-ご自分のノートパソコンをお持ちください。
-ワークショップの前に <http://railsgirls-jp.github.com/install/> のインストール・ガイドに従って
-Railsをインストールしておきます。
+（インストレーション・フェストの日付をここに）、（開始時間）にインストレーション・フェストが始まります。ご自分のノートパソコンをお持ちください。ワークショップの前に <http://railsgirls-jp.github.com/install/> のインストール・ガイドに従ってRailsをインストールしておきます。
 
 会場は　（会場の住所）
 
-（ワークショップの日付をここに）にウェブアプリ作りにトライします。
-ワークショップでは経験を考慮して、４〜６人程度の少人数のグループに別れ、
-各グループのメンバーが同じようなレベルになるようにします。
+（ワークショップの日付をここに）にウェブアプリ作りにトライします。ワークショップでは経験を考慮して、４〜６人程度の少人数のグループに別れ、各グループのメンバーが同じようなレベルになるようにします。
 
-どのグループも、簡単なリスト作成アプリケーション作りを行います。
-ワークショップ後、（アフターパーティの時間）からアフターパーティがあります。
-アフターパーティは一日のワークショップの内容を振り返ったり、聞き逃したことの確認などを
-行います。
+どのグループも、簡単なリスト作成アプリケーション作りを行います。ワークショップ後、（アフターパーティの時間）からアフターパーティがあります。アフターパーティは一日のワークショップの内容を振り返ったり、聞き逃したことの確認などを行います。
 
-大勢の方がこのワークショップへの参加を希望しています。
-もし、参加できないような状況になった場合は、できる限り早くお知らせください。
+大勢の方がこのワークショップへの参加を希望しています。もし、参加できないような状況になった場合は、できる限り早くお知らせください。
 
-質問があれば、気軽に質問してください。
-また、随時、ウェブページ(URLのここに)を更新していますので、ご覧ください。
+質問があれば、気軽に質問してください。また、随時、ウェブページ(URLのここに)を更新していますので、ご覧ください。
 
 それでは、
 
@@ -573,7 +566,7 @@ Rails Girls チーム
 
 * コーチ・ディナーの日程を決めて、メールする。
 
-* Check if there are other events taking place the same weekend
+* 同じ週末に他のイベントがあるかどうかをチェックする。
 
 #### イベント中
 
@@ -583,9 +576,9 @@ Rails Girls チーム
 
 * 参加者とスピーカーに彼らの経験をインタビューする。
 
-* Do a Friday Hug! Learn more about Friday hugs at [Fridayhug.com](http://fridayhug.com)
+* フライデイ・ハグをしましょう! フライデイ・ハグについてはこちらを参照してください [Fridayhug.com](http://fridayhug.com)
 
-* Have a Skype with other Rails Girls chapters hosting events at the same time
+* 同じ時間に RailsGirls イベントがあるなら Skype で繋ぐとよいです。
 
 #### イベント後
 
@@ -595,6 +588,6 @@ Rails Girls チーム
 
 * 参加のお礼メールをだして、フィードバックしてもらう。[feedback](http://www.railsgirls.com/feedback) (you can also create your own feedback form in your local language)
 
-* Send a thank you note to coaches
+* コーチに感謝のお礼をしましょう。
 
 * オーガナイザーにありがとうをいう。
