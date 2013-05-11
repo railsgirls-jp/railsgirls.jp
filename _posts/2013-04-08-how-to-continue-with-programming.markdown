@@ -66,7 +66,7 @@ and was published on
 
 * [Thoughtbot Trail-Map](https://github.com/thoughtbot/trail-map) - 様々なトピックについてのガイドです。
 
-> もし、あなたが他の情報源を持っているなら, [私に教えてください](mailto:daniel@codegestalt.com), 私はこのリストに追加しようと思います。
+> もし、あなたが他の情報源を持っているなら, [私に教えてください※](mailto:daniel@codegestalt.com), 私はこのリストに追加しようと思います。 訳注: ※このアドレスは本家RailsGilrsスタッフのメールアドレスです。英語で送信をお願いします。日本語ページへのご要望の場合は  [こちら](mailto:railsgirls-jp@ruby-no-kai.org) までお願いします。（日本語ページへのご要望は日本語でOKです。）
 
 ## 2. 実際に何か作ってみる
 
