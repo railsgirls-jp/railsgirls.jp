@@ -33,13 +33,23 @@ and was published on
 * [Rails for Zombies](http://railsforzombies.org/) - [Codeschool](http://codeschool.com) が作った Rails のスクリーンキャスト(動画による学習教材). これは無料で Codeschool が提供しているとても素晴らしい有料の [Ruby and Rails](http://www.codeschool.com/paths/ruby#starting-rails) コースの一つです。これは是非やるべきです!
 * [Codecademy](http://www.codecademy.com/) - 世界は Ruby によってだけ作られているわけではありません。HTML/CSS, JavaScript, Python のような沢山の言語があります。是非それらも試してみて下さい。
 
+### 学習教材（日本語）
+
+* [一橋大学Rails講義資料](https://github.com/igaiga/hitotsubashi-ruby-2012) - いくつかの簡単なサンプルプログラムづくりを通じてRailsやWebアプリの基礎を説明しています。プログラムが初めての方を対象にした易しい資料です。前半15回がRuby編、後半15回がRails編です。
+
 ### 書籍
 
 * [Rails Tutorial](http://ruby.railstutorial.org/) - HTML ならば無料、印刷された書籍ならば有料のとても素晴らしい本です。この本は RailsGirls のワークショップではカバーすることが出来なかった沢山の事柄をあなたに教えてくれることでしょう。
 
 ### 書籍（日本語）
 
-* [HerokuではじめるRailsプログラミング入門](http://www.amazon.co.jp/dp/4797371838) - 日本語で書かれたRails初心者向けの書籍です。簡単なWebアプリケーションをつくり、Herokuにデプロイする手順を丁寧に解説しています。
+* [HerokuではじめるRailsプログラミング入門](http://www.amazon.co.jp/dp/4797371838) - Rails初心者向けの書籍です。簡単なWebアプリケーションをつくり、Herokuにデプロイする手順を丁寧に解説しています。
+
+* [改訂新版 基礎Ruby on Rails](http://www.amazon.co.jp/dp/4844331566) - Rails初心者向けの分かり易い入門書です。Rails3.2対応。
+
+* [RailsによるアジャイルWebアプリケーション開発 第4版](http://www.amazon.co.jp/dp/4274068668) - Rails本の名著です。Railsエンジニアで読んだことがない人はいないのでは、というほど定番の一冊。Rails3.1対応。（[原著電子書籍版](http://pragprog.com/book/rails4/agile-web-development-with-rails)はRails4.0に対応しています。）
+
+* [たのしいRuby 第3版](http://www.amazon.co.jp/dp/4797357401) - 定番の Ruby 入門書です。Rails の礎となっているRubyを勉強してみたい方へお勧めです。
 
 ### スクリーンキャスト
 
@@ -47,6 +57,10 @@ and was published on
 * [Confreaks](http://www.confreaks.com/) - 世界中のカンファレンスの発表を見ることができます。
 * [Peepcode](https://peepcode.com/) - Geoffrey Grosenbach による有料のスクリーンキャストです。
 * [Richard Schneems Screencast](http://www.youtube.com/user/schneems/videos)
+
+### スクリーンキャスト（日本語）
+
+* [ドットインストール](http://dotinstall.com/) - 1回が2分程度の短い動画で様々な技術を説明しています。Railsのほか、javascript、html, css, twitter bootstrap などWebアプリで利用する様々な技術の教材もあります。
 
 ### 他の情報源
 
