@@ -94,6 +94,8 @@ and was published on
 
 もし、あなたがミートアップを主催する時間が無いとしても大丈夫です。なぜなら既にあるいくつかのグループに行ってみると良いでしょう。
 
+> 訳注: 日本のコミュニティについては [地域Rubyの会](https://github.com/ruby-no-kai/official/wiki/RegionalRubyistMeetUp) のページに情報がまとまっています。
+
 * [Ruvetia](http://ruvetia.org/) - Ruvetia は世界中のあちこちでいつも開催されているミートアップ(もしくは飲み会)を見つけることができます。このミートアップは何かをやるというのが目的ではなく、コミュニティの人々を知るということが目的です。違う都市で開催されるミートアップもRuvetia の Web サイトを見ることでいつ、何処で開催されるかがわかります。
 * [Railshöck](http://www.meetup.com/rubyonrails-ch/events/80098992/) - Zurich のミートアップです。
 * [Geneva Ruby Brigade](http://genevarb.com/) - Geneva を中心とする Ruby のグループです。
