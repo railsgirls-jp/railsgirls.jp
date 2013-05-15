@@ -1,6 +1,8 @@
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile", "Gemfile.lock"]
-auto: true
+safe: true
+lsi: false
 pygments: true
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile", "Gemfile.lock"]
 
 title : Rails Girls Guide -Japanese-
 tagline: Site Tagline
@@ -11,10 +13,9 @@ author :
   twitter : username
   feedburner : feedname
 
-production_url : http://railsgirls-jp.github.com
+production_url : http://railsgirls.jp
 
 destination: ./_site
-lsi:         false
 server_port: 4000
 markdown:    kramdown
 permalink:   pretty
