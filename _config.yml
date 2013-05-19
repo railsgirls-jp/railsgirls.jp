@@ -17,7 +17,7 @@ production_url : http://railsgirls.jp
 
 destination: ./_site
 server_port: 4000
-markdown:    kramdown
+markdown:    redcarpet
 permalink:   pretty
 maruku:
   use_tex:    false
