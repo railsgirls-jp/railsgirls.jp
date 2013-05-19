@@ -12,27 +12,18 @@ permalink: app
 
 ## ツールを知る
 
-<div class="indent" markdown="1">
-
-<h3><i class="icon-text-editor">&nbsp;</i></h3>
-
-### テキストエディタ
+### <i class="icon-text-editor">&nbsp;</i> テキストエディタ
 
 [Sublime Text](http://www.sublimetext.com), [Komodo Edit](http://www.activestate.com/komodo-edit), Vim や Emacs, Gedit は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
 
-<h3><i class="icon-prompt">&nbsp;</i></h3>
-
-### ターミナル (Windows の場合はコマンドプロンプト)
+### <i class="icon-prompt">&nbsp;</i> ターミナル (Windows の場合はコマンドプロンプト)
 
 rails serverを起動したりコマンドを実行したりするものです。
 
-<h3><i class="icon-browser">&nbsp;</i></h3>
-
-### Webブラウザ (Firefox, Safari, Chrome)
+### <i class="icon-browser">&nbsp;</i> Webブラウザ (Firefox, Safari, Chrome)
 
 アプリケーションを表示するためのものです。
 
-</div>
 
 ## *1.*アプリケーションを作る
 
