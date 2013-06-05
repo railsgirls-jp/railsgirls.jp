@@ -37,8 +37,6 @@ rails serverを起動したりコマンドを実行したりするものです�
 
 そして、Terminal上で次のコマンドを入力します。 :
 
-<div class="os-specific">
-  <div class="nix">
 {% highlight sh %}
 mkdir projects
 cd projects
@@ -46,18 +44,6 @@ rails new railsgirls
 cd railsgirls
 rails server
 {% endhighlight %}
-  </div>
-
-  <div class="win">
-{% highlight sh %}
-mkdir projects
-cd projects
-rails new railsgirls
-cd railsgirls
-ruby script\rails server
-{% endhighlight %}
-  </div>
-</div>
 
 自分のパソコン上のブラウザで [http://localhost:3000](http://localhost:3000) にアクセスしてください。
 
@@ -73,23 +59,11 @@ Rails の scaffold 機能を使って、list, add, remove, edit, view を生成�
 
 **Coachより:** scaffold とはなんでしょう？ (コマンドの説明をしてください。1. ただのコマンド, 2. モデル名でDBテーブルと関係があるもの;命名規約, 3. 属性や型) また、migration 機能が何で、なぜ必要なのか。
 
-<div class="os-specific">
-  <div class="nix">
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
 rake db:migrate
 rails server
 {% endhighlight %}
-  </div>
-
-  <div class="win">
-{% highlight sh %}
-ruby rails generate scaffold idea name:string description:text picture:string
-ruby rake db:migrate
-ruby rails\server
-{% endhighlight %}
-  </div>
-</div>
 
 ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。
 
