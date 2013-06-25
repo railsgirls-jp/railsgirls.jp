@@ -39,6 +39,27 @@ end
 
 __COACHより__: RDBMS とそうでないものについて話してみましょう。
 
+#### rails\_12factor の導入
+
+次に、Heroku で Rails 4 を動かすために必要な rails\_12factor という gem を導入します。 Gemfile を次のように変更しましょう。:
+
+{% highlight ruby %}
+group :production do
+  gem 'pg'
+end
+{% endhighlight %}
+
+to
+
+{% highlight ruby %}
+group :production do
+  gem 'pg'
+  gem 'rails\_12factor'
+end
+{% endhighlight %}
+
+__COACHより__: Heroku におけるログの仕組みについて調べてみましょう。
+
 #### バージョン管理(git)
 
 バージョン管理が必要です。ターミナルで次のコマンドを実行すれば大丈夫です。(訳者注：gitのインストールは別途必要です。) :
