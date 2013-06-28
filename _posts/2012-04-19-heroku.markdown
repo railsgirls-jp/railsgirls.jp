@@ -58,6 +58,8 @@ group :production do
 end
 {% endhighlight %}
 
+もう一度、 `bundle install --without production` を実行してセットアップしてください。
+
 __COACHより__: Heroku におけるログの仕組みについて調べてみましょう。
 
 #### バージョン管理(git)
