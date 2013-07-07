@@ -54,7 +54,7 @@ mkdir projects
 cd projects
 rails new railsgirls
 cd railsgirls
-rails server
+ruby script\rails server
 {% endhighlight %}
   </div>
 </div>
@@ -84,9 +84,9 @@ rails server
 
   <div class="win">
 {% highlight sh %}
-rails generate scaffold idea name:string description:text picture:string
-rake db:migrate
-rails server
+ruby rails generate scaffold idea name:string description:text picture:string
+ruby rake db:migrate
+ruby rails\server
 {% endhighlight %}
   </div>
 </div>
