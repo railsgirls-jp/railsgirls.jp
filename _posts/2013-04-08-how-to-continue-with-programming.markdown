@@ -100,13 +100,13 @@ and was published on
 * [Railshöck](http://www.meetup.com/rubyonrails-ch/events/80098992/) - Zurich のミートアップです。
 * [Geneva Ruby Brigade](http://genevarb.com/) - Geneva を中心とする Ruby のグループです。
 
-> このリストはスイスに関係しているものの一例です。あなたが参加したイベントのオーガナイザやコーチに地域のグループやミートアップについて聞いてみてください。
+> このリストはスイスに関係しているものの一例です。あなたが参加したイベントの主催者やコーチに地域のグループやミートアップについて聞いてみてください。
 
 RailsGirls Basel の一人の女性([Helena](https://twitter.com/HBobbiRo)ありがとう!) が素晴らしいアイデアを持っていました。
 
-それは参加者、コーチ、オーガナイザー全員のリストを作る事ができたということです。私達はこのリストを [Github](https://github.com/RailsGirlsSwitzerland/attendees) から作りました。今は [ここ](http://railsgirlsswitzerland.github.io/attendees/site/2013_04_basel.html)にあります。このリポジトリを fork して必要ならあなたの RailsGirls イベントで使ってみてください。
+それは参加者、コーチ、主催者全員のリストを作る事ができたということです。私達はこのリストを [Github](https://github.com/RailsGirlsSwitzerland/attendees) から作りました。今は [ここ](http://railsgirlsswitzerland.github.io/attendees/site/2013_04_basel.html)にあります。このリポジトリを fork して必要ならあなたの RailsGirls イベントで使ってみてください。
 
-あなたのイベントでもこのリストを準備するなら、あなたは簡単にみんなや同じテーブルに座った人などに連絡することができます。もし、このリストの作り方などが何かことかわからなかったら、オーガナイザーに聞いてみてください。
+あなたのイベントでもこのリストを準備するなら、あなたは簡単にみんなや同じテーブルに座った人などに連絡することができます。もし、このリストの作り方などが何かことかわからなかったら、主催者に聞いてみてください。
 
 ## 4. 楽しむ
 
