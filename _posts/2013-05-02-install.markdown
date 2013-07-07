@@ -10,9 +10,9 @@ permalink: install
 Ruby on Rails上にアプリケーションを作るためには、
 あなたのコンピュータに必要なソフトウェアと開発環境をセットアップする必要があります。
 
-ご自分のオペレーティングシステムのところの説明をご覧ください。
-もしも、なにか問題が発生してもあわてないでください。
-コーチに声をかけてください。コーチと一緒に問題を解決しましょう。
+あなたのオペレーティングシステムの説明をご覧ください。
+もし、なにか問題が発生してもあわてずにコーチに声をかけてください。
+コーチと一緒に問題を解決しましょう。
 
 * [OS X 用セットアップ](#setup_for_os_x)
 * [Windows 用セットアップ](#setup_for_windows)
@@ -22,63 +22,63 @@ Ruby on Rails上にアプリケーションを作るためには、
 
 ## <a id="setup_for_os_x">OS X 用セットアップ</a>
 
-**ステップ 1.** オペレーティング・システムのバージョンを調べる。
+**ステップ 1.** オペレーティング・システムのバージョンを調べましょう。
 
-Appleメニューをクリックして *About This Mac* (図 1) を選ぶ。
+Appleメニューをクリックして *About This Mac* (図 1) を選びます。
 
 ![Apple menu](/images/1.png "Apple menu")
 
 図 1
 
-**ステップ 2.** 開いたウィンドウに使用しているオペレーティング・システムのバージョンが表示される。(図 2)。
-バージョン番号が 10.6, 10.7, 10.8 で始まっていたら、このドキュメントに従って進める。
-これ以外のバージョンだったら、イベントでコーチと一緒にセットアップする。
+**ステップ 2.** 開いたウィンドウに使用しているオペレーティング・システムのバージョンが表示されます。(図 2)。
+バージョン番号が 10.6, 10.7, 10.8 で始まっていたら、このドキュメントに従って進めます。
+これ以外のバージョンだったら、イベントでコーチと一緒にセットアップします。
 
 ![About this Mac dialog](/images/2.png "About this Mac dialog")
 
 図 2
 
-**ステップ 3.** 使用している OS Xのバージョン用 RailsInstaller ダウンロードする。
+**ステップ 3.** 使用している OS Xのバージョン用 RailsInstaller ダウンロードします。
 
 * [10.7, 10.8 用 RailsInstaller](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
 * [10.6 用 RailsInstaller](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.6.app.tgz) <span class="muted">(224MB)</span>
 
-ダウンロードしたファイルをダブルクリックするとカレントディレクトリに解凍される。
+ダウンロードしたファイルをダブルクリックするとカレントディレクトリに解凍されます。
 この解凍された'RailsInstaller-1.0.3-osx-10.7.app' あるいは 'RailsInstaller-1.0.3-osx-10.6.app' を
-ダブルクリックしてインストラクションに従ってインストールする。インストーラが 'Rails Installer OS X'と冒頭に書いて
-あるREADMEファイルを開くが、このインストラクションは **無視** してください。
+ダブルクリックしてインストラクションに従ってインストールします。インストーラが 'Rails Installer OS X'と冒頭に書いて
+あるREADMEファイルを開きますが、このインストラクションは **無視** してください。
 
-**最後のステップ** コードを編集するのに必要なテキストエディタをインストールする。
-このワークショップでは Sublime Text エディタを推奨している。
+**最後のステップ** コードを編集するのに必要なテキストエディタをインストールすます。
+このワークショップでは Sublime Text エディタを推奨しています。
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 
-これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了。おめでとう！
+これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
 <hr />
 
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
-[RailsInstaller](http://rubyforge.org/frs/download.php/76855/railsinstaller-2.2.0.exe) をダウンロードして、実行する。
-インストールのオプションは全てディフォルトを選択する。
+[RailsInstaller](http://rubyforge.org/frs/download.php/76855/railsinstaller-2.2.0.exe) をダウンロードして、実行します。
+インストールのオプションは全てディフォルトを選択します。
 
-[Heroku で Rails アプリを公開する](/heroku) 場合は Git と SSH-key もインストールしなければならない。
+[Heroku で Rails アプリを公開する](/heroku) 場合は Git と SSH-key もインストールしてください。
 
-**最後のステップ** コードを編集するためのテキストエディタが必要になる。
-このワークショップでは Sublime Text エディタを推奨している。( Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題がある。気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールするか、あるいは別のエディタ、たとえば [Komodo Edit エディタ](http://www.activestate.com/komodo-edit/downloads) を使ってもよい。 )
+**最後のステップ** コードを編集するためのテキストエディタが必要になります。
+このワークショップでは Sublime Text エディタを推奨しています。( Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題があります。気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールするか、あるいは別のエディタ、たとえば [Komodo Edit エディタ](http://www.activestate.com/komodo-edit/downloads) を使ってもいいです。 )
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 * [Sublime Text 日本語入力パッチをダウンロード](https://github.com/chikatoike/IMESupport/archive/master.zip)
 
 Sublime Text 日本語入力パッチをダウンロードします。Sublime Text アプリメニューの Preferences から Browse Packeges を選び、フォルダを表示させます。 ダウンロードしたzipを解凍してできたフォルダ(IMESupport-master)をここへコピーします。Sublime Text が起動している場合は再起動します。
 
-これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了。おめでとう！
+これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
 <hr />
 
 ## <a id="setup_for_linux">Linux 用セットアップ</a>
 
-あなたの Linux ディストリビューション(Ubuntu や Fedora)に Ruby on Rails を開発する環境をインストールするには下の1行をコピーしてターミナルに貼り付け、Enter キーを押す必要があります。スクリーンに流れるテキストを眺めて少しの時間の間、楽しみに待って下さい。次に進むまでの間、飲み物を等を飲んで休憩するとよいでしょう。
+あなたの Linux ディストリビューション(Ubuntu や Fedora)に Ruby on Rails を開発する環境をインストールするには下の1行をコピーしてターミナルに貼り付け、Enter キーを押す必要があります。スクリーンに流れるテキストを眺めて少しの時間の間、楽しみにお待ち下さい。次に進むまでの間、飲み物を等を飲んで休憩してはいかがでしょうか。
 
 ** Ubuntuの場合:**
 
@@ -92,11 +92,11 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
 
-**最後のステップ** コードを編集するためのテキストエディタが必要になる。
-このワークショップでは Sublime Text エディタを推奨している。
+**最後のステップ** コードを編集するためのテキストエディタが必要になります。
+このワークショップでは Sublime Text エディタを推奨しています。
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 
-これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了。おめでとう！
+これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
 <hr />
