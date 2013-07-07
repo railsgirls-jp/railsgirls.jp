@@ -20,7 +20,7 @@ tags: []
 <br/>
 <p>
   RailsGirlsは2010年にヘルシンキで始まった、女性にRailsの技術を教えよう！ というイベントです。 <br/>
-  日本では、2012年9月に原田洋子 @yokolet さんのオーガナイズで<a href= "http://railsgirls.com/tokyo-2012-09-07">Tokyo</a>が始まり、12月には<a href= "http://railsgirls.com/kyoto">Kyoto</a>、そして今回がTokyo 2ndの開催となりました。 <br/>
+  日本では、2012年9月に原田洋子 @yokolet さんの主催で<a href= "http://railsgirls.com/tokyo-2012-09-07">Tokyo</a>が始まり、12月には<a href= "http://railsgirls.com/kyoto">Kyoto</a>、そして今回がTokyo 2ndの開催となりました。 <br/>
 </p>
 <br/>
 <p>
@@ -60,7 +60,7 @@ tags: []
 
 <p>
   前日に参加できなかった人は9:00からの環境構築をしつつ、
-  10:00にオーガナイザーのご挨拶から、エキサイティングな一日の始まりです。 <br/>
+  10:00に主催者のご挨拶から、エキサイティングな一日の始まりです。 <br/>
 </p>
 <br/>
 
