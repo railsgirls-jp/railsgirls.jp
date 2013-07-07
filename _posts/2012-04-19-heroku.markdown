@@ -91,7 +91,7 @@ Git remote heroku added
 
 #### コードをpush
 
-さて、 Heroku にコードをプッシュしましょう。 `git push heroku master` と入力してください。そうすると、こんな出力が見られるはずです。 :
+さて、 Heroku にコードを送信しましょう。 `git push heroku master` と入力してください。そうすると、こんな出力が見られるはずです。 :
 
 {% highlight sh %}
 Counting objects: 134, done.
