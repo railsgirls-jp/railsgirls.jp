@@ -49,7 +49,7 @@ Appleメニューをクリックして *About This Mac* (図 1) を選ぶ。
 あるREADMEファイルを開くが、このインストラクションは **無視** してください。
 
 **最後のステップ** コードを編集するのに必要なテキストエディタをインストールする。
-このワークショップでは Sublime Text エディタを推奨している。
+このワークショップでは Sublime Text エディタを推奨しています。
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 
@@ -60,7 +60,7 @@ Appleメニューをクリックして *About This Mac* (図 1) を選ぶ。
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
 [RailsInstaller](http://rubyforge.org/frs/download.php/76855/railsinstaller-2.2.0.exe) をダウンロードして、実行する。
-インストールのオプションは全てディフォルトを選択する。
+インストールのオプションは全てデフォルトを選択する。
 
 [Heroku で Rails アプリを公開する](/heroku) 場合は Git と SSH-key もインストールしなければならない。
 
@@ -93,7 +93,7 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 {% endhighlight %}
 
 **最後のステップ** コードを編集するためのテキストエディタが必要になる。
-このワークショップでは Sublime Text エディタを推奨している。
+このワークショップでは Sublime Text エディタを推奨しています。
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 
