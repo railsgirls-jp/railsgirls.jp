@@ -1,9 +1,13 @@
-safe: true
-lsi: false
-pygments: true
-
+# jekyll settings
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile", "Gemfile.lock"]
+pygments: true
+permalink: pretty
+markdown: redcarpet
+safe: true
+url : http://railsgirls.jp
+lsi: false
 
+# user variables
 title : Rails Girls Guide -Japanese-
 tagline: Site Tagline
 author :
@@ -12,19 +16,6 @@ author :
   github : railsgirls-jp
   twitter : username
   feedburner : feedname
-
-production_url : http://railsgirls.jp
-
-destination: ./_site
-server_port: 4000
-markdown:    redcarpet
-permalink:   pretty
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_dir:    images/latex
-  png_url:    /images/latex
-
 comments :
   provider : disqus
   disqus :
