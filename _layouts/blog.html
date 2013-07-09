@@ -3,7 +3,7 @@
 <article class="container">
   <div class="main">
     <ol class="posts">
-      {% for post in site.posts limit:5 %}
+      {% for post in site.posts limit:50 %}
       {% unless post.permalink or post.description == "event" %}
       <li>
         <div id="aside"><span>{{ post.date | date:"%Y-%m-%d" }}</span></div>
