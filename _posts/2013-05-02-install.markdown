@@ -48,6 +48,12 @@ Appleメニューをクリックして *About This Mac* (図 1) を選びます�
 ダブルクリックしてインストラクションに従ってインストールします。インストーラが 'Rails Installer OS X'と冒頭に書いて
 あるREADMEファイルを開きますが、このインストラクションは **無視** してください。
 
+もしもRailsのバージョンが最新ではない場合は、以下のコマンドをターミナルから実行することでバージョンアップできます。
+
+{% highlight sh %}
+gem update rails --no-ri --no-rdoc
+{% endhighlight %}
+
 **最後のステップ** コードを編集するのに必要なテキストエディタをインストールする。
 このワークショップでは Sublime Text エディタを推奨しています。
 
@@ -63,6 +69,12 @@ Appleメニューをクリックして *About This Mac* (図 1) を選びます�
 インストールのオプションは全てディフォルトを選択します。
 
 [Heroku で Rails アプリを公開する](/heroku) 場合は Git と SSH-key もインストールしてください。
+
+もしもRailsのバージョンが最新ではない場合は、以下のコマンドを "Command Prompt with Ruby on Rails" から実行することでバージョンアップできます。
+
+{% highlight sh %}
+gem update rails --no-ri --no-rdoc
+{% endhighlight %}
 
 **最後のステップ** コードを編集するためのテキストエディタが必要になります。
 このワークショップでは Sublime Text エディタを推奨しています。( Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題があります。気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールするか、あるいは別のエディタ、たとえば [Komodo Edit エディタ](http://www.activestate.com/komodo-edit/downloads) を使ってもいいです。 )
