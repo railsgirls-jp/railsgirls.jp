@@ -92,13 +92,13 @@ Sublime Text 日本語入力パッチをダウンロードします。Sublime Te
 
 あなたの Linux ディストリビューション(Ubuntu や Fedora)に Ruby on Rails を開発する環境をインストールするには下の1行をコピーしてターミナルに貼り付け、Enter キーを押す必要があります。スクリーンに流れるテキストを眺めて少しの時間の間、楽しみにお待ち下さい。次に進むまでの間、飲み物を等を飲んで休憩してはいかがでしょうか。
 
-** Ubuntuの場合:**
+**Ubuntuの場合:**
 
 {% highlight sh %}
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
-** Fedoraの場合:**
+**Fedoraの場合:**
 
 {% highlight sh %}
 bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
