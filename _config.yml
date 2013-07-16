@@ -1,11 +1,12 @@
 # jekyll settings
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile", "Gemfile.lock"]
+safe: true
+lsi: false
 pygments: true
 permalink: pretty
 markdown: redcarpet
-safe: true
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile", "Gemfile.lock"]
 url : http://railsgirls.jp
-lsi: false
 
 # user variables
 title : Rails Girls Guide -Japanese-
