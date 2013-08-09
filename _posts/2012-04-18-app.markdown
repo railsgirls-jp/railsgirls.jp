@@ -54,7 +54,7 @@ mkdir projects
 cd projects
 rails new railsgirls
 cd railsgirls
-ruby script\rails server
+ruby bin\rails server
 {% endhighlight %}
   </div>
 </div>
