@@ -65,7 +65,7 @@ gem update rails --no-ri --no-rdoc
 
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
-[RailsInstaller](http://rubyforge.org/frs/download.php/76855/railsinstaller-2.2.0.exe) をダウンロードして、実行します。
+[RailsInstaller](https://github.com/railsinstaller/railsinstaller-windows/releases/download/2.2.2/railsinstaller-2.2.2.exe) をダウンロードして、実行します。
 インストールのオプションは全てディフォルトを選択します。
 
 [Heroku で Rails アプリを公開する](/heroku) 場合は Git と SSH-key もインストールしてください。
