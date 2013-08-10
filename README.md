@@ -6,7 +6,23 @@ Rails Girls Guideの邦訳です。
 
 Rails Girls Tokyo開催に向けて話しあうメーリングリストは　https://groups.google.com/forum/#!forum/rails-girls-tokyo です。MLは公開していないので、参加リクエストをください。
 
-Rails Girls JP(Japanese) のサイトにブログを追加する場合は
+Rails Girls JP(Japanese) のサイトを編集したい場合は、以下の手順でローカルにファイルをダウンロードし、環境をつくります。
+
+```
+git clone git@github.com:railsgirls-jp/railsgirls-jp.github.com.git
+cd railsgirls-jp.github.com
+bundle install
+```
+
+閲覧する場合は、以下の手順でWebサーバを起動し、ブラウザから http://localhost:4000 へアクセスします。
+
+```
+jekyll serve --watch
+```
+
+既存のページを編集する場合は、 ```_posts``` ディレクトリ以下にある、各ページのファイルを編集してください。
+
+ブログを追加する場合は
 
 ```
 rake post title="my fabulous post"
