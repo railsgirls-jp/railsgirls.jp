@@ -28,7 +28,7 @@ jekyll serve --watch
 rake post title="my fabulous post"
 ```
 
-を実行すると、year-month-date-my-fabulous-post.markdown というテンプレートが ```_post``` ディレクトリに作られるので、これを編集する。```_post``` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われる。permalinkがある場合は、どこかのページから permalink で指定した URL へリンクする。
+を実行すると、year-month-date-my-fabulous-post.markdown というテンプレートが ```_post``` ディレクトリに作られるので、これを編集します。```_post``` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われます。permalinkがある場合は、どこかのページから permalink で指定した URL へリンクします。
 
 このサイトの About や Event のような独立したページを作りたい場合は
 
@@ -36,7 +36,7 @@ rake post title="my fabulous post"
 rake page name="something"
 ```
 
-を実行する。この場合、something/index.html という名前でテンプレートが作られるので、これを編集する。このファイルも、どこかのページからリンクする。
+を実行します。この場合、something/index.html という名前でテンプレートが作られるので、これを編集します。このファイルも、どこかのページからリンクします。
 
 以下、オリジナルのREADMEそのままです。
 
