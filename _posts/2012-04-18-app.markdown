@@ -84,8 +84,8 @@ rails server
 
   <div class="win">
 {% highlight sh %}
-ruby rails generate scaffold idea name:string description:text picture:string
-ruby rake db:migrate
+ruby bin\rails generate scaffold idea name:string description:text picture:string
+ruby bin\rake db:migrate
 ruby bin\rails server
 {% endhighlight %}
   </div>
@@ -185,15 +185,35 @@ gem 'carrierwave'
 
 Terminal で、次のコマンドを実行してください。 :
 
+<div class="os-specific">
+  <div class="nix">
 {% highlight sh %}
 bundle
 {% endhighlight %}
+  </div>
+
+  <div class="win">
+{% highlight sh %}
+ruby bin\bundle
+{% endhighlight %}
+  </div>
+</div>
 
 そうすると、次のコマンドでアップロードを実行するコードを生成できます。 :
 
+<div class="os-specific">
+  <div class="nix">
 {% highlight sh %}
 rails generate uploader Picture
 {% endhighlight %}
+  </div>
+
+  <div class="win">
+{% highlight sh %}
+ruby bin\rails generate uploader Picture
+{% endhighlight %}
+  </div>
+</div>
 
 ここで、Terminal 上で **Rails server プロセスをリスタート** する必要があります。追加したライブラリをアプリにロードさせるためです。
 
