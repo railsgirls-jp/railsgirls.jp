@@ -106,8 +106,8 @@ tags: []
   充実した一日の終わりは、楽しいアフターパーティ。 <br/>
   美味しいピザを皆でいただきながら、今日のイベントのことや、まだお話していなかった人たちとおしゃべりしたりと、和気あいあい。<br/>
   中には、勤務地が近いこともあり今度ランチの約束をした人たちも。学べるだけではなく、人との出会い・繋がりも得られる素敵なイベントとなりました。<br/>
-    <img src="/images/sapporo_party1.jpg" width="450" alt="after party"/>
-    <img src="/images/sapporo_party2.jpg" width="450" alt="after party"/>
+    <img src="/images/sapporo_party1.jpg" width="300" alt="after party"/>
+    <img src="/images/sapporo_party2.jpg" width="300" alt="after party"/>
   <br/>
 </p>
 <br/>
