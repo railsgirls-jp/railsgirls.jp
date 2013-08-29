@@ -29,13 +29,13 @@ tags: []
   インストール・ディでは、参加者の持ち寄ったPCに、Railsが使えるよう環境構築をしていきます。 <br/>
   WindowsとMacでグループ分けをし、コーチと一緒に明日に向けて準備をしていきます。 <br/>
   <br/>
-  <img src="images/sapporo_installday.jpg" width="600" alt="install day">
+  <img src="/images/sapporo_installday.jpg" width="600" alt="install day">
 </p>
 <p>
   参加者が集まったところで、お互いの自己紹介をしていきました。<br/>
   インストール終了後の余った時間では、お互いの仕事の話をしたり、Rubyを触ってみたり、皆さん楽しそうでした。<br/>
   そしてインストール・ディの締めくくりに、皆で...<br/><br/>
-  <img src="images/sapporo_Friday_Hug.jpg" width="800" alt="Friday hug"/> <br/><br/>
+  <img src="/images/sapporo_Friday_Hug.jpg" width="800" alt="Friday hug"/> <br/><br/>
   Friday Hug!<br/>
 </p>
 <br/>
@@ -56,10 +56,10 @@ tags: []
   1グループ3〜4人に対しコーチが2人付くという体制にしており、一人ひとりの疑問に答え、じっくり学んでもらえる環境にしてあります。 <br/>
   頼もしいコーチ達がHTTPやRailsの構成、考え方など熱のこもった解説をして行きます。 <br/>
   <br/>
-　<img src="images/sapporo_teaching1.jpg" width="350" alt="teaching"/>
-  <img src="images/sapporo_teaching2.jpg" width="350" alt="teaching"/><br/>
-  <img src="images/sapporo_teaching3.jpg" width="350" height="240" alt="teaching"/>
-  <img src="images/sapporo_teaching4.jpg" width="350" height="240" alt="teaching"/><br/>
+　<img src="/images/sapporo_teaching1.jpg" width="350" alt="teaching"/>
+  <img src="/images/sapporo_teaching2.jpg" width="350" alt="teaching"/><br/>
+  <img src="/images/sapporo_teaching3.jpg" width="350" height="240" alt="teaching"/>
+  <img src="/images/sapporo_teaching4.jpg" width="350" height="240" alt="teaching"/><br/>
 </p>
 <br/>
 <br/>
@@ -70,21 +70,21 @@ tags: []
   お昼ご飯は札幌のオーガニック居酒屋、粋Laboratoryさんのお弁当。 <br/>
   体にやさしい発酵食品や有機食材にこだわった美味しいお弁当は大好評でした。 <br/>
   <br/>
-    <img src="images/sapporo_bento.jpg" width="500" height="270" alt="bento"/><br/>
+    <img src="/images/sapporo_bento.jpg" width="500" height="270" alt="bento"/><br/>
     なんとこのイベントの為に、オリジナルの旗も作ってくれました！かわいい！<br/>
 </p>
 <br/>
 
 <p>
-  午後一のスポンサーLT。<a href = "http://www.enishi-tech.com/">株式会社えにしテック様<a/>・<a href = "http://www.local.or.jp/">一般社団法人LOCAL様</a>からは、<br/>
+  午後一のスポンサーLT。株式会社えにしテック様・一般社団法人LOCAL様からは、<br/>
   札幌の企業やコミュニティの取り組みをGirlsに紹介していただきました。<br/>
-  <a href = http://www.iij.ad.jp/>株式会社インターネットイニシアティブ様<a/>からは、<br/>
-  Railsアプリの開発環境・実行環境を支援してくれるサービス<a href = "http://mogok.jp/">MOGOK</a>をご紹介いただきました。<br/>
+  株式会社インターネットイニシアティブ様からは、<br/>
+  Railsアプリの開発環境・実行環境を支援してくれるサービスMOGOKをご紹介いただきました。<br/>
   日本語をサポートしているので、初学者でも触れやすいサービスです。<br/>
-  <img src="images/sapporo_sponsor1.jpg" width="320"alt="sponsor LT"/>
-  <img src="images/sapporo_sponsor2.jpg" width="320" alt="sponsor LT"/>
+  <img src="/images/sapporo_sponsor1.jpg" width="320"alt="sponsor LT"/>
+  <img src="/images/sapporo_sponsor2.jpg" width="320" alt="sponsor LT"/>
   <br/>
-  日本のRialsGirlsをサポートしてくださっている<a href = "http://ruby-no-kai.org/">日本Rubyの会様</a>からはRubyコミュニティのご紹介などをしていただきました。<br/>
+  日本のRialsGirlsをサポートしてくださっている日本Rubyの会様からはRubyコミュニティのご紹介などをしていただきました。<br/>
   これから先も学んでいこうという人々の為に役立つ情報が盛りだくさんでした。ありがとうございました！<br/><br/>
   そして、サプライズで東京にいらっしゃったRailsGirlsTokyo2ndのオーガナイザーの鳥井さんとSkype中継をしました！<br/>
   ちょうどこの日、東京ではRailsGirlsの延長のmore!というイベントを開催しており、RailsGirlsの参加者だった方々の楽しそうな声も聞くことができました。<br/>
@@ -98,7 +98,7 @@ tags: []
   つまずきながらも、コーチのサポートのもとチュートリアルアプリをデプロイ！<br/>
   そしてここからは、自分の好きなデザインにしてみたり、新たな機能を追加してみたり。皆、思い思いの自分流Webアプリを構築していきます。 <br/>
   <br/>
-  <img src="images/sapporo_teaching5.jpg" width="900" alt="afternoon"/><br/>
+  <img src="/images/sapporo_teaching5.jpg" width="900" alt="afternoon"/><br/>
 </p>
 <br/>
 
@@ -106,8 +106,8 @@ tags: []
   充実した一日の終わりは、楽しいアフターパーティ。 <br/>
   美味しいピザを皆でいただきながら、今日のイベントのことや、まだお話していなかった人たちとおしゃべりしたりと、和気あいあい。<br/>
   中には、勤務地が近いこともあり今度ランチの約束をした人たちも。学べるだけではなく、人との出会い・繋がりも得られる素敵なイベントとなりました。<br/>
-    <img src="images/sapporo_party1.jpg" width="450" alt="after party"/>
-    <img src="images/sapporo_party2.jpg" width="450" alt="after party"/>
+    <img src="/images/sapporo_party1.jpg" width="450" alt="after party"/>
+    <img src="/images/sapporo_party2.jpg" width="450" alt="after party"/>
   <br/>
 </p>
 <br/>
@@ -115,7 +115,7 @@ tags: []
   最後に、RailsGirlsに参加してみた感想と今後やって行きたいことを伝え合い、締めくくりました。<br/>
   今日という日が、皆さんの思いをカタチにする力となりますように。 <br/>
   ようこそRailsの世界へ！<br/>
-    <img src="images/sapporo_party3.jpg" width="900" alt="Coach and Girl"/>
+    <img src="/images/sapporo_party3.jpg" width="900" alt="Coach and Girl"/>
   <br/>
 </p>
 <br/>
