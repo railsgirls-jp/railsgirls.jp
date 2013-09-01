@@ -84,8 +84,8 @@ rails server
 
   <div class="win">
 {% highlight sh %}
-ruby rails generate scaffold idea name:string description:text picture:string
-ruby rake db:migrate
+ruby bin\rails generate scaffold idea name:string description:text picture:string
+rake db:migrate
 ruby bin\rails server
 {% endhighlight %}
   </div>
