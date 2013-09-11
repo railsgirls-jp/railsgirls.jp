@@ -84,7 +84,7 @@ tags: []
   <img src="/images/sapporo_sponsor1.jpg" width="320"alt="sponsor LT"/>
   <img src="/images/sapporo_sponsor2.jpg" width="320" alt="sponsor LT"/>
   <br/>
-  日本のRialsGirlsをサポートしてくださっている日本Rubyの会様からはRubyコミュニティのご紹介などをしていただきました。<br/>
+  日本のRailsGirlsをサポートしてくださっている日本Rubyの会様からはRubyコミュニティのご紹介などをしていただきました。<br/>
   これから先も学んでいこうという人々の為に役立つ情報が盛りだくさんでした。ありがとうございました！<br/><br/>
   そして、サプライズで東京にいらっしゃったRailsGirlsTokyo2ndのオーガナイザーの鳥井さんとSkype中継をしました！<br/>
   ちょうどこの日、東京ではRailsGirlsの延長のmore!というイベントを開催しており、RailsGirlsの参加者だった方々の楽しそうな声も聞くことができました。<br/>
