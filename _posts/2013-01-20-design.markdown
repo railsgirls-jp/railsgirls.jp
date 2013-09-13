@@ -23,7 +23,7 @@ permalink: design
 下のように置きかえます。
 
 {% highlight html %}
-<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
 {% endhighlight %}
 
 続いて、以下の行を
@@ -52,7 +52,7 @@ body { padding-top: 100px; }
 body { padding-top: 60px; }
 {% endhighlight %}
 
-最後に `app/assets/stylesheets/scalffolds.css.scss` を削除します。これは Rails が標準で作成するファイルで私達にはもう必要の無いものです。
+最後に `app/assets/stylesheets/scaffolds.css.scss` を削除します。これは Rails が標準で作成するファイルで私達にはもう必要の無いものです。
 
 ここまで来たら、[http://localhost:3000/ideas](http://localhost:3000/ideas)をリロードしてみましょう。何かが変わったことが確認出来ると思いますが、格好良くするためにはまだやることがありそうです。
 
@@ -85,12 +85,15 @@ body { padding-top: 60px; }
 {% highlight erb %}
 <h1>Listing ideas</h1>
 
-<% @ideas.each do |idea| %>
-<div class="row">
-  <div class="span4">
-    <%= image_tag idea.picture_url, :width => '100%' if idea.picture.present?%>
-    <h4><%= link_to idea.name, idea %></h4>
-    <%= idea.description %>
+<% @ideas.in_groups_of(3) do |group| %>
+  <div class="row">
+    <% group.compact.each do |idea| %>
+      <div class="span4">
+        <%= image_tag idea.picture_url, :width => '100%' if idea.picture.present?%>
+        <h4><%= link_to idea.name, idea %></h4>
+        <%= idea.description %>
+      </div>
+    <% end %>
   </div>
 <% end %>
 

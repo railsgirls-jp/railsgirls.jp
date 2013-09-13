@@ -37,6 +37,11 @@ gem のインストールができました。Rails のサーバーを再起動�
 rails g devise:install
 {% endhighlight %}
 
+Then add this line to your `app/models/user.rb`:
+
+{% highlight ruby %}
+attr_accessible :email, :password, :password_confirmation
+{% endhighlight %}
 
 ## Step 2: Devise の環境設定
 

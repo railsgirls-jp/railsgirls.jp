@@ -17,7 +17,7 @@ bundle install
 閲覧する場合は、以下の手順でWebサーバを起動し、ブラウザから http://localhost:4000 へアクセスします。
 
 ```
-jekyll serve --watch
+bundle exec jekyll serve --watch
 ```
 
 既存のページを編集する場合は、 ```_posts``` ディレクトリ以下にある、各ページのファイルを編集してください。

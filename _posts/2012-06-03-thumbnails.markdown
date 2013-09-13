@@ -30,7 +30,7 @@ gem 'carrierwave'
 の下に
 
 {% highlight ruby %}
-gem 'mini_magick'
+gem 'mini_magick', '3.5.0'
 {% endhighlight %}
 
 を追加します。その後に Terminal で以下のコマンドを実行します。
