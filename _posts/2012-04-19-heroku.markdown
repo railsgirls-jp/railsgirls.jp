@@ -16,6 +16,21 @@ __COACHより__: Heroku か、従来のサーバーか、デプロイの利点�
 
 ### アプリの準備
 
+#### Version Control Systems
+
+We need to add our code to version control. You can do this by running the following in the terminal:
+
+{% highlight sh %}
+git init
+echo "public/uploads" >> .gitignore
+echo "tmp" >> .gitignore
+echo "logs" >> .gitignore
+git add .
+git commit -m "initial commit"
+{% endhighlight %}
+
+__COACH__: This would be a good time to talk about version control systems and git, also explain the .gitignore and why we don't want these files included.
+
 #### データベースのアップデート
 
 まず、 Heroku で動くデータベースが必要です。いつものデータベースとは違います。 Gemfile を次のように変更しましょう。 :
@@ -37,11 +52,15 @@ end
 
 そして、 `bundle install --without production` を実行してセットアップしてください。
 
-__COACHより__: RDBMS とそうでないものについて話してみましょう。
+__COACHより__: RDBMS とそうでないものについて話してみましょう。plus include some details on Heroku's dependency on Postgresql.
 
 #### rails\_12factor の導入
 
-次に、Heroku で Rails 4 を動かすために必要な rails\_12factor という gem を導入します。 Gemfile を次のように変更しましょう。:
+次に、Heroku で Rails 4 を動かすために必要な rails\_12factor という gem を導入します。
+
+This gem modifies the way Rails works to suit Heroku, for example Logging is updated and the configuration for static assets (your images, stylesheets and javascript files) is tweaked to work properly within Heroku's systems.
+
+Gemfile を次のように変更しましょう。:
 
 {% highlight ruby %}
 group :production do
@@ -60,20 +79,11 @@ end
 
 もう一度、 `bundle install --without production` を実行してセットアップしてください。
 
-__COACHより__: Heroku におけるログの仕組みについて調べてみましょう。
-
-#### バージョン管理(git)
-
-バージョン管理が必要です。ターミナルで次のコマンドを実行すれば大丈夫です。(訳者注：gitのインストールは別途必要です。) :
-
 {% highlight sh %}
-git init
-git add .
-git commit -m "initial commit"
+git commit -a -m "Added rails\_12factor gem and updated Gemfile.lock"
 {% endhighlight %}
 
-__COACHより__: バージョン管理と git について話すいい機会ですね。
-
+__COACHより__: Heroku におけるログの仕組みについて調べてみましょう。
 
 ### アプリのデプロイ
 
@@ -118,3 +128,29 @@ Total 134 (delta 26), reused 0 (delta 0)
 
 そのコマンドが実行されたら、 url でアプリを見ることができます。このアプリの例では、 [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com) です。もしくは、ターミナルで `heroku open` と入力すれば、そのページを見に行くことができます。
 
+#### Closing notes
+
+Heroku's platform is not without its quirks. Applications run on Heroku live within an ephermeral environment - this means that (except for information stored in your database) any files created by your application will disappear if it restarts (for example, when you push a new version).
+
+###### [Ephemeral filesystem](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem)
+> Each dyno gets its own ephemeral filesystem, with a fresh copy of the most recently deployed code. During the dyno’s lifetime its running processes can use the filesystem as a temporary scratchpad, but no files that are written are visible to processes in any other dyno and any files written will be discarded the moment the dyno is stopped or restarted.
+
+In the [App](/app) tutorial the ability to attach a file to the Idea record is added, which results in new files being written to your applications `public/uploads` folder. The ephemeral storage in Heroku can be seen with the following steps:
+
+1. Launch the app with `heroku open`
+2. Add a new Idea with an image
+3. Restart the application by running `heroku restart`
+4. Go back to your Idea and reload the page - the image should no longer be visible
+
+##### Working around Ephemeral Storage
+
+Obviously this doesn't seem to be useful if you were running a real life application, but there are ways to work around this which is commonly used by a lot of popular websites.
+
+The most common method is to use an external asset host such as Amazon S3 (Simple Storage Service) or Rackspace CloudFiles. These services provide (for a low cost - usually less then $0.10 per GB) storage 'in the cloud' (meaning the files could potentially be hosted anywhere) which your application can use as persistent storage.
+
+While this functionality is a bit out of scope for this tutorial there are some resources available which you can use to find your way:
+
+* [How to: Make Carrierwave work on Heroku](https://github.com/carrierwaveuploader/carrierwave/wiki/How-to%3A-Make-Carrierwave-work-on-Heroku)
+* [Amazon S3 - The Beginner' Guide](http://www.hongkiat.com/blog/amazon-s3-the-beginners-guide/)
+
+As always if you require any more information or assistance your coaches will be able to assist.
