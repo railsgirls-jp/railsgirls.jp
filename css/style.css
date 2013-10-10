@@ -1,3 +1,7 @@
+@import url('reset.css');
+@import url('960.css');
+@import url('text.css');
+
 html {
   background: #F4F4F4;
 }
@@ -48,6 +52,11 @@ p {
   line-height: 1.5;
 }
 
+h3, h4, h5, a {
+  color:#e0330c;
+  line-height:1.1;
+}
+
 ul li {
   margin-bottom: 0.5em;
   line-height: 1.5;
@@ -81,12 +90,15 @@ header #logo {
 }
 
 nav {
-  margin: 0 0 0 250px;
-  padding-top: 12px;
+  margin: 0 0 0 200px;
+  padding-top: 0px;
+  float: right;
+  color: #ffffcc;
+  font-size: 20px;
 }
 
 nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 300;
   font-size: 20px;
@@ -96,7 +108,7 @@ nav a {
 
 nav a:after {
   margin-left: 15px;
-  content: url(../images/star.png);
+  content: url(/images/star.png);
 }
 
 nav a:last-child: after {
@@ -104,6 +116,7 @@ nav a:last-child: after {
 }
 
 nav a:hover{
+  color: #ffffcc;
   text-decoration: underline;
 }
 
@@ -257,6 +270,50 @@ i.icon-small-browser {
 
 .os-specific .active {
   font-weight: bold;
+}
+
+.event {
+  box-shadow:0 2px 3px #ddd;
+  border:1px solid #eee;
+  height:200px;
+  background-position:0 -100px;
+  margin-bottom:40px;
+  -webkit-transition:0.4s box-shadow;
+}
+
+.event:hover {
+  -webkit-transition:0.4s all;
+  box-shadow:0 2px 3px #999;
+  border-color: #ddd;
+}
+
+.event.tba {
+  box-shadow:none;
+  border:1px solid #eee;
+}
+
+.event.tba h3 {
+  color:#888;
+  border-color:#888;
+}
+
+.event.tba h3 small {
+  color:#888;
+}
+
+.event h3 {
+  margin-top:129px;
+  padding:10px 15px;
+  background:#fff;
+  border-top:3px solid #d3360b;
+}
+
+.event h3 small {
+  line-height:1.5;
+  display:block;
+  font-size:80%;
+  color:#000;
+  font-weight:400;
 }
 
 /* Correct padding on smaller screens */
