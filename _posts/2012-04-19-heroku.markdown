@@ -16,9 +16,9 @@ __COACHより__: Heroku か、従来のサーバーか、デプロイの利点�
 
 ### アプリの準備
 
-#### Version Control Systems
+#### バージョン管理システム
 
-We need to add our code to version control. You can do this by running the following in the terminal:
+作成したコードをバージョン管理システムに追加します。ターミナル上で次のコマンドを入力しましょう。:
 
 {% highlight sh %}
 git init
@@ -29,7 +29,7 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__COACH__: This would be a good time to talk about version control systems and git, also explain the .gitignore and why we don't want these files included.
+__COACHより__: バージョン管理システムと git について説明するちょうどいいタイミングです。.gitignore の説明と上記のファイルを管理対象外にしたい理由についても説明しましょう。
 
 #### データベースのアップデート
 
@@ -39,7 +39,7 @@ __COACH__: This would be a good time to talk about version control systems and g
 gem 'sqlite3'
 {% endhighlight %}
 
-to
+↓
 
 {% highlight ruby %}
 group :development do
@@ -52,13 +52,13 @@ end
 
 そして、 `bundle install --without production` を実行してセットアップしてください。
 
-__COACHより__: RDBMS とそうでないものについて話してみましょう。plus include some details on Heroku's dependency on Postgresql.
+__COACHより__: RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
 
 #### rails\_12factor の導入
 
 次に、Heroku で Rails 4 を動かすために必要な rails\_12factor という gem を導入します。
 
-This gem modifies the way Rails works to suit Heroku, for example Logging is updated and the configuration for static assets (your images, stylesheets and javascript files) is tweaked to work properly within Heroku's systems.
+この gem はアプリが Heroku 上で動作できるように、Rails の動作を変更します。例えば、ログは保存先が変更され、静的アセット(アプリの画像、スタイルシート、JavaScript ファイル) は Heroku 向けに微調整が加えられています。
 
 Gemfile を次のように変更しましょう。:
 
@@ -68,7 +68,7 @@ group :production do
 end
 {% endhighlight %}
 
-to
+↓
 
 {% highlight ruby %}
 group :production do
@@ -128,29 +128,30 @@ Total 134 (delta 26), reused 0 (delta 0)
 
 そのコマンドが実行されたら、 url でアプリを見ることができます。このアプリの例では、 [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com) です。もしくは、ターミナルで `heroku open` と入力すれば、そのページを見に行くことができます。
 
-#### Closing notes
+#### おわりに
 
-Heroku's platform is not without its quirks. Applications run on Heroku live within an ephermeral environment - this means that (except for information stored in your database) any files created by your application will disappear if it restarts (for example, when you push a new version).
+Heroku のプラットフォームは癖がない訳ではありません。Heroku 上のアプリは ephemeral な(再起動で一部のファイルが揮発する)環境で動作しています。- これは(データベースに保存された情報と push した情報を除く)全てのファイルがアプリの再起動で消えてしまうという事です。(例えば、新しいバージョンのプログラムを push した場合)
 
-###### [Ephemeral filesystem](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem)
+###### [Ephemeral ファイルシステム](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem)
 > Each dyno gets its own ephemeral filesystem, with a fresh copy of the most recently deployed code. During the dyno’s lifetime its running processes can use the filesystem as a temporary scratchpad, but no files that are written are visible to processes in any other dyno and any files written will be discarded the moment the dyno is stopped or restarted.
+> (各 dyno は専用の ephemeral ファイルシステムを取得します。この領域には最新のデプロイしたプログラムもコピーされます。実行中のプロセスが dyno の生存期間にある間は、このファイルシステムを一時的なスクラッチパッドとして扱う事ができます。しかし、dynoが停止か再起動をした瞬間に出力されていたすべてのファイルはプロセスから見えなくなります)
 
-In the [App](/app) tutorial the ability to attach a file to the Idea record is added, which results in new files being written to your applications `public/uploads` folder. The ephemeral storage in Heroku can be seen with the following steps:
+[App](/app) では、追加した Idea レコードにファイルを添付する事ができます。このファイルはアプリの `public/uploads` フォルダ以下に配置されます。以下の手順で Heroku での ephemeral ストレージの動作を確認できます:
 
-1. Launch the app with `heroku open`
-2. Add a new Idea with an image
-3. Restart the application by running `heroku restart`
-4. Go back to your Idea and reload the page - the image should no longer be visible
+1. `heroku open` を実行してアプリを開きます
+2. 新しい Idea に画像を付けて追加します
+3. `heroku restart` を実行してアプリを再起動します
+4. 追加した Idea を再度表示し、このページを reload します - 画像は表示されなくなります
 
-##### Working around Ephemeral Storage
+##### Ephemeral ストレージの回避策
 
-Obviously this doesn't seem to be useful if you were running a real life application, but there are ways to work around this which is commonly used by a lot of popular websites.
+これは実際のアプリにとっては明らかに不便ですが、有名なサイトでも使われてる回避策がちゃんとあります。
 
-The most common method is to use an external asset host such as Amazon S3 (Simple Storage Service) or Rackspace CloudFiles. These services provide (for a low cost - usually less then $0.10 per GB) storage 'in the cloud' (meaning the files could potentially be hosted anywhere) which your application can use as persistent storage.
+最も一般的な回避策はAmazon S3(Simple Storage Service)やRackspace CloudFilesのような外部ホストの資源を利用する事です。これらのサービスは(安価な - 通常 0.1$/GB 以下の)アプリから永続的に利用可能なストレージを 'クラウド上に' 提供します(つまりファイルをどこへでも提供し得えます)。
 
-While this functionality is a bit out of scope for this tutorial there are some resources available which you can use to find your way:
+この機能は少しだけこのチュートリアルの範囲から外れますが、以下のようなリソースを参考に、目的にあった方法を見つける事ができるでしょう。
 
 * [How to: Make Carrierwave work on Heroku](https://github.com/carrierwaveuploader/carrierwave/wiki/How-to%3A-Make-Carrierwave-work-on-Heroku)
 * [Amazon S3 - The Beginner' Guide](http://www.hongkiat.com/blog/amazon-s3-the-beginners-guide/)
 
-As always if you require any more information or assistance your coaches will be able to assist.
+いつものように、わからない事がある場合や手助けが必要な場合は担当のコーチが対応してくれます。
