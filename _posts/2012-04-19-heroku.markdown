@@ -12,7 +12,7 @@ permalink: heroku
 
 [quickstart guide](https://devcenter.heroku.com/articles/quickstart) の 1から3 を実施して、サインアップ、ログインしましょう。toolbelt のインストールもしてください。
 
-__COACHより__: Heroku か、従来のサーバーか、デプロイの利点について話してみましょう。
+__Coachより__: Heroku か、従来のサーバーか、デプロイの利点について話してみましょう。
 
 ### アプリの準備
 
@@ -29,7 +29,7 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__COACHより__: バージョン管理システムと git について説明するちょうどいいタイミングです。.gitignore の説明と上記のファイルを管理対象外にしたい理由についても説明しましょう。
+__Coachより__: バージョン管理システムと git について説明するちょうどいいタイミングです。.gitignore の説明と上記のファイルを管理対象外にしたい理由についても説明しましょう。
 
 #### データベースのアップデート
 
@@ -52,7 +52,7 @@ end
 
 そして、 `bundle install --without production` を実行してセットアップしてください。
 
-__COACHより__: RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
+__Coachより__: RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
 
 #### rails\_12factor の導入
 
@@ -83,7 +83,7 @@ end
 git commit -a -m "Added rails\_12factor gem and updated Gemfile.lock"
 {% endhighlight %}
 
-__COACHより__: Heroku におけるログの仕組みについて調べてみましょう。
+__Coachより__: Heroku におけるログの仕組みについて調べてみましょう。
 
 ### アプリのデプロイ
 
