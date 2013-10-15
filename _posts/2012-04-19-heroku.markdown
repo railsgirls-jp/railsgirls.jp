@@ -134,6 +134,7 @@ Heroku のプラットフォームは癖がない訳ではありません。Hero
 
 ###### [Ephemeral ファイルシステム](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem)
 > Each dyno gets its own ephemeral filesystem, with a fresh copy of the most recently deployed code. During the dyno’s lifetime its running processes can use the filesystem as a temporary scratchpad, but no files that are written are visible to processes in any other dyno and any files written will be discarded the moment the dyno is stopped or restarted.
+>
 > (各 dyno は専用の ephemeral ファイルシステムを取得します。この領域には最新のデプロイしたプログラムもコピーされます。実行中のプロセスが dyno の生存期間にある間は、このファイルシステムを一時的なスクラッチパッドとして扱う事ができます。しかし、dynoが停止か再起動をした瞬間に出力されていたすべてのファイルはプロセスから見えなくなります)
 
 [App](/app) では、追加した Idea レコードにファイルを添付する事ができます。このファイルはアプリの `public/uploads` フォルダ以下に配置されます。以下の手順で Heroku での ephemeral ストレージの動作を確認できます:
