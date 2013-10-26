@@ -591,3 +591,5 @@ Rails Girls チーム
 * コーチに感謝のお礼をしましょう。
 
 * 主催者にありがとうをいう。
+
+* Share the numbers of your event by filling out this short [Questionaire](https://railsgirls.wufoo.eu/forms/rails-girls-events-all-the-numbers/)

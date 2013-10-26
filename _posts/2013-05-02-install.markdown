@@ -54,7 +54,14 @@ Appleメニューをクリックして *About This Mac* (図 1) を選びます�
 gem update rails --no-ri --no-rdoc
 {% endhighlight %}
 
+Make sure that all works well by running the application generator command.
+
+{% highlight sh %}
+rails new railsgirls
+{% endhighlight %}
+
 **最後のステップ** コードを編集するのに必要なテキストエディタをインストールする。
+
 このワークショップでは Sublime Text エディタを推奨しています。
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
@@ -76,7 +83,14 @@ gem update rails --no-ri --no-rdoc
 gem update rails --no-ri --no-rdoc
 {% endhighlight %}
 
+Make sure that all works well by running the application generator command.
+
+{% highlight sh %}
+rails new railsgirls
+{% endhighlight %}
+
 **最後のステップ** コードを編集するためのテキストエディタが必要になります。
+
 このワークショップでは Sublime Text エディタを推奨しています。( Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題があります。気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールするか、あるいは別のエディタ、たとえば [Komodo Edit エディタ](http://www.activestate.com/komodo-edit/downloads) を使ってもいいです。 )
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
