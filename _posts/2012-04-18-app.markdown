@@ -87,7 +87,7 @@ rails generate scaffold idea name:string description:text picture:string
   </div>
 </div>
 
-The scaffold creates new files in your project directory, but to get it to work properly we need to run a couple of other commands to update our database and restart the server.
+scaffold は新しいファイルをプロジェクトのディレクトリに追加しますが、意図したように動作させるためには以下の 2 つのコマンドを実行してデータベースの更新と Rails server プロセスをリスタートする必要があります。
 
 <div class="os-specific">
   <div class="nix">
@@ -264,29 +264,29 @@ mount_uploader :picture, PictureUploader
 root to: redirect('/ideas')
 {% endhighlight %}
 
-Test the change by opening the root path (that is, http://localhost:3000/) in your browser.
+ルートパス(http://localhost:3000/)をブラウザで表示して変更点を確認しましょう。
 
 **Coachより:** routes について話してください。
 
-**Rails 3 users:** You will need to delete the index.html from the `/public/` folder for this to work.
+**Rails 3 ユーザの場合:** この変更を反映するには `/public/` 以下から index.html を削除する必要があります。
 
-## Create static pages to your app
+## アプリにページを追加する
 
-Lets add a static pages to our app that will hold information about the author of this application — you!
+アプリに開発者(あなたです！)の情報を表示できるようにページを追加してみましょう。
 
 {% highlight sh %}
 rails generate controller pages info
 {% endhighlight %}
 
-This command will create you a new folder under `/views` called `/pages` and under that a file called `info.html.erb` which will be your info page.
+このコマンドはプロジェクトの `/views` 以下に `/pages` へのアクセスに対応するための新しいディレクトリを追加します。そこに `info.html.erb` という名前のあなたの情報のためのページが作られます。
 
-It also adds a new simple route to your routes.rb.
+また、以下のシンプルなルーティングも routes.rb に追加されます。
 
 {% highlight ruby %}
 get "pages/info"
 {% endhighlight %}
 
-Now you can open the file `/views/pages/info.html.erb` and add information about you in HTML and then take your browser to [http://localhost:3000/pages/info](http://localhost:3000/pages/info) to see your new info page.
+それでは、プロジェクトの `/views/pages/info.html.erb` をテキストエディタで開いてあなたの情報を HTML で追記しましょう。その後はブラウザで [http://localhost:3000/pages/info](http://localhost:3000/pages/info) を開いて作成したページを確認してみましょう。
 
 ## 次は？
 
