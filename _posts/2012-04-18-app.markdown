@@ -278,7 +278,7 @@ root to: redirect('/ideas')
 rails generate controller pages info
 {% endhighlight %}
 
-このコマンドはプロジェクトの `/views` 以下に `/pages` へのアクセスに対応するための新しいディレクトリを追加します。そこに `info.html.erb` という名前のあなたの情報のためのページが作られます。
+このコマンドはプロジェクトの `app/views` 以下に `/pages` へのアクセスに対応するための新しいディレクトリを追加します。そこに `info.html.erb` という名前のあなたの情報のためのページが作られます。
 
 また、以下のシンプルなルーティングも routes.rb に追加されます。
 
@@ -286,7 +286,7 @@ rails generate controller pages info
 get "pages/info"
 {% endhighlight %}
 
-それでは、プロジェクトの `/views/pages/info.html.erb` をテキストエディタで開いてあなたの情報を HTML で追記しましょう。その後はブラウザで [http://localhost:3000/pages/info](http://localhost:3000/pages/info) を開いて作成したページを確認してみましょう。
+それでは、プロジェクトの `app/views/pages/info.html.erb` をテキストエディタで開いてあなたの情報を HTML で追記しましょう。その後はブラウザで [http://localhost:3000/pages/info](http://localhost:3000/pages/info) を開いて作成したページを確認してみましょう。
 
 ## 次は？
 
