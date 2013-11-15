@@ -71,6 +71,15 @@ MOGOKでRails 4を利用することはできますが、MOGOKのbundlerは最�
 
   `      bundler (= 1.1.3)'
 
+また、「config/environments/production.rb」ファイルに対して、追加で以下の変更を行ないます。 本設定変更により、MOGOK上のproduction環境で、スタイルシート等をまとめる処理が随時働くようになります。
+
+- 書き換え前
+
+  `config.assets.compile = false`
+
+- 書き換え後
+
+  `config.assets.compile = true`
 
 ## 3. 作成したRailsアプリケーションをローカルのgitリポジトリに登録しよう
 [アプリケーションを作成したディレクトリで以下のgitコマンドを実行します](https://portal.mogok.jp/documents/rails_deployment_guide/create_git_repository/)
