@@ -33,7 +33,7 @@ rails serverを起動したりコマンドを実行したりするものです�
 
 * OS X: Spotlightで *Terminal* と入力して出てきた Terminal をクリックしてください。
 * Windows: スタートメニューをクリックして、すべてのプログラムから *RailsInstaller* を探し、*Command Prompt with Ruby on Rails*をクリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Command Prompt with Ruby on Rails* を入力し検索してください。)
-* Linux (Ubuntu): Dashホームで *Terminal* を探して、*Terminal* をクリックしてください。
+* Linux (Ubuntu/Fedora): Dashホームで *Terminal* を探して、*Terminal* をクリックしてください。
 
 そして、Terminal上で次のコマンドを入力します。 :
 
@@ -300,7 +300,7 @@ get "pages/info"
 
 * Guide 0: [Handy cheatsheet for Ruby, Rails, console etc.](https://github.com/PragTob/rails-beginner-cheatsheet)
 * Guide 1: [Add commenting by Janika Liiv](/commenting)
-* Guide 2: [Put your app online with Heroku by Terence Lee](/heroku)
+* Guide 2: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift) / [Put your app online with Ninefold](/ninefold)
 * Guide 3: [Build a map of workshop participants by Rails Girls Berlin](http://railsgirlsberlin.de/apptutorial/)
 * Guide 4: [Create thumbnail images for the uploads by Miha Filej](/thumbnails)
 * Guide 5: [Add design using HTML &amp; CSS by Alex Liao](/design)
