@@ -4,9 +4,9 @@ title: Rails Girls on video
 permalink: videos
 ---
 
-# Rails Girls Happiness All Around the World
+# Rails Girls の楽しさは世界中に!
 
-This is a selection of Rails Girls videos from around the world. Have one to share? Add it here.
+このページは世界中の Rails Girls の動画の一部です。もし、共有したい動画を持っていれば追加してください。
 
 ### Rails Girls Taipei-01 2013
 
