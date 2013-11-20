@@ -37,12 +37,6 @@ gem のインストールができました。Rails のサーバーを再起動�
 rails g devise:install
 {% endhighlight %}
 
-Then add this line to your `app/models/user.rb`:
-
-{% highlight ruby %}
-attr_accessible :email, :password, :password_confirmation
-{% endhighlight %}
-
 ## Step 2: Devise の環境設定
 
 environments ファイルにデフォルトの url オプションを定義します。
@@ -82,7 +76,6 @@ environments ファイルにデフォルトの url オプションを定義し�
 
 これは下から３行目（2つ目の `end` の上）に追加してください。
 
-
 ## Step 3: User model をセットアップ
 
 Deviseユーザー用にセットアップされた User model を作るために bundled generator script を使います。
@@ -101,6 +94,11 @@ Deviseユーザー用にセットアップされた User model を作るため�
 
 を実行してデータベースをセットアップしておきましょう。
 
+Then add this line to your `app/models/user.rb`:
+
+{% highlight ruby %}
+attr_accessible :email, :password, :password_confirmation
+{% endhighlight %}
 
 ## Step 4: ユーザーを作成
 
