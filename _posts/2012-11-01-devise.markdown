@@ -86,12 +86,6 @@ User model を作るために bundled generator script を使います。
 
 **Coachより:** 生成された User モデルについて説明をしてください。フィールドとは何ですか？
 
-Then add this line to your `app/models/user.rb`:
-
-{% highlight ruby %}
-attr_accessible :email, :password, :password_confirmation
-{% endhighlight %}
-
 ## Step 4: ユーザーを作成
 
 これでユーザを作成する準備がすべて整いました。Devise がアカウントの作成、ログイン、ログアウトなどに関するすべてのコードやルーティングを生成してくれています。
@@ -122,6 +116,15 @@ Rails のサーバーが起動している事を確認したら、[http://localh
   <li class="active"><a href="/ideas">Ideas</a></li>
 </ul>
 {% endhighlight %}
+
+最後にログインしていない時に登録した内容を確認できないようにします。
+`app/controllers/application_controller.rb` を開いて次の行を追加しましょう。
+
+{% highlight ruby %}
+  before_filter :authenticate_user!
+{% endhighlight %}
+
+`end` と書かれているところの前に追加してください。
 
 ブラウザを開いてログインやログアウトを試してみてください。
 
