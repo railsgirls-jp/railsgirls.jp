@@ -8,6 +8,8 @@ permalink: devise
 
 *Created by Piotr Steininger, [@polishprince](https://twitter.com/polishprince)*
 
+*Updated by Ernesto Jimenez, [@ernesto_jimenez](https://twitter.com/ernesto_jimenez)*
+
 ** このガイドは、すでに [ RailsGirls アプリ・チュートリアル ](/app) でアプリを作った方を対象にしています。 **
 
 
@@ -48,18 +50,15 @@ environments ファイルにデフォルトの url オプションを定義し�
 
 `end` と書かれているところの前に追加してください。
 
-次は `config/routes.rb` を開いて次の行を追加します。
-{% highlight ruby %}
-   root :to => "home#index"
-{% endhighlight %}
-
-これも `end` の前に追加してください。
-
 さらに `app/views/layouts/application.html.erb` を開いて、
 
 {% highlight erb %}
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+<% if notice %>
+  <p class="alert alert-notice"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-error"><%= alert %></p>
+<% end %>
 {% endhighlight %}
 
 これらを、次の行の上に追加します。
@@ -78,21 +77,15 @@ environments ファイルにデフォルトの url オプションを定義し�
 
 ## Step 3: User model をセットアップ
 
-Deviseユーザー用にセットアップされた User model を作るために bundled generator script を使います。
+User model を作るために bundled generator script を使います。
 
 {% highlight sh %}
    rails g devise user
+   rake db:migrate
 {% endhighlight %}
 
-新しい `app/models/user.rb` のためにいくつか変更が加えられ、 db/migrate ディレクトリにも migration が追加されます。
-
-ここで、
-
-{% highlight sh %}
-  rake db:migrate
-{% endhighlight %}
-
-を実行してデータベースをセットアップしておきましょう。
+**Coach:** Explain what user model has been generated. What are the
+fields?
 
 Then add this line to your `app/models/user.rb`:
 
@@ -102,67 +95,38 @@ attr_accessible :email, :password, :password_confirmation
 
 ## Step 4: ユーザーを作成
 
-User model の設定の仕方によっては、ブラウザ上で簡単に user アカウントを登録することができます。
-その場合はサーバーを起動して、 [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) にアクセスします。
+Now that you have set everyting up you can create your first user. Devise creates all the code and routes required to create accounts, log in, log out, etc.
 
-または rails console を起動し user アカウントを作ることができます。
-
-{% highlight sh %}
- rails c
-{% endhighlight %}
-
-上記のコマンドを実行したら、次のコマンドを実行して user を設定します。（email等の値は好きなように変更してください。rails consoleを終了するには、exitと入力します。）
-
-{% highlight ruby %}
- User.create(:email=>"me@example.com",:password => "test123", :password_confirmation => "test123")
-{% endhighlight %}
-
-これで [http://localhost:3000/users/sign_in](http://localhost:3000/users/sign_in) にログインすることができます。
+Make sure your rails server is running, open [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) and create your user account.
 
 ## Step 5: サインアップとログインリンクの追加
 
 あと、やらなければいけないことは、ユーザーがログインできる適切なリンク、または案内をナビゲーションバー右上のコーナーに追加することです。
-そのために、 `app/views/layouts/application.html.erb` の次のあたりを変更します。
+そのために、 `app/views/layouts/application.html.erb` を開いて、
 
-{% highlight ruby %}
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="/">The Idea app</a>
-      <ul class="nav">
-        <li class="active"><a href="/ideas">Ideas</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+{% highlight erb %}
+<p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
 {% endhighlight %}
 
-これを、次のようにします。
+これらを、次の行の上に追加します。
 
-{% highlight ruby %}
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="/">The Idea app</a>
-      <ul class="nav">
-        <li class="active"><a href="/ideas">Ideas</a></li>
-      </ul>
-      <p class="navbar-text pull-right">
-        <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.email %></strong>.
-          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-        <% else %>
-          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-        <% end %>
-      </p>
-    </div>
-  </div>
-</div>
+{% highlight erb %}
+<ul class="nav">
+  <li class="active"><a href="/ideas">Ideas</a></li>
+</ul>
 {% endhighlight %}
 
-ログインしたりログアウトしたりして、テストしてみてください。
+ブラウザを開いてログインやログアウトを試してみてください。
+
+**Coach:** Talk about the `user_signed_in?` and `current_user` helpers. Why are they useful?
 
 ## 次は？
 
