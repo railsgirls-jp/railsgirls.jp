@@ -84,8 +84,7 @@ User model を作るために bundled generator script を使います。
    rake db:migrate
 {% endhighlight %}
 
-**Coach:** Explain what user model has been generated. What are the
-fields?
+**Coachより:** 生成された User モデルについて説明をしてください。フィールドとは何ですか？
 
 Then add this line to your `app/models/user.rb`:
 
@@ -95,9 +94,9 @@ attr_accessible :email, :password, :password_confirmation
 
 ## Step 4: ユーザーを作成
 
-Now that you have set everyting up you can create your first user. Devise creates all the code and routes required to create accounts, log in, log out, etc.
+これでユーザを作成する準備がすべて整いました。Devise がアカウントの作成、ログイン、ログアウトなどに関するすべてのコードやルーティングを生成してくれています。
 
-Make sure your rails server is running, open [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) and create your user account.
+Rails のサーバーが起動している事を確認したら、[http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) をブラウザで開いてユーザーを作成してください。
 
 ## Step 5: サインアップとログインリンクの追加
 
@@ -126,7 +125,7 @@ Make sure your rails server is running, open [http://localhost:3000/users/sign_u
 
 ブラウザを開いてログインやログアウトを試してみてください。
 
-**Coach:** Talk about the `user_signed_in?` and `current_user` helpers. Why are they useful?
+**Coachより:** `user_signed_in?` や `current_user` ヘルパーについて話してみてください。何が便利だったでしょうか？
 
 ## 次は？
 
