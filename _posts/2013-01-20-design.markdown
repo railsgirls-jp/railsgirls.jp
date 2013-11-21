@@ -26,20 +26,6 @@ permalink: design
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
 {% endhighlight %}
 
-続いて、以下の行を
-
-{% highlight html %}
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-{% endhighlight %}
-
-下のように置きかえます。
-
-{% highlight html %}
-<div class="topbar">
-  <div class="fill">
-{% endhighlight %}
-
 `app/assets/stylesheets/application.css` を開いて、以下の行を
 
 {% highlight html %}
