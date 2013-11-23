@@ -43,7 +43,7 @@ and was published on
 
 ### 書籍（日本語）
 
-* [Railsチュートリアル](http://railstutorial.jp/) - 先ほど紹介した書籍の日本語版です。原著と同様に、HTML ならば無料、電子書籍ならば有料となっています。Rails3.2とRails 4.0に対応しています。
+* [Railsチュートリアル](http://railstutorial.jp/) - 先ほど紹介した書籍の日本語訳です。原著と同様に、HTML ならば無料、電子書籍ならば有料となっています。Rails3.2とRails 4.0に対応。
 
 * [HerokuではじめるRailsプログラミング入門](http://www.amazon.co.jp/dp/4797371838) - Rails初心者向けの書籍です。簡単なWebアプリケーションをつくり、Herokuにデプロイする手順を丁寧に解説しています。
 
