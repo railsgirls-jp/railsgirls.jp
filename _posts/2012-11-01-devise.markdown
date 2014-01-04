@@ -121,10 +121,10 @@ Rails のサーバーが起動している事を確認したら、[http://localh
 `app/controllers/application_controller.rb` を開いて次の行を追加しましょう。
 
 {% highlight ruby %}
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 {% endhighlight %}
 
-`end` と書かれているところの前に追加してください。
+`protect_from_forgery with: :exception` と書かれているところの後に追加してください。
 
 ブラウザを開いてログインやログアウトを試してみてください。
 
