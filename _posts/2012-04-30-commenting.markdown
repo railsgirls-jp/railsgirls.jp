@@ -116,7 +116,7 @@ app/controllers/ideas_controller.rb の show action には、
 @comment = @idea.comments.build
 {% endhighlight %}
 
-最後に、 comments/_form.html を開いて、
+最後に、 app/views/comments/_form.html を開いて、
 
 {% highlight erb %}
   <div class="field">
