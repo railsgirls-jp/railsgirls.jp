@@ -29,7 +29,7 @@ rails g scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
 
 ## Step 3: 外部キー (foreign key) を追加する
-migration に外部キー (foreing key) を追加します。db/migrate/ 内のファイル名の最後が 'create_comments.rb' というファイルを開いて、
+migration に外部キー (foreign key) を追加します。db/migrate/ 内のファイル名の最後が 'create_comments.rb' というファイルを開いて、
 {% highlight ruby %}
 t.timestamps
 end
