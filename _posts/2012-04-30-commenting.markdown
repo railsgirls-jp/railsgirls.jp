@@ -98,7 +98,7 @@ app/views/ideas/show.html を開いて、
   <div>
     <strong><%= comment.user_name %></strong>
     <br />
-    <p><%= comment.body %><p>
+    <p><%= comment.body %></p>
   </div>
 <% end %>
 <%= render 'comments/form' %>
