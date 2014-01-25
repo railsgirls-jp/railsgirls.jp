@@ -131,4 +131,13 @@ app/controllers/ideas_controller.rb の show action には、
 <%= f.hidden_field :idea_id %>
 {% endhighlight %}
 
++next, remove
+
++{% highlight erb %}
++<div class="field">
++  <%= f.label :idea_id %><br>
++  <%= f.number_field :idea_id %>
++</div>
++{% endhighlight %}
+
 これだけで、今加えた idea アプリケーションが表示され、comment 挿入フォームが見えるはずです。
