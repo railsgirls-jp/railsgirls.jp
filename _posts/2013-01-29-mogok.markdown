@@ -111,7 +111,7 @@ MOGOKでRails 4を利用することはできますが、MOGOKのbundlerは最�
 
 `> git remote -v` で確認
 
-`mogok   http://git.mogok.jp/mogok-sample-1234.git (fetch)` 
+`mogok   http://git.mogok.jp/mogok-sample-1234.git (fetch)`
 
 `mogok   http://git.mogok.jp/mogok-sample-1234.git (push)`
 
@@ -130,7 +130,7 @@ MOGOKでRails 4を利用することはできますが、MOGOKのbundlerは最�
 ## 5. MOGOKへとアプリケーションのデプロイをしましょう
 ### サーバ上でbundle installを実行する為に以下のMOGOKコマンドを実行します。
 `> mogok build`
- 
+
 - これでサーバ上でbundle installが実行されます
 
 ![mogok build](http://dl.dropbox.com/u/908641/starting-mogok/fig_deployment_1.png)

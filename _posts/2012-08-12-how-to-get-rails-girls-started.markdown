@@ -2,7 +2,7 @@
 layout: page
 title: "How to Get Rails Girls Started"
 description: ""
-category: 
+category:
 permalink: getting-started-jp
 ---
 

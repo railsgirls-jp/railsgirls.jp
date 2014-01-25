@@ -64,7 +64,7 @@ Rails Girlsのイベントは必ずインストレーション・フェストか
 
 インストールがうまくいかない場合がよくあります。コーチと参加者がペアになってインストール作業を進められるように準備しておくといいでしょう。無限に時間を費やさないように気をつけましょう。
 
-ワークショップ会場を風船やポスターで飾りましょう。Put a fun <a href="http://open.spotify.com/user/lindaliukas/playlist/1fgkUFCFDrSn621kf4iHhr">playlist</a> together for the evening. 
+ワークショップ会場を風船やポスターで飾りましょう。Put a fun <a href="http://open.spotify.com/user/lindaliukas/playlist/1fgkUFCFDrSn621kf4iHhr">playlist</a> together for the evening.
 
 参加者がリラックスできるような何かをしてください。例えば、どうしてイベントに参加しようと思ったかをポストイットに書いてもらうとか、夢のウェブアプリを思い描いてもらうなどです。
 
@@ -473,7 +473,7 @@ Rails Girls イベントに参加していただいてありがとうござい�
 すでに Rails という道具を手にしたので、ぜひおもしろいウェブアプリ作りにチャレンジしてください！
 
 (スポンサーやコーチについてふれる。ー　コミュニティに感謝)
- 
+
 ３つのお願い：
 
 - ワークショップ・マテリアル
