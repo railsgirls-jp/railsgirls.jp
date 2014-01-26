@@ -1,5 +1,5 @@
 permalink: pretty
-markdown: maruku
+markdown: redcarpet
 exclude:
   - ".rvmrc"
   - ".rbenv-version"
