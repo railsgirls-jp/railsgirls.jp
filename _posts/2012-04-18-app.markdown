@@ -124,8 +124,8 @@ ruby bin\rails server
 この1行前に次のタグを追記してください。
 
 {% highlight erb %}
-<link rel="stylesheet" href="//assets/bootstrap.css" />
-<link rel="stylesheet" href="//assets/bootstrap-theme.css" />
+<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css" />
+<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css" />
 {% endhighlight %}
 
 そして、この部分、
