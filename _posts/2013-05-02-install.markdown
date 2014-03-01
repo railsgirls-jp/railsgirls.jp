@@ -127,9 +127,7 @@ gem i rails
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
 [RailsInstaller](https://github.com/railsinstaller/railsinstaller-windows/releases/download/2.2.2/railsinstaller-2.2.2.exe) をダウンロードして、実行します。
-インストールのオプションは全てディフォルトを選択します。
-
-[Heroku で Rails アプリを公開する](/heroku) 場合は Git と SSH-key もインストールしてください。
+インストールのオプションは全てデフォルトを選択します。
 
 もしもRailsのバージョンが最新ではない場合は、以下のコマンドを "Command Prompt with Ruby on Rails" から実行することでバージョンアップできます。
 
