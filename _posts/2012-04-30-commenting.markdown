@@ -79,7 +79,7 @@ app/controllers/ideas_controller.rb の show action には、
 @comment = @idea.comments.build
 {% endhighlight %}
 
-最後に、 app/views/comments/_form.html を開いて、
+app/views/comments/_form.html を開いて、
 
 {% highlight erb %}
   <div class="field">
@@ -94,13 +94,13 @@ app/controllers/ideas_controller.rb の show action には、
 <%= f.hidden_field :idea_id %>
 {% endhighlight %}
 
-+next, remove
+最後にこちらを削除します。
 
-+{% highlight erb %}
-+<div class="field">
-+  <%= f.label :idea_id %><br>
-+  <%= f.number_field :idea_id %>
-+</div>
-+{% endhighlight %}
+{% highlight erb %}
+<div class="field">
+  <%= f.label :idea_id %><br>
+  <%= f.number_field :idea_id %>
+</div>
+{% endhighlight %}
 
 これだけで、今加えた idea アプリケーションが表示され、comment 挿入フォームが見えるはずです。
