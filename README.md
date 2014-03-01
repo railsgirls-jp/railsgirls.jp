@@ -6,10 +6,12 @@ Rails Girls Guideの邦訳です。
 
 Rails Girls Tokyo開催に向けて話しあうメーリングリストは　https://groups.google.com/forum/#!forum/rails-girls-tokyo です。MLは公開していないので、参加リクエストをください。
 
-Rails Girls JP(Japanese) のサイトを編集したい場合は、以下の手順でローカルにファイルをダウンロードし、環境をつくります。
+# 編集方法
+
+Rails Girls JP(Japanese) のサイトを編集したい場合は、このリポジトリの"Fork"ボタンをクリックしてForkしてください。以下の手順でローカルにファイルをダウンロードし、環境をつくります。
 
 ```
-git clone git@github.com:railsgirls-jp/railsgirls-jp.github.com.git
+git clone git@github.com:YOURNAME/railsgirls-jp.github.com.git
 cd railsgirls-jp.github.com
 bundle install
 ```
@@ -20,9 +22,11 @@ bundle install
 bundle exec jekyll serve --watch
 ```
 
-既存のページを編集する場合は、 ```_posts``` ディレクトリ以下にある、各ページのファイルを編集してください。
+## 既存のページを編集
 
-ブログを追加する場合は
+```_posts``` ディレクトリ以下にある、各ページのファイルを編集してください。
+
+## ページを追加
 
 ```
 rake post title="my fabulous post"
@@ -30,6 +34,7 @@ rake post title="my fabulous post"
 
 を実行すると、year-month-date-my-fabulous-post.markdown というテンプレートが ```_post``` ディレクトリに作られるので、これを編集します。```_post``` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われます。permalinkがある場合は、どこかのページから permalink で指定した URL へリンクします。
 
+## 独立したページを追加
 このサイトの About や Event のような独立したページを作りたい場合は
 
 ```
@@ -37,6 +42,8 @@ rake page name="something"
 ```
 
 を実行します。この場合、something/index.html という名前でテンプレートが作られるので、これを編集します。このファイルも、どこかのページからリンクします。
+
+----
 
 以下、オリジナルのREADMEそのままです。
 
