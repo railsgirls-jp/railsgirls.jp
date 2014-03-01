@@ -30,4 +30,6 @@ permalink: one-word-summary.html
 
 こうして[Rails Girls App Tutorial](https://github.com/railsgirls/railsgirls.github.com/blob/master/_posts/2012-04-18-app.markdown)を作成する手助けができると思います。
 
+より詳しくは [railsgirls-jp.github.com](https://github.com/railsgirls-jp/railsgirls-jp.github.com) のREADMEページをご参照ください。
+
 ステキなRails Girlsのお手伝いの時間をくださって、ありがとうございます！
