@@ -43,6 +43,27 @@ rake page name="something"
 
 を実行します。この場合、something/index.html という名前でテンプレートが作られるので、これを編集します。このファイルも、どこかのページからリンクします。
 
+# pull request を送る
+
+pull request を送ることで、本家のページに変更依頼をすることができます。
+
+まず、ブランチを作成し、変更をコミットします。
+
+```
+git checkout -b something_nice_branch_name
+git add 変更したファイル
+git commit -m "変更内容をここにコメントとして書きます"
+```
+
+github の自分の(forkした先の)リポジトリへpushします。
+```
+git push origin something_nice_branch_name
+```
+
+github の自分のリポジトリへブラウザでアクセスし、 "copare & pull request" ボタンを押し、内容を記述し、pull request を送ります。
+
+みなさんのご協力に感謝します！
+
 ----
 
 以下、オリジナルのREADMEそのままです。
