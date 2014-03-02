@@ -8,7 +8,7 @@ permalink: app
 
 *Created by Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
 
-**まず、Railsがインストールされていることを確認してください。** [** もしくはこちらのリンクを見てインストールしてください。**](/install)
+**まず、Railsがインストールされていることを確認してください。** [**もしくはこちらのリンクを見てインストールしてください。**](/install)
 
 ## ツールを知る
 
