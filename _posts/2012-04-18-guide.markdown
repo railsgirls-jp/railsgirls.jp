@@ -12,7 +12,9 @@ Rails Girlsは女性がプログラミングを理解するための道具を提
 
 Rails Girlsは2010年末にヘルシンキで設立されました。当初は一回限りのイベントと考えていたので、現在のように世界各地で数々のRails Girlsイベントが開催されるとは思っていませんでした。この手引きはどうやってイベントをはじめたらいいかの情報を集めたものです。
 
-あなたの地域でRails Girlsを開催したい、あるいは何かフィードバックしたい場合には、[contact@railsgirls.com](mailto:contact@railsgirls.com)まで、ご連絡ください。今後のイベント開催予定は[www.railsgirls.com](http://railsgirls.com)でご覧になれます。
+あなたの地域でRails Girlsを開催したい場合には、[http://railsgirls.com/inyourcity](http://railsgirls.com/inyourcity)  にあるフォームに回答することから始めましょう。その後、開催に関する指示などのメールを送られます。
+
+今後のイベント開催予定は[www.railsgirls.com](http://railsgirls.com)でご覧になれます。
 
 *訳注*: 日本で Rails Girls を開催したい方は [こちら](/getting-started-jp)もご覧ください。
 
@@ -38,7 +40,7 @@ Rails Girlsイベントは非営利目的で開催されます。Rails Girlsは�
 
 Rails Girlsのイベントは必ずインストレーション・フェストから始まります。インストレーション・フェストとは参加者のコンピュータにRailsを動かせるだけの環境をインストールする前準備のことです。
 
-インストレーションについてはあらかじめ用意されている[railsgirls-jp.github.com/install](http://railsgirls-jp.github.com/install)をご覧ください。インストレーション・フェストでは短時間ならレクチャーを行ってもいいですが、なんといっても目玉はスパークリング・ワインをご馳走することです。そして、翌日のワークショップに備えて、環境設定を全て終わらせること、同時に参加者同士が知り合いになることです。
+インストレーションについてはあらかじめ用意されている[railsgirls.jp/install](http://railsgirls.jp/install)をご覧ください。インストレーション・フェストでは短時間ならレクチャーを行ってもいいですが、なんといっても目玉はスパークリング・ワインをご馳走することです。そして、翌日のワークショップに備えて、環境設定を全て終わらせること、同時に参加者同士が知り合いになることです。
 
 どのくらいの時間を割くかは場合によりけりです。実際にイベントを開催側が参加者の状況を把握して判断すればいいと思います。これまでの例ではイベントを平日に開催することもありましたし、週末であることもありました。また、夕方から夜にかけての時間帯(午後2時から10時まで）で二日というケースもありました。開催地などの状況に合わせて適当な日程を選んでください。
 
@@ -103,7 +105,7 @@ Rails Girlsのイベントは必ずインストレーション・フェストか
 
 11:30 - 13:00 ワークショップ
 
-ワークショップは <a href="http://railsgirls-jp.github.com/app">railsgirls-jp.github.com/app</a> のカリキュラムにしたがって進めてください。（ゆっくり！ね）先を急がずに、今、何をしているのかを説明する時間をとってください。何か新しい概念がでてきたときにも、その意味を説明してください。
+ワークショップは <a href="http://railsgirls.jp/app">railsgirls.jp/app</a> のカリキュラムにしたがって進めてください。（ゆっくり！ね）先を急がずに、今、何をしているのかを説明する時間をとってください。何か新しい概念がでてきたときにも、その意味を説明してください。
 
 正確さに欠くようなことになったとしても、シンプルな説明になるように気をつてください。以下に、説明すべき項目をあげますが、全てを説明する必要はありません。質問がでたときに説明するだけでもいいかもしれません。質問が難しすぎる場合や、見当はずれのことを聞いているとしたら、先に進んでもいいでしょう。
 
@@ -524,6 +526,9 @@ Rails Girls チーム
 
 * 1ヶ月以内ににもう一度、参加者を招待する。このような集まりは Rails Girlsグローバル・ミートアップ・ページ[Rails Girls Meetup Everywhere](http://www.meetup.com/Rails-Girls/)で企画できます。よろこんで、イベントを宣伝します。ただし、どのようなブランドのもとでミーティングを開き続けるかは開催者の自由です。これは重要です。
 
+* イベントについて blog.railsgirls.com
+に[ここ](http://blog.railsgirls.com/submit)から投稿する。
+
 ---
 
 ## チェックリスト
@@ -584,6 +589,8 @@ Rails Girls チーム
 
 * 写真付きでブログを掲載する。
 
+* 写真を[公式 Flickr グループ](http://flickr.com/groups/railsgirls/)にアップロードする。（できれば、[クリエイティブコモンズ](http://www.flickr.com/groups/railsgirls/discuss/72157634650757777/)ライセンスで!)
+
 * [global e-mail list](https://groups.google.com/group/rails-girls-team)に積極的だった参加者を招待する。
 
 * 参加のお礼メールをだして、フィードバックしてもらう。[feedback](http://www.railsgirls.com/feedback) (you can also create your own feedback form in your local language)
@@ -592,4 +599,9 @@ Rails Girls チーム
 
 * 主催者にありがとうをいう。
 
-* Share the numbers of your event by filling out this short [Questionaire](https://railsgirls.wufoo.eu/forms/rails-girls-events-all-the-numbers/)
+* [Rails Girls Map](http://rails-girls-map.herokuapp.com/)
+に追加しましょう。
+
+* 参加者数などの数字をこの短い[質問フォーム](https://railsgirls.wufoo.eu/forms/rails-girls-events-all-the-numbers/)を入力して共有する。
+
+* [ここ](http://blog.railsgirls.com/submit)より、公式 Rails Girls Blog へ投稿をする。 - もしくは、参加者かコーチの誰かにお願いする!
