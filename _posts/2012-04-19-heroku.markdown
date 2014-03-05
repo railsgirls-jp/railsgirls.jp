@@ -10,7 +10,7 @@ permalink: heroku
 
 ### Heroku の準備
 
-[quickstart guide](https://devcenter.heroku.com/articles/quickstart) の 1から3 を実施して、サインアップ、ログインしましょう。toolbelt のインストールもしてください。
+[quickstart guide](https://devcenter.heroku.com/articles/quickstart) の 1から3 を実施して、サインアップ、toolbelt のインストール、そして、ログインをしてください。
 
 __Coachより__: Heroku か、従来のサーバーか、デプロイの利点について話してみましょう。
 
