@@ -18,6 +18,9 @@ Ruby on Rails上にアプリケーションを作るためには、
 * [Windows 用セットアップ](#setup_for_windows)
 * [Linux 用セットアップ](#setup_for_linux)
 
+*コーチの方へ*:
+インストール中に問題が発生した場合、この [Troubleshooting](https://github.com/railsgirls-jp/railsgirls-jp.github.io/wiki/Troubleshooting)  のページを参考にして下さい。
+
 <hr />
 
 ## <a id="setup_for_os_x">OS X 用セットアップ</a>
@@ -151,30 +154,6 @@ rails new railsgirls
 Sublime Text 日本語入力パッチをダウンロードします。Sublime Text アプリメニューの Preferences から Browse Packeges を選び、フォルダを表示させます。 ダウンロードしたzipを解凍してできたフォルダ(IMESupport-master)をここへコピーします。Sublime Text が起動している場合は再起動します。
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
-
-### Windows 8をご使用の方
-
-JavaScript 関連の問題を解決するため、`C:\RailsInstaller\Ruby1.9.3\lib\ruby\gems\1.9.1\gems\execjs-2.0.2\lib\execjs\runtime.rb` を Sublime Text 2 などのテキストエディタで開いて下さい。そして、41行目からの
-
-{% highlight ruby %}
-JScript = ExternalRuntime.new(
-    :name        => "JScript",
-    :command     => "cscript //E:jscript //Nologo //U",
-    :runner_path => ExecJS.root + "/support/jscript_runner.js",
-    :encoding    => 'UTF-16LE' # CScript with //U returns UTF-16LE
-)
-{% endhighlight %}
-
-を次のように変更して、保存して下さい。（`:command` と `:encoding` の部分）
-
-{% highlight ruby %}
-JScript = ExternalRuntime.new(
-    :name        => "JScript",
-    :command     => "cscript //E:jscript //Nologo",
-    :runner_path => ExecJS.root + "/support/jscript_runner.js",
-    :encoding    => 'UTF-8' # CScript with //U returns UTF-16LE
-)
-{% endhighlight %}
 
 <hr />
 
