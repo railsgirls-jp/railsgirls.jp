@@ -1,8 +1,6 @@
 ---
-layout: page
+layout: default
 title: "How to Get Rails Girls Started"
-description: ""
-category:
 permalink: getting-started-jp
 ---
 
