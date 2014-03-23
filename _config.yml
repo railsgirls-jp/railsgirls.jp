@@ -9,17 +9,3 @@ exclude:
   - "README.md"
   - "Rakefile"
 url : http://railsgirls.jp
-
-# user variables
-title : Rails Girls Guide -Japanese-
-tagline: Site Tagline
-author :
-  name : Yoko Harada
-  email : yokolet@gmail.com
-  github : railsgirls-jp
-  twitter : username
-  feedburner : feedname
-comments :
-  provider : disqus
-  disqus :
-    short_name : railsgirls-jp
