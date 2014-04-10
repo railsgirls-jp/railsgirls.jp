@@ -14,7 +14,7 @@ permalink: app
 
 ### <i class="icon-text-editor">&nbsp;</i> テキストエディタ
 
-<p><a href="http://www.sublimetext.com">Sublime Text</a>, <a href="http://www.activestate.com/komodo-edit">Komodo Edit</a>, Vim や Emacs, Gedit は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
+[Sublime Text](http://www.sublimetext.com), [Komodo Edit](http://www.activestate.com/komodo-edit), Vim や Emacs, Gedit は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
 
 ### <i class="icon-prompt">&nbsp;</i> ターミナル (Windows の場合はコマンドプロンプト)
 
