@@ -9,14 +9,19 @@ permalink: commenting
 *railsgirls* アプリのideas へコメントができるような追加をします。
 Rails のインストールと ideas アプリ構築についての手順は、 [こちら](/app) を参照ください。
 
-## Step 1: Comment の scaffold をする
+## *1.*Comment の scaffold をする
 
 Comment のコメント者名、コメント本文(コメント内容)、Idea テーブルへの関係 (idea_id) を scaffold しましょう。
 {% highlight sh %}
 rails g scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
+これで新しくコメントテーブルが作成された事をデータベースに教えてあげるためのマイグレーションファイルが作成されました。
+マイグレーションを実行するには下記のコマンドを実行します。
+{% highlight sh %}
+rake db:migrate
+{% endhighlight %}
 
-## Step 2: モデルに関係 (relations) を追加する
+## *2.*モデルに関係 (relations) を追加する
 
 ideas と comments オブジェクト間の接続を Rails に認識させる必要があります。
 一つの idea はたくさんの comments を所有することができるものとして、Idea モデルに認識させます。
@@ -45,7 +50,7 @@ class Comment < ActiveRecord::Base
 belongs_to :idea
 {% endhighlight %}
 
-## Step 3: コメントフォームの表示と編集
+## *3.*コメントフォームの表示と編集
 
 app/views/ideas/show.html を開いて、
 
@@ -57,11 +62,12 @@ app/views/ideas/show.html を開いて、
 
 {% highlight erb %}
 <h3>Comments</h3>
-<% @idea.comments.each do |comment| %>
+<% @comments.each do |comment| %>
   <div>
     <strong><%= comment.user_name %></strong>
     <br />
     <p><%= comment.body %></p>
+    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></p>
   </div>
 <% end %>
 <%= render 'comments/form' %>
@@ -76,6 +82,7 @@ app/controllers/ideas_controller.rb の show action には、
 この次のあとに、こちらを追加します。
 
 {% highlight ruby %}
+@comments = @idea.comments.all
 @comment = @idea.comments.build
 {% endhighlight %}
 
@@ -103,4 +110,4 @@ app/views/comments/_form.html を開いて、
 </div>
 {% endhighlight %}
 
-これだけで、今加えた idea アプリケーションが表示され、comment 挿入フォームが見えるはずです。
+これだけで、今加えた idea アプリケーションが表示され、comment 挿入・削除フォームが見えるはずです。
