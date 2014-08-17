@@ -119,9 +119,11 @@ gem i rails
 
 **最後のステップ** コードを編集するのに必要なテキストエディタをインストールする。
 
-このワークショップでは Sublime Text エディタを推奨しています。
+このワークショップでは Atom エディタを推奨しています。
 
-* [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
+* [Atom エディタをダウンロードしてインストールする](https://atom.io/)
+
+Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタは非対応ですが、 [Sublime Text 2](http://www.sublimetext.com/2) エディタが利用可能です。
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
@@ -146,12 +148,14 @@ rails new railsgirls
 
 **最後のステップ** コードを編集するためのテキストエディタが必要になります。
 
-このワークショップでは Sublime Text エディタを推奨しています。( Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題があります。気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールするか、あるいは別のエディタ、たとえば [Komodo Edit エディタ](http://www.activestate.com/komodo-edit/downloads) を使ってもいいです。 )
+このワークショップでは Atom エディタを推奨しています。
 
-* [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
-* [Sublime Text 日本語入力パッチをダウンロード](https://github.com/chikatoike/IMESupport/archive/master.zip)
+* [Atom エディタをダウンロードしてインストールする](https://github.com/atom/atom/releases/latest)
+  * 上記リンクから zip ファイルをダウンロードして展開します
+  * Atom フォルダを Program Files フォルダへコピーします
+  * コピーしたフォルダから atom を起動します
 
-Sublime Text 日本語入力パッチをダウンロードします。Sublime Text アプリメニューの Preferences から Browse Packeges を選び、フォルダを表示させます。 ダウンロードしたzipを解凍してできたフォルダ(IMESupport-master)をここへコピーします。Sublime Text が起動している場合は再起動します。
+Windows Vista およびそれ以前のバージョンでは Atom エディタは非対応ですが、[Sublime Text エディタ](http://www.sublimetext.com/2) を利用可能です。(※Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題があります。気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールしてください。[Sublime Text 日本語入力パッチ](https://github.com/chikatoike/IMESupport/archive/master.zip)をダウンロードします。Sublime Text アプリメニューの Preferences から Browse Packeges を選び、フォルダを表示させます。 ダウンロードしたzipを解凍してできたフォルダ(IMESupport-master)をここへコピーします。Sublime Text が起動している場合は再起動します。)
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
