@@ -17,6 +17,7 @@ Ruby on Rails上にアプリケーションを作るためには、
 * [OS X 用セットアップ](#setup_for_os_x)
 * [Windows 用セットアップ](#setup_for_windows)
 * [Linux 用セットアップ](#setup_for_linux)
+* [クラウドサービスを利用する(自分のマシンへインストール不要)](#using-a-cloud-service)
 
 *コーチの方へ*:
 インストール中に問題が発生した場合、この [Troubleshooting](https://github.com/railsgirls-jp/railsgirls-jp.github.io/wiki/Troubleshooting)  のページを参考にして下さい。
@@ -185,3 +186,47 @@ bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/r
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
 <hr />
+
+## <a id="using-a-cloud-service">クラウドサービスを利用する</a>
+
+あなたのコンピュータにRuby on Railsやエディタをインストールする代わりに、開発用のWebサービスを利用することもできます。ブラウザとネットへアクセスできる環境があればOKです。 ここでは [Nitrous.IO](https://nitrous.io) を利用する手順を説明します。もしも、別のサービスを利用している場合は、例えば 'box' の代わりに 'workspace' という単語を使うなど用語の違いがあるかもしれませんが、概ね同じになっているはずです。
+
+### *1.* ブラウザを確認する
+
+* Internet Explorer を利用している場合は、 [Google Chrome](google.com/chrome) または [Firefox](mozilla.org/firefox) をインストールしてください。（一部の機能がIEでは動かない場合があります。）
+
+### *2.* 無料のアカウントを作成する
+
+* [https://nitrous.io](https://nitrous.io/) から無料のアカウントを作成します。
+* ユーザーネーム、メールアドレス、パスワードを入力して、緑の 'Sign Up For Free' ボタン からアカウントを作成できます。
+
+### *3.* Ruby on Rails の開発用に box (workspace) を設定する
+
+* [Nitrous.IO](https://nitrous.io/) の画面右上の Sign in をクリックし、作成したアカウントでログインします。緑の 'Open dashboard' ボタンをクリックし、ダッシュボード画面へ移動します。
+
+* テンプレートから Ruby/Rails を選んで box を作ります。デフォルトのままで大丈夫ですが、もしも box の名前を変えたい場合は、変えても構いません。
+
+* box が利用可能になるまで少し待ってください。
+
+### *4.* box を探す方法、再起動する方法
+
+* 今、box を作ったばかりであればこのステップはおそらく省略できますが、しばらくしてからログインするときのために知っておくと役立ちます。
+* ダッシュボード、またはトップメニューの 'Boxes' から box を探すことができます
+* box を選びます
+* しばらく利用していないと、box は停止状態になっているかもしれません。( 赤い丸印になり、State: Stopped と表示されます。) 'Start' ボタンを押し、box を起動させます。
+* box が起動した状態で、 'IDE' ボタンを押して開発を始めます。
+
+### *5.* 開発する
+
+前の節を参考に、box を選んで起動し、IDEボタンを押して開発用の画面に移動しておきましょう。
+
+* 左側はフォルダとファイルを表示、選択できます。
+* 中央部はエディタです。ここでファイルを編集します。
+* 下部はターミナルです。ここでコマンドを実行します。
+* 必要なものは全てブラウザにあります。ブラウザのほかにエディタやターミナルを起動する必要はありません。
+* ガイドやチュートリアルを読む場合には、(Windowsマシンを利用している場合でも)Linux用のコマンドを使ってください。コマンドはクラウド上で実行され、その環境がLinuxマシンだからです。
+* ガイドやチュートリアルで、ブラウザから例えば http://localhost:3000 へアクセスする場合は、アドレス欄に入力するのではなく、代わりにトップメニューから 'Preview' - 'Port 3000' を選ぶことで同じ操作ができます。
+* 例えば、 http://localhost:3000/posts へアクセスしたい場合は、'Preview' - 'Port 3000' を選んだあと、 '/posts' をアドレス欄の末尾に加えてください。
+
+* ※ Nitrous.io についての日本語の説明記事があります。分からないことがあった場合に役立つかもしれません。
+  * [WebブラウザだけではじめるRuby/Railsプログラミング](http://qiita.com/machu/items/0ecc5699273c18fd1cd8)

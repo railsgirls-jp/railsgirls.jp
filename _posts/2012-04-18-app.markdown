@@ -24,6 +24,7 @@ rails serverを起動したりコマンドを実行したりするものです�
 
 アプリケーションを表示するためのものです。
 
+※ このガイドでは、OSごとにコマンドが違う場合に、Windows/Other の表示を切り替えています。Nitrous.io などのクラウドサービスを利用して開発する場合は、(Windowsマシンを利用していても) Other(Linux用のコマンド)を使ってください。
 
 ## *1.*アプリケーションを作る
 
@@ -34,6 +35,7 @@ rails serverを起動したりコマンドを実行したりするものです�
 * OS X: Spotlightで *Terminal* と入力して出てきた Terminal をクリックしてください。
 * Windows: スタートメニューをクリックして、すべてのプログラムから *RailsInstaller* を探し、*Command Prompt with Ruby on Rails*をクリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Command Prompt with Ruby on Rails* を入力し検索してください。)
 * Linux (Ubuntu/Fedora): Dashホームで *Terminal* を探して、*Terminal* をクリックしてください。
+* クラウドサービス(Nitrous.IOなど): 作成したアカウントでログインし、box が起動した状態で IDE 画面へ移動します。(詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。) ターミナルはブラウザの下部に表示されます。
 
 そして、Terminal上で次のコマンドを入力します。 :
 
@@ -45,7 +47,9 @@ cd railsgirls
 rails server
 {% endhighlight %}
 
-自分のパソコン上のブラウザで [http://localhost:3000](http://localhost:3000) にアクセスしてください。
+自分のパソコン上のブラウザで [http://localhost:3000](http://localhost:3000) にアクセスしてください。(Nitorous.IOなどのクラウドサービスの場合は、URLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
+
+"Welcome aboard" の画面が表示されれば、さきほど作ったアプリは正しく動作しています。
 
 Terminal 上で CTRL-C（CTRL(Control)キーとCを同時に押す)を実行してサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
@@ -81,7 +85,7 @@ rails server
   </div>
 </div>
 
-ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。
+ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(クラウドサービスの場合は、メニューから 'preview' - 'port 3000' を選び、アドレス欄の末尾に '/ideas' を加えてアクセスしてください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
 
 いろいろクリックしてみたりしたら、 CTRL-C を押して、サーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
@@ -253,7 +257,7 @@ mount_uploader :picture, PictureUploader
 
 ## *5.*routes を調整する
 
-[http://localhost:3000](http://localhost:3000) を開いても、まだデフォルトページが見えると思います。ideas ページにリダイレクトするようにしましょう。
+[http://localhost:3000](http://localhost:3000) を開いてみてください(クラウドサービスの場合は preview してください)。まだデフォルトページが見えると思います。ideas ページにリダイレクトするようにしましょう。
 
 `config/routes.rb` を開いて、最初の行の次に以下のコードを追記してください。 :
 
@@ -261,7 +265,7 @@ mount_uploader :picture, PictureUploader
 root to: redirect('/ideas')
 {% endhighlight %}
 
-ルートパス(http://localhost:3000/)をブラウザで表示して変更点を確認しましょう。
+ルートパス(http://localhost:3000/ またはクラウドサービスの場合は preview )をブラウザで表示して変更点を確認しましょう。
 
 **Coachより:** routes について話してください。
 
@@ -283,7 +287,7 @@ rails generate controller pages info
 get "pages/info"
 {% endhighlight %}
 
-それでは、プロジェクトの `app/views/pages/info.html.erb` をテキストエディタで開いてあなたの情報を HTML で追記しましょう。その後はブラウザで [http://localhost:3000/pages/info](http://localhost:3000/pages/info) を開いて作成したページを確認してみましょう。
+それでは、プロジェクトの `app/views/pages/info.html.erb` をテキストエディタで開いてあなたの情報を HTML で追記しましょう。その後はブラウザで [http://localhost:3000/pages/info](http://localhost:3000/pages/info) を開いて(またはクラウドサービスでは preview してアドレス欄の末尾に '/pages/info' を加えてアクセスして) 作成したページを確認してみましょう。
 
 ## 次は？
 
