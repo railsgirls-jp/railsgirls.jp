@@ -35,7 +35,7 @@ Appleメニューをクリックして *About This Mac* (図 1) を選びます�
 図 1
 
 **ステップ 2.** 開いたウィンドウに使用しているオペレーティング・システムのバージョンが表示されます。(図 2)。
-バージョン番号が 10.6, 10.7, 10.8 で始まっていたら、このドキュメントに従って進めます。
+バージョン番号が 10.6, 10.7, 10.8, 10.9 で始まっていたら、このドキュメントに従って進めます。
 これ以外のバージョンだったら、イベントでコーチと一緒にセットアップします。
 
 ![About this Mac dialog](/images/2.png "About this Mac dialog")
@@ -114,7 +114,7 @@ rbenv global 2.1.2
 3-B-6. Railsのインストール:
 
 {% highlight sh %}
-gem i rails
+gem i rails --no-ri --no-rdoc
 {% endhighlight %}
 
 
