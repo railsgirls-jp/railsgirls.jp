@@ -132,7 +132,7 @@ Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタ
 
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
-[RailsInstaller](https://github.com/railsinstaller/railsinstaller-windows/releases/download/2.2.2/railsinstaller-2.2.2.exe) をダウンロードして、実行します。
+[RailsInstaller](https://github.com/railsinstaller/railsinstaller-windows/releases/download/3.0.0-alpha.2/railsinstaller-3.0.0.exe) をダウンロードして、実行します。
 インストールのオプションは全てデフォルトを選択します。
 
 もしもRailsのバージョンが最新ではない場合は、以下のコマンドを "Command Prompt with Ruby on Rails" から実行することでバージョンアップできます。
