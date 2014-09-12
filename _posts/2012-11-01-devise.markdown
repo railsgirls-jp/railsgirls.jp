@@ -54,10 +54,10 @@ environments ファイルにデフォルトの url オプションを定義し�
 
 {% highlight erb %}
 <% if notice %>
-  <p class="alert alert-success" role="alert"><%= notice %></p>
+  <p class="alert alert-success"><%= notice %></p>
 <% end %>
 <% if alert %>
-  <p class="alert alert-danger" role="alert"><%= alert %></p>
+  <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 {% endhighlight %}
 
