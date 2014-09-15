@@ -73,9 +73,9 @@ environments ファイルにデフォルトの url オプションを定義し�
 <p id="notice"><%= notice %></p>
 {% endhighlight %}
 
-を **削除** します。
+を削除します。
 
-**Coachより:** 追加・削除した行についてそれぞれ説明をしてください。
+同じように `app/views/comments/show.html.erb` についても削除を行います。これらの `notice` 行は `app/views/layouts/application.html.erb` ファイルに同じ行を追加したので、必要ありません。
 
 ## Step 3: User model をセットアップ
 
