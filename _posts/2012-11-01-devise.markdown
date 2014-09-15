@@ -67,6 +67,16 @@ environments ファイルにデフォルトの url オプションを定義し�
    <%= yield %>
 {% endhighlight %}
 
+また、 `app/views/ideas/show.html.erb` を開いて、
+
+{% highlight ruby %}
+<p id="notice"><%= notice %></p>
+{% endhighlight %}
+
+を削除します。
+
+同じように `app/views/comments/show.html.erb` についても削除を行います。これらの `notice` 行は `app/views/layouts/application.html.erb` ファイルに同じ行を追加したので、必要ありません。
+
 ## Step 3: User model をセットアップ
 
 User model を作るために bundled generator script を使います。
