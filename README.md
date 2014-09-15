@@ -11,8 +11,8 @@ Rails Girls Tokyo開催に向けて話しあうメーリングリストは　htt
 Rails Girls JP(Japanese) のサイトを編集したい場合は、このリポジトリの"Fork"ボタンをクリックしてForkしてください。以下の手順でローカルにファイルをダウンロードし、環境をつくります。
 
 ```
-git clone git@github.com:YOURNAME/railsgirls-jp.github.com.git
-cd railsgirls-jp.github.com
+git clone git@github.com:YOURNAME/railsgirls-jp.github.io.git
+cd railsgirls-jp.github.io
 bundle install
 ```
 
