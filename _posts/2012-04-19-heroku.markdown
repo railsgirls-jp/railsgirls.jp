@@ -10,7 +10,91 @@ permalink: heroku
 
 ### Heroku の準備
 
-[quickstart guide](https://devcenter.heroku.com/articles/quickstart) の 1から3 を実施して、サインアップ、toolbelt のインストール、そして、ログインをしてください。
+#### Heroku のアカウントを作成しよう
+アカウントの作成はもちろん無料です。
+
+[ユーザ登録画面](https://id.heroku.com/signup)からアカウントを作成しましょう。
+
+<img src="../images/heroku_sign_up.jpg" />
+
+
+「Email」欄にメールアドレスを入力して「Sign Up」ボタンを押します。
+
+しばらく待つと、確認＆登録用URL付きメールが届きますので、このURLにアクセスしましょう。
+
+<img src="../images/heroku_confirmation.jpg" />
+
+
+登録しようとしているメールアドレスに間違いがないか確認したら、Password（パスワード）とConfirm Password（パスワード再入力）にパスワードを入力します。
+
+「Sign me up for Heroku email…」は heroku から寄せられる更新情報やイベント情報など、耳寄りな情報をメールで受信する場合、チェックを入れます。
+
+「Save」ボタンを押すと登録完了です。
+
+
+#### Heroku Toolbelt をインストールしよう
+Heroku でコマンドライン操作を行うためのアプリケーションである、Heroku Toolbelt をインストールします。
+
+ユーザ登録完了後はすでにログイン済みの状態になっているはずですが、なっていない場合や、すでにアカウントを持っている場合は、
+[heroku ログイン](https://id.heroku.com/login) からログインしましょう。
+
+自動的にダッシュボードと呼ばれる管理画面に進み、Heroku Toolbelt のダウンロードボタンが表示されているはずです。
+「Download Heroku Toolbelt for...」のボタンを押して、ダウンロードを行い、そのままインストールしてください。
+<img src="../images/heroku_dashboard.jpg" />
+
+ダッシュボードに進まなかったり、Heroku Toolbelt のダウンロードボタンが表示されなかった場合は、以下のURLへ進んでください。
+
+[Getting Started with Ruby on Heroku - Set up](https://devcenter.heroku.com/articles/getting-started-with-ruby#set-up)
+
+<img src="../images/heroku_toolbelt_download.jpg" />
+
+
+
+画面上に表示されている紫色のボタンからダウンロードを行い、Heroku Toolbelt のインストールを行います。
+
+
+
+#### Heroku にコマンドラインでログインし、SSHキーを設定しよう
+
+Heroku Toolbelt を無事ダウンロードできたら、ターミナル（Mac）またはコマンドプロンプト（Windows）を起動して、次のコマンドを入力しましょう。
+
+{% highlight sh %}
+heroku login
+{% endhighlight %}
+
+`Enter your Heroku credentials.（herokuの認証情報を入力してください）` と言われるので、先ほど登録したメールアドレスとパスワードを入力します。 
+
+{% highlight sh %}
+heroku login
+Enter your Heroku credentials.
+Email: rails-girls@example.com
+Password:
+{% endhighlight %}
+
+メールアドレスは入力したそのまま画面上に表示されますが、パスワードは画面上に何も表示されません。
+
+入力は正常に受け付けられているので、反応がなくても気にせずに最後まで打ち、エンターキーを押してください。
+
+ログインに成功すると、今度は SSH で使用する公開鍵が見つからないため、作成するかどうか聞かれます。
+
+{% highlight sh %}
+Could not find an existing public key.
+Would you like to generate one? [Yn]
+{% endhighlight %}
+
+「Y」キーを押して公開鍵の作成を行ってください。
+
+{% highlight sh %}
+Could not find an existing public key.
+Would you like to generate one? [Yn]
+Generating new SSH public key.
+Uploading ssh public key /Users/adam/.ssh/id_rsa.pub
+{% endhighlight %}
+
+自動的に公開鍵がherokuにもアップロードされ、以降はこの鍵を使用して heroku とのコマンドライン接続が行われるようになります。
+
+heroku の準備はこれで終了です。
+
 
 __Coachより__: Heroku か、従来のサーバーか、デプロイの利点について話してみましょう。
 
