@@ -15,121 +15,93 @@ permalink: mogok
 
 ## 1. MOGOKコマンドラインツールをインストールしましょう
 MOGOKを利用するには「MOGOKコマンドラインツール」をインストールする必要があります。
-[ポータル画面](https://portal.mogok.jp/)から登録したログインID＆パスワードでログインし、[ダウンロードページ](https://portal.mogok.jp/download)からmogok-1.0.X.gemというファイルをダウンロードします。
+MOGOKコマンドラインツールは `rubygems.org` にて公開されていますので、
+以下のコマンドでインストールできます。
 
-![gem install](http://dl.dropbox.com/u/908641/starting-mogok/kanazawa_rb_06.016.png)
+    > gem install mogok
 
-
-`> gem install mogok-1.0.X.gem` を実行します。
-
-- mogok-1.0.X.gemファイルは、作業ディレクトリへと保存して下さい。
-- mogok-1.0.X.gemのXはダウンロードした最新ver.の数字を入れてください
-
-![gem install](http://dl.dropbox.com/u/908641/starting-mogok/kanazawa_rb_06.017.png)
-
-これで、MOGOKコマンドを実行することができます。
-
+これで、MOGOKコマンドを実行できるようになります。
 
 
 ## 2. MOGOKでアプリケーションを動作させるための準備
 MOGOKはデータベースにMySQLを利用しています。みなさんのローカル環境ではSQLiteを利用して開発をしている方が多いでしょう。SQLiteで開発したアプリケーションを問題なくMOGOKで動作させるおまじないを書きます。
 
+
 ### Gemfileの書き換え
 Gemfileに以下のGemが記述されていない場合には追記します。(既に記述がある場合にはskipしてかまいません。)
 
- - gem 'therubyracer'
- - gem 'mysql2'
+    gem 'therubyracer'
+    gem 'sqlite3', group: :development
+    gem 'mysql2',  group: :production
 
-![Gemfile](http://dl.dropbox.com/u/908641/starting-mogok/kanazawa_rb_06.013.png)
+Gemfile.lock をアップデートするため、一度 `bundle install` を実行します。このとき、 `--without production` オプションをつけると、 `mysql2` gem を手元PCにインストールしなくて済みます。
+
+    bundle install --without production
 
 ### assets:precompileの有効化
 「config/environments/production.rb」ファイルに対して、以下の変更を行ないます。 本設定変更により、MOGOK上のproduction環境で、スタイルシート等が読み込まれるようにします。
 
-- 書き換え前
+##### 書き換え前
 
-  `config.serve_static_assets = false`
+    config.serve_static_assets = false
+    config.assets.compile = false
 
-- 書き換え後
+##### 書き換え後
 
-  `config.serve_static_assets = true`
+    config.serve_static_assets = true
+    config.assets.compile = true
 
-![asset:precompile](http://dl.dropbox.com/u/908641/starting-mogok/kanazawa_rb_06.014.png)
-
-### Rails 4への対応
-GemfileでRailsのバージョンを指定しない場合には、最新のRails(Rails 4系)がインストールされます。
-MOGOKでRails 4を利用することはできますが、MOGOKのbundlerは最新バージョンではありませんので「mogok build」実行時に以下のエラーメッセージが出る可能性があります。
-
-![mogok build 失敗](https://dl.dropboxusercontent.com/u/908641/starting-mogok/rails4-bundle-problem.png)
-
-上記エラーが出た場合には、Gemfile.lockファイルから以下の行を消すかバージョン(1.1.3)を指定して下さい。
-
-- 削除する
-
-  `      bundler (>= 1.3.0, < 2.0)'
-
-- バージョンを指定する
-
-  `      bundler (= 1.1.3)'
-
-また、「config/environments/production.rb」ファイルに対して、追加で以下の変更を行ないます。 本設定変更により、MOGOK上のproduction環境で、スタイルシート等をまとめる処理が随時働くようになります。
-
-- 書き換え前
-
-  `config.assets.compile = false`
-
-- 書き換え後
-
-  `config.assets.compile = true`
 
 ## 3. 作成したRailsアプリケーションをローカルのgitリポジトリに登録しよう
 [アプリケーションを作成したディレクトリで以下のgitコマンドを実行します](https://portal.mogok.jp/documents/rails_deployment_guide/create_git_repository/)
 
-`> git init`
-
-`> git add .`
-
-`> git commit -m "my first commit"`
+    > git init
+    > git add .
+    > git commit -m "my first commit"
 
 正常にgitのローカルリポジトリが作成できているかはを確認するには「.git」ディレクトリが作成されていることを確認し、以下のコマンドを実行して下さい。
 
-`> git status`
+    > git status
 
 以下のような表示がでれば、正常です。
 
-`# On branch master`
-
-`nothing to commit (working directory clean)`
+    # On branch master
+    nothing to commit (working directory clean)
 
 
 ## 4. 作成したRailsアプリケーションをMOGOKに登録しよう
+
 ### アプリケーション名の登録
+
 `> mogok create your-app-name` を実行
 
 - 登録したユーザIDとパスワードが求められます
-- 同じアプリケーション名があった場合にはエラーが表示されるので、名前を変えましょう。
+- 誰かが同じアプリケーション名を既に使っている場合にはエラーが表示されるので、名前を変えましょう。
 - アプリケーション名は「英小文字、数字、ハイフンからなる1文字以上60文字以下の文字列」で定義できます。
 
 `> git remote -v` で確認
 
-`mogok   http://git.mogok.jp/mogok-sample-1234.git (fetch)`
-
-`mogok   http://git.mogok.jp/mogok-sample-1234.git (push)`
+    mogok   http://git.mogok.jp/mogok-sample-1234.git (fetch)
+    mogok   http://git.mogok.jp/mogok-sample-1234.git (push)
 
 - 上記のように表示されると成功です！！
 
 
 ### ローカルリポジトリのデータをMOGOKのgitサーバへと送りましょう
+
 以下のコマンドを実行します。
 
-`> git push mogok master`
+    > git push mogok master
 
 - 登録したユーザIDとパスワードが求められます
 
 [参考：アプリケーション名の決定とプログラムの登録(MOGOKオンラインマニュアル)](https://portal.mogok.jp/documents/rails_deployment_guide/create_mogok_app/)
 
 ## 5. MOGOKへとアプリケーションのデプロイをしましょう
+
 ### サーバ上でbundle installを実行する為に以下のMOGOKコマンドを実行します。
-`> mogok build`
+
+    > mogok build
 
 - これでサーバ上でbundle installが実行されます
 
@@ -141,7 +113,8 @@ MOGOKでRails 4を利用することはできますが、MOGOKのbundlerは最�
 
 
 ### rake db:migrateの実行
-`> mogok rake db:migrate`
+
+    > mogok rake db:migrate
 
 - これでMOGOK上で、db:migrateが実行されます
 
@@ -149,13 +122,15 @@ MOGOKでRails 4を利用することはできますが、MOGOKのbundlerは最�
 
 
 ## 6. MOGOKでアプリケーションを公開しましょう
-`> mogok start`
+
+    > mogok start
 
 - これであなたのアプリケーションは、世界中に公開されました！！
 
 
 ## 公開アプリケーションの確認
-`> mogok info` を実行します。
+
+> mogok info` を実行します。
 
 ![mogok info](https://dl.dropbox.com/u/10442024/mogolog/20121220/20121220-9.png)
 
