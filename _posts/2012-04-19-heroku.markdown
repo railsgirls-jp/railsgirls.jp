@@ -25,9 +25,9 @@ permalink: heroku
 <img src="../images/heroku_confirmation.jpg" />
 
 
-登録しようとしているメールアドレスに間違いがないか確認したら、Password（パスワード）とConfirm Password（パスワード再入力）にパスワードを入力します。
+登録しようとしているメールアドレスに間違いがないか確認したら、Password（パスワード）と Confirm Password（パスワード再入力）にパスワードを入力します。
 
-「Sign me up for Heroku email…」は heroku から寄せられる更新情報やイベント情報など、耳寄りな情報をメールで受信する場合、チェックを入れます。
+「Sign me up for Heroku email…」は heroku から寄せられる更新情報やイベント情報など、耳寄りな情報をメールで受け取りたい場合にチェックを入れます。
 
 「Save」ボタンを押すと登録完了です。
 
@@ -35,34 +35,28 @@ permalink: heroku
 #### Heroku Toolbelt をインストールしよう
 Heroku でコマンドライン操作を行うためのアプリケーションである、Heroku Toolbelt をインストールします。
 
-ユーザ登録完了後はすでにログイン済みの状態になっているはずですが、なっていない場合や、すでにアカウントを持っている場合は、
-[heroku ログイン](https://id.heroku.com/login) からログインしましょう。
-
-自動的にダッシュボードと呼ばれる管理画面に進み、Heroku Toolbelt のダウンロードボタンが表示されているはずです。
-「Download Heroku Toolbelt for...」のボタンを押して、ダウンロードを行い、そのままインストールしてください。
-<img src="../images/heroku_dashboard.jpg" />
-
-ダッシュボードに進まなかったり、Heroku Toolbelt のダウンロードボタンが表示されなかった場合は、以下のURLへ進んでください。
-
-[Getting Started with Ruby on Heroku - Set up](https://devcenter.heroku.com/articles/getting-started-with-ruby#set-up)
+[Getting Started with Ruby on Heroku - Set up ｜ Heroku Dev Center](https://devcenter.heroku.com/articles/getting-started-with-ruby#set-up)
 
 <img src="../images/heroku_toolbelt_download.jpg" />
 
+このページの「Download Heroku toolbelt for (OS名)」という紫色のボタンからダウンロードしましょう。
 
+ページを閲覧しているマシンの OS に合わせたダウンロードリンクになっていますが、ボタン右側の「▼」をクリックすると他の OS 用のものをダウンロードすることもできます。
 
-画面上に表示されている紫色のボタンからダウンロードを行い、Heroku Toolbelt のインストールを行います。
+ファイルサイズは Windows 用で約 33MB、Mac OS X 用で約 22MB です。
 
+ダウンロードがすんだら、heroku-toolbelt.exe(Windows) あるいは heroku-toolbelt.pkg(Mac) をダブルクリックし、表示される指示に従ってインストールしてください
+（環境により拡張子が表示されませんが、異常ではありません）。
 
+#### Heroku にコマンドラインでログインし、SSH キーを設定しよう
 
-#### Heroku にコマンドラインでログインし、SSHキーを設定しよう
-
-Heroku Toolbelt を無事ダウンロードできたら、ターミナル（Mac）またはコマンドプロンプト（Windows）を起動して、次のコマンドを入力しましょう。
+Heroku Toolbelt を無事インストールできたら、ターミナル（Mac）またはコマンドプロンプト（Windows）を起動して、次のコマンドを入力しましょう。
 
 {% highlight sh %}
 heroku login
 {% endhighlight %}
 
-`Enter your Heroku credentials.（herokuの認証情報を入力してください）` と言われるので、先ほど登録したメールアドレスとパスワードを入力します。 
+`Enter your Heroku credentials.（heroku の認証情報を入力してください）` と言われるので、先ほど登録したメールアドレスとパスワードを入力します。 
 
 {% highlight sh %}
 heroku login
@@ -91,7 +85,7 @@ Generating new SSH public key.
 Uploading ssh public key /Users/adam/.ssh/id_rsa.pub
 {% endhighlight %}
 
-自動的に公開鍵がherokuにもアップロードされ、以降はこの鍵を使用して heroku とのコマンドライン接続が行われるようになります。
+自動的に公開鍵が heroku にもアップロードされ、以降はこの鍵を使用して heroku とのコマンドライン接続が行われるようになります。
 
 heroku の準備はこれで終了です。
 
