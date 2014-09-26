@@ -77,7 +77,7 @@ xcode-select --install
 3-B-2. [Homebrew](http://brew.sh/)をインストール:
 
 {% highlight sh %}
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endhighlight %}
 
 3-B-3. [rbenv](https://github.com/sstephenson/rbenv)をインストール:
