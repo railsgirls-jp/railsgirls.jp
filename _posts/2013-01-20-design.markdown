@@ -109,7 +109,7 @@ idea のタイトルをクリックすると、idea の詳細画面を見るこ�
     <p><b>Description: </b><%= @idea.description %></p>
     <p>
       <%= link_to 'Edit', edit_idea_path(@idea) %> |
-      <%= link_to 'Destroy', @idea, confirm: 'Are you sure?', method: :delete %> |
+      <%= link_to 'Destroy', @idea, data: { confirm: 'Are you sure?' }, method: :delete %> |
       <%= link_to 'Back', ideas_path %>
     </p>
   </div>
