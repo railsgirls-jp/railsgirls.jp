@@ -14,18 +14,6 @@ permalink: design
 
 最初に bootstrap.min.css を使って簡単なデザインをあなたのアプリケーションに適用してみましょう。
 
-`app/views/layouts/application.html.erb` をテキストエディタで開いて、以下の行を
-
-{% highlight html %}
-<link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
-{% endhighlight %}
-
-下のように置きかえます。
-
-{% highlight html %}
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
-{% endhighlight %}
-
 `app/assets/stylesheets/application.css` を開いて、以下の行を
 
 {% highlight html %}
@@ -74,8 +62,8 @@ body { padding-top: 60px; }
 <% @ideas.in_groups_of(3) do |group| %>
   <div class="row">
     <% group.compact.each do |idea| %>
-      <div class="span4">
-        <%= image_tag idea.picture_url, :width => '100%' if idea.picture.present?%>
+      <div class="col-md-4">
+        <%= image_tag idea.picture_url, width: '100%' if idea.picture.present?%>
         <h4><%= link_to idea.name, idea %></h4>
         <%= idea.description %>
       </div>
@@ -100,11 +88,11 @@ idea のタイトルをクリックすると、idea の詳細画面を見るこ�
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <div class="span9">
-    <%= image_tag(@idea.picture_url, :width => "100%") if @idea.picture.present? %>
+  <div class="col-md-9">
+    <%= image_tag(@idea.picture_url, width: '100%') if @idea.picture.present? %>
   </div>
 
-  <div class="span3">
+  <div class="col-md-3">
     <p><b>Name: </b><%= @idea.name %></p>
     <p><b>Description: </b><%= @idea.description %></p>
     <p>
