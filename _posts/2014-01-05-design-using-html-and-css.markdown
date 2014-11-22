@@ -1,111 +1,104 @@
 ---
 layout: default
-title: Add design to your App with HTML and CSS
+title: HTML と CSS を使ってデザインを追加しよう
 permalink: design-html-css
 ---
 
-1.Design your header
+## *1.*header をデザインしよう
 
-+ put the following code to the bottom of `app/assets/stylesheets/application.css`:
+`app/assets/stylesheets/application.css` の最後に以下のコードを追加してください。：
 
-    ```
-    .navbar {
-        min-height: 38px;
-      background-color: #f55e55;
-    }
-    ```
+{% highlight css %}
+.navbar {
+  min-height: 38px;
+  background-color: #f55e55;
+}
+{% endhighlight %}
 
-  Now refresh the page and check the changes. You can try change the
-    color or font of the header. You can check the color reference
-    from [http://color.uisdc.com/](http://color.uisdc.com/).
+では、ページを更新して変更を確認しましょう。
+それから、ヘッダーの色やフォントをいろいろ変えて、試してみましょう。
+[http://color.uisdc.com/](http://color.uisdc.com/) では、色のリファレンスを見ることができます。
 
-    **Coach: ** talk about the property `display`, inline and block element.
+**コーチより：** `display` プロパティ、そして inline と block 要素について話してみましょう。
 
-+ Then put these lines at the bottom：
+次に、これらの行をコードの一番下に追加します。：
 
-    ```
-    .navbar a.brand { font-size: 18px; }
-    .navbar a.brand:hover {
-     color: #fff;
-     background-color: transparent;
-     text-decoration: none;
-    }
-    ```
+{% highlight css %}
+.navbar a.brand { font-size: 18px; }
+.navbar a.brand:hover {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+}
+{% endhighlight %}
 
-    **Coach: ** explain the 4 states of a link
-
-
-2.Design your table
-
- + We simply use the twitter [Bootstrap](http://www.bootcss.com/) to
-   polish our table。find this line from
-   app/views/ideas/index.html.erb and replace:
-
-   ```
-   <table>
-   ```
-
-   with
-
-   ```
-   <table class="table">
-   ```
-
- + Modify size of the picture using the following lines
-
-     ```
-     <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
-     ```
-
-     try to change the width and see what's gonna happen
+**コーチより：** link が持つ、4つの状態について説明してください。
 
 
- + add the following lines to the bottom of file app/assets/stylesheets/ideas.css.scss:
+## *2.*table をデザインしよう
 
-  ```
-  .container a:hover {
-    color: #f55e55;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  ```
+table により磨きをかけるために、twitter [Bootstrap](http://www.bootcss.com/) を使います。
+この行を `app/views/ideas/index.html.erb` から見つけて、以下のように置き換えてください。：
+
+{% highlight html %}
+<table>
+{% endhighlight %}
+
+↓
+
+{% highlight html %}
+<table class="table">
+{% endhighlight %}
+
+以下のコードを使って、画像のサイズを調整しましょう。
+
+{% highlight erb %}
+<%= image_tag(idea.picture_url, width: 600px) if idea.picture.present? %>
+{% endhighlight %}
+
+width を変更してみて、何が起こるか見てみましょう。
+
+`app/assets/stylesheets/ideas.css.scss` の最後に以下のコードを追加しましょう。：
+
+{% highlight css %}
+.container a:hover {
+  color: #f55e55;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+{% endhighlight %}
+
+[http://subtlepatterns.com/](http://subtlepatterns.com/) のいくつかのパターンを参考に、`background-image` プロパティを使って、背景のスタイルを追加してみましょう。
 
 
- + try add some background style with property `background-image`,
-   reference to
-   [http://subtlepatterns.com/](http://subtlepatterns.com/) for some patterns.
+## *3.*footer にスタイルを追加しよう
+
+`app/assets/stylesheets/application.css` の最後にこのコードを追加しましょう：
+
+{% highlight css %}
+footer {
+  background-color: #ebebeb;
+  padding: 30px 0;
+}
+{% endhighlight %}
+
+`footer` にもっとスタイルを追加してみましょう。それから、位置も調整してみましょう。
 
 
-3.add style to footer
+## *4.*button にスタイルを追加しよう
 
-+ add the lines to bottom of  app/assets/stylesheets/application.css:
+[http://localhost:3000/ideas/new](http://localhost:3000/ideas/new) を開いて、`Create Idea` ボタンを見つけてください。
 
-    ```
-    footer {
-      background-color: #ebebeb;
-      padding: 30px 0;
-    }
-    ```
+`app/assets/stylesheets/ideas.css.scss` にこれらのコードを追加しましょう。
 
-    try put more things into `footer`, then adjust it's position.
+{% highlight css %}
+.container input[type="submit"] {
+   height: 30px;
+   font-size: 13px;
+   background-color: #f55e55;
+   border: none;
+   color: #fff;
+ }
+{% endhighlight %}
 
-4.add style to button
-
-  + open
-    [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new)
-    and find the `Create Idea` button.
-
-   add these lines to app/assets/stylesheets/ideas.css.scss
-
-   ```
-   .container input[type="submit"] {
-      height: 30px;
-      font-size: 13px;
-      background-color: #f55e55;
-      border: none;
-      color: #fff;
-    }
-   ```
-
-   **Coach** explain how to use `border` in css, try modify the style
-     of button like round the corner, add shadow or color etc.
+**コーチより：** css の `border` の使い方を説明してください。そして、角を丸くしたり、影や色をつけたりというように、ボタンのスタイルを変えてみましょう。
