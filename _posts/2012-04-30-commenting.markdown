@@ -52,7 +52,7 @@ belongs_to :idea
 
 ## *3.*コメントフォームの表示と編集
 
-app/views/ideas/show.html を開いて、
+app/views/ideas/show.html.erb を開いて、
 
 {% highlight erb %}
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
@@ -86,7 +86,7 @@ app/controllers/ideas_controller.rb の show action には、
 @comment = @idea.comments.build
 {% endhighlight %}
 
-app/views/comments/_form.html を開いて、
+app/views/comments/_form.html.erb を開いて、
 
 {% highlight erb %}
   <div class="field">
