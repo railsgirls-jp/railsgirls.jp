@@ -37,7 +37,7 @@ rails serverを起動したりコマンドを実行したりするものです�
 * Linux (Ubuntu/Fedora): Dashホームで *Terminal* を探して、*Terminal* をクリックしてください。
 * クラウドサービス(Nitrous.IOなど): 作成したアカウントでログインし、box が起動した状態で IDE 画面へ移動します。(詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。) ターミナルはブラウザの下部に表示されます。
 
-そして、Terminal上で次のコマンドを入力します。 :
+そして、Terminal上で次のコマンドを入力します:
 
 {% highlight sh %}
 mkdir projects
@@ -187,13 +187,13 @@ gem 'carrierwave'
 
 **Coachより:** 何のライブラリがあって、なぜ便利なのかを説明してください。オープンソースソフトウェアが何なのかも説明してください。
 
-Terminal で、次のコマンドを実行してください。 :
+Terminal で、次のコマンドを実行してください:
 
 {% highlight sh %}
 bundle
 {% endhighlight %}
 
-そうすると、次のコマンドでアップロードを実行するコードを生成できます。 :
+そうすると、次のコマンドでアップロードを実行するコードを生成できます:
 
 {% highlight sh %}
 rails generate uploader Picture
@@ -259,7 +259,7 @@ mount_uploader :picture, PictureUploader
 
 [http://localhost:3000](http://localhost:3000) を開いてみてください(クラウドサービスの場合は preview してください)。まだデフォルトページが見えると思います。ideas ページにリダイレクトするようにしましょう。
 
-`config/routes.rb` を開いて、最初の行の次に以下のコードを追記してください。 :
+`config/routes.rb` を開いて、最初の行の次に以下のコードを追記してください:
 
 {% highlight ruby %}
 root to: redirect('/ideas')
