@@ -32,10 +32,11 @@ bundle install
 
 ## *2.*Gravatarをセットアップする。
 
-Terminal で、次のコマンドを実行してください。
+`app/models/user.rb` を開いて、最初の行の下に、次の二行を追加します。
 
-{% highlight sh %}
-rails g gravtastic:install
+{% highlight ruby %}
+include Gravtastic
+gravtastic
 {% endhighlight %}
 
 ## *3.*Gravatarを設定する。
