@@ -42,7 +42,60 @@ Appleメニューをクリックして *About This Mac* (図 1) を選びます�
 
 図 2
 
-**ステップ 3-A.** 使用している OS Xのバージョン用 RailsInstaller ダウンロードします。(OS X10.6, 10.7, 10.8の場合)
+**ステップ 3-A.** rbenv を使って Ruby と Ruby on Rails をインストール(OS X 10.9 以上の場合):
+
+OS X 10.9 の場合は、Homebrew と rbenv を使って環境をつくります。
+
+3-A-1. Command line tools をターミナルからインストール:
+
+{% highlight sh %}
+xcode-select --install
+{% endhighlight %}
+
+3-A-2. [Homebrew](http://brew.sh/)をインストール:
+
+{% highlight sh %}
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+{% endhighlight %}
+
+3-A-3. [rbenv](https://github.com/sstephenson/rbenv)をインストール:
+
+{% highlight sh %}
+brew update
+brew install rbenv ruby-build
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
+{% endhighlight %}
+
+3-A-4. rbenvを使ってRubyをインストール:
+
+"rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
+
+{% highlight sh %}
+rbenv install 2.2.0
+{% endhighlight %}
+
+※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
+
+{% highlight sh %}
+brew install curl-ca-bundle
+cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'`
+{% endhighlight %}
+
+3-A-5. デフォルトのRuby を設定:
+
+{% highlight sh %}
+rbenv global 2.2.0
+{% endhighlight %}
+
+3-A-6. Railsのインストール:
+
+{% highlight sh %}
+gem i rails --no-ri --no-rdoc
+{% endhighlight %}
+
+**ステップ 3-B.** 使用している OS Xのバージョン用 RailsInstaller ダウンロードします。(OS X10.6, 10.7, 10.8の場合)
 
 * [10.9 以上 用 RailsInstaller](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
 * [10.6 用 RailsInstaller](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.6.app.tgz) <span class="muted">(224MB)</span>
@@ -64,58 +117,6 @@ Rails アプリを作成するコマンドを実行してインストールと R
 rails new railsgirls
 {% endhighlight %}
 
-**ステップ 3-B.** rbenv を使って Ruby と Ruby on Rails をインストール(OS X 10.9の場合):
-
-OS X 10.9 の場合は、Homebrew と rbenv を使って環境をつくります。
-
-3-B-1. Command line tools をターミナルからインストール:
-
-{% highlight sh %}
-xcode-select --install
-{% endhighlight %}
-
-3-B-2. [Homebrew](http://brew.sh/)をインストール:
-
-{% highlight sh %}
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-{% endhighlight %}
-
-3-B-3. [rbenv](https://github.com/sstephenson/rbenv)をインストール:
-
-{% highlight sh %}
-brew update
-brew install rbenv ruby-build
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
-{% endhighlight %}
-
-3-B-4. rbenvを使ってRubyをインストール:
-
-"rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
-
-{% highlight sh %}
-rbenv install 2.2.0
-{% endhighlight %}
-
-※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
-
-{% highlight sh %}
-brew install curl-ca-bundle
-cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'`
-{% endhighlight %}
-
-3-B-5. デフォルトのRuby を設定:
-
-{% highlight sh %}
-rbenv global 2.2.0
-{% endhighlight %}
-
-3-B-6. Railsのインストール:
-
-{% highlight sh %}
-gem i rails --no-ri --no-rdoc
-{% endhighlight %}
 
 
 **最後のステップ** コードを編集するのに必要なテキストエディタをインストールする。
