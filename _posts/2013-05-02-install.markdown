@@ -44,7 +44,7 @@ Appleメニューをクリックして *About This Mac* (図 1) を選びます�
 
 **ステップ 3-A.** rbenv を使って Ruby と Ruby on Rails をインストール(OS X 10.9 以上の場合):
 
-OS X 10.9 の場合は、Homebrew と rbenv を使って環境をつくります。
+OS X 10.9 以上の場合は、Homebrew と rbenv を使って環境をつくります。
 
 3-A-1. Command line tools をターミナルからインストール:
 
