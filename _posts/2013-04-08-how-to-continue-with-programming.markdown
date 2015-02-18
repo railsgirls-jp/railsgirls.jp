@@ -53,6 +53,9 @@ and was published on
 
 * [たのしいRuby 第3版](http://www.amazon.co.jp/dp/4797357401) - 定番の Ruby 入門書です。Rails の礎となっているRubyを勉強してみたい方へお勧めです。
 
+* [Railsガイド](http://railsguides.jp/) - Railsを体系的に学ぶための大型リファレンスガイドです。Web版は全て無料。Rails 4.2に対応しています。
+
+
 ### スクリーンキャスト
 
 * [Railscasts](http://railscasts.com/) - Ryan Bates による Rails の短く、簡潔なスクリーンキャストです。
