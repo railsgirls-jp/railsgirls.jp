@@ -35,6 +35,16 @@ Rails Girlsイベントは非営利目的で開催されます。Rails Girlsは�
 
 * この世界を動かしているのはガール(女子）です！でも、女性、レディ、場合によっては男子も参加できます。Rails Girlsの創設者である二人は、Spice Girls全盛時代に生まれました。そのため、創設者はガールという言葉を単なる"かわいらしい"や"幼い"という意味だとは考えていません。Rails Girlsという名前は言語的な意味というよりは、その言葉が醸し出す心意気からとったものです。
 
+#### Codes of Conduct
+
+Rails Girls events are inclusive, friendly and safe environments. They have zero tolerance of harrasment or bullying. You can include a Code of Conduct to your event. Below are examples:
+
+* [Rails Girls Summer of Code Code of Conduct](http://railsgirlssummerofcode.org/about/code-of-conduct/)
+* [PyLadies Code of Conduct](http://www.pyladies.com/CodeOfConduct/)
+* [Geek Feminism Wiki Anti Harassment example](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy)
+* [Conf Code of Conduct](http://confcodeofconduct.com/)
+* [Rails Girls DC Code of Conduct](https://docs.google.com/document/d/1XEnFI3R30IiGXOpC4idb0ku3pw8OoJcBpG9mg3iKiAo/edit)
+* [Rails Girls NZ Code of Conduct](https://docs.google.com/document/d/1EiTZ-__VDuXpN1OqgVKnYr2Km_N3fD9WWN3g5cv5hAA/edit)
 
 ### 一般的なカリキュラム
 
