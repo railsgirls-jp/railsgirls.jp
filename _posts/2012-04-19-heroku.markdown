@@ -107,7 +107,7 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__Coachより__: バージョン管理システムと git について説明するちょうどいいタイミングです。.gitignore の説明と上記のファイルを管理対象外にしたい理由についても説明しましょう。
+__Coachより__: バージョン管理システムと git について説明するちょうどいいタイミングです。`.gitignore` の説明と上記のファイルを管理対象外にしたい理由についても説明しましょう。
 
 #### データベースのアップデート
 
@@ -134,7 +134,7 @@ __Coachより__: RDBMS とそうでないものについて話してみましょ
 
 #### rails\_12factor の導入
 
-次に、Heroku で Rails 4 を動かすために必要な rails\_12factor という gem を導入します。
+次に、Heroku で Rails 4 を動かすために必要な rails_12factor という gem を導入します。
 
 この gem はアプリが Heroku 上で動作できるように、Rails の動作を変更します。例えば、ログは保存先が変更され、静的アセット(アプリの画像、スタイルシート、JavaScript ファイル) は Heroku 向けに微調整が加えられています。
 
@@ -188,11 +188,12 @@ Compressing objects: 100% (115/115), done.
 Writing objects: 100% (134/134), 35.29 KiB, done.
 Total 134 (delta 26), reused 0 (delta 0)
 
------> Heroku receiving push
------> Ruby/Rails app detected
------> Installing dependencies using Bundler version 1.1.2
-       Running: bundle install --without development:test --path vendor/bundle --binstubs bin/ --deployment
-       Fetching gem metadata from https://rubygems.org/.......
+-----> Ruby app detected
+-----> Compiling Ruby/Rails
+-----> Using Ruby version: ruby-2.0.0
+-----> Installing dependencies using 1.6.3
+       Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+       Fetching gem metadata from https://rubygems.org/..........
 ...
 -----> Launching... done, v4
        http://evening-sky-7498.herokuapp.com deployed to Heroku

@@ -10,7 +10,7 @@ permalink: thumbnails
 
 __コーチへ__: 始めてのRailsアプリのStep4 でHTML の img タグの width を指定したことについて説明しましょう。また、それがサーバーで画像サイズを変更することの違いも話しあってみましょう。
 
-## ImageMagickのインストール
+## *1.*ImageMagickのインストール
 
 * OS X: `brew install imagemagick` を実行します。もし `brew` コマンドが見つからない場合は[homebrewをインストール][in-homebrew]しましょう.
 * Windows: [ImageMagick installer][im-win] をインストールします。(先頭にある *download* リンクをクリックします)
@@ -30,7 +30,7 @@ gem 'carrierwave'
 の下に
 
 {% highlight ruby %}
-gem 'mini_magick', '3.5.0'
+gem 'mini_magick', '3.8.0'
 {% endhighlight %}
 
 を追加します。その後に Terminal で以下のコマンドを実行します。
@@ -39,7 +39,7 @@ gem 'mini_magick', '3.5.0'
 bundle
 {% endhighlight %}
 
-## 画像をアップロードした時にサムネイルを作成しよう
+## *2.*画像をアップロードした時にサムネイルを作成しよう
 
 `app/uploaders/picture_uploader.rb` を開いて、以下の行を探しましょう。
 
@@ -61,7 +61,7 @@ end
 
 これで画像をアップロードするとリサイズするようになりました。しかし、もうアップロード済みの画像は変更されません。もう一度 idea を編集して画像をアップロードし直してください。
 
-## サムネイルを表示してみよう
+## *3.*サムネイルを表示してみよう
 
 `app/views/ideas/index.html.erb` を開いて、もし画像がアップロードされていればリサイズした画像を表示するようにしましょう。
 

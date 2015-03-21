@@ -10,11 +10,11 @@ permalink: devise
 
 *Updated by Ernesto Jimenez, [@ernesto_jimenez](https://twitter.com/ernesto_jimenez)*
 
-** このガイドは、すでに [ RailsGirls アプリ・チュートリアル ](/app) でアプリを作った方を対象にしています。 **
+** このガイドは、すでに [ Rails Girls アプリ・チュートリアル ](/app) でアプリを作った方を対象にしています。 **
 
 
 
-## Step 0: devise gem を追加
+## *1.*devise gem を追加
 
 アプリの `Gemfile` を開いて、次の行を追加します。
 
@@ -31,7 +31,7 @@ bundle install
 gem のインストールができました。Rails のサーバーを再起動するのを忘れずに!
 
 
-## Step 1: アプリに devise をセットアップ
+## *2.*アプリに devise をセットアップ
 
 次は、先ほどのディレクトリでこのコマンドを実行しましょう。
 
@@ -39,7 +39,7 @@ gem のインストールができました。Rails のサーバーを再起動�
 rails g devise:install
 {% endhighlight %}
 
-## Step 2: Devise の環境設定
+## *3.*Devise の環境設定
 
 environments ファイルにデフォルトの url オプションを定義します。
 `config/environments/development.rb` を開いて次の行を追加しましょう。
@@ -77,7 +77,7 @@ environments ファイルにデフォルトの url オプションを定義し�
 
 同じように `app/views/comments/show.html.erb` についても削除を行います。これらの `notice` 行は `app/views/layouts/application.html.erb` ファイルに同じ行を追加したので、必要ありません。
 
-## Step 3: User model をセットアップ
+## *4.*User model をセットアップ
 
 User model を作るために bundled generator script を使います。
 
@@ -88,13 +88,13 @@ User model を作るために bundled generator script を使います。
 
 **Coachより:** 生成された User モデルについて説明をしてください。フィールドとは何ですか？
 
-## Step 4: ユーザーを作成
+## *5.*ユーザーを作成
 
 これでユーザを作成する準備がすべて整いました。Devise がアカウントの作成、ログイン、ログアウトなどに関するすべてのコードやルーティングを生成してくれています。
 
 Rails のサーバーが起動している事を確認したら、[http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) をブラウザで開いてユーザーを作成してください。
 
-## Step 5: サインアップとログインリンクの追加
+## *6.*サインアップとログインリンクの追加
 
 あと、やらなければいけないことは、ユーザーがログインできる適切なリンク、または案内をナビゲーションバー右上のコーナーに追加することです。
 そのために、 `app/views/layouts/application.html.erb` を開いて、
@@ -136,7 +136,7 @@ Rails のサーバーが起動している事を確認したら、[http://localh
 
 * User model のその他の項目も追加しましょう。
 * users と ideas 間のリレーションを追加しましょう。
-* それぞれ自分の ideas だけ編集できるように users に制限をかけましょう。
+* それぞれ自分の ideas だけ編集と自分のコメントだけ削除できるように users に制限をかけましょう。
 * ロールやパーミッションを使うように拡張しましょう。（ CanCan のような人気の認証 gem も使ってみてください。）
 
 

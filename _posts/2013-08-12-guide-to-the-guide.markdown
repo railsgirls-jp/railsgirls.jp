@@ -28,7 +28,7 @@ routes, HTTP Methods: GET, POST, PUT and DELETE
 
 
 
-## *1.* Create the application
+## <a id="1_create_the_application">*1.* Create the application</a>
 
 `mkdir projects` - makes a *directory* (folder) called “projects” in the folder you are currently in, most likely your home folder.
 `mkdir` = **m**a**k**e **dir**ectory.
@@ -43,11 +43,15 @@ routes, HTTP Methods: GET, POST, PUT and DELETE
 
 “Localhost” refers specifically to your computer (considered the “local host”), from which a server is being launched. Localhost provides a way for developers to see their application in a browser and test the functionality while it is still in development.
 
-## *2.* Create Idea scaffold
+## <a id="2_create_idea_scaffold">*2.* Create Idea scaffold</a>
+
 ### What is Rails scaffolding?
+
 Every web application consists of many different concepts or resources (such as “users”, “ideas”, “posts”, “comments”, etc.).
 Rails scaffolding is a command (`rails generate scaffold`) for introducing a new resource into your application. It generates all of the code files necessary for representing and interacting with this resource.
+
 ### What is a model?
+
 In Rails, a model represents a definition of a resource in your application, and how it should interact with other parts of the application. Depending on the nature of the website, these resources could be users, posts, groups etc. When a model is generated, a corresponding *database table* is created. This database table contains information that represents specified attributes of the model, e.g. for a User model, there might be a ‘name’ column and an ‘email’ column, and there will be rows for each subsequent user created. In the application you are creating, these resources are ideas and the model is ‘Idea’.
 
 {% highlight rb %}
@@ -99,8 +103,9 @@ In order to create our idea model, we use the `scaffold` command which includes 
 
 #### Active Record
 In Rails, the default system for communicating with an application’s database is called *Active Record*, which provides various methods for creating, saving, and finding data. To retrieve information from the database, *Active Record* establishes relationships between different parts of the application using naming conventions:
-- Table names have all lowercase letters and underscores between words, e.g. “idea”, “invoice_items”
-- The model is named using the convention of unbroken MixedCase and is always the singular of the table name, e.g. if the table name is “invoice_items”, the model name would be “InvoiceItem”. So, in this case our table name is ideas and our model is Idea.
+
+- Table names have all lowercase letters and underscores between words, e.g. “ideas”, “invoice\_items”
+- The model is named using the convention of unbroken MixedCase and is always the singular of the table name, e.g. if the table name is “invoice\_items”, the model name would be “InvoiceItem”. So, in this case our table name is "ideas" and our model is "Idea".
 
 #### Model attributes and types
 
@@ -136,7 +141,7 @@ Migrations change the state of the database. When you run the `scaffold` command
 
 The `rake db:migrate` command updates the database according to the specifications in the migration file. This command, known as “migrating up”, ensures that your idea model is added to the database. Migrations can also be undone (“migrating down”) using the command `rake db:rollback`.
 
-## *3.* Design
+## <a id="3_design">*3.* Design</a>
 In a Ruby on Rails application, the user interface (what someone visiting the website will see), is often written in HTML with Embedded Ruby (ERB) code. This code is contained in a specific directory called ‘views’, located in the `app` folder of your Rails application directory.
 
 ### HTML
@@ -155,14 +160,14 @@ In a standard Rails application (like you one you have generated), the `app/` fo
 
 When you ran the `rails generate scaffold` command, in addition to creating the idea model, you also created an accompanying ideas controller (`ideas_controller.rb`), located in the controllers folder, and an ideas views folder containing several files that you will use to create a dynamic application.
 
-When attempting to display a Rails website, a web browser sends a request via the server which eventually hits the Rails *controller*. *Controllers* act as mediators between the *views* and the *models*. When the *controller* receives the information it communicates with a *model* representing a resource of the application (in our case, an “idea”) which in turn communicates with the database. Upon retrieving the required information from the *model*, the *controller* renders the *view* which returns the complete web page to the browser as HTML.
+When attempting to display a Rails website, a web browser sends a request via the server which eventually hits the Rails *controller*. *Controllers* act as mediators between the *views* and the *models*. When the *controller* receives the information, it communicates with a *model* representing a resource of the application (in our case, an “idea”) which in turn communicates with the database. Upon retrieving the required information from the *model*, the *controller* renders the *view* which returns the complete web page to the browser as HTML.
 
 ### CSS and layouts
 CSS (Cascading Style Sheets) is a language used to describe the formatting of pages written in a ‘markup language’, i.e. a language for processing, defining and presenting text with a prescribed formatting code e.g. tags, that distinguish it from plain text. The most common application of CSS is in conjunction with HTML.
 {% highlight css %}
 body { padding-top: 100px; }
 footer { margin-top: 100px; }
-table, td, th { vertical-align: middle !important; border: none !important; }
+table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 {% endhighlight %}
 
@@ -174,28 +179,31 @@ Within the CSS you have applied:
 For each Rails application there is a default layout file called `application.html.erb`, located in the layouts folder of your views directory. With this file you can create a default format for all of the pages in your application.
 
 {% highlight html %}
-	`<link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">`
+<link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
 {% endhighlight %}
 
 In the above code, the `link rel` (link relation) is defining the nature of the URL that the `href` (hypertext reference) attribute is requesting content from. This argument indicates that the external source requested is a stylesheet and the web browser will need to fetch this file to render the page properly.
 
-`<%= stylesheet_link_tag "application" %>`
+{% highlight erb %}
+<%= stylesheet_link_tag "application" %>
+{% endhighlight %}
 
 This code returns a stylesheet link tag for the source, in this case “application”, i.e. `application.css`. This means that the styling you implemented in application.css will be applied to the various pages of your application.
 
 
 {% highlight erb %}
-	<div class="container">
-	  <%= yield %>
-	</div>
+<div class="container">
+  <%= yield %>
+</div>
 {% endhighlight %}
 
 In this code:
+
 - The HTML `div` tag divides the code into parts.
 - The *container class* adds additional styling to everything inside the div tags
 - The `<%= yield %>` argument is responsible for inserting the unique content from each page into the container `div`. This means that in your application the overall layout can be consistent even though the content will differ from page to page.
 
-## *4.* Add picture uploads
+## <a id="4_add_picture_uploads">*4.* Add picture uploads</a>
 
 ### Libraries
 Many programming languages, including Ruby, use a wide range of libraries. In Ruby’s case, most of these libraries are released in the form of self-contained packages called *gems*, which contain all the information required to install and implement them. These gems are contained in your application’s `Gemfile` and if you look in this file you’ll notice that when you created your first Rails application it came with several gems that ensure your application functions correctly.
@@ -222,7 +230,7 @@ The code that follows the `@idea` variable (`.picture`) tells Rails to access th
 
 You will notice that within this block of code you are implementing we are also able to set a default width for each image (`:width => 600`). The final line of code `if @idea.picture.present?` tells Rails to check the corresponding database table to see whether a picture exists before rendering the code underneath.
 
-## *5.* Finetune the routes
+## <a id="5_finetune_the_routes">*5.* Finetune the routes</a>
 
 In a functional Rails application, there is an inbuilt system in place for translating incoming requests from the browser in order to return the intended response. This system is called *routing*. Requests from the browser are interpreted as specific HTTP methods. HTTP (Hypertext Transfer Protocol) is the protocol that defines how information (usually webpages or webpage components composed of text with hyperlinks - ‘hypertext’), is formatted and transmitted across the internet. There are four primary HTTP methods, each of which is a request to perform an operation on a specific resource (e.g. users, posts); GET, POST, PUT and DELETE. Rails’ inbuilt routing system automatically generates routes for each resource that map to specific actions (index, show, new, edit, create, update, delete) defined in the controller. So, for each of our models, there are seven related actions defined in the associated controller, `ideas_controller.rb`. These actions specify the appropriate response (a ‘method’) which is most likely to render the corresponding view, e.g. `ideas/index.html.erb`.
 

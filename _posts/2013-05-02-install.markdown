@@ -17,6 +17,7 @@ Ruby on Rails上にアプリケーションを作るためには、
 * [OS X 用セットアップ](#setup_for_os_x)
 * [Windows 用セットアップ](#setup_for_windows)
 * [Linux 用セットアップ](#setup_for_linux)
+* [Alternative Installment for all OS](#virtual-machine)
 * [クラウドサービスを利用する](#using-a-cloud-service)
 
 *コーチの方へ*:
@@ -26,7 +27,7 @@ Ruby on Rails上にアプリケーションを作るためには、
 
 ## <a id="setup_for_os_x">OS X 用セットアップ</a>
 
-**ステップ 1.** オペレーティング・システムのバージョンを調べましょう。
+### *1.* オペレーティング・システムのバージョンを調べましょう。
 
 Appleメニューをクリックして *About This Mac* (図 1) を選びます。
 
@@ -34,7 +35,8 @@ Appleメニューをクリックして *About This Mac* (図 1) を選びます�
 
 図 1
 
-**ステップ 2.** 開いたウィンドウに使用しているオペレーティング・システムのバージョンが表示されます。(図 2)。
+### *2.* 開いたウィンドウに使用しているオペレーティング・システムのバージョンが表示されます。(図 2)。
+
 バージョン番号が 10.6, 10.7, 10.8, 10.9, または 10.10 で始まっていたら、このドキュメントに従って進めます。
 これ以外のバージョンだったら、イベントでコーチと一緒にセットアップします。
 
@@ -42,38 +44,38 @@ Appleメニューをクリックして *About This Mac* (図 1) を選びます�
 
 図 2
 
-**ステップ 3-A.** rbenv を使って Ruby と Ruby on Rails をインストール(OS X 10.9 以上の場合):
+### *3-A.* rbenv を使って Ruby と Ruby on Rails をインストール(OS X 10.9 以上の場合):
 
 OS X 10.9 以上の場合は、Homebrew と rbenv を使って環境をつくります。
 
-3-A-1. Command line tools をターミナルからインストール:
+#### 3-A-1. Command line tools をターミナルからインストール:
 
 {% highlight sh %}
 xcode-select --install
 {% endhighlight %}
 
-3-A-2. [Homebrew](http://brew.sh/)をインストール:
+#### 3-A-2. [Homebrew](http://brew.sh/)をインストール:
 
 {% highlight sh %}
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endhighlight %}
 
-3-A-3. [rbenv](https://github.com/sstephenson/rbenv)をインストール:
+#### 3-A-3. [rbenv](https://github.com/sstephenson/rbenv)をインストール:
 
 {% highlight sh %}
 brew update
-brew install rbenv ruby-build
+brew install rbenv rbenv-gem-rehash ruby-build
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 {% endhighlight %}
 
-3-A-4. rbenvを使ってRubyをインストール:
+#### 3-A-4. rbenvを使ってRubyをインストール:
 
 "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 2.2.0
+rbenv install 2.2.1
 {% endhighlight %}
 
 ※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
@@ -83,19 +85,19 @@ brew install curl-ca-bundle
 cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'`
 {% endhighlight %}
 
-3-A-5. デフォルトのRuby を設定:
+#### 3-A-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
-rbenv global 2.2.0
+rbenv global 2.2.1
 {% endhighlight %}
 
-3-A-6. Railsのインストール:
+#### 3-A-6. Railsのインストール:
 
 {% highlight sh %}
 gem i rails --no-ri --no-rdoc
 {% endhighlight %}
 
-**ステップ 3-B.** 使用している OS Xのバージョン用 RailsInstaller ダウンロードします。(OS X10.6, 10.7, 10.8の場合)
+#### *3-B.* 使用している OS Xのバージョン用 RailsInstaller ダウンロードします。(OS X10.6, 10.7, 10.8の場合)
 
 * [10.7, 10.8 用 RailsInstaller](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
 * [10.6 用 RailsInstaller](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.6.app.tgz) <span class="muted">(224MB)</span>
@@ -117,9 +119,7 @@ Rails アプリを作成するコマンドを実行してインストールと R
 rails new railsgirls
 {% endhighlight %}
 
-
-
-**最後のステップ** コードを編集するのに必要なテキストエディタをインストールする。
+### *4.* コードを編集するのに必要なテキストエディタをインストールする。
 
 このワークショップでは Atom エディタを推奨しています。
 
@@ -127,16 +127,28 @@ rails new railsgirls
 
 Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタは非対応ですが、 [Sublime Text 2](http://www.sublimetext.com/2) エディタが利用可能です。
 
+### *5.* Update your browser
+
+Open [whatbrowser.org](http://whatbrowser.org) and update your browser if you don't have the latest version.
+
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
 <hr />
 
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
+### *1.* Install Rails
+
 [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.1.0.exe) をダウンロードして、実行します。
 インストールのオプションは全てデフォルトを選択します。
 
-もしもRailsのバージョンが最新ではない場合は、以下のコマンドを "Command Prompt with Ruby on Rails" から実行することでバージョンアップできます。
+Open `Command Prompt with Ruby on Rails` and run the following command:
+
+{% highlight sh %}
+rails -v
+{% endhighlight %}
+
+もしもRailsのバージョンが4よりも小さい場合は 以下のコマンドを "Command Prompt with Ruby on Rails" から実行することでバージョンアップできます。
 
 {% highlight sh %}
 gem update rails --no-ri --no-rdoc
@@ -146,9 +158,58 @@ Rails アプリを作成するコマンドを実行してインストールと R
 
 {% highlight sh %}
 rails new railsgirls
+cd railsgirls
+rails server
 {% endhighlight %}
 
-**最後のステップ** コードを編集するためのテキストエディタが必要になります。
+## Possible errors
+
++### Gem::RemoteFetcher error
+
+If you get this error when running `rails new railsgirls` or `gem update rails`:
+
+{% highlight sh %}
+Gem::RemoteFetcher::FetchError: SSL_connect returned=1 errno=0 state=SSLv3 read
+server certificate B: certificate verify failed (https://rubygems.org/gems/i18n-0.6.11.gem)
+{% endhighlight %}
+
+This means you have an older version of Rubygems and will need to update it manually first verify your Rubygems version
+
+{% highlight sh %}
+gem -v
+{% endhighlight %}
+
+If it is lower than `2.2.3` you will need to manually update it:
+
+First download the [ruby-gems-update gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.2.3.gem). Move the file to `c:\\rubygems-update-2.2.3.gem` then run:
+
+{% highlight sh %}
+gem install --local c:\\rubygems-update-2.2.3.gem
+update_rubygems --no-ri --no-rdoc
+gem uninstall rubygems-update -x
+{% endhighlight %}
+
+Check your version of rubygems
+
+{% highlight sh %}
+gem -v
+{% endhighlight %}
+
+Make sure it is higher than `2.2.3`. Re-run the command that was failing previously.
+
+
+### 'x64_mingw' is not a valid platform` Error
+
+Sometimes you get the following error when running `rails server`:
+`'x64_mingw' is not a valid platform` If you experience this error after using the RailsInstaller you have to do a small edit to the file `Gemfile`:
+
+Look at the bottom of the file. You will probably see something like this as one of the last lines in the file:
+`gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]`. If you have this line with `:x64_mingw`, then please delete the `:x64_mingw` part. In the end it should just say:
+`'tzinfo-data', platforms: [:mingw, :mswin]`
+
+After you did that, please use your Command Prompt again and type `bundle update`.
+
+### *2.* コードを編集するためのテキストエディタが必要になります。
 
 このワークショップでは Atom エディタを推奨しています。
 
@@ -161,30 +222,59 @@ Windows Vista およびそれ以前のバージョンでは Atom エディタは
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
+### *3.* Update your browser
+
+If you use Internet Explorer, we recommend installing [Firefox](mozilla.org/firefox) or [Google Chrome](google.com/chrome).
+
+Open [whatbrowser.org](http://whatbrowser.org) and update your browser if you don't have the latest version.
+
 <hr />
 
 ## <a id="setup_for_linux">Linux 用セットアップ</a>
 
+### *1.* Install Rails
+
 あなたの Linux ディストリビューション(Ubuntu や Fedora)に Ruby on Rails を開発する環境をインストールするには下の1行をコピーしてターミナルに貼り付け、Enter キーを押す必要があります。スクリーンに流れるテキストを眺めて少しの時間の間、楽しみにお待ち下さい。次に進むまでの間、飲み物を等を飲んで休憩してはいかがでしょうか。
 
-**Ubuntuの場合:**
+#### Ubuntuの場合:
 
 {% highlight sh %}
-bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
+bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
-**Fedoraの場合:**
+If you are going to use RVM installations with gnome-terminal, you'll probably need to change it's default options before you can see and use the right Ruby and Rails versions. Find out how: [RVM documentation](http://rvm.io/integration/gnome-terminal).
+
+#### Fedoraの場合:
 
 {% highlight sh %}
-bash < <(curl -s https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
+bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
 
-**最後のステップ** コードを編集するためのテキストエディタが必要になります。
+Make sure that all works well by running the application generator command.
+
+{% highlight sh %}
+rails new railsgirls
+cd railsgirls
+rails server
+{% endhighlight %}
+ 
+### *2.* コードを編集するためのテキストエディタが必要になります。
+
 このワークショップでは Sublime Text エディタを推奨しています。
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 
+### *3.* Update your browser
+
+Open [whatbrowser.org](http://whatbrowser.org) and update your browser if you don't have the latest version.
+
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
+
+<hr />
+
+## Virtual Machine
+
+Instead of installing all tools on your machine, you can also set up a development environment in a Virtual Machine. Please find all the details [here]({% post_url 2014-03-24-alternative-dev-environment %}).
 
 <hr />
 

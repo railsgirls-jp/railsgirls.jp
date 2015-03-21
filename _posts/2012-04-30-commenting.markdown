@@ -11,7 +11,7 @@ Rails のインストールと ideas アプリ構築についての手順は、 
 
 ## *1.*Comment の scaffold をする
 
-Comment のコメント者名、コメント本文(コメント内容)、Idea テーブルへの関係 (idea_id) を scaffold しましょう。
+Comment のコメント者名、コメント本文(コメント内容)、Idea テーブルへの関係 (`idea_id`) を scaffold しましょう。
 {% highlight sh %}
 rails g scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
@@ -25,7 +25,7 @@ rake db:migrate
 
 ideas と comments オブジェクト間の接続を Rails に認識させる必要があります。
 一つの idea はたくさんの comments を所有することができるものとして、Idea モデルに認識させます。
-app/models/idea.rb を開いて、
+`app/models/idea.rb` を開いて、
 
 {% highlight ruby %}
 class Idea < ActiveRecord::Base
@@ -73,7 +73,7 @@ app/views/ideas/show.html.erb を開いて、
 <%= render 'comments/form' %>
 {% endhighlight %}
 
-app/controllers/ideas_controller.rb の show action には、
+`app/controllers/ideas_controller.rb` の show action には、
 
 {% highlight ruby %}
 @idea = Idea.find(params[:id])
@@ -86,7 +86,7 @@ app/controllers/ideas_controller.rb の show action には、
 @comment = @idea.comments.build
 {% endhighlight %}
 
-app/views/comments/_form.html.erb を開いて、
+`app/views/comments/_form.html.erb` を開いて、
 
 {% highlight erb %}
   <div class="field">
