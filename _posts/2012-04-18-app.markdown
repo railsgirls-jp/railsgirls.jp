@@ -47,7 +47,7 @@ cd railsgirls
 rails server
 {% endhighlight %}
 
-自分のパソコン上のブラウザで [http://localhost:3000](http://localhost:3000) にアクセスしてください。(Nitorous.IOなどのクラウドサービスの場合は、URLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
+自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。(Nitorous.IOなどのクラウドサービスの場合は、URLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
 
 "Welcome aboard" の画面が表示されれば、さきほど作ったアプリは正しく動作しています。
 
@@ -85,7 +85,7 @@ rails server
   </div>
 </div>
 
-ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(クラウドサービスの場合は、メニューから 'preview' - 'port 3000' を選び、アドレス欄の末尾に '/ideas' を加えてアクセスしてください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
+ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(Nitrous のようなクラウドサービスの場合は、メニューから 'preview' - 'port 3000' を選び、アドレス欄の末尾に '/ideas' を加えてアクセスしてください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
 
 いろいろクリックしてみたりしたら、 CTRL-C を押して、サーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
@@ -104,8 +104,8 @@ rails server
 この1行前に次のタグを追記してください。
 
 {% highlight erb %}
-<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css" />
-<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css" />
+<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css">
+<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css">
 {% endhighlight %}
 
 そして、この部分、
@@ -166,8 +166,11 @@ table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 {% endhighlight %}
 
-**Coachより:** CSSとレイアウトについてちょっと話をしてください。
+ Now make sure you saved your files and refresh the browser to see what was changed. You can also change the HTML & CSS further.
 
+In case your Terminal shows you an error message that *sort of* implies there is something wrong with your JavaScript or CoffeeScript, install [nodejs](http://nodejs.org/download/). This issue should not appear when you've used the RailsInstaller (but when you've installed Rails via ```gem install rails```).
+
+**Coachより:** CSSとレイアウトについてちょっと話をしてください。
 
 ## *4.*写真アップロード機能を追加する
 
@@ -187,6 +190,8 @@ gem 'carrierwave'
 
 **Coachより:** 何のライブラリがあって、なぜ便利なのかを説明してください。オープンソースソフトウェアが何なのかも説明してください。
 
+Hit `CTRL-C` in the terminal to quit the server.
+
 Terminal で、次のコマンドを実行してください:
 
 {% highlight sh %}
@@ -199,7 +204,10 @@ bundle
 rails generate uploader Picture
 {% endhighlight %}
 
-ここで、Terminal 上で **Rails server プロセスをリスタート** する必要があります。追加したライブラリをアプリにロードさせるためです。
+Please start the rails server now.
+
+Note: Some people might be using a second terminal to run the rails server continuously.
+If so you need to **restart the Rails server process** now.
 
 `app/models/idea.rb` を開いて、次の行
 
@@ -257,7 +265,7 @@ mount_uploader :picture, PictureUploader
 
 ## *5.*routes を調整する
 
-[http://localhost:3000](http://localhost:3000) を開いてみてください(クラウドサービスの場合は preview してください)。まだデフォルトページが見えると思います。ideas ページにリダイレクトするようにしましょう。
+<http://localhost:3000> を開いてみてください(クラウドサービスの場合は preview してください)。まだデフォルトページが見えると思います。ideas ページにリダイレクトするようにしましょう。
 
 `config/routes.rb` を開いて、最初の行の次に以下のコードを追記してください:
 
@@ -265,7 +273,7 @@ mount_uploader :picture, PictureUploader
 root to: redirect('/ideas')
 {% endhighlight %}
 
-ルートパス(http://localhost:3000/ またはクラウドサービスの場合は preview )をブラウザで表示して変更点を確認しましょう。
+ルートパス(<http://localhost:3000/> またはクラウドサービスの場合は preview )をブラウザで表示して変更点を確認しましょう。
 
 **Coachより:** routes について話してください。
 
@@ -301,9 +309,11 @@ get "pages/info"
 
 * Guide 0: [Handy cheatsheet for Ruby, Rails, console etc.](https://github.com/PragTob/rails-beginner-cheatsheet)
 * Guide 1: [Add commenting by Janika Liiv](/commenting)
-* Guide 2: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift)
-* Guide 3: [Build a map of workshop participants by Rails Girls Berlin](http://railsgirlsberlin.de/apptutorial/)
-* Guide 4: [Create thumbnail images for the uploads by Miha Filej](/thumbnails)
-* Guide 5: [Add design using HTML &amp; CSS by Alex Liao](/design)
-* Guide 6: [Add Authentication (user accounts) with Devise by Piotr Steininger](/devise/)
-* Guide 7: [Go through additional explanations for the App by Lucy Bain](https://github.com/lbain/railsgirls)
+* Guide 2: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift) / [Put your app online with Shelly Cloud](/shellycloud) / [Put your app online with anynines](/anynines) / [Put your app online with Trucker.io](/trucker)
+* Guide 3: [Create thumbnail images for the uploads by Miha Filej](/thumbnails)
+* Guide 4: [Add design using HTML &amp; CSS by Alex Liao](/design)
+* Guide 5: [Add Authentication (user accounts) with Devise by Piotr Steininger](/devise/)
+* Guide 6: [Adding profile pictures with Gravatar](/gravatar)
+* Guide 7: [Test your app with RSpec](/testing-rspec)
+* Guide 8: [Continuous Deployment with Travis-CI](/continuous-travis) / [Continuous Deployment with Codeship](/continuous)
+* Guide 9: [Go through additional explanations for the App by Lucy Bain](https://github.com/lbain/railsgirls)
