@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Rails Girls Japan について"
+permalink: about
+---
+
+## このサイトについて
+
+このサイトは [Rails Girls Guide](http://guides.railsgirls.com) の日本語版と Rails Girls Japan の活動内容について紹介するサイトです。
+
+## 活動内容
+
+Rails Girls Japan は日本における Rails Girls イベントの開催を支援する団体です。RailsGirls イベントとは、以下の項目を満たすイベントです。
+
+ * プログラミングのワークショップを開催する
+ * http://railsgirls.com/ より開催の申し込みを行う
+ * 参加者は無料でワークショップに参加できる
+
+Rails Girls Japan の支援内容は以下のとおりです。
+
+ * 日本で RailsGirls イベントの開催を希望するオーガナイザー(以下、オーガナイザー)に開催に必要な情報共有を行います。
+ * RailsGirls イベントのWeb サイトの作成、オーガナイザーの作業の補助を行います。
+ * RailsGirls イベントの開催に必要な資金を、スポンサー費用の回収代行元である日本Rubyの会より譲り受け、イベントごとの会計担当とともに支出の管理を行います。
+ * オーガナイザーの要請に応じて、地方間のコーチ派遣の交通費の資金援助を行います。交通費は公共交通機関を利用し1万円以上の場合に限り、上限を1万円として実費の半額を補助します。
+
+Rails Girls Japan では、Rails Girls イベントの支援以外に以下の活動も行っています。
+
+ * オリジナルのドキュメント(英語)を日本語に翻訳し、このサイトで公開します。
+ * イベントの内容紹介を行う[ブログ](http://blog.railgirls.jp)を執筆し、日本で開催されるRails Girlsイベントについて紹介します。
+
+当サイトを手伝ってくれる方は[issue tracker](https://github.com/railsgirls-jp/railsgirls-jp.github.com/issues)にて連絡してください。
+
+## メンバー
+
+Rails Girls Japan のメンバーは以下のメンバーです。
+
+
+ * 柴田 博志: [hsbt](https://github.com/hsbt) (会計)
+ * 鳥井 雪: [yakitorii](https://github.com/yakitorii)
+ * 江森 真由美: [emorima](https://githubc.om/emorima)
+ * @springaki 
+ * @yada-ITA
+ * Sho Hashimoto: [sho-h](https://github.com/sho-h)
+ * 原田　洋子 : [yokolet](https://github.com/yokolet)<br/>
+ * 辻田　さとみ : [satomicchy](https://github.com/satomicchy)<br/>
+
+<hr />
