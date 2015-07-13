@@ -297,20 +297,29 @@ rails server
 
 ## <a id="using-a-cloud-service">クラウドサービスを利用する</a>
 
-あなたのコンピュータにRuby on Railsやエディタをインストールする代わりに、開発用のWebサービスを利用することもできます。ブラウザとネットへアクセスできる環境があればOKです。 ここでは [Nitrous.IO](https://nitrous.io) を利用する手順を説明します。もしも、別のサービスを利用している場合は、例えば 'box' の代わりに 'workspace' という単語を使うなど用語の違いがあるかもしれませんが、概ね同じになっているはずです。
+あなたのコンピュータにRuby on Railsやエディタをインストールする代わりに、開発用のWebサービスを利用することもできます。ブラウザとネットへアクセスできる環境があればOKです。 ここでは [Nitrous](https://nitrous.io) を利用する手順を説明します。もしも、別のサービスを利用している場合は、例えば 'box' の代わりに 'workspace' という単語を使うなど用語の違いがあるかもしれませんが、概ね同じになっているはずです。
+
+*オーガナイザーの方へ*:
+
+Nitrous は有料サービスですが、コミュニティで使う場合は無料で使うことができます。 メールアドレス <pro [at] nitrous.io> へ、以下の内容を添えてコミュニティ用アカウントを申請してください。
+
+- 使用者のメールアドレスのリスト
+- 使用期間
+- 使用開始日時
+- アクセス可能期間(○日間、○週間 など)
 
 ### *1.* ブラウザを確認する
 
 * Internet Explorer を利用している場合は、 [Google Chrome](https://www.google.com/intl/ja/chrome/browser/) または [Firefox](https://www.mozilla.org/ja/firefox/new/) をインストールしてください。（一部の機能がIEでは動かない場合があります。）
 
-### *2.* 無料のアカウントを作成する
+### *2.* アカウントを作成する
 
-* [https://nitrous.io](https://nitrous.io/) から無料のアカウントを作成します。
+* [https://nitrous.io](https://nitrous.io/) からアカウントを作成します。
 * ユーザーネーム、メールアドレス、パスワードを入力して、緑の 'Sign Up For Free' ボタン からアカウントを作成できます。
 
 ### *3.* Ruby on Rails の開発用に box (workspace) を設定する
 
-* [Nitrous.IO](https://nitrous.io/) の画面右上の Sign in をクリックし、作成したアカウントでログインします。緑の 'Open dashboard' ボタンをクリックし、ダッシュボード画面へ移動します。
+* [Nitrous](https://nitrous.io/) の画面右上の Sign in をクリックし、作成したアカウントでログインします。緑の 'Open dashboard' ボタンをクリックし、ダッシュボード画面へ移動します。
 
 * テンプレートから Ruby/Rails を選んで box を作ります。デフォルトのままで大丈夫ですが、もしも box の名前を変えたい場合は、変えても構いません。
 
