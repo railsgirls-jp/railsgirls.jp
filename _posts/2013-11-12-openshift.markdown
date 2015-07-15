@@ -8,20 +8,20 @@ permalink: openshift
 
 *Created by Katie Miller, [@codemiller](https://twitter.com/codemiller) / 翻訳: Uchio Kondo [@udzura](https://github.com/udzura)*
 
-### Get OpenShift
+### OpenShift にサインアップする
 
-OpenShift is a cloud computing Platform as a Service (PaaS) that makes it easy to deploy apps online. It is open source and written in Ruby.
+OpenShiftとは、クラウド上のPaaS(Platform as a Service)で、公開サーバ上にアプリケーションを簡単にデプロイすることができるプラットフォームです。これはオープンソースで、Rubyで書かれています。
 
-To get started [create an OpenShift Online account](https://www.openshift.com/app/account/new), which allows you to put three apps online for free. Once you are signed up, install the OpenShift RHC Client Tools by running these commands in a terminal and following the prompts:
+開始するには、 [OpenShiftオンラインアカウントを作成し]((https://www.openshift.com/app/account/new)) 、3つまでのアプリを無料でデプロイできるようにします。サインアップをしたら、OpenShift RHCクライアントツールを以下のコマンドを発行してインストールしてください。
 
 {% highlight sh %}
 gem install rhc
 rhc setup
 {% endhighlight %}
 
-The above instructions assume you installed Ruby using RVM or RailsInstaller. If you used another approach, there is more info about installing RHC for different set-ups in [this guide](https://www.openshift.com/developers/rhc-client-tools-install) (you may need to do `sudo gem install rhc`).
+上記の手順は、RubyをRVM、RailsInstallerなどでインストールした人の場合を想定しています。他の手順でインストールした場合は、[こちらのguide](https://www.openshift.com/developers/rhc-client-tools-install) にそれぞれの手順があります ( `sudo gem install rhc` と、sudoを付ける必要があるかも知れません)。
 
-__COACH__: Talk about the benefits of deploying to a PaaS such as OpenShift, as opposed to traditional servers. Discuss SSH and why we need to upload a public key to communicate securely.
+__Coachより__: OpenShiftのようなPaaSにアプリをデプロイするメリットについて話してください。特に、伝統的なサーバ管理と比べて。SSHについて、またなぜセキュアにサーバ通信をするために公開鍵をなぜアップロードしなければいかねいかについても議論してください。
 
 ### Preparing your app
 
