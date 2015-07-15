@@ -4,9 +4,9 @@ title: Rails Girls on OpenShift
 permalink: openshift
 ---
 
-# Put Your App Online With OpenShift
+# OpenShiftでアプリを公開する
 
-*Created by Katie Miller, [@codemiller](https://twitter.com/codemiller)*
+*Created by Katie Miller, [@codemiller](https://twitter.com/codemiller) / 翻訳: Uchio Kondo [@udzura](https://github.com/udzura)*
 
 ### Get OpenShift
 
