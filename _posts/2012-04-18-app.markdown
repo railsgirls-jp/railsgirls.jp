@@ -24,7 +24,7 @@ rails serverを起動したりコマンドを実行したりするものです�
 
 アプリケーションを表示するためのものです。
 
-※ このガイドでは、OSごとにコマンドが違う場合に、Windows/Other の表示を切り替えています。Nitrous.IO などのクラウドサービスを利用して開発する場合は、(Windowsマシンを利用していても) Other(Linux用のコマンド)を使ってください。
+※ このガイドでは、OSごとにコマンドが違う場合に、Windows/Other の表示を切り替えています。Nitrous などのクラウドサービスを利用して開発する場合は、(Windowsマシンを利用していても) Other(Linux用のコマンド)を使ってください。
 
 ## *1.*アプリケーションを作る
 
@@ -35,7 +35,7 @@ rails serverを起動したりコマンドを実行したりするものです�
 * OS X: Spotlightで *Terminal* と入力して出てきた Terminal をクリックしてください。
 * Windows: スタートメニューをクリックして、すべてのプログラムから *RailsInstaller* を探し、*Command Prompt with Ruby on Rails*をクリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Command Prompt with Ruby on Rails* を入力し検索してください。)
 * Linux (Ubuntu/Fedora): Dashホームで *Terminal* を探して、*Terminal* をクリックしてください。
-* クラウドサービス(Nitrous.IOなど): 作成したアカウントでログインし、box が起動した状態で IDE 画面へ移動します。(詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。) ターミナルはブラウザの下部に表示されます。
+* クラウドサービス(Nitrousなど): 作成したアカウントでログインし、box が起動した状態で IDE 画面へ移動します。(詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。) ターミナルはブラウザの下部に表示されます。
 
 そして、Terminal上で次のコマンドを入力します:
 
