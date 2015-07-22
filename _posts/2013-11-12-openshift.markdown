@@ -156,17 +156,17 @@ git push -f --set-upstream openshift master
 
 __COACH__: Gitのリモートリポジトリについて話してください。
 
-### Extra credit 
+### ボーナスステージ
 
-Congratulations - your Rails application is now online for the whole world to admire. The following sections explain optional further steps you can take to improve and share your app. 
+おめでとうございます！　あなたのRailsアプリケーションはいまオンラインで、素晴らしいことに世界中から見ることができます。ここからのセクションは、あなたのアプリをより素晴らしくするために学習できる追加的なステップです。
 
-#### Persist uploaded images
+#### アップロードした画像を保存する
 
-The app should be looking pretty good now, but there is an issue lurking because of the ephemeral nature of the deployment. When we push a new version of the application, anything stored within OpenShift's copy of the repo will be wiped to make way for the new files. This includes the images uploaded by users. To fix this, we can store these files in a persistent directory on OpenShift instead. The filepath of the location we need is stored in an environment variable.
+アプリはとてもいい感じに見えます。ですが、デプロイの「はかない側面」が由来の、潜在的な問題があります。私たちが新しいバージョンのアプリをプッシュした時、OpenShift側のリポジトリ内に保存されていたあらゆるファイルは、新しいファイルを使えるようにするために消去されます。このとき、ユーザーがアップロードした画像も一緒に消されてしまいます。この挙動を直すには、画像ファイルをOpenShiftの「永続的な」ディレクトリに保存しなければなりません。そのディレクトリのパスは、環境変数から参照することができます。
 
-__COACH__: Explain the motivation for using environment variables.
+__COACH__: 環境変数を利用することの背景やメリットを説明しましょう。
 
-The directory where uploaded pictures are currently stored is within the app repository, so it will be deleted when we rebuild. To switch the uploads directory to one that will persist, open `app/uploaders/picture_uploader.rb` and replace
+アップロードされた画像が保存されるディレクトリは現在アプリのリポジトリ内部です。そのため再起動したら消えてしまいます。アップロードディレクトリを永続歴に保管可能な場所に変更するためには、 `app/uploaders/picture_uploader.rb` というファイルを開き、
 
 {% highlight ruby %}
 def store_dir
@@ -174,7 +174,7 @@ def store_dir
 end
 {% endhighlight %}
 
-with
+この箇所を以下のようにします。
 
 {% highlight ruby %}
 def store_dir
@@ -188,7 +188,7 @@ def url
 end
 {% endhighlight %}
 
-Now uploaded images will be stored in a persistent directory, but they will still be available through the same URL as what we were using previously. To make this work, we also need to add a symbolic link on the filesystem from the repository location to the real storage location. To do this, open `.openshift/action_hooks/build` and add the following code:
+これで、画像は永続的なディレクトリにアップロードされるようになります。しかも、これらの画像は以前までと同じような画像URLで利用可能でしょう。この変更を動かすために、私たちはリポジトリの中から永続的ディレクトリに対してシンボリックリンクを追加する必要があります。それをするためには、 `.openshift/action_hooks/build` というファイルに以下のコードを追加します:
 
 {% highlight sh %}
 mkdir -p $OPENSHIFT_DATA_DIR/uploads
@@ -196,9 +196,9 @@ ln -sf $OPENSHIFT_DATA_DIR/uploads $OPENSHIFT_REPO_DIR/public/uploads
 
 {% endhighlight %}
 
-This action hook code will run every time the OpenShift app is built, so the link between the directories will always be there when it's needed.
+このアクションフックのコードは、毎回、OpenShiftのアプリがビルドされるごとに走ります。なので、二つのディレクトリのリンクは、必要なとき常に作られ、存在することになります。
 
-Commit your changes and push them to the cloud:
+変更をコミットし、クラウドにプッシュします:
 
 {% highlight sh %}
 git add --all
@@ -206,9 +206,9 @@ git commit -m "Added OpenShift environment variables"
 git push
 {% endhighlight %}
 
-The images you uploaded before making this change will no longer display, but anything uploaded now will stick around between app rebuilds.
+この変更の前までにあなたのアップロードした画像はもう見ることができません。ですが、今度アップロードされたものは、アプリのデプロイを繰り返しても、永続的に見ることが可能です。
 
-__COACH__: Explain symbolic links.
+__COACH__: シンボリックリンクについて説明してください。
 
 #### Push code to GitHub
 
