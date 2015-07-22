@@ -210,23 +210,21 @@ git push
 
 __COACH__: シンボリックリンクについて説明してください。
 
-#### Push code to GitHub
+#### コードをGitHubにプッシュする
 
-Now that your application is under source control with Git, you may also wish to share a copy with others on a Git repository website such as GitHub. To push your code to a GitHub repository, [create a repository](https://github.com/new) on GitHub and copy the HTTPS string (something like *https://github.com/username/reponame.git*).
+いま、あなたのアプリはGitによって管理されています。GitHubのような、Gitリポジトリのホスティングサービスを使って、あなたのコードを公開したいかもしれません。GitHubにコードをプッシュするには、 [リポジトリを作成し](https://github.com/new) 、HTTPSの文字列をコピーします (たとえば *https://github.com/username/reponame.git* のようなものです)。
 
-Navigate to your OpenShift app repository in the terminal and enter the following commands, replacing the HTTPS location with the string you copied:
+ターミナルで、さきほどのOpenShiftに公開したアプリのリポジトリに行き、HTTPSのURLを先ほどコピーした文字列に変更して、以下のコマンドを発行します:
 
 {% highlight sh %}
 git remote add github https://github.com/username/reponame.git
 git push github master
 {% endhighlight %}
 
-The 'master' branch of the local copy of your repository will be pushed to GitHub. Go to the GitHub website to check it out.
+'master'ブランチが、GitHubにプッシュされます。GitHubのウェブサイトに行って反映をチェックしましょう。
 
-__COACH__: Talk about Git branches and the benefits of open source code.
+__COACH__: Gitのブランチについてと、オープンソースコードの利点について話してください。
 
-### Conclusion
+### まとめ
 
-Your Rails app is now running in the cloud on [OpenShift](https://www.openshift.com/developers). You can push whatever other changes you like and share the URL to show off your app to your friends.
-
-
+あなたのRailsアプリはいま [OpenShift](https://www.openshift.com/developers) クラウド上で走っています。あなたは、今後色々な変更を加え、デプロイすることができますし、アプリのURLを友達にシェアすることができます。
