@@ -36,8 +36,6 @@ pwd
 
 `pwd` ('present working directory') コマンドの結果は、あなたが今 `projects` ディレクトリ(もしくはその他の、プロジェクトの親ディレクトリ)にいるということを示してくれると思います。OpenShiftアプリをクラウド上に作り、そのローカルコピーを手元に持ってくるには、次の子難度をターミナルで実行します。
 
-_NB: This command is for those using Ruby 2.x and Rails 4. If you have installed Ruby 1.9.x, replace `ruby-2.0` in the command with `ruby-1.9`. For Rails 3, change the `--from-code` URL to `https://github.com/openshift/rails-example.git`._
-
 _NB: このコマンドは Ruby 2.x と Rails 4 を利用している方向けのものです。Ruby 1.9.x をインストールしている場合は、コマンド上の `ruby-2.0` を `ruby-1.9` に変更してください。Rails 3では、 `--from-code` のURLを `https://github.com/openshift/rails-example.git` に変更します。_
 
 {% highlight sh %}
