@@ -12,7 +12,7 @@ permalink: openshift
 
 OpenShiftとは、クラウド上のPaaS(Platform as a Service)で、公開サーバ上にアプリケーションを簡単にデプロイすることができるプラットフォームです。これはオープンソースで、Rubyで書かれています。
 
-開始するには、 [OpenShiftオンラインアカウントを作成し]((https://www.openshift.com/app/account/new)) 、3つまでのアプリを無料でデプロイできるようにします。サインアップをしたら、OpenShift RHCクライアントツールを以下のコマンドを発行してインストールしてください。
+開始するには、 [OpenShiftオンラインアカウントを作成し](https://www.openshift.com/app/account/new)、3つまでのアプリを無料でデプロイできるようにします。サインアップをしたら、OpenShift RHCクライアントツールを以下のコマンドを発行してインストールしてください。
 
 {% highlight sh %}
 gem install rhc
