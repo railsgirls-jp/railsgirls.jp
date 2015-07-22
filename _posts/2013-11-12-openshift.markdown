@@ -71,7 +71,7 @@ echo "public/uploads" >> .gitignore
 
 {% highlight sh %}
 git add --all
-git commit -m "First commit of Ideas app"
+git commit -m "アイデアメモアプリの最初のコミット"
 {% endhighlight %}
 
 __COACH__: 使ったGitのコマンドと `.gitignore` について説明しましょう。
@@ -102,7 +102,7 @@ xcopy /y ..\openshiftapp\config\database.yml config
 
 {% highlight sh %}
 git add --all
-git commit -m "Added OpenShift config"
+git commit -m "OpenShiftの設定を追加"
 {% endhighlight %}
 
 #### データベースを変更する
@@ -132,7 +132,7 @@ bundle install --without production
 
 {% highlight sh %}
 git add --all
-git commit -m "Changed production database to PostgreSQL"
+git commit -m "本番環境のデータベースをPostgreSQLに変更"
 {% endhighlight %}
 
 __COACH__: RDB（リレーショナルデータベース）と、 SQLite と PostgreSQL の違いについて話してください。
@@ -202,7 +202,7 @@ ln -sf $OPENSHIFT_DATA_DIR/uploads $OPENSHIFT_REPO_DIR/public/uploads
 
 {% highlight sh %}
 git add --all
-git commit -m "Added OpenShift environment variables"
+git commit -m "OpenShiftの環境変数を追加"
 git push
 {% endhighlight %}
 
