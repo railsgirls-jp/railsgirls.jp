@@ -154,6 +154,34 @@ git push -f --set-upstream openshift master
 
 __Coachより__: Gitのリモートリポジトリについて話してください。
 
+### トラブルシュート
+
+もし、アプリが正常に起動していなかった（`Something went wrong.` などと表示された）場合は、ログをチェックしてみましょう。
+
+以下のコマンドをターミナルで実行すると、クラウドのサーバ内に入ることができます。
+
+{% highlight sh %}
+rhc ssh openshiftapp
+{% endhighlight %}
+
+サーバに無事入ったら、以下のコマンドでログファイルを直接参照することができます。
+
+{% highlight sh %}
+[openshiftapp-udzura.rhcloud.com XXXXXXXX]\> tail -n20 app-root/logs/ruby.log
+{% endhighlight %}
+
+このログに、もし `You have already activated rack 1.5.2, but your Gemfile requires rack 1.6.4. Using bundle exec may solve this. (Gem::LoadError)` というようなメッセージが含まれていたら、サーバ内で以下のコマンドを実行し、エラーを修復することができます。
+
+{% highlight sh %}
+[openshiftapp-udzura.rhcloud.com XXXXXXXX]\> gem install rack -v=1.6.4
+{% endhighlight %}
+
+完了したら、 `exit` と打ってサーバからログアウトします。そしてターミナルで、以下のコマンドを打てば、サーバを再起動することができます。再びブラウザ上で表示を確認してみてください。
+
+{% highlight sh %}
+rhc app restart openshiftapp
+{% endhighlight %}
+
 ### ボーナスステージ
 
 おめでとうございます！　あなたのRailsアプリケーションはいまオンラインで、素晴らしいことに世界中から見ることができます。ここからのセクションは、あなたのアプリをより素晴らしくするために学習できる追加的なステップです。
