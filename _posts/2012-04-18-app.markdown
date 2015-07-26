@@ -166,9 +166,13 @@ table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 {% endhighlight %}
 
- Now make sure you saved your files and refresh the browser to see what was changed. You can also change the HTML & CSS further.
+ファイルがきちんと保存されたことを確認して、何が変わったのかを見るためにブラウザを更新してみましょう。
+さらに、HTMLとCSSに変更を加えることもできます。
 
-In case your Terminal shows you an error message that *sort of* implies there is something wrong with your JavaScript or CoffeeScript, install [nodejs](http://nodejs.org/download/). This issue should not appear when you've used the RailsInstaller (but when you've installed Rails via ```gem install rails```).
+JavaScriptやCoffeeScriptを実行する環境に問題があるというようなエラーメッセージがTerminalに表示された場合、
+[nodejs](http://nodejs.org/download/)をインストールしてください。
+この問題は、RailsInstallerを使っている場合は起こらないはずです。
+(ただし、Railsを```gem install rails```コマンドでインストールしている場合には起こるかもしれません)
 
 **Coachより:** CSSとレイアウトについてちょっと話をしてください。
 
@@ -190,7 +194,7 @@ gem 'carrierwave'
 
 **Coachより:** 何のライブラリがあって、なぜ便利なのかを説明してください。オープンソースソフトウェアが何なのかも説明してください。
 
-Hit `CTRL-C` in the terminal to quit the server.
+サーバーを終了するためには、`CTRL-C`を押します。
 
 Terminal で、次のコマンドを実行してください:
 
@@ -204,10 +208,10 @@ bundle
 rails generate uploader Picture
 {% endhighlight %}
 
-Please start the rails server now.
+それでは、Railsのサーバーを起動してみましょう。
 
-Note: Some people might be using a second terminal to run the rails server continuously.
-If so you need to **restart the Rails server process** now.
+**ノート**: 人によっては、コマンドを入力する用のTerminalとは別のTerminalでRailsのサーバを動かしているかもしれません。
+もしそうなら、**Railsのサーバープロセスを再起動する**必要があります。
 
 `app/models/idea.rb` を開いて、次の行
 
