@@ -70,6 +70,7 @@ and was published on
 ### 他の情報源
 
 * [Thoughtbot Trail-Map](https://github.com/thoughtbot/trail-map) - 様々なトピックについてのガイドです。
+* [Ruby on Rails Tutorial: Learn From Scratch](https://blog.udemy.com/ruby-on-rails-tutorial-learn-from-scratch/) - Railsの様々なパートについての説明や定義です。
 
 > もし、あなたが他の情報源を持っているなら, [私に教えてください※](mailto:daniel@codegestalt.com), 私はこのリストに追加しようと思います。 訳注: ※このアドレスは本家RailsGirlsスタッフのメールアドレスです。英語で送信をお願いします。日本語ページへのご要望の場合は  [こちら](mailto:railsgirls-jp@ruby-no-kai.org) までお願いします。（日本語ページへのご要望は日本語でOKです。）
 
