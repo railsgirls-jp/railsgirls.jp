@@ -239,7 +239,7 @@ Windows Vista およびそれ以前のバージョンでは Atom エディタは
 
 ### *3.* ブラウザを更新する
 
-もし Internet Explorer をお使いでしたら、[Firefox](mozilla.org/firefox) か [Google Chrome](google.com/chrome) をインストールすることをお勧めします。
+もし Internet Explorer をお使いでしたら、[Firefox](https://mozilla.org/firefox) か [Google Chrome](https://google.com/chrome) をインストールすることをお勧めします。
 
 また、[whatbrowser.org](http://whatbrowser.org) を参照して、お使いのブラウザが最新版でなければ更新してください。
 
