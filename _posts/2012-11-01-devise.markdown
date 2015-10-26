@@ -81,10 +81,21 @@ environments ファイルにデフォルトの url オプションを定義し�
 
 User model を作るために bundled generator script を使います。
 
+<div class="os-specific">
+  <div class="nix">
 {% highlight sh %}
-   rails g devise user
-   rake db:migrate
+rails g devise user
+bin/rake db:migrate
 {% endhighlight %}
+  </div>
+
+  <div class="win">
+{% highlight sh %}
+rails g devise user
+ruby bin/rake db:migrate
+{% endhighlight %}
+  </div>
+</div>
 
 **Coachより:** 生成された User モデルについて説明をしてください。フィールドとは何ですか？
 
