@@ -280,7 +280,7 @@ rails server
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 
-### *3.* Update your browser
+### *3.* ブラウザを更新する
 
 [whatbrowser.org](http://whatbrowser.org) を参照して、お使いのブラウザが最新版でなければ更新してください。
 
