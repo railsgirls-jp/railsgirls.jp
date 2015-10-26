@@ -17,9 +17,20 @@ rails g scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
 これで新しくコメントテーブルが作成された事をデータベースに教えてあげるためのマイグレーションファイルが作成されました。
 マイグレーションを実行するには下記のコマンドを実行します。
+
+<div class="os-specific">
+  <div class="nix">
 {% highlight sh %}
-rake db:migrate
+bin/rake db:migrate
 {% endhighlight %}
+  </div>
+
+  <div class="win">
+{% highlight sh %}
+ruby bin/rake db:migrate
+{% endhighlight %}
+  </div>
+</div>
 
 ## *2.*モデルに関係 (relations) を追加する
 
