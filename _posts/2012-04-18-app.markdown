@@ -47,7 +47,7 @@ cd railsgirls
 rails server
 {% endhighlight %}
 
-自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。(Nitorous.IOなどのクラウドサービスの場合は、URLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
+自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。(Nitorous.IOなどのクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直した後でURLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
 
 "Welcome aboard" の画面が表示されれば、さきほど作ったアプリは正しく動作しています。
 
@@ -85,7 +85,7 @@ rails server
   </div>
 </div>
 
-ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(Nitrous のようなクラウドサービスの場合は、メニューから 'preview' - 'port 3000' を選び、アドレス欄の末尾に '/ideas' を加えてアクセスしてください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
+ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(Nitrous のようなクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直してメニューから 'preview' - 'port 3000' を選び、アドレス欄の末尾に '/ideas' を加えてアクセスしてください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
 
 いろいろクリックしてみたりしたら、 CTRL-C を押して、サーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
