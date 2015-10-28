@@ -128,7 +128,12 @@ group :production do
 end
 {% endhighlight %}
 
-そして、 `bundle install --without production` を実行してセットアップしてください。
+そして、ターミナル上で次のコマンドを実行してセットアップしてください。
+
+{% highlight sh %}
+bundle install --without production
+{% endhighlight %}
+
 
 __Coachより__: RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
 
@@ -167,7 +172,13 @@ __Coachより__: Heroku におけるログの仕組みについて調べてみ�
 
 #### アプリのcreate
 
-Heroku のアプリを作りましょう。ターミナルで `heroku create` と入力したら、次のようなものが見られます。 :
+Heroku のアプリを作りましょう。ターミナルで次のコマンドを実行してください。 :
+
+{% highlight sh %}
+heroku create
+{% endhighlight %}
+
+次のようなものが見られます。 :
 
 {% highlight sh %}
 Creating evening-sky-7498... done, stack is cedar
@@ -179,7 +190,13 @@ Git remote heroku added
 
 #### コードをpush
 
-さて、 Heroku にコードを送信しましょう。 `git push heroku master` と入力してください。そうすると、こんな出力が見られるはずです。 :
+さて、 Heroku にコードを送信しましょう。 ターミナルで次のコマンドを実行してください。 :
+
+{% highlight sh %}
+git push heroku master
+{% endhighlight %}
+
+そうすると、こんな出力が見られるはずです。 :
 
 {% highlight sh %}
 Counting objects: 134, done.
@@ -203,9 +220,17 @@ Total 134 (delta 26), reused 0 (delta 0)
 
 #### データベースのマイグレート
 
-そして、ワークショップでローカルにやったように、データベースのマイグレートをする必要があります。 : `heroku run rake db:migrate`
+そして、ワークショップでローカルにやったように、データベースのマイグレートをする必要があります。 :
 
-そのコマンドが実行されたら、 url でアプリを見ることができます。このアプリの例では、 [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com) です。もしくは、ターミナルで `heroku open` と入力すれば、そのページを見に行くことができます。
+{% highlight sh %}
+heroku run rake db:migrate
+{% endhighlight %}
+
+そのコマンドが実行されたら、 url でアプリを見ることができます。このアプリの例では、 [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com) です。もしくは、ターミナルで次のコマンドを実行すれば、そのページを見に行くことができます。
+
+{% highlight sh %}
+heroku open
+{% endhighlight %}
 
 #### おわりに
 
