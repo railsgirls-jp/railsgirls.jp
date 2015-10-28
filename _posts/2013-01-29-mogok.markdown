@@ -32,7 +32,7 @@ Gemfileに以下のGemが記述されていない場合には追記します。(
 
     gem 'therubyracer'
     gem 'sqlite3', group: :development
-    gem 'mysql2',  group: :production
+    gem 'mysql2', '~> 0.3.20',  group: :production
 
 Gemfile.lock をアップデートするため、一度 `bundle install` を実行します。このとき、 `--without production` オプションをつけると、 `mysql2` gem を手元PCにインストールしなくて済みます。
 
@@ -43,17 +43,15 @@ Gemfile.lock をアップデートするため、一度 `bundle install` を実�
 
 ##### 書き換え前
 
-    config.serve_static_assets = false
     config.assets.compile = false
 
 ##### 書き換え後
 
-    config.serve_static_assets = true
     config.assets.compile = true
 
 
 ## 3. 作成したRailsアプリケーションをローカルのgitリポジトリに登録しよう
-[アプリケーションを作成したディレクトリで以下のgitコマンドを実行します](https://portal.mogok.jp/documents/rails_deployment_guide/create_git_repository/)
+[アプリケーションを作成したディレクトリで以下のgitコマンドを実行します](http://mogok.jp/documents/create_git_repository/)
 
     > git init
     > git add .
@@ -95,9 +93,20 @@ Gemfile.lock をアップデートするため、一度 `bundle install` を実�
 
 - 登録したユーザIDとパスワードが求められます
 
-[参考：アプリケーション名の決定とプログラムの登録(MOGOKオンラインマニュアル)](https://portal.mogok.jp/documents/rails_deployment_guide/create_mogok_app/)
+[参考：MOGOKアプリケーションの作成(MOGOKオンラインマニュアル)](http://mogok.jp/documents/create_mogok_app)
 
 ## 5. MOGOKへとアプリケーションのデプロイをしましょう
+
+### MOGOK上で必要な設定をします。
+
+以下のコマンドを実行します。
+
+    > rake secret
+    > mogok env set SECRET_KEY_BASE （rake secretで表示されたランダムな文字列）
+
+Windowsでコマンドプロンプトを使っている場合はタイトルバーを右クリックして、`編集`を選択すると`範囲指定`が選べます。それを同様に`編集`から`貼り付け`でランダムな文字列をペーストしてください。
+
+[環境変数管理メニュー](http://mogok.jp/documents/webui_env_var)からも同じ設定が行えます。
 
 ### サーバ上でbundle installを実行する為に以下のMOGOKコマンドを実行します。
 
@@ -109,8 +118,7 @@ Gemfile.lock をアップデートするため、一度 `bundle install` を実�
 
 - 「Package creating... Done!」が表示されれば、bundle installが成功になります。
 
-[参考：デプロイとdb:migrateの実行(MOGOKオンラインマニュアル)](https://portal.mogok.jp/documents/rails_deployment_guide/deployment/)
-
+[参考：デプロイの実行(MOGOKオンラインマニュアル)](http://mogok.jp/documents/deployment)
 
 ### rake db:migrateの実行
 
@@ -119,7 +127,6 @@ Gemfile.lock をアップデートするため、一度 `bundle install` を実�
 - これでMOGOK上で、db:migrateが実行されます
 
 ![mogok build](http://dl.dropbox.com/u/908641/starting-mogok/fig_deployment_2.png)
-
 
 ## 6. MOGOKでアプリケーションを公開しましょう
 
@@ -130,7 +137,9 @@ Gemfile.lock をアップデートするため、一度 `bundle install` を実�
 
 ## 公開アプリケーションの確認
 
-> mogok info` を実行します。
+以下のコマンドを実行します。
+
+    > mogok info
 
 ![mogok info](https://dl.dropbox.com/u/10442024/mogolog/20121220/20121220-9.png)
 
