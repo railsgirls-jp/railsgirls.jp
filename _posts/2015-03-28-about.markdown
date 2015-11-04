@@ -40,7 +40,7 @@ Rails Girls イベントを開催するにあたって、スポンサー費用�
   * もし、スポンサーが集まらない場合、費用に不安がある場合は railsgirlsjp-invoice at googlegroups.com までご相談ください、他の RailsGirls イベントの余剰資金や地域によらないスポンサーからの支援金で補助が可能な場合があります。
  * イベント開催 1 週間前くらいをめどにイベントの開催費用、スポンサーを確定させ、 railsgirlsjp-invoice at googlegroups.com まで連絡します
   * この際に、スポンサーの請求書送付先、担当者の連絡先をご連絡ください
- * イベント開催時はオーガナイザーまたはイベントの会計担当により建て替えてください
+ * イベント開催時はオーガナイザーまたはイベントの会計担当により立て替えてください
   * 立替金の用意が難しい場合は railsgirlsjp-invoice at googlegroups.com までご相談ください
  * イベント開催後 railsgirlsjp-invoice at googlegroups.com に領収書の pdf 、またはレシートの画像などを添付し、立替費用の総額と振り込み先を連絡いただければ、RailsGirls Japan の口座より経費を精算します
  * Ruby の会よりスポンサー宛へ請求書を発行し、Rails Girls Japan とともにスポンサー費用の回収を代行します
