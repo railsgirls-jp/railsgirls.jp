@@ -55,7 +55,7 @@ Rails Girls Japan のメンバーは以下のメンバーです。
  * 柴田 博志: [hsbt](https://github.com/hsbt) (会計)
  * 鳥井 雪: [yakitorii](https://github.com/yakitorii)
  * 江森 真由美: [emorima](https://github.com/emorima)
- * @springaki (会計)
+ * Aki: [springaki](https://github.com/springaki)(会計)
  * @yada-ITA
  * Sho Hashimoto: [sho-h](https://github.com/sho-h)
  * 原田　洋子 : [yokolet](https://github.com/yokolet)<br/>
