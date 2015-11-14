@@ -56,7 +56,7 @@ Heroku Toolbelt を無事インストールできたら、ターミナル（Mac�
 heroku login
 {% endhighlight %}
 
-`Enter your Heroku credentials.（heroku の認証情報を入力してください）` と言われるので、先ほど登録したメールアドレスとパスワードを入力します。 
+`Enter your Heroku credentials.（heroku の認証情報を入力してください）` と言われるので、先ほど登録したメールアドレスとパスワードを入力します。
 
 {% highlight sh %}
 heroku login
@@ -128,13 +128,6 @@ group :production do
 end
 {% endhighlight %}
 
-そして、ターミナル上で次のコマンドを実行してセットアップしてください。
-
-{% highlight sh %}
-bundle install --without production
-{% endhighlight %}
-
-
 __Coachより__: RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
 
 #### rails\_12factor の導入
@@ -160,9 +153,14 @@ group :production do
 end
 {% endhighlight %}
 
-もう一度、 `bundle install --without production` を実行してセットアップしてください。
+そして、ターミナル上で次のコマンドを実行してセットアップしてください。
 
 {% highlight sh %}
+bundle install --without production
+{% endhighlight %}
+
+{% highlight sh %}
+git add .
 git commit -a -m "Added rails_12factor gem and updated Gemfile.lock"
 {% endhighlight %}
 
