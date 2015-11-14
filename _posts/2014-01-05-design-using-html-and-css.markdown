@@ -53,7 +53,7 @@ table により磨きをかけるために、twitter [Bootstrap](http://www.boot
 以下のコードを使って、画像のサイズを調整しましょう。
 
 {% highlight erb %}
-<%= image_tag(idea.picture_url, width: 600px) if idea.picture.present? %>
+<%= image_tag(idea.picture_url, width: 600) if idea.picture.present? %>
 {% endhighlight %}
 
 width を変更してみて、何が起こるか見てみましょう。
