@@ -26,7 +26,7 @@ body { padding-top: 100px; }
 body { padding-top: 60px; }
 {% endhighlight %}
 
-最後に `app/assets/stylesheets/scaffolds.css.scss` を削除します。これは Rails が標準で作成するファイルで私達にはもう必要の無いものです。
+最後に `app/assets/stylesheets/scaffolds.scss` を削除します。これは Rails が標準で作成するファイルで私達にはもう必要の無いものです。
 
 ここまで来たら、[http://localhost:3000/ideas](http://localhost:3000/ideas)をリロードしてみましょう。何かが変わったことが確認出来ると思いますが、格好良くするためにはまだやることがありそうです。
 
