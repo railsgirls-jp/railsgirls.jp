@@ -24,13 +24,15 @@ permalink: heroku
 
 <img src="../images/heroku_confirmation.jpg" />
 
+Password（パスワード）と Confirm Password（パスワード再入力）にパスワードを入力します。
 
-登録しようとしているメールアドレスに間違いがないか確認したら、Password（パスワード）と Confirm Password（パスワード再入力）にパスワードを入力します。
+本人確認の為、SMS(携帯電話のショートメッセージサービス)を受け取れる電話番号の入力が必要です。電話番号が 090-1234-5678 の場合 日本の国番号 +81 と 電話番号の頭0を除いた "+81 90 1234 5678"と入力します。SMSに認証コードが届かない場合は携帯電話の迷惑メール設定などを再度確認してください。
 
 「Sign me up for Heroku email…」は heroku から寄せられる更新情報やイベント情報など、耳寄りな情報をメールで受け取りたい場合にチェックを入れます。
 
-「Save」ボタンを押すと登録完了です。
+「Send SMS confirmation code」ボタンを押すと SMSに認証コードが送られます。
 
+SMSに届いた認証コードを次の画面で入力すると登録完了です。
 
 #### Heroku Toolbelt をインストールしよう
 Heroku でコマンドライン操作を行うためのアプリケーションである、Heroku Toolbelt をインストールします。
