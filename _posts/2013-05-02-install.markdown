@@ -222,7 +222,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 {% endhighlight %}
 
-ファイルを編集し終わったら、再びコマンドプロンプトで `budle update` を実行してみてください。
+ファイルを編集し終わったら、再びコマンドプロンプトで `bundle update` を実行してみてください。
 
 ### *2.* コードを編集するためのテキストエディタが必要になります。
 
