@@ -209,7 +209,8 @@ gem -v
 
 もし RailsInstaller を実行した後でこのエラーが出たときには、`Gemfile` というファイルをちょっとだけ編集する必要があります:
 
-そのファイルの最後の方に下記のような行があるはずです:
+そのファイルの最後の方に下記のような行があるはずです。
+もしなければ付け加えましょう:
 
 {% highlight sh %}
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
