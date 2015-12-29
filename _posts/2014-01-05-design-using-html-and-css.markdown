@@ -37,7 +37,7 @@ permalink: design-html-css
 
 ## *2.*table をデザインしよう
 
-table により磨きをかけるために、twitter [Bootstrap](http://www.bootcss.com/) を使います。
+table により磨きをかけるために、twitter [Bootstrap](http://getbootstrap.com) を使います。
 この行を `app/views/ideas/index.html.erb` から見つけて、以下のように置き換えてください。：
 
 {% highlight html %}
