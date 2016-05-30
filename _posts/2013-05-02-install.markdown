@@ -94,7 +94,7 @@ rbenv global 2.2.3
 #### 3-A-6. Railsのインストール:
 
 {% highlight sh %}
-gem i rails --no-ri --no-rdoc
+gem i rails --no-document
 {% endhighlight %}
 
 #### *3-B.* 使用している OS Xのバージョン用 RailsInstaller ダウンロードします。(OS X10.6, 10.7, 10.8の場合)
@@ -110,7 +110,7 @@ gem i rails --no-ri --no-rdoc
 もしもRailsのバージョンが最新ではない場合は、以下のコマンドをターミナルから実行することでバージョンアップできます。
 
 {% highlight sh %}
-gem update rails --no-ri --no-rdoc
+gem update rails --no-document
 {% endhighlight %}
 
 Rails アプリを作成するコマンドを実行してインストールと Rails のバージョンアップが問題なく完了した事を確認してください。
@@ -151,7 +151,7 @@ rails -v
 もしもRailsのバージョンが4よりも小さい場合は 以下のコマンドを "Command Prompt with Ruby on Rails" から実行することでバージョンアップできます。
 
 {% highlight sh %}
-gem update rails --no-ri --no-rdoc
+gem update rails --no-document
 {% endhighlight %}
 
 Rails アプリを作成するコマンドを実行してインストールと Rails のバージョンアップが問題なく完了した事を確認してください。
@@ -185,7 +185,7 @@ gem -v
 
 {% highlight sh %}
 gem install --local c:\rubygems-update-2.2.3.gem
-update_rubygems --no-ri --no-rdoc
+update_rubygems --no-document
 gem uninstall rubygems-update -x
 {% endhighlight %}
 
