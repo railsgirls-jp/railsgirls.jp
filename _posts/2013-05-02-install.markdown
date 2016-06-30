@@ -75,7 +75,7 @@ source ~/.bash_profile
 "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 2.2.3
+rbenv install 2.2.5
 {% endhighlight %}
 
 ※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
@@ -88,13 +88,13 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### 3-A-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
-rbenv global 2.2.3
+rbenv global 2.2.5
 {% endhighlight %}
 
 #### 3-A-6. Railsのインストール:
 
 {% highlight sh %}
-gem i rails --no-document
+gem install rails --no-document
 {% endhighlight %}
 
 #### *3-B.* 使用している OS Xのバージョン用 RailsInstaller ダウンロードします。(OS X10.6, 10.7, 10.8の場合)
@@ -184,7 +184,7 @@ gem -v
 [ruby-gems-update gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.2.3.gem) をダウンロードし、それを `c:\rubygems-update-2.2.3.gem` として保存して実行してください:
 
 {% highlight sh %}
-gem install --local c:\rubygems-update-2.2.3.gem
+gem install --local c:\\rubygems-update-2.2.3.gem
 update_rubygems --no-document
 gem uninstall rubygems-update -x
 {% endhighlight %}
@@ -244,6 +244,22 @@ Windows Vista およびそれ以前のバージョンでは Atom エディタは
 
 また、[whatbrowser.org](http://whatbrowser.org) を参照して、お使いのブラウザが最新版でなければ更新してください。
 
+### *4.* Install node
+
+これは厳密に言うと必要ではありませんが、 後で起こる可能性のある `ExecJS::RuntimeError` での問題を回避してくれます。 ([参考 stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial))
+
+* こちらのサイト [https://nodejs.org/](https://nodejs.org/) から、node をインストールします。
+* Windowsユーザの方: Rails Command Shell をもう一度 開いてください。
+
+node のバージョンをチェックしましょう。
+
+{% highlight sh %}
+node --version
+{% endhighlight %}
+
+バージョンが `0.12` より大きいことを確かめてください。
+
+
 <hr />
 
 ## <a id="setup_for_linux">Linux 用セットアップ</a>
@@ -255,6 +271,7 @@ Windows Vista およびそれ以前のバージョンでは Atom エディタは
 #### Ubuntuの場合:
 
 {% highlight sh %}
+sudo apt-get install curl
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
