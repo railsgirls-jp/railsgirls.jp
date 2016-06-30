@@ -9,17 +9,16 @@ permalink: design-html-css
 `app/assets/stylesheets/application.css` の最後に以下のコードを追加してください。：
 
 {% highlight css %}
-.navbar {
+nav.navbar {
   min-height: 38px;
   background-color: #f55e55;
+  background-image: none;
 }
 {% endhighlight %}
 
 では、ページを更新して変更を確認しましょう。
 それから、ヘッダーの色やフォントをいろいろ変えて、試してみましょう。
 [http://color.uisdc.com/](http://color.uisdc.com/) では、色のリファレンスを見ることができます。
-
-**コーチより：** `display` プロパティ、そして inline と block 要素について話してみましょう。
 
 次に、これらの行をコードの一番下に追加します。：
 
