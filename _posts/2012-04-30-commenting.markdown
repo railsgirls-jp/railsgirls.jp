@@ -66,10 +66,13 @@ belongs_to :idea
 app/views/ideas/show.html.erb を開いて、
 
 {% highlight erb %}
-<%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
+</p>
 {% endhighlight %}
 
-この行のあとに、次のコードを追加します。
+このあとに、次のコードを追加します。
 
 {% highlight erb %}
 <h3>Comments</h3>
@@ -81,29 +84,32 @@ app/views/ideas/show.html.erb を開いて、
     <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></p>
   </div>
 <% end %>
-<%= render 'comments/form' %>
+<%= render 'comments/form', comment: @comment %>
 {% endhighlight %}
 
-`app/controllers/ideas_controller.rb` の show action には、
+`app/controllers/ideas_controller.rb` の show action の、
 
 {% highlight ruby %}
-@idea = Idea.find(params[:id])
+def show
+end
 {% endhighlight %}
 
-この次のあとに、こちらを追加します。
+この部分を以下のように書き換えます。
 
 {% highlight ruby %}
-@comments = @idea.comments.all
-@comment = @idea.comments.build
+def show
+  @comments = @idea.comments.all
+  @comment = @idea.comments.build
+end
 {% endhighlight %}
 
 `app/views/comments/_form.html.erb` を開いて、
 
 {% highlight erb %}
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
+<div class="field">
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+</div>
 {% endhighlight %}
 
 このあとに、次のタグを追加します。
@@ -116,7 +122,7 @@ app/views/ideas/show.html.erb を開いて、
 
 {% highlight erb %}
 <div class="field">
-  <%= f.label :idea_id %><br>
+  <%= f.label :idea_id %>
   <%= f.number_field :idea_id %>
 </div>
 {% endhighlight %}
