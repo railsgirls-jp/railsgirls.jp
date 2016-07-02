@@ -45,7 +45,7 @@ environments ファイルにデフォルトの url オプションを定義し�
 `config/environments/development.rb` を開いて次の行を追加しましょう。
 
 {% highlight ruby %}
-   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+config.action_mailer.default_url_options = { host: 'localhost:3000' }
 {% endhighlight %}
 
 `end` と書かれているところの前に追加してください。
@@ -112,20 +112,21 @@ Rails のサーバーが起動している事を確認したら、[http://localh
 
 {% highlight erb %}
 <p class="navbar-text pull-right">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
+  <% if user_signed_in? %>
+    Logged in as <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path, class: 'navbar-link' %> |
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path, class: 'navbar-link'  %> |
+    <%= link_to "Login", new_user_session_path, class: 'navbar-link'  %>
+  <% end %>
+</p>
 {% endhighlight %}
 
 これらを、次の行の上に追加します。
 
 {% highlight erb %}
-<ul class="nav">
+<ul class="nav navbar-nav">
   <li class="active"><a href="/ideas">Ideas</a></li>
 </ul>
 {% endhighlight %}
