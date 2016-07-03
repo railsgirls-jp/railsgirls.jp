@@ -64,7 +64,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 {% highlight sh %}
 brew update
-brew install rbenv rbenv-gem-rehash ruby-build
+brew install rbenv ruby-build
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
@@ -75,7 +75,7 @@ source ~/.bash_profile
 "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 2.2.5
+rbenv install 2.3.1
 {% endhighlight %}
 
 ※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
@@ -88,7 +88,7 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### 3-A-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
-rbenv global 2.2.5
+rbenv global 2.3.1
 {% endhighlight %}
 
 #### 3-A-6. Railsのインストール:
@@ -291,7 +291,7 @@ rails new railsgirls
 cd railsgirls
 rails server
 {% endhighlight %}
- 
+
 ### *2.* コードを編集するためのテキストエディタが必要になります。
 
 このワークショップでは Sublime Text エディタを推奨しています。
