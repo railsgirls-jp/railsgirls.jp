@@ -49,7 +49,7 @@ rails server
 
 自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。(Nitorous.IOなどのクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直した後でURLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
 
-"Welcome aboard" の画面が表示されれば、さきほど作ったアプリは正しく動作しています。
+"Yay! You’re on Rails!" の画面が表示されれば、さきほど作ったアプリは正しく動作しています。
 
 Terminal 上で CTRL-C（CTRL(Control)キーとCを同時に押す)を実行してサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
