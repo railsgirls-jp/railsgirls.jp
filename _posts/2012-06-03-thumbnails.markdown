@@ -66,7 +66,7 @@ end
 `app/views/ideas/index.html.erb` を開いて、もし画像がアップロードされていればリサイズした画像を表示するようにしましょう。
 
 {% highlight erb %}
-<td><%= idea.picture %></td>
+<td><%= image_tag idea.picture_url, width: '100%' if idea.picture.present?%></td>
 {% endhighlight %}
 
 を下のように変更します。
