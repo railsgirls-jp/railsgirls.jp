@@ -85,7 +85,7 @@ User model を作るために bundled generator script を使います。
   <div class="nix">
 {% highlight sh %}
 rails g devise user
-bin/rake db:migrate
+rails db:migrate
 {% endhighlight %}
   </div>
 
