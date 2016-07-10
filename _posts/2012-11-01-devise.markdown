@@ -25,7 +25,7 @@ gem 'devise'
 そして、ターミナルもしくはコマンドプロンプト(Windows用)を開いてアプリのディレクトリへ移動し、次のコマンドを実行しましょう。
 
 {% highlight sh %}
-bundle install
+bundle
 {% endhighlight %}
 
 gem のインストールができました。Rails のサーバーを再起動するのを忘れずに!
