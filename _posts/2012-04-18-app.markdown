@@ -240,13 +240,13 @@ mount_uploader :picture, PictureUploader
 場合によっては、 *TypeError: can't cast ActionDispatch::Http::UploadedFile to string* というエラーが起きることもあります。エラーになった場合は、 `app/views/ideas/_form.html.erb` の
 
 {% highlight erb %}
-<%= form_for(@idea) do |f| %>
+<%= form_for(idea) do |f| %>
 {% endhighlight %}
 
 上記のコードを、以下のように変更してみてください。
 
 {% highlight erb %}
-<%= form_for(@idea, html: {multipart: true}) do |f| %>
+<%= form_for(idea, html: {multipart: true}) do |f| %>
 {% endhighlight %}
 
 画像をアップロードするとわかりますが、これだけでは見栄えのいいものではありません。ファイルのpathだけを表示してるので、これもいじってみましょう。
