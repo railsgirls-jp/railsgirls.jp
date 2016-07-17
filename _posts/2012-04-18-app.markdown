@@ -69,21 +69,10 @@ rails generate scaffold idea name:string description:text picture:string
 
 scaffold は新しいファイルをプロジェクトのディレクトリに追加しますが、意図したように動作させるためには以下の 2 つのコマンドを実行してデータベースの更新と Rails server プロセスをリスタートする必要があります。
 
-<div class="os-specific">
-  <div class="nix">
 {% highlight sh %}
 rails db:migrate
 rails server
 {% endhighlight %}
-  </div>
-
-  <div class="win">
-{% highlight sh %}
-ruby bin/rake db:migrate
-rails server
-{% endhighlight %}
-  </div>
-</div>
 
 ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(Nitrous のようなクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直してメニューから 'preview' - 'port 3000' を選び、アドレス欄の末尾に '/ideas' を加えてアクセスしてください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
 
