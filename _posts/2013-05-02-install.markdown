@@ -256,10 +256,10 @@ Windows Vista およびそれ以前のバージョンでは Atom エディタは
 
 ### *4.* Install node
 
-これは厳密に言うと必要ではありませんが、 後で起こる可能性のある `ExecJS::RuntimeError` での問題を回避してくれます。 ([参考 stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial))
+これは厳密に言うと必要ではありませんが、 後で起こる可能性のある `ExecJS::RuntimeError` や `オブジェクトでサポートされていないプロパティまたはメソッドです` などの問題を回避してくれます。 ([参考 stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial))
 
-* こちらのサイト [https://nodejs.org/](https://nodejs.org/) から、node をインストールします。
-* Windowsユーザの方: Rails Command Shell をもう一度 開いてください。
+* こちらのサイト [https://nodejs.org/](https://nodejs.org/) から、LTS版をダウンロードし、インストールします。
+* `Command Prompt with Ruby on Rails` をもう一度開いてください。
 
 node のバージョンをチェックしましょう。
 
@@ -267,8 +267,7 @@ node のバージョンをチェックしましょう。
 node --version
 {% endhighlight %}
 
-バージョンが `0.12` より大きいことを確かめてください。
-
+バージョンが表示されればOKです。
 
 <hr />
 
