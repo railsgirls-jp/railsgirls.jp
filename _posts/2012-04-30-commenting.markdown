@@ -21,7 +21,7 @@ rails g scaffold comment user_name:string body:text idea_id:integer
 <div class="os-specific">
   <div class="nix">
 {% highlight sh %}
-bin/rake db:migrate
+rails db:migrate
 {% endhighlight %}
   </div>
 

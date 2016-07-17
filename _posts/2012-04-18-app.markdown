@@ -72,7 +72,7 @@ scaffold は新しいファイルをプロジェクトのディレクトリに�
 <div class="os-specific">
   <div class="nix">
 {% highlight sh %}
-bin/rake db:migrate
+rails db:migrate
 rails server
 {% endhighlight %}
   </div>
