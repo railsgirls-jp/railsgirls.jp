@@ -139,28 +139,82 @@ Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタ
 
 ### *1.* Install Rails
 
-[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.1.0.exe) をダウンロードして、実行します。
+[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.0.exe) をダウンロードして、実行します。
 インストールのオプションは全てデフォルトを選択します。
 
-`Command Prompt with Ruby on Rails`から以下のコマンドを実行します:
+RailsInstaller3.2.0の問題を解決するために`Command Prompt with Ruby on Rails`から以下のコマンドを実行します。
+
+*コーチの方へ*: RailsInstaller3.2.0にはインストーラのバグがあり、railsコマンドなどで「指定されたパスが見つかりません。」エラーが起きます。問題の詳細は、インストール時のrails.bat, bundle.bat 中のパスが正しくないというものです。([github issue ページ](https://github.com/railsinstaller/railsinstaller-windows/issues/76)) rake.bat をrails.bat, bundle.bat としてコピーすることで修正できます。
+
+{% highlight sh %}
+cd C:\RailsInstaller\Ruby2.2.0\bin
+copy rake.bat rails.bat
+copy rake.bat bundle.bat
+{% endhighlight %}
+
+次に、Railsのバージョンを確認します。`Command Prompt with Ruby on Rails`から以下のコマンドを実行します。
 
 {% highlight sh %}
 rails -v
 {% endhighlight %}
 
-もしもRailsのバージョンが4よりも小さい場合は 以下のコマンドを "Command Prompt with Ruby on Rails" から実行することでバージョンアップできます。
+もしもRailsのバージョンが5よりも小さい場合は 以下のコマンドを実行することでバージョンアップできます。
 
 {% highlight sh %}
 gem update rails --no-document
 {% endhighlight %}
 
-Rails アプリを作成するコマンドを実行してインストールと Rails のバージョンアップが問題なく完了した事を確認してください。
+### *2.* コードを編集するためのテキストエディタが必要になります。
+
+このワークショップでは Atom エディタを推奨しています。
+
+* [Atom エディタをダウンロードしてインストールする](https://github.com/atom/atom/releases/latest)
+  * 上記リンクから zip ファイルをダウンロードして展開します
+  * Atom フォルダを Program Files フォルダへコピーします
+  * コピーしたフォルダから atom を起動します
+
+Windows Vista およびそれ以前のバージョンでは Atom エディタは非対応ですが、[Sublime Text エディタ](http://www.sublimetext.com/2) を利用可能です。(※Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題があります。気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールしてください。[Sublime Text 日本語入力パッチ](https://github.com/chikatoike/IMESupport/archive/master.zip)をダウンロードします。Sublime Text アプリメニューの Preferences から Browse Packeges を選び、フォルダを表示させます。 ダウンロードしたzipを解凍してできたフォルダ(IMESupport-master)をここへコピーします。Sublime Text が起動している場合は再起動します。)
+
+これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
+
+### *3.* ブラウザを更新する
+
+もし Internet Explorer をお使いでしたら、[Firefox](https://mozilla.org/firefox) か [Google Chrome](https://google.com/chrome) をインストールすることをお勧めします。
+
+また、[whatbrowser.org](http://whatbrowser.org) を参照して、お使いのブラウザが最新版でなければ更新してください。
+
+### *4.* Install node
+
+これは厳密に言うと必要ではありませんが、 後で起こる可能性のある `ExecJS::RuntimeError` や `オブジェクトでサポートされていないプロパティまたはメソッドです` などの問題を回避してくれます。 ([参考 stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial))
+
+* こちらのサイト [https://nodejs.org/](https://nodejs.org/) から、LTS版をダウンロードし、インストールします。
+* `Command Prompt with Ruby on Rails` をもう一度開いてください。
+
+node のバージョンをチェックしましょう。
+
+{% highlight sh %}
+node --version
+{% endhighlight %}
+
+バージョンが表示されればOKです。
+
+### *5.* 動作確認
+
+Rails アプリを作成するコマンドを実行して環境構築が問題なく完了した事を確認してください。
 
 {% highlight sh %}
 rails new railsgirls
 cd railsgirls
 rails server
 {% endhighlight %}
+
+ブラウザのURL欄に `http://localhost:3000` と入力して、'Yay! You're on Rails!' 画面が出れば成功です。
+
+これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
+
+*コーチの方へ*:
+
+scaffold コマンドで作った画面で`ExecJS::RuntimeError`などのエラーが起こる場合があるため、scaffoldコマンドを実行してデータを登録して問題ないことまで確認するとより確実です。
 
 ## 出るかもしれないエラー
 
@@ -224,41 +278,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 {% endhighlight %}
 
 ファイルを編集し終わったら、再びコマンドプロンプトで `bundle update` を実行してみてください。
-
-### *2.* コードを編集するためのテキストエディタが必要になります。
-
-このワークショップでは Atom エディタを推奨しています。
-
-* [Atom エディタをダウンロードしてインストールする](https://github.com/atom/atom/releases/latest)
-  * 上記リンクから zip ファイルをダウンロードして展開します
-  * Atom フォルダを Program Files フォルダへコピーします
-  * コピーしたフォルダから atom を起動します
-
-Windows Vista およびそれ以前のバージョンでは Atom エディタは非対応ですが、[Sublime Text エディタ](http://www.sublimetext.com/2) を利用可能です。(※Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題があります。気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールしてください。[Sublime Text 日本語入力パッチ](https://github.com/chikatoike/IMESupport/archive/master.zip)をダウンロードします。Sublime Text アプリメニューの Preferences から Browse Packeges を選び、フォルダを表示させます。 ダウンロードしたzipを解凍してできたフォルダ(IMESupport-master)をここへコピーします。Sublime Text が起動している場合は再起動します。)
-
-これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
-
-### *3.* ブラウザを更新する
-
-もし Internet Explorer をお使いでしたら、[Firefox](https://mozilla.org/firefox) か [Google Chrome](https://google.com/chrome) をインストールすることをお勧めします。
-
-また、[whatbrowser.org](http://whatbrowser.org) を参照して、お使いのブラウザが最新版でなければ更新してください。
-
-### *4.* Install node
-
-これは厳密に言うと必要ではありませんが、 後で起こる可能性のある `ExecJS::RuntimeError` での問題を回避してくれます。 ([参考 stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial))
-
-* こちらのサイト [https://nodejs.org/](https://nodejs.org/) から、node をインストールします。
-* Windowsユーザの方: Rails Command Shell をもう一度 開いてください。
-
-node のバージョンをチェックしましょう。
-
-{% highlight sh %}
-node --version
-{% endhighlight %}
-
-バージョンが `0.12` より大きいことを確かめてください。
-
 
 <hr />
 
