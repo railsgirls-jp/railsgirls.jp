@@ -203,7 +203,7 @@ rails generate uploader Picture
 `app/models/idea.rb` を開いて、次の行
 
 {% highlight ruby %}
-class Idea < ActiveRecord::Base
+class Idea < ApplicationRecord
 {% endhighlight %}
 
 の直後に、
