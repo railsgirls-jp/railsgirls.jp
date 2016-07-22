@@ -11,37 +11,29 @@ permalink: heroku
 ### Heroku の準備
 
 #### Heroku のアカウントを作成しよう
+
 アカウントの作成はもちろん無料です。
 
-[ユーザ登録画面](https://id.heroku.com/signup)からアカウントを作成しましょう。
+[ユーザ登録画面](https://signup.heroku.com/)からアカウントを作成しましょう。
 
-<img src="../images/heroku_sign_up.jpg" />
+<img src="../images/heroku_sign_up.png" />
 
+「First name」に名前、「Last name」に苗字、「Email」にメールアドレス、「Company name」に勤務先や所属を入力し、国を選択、言語として Ruby を選択して「Create Free Account」ボタンを押します。
 
-「Email」欄にメールアドレスを入力して「Sign Up」ボタンを押します。
+しばらくすると入力したメールアドレスに「Confirm your account on Heroku」という件名のメールが届くので、本文中の activate 用の URL をクリックします。
 
-しばらく待つと、確認＆登録用URL付きメールが届きますので、このURLにアクセスしましょう。
+<img src="../images/heroku_password.png" />
 
-<img src="../images/heroku_confirmation.jpg" />
-
-Password（パスワード）と Confirm Password（パスワード再入力）にパスワードを入力します。
-
-本人確認の為、SMS(携帯電話のショートメッセージサービス)を受け取れる電話番号の入力が必要です。電話番号が 090-1234-5678 の場合 日本の国番号 +81 と 電話番号の頭0を除いた "+81 90 1234 5678"と入力します。SMSに認証コードが届かない場合は携帯電話の迷惑メール設定などを再度確認してください。
-
-「Sign me up for Heroku email…」は heroku から寄せられる更新情報やイベント情報など、耳寄りな情報をメールで受け取りたい場合にチェックを入れます。
-
-「Send SMS confirmation code」ボタンを押すと SMSに認証コードが送られます。
-
-SMSに届いた認証コードを次の画面で入力すると登録完了です。
+heroku で用いるパスワードを入力してアカウントの作成は完了です。
 
 #### Heroku Toolbelt をインストールしよう
 Heroku でコマンドライン操作を行うためのアプリケーションである、Heroku Toolbelt をインストールします。
 
-[Getting Started with Ruby on Heroku - Set up ｜ Heroku Dev Center](https://devcenter.heroku.com/articles/getting-started-with-ruby#set-up)
+[Heroku Toolbelt](https://toolbelt.heroku.com/)
 
-<img src="../images/heroku_toolbelt_download.jpg" />
+<img src="../images/heroku_toolbelt_download.png" />
 
-このページの「Download Heroku toolbelt for (OS名)」という紫色のボタンからダウンロードしましょう。
+このページの「Heroku Toolbelt for (OS名)」という紫色のボタンからダウンロードしましょう。
 
 ページを閲覧しているマシンの OS に合わせたダウンロードリンクになっていますが、ボタン右側の「▼」をクリックすると他の OS 用のものをダウンロードすることもできます。
 
