@@ -16,7 +16,7 @@ permalink: heroku
 
 [ユーザ登録画面](https://signup.heroku.com/)からアカウントを作成しましょう。
 
-<img src="../images/heroku_sign_up.png" />
+<img src="../images/heroku_sign_up.jpg" />
 
 「First name」に名前、「Last name」に苗字、「Email」にメールアドレス、「Company name」に勤務先や所属を入力し、国を選択、言語として Ruby を選択して「Create Free Account」ボタンを押します。
 
