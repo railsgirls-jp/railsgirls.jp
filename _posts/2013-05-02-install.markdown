@@ -233,7 +233,7 @@ server certificate B: certificate verify failed (https://rubygems.org/gems/i18n-
 gem -v
 {% endhighlight %}
 
-もし `2.6.3` より古いバージョンだったら、以下の手順で更新する必要があります:
+もし `2.6.5` より古いバージョンだったら、以下の手順で更新する必要があります:
 
 {% highlight sh %}
 gem install rubygems-update --source http://rubygems.org/
@@ -247,7 +247,7 @@ Rubygems のバージョンをチェックしましょう。
 gem -v
 {% endhighlight %}
 
-バージョンが `2.6.3` より大きいことを確かめてください。
+バージョンが `2.6.5` より大きいことを確かめてください。
 もし失敗していたらやり直してください。
 
 続いて、bundler gem も更新が必要となる場合があります。まず `bundle` のバージョンをチェックしましょう。
