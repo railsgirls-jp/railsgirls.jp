@@ -256,7 +256,7 @@ gem -v
 bundle -v
 {% endhighlight %}
 
-もし `1.12.0` より古いバージョンだったら、以下の手順で更新する必要があります:
+もし `1.13.0` より古いバージョンだったら、以下の手順で更新する必要があります:
 
 {% highlight sh %}
 gem update bundler --no-document
@@ -268,7 +268,7 @@ gem update bundler --no-document
 bundle -v
 {% endhighlight %}
 
-バージョンが `1.12.0` より大きいことを確かめてください。
+バージョンが `1.13.0` より大きいことを確かめてください。
 もし失敗していたらやり直してください。
 
 
