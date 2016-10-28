@@ -236,7 +236,7 @@ gem -v
 もし `2.6.3` より古いバージョンだったら、以下の手順で更新する必要があります:
 
 {% highlight sh %}
-gem install gem install rubygems-update --source http://rubygems.org/
+gem install rubygems-update --source http://rubygems.org/
 update_rubygems --no-document
 gem uninstall rubygems-update -x
 {% endhighlight %}
