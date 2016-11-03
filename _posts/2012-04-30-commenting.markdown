@@ -13,24 +13,14 @@ Rails のインストールと ideas アプリ構築についての手順は、 
 
 Comment のコメント者名、コメント本文(コメント内容)、Idea テーブルへの関係 (`idea_id`) を scaffold しましょう。
 {% highlight sh %}
-rails g scaffold comment user_name:string body:text idea_id:integer
+rails generate scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
 これで新しくコメントテーブルが作成された事をデータベースに教えてあげるためのマイグレーションファイルが作成されました。
 マイグレーションを実行するには下記のコマンドを実行します。
 
-<div class="os-specific">
-  <div class="nix">
 {% highlight sh %}
 rails db:migrate
 {% endhighlight %}
-  </div>
-
-  <div class="win">
-{% highlight sh %}
-ruby bin/rake db:migrate
-{% endhighlight %}
-  </div>
-</div>
 
 ## *2.*モデルに関係 (relations) を追加する
 
@@ -39,7 +29,7 @@ ideas と comments オブジェクト間の接続を Rails に認識させる必
 `app/models/idea.rb` を開いて、
 
 {% highlight ruby %}
-class Idea < ActiveRecord::Base
+class Idea < ApplicationRecord
 {% endhighlight %}
 
 この行のあとに、次のコードを追加します。
@@ -52,7 +42,7 @@ has_many :comments
 app/models/comment.rb を開いて、
 
 {% highlight ruby %}
-class Comment < ActiveRecord::Base
+class Comment < ApplicationRecord
 {% endhighlight %}
 
 この行のあとに、次のコードを追加します。
