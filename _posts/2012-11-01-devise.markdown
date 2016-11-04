@@ -36,7 +36,7 @@ gem のインストールができました。Rails のサーバーを再起動�
 次は、先ほどのディレクトリでこのコマンドを実行しましょう。
 
 {% highlight sh %}
-rails g devise:install
+rails generate devise:install
 {% endhighlight %}
 
 ## *3.*Devise の環境設定
@@ -81,21 +81,10 @@ config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
 User model を作るために bundled generator script を使います。
 
-<div class="os-specific">
-  <div class="nix">
 {% highlight sh %}
-rails g devise user
+rails generate devise user
 rails db:migrate
 {% endhighlight %}
-  </div>
-
-  <div class="win">
-{% highlight sh %}
-rails g devise user
-ruby bin/rake db:migrate
-{% endhighlight %}
-  </div>
-</div>
 
 **Coachより:** 生成された User モデルについて説明をしてください。フィールドとは何ですか？
 
