@@ -32,6 +32,12 @@ Rails Girls Japan では、Rails Girls イベントの支援以外に以下の�
 
 当サイトを手伝ってくれる方は[issue tracker](https://github.com/railsgirls-jp/railsgirls-jp.github.com/issues)にて連絡してください。
 
+## Rails Girls Jpana による参加募集サイトのサポート
+
+Rails Girls Japan はイベントを開催するに当たって、参加希望者、コーチなどの募集フォームやメールの送信などを行うために [doorkeeper.jp](https://www.doorkeeper.jp/) からコミュニティ支援の一環として無償プランを利用可能なアカウントを提供していただいてます。
+
+すでに doorkeeper を使っている、これから使おうと考えているオーガナイザーの方は railsgirlsjp-invoice at googlegroups.com までお問い合わせください。
+
 ## Rails Girls Japan によるイベントの会計サポート
 
 Rails Girls イベントを開催するにあたって、スポンサー費用の請求やイベント開催場所のレンタル費用、飲食物・文房具の購入が必要となる場合、Rails Girls Japan と法人格を所有する日本 Ruby の会がイベントのオーガナイザーの代理として会計処理をサポートします。基本的な流れは以下のとおりです。
