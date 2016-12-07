@@ -25,10 +25,10 @@ gem 'gravtastic'
 Terminal で、次のコマンドを実行してください。
 
 {% highlight sh %}
-bundle install
+bundle
 {% endhighlight %}
 
-これでgravastic gemのインストールがされます。この時、Rails serverをリスタートするのを忘れないで下さい。
+これでgravastic gemのインストールがされます。この時、rails serverをリスタートするのを忘れないで下さい。
 
 ## *2.*Gravatarをセットアップする。
 
