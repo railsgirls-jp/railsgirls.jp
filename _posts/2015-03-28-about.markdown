@@ -10,6 +10,10 @@ permalink: about
 
 このサイトは [Rails Girls Guide](http://guides.railsgirls.com) の日本語版と Rails Girls Japan の活動内容について紹介するサイトです。
 
+## Rails Girls Japan の活動趣旨
+
+[アファーマティブ・アクションについて](/affirmative-action)
+
 ## Rails Girls Japan の活動内容
 
 Rails Girls Japan は日本における Rails Girls イベントの開催を支援する団体です。RailsGirls イベントとは、以下の項目を満たすイベントです。
