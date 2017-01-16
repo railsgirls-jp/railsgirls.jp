@@ -135,44 +135,6 @@ git commit -a -m "Added pg gem and updated Gemfile.lock"
 
 __Coachより__: RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
 
-#### rails\_12factor の導入(Rails4のみ)
-
-Rails4を利用している場合にはこの節の作業が必要になります。Rails5の場合は作業不要です。
-
-Heroku で Rails 4 を動かすために必要な rails_12factor という gem を導入します。
-
-この gem はアプリが Heroku 上で動作できるように、Rails の動作を変更します。例えば、ログは保存先が変更され、静的アセット(アプリの画像、スタイルシート、JavaScript ファイル) は Heroku 向けに微調整が加えられています。
-
-Gemfile を次のように変更しましょう。:
-
-{% highlight ruby %}
-group :production do
-  gem 'pg'
-end
-{% endhighlight %}
-
-↓
-
-{% highlight ruby %}
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
-{% endhighlight %}
-
-そして、ターミナル上で次のコマンドを実行してセットアップしてください。
-
-{% highlight sh %}
-bundle install --without production
-{% endhighlight %}
-
-{% highlight sh %}
-git add .
-git commit -a -m "Added rails_12factor gem and updated Gemfile.lock"
-{% endhighlight %}
-
-__Coachより__: Heroku におけるログの仕組みについて調べてみましょう。
-
 ### アプリのデプロイ
 
 #### アプリのcreate
