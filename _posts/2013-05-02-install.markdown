@@ -238,8 +238,10 @@ gem -v
 
 もし `2.6.5` より古いバージョンだったら、以下の手順で更新する必要があります:
 
+[ruby-gems-update gem](https://rubygems.org/downloads/rubygems-update-2.6.7.gem) をダウンロードし、それを `c:\rubygems-update-2.6.7.gem` として保存して実行してください:
+
 {% highlight sh %}
-gem install rubygems-update --source http://rubygems.org/
+gem install --local c:\\rubygems-update-2.6.7.gem
 update_rubygems --no-document
 gem uninstall rubygems-update -x
 {% endhighlight %}
