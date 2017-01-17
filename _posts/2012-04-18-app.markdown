@@ -157,7 +157,7 @@ th { border-bottom: 1px solid #DDD; }
 さらに、HTMLとCSSに変更を加えることもできます。
 
 JavaScriptやCoffeeScriptを実行する環境に問題があるというようなエラーメッセージがTerminalに表示された場合、
-[nodejs](http://nodejs.org/download/)をインストールしてください。
+[nodejsをインストール](/install#install-node)してください。
 この問題は、RailsInstallerを使っている場合は起こらないはずです。
 (ただし、Railsを```gem install rails```コマンドでインストールしている場合には起こるかもしれません)
 
