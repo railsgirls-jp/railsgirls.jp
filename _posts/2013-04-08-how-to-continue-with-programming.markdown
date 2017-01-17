@@ -43,7 +43,7 @@ and was published on
 
 ### 書籍（日本語）
 
-* [Railsチュートリアル](http://railstutorial.jp/) - 先ほど紹介した書籍の日本語訳です。原著と同様に、HTML ならば無料、電子書籍ならば有料となっています。Rails3.2とRails 4.0に対応。
+* [Railsチュートリアル](http://railstutorial.jp/) - 先ほど紹介した書籍の日本語訳です。原著と同様に、HTML ならば無料、電子書籍ならば有料となっています。Rails3.2、4.0、4.2、5.0に対応。
 
 * [HerokuではじめるRailsプログラミング入門](http://www.amazon.co.jp/dp/4797371838) - Rails初心者向けの書籍です。簡単なWebアプリケーションをつくり、Herokuにデプロイする手順を丁寧に解説しています。
 
@@ -53,7 +53,7 @@ and was published on
 
 * [たのしいRuby 第4版](http://www.amazon.co.jp/dp/4797372273) - 定番の Ruby 入門書です。Rails の礎となっているRubyを勉強してみたい方へお勧めです。
 
-* [Railsガイド](http://railsguides.jp/) - Railsを体系的に学ぶための大型リファレンスガイドです。Web版は全て無料。Rails 4.2に対応しています。
+* [Railsガイド](http://railsguides.jp/) - Railsを体系的に学ぶための大型リファレンスガイドです。Web版は全て無料。Rails 5.0に対応しています。
 
 
 ### スクリーンキャスト
