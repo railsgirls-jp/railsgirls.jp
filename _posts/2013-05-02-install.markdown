@@ -145,20 +145,10 @@ Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタ
 
 ### *1.* Install Rails
 
-[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.0.exe) をダウンロードして、実行します。
+[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.1.exe) をダウンロードして、実行します。
 インストールのオプションは全てデフォルトを選択します。
 
-RailsInstaller3.2.0の問題を解決するために`Command Prompt with Ruby on Rails`から以下のコマンドを実行します。
-
-*コーチの方へ*: RailsInstaller3.2.0にはインストーラのバグがあり、railsコマンドなどで「指定されたパスが見つかりません。」エラーが起きます。問題の詳細は、インストール時のrails.bat, bundle.bat 中のパスが正しくないというものです。([github issue ページ](https://github.com/railsinstaller/railsinstaller-windows/issues/76)) rake.bat をrails.bat, bundle.bat としてコピーすることで修正できます。
-
-{% highlight sh %}
-cd C:\RailsInstaller\Ruby2.2.0\bin
-copy rake.bat rails.bat
-copy rake.bat bundle.bat
-{% endhighlight %}
-
-次に、Railsのバージョンを確認します。`Command Prompt with Ruby on Rails`から以下のコマンドを実行します。
+`Command Prompt with Ruby on Rails`から以下のコマンドを実行します:
 
 {% highlight sh %}
 rails -v
