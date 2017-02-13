@@ -212,7 +212,7 @@ Now if you refresh the page after submitting a coffee, you should see a warning 
 
 <img src="../images/chrome-confirm-resubmission.png" alt="Chrome's confirm resubmission dialog" />
 
-This is a much better situation than before - this will prompt us to think about the consequences and we will probably avoid inadvertantly adding the same coffee multiple times.
+This is a much better situation than before - this will prompt us to think about the consequences and we will probably avoid inadvertently adding the same coffee multiple times.
 
 Do you think it would stop non-technical users from refreshing the page? Instead of worrying about the answer to that, let's just make it so we don't have to. We can do better!
 
