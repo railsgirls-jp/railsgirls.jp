@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'github-pages', '>= 105'
+gem 'github-pages', '120'
