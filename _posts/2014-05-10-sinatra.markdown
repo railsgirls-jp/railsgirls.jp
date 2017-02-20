@@ -12,7 +12,7 @@ The goal of this tutorial is to create a coffee listing application without the 
 
 This tutorial uses [**Sinatra**](http://www.sinatrarb.com/) as a tool to demonstrate some basic web principles. Sinatra is a small framework for creating web applications in Ruby with minimal effort. You can find a list of [things built with Sinatra here](http://www.sinatrarb.com/wild.html).
 
-## *0.*Install Sinatra >> "Hello World"
+## *0.*Install Sinatra "Hello World"
 
 Let's start off by getting Sinatra running.
 
@@ -64,7 +64,7 @@ Everything should look the same as it did before, but now you can change the fil
 
 If you get stuck, make sure your app.rb looks like [this one](http://tjmcewan.github.io/coffeecalc/snippets/install_sinatra.rb.txt).
 
-## *3.*Web Inspector >> Request Headers
+## *3.*Web Inspector Request Headers
 
 In your browser, open up your web console. (For most browsers, this can be accessed by *right clicking something on the page and choosing "Inspect Element"*.) I recommend you use Chrome for this; if you are using Chrome, you're looking for the 'Network' tab.
 
@@ -87,7 +87,7 @@ The important part to note is the first line `GET / HTTP/1.1` - this is what a "
 
 **Note:** If Sinatra says it has "backup from WEBrick", Ruby's built-in webserver, then you may see multiple GET requests each time you refresh.  Only one request is actually being issued, you can safely ignore the other.
 
-## *4.* HTML Form >> Get Parameters
+## *4.* HTML Form Get Parameters
 
 To get our coffees into our app, we'll need an HTML form to send through which coffee we want and how much it costs. Replace your `get "/"` from above with this:
 
@@ -122,7 +122,7 @@ GET /?what=flat+white&cost=3.50 HTTP/1.1
 
 If it's not quite working, make sure your code looks like [this code](http://tjmcewan.github.io/coffeecalc/snippets/html_form.rb.txt).
 
-## *5.* Store coffees >> Global Variable
+## *5.* Store coffees Global Variable
 
 So our form is sending the coffee info to our app, but we're not doing anything with it yet. We should save the coffee information before we send the HTML form to the browser. For simplicity, let's just store the coffee details in a variable. So that they'll be available between requests, we'll need to use a [**global**](http://en.wikipedia.org/wiki/Global_variable) variable. This is a drastically simplified version of what Rails calls the Model layer.
 
