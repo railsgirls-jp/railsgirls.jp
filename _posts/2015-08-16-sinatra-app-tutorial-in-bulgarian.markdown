@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Rails Girls Sinatra tutorial
-permalink: sinatra-app
+title: Rails Girls приложение със Sinatra
+permalink: sinatra-app-bg
 ---
 
-# Create your first voting app with Sinatra
+# Създайте сайт за гласуване със Sinatra
 
-*Created by Piotr Szotkowski, [@chastell](https://twitter.com/chastell)*
+*Базирано на [това ръководство](http://guides.railsgirls.com/sinatra-app/) от Piotr Szotkowski, [@chastell](https://twitter.com/chastell)*
 
 We will create a little voting app from scratch using a web development framework for Ruby called Sinatra, which is much like Ruby on Rails. Just another tool to get the job done really, and a fun one too!
 
@@ -33,15 +33,15 @@ end
 {% endhighlight %}
 
 
-You can actually call your Ruby file whatever you'd like. `vote.rb` for instance would totally work as well, when used consistently. But [suffragist](http://www.vocabulary.com/dictionary/suffragist) actually references to a super important event in the women's rights movement, so let's just go with that for now!  
+You can actually call your Ruby file whatever you'd like. `vote.rb` for instance would totally work as well, when used consistently. But [suffragist](http://www.vocabulary.com/dictionary/suffragist) actually references to a super important event in the women's rights movement, so let's just go with that for now!
 
 
 ### Run your app
 
 Go to the directory where you put your app and run `ruby suffragist.rb`.
-Now you can visit <a href="localhost:4567" target="_blank">localhost:4567</a>. You should
+Now you can visit [localhost:4567](http://localhost:4567). You should
 see a ‘Hello, voter!’ page, which means that the generation of your new
-app worked correctly. Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to shut down the server. If <kbd>Ctrl</kbd>+<kbd>C</kbd> does not work for you it means you are probably Windows user and <kbd>Ctrl</kbd>+<kbd>Z</kbd>/ <kbd>Ctrl</kbd>+<kbd>Pause</kbd> / <kbd>Ctrl</kbd>+<kbd>Break</kbd> will fix the issue)
+app worked correctly. Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to quit the server.
 
 __COACH__: Explain POST and GET methods, and how to communicate with the browser.
 
@@ -101,7 +101,7 @@ end
 {% endhighlight %}
 
 Run `ruby suffragist.rb`, check your
-results and shut down the server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+results and quit the server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 __COACH__: Talk a little about HTML and erb. Explain
 templates. Explain what global constants are.
@@ -203,7 +203,7 @@ Paste the following code into `suffragist.rb`:
 
 {% highlight ruby %}
 get '/results' do
-  @votes = { 'HAM' => 7, 'PIZ' => 5, 'CUR' => 3 }
+  @votes = { 'waw' => 7, 'krk' => 5 }
   erb :results
 end
 {% endhighlight %}
@@ -224,9 +224,9 @@ Create a new file in the `views` directory, called `results.erb`.
 {% endhighlight %}
 
 Run `ruby suffragist.rb`, check
-your results and shut down the server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+your results and quit the server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-__COACH__: Explain HTML tables and how the
+__COACH__: Explain HTML tables and how how the
 missing values from the hash default to zero.
 
 
@@ -273,7 +273,7 @@ __COACH__: Explain what YAML is.
 Let’s open `votes.yml`. And vote. And check again.
 
 __COACH__: There will be situations when one or more students will
-forget to shut down the server before running it again. It’s a good
+forget to quit the server before running it again. It’s a good
 opportunity to search the Internet for a solution. They don’t
 have to know everything about killing processes to find a solution.
 
