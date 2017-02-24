@@ -42,7 +42,7 @@ Heroku でコマンドライン操作を行うためのアプリケーション�
 ダウンロードがすんだら、heroku-toolbelt.exe(Windows) あるいは heroku-toolbelt.pkg(Mac) をダブルクリックし、表示される指示に従ってインストールしてください
 （環境により拡張子が表示されませんが、異常ではありません）。
 
-#### Heroku にコマンドラインでログインし、SSH キーを設定しよう
+#### Heroku にコマンドラインでログインしよう
 
 Heroku Toolbelt を無事インストールできたら、ターミナル（Mac）またはコマンドプロンプト（Windows）を起動して、次のコマンドを入力しましょう。
 
@@ -62,24 +62,6 @@ Password:
 メールアドレスは入力したそのまま画面上に表示されますが、パスワードは画面上に何も表示されません。
 
 入力は正常に受け付けられているので、反応がなくても気にせずに最後まで打ち、エンターキーを押してください。
-
-ログインに成功すると、今度は SSH で使用する公開鍵が見つからないため、作成するかどうか聞かれます。
-
-{% highlight sh %}
-Could not find an existing public key.
-Would you like to generate one? [Yn]
-{% endhighlight %}
-
-「Y」キーを押して公開鍵の作成を行ってください。
-
-{% highlight sh %}
-Could not find an existing public key.
-Would you like to generate one? [Yn]
-Generating new SSH public key.
-Uploading ssh public key /Users/adam/.ssh/id_rsa.pub
-{% endhighlight %}
-
-自動的に公開鍵が heroku にもアップロードされ、以降はこの鍵を使用して heroku とのコマンドライン接続が行われるようになります。
 
 heroku の準備はこれで終了です。
 
