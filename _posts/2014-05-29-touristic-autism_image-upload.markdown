@@ -34,7 +34,7 @@ rails generate uploader Picture
 
 At this point you need to **restart the Rails server process** in the terminal.
 
-Hit `CTRL-C` in the terminal to quit the server. Once it has stopped, you can press the up arrow to get to the last command entered, then hit enter to start the server again.
+Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to quit the server. Once it has stopped, you can press the up arrow to get to the last command entered, then hit enter to start the server again.
 
 This is needed for the app to load the added library.
 
@@ -95,7 +95,7 @@ __Coach__: Explain what specifying the image width in HTML at the end of Step
 
 * OS X: run `brew install imagemagick`. If you don't have the brew command, you can [install Homebrew here][in-homebrew].
 * Windows: download and run the [ImageMagick installer][im-win] (use the first
-  *download* link).
+  *download* link). Reopen your Rails Command Shell afterwards.
 * Linux: On Ubuntu and Debian, run `sudo apt-get install imagemagick`. Use the
   appropriate package manager instead of `apt-get` for other distributions.
 

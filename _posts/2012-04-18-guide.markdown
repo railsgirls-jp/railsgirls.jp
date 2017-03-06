@@ -37,7 +37,7 @@ Rails Girlsイベントは非営利目的で開催されます。Rails Girlsは�
 
 #### Codes of Conduct
 
-Rails Girls events are inclusive, friendly and safe environments. They have zero tolerance of harrasment or bullying. You can include a Code of Conduct to your event. Below are examples:
+Rails Girls events are inclusive, friendly and safe environments. They have zero tolerance of harassment or bullying. You can include a Code of Conduct to your event. Below are examples:
 
 * [Rails Girls Summer of Code Code of Conduct](http://railsgirlssummerofcode.org/about/code-of-conduct/)
 * [PyLadies Code of Conduct](http://www.pyladies.com/CodeOfConduct/)

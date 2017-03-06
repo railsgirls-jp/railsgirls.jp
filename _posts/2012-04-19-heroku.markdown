@@ -42,7 +42,7 @@ Heroku でコマンドライン操作を行うためのアプリケーション�
 ダウンロードがすんだら、heroku-toolbelt.exe(Windows) あるいは heroku-toolbelt.pkg(Mac) をダブルクリックし、表示される指示に従ってインストールしてください
 （環境により拡張子が表示されませんが、異常ではありません）。
 
-#### Heroku にコマンドラインでログインし、SSH キーを設定しよう
+#### Heroku にコマンドラインでログインしよう
 
 Heroku Toolbelt を無事インストールできたら、ターミナル（Mac）またはコマンドプロンプト（Windows）を起動して、次のコマンドを入力しましょう。
 
@@ -63,24 +63,6 @@ Password:
 
 入力は正常に受け付けられているので、反応がなくても気にせずに最後まで打ち、エンターキーを押してください。
 
-ログインに成功すると、今度は SSH で使用する公開鍵が見つからないため、作成するかどうか聞かれます。
-
-{% highlight sh %}
-Could not find an existing public key.
-Would you like to generate one? [Yn]
-{% endhighlight %}
-
-「Y」キーを押して公開鍵の作成を行ってください。
-
-{% highlight sh %}
-Could not find an existing public key.
-Would you like to generate one? [Yn]
-Generating new SSH public key.
-Uploading ssh public key /Users/adam/.ssh/id_rsa.pub
-{% endhighlight %}
-
-自動的に公開鍵が heroku にもアップロードされ、以降はこの鍵を使用して heroku とのコマンドライン接続が行われるようになります。
-
 heroku の準備はこれで終了です。
 
 
@@ -94,9 +76,7 @@ __Coachより__: Heroku か、従来のサーバーか、デプロイの利点�
 
 {% highlight sh %}
 git init
-echo "public/uploads" >> .gitignore
-echo "tmp" >> .gitignore
-echo "logs" >> .gitignore
+echo public/uploads >> .gitignore
 git add .
 git commit -m "initial commit"
 {% endhighlight %}
@@ -134,44 +114,6 @@ git commit -a -m "Added pg gem and updated Gemfile.lock"
 {% endhighlight %}
 
 __Coachより__: RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
-
-#### rails\_12factor の導入(Rails4のみ)
-
-Rails4を利用している場合にはこの節の作業が必要になります。Rails5の場合は作業不要です。
-
-Heroku で Rails 4 を動かすために必要な rails_12factor という gem を導入します。
-
-この gem はアプリが Heroku 上で動作できるように、Rails の動作を変更します。例えば、ログは保存先が変更され、静的アセット(アプリの画像、スタイルシート、JavaScript ファイル) は Heroku 向けに微調整が加えられています。
-
-Gemfile を次のように変更しましょう。:
-
-{% highlight ruby %}
-group :production do
-  gem 'pg'
-end
-{% endhighlight %}
-
-↓
-
-{% highlight ruby %}
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
-{% endhighlight %}
-
-そして、ターミナル上で次のコマンドを実行してセットアップしてください。
-
-{% highlight sh %}
-bundle install --without production
-{% endhighlight %}
-
-{% highlight sh %}
-git add .
-git commit -a -m "Added rails_12factor gem and updated Gemfile.lock"
-{% endhighlight %}
-
-__Coachより__: Heroku におけるログの仕組みについて調べてみましょう。
 
 ### アプリのデプロイ
 

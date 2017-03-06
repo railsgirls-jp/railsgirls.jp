@@ -75,7 +75,7 @@ source ~/.bash_profile
 "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 2.3.1
+rbenv install 2.3.3
 {% endhighlight %}
 
 ※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
@@ -88,10 +88,16 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### 3-A-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
-rbenv global 2.3.1
+rbenv global 2.3.3
 {% endhighlight %}
 
-#### 3-A-6. Railsのインストール:
+#### 3-A-6. Bundlerのインストール:
+
+{% highlight sh %}
+gem install bundler --no-document
+{% endhighlight %}
+
+#### 3-A-7. Railsのインストール:
 
 {% highlight sh %}
 gem install rails --no-document
@@ -139,20 +145,11 @@ Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタ
 
 ### *1.* Install Rails
 
-[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.0.exe) をダウンロードして、実行します。
+[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.1.exe) をダウンロードして、実行します。
 インストールのオプションは全てデフォルトを選択します。
+(※もしRailsInstallerでうまくいかない場合は[こちら](/win_another_install)の方法を試してみてください。インストール後は2.、3.、5.と進んでください)
 
-RailsInstaller3.2.0の問題を解決するために`Command Prompt with Ruby on Rails`から以下のコマンドを実行します。
-
-*コーチの方へ*: RailsInstaller3.2.0にはインストーラのバグがあり、railsコマンドなどで「指定されたパスが見つかりません。」エラーが起きます。問題の詳細は、インストール時のrails.bat, bundle.bat 中のパスが正しくないというものです。([github issue ページ](https://github.com/railsinstaller/railsinstaller-windows/issues/76)) rake.bat をrails.bat, bundle.bat としてコピーすることで修正できます。
-
-{% highlight sh %}
-cd C:\RailsInstaller\Ruby2.2.0\bin
-copy rake.bat rails.bat
-copy rake.bat bundle.bat
-{% endhighlight %}
-
-次に、Railsのバージョンを確認します。`Command Prompt with Ruby on Rails`から以下のコマンドを実行します。
+`Command Prompt with Ruby on Rails`から以下のコマンドを実行します:
 
 {% highlight sh %}
 rails -v
@@ -168,10 +165,7 @@ gem update rails --no-document
 
 このワークショップでは Atom エディタを推奨しています。
 
-* [Atom エディタをダウンロードしてインストールする](https://github.com/atom/atom/releases/latest)
-  * 上記リンクから zip ファイルをダウンロードして展開します
-  * Atom フォルダを Program Files フォルダへコピーします
-  * コピーしたフォルダから atom を起動します
+* [Atom エディタをダウンロードしてインストールする](https://atom.io/)
 
 Windows Vista およびそれ以前のバージョンでは Atom エディタは非対応ですが、[Sublime Text エディタ](http://www.sublimetext.com/2) を利用可能です。(※Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題があります。気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールしてください。[Sublime Text 日本語入力パッチ](https://github.com/chikatoike/IMESupport/archive/master.zip)をダウンロードします。Sublime Text アプリメニューの Preferences から Browse Packeges を選び、フォルダを表示させます。 ダウンロードしたzipを解凍してできたフォルダ(IMESupport-master)をここへコピーします。Sublime Text が起動している場合は再起動します。)
 
@@ -235,8 +229,10 @@ gem -v
 
 もし `2.6.5` より古いバージョンだったら、以下の手順で更新する必要があります:
 
+[ruby-gems-update gem](https://rubygems.org/downloads/rubygems-update-2.6.7.gem) をダウンロードし、それを `c:\rubygems-update-2.6.7.gem` として保存して実行してください:
+
 {% highlight sh %}
-gem install rubygems-update --source http://rubygems.org/
+gem install --local c:\\rubygems-update-2.6.7.gem
 update_rubygems --no-document
 gem uninstall rubygems-update -x
 {% endhighlight %}
