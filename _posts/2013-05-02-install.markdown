@@ -147,7 +147,6 @@ Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタ
 
 [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.1.exe) をダウンロードして、実行します。
 インストールのオプションは全てデフォルトを選択します。
-(※もしRailsInstallerでうまくいかない場合は[こちら](/win_another_install)の方法を試してみてください。インストール後は2.、3.、5.と進んでください)
 
 `Command Prompt with Ruby on Rails`から以下のコマンドを実行します:
 
