@@ -75,7 +75,7 @@ source ~/.bash_profile
 "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 2.3.3
+rbenv install 2.4.0
 {% endhighlight %}
 
 ※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
@@ -88,7 +88,7 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### 3-A-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
-rbenv global 2.3.3
+rbenv global 2.4.0
 {% endhighlight %}
 
 #### 3-A-6. Bundlerのインストール:
