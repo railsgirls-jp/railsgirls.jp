@@ -26,21 +26,31 @@ permalink: heroku
 
 heroku で用いるパスワードを入力してアカウントの作成は完了です。
 
-#### Heroku Toolbelt をインストールしよう
-Heroku でコマンドライン操作を行うためのアプリケーションである、Heroku Toolbelt をインストールします。
+#### Heroku CLI をインストールしよう
 
-[Heroku Toolbelt](https://toolbelt.heroku.com/)
+Heroku でコマンドライン操作を行うためのアプリケーションである、Heroku CLI をインストールします。
 
-<img src="../images/heroku_toolbelt_download.png" />
+[Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 
-このページの「Heroku Toolbelt for (OS名)」という紫色のボタンからダウンロードしましょう。
+このページの「[Download and install](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)」という段落から、自分のノートパソコンのOSに合わせてインストールしましょう。
 
-ページを閲覧しているマシンの OS に合わせたダウンロードリンクになっていますが、ボタン右側の「▼」をクリックすると他の OS 用のものをダウンロードすることもできます。
+##### Macの場合
 
-ファイルサイズは Windows 用で約 33MB、Mac OS X 用で約 22MB です。
+[Ruby, Railsのインストール時に](http://railsgirls.jp/install)Homebrewをインストールしているはずなので、Homebrewを使ってインストールできます。
 
-ダウンロードがすんだら、heroku-toolbelt.exe(Windows) あるいは heroku-toolbelt.pkg(Mac) をダブルクリックし、表示される指示に従ってインストールしてください
-（環境により拡張子が表示されませんが、異常ではありません）。
+{% highlight sh %}
+brew install heroku
+{% endhighlight %}
+
+##### Windowsの場合
+
+`64-bit` あるいは `32-bit` と書かれたリンクをクリックしてダウンロードしてください。
+
+（自分のWindowsが32bit版64bit版かは、コントロールパネルから確認できます。[Microsoftのこちらの記事](https://support.microsoft.com/ja-jp/help/958406)を参考に、確認してみてください）
+
+ダウンロードが済んだら、heroku-windows-amd64.exe（あるいは、heroku-windows-386.exe） をダブルクリックし、表示される指示に従ってインストールしてください。
+
+（環境により拡張子が表示されませんが、異常ではありません）
 
 #### Heroku にコマンドラインでログインしよう
 
