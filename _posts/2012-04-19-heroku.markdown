@@ -120,7 +120,7 @@ bundle install --without production
 
 {% highlight sh %}
 git add .
-git commit -a -m "Added pg gem and updated Gemfile.lock"
+git commit -m "Added pg gem and updated Gemfile.lock"
 {% endhighlight %}
 
 __Coachより__: RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
