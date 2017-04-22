@@ -57,7 +57,7 @@ table により磨きをかけるために、twitter [Bootstrap](http://getboots
 
 width を変更してみて、何が起こるか見てみましょう。
 
-`app/assets/stylesheets/ideas.css.scss` の最後に以下のコードを追加しましょう。：
+`app/assets/stylesheets/ideas.scss` の最後に以下のコードを追加しましょう。：
 
 {% highlight css %}
 .container a:hover {
@@ -88,7 +88,7 @@ footer {
 
 [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new) を開いて、`Create Idea` ボタンを見つけてください。
 
-`app/assets/stylesheets/ideas.css.scss` にこれらのコードを追加しましょう。
+`app/assets/stylesheets/ideas.scss` にこれらのコードを追加しましょう。
 
 {% highlight css %}
 .container input[type="submit"] {
