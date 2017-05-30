@@ -215,25 +215,25 @@ mount_uploader :picture, PictureUploader
 を追加します。さらに、`app/views/ideas/_form.html.erb` を開いて次のように編集します。
 
 {% highlight erb %}
-<%= f.text_field :picture %>
+<%= form.text_field :picture, id: :idea_picture %>
 {% endhighlight %}
 
 &nbsp;&nbsp;&#8595;
 
 {% highlight erb %}
-<%= f.file_field :picture %>
+<%= form.file_field :picture, id: :idea_picture %>
 {% endhighlight %}
 
 場合によっては、 *TypeError: can't cast ActionDispatch::Http::UploadedFile to string* というエラーが起きることもあります。エラーになった場合は、 `app/views/ideas/_form.html.erb` の
 
 {% highlight erb %}
-<%= form_for(idea) do |f| %>
+<%= form_with(model: idea, local: true) do |form| %>
 {% endhighlight %}
 
 上記のコードを、以下のように変更してみてください。
 
 {% highlight erb %}
-<%= form_for(idea, html: {multipart: true}) do |f| %>
+<%= form_with(model: idea, local: true, html: {multipart: true}) do |form| %>
 {% endhighlight %}
 
 画像をアップロードするとわかりますが、これだけでは見栄えのいいものではありません。ファイルのpathだけを表示してるので、これもいじってみましょう。
