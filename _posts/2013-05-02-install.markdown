@@ -144,13 +144,31 @@ Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタ
 
 ### *1.* Install Rails
 
-[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.1.exe) をダウンロードして、実行します。
+[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.3.0.exe) をダウンロードして、実行します。
 インストールのオプションは全てデフォルトを選択します。
 
 `Command Prompt with Ruby on Rails`から以下のコマンドを実行します:
 
 {% highlight sh %}
 rails -v
+{% endhighlight %}
+
+「指定されたパスが見つかりません。」と表示される場合があります。これはインストーラがrailsコマンドのパスを正しくセットアップできていないときに起こりますが、簡単に直すことができます。以下のコマンドを実行してください。
+
+{% highlight sh %}
+gem install rails bundler --no-document
+{% endhighlight %}
+
+作業完了後に、もう一度以下のコマンドを実行してください。
+
+{% highlight sh %}
+rails -v
+{% endhighlight %}
+
+以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
+
+{% highlight sh %}
+Rails 5.1.1
 {% endhighlight %}
 
 もしもRailsのバージョンが5.1よりも小さい場合は 以下のコマンドを実行することでバージョンアップできます。
