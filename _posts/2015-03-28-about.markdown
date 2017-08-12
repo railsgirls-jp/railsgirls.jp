@@ -36,7 +36,7 @@ Rails Girls Japan では、Rails Girls イベントの支援以外に以下の�
 
 当サイトを手伝ってくれる方は[issue tracker](https://github.com/railsgirls-jp/railsgirls-jp.github.com/issues)にて連絡してください。
 
-## Rails Girls Jpana による参加募集サイトのサポート
+## Rails Girls Japan による参加募集サイトのサポート
 
 Rails Girls Japan はイベントを開催するに当たって、参加希望者、コーチなどの募集フォームやメールの送信などを行うために [doorkeeper.jp](https://www.doorkeeper.jp/) からコミュニティ支援の一環として無償プランを利用可能なアカウントを提供していただいてます。
 
