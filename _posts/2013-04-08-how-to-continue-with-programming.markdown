@@ -47,7 +47,7 @@ and was published on
 
 * [HerokuではじめるRailsプログラミング入門](http://www.amazon.co.jp/dp/4797371838) - Rails初心者向けの書籍です。簡単なWebアプリケーションをつくり、Herokuにデプロイする手順を丁寧に解説しています。
 
-* [改訂新版 基礎Ruby on Rails](http://www.amazon.co.jp/dp/4844331566) - Rails初心者向けの分かり易い入門書です。Rails3.2対応。
+* [改訂3版基礎 Ruby on Rails](https://www.amazon.co.jp/dp/4844338153) - Rails初心者向けの分かり易い入門書です。
 
 * [RailsによるアジャイルWebアプリケーション開発 第4版](http://www.amazon.co.jp/dp/4274068668) - Rails本の名著です。Railsエンジニアで読んだことがない人はいないのでは、というほど定番の一冊。Rails3.1対応。（[原著電子書籍版](http://pragprog.com/book/rails4/agile-web-development-with-rails)はRails4.0に対応しています。）
 
