@@ -51,7 +51,7 @@ and was published on
 
 * [RailsによるアジャイルWebアプリケーション開発 第4版](http://www.amazon.co.jp/dp/4274068668) - Rails本の名著です。Railsエンジニアで読んだことがない人はいないのでは、というほど定番の一冊。Rails3.1対応。（[原著電子書籍版](http://pragprog.com/book/rails4/agile-web-development-with-rails)はRails4.0に対応しています。）
 
-* [たのしいRuby 第4版](http://www.amazon.co.jp/dp/4797372273) - 定番の Ruby 入門書です。Rails の礎となっているRubyを勉強してみたい方へお勧めです。
+* [たのしいRuby 第5版](https://www.amazon.co.jp/dp/4797386290) - 定番の Ruby 入門書です。Rails の礎となっているRubyを勉強してみたい方へお勧めです。
 
 * [Railsガイド](http://railsguides.jp/) - Railsを体系的に学ぶための大型リファレンスガイドです。Web版は全て無料。Rails 5.0に対応しています。
 
