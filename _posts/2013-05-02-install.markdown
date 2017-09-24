@@ -157,7 +157,7 @@ rails s
 
 ### *1.* Install Rails
 
-[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.3.0.exe) をダウンロードして、実行します。
+[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.4.0.exe) をダウンロードして、実行します。
 インストールのオプションは全てデフォルトを選択します。
 
 `Command Prompt with Ruby on Rails`から以下のコマンドを実行します:
