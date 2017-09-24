@@ -49,7 +49,7 @@ and was published on
 
 * [改訂3版基礎 Ruby on Rails](https://www.amazon.co.jp/dp/4844338153) - Rails初心者向けの分かり易い入門書です。
 
-* [RailsによるアジャイルWebアプリケーション開発 第4版](http://www.amazon.co.jp/dp/4274068668) - Rails本の名著です。Railsエンジニアで読んだことがない人はいないのでは、というほど定番の一冊。Rails3.1対応。（[原著電子書籍版](http://pragprog.com/book/rails4/agile-web-development-with-rails)はRails4.0に対応しています。）
+* [RailsによるアジャイルWebアプリケーション開発 第4版](http://www.amazon.co.jp/dp/4274068668) - Rails本の名著です。Railsエンジニアで読んだことがない人はいないのでは、というほど定番の一冊。Rails3.1対応。（[原著電子書籍版](https://pragprog.com/book/rails51/agile-web-development-with-rails-51)はRails5.1に対応しています。）
 
 * [たのしいRuby 第5版](https://www.amazon.co.jp/dp/4797386290) - 定番の Ruby 入門書です。Rails の礎となっているRubyを勉強してみたい方へお勧めです。
 
