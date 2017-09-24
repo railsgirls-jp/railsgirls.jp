@@ -118,12 +118,6 @@ gem install rails --no-document
 gem update rails --no-document
 {% endhighlight %}
 
-Rails アプリを作成するコマンドを実行してインストールと Rails のバージョンアップが問題なく完了した事を確認してください。
-
-{% highlight sh %}
-rails new railsgirls
-{% endhighlight %}
-
 ### *4.* コードを編集するのに必要なテキストエディタをインストールする。
 
 このワークショップでは Atom エディタを推奨しています。
@@ -136,7 +130,26 @@ Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタ
 
 [whatbrowser.org](http://whatbrowser.org) を参照して、お使いのブラウザが最新版でなければ更新してください。
 
-これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
+### *6.* 動作確認
+
+コーチの方に以下の方法で動作確認をしてもらってください。
+
+*コーチの方へ*:
+
+以下のコマンドでRailsが正しくインストールされているか確認してください。
+
+{% highlight sh %}
+rails new sample
+cd sample
+rails g scaffold book
+rails db:create
+rails db:migrate
+rails s
+{% endhighlight %}
+
+ブラウザのURL欄に `http://localhost:3000/books` と入力して、画面が表示されれば成功です。
+
+作ったプロジェクトは削除しておきましょう。
 
 <hr />
 
@@ -210,21 +223,24 @@ node --version
 
 ### *5.* 動作確認
 
-Rails アプリを作成するコマンドを実行して環境構築が問題なく完了した事を確認してください。
-
-{% highlight sh %}
-rails new railsgirls
-cd railsgirls
-rails server
-{% endhighlight %}
-
-ブラウザのURL欄に `http://localhost:3000` と入力して、'Yay! You're on Rails!' 画面が出れば成功です。
-
-これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
+コーチの方に以下の方法で動作確認をしてもらってください。
 
 *コーチの方へ*:
 
-scaffold コマンドで作った画面で`ExecJS::RuntimeError`などのエラーが起こる場合があるため、scaffoldコマンドを実行してデータを登録して問題ないことまで確認するとより確実です。
+以下のコマンドでRailsが正しくインストールされているか確認してください。
+
+{% highlight sh %}
+rails new sample
+cd sample
+rails g scaffold book
+rails db:create
+rails db:migrate
+rails s
+{% endhighlight %}
+
+ブラウザのURL欄に `http://localhost:3000/books` と入力して、画面が表示されれば成功です。
+
+作ったプロジェクトは削除しておきましょう。
 
 ## 出るかもしれないエラー
 
