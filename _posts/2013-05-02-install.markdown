@@ -381,7 +381,7 @@ rails server
 
 ## <a id="using-a-cloud-service">クラウドサービスを利用する</a>
 
-あなたのコンピュータにRuby on Railsやエディタをインストールする代わりに、開発用のWebサービスを利用することもできます。ブラウザとネットへアクセスできる環境があればOKです。 ここでは [Nitrous](https://nitrous.io) を利用する手順を説明します。もしも、別のサービスを利用している場合は、例えば 'Workstation' の代わりに 'workspace' という単語を使うなど用語の違いがあるかもしれませんが、概ね同じになっているはずです。
+あなたのコンピュータにRuby on Railsやエディタをインストールする代わりに、開発用のWebサービスを利用することもできます。ブラウザとネットへアクセスできる環境があればOKです。 ここでは [Cloud9](https://c9.io/) を利用する手順を説明します。もしも、別のサービスを利用している場合は、例えば 'Workspace' の代わりに 'Workstation' という単語を使うなど用語の違いがあるかもしれませんが、概ね同じになっているはずです。
 
 ### *1.* ブラウザを確認する
 
@@ -389,34 +389,41 @@ rails server
 
 ### *2.* アカウントを作成する
 
-* [https://nitrous.io](https://nitrous.io/) からアカウントを作成します。
-* ユーザーネーム、メールアドレス、パスワードを入力して、'Sign Up' ボタン からアカウントを作成できます。または、GitHubを利用してアカウントを作成することもできます。
-* 上記で登録したメールアドレスへ確認メールが飛ぶので、メール文面に従ってユーザー登録を完了させます。
+* コーチに登録用のメールアドレスを教えてRailsGirlsのチームに招待してもらいましょう。
+* 招待メールが送られてくるのでメールに記載されてあるURLをクリックします。
+* ユーザーネーム、アカウント名、パスワードを入力して、'Sign Up' ボタン からアカウントを作成できます。
 
-### *3.* Ruby on Rails の開発用に Workstation を設定する
+### *3.* Ruby on Rails の開発用に Workspace を設定する
 
-* [Nitrous](https://nitrous.io/) の画面右上の Sign in をクリックし、作成したアカウントでログインします。
-* New Workstation では 'Free' プランを、Select a Region では 'US West' を選び、'Create Workstation' ボタンをクリックします。作業が完了するまでしばらく待ってください。
-* Projects タブの + ボタンを押します。
-* Project Name 欄に好きな名前を入力し、Ruby on Rails を選択した状態で 'Create Project' ボタンをクリックします。
+* [Cloud9](https://c9.io/) の画面右上の Sign in をクリックし、作成したアカウントでログインします。(ログイン済みの方は画面右上のDASHBORDをクリック)
+* Create a new workspace をクリックします。
+* Workspace name には好きな名前をつけましょう。'Team' はRailsGirls Japanを選び 'Choose a template' では下段の右から2番目の 'blank' を選択して 'Create workspace' ボタンをクリックします。
 * 利用可能になるまで少し待ってください。
-* 'Open IDE' ボタンをクリックします。
 
-*コーチの方へ*:
+### *4.* rbenv を使って Ruby の version を最新にする
 
-* ターミナルで `rails -v` を実行し、バージョンが古い場合は `gem update rails --no-document` を実行してrailsのバージョンを上げてください。
+"ruby -v" コマンドでRubyのバージョンを確認できます。
+最新の2.4.2では無い場合は2.4.2をインストールしましょう。
 
-### *4.* Workstation を探す方法、再起動する方法
+{% highlight sh %}
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+rbenv install 2.4.2
+rbenv global 2.4.2
+{% endhighlight sh %}
 
-* 今、Workstation を作ったばかりであればこのステップはおそらく省略できますが、しばらくしてからログインするときのために知っておくと役立ちます。
-* 右上にある自分のアカウント名のメニュー中のダッシュボードから Workstation を探すことができます
-* Workstation を選びます
-* しばらく利用していないと、Workstation は停止状態になっているかもしれません。( 赤い丸印になり、Stopped と表示されます。) 'Start' ボタンを押し、Workstation を起動させます。
-* Workstation が起動した状態で、 'Open IDE' ボタンを押して開発を始めます。
+### *4.* Bundlerのインストール
+
+{% highlight sh %} gem install bundler --no-document {% endhighlight %}
+
+### *4.* Railsのインストール
+
+{% highlight sh %} gem install rails --no-document {% endhighlight %}
 
 #### *5.* 開発する
-
-前の節を参考に、Workstation を選んで起動し、'Open IDE' ボタンを押して開発用の画面に移動しておきましょう。
 
 * 左側はフォルダとファイルを表示、選択できます。
 * 中央部はエディタです。ここでファイルを編集します。
@@ -424,8 +431,5 @@ rails server
 * 必要なものは全てブラウザにあります。ブラウザのほかにエディタやターミナルを起動する必要はありません。
 * ガイドやチュートリアルを読む場合には、(Windowsマシンを利用している場合でも)Linux用のコマンドを使ってください。コマンドはクラウド上で実行され、その環境がLinuxマシンだからです。
 * ガイドやチュートリアルで、サーバを起動する時のコマンドは```rails server```ではなく```rails server -b 0.0.0.0```を実行してください。何も指定しなかった場合はコマンドを実行した環境以外からはアクセスできないため、操作しているマシンからも表示がうまく行えません。
-* ガイドやチュートリアルで、ブラウザから例えば http://localhost:3000 へアクセスする場合は、アドレス欄に入力するのではなく、代わりにトップメニューから 'Preview' - 'Port 3000 HTTP' を選ぶことで同じ操作ができます。
-* 例えば、 http://localhost:3000/posts へアクセスしたい場合は、'Preview' - 'Port 3000 HTTP' を選んだあと、 '/posts' をアドレス欄の末尾に加えてください。
-
-* ※ Nitrous.io についての日本語の説明記事があります。分からないことがあった場合に役立つかもしれません。
-  * [WebブラウザだけではじめるRuby/Railsプログラミング](http://qiita.com/machu/items/0ecc5699273c18fd1cd8)
+* ガイドやチュートリアルで、ブラウザから例えば http://localhost:3000 へアクセスする場合は、アドレス欄に入力するのではなく、画面上部から 'Preview' - 'Priview Running Application' を選ぶことで同じ操作ができます。
+* 例えば、 http://localhost:3000/posts へアクセスしたい場合は、'Preview' - 'Priview Running Application' を選んだあと、 '/posts' をアドレス欄の末尾に加えてください。
