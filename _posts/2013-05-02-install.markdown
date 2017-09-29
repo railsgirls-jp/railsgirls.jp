@@ -396,7 +396,7 @@ rails server
 ### *3.* Ruby on Rails の開発用に Workspace を設定する
 
 * [Cloud9](https://c9.io/) の画面右上の Sign in をクリックし、作成したアカウントでログインします。(ログイン済みの方は画面右上のDASHBORDをクリック)
-* Create a nnew workspace をクリックします。
+* Create a new workspace をクリックします。
 * Workspace name には好きな名前をつけましょう。'Team' はRailsGirls Japanを選び 'Choose a template' では下段の右から2番目の 'blank' を選択して 'Create workspace' ボタンをクリックします。
 * 利用可能になるまで少し待ってください。
 
@@ -412,6 +412,7 @@ echo 'PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 rbenv install 2.4.2
+rbenv global 2.4.2
 {% endhighlight sh %}
 
 ### *4.* Bundlerのインストール
