@@ -28,18 +28,14 @@ and was published on
 
 その後に様々な無料、有料の学習教材があなたの助けになるはずです。
 
-### 学習教材
-
-* [Rails for Zombies](http://railsforzombies.org/) - [Codeschool](http://codeschool.com) が作った Rails のスクリーンキャスト(動画による学習教材). これは無料で Codeschool が提供しているとても素晴らしい有料の [Ruby and Rails](http://www.codeschool.com/paths/ruby#starting-rails) コースの一つです。これは是非やるべきです!
-* [Codecademy](http://www.codecademy.com/) - 世界は Ruby によってだけ作られているわけではありません。HTML/CSS, JavaScript, Python のような沢山の言語があります。是非それらも試してみて下さい。
-
 ### 学習教材（日本語）
 
 * [一橋大学Rails講義資料](https://github.com/igaiga/hitotsubashi-ruby-2013) - いくつかの簡単なサンプルプログラムづくりを通じてRailsやWebアプリの基礎を説明しています。プログラムが初めての方を対象にした易しい資料です。前半15回がRuby編、後半15回がRails編です。後半のRails編は後述の「Railsの教科書」として最新のRailsに対応して書き直されているので、そちらを使うのがお勧めです。
 
-### 書籍
+### 学習教材（英語）
 
-* [Rails Tutorial](http://ruby.railstutorial.org/) - HTML ならば無料、印刷された書籍ならば有料のとても素晴らしい本です。この本は RailsGirls のワークショップではカバーすることが出来なかった沢山の事柄をあなたに教えてくれることでしょう。
+* [Rails for Zombies](http://railsforzombies.org/) - [Codeschool](http://codeschool.com) が作った Rails のスクリーンキャスト(動画による学習教材). これは無料で Codeschool が提供しているとても素晴らしい有料の [Ruby and Rails](http://www.codeschool.com/paths/ruby#starting-rails) コースの一つです。これは是非やるべきです!
+* [Codecademy](http://www.codecademy.com/) - 世界は Ruby によってだけ作られているわけではありません。HTML/CSS, JavaScript, Python のような沢山の言語があります。是非それらも試してみて下さい。
 
 ### 書籍（日本語）
 
@@ -57,17 +53,21 @@ and was published on
 
 * [Railsガイド](http://railsguides.jp/) - Railsを体系的に学ぶための大型リファレンスガイドです。Web版は全て無料。Rails 5.0に対応しています。
 
+### 書籍（英語）
 
-### スクリーンキャスト
+* [Rails Tutorial](http://ruby.railstutorial.org/) - HTML ならば無料、印刷された書籍ならば有料のとても素晴らしい本です。この本は RailsGirls のワークショップではカバーすることが出来なかった沢山の事柄をあなたに教えてくれることでしょう。
+
+### スクリーンキャスト（日本語）
+
+* [ドットインストール](http://dotinstall.com/) - 1回が2分程度の短い動画で様々な技術を説明しています。Railsのほか、javascript、html, css, twitter bootstrap などWebアプリで利用する様々な技術の教材もあります。
+
+### スクリーンキャスト（英語）
 
 * [Railscasts](http://railscasts.com/) - Ryan Bates による Rails の短く、簡潔なスクリーンキャストです。
 * [Confreaks](http://www.confreaks.com/) - 世界中のカンファレンスの発表を見ることができます。
 * [Peepcode](https://peepcode.com/) - Geoffrey Grosenbach による有料のスクリーンキャストです。
 * [Richard Schneems Screencast](http://www.youtube.com/user/schneems/videos)
 
-### スクリーンキャスト（日本語）
-
-* [ドットインストール](http://dotinstall.com/) - 1回が2分程度の短い動画で様々な技術を説明しています。Railsのほか、javascript、html, css, twitter bootstrap などWebアプリで利用する様々な技術の教材もあります。
 
 ### 他の情報源
 
