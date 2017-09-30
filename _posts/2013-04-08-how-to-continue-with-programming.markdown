@@ -35,7 +35,7 @@ and was published on
 
 ### 学習教材（日本語）
 
-* [一橋大学Rails講義資料](https://github.com/igaiga/hitotsubashi-ruby-2012) - いくつかの簡単なサンプルプログラムづくりを通じてRailsやWebアプリの基礎を説明しています。プログラムが初めての方を対象にした易しい資料です。前半15回がRuby編、後半15回がRails編です。
+* [一橋大学Rails講義資料](https://github.com/igaiga/hitotsubashi-ruby-2013) - いくつかの簡単なサンプルプログラムづくりを通じてRailsやWebアプリの基礎を説明しています。プログラムが初めての方を対象にした易しい資料です。前半15回がRuby編、後半15回がRails編です。後半のRails編は後述の「Railsの教科書」として最新のRailsに対応して書き直されているので、そちらを使うのがお勧めです。
 
 ### 書籍
 
