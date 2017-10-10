@@ -60,7 +60,7 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endhighlight %}
 
-#### 3-A-3. [rbenv](https://github.com/sstephenson/rbenv)をインストール:
+#### 3-A-3. [rbenv](https://github.com/rbenv/rbenv)をインストール:
 
 {% highlight sh %}
 brew update
@@ -406,8 +406,8 @@ rails server
 最新の2.4.2では無い場合は2.4.2をインストールしましょう。
 
 {% highlight sh %}
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
