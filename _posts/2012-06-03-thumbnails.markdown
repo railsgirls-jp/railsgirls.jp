@@ -16,8 +16,8 @@ __コーチへ__: 始めてのRailsアプリのStep4 でHTML の img タグの w
 * Windows: [ImageMagick installer][im-win] をインストールします。(先頭にある *download* リンクをクリックします)
 * Linux: Ubuntu か Debian を使っているなら `sudo apt-get install imagemagick` を実行します。他のディストリビューションを使っている場合は `apt-get` の代わりに適切なパッケージマネージャ(yum等)を使います。
 
-  [im-win]: http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
-  [in-homebrew]: http://mxcl.github.io/homebrew/
+  [im-win]: http://www.imagemagick.org/script/download.php#windows
+  [in-homebrew]: https://brew.sh/
 
 __コーチへ__: ImageMagick とは何をするものかを話しあいましょう。ImageMagick と gem(ライブラリ)と異なる部分や gem を追加する前に何故インストールしたかについても話してみましょう。
 
@@ -30,7 +30,7 @@ gem 'carrierwave'
 の下に
 
 {% highlight ruby %}
-gem 'mini_magick', '3.8.0'
+gem 'mini_magick', '4.8.0'
 {% endhighlight %}
 
 を追加します。その後に Terminal で以下のコマンドを実行します。
