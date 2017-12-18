@@ -273,6 +273,8 @@ i.icon-small-browser {
   height:200px;
   background-position:0 -100px;
   margin-bottom:40px;
+  margin-left: 10px;
+  max-width: 320px;
   -webkit-transition:0.4s box-shadow;
 }
 
@@ -318,11 +320,11 @@ i.icon-small-browser {
    margin-right:-20px;
    padding-left:20px;
    padding-right:20px;
- } 
+ }
 }
 
 /* Don't show the homepage image on mobile */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
   .hero {
     padding: 20px 0;
     background:none;
