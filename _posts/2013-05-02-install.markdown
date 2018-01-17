@@ -74,7 +74,7 @@ source ~/.bash_profile
 "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 2.4.2
+rbenv install 2.5.0
 {% endhighlight %}
 
 ※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
@@ -87,7 +87,7 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### 3-A-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
-rbenv global 2.4.2
+rbenv global 2.5.0
 {% endhighlight %}
 
 #### 3-A-6. Bundlerのインストール:
@@ -403,7 +403,7 @@ rails server
 ### *4.* rbenv を使って Ruby の version を最新にする
 
 "ruby -v" コマンドでRubyのバージョンを確認できます。
-最新の2.4.2では無い場合は2.4.2をインストールしましょう。
+最新の2.5.0では無い場合は2.5.0をインストールしましょう。
 
 {% highlight sh %}
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -411,8 +411,8 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
-rbenv install 2.4.2
-rbenv global 2.4.2
+rbenv install 2.5.0
+rbenv global 2.5.0
 {% endhighlight sh %}
 
 ### *4.* Bundlerのインストール
