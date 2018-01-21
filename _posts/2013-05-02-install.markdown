@@ -381,6 +381,128 @@ rails server
 
 ## <a id="using-a-cloud-service">クラウドサービスを利用する</a>
 
+あなたのコンピュータにRuby on Railsやエディタをインストールする代わりに、開発用のWebサービスを利用することもできます。ブラウザとネットへアクセスできる環境があればOKです。 ここでは [codenvy.io](https://codenvy.io/) を利用する手順を説明します。もしも、別のサービスを利用している場合は、例えば 'Workspace' の代わりに 'Workstation' という単語を使うなど用語の違いがあるかもしれませんが、概ね同じになっているはずです。
+
+### *1.* ブラウザを確認する
+
+Internet Explorer を利用している場合は、[Firefox](mozilla.org/firefox) または [Google Chrome](google.com/chrome)  をインストールしてください。
+
+インストールしているブラウザが最新ではない場合は、 [whatbrowser.org](http://whatbrowser.org) にアクセスして更新して下さい。
+
+### *2.* アカウントを作成する
+
+ブラウザで [codenvy.io](https://codenvy.io) にアクセスして、無料でアカウントを作成することができます。
+
+![](/images/codenvy/create-account.png)
+
+### *3.* Ruby on Rails の開発用に Workspace を作成する
+
+Workspace を作成するには、[codenvy.io](https://codenvy.io) にログインして、 'Workspaces' をクリックします。'Add Workspace' を押します。
+
+![](/images/codenvy/create-workspace-dashboard.png)
+
+'New Workspace' の画面で以下のように設定します。
+
+* 'Name' は デフォルトの 'wksp-abc1' のような名前を使用します。
+* 'Team' は 'personal' が選択されています。
+* 'Select Stack' は、'Blank' を選択して下さい。
+* 'Ram' は、'dev-machine' が選択されています。
+* そして、'Create' ボタンを押すと workspace が作成させます。（作成が完了するまで、しばらく、時間がかかります。）
+
+![](/images/codenvy/create-workspace.png)
+
+* Codenvy は '/projects' というフォルダを作成します。ここにあなたが作成するコードを追加していきます。'Project Explorer' にて確認することができます。
+
+### *4.* Workspace の設定
+
+* 左側の 'Workspaces' をクリックします。
+* 作成した Workspace の列をクリックして、設定画面を表示します。
+* 'Server' タブをクリックします。
+* 'Add Server' ボタンを押して、次の設定を追加します。
+  * 'Reference' 'rails-server'
+  * 'Port' '3000'
+  * 'Protocol' 'http'
+  * 'Add' を押します。
+* 下の方の 'Save' ボタンを押して Workspace を再起動します。
+
+![](/images/codenvy/workspace-server.png)
+
+再起動に表示されるアドレスをどこかに記録しておいて下さい。後で、使用します。
+
+![](/images/codenvy/server-tab.png)
+
+### *5.* Ruby と Ruby on Rails をインストールする。
+
+`Terminal` 内にて次のようにコマンドを入力して、Ruby と Ruby on Rails をインストールします。
+
+#### *5-0* 各種必要なプログラムのインストール
+
+{% highlight sh %}
+sudo apt-get update -y && sudo apt-get install -y build-essential bzip2 libsqlite3-dev libssl-dev libreadline-dev nodejs tzdata zlib1g-dev
+{% endhighlight %}
+
+インストールの途中、入力をする必要があります。以下のように入力して下さい。
+* `Geographic area: ` では `6` (`Asia`) を入力します。
+* `[More]` ではリターン（エンター）キーを押します。
+`[Time zone:]` では `78` (`Tokyo`) を入力します。 
+
+#### *5-1* rbenv と ruby-build をインストール
+
+{% highlight sh %}
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+{% highlight sh %}
+
+#### *5-2* rbenv を使って Ruby をインストール
+
+{% highlight sh %}
+rbenv install 2.5.0
+{% highlight sh %}
+
+#### *5-3* デフォルトの Ruby を設定
+
+{% highlight sh %}
+rbenv global 2.5.0
+{% highlight sh %}
+
+#### *5-4* Bundler のインストール
+
+{% highlight sh %}
+gem install bundler --no-document
+{% highlight sh %}
+
+#### *5-5* Rails のインストール
+
+{% highlight sh %}
+gem install rails --no-document
+{% highlight sh %}
+
+### *6.* 動作確認
+
+{% highlight sh %}
+rails new sample
+cd sample
+bundle exec rails g scaffold book
+bundle exec rails db:create
+bundle exec rails db:migrate
+bundle exec rails s -b 0.0.0.0
+{% highlight sh %}
+
+### *7.* プロジェクトを作成する場合に
+* 左側の `Projects` タブでフォルダやファイルの操作をすることができます。
+* 中央のエディタでファイルの編集を行います。
+* 下側の `Terminal` タブでコマンドを実行します。`Run` メニューから新しい`Terminal`を開くことができます。
+* エディタやターミナルなど必要なプログラムがすべてブラウザの中で利用することができます。
+* ガイドやチュートリアルをやる場合は、たとえ Windows コンピュータを使っている場合でも、Linux向けのコマンドを参考にするようにして下さい。あなたが作成しているプロジェクトは、Linux が動作しているクラウド上のサーバーで動作しているからです。
+* ガイドやチュートリアルで `rails` や `rake` から始まる Rails 関連のコマンドは、はじめに `bundle exec` をつけてから実行するようにして下さい。`rails new` コマンドは例外です。
+* ガイドやチュートリアルで `rails server` や `rails s` を実行するように指示している場合は、`rails server -b 0.0.0.0` のように `-b 0.0.0.0` を後につけて下さい。
+* ガイドやチュートリアルが、`http://localhost:3000` にブラウザでアクセスするように指示している場合は、「Workspace の設定」で記録した `http://node1.codenvy.io:12345` のようなアドレス を使ってアクセスして下さい。例えば、チュートリアルが `http://localhost:3000/posts` にアクセスするように指示している場合は、`http://node1.codenvy.io:12345/posts` にアクセスして下さい。
+
+### Cloud9
+
 あなたのコンピュータにRuby on Railsやエディタをインストールする代わりに、開発用のWebサービスを利用することもできます。ブラウザとネットへアクセスできる環境があればOKです。 ここでは [Cloud9](https://c9.io/) を利用する手順を説明します。もしも、別のサービスを利用している場合は、例えば 'Workspace' の代わりに 'Workstation' という単語を使うなど用語の違いがあるかもしれませんが、概ね同じになっているはずです。
 
 ### *1.* ブラウザを確認する
