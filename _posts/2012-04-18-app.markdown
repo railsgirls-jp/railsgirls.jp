@@ -33,7 +33,7 @@ rails serverを起動したりコマンドを実行したりするものです�
 * OS X: Spotlightで *Terminal* と入力して出てきた Terminal をクリックしてください。
 * Windows: スタートメニューをクリックして、すべてのプログラムから *RailsInstaller* を探し、*Command Prompt with Ruby on Rails*をクリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Command Prompt with Ruby on Rails* を入力し検索してください。)
 * Linux (Ubuntu/Fedora): Dashホームで *Terminal* を探して、*Terminal* をクリックしてください。
-* クラウドサービス(Nitrousなど): 作成したアカウントでログインし、box が起動した状態で IDE 画面へ移動します。(詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。) ターミナルはブラウザの下部に表示されます。
+* クラウドサービス(Codenvyなど): 作成したアカウントでログインし、Workspace が起動した状態で IDE 画面へ移動します。(詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。) ターミナルはブラウザの下部に表示されます。
 
 そして、Terminal上で次のコマンドを入力します:
 
@@ -45,7 +45,7 @@ cd railsgirls
 rails server
 {% endhighlight %}
 
-自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。(Nitorous.IOなどのクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直した後でURLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
+自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。(Codenvyなどのクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直した後でURLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
 
 "Yay! You’re on Rails!" の画面が表示されれば、さきほど作ったアプリは正しく動作しています。
 
