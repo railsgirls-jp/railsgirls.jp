@@ -14,7 +14,7 @@ permalink: app
 
 ### <i class="icon-text-editor">&nbsp;</i> テキストエディタ
 
-[Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com), Vim や Emacs は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
+[Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com), [Sublime Text](http://www.sublimetext.com), Vim や Emacs は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
 
 ### <i class="icon-prompt">&nbsp;</i> ターミナル (Windows の場合はコマンドプロンプト)
 
