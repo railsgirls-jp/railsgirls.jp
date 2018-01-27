@@ -97,23 +97,23 @@ end
 
 {% highlight erb %}
 <div class="field">
-  <%= f.label :body %>
-  <%= f.text_area :body %>
+  <%= form.label :body %>
+  <%= form.text_area :body %>
 </div>
 {% endhighlight %}
 
 このあとに、次のタグを追加します。
 
 {% highlight erb %}
-<%= f.hidden_field :idea_id %>
+<%= form.hidden_field :idea_id %>
 {% endhighlight %}
 
 最後にこちらを削除します。
 
 {% highlight erb %}
 <div class="field">
-  <%= f.label :idea_id %>
-  <%= f.number_field :idea_id %>
+  <%= form.label :idea_id %>
+  <%= form.number_field :idea_id %>
 </div>
 {% endhighlight %}
 
