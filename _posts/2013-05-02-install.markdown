@@ -5,6 +5,7 @@ permalink: install
 ---
 
 # Rails Girls インストール・レシピ
+
 <span class="muted">クッキングタイム: 5分 (作業時間) / 15-30分 (待ち時間)</span>
 
 Ruby on Rails上にアプリケーションを作るためには、
@@ -454,31 +455,31 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 source ~/.bashrc
-{% highlight sh %}
+{% endhighlight %}
 
 #### *5-2* rbenv を使って Ruby をインストール
 
 {% highlight sh %}
 rbenv install 2.5.0
-{% highlight sh %}
+{% endhighlight %}
 
 #### *5-3* デフォルトの Ruby を設定
 
 {% highlight sh %}
 rbenv global 2.5.0
-{% highlight sh %}
+{% endhighlight %}
 
 #### *5-4* Bundler のインストール
 
 {% highlight sh %}
 gem install bundler --no-document
-{% highlight sh %}
+{% endhighlight %}
 
 #### *5-5* Rails のインストール
 
 {% highlight sh %}
 gem install rails --no-document
-{% highlight sh %}
+{% endhighlight %}
 
 ### *6.* 動作確認
 
@@ -489,7 +490,7 @@ bundle exec rails g scaffold book
 bundle exec rails db:create
 bundle exec rails db:migrate
 bundle exec rails s -b 0.0.0.0
-{% highlight sh %}
+{% endhighlight %}
 
 ### *7.* プロジェクトを作成する場合に
 * 左側の `Projects` タブでフォルダやファイルの操作をすることができます。
@@ -535,15 +536,19 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 rbenv install 2.5.0
 rbenv global 2.5.0
-{% endhighlight sh %}
+{% endhighlight %}
 
 ### *4.* Bundlerのインストール
 
-{% highlight sh %} gem install bundler --no-document {% endhighlight %}
+{% highlight sh %}
+gem install bundler --no-document
+{% endhighlight %}
 
 ### *4.* Railsのインストール
 
-{% highlight sh %} gem install rails --no-document {% endhighlight %}
+{% highlight sh %}
+gem install rails --no-document
+{% endhighlight %}
 
 #### *5.* 開発する
 
