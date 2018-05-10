@@ -522,19 +522,19 @@ rbenv install 2.5.1
 rbenv global 2.5.1
 {% endhighlight %}
 
-### *4.* Bundlerのインストール
+### *5.* Bundlerのインストール
 
 {% highlight sh %}
 gem install bundler --no-document
 {% endhighlight %}
 
-### *4.* Railsのインストール
+### *6.* Railsのインストール
 
 {% highlight sh %}
 gem install rails --no-document
 {% endhighlight %}
 
-#### *5.* 開発する
+#### *7.* 開発する
 
 * 左側はフォルダとファイルを表示、選択できます。
 * 中央部はエディタです。ここでファイルを編集します。
