@@ -39,7 +39,7 @@ Heroku でコマンドライン操作を行うためのアプリケーション�
 [Ruby, Railsのインストール時に](http://railsgirls.jp/install)Homebrewをインストールしているはずなので、Homebrewを使ってインストールできます。
 
 {% highlight sh %}
-brew install heroku
+brew install heroku/brew/heroku
 {% endhighlight %}
 
 ##### Windowsの場合
