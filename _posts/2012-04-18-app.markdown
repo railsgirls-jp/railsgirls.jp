@@ -137,7 +137,7 @@ rails server
 {% highlight html %}
 <footer>
   <div class="container">
-    Rails Girls 2017
+    Rails Girls 2018
   </div>
 </footer>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
