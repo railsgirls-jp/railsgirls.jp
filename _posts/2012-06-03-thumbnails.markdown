@@ -66,13 +66,13 @@ end
 `app/views/ideas/index.html.erb` を開いて、もし画像がアップロードされていればリサイズした画像を表示するようにしましょう。
 
 {% highlight erb %}
-<td><%= image_tag idea.picture_url, width: '100%' if idea.picture.present?%></td>
+<%= image_tag idea.picture_url, width: '100%' if idea.picture.present? %>
 {% endhighlight %}
 
 を下のように変更します。
 
 {% highlight erb %}
-<td><%= image_tag idea.picture_url(:thumb) if idea.picture? %></td>
+<%= image_tag idea.picture_url(:thumb) if idea.picture.present? %>
 {% endhighlight %}
 
 これで、idea の一覧を開いた時にサムネイルが表示されるようになりました。
