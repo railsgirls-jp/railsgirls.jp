@@ -507,7 +507,13 @@ bundle exec rails s -b 0.0.0.0
 * Workspace name には好きな名前をつけましょう。'Team' はRailsGirls Japanを選び 'Choose a template' では下段の右から2番目の 'blank' を選択して 'Create workspace' ボタンをクリックします。
 * 利用可能になるまで少し待ってください。
 
-### *4.* rbenv を使って Ruby の version を最新にする
+### *4.* 標準でインストールされている RVM をアンインストールする
+
+{% highlight sh %}
+sudo rvm implode
+{% endhighlight %}
+
+### *5.* rbenv を使って Ruby の version を最新にする
 
 "ruby -v" コマンドでRubyのバージョンを確認できます。
 最新の2.5.1では無い場合は2.5.1をインストールしましょう。
@@ -522,19 +528,19 @@ rbenv install 2.5.1
 rbenv global 2.5.1
 {% endhighlight %}
 
-### *5.* Bundlerのインストール
+### *6.* Bundlerのインストール
 
 {% highlight sh %}
 gem install bundler --no-document
 {% endhighlight %}
 
-### *6.* Railsのインストール
+### *7.* Railsのインストール
 
 {% highlight sh %}
 gem install rails --no-document
 {% endhighlight %}
 
-#### *7.* 開発する
+#### *8.* 開発する
 
 * 左側はフォルダとファイルを表示、選択できます。
 * 中央部はエディタです。ここでファイルを編集します。
