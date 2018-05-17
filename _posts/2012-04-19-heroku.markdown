@@ -173,7 +173,37 @@ Total 134 (delta 26), reused 0 (delta 0)
        http://evening-sky-7498.herokuapp.com deployed to Heroku
 {% endhighlight %}
 
-アプリのプッシュが終わってるのがわかりますか？ "Launching..." というテキストのところです。
+アプリのプッシュが終わってるのがわかりますか？ "Launching..." というテキストのところです。プッシュが成功したら **データベースのマイグレート** へ進んで下さい。
+
+##### ・ pushで認証が要求された場合
+
+もし下のように表示された場合は (Windowsでユーザー名が全角の場合に起きます) :
+
+{% highlight sh %}
+Username for 'https://git.heroku.com':
+{% endhighlight %}
+
+まず、`CTRL-C`を押しコマンドを終了します。そして次のコマンドを実行してみて下さい。
+
+{% highlight sh %}
+heroku auth:token
+d42d086f-b127-4cf0-a2a9-acaf13287213
+{% endhighlight %}
+
+ターミナルに表示された文字列をコピーして下さい。上の例では文字列は d42d086f-b127-4cf0-a2a9-acaf13287213 ですが、あなたの画面では違う文字列が表示されています。
+
+そして、git push ... コマンドを実行して下さい。
+
+
+{% highlight sh %}
+git push heroku master
+Username for 'https://git.heroku.com':   ← 何も入力せず Enter
+Password for 'https://git.heroku.com':   ← 上でコピーした文字列をペーストし Enter
+{% endhighlight %}
+
+##### ・ その他のエラーの場合
+
+画面表示を見ながらコーチと相談して問題を解決して下さい。
 
 #### データベースのマイグレート
 
