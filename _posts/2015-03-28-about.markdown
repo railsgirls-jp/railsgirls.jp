@@ -71,5 +71,6 @@ Rails Girls Japan のメンバーは以下のメンバーです。
  * Sho Hashimoto: [sho-h](https://github.com/sho-h)
  * 原田　洋子 : [yokolet](https://github.com/yokolet)<br/>
  * 辻田　さとみ : [satomicchy](https://github.com/satomicchy)<br/>
+ * 小林 智恵: [cobachie](https://github.com/cobachie)<br/>
 
 <hr />
