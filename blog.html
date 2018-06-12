@@ -1,0 +1,35 @@
+---
+layout: default
+title: Blog
+paginate:
+  collection: blog
+  reversed: true
+  per_page: 20
+---
+<!-- 記事一覧 -->
+{% for post in paginator.blog %}
+  <article class="archive">
+    <h2 class="archive__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="archive__date"><time>{{ post.date | date: '%B %d, %Y' }}</time></p>
+    <!--<div class="archive__excerpt">{{ post.excerpt }}</div>-->
+  </article>
+{% endfor %}
+
+<!-- ページネーション -->
+{% if paginator.total_pages > 1 %}
+  <div class="pagination">
+
+    {% if paginator.previous_page %}
+      <a class="pagination__item" href="{{ paginator.previous_page_path | relative_url }}">&lt; 前のページ</a>
+    {% endif %}
+
+    <span class="pagination__item pagination__number">
+      {{ paginator.page }} / {{ paginator.total_pages }}
+    </span>
+
+    {% if paginator.next_page %}
+      <a class="pagination__item" href="{{ paginator.next_page_path | relative_url }}">次のページ &gt;</a>
+    {% endif %}
+
+  </div><!--pagination-->
+{% endif %}
