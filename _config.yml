@@ -9,3 +9,9 @@ exclude:
   - "README.md"
   - "Rakefile"
 url : http://railsgirls.jp
+collections:
+  blog:
+    output: true
+paginate_path: "blog/page:num"
+plugins:
+  - octopress-paginate
