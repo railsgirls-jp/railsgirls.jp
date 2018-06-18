@@ -313,6 +313,59 @@ i.icon-small-browser {
   font-weight:400;
 }
 
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.entry {
+  position: relative;
+  overflow: hidden;
+  width: calc(32% - 2em);
+  margin: 1em 1em 0;
+  box-sizing: border-box;
+  border-radius: .2em;
+  background: rgba(247, 244, 237, .8);
+  transition: ease .14s;
+  /*box-shadow:*/
+      /*-3px 4px rgba(231, 76, 60, .2),*/
+      /*3px -4px rgba(233, 212, 96, .5);*/
+  font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
+}
+
+.entry-header {
+  position: relative;
+  width: 100%;
+  line-height: 1.4;
+}
+
+.entry-header, .entry-inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.entry-title {
+  padding: .1em;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.entry-content {
+  padding: .5em;
+}
+
+.entry-content p {
+  margin: 0 0 .5em;
+}
+
+.entry-date {
+  padding: .1em;
+  font-size: 1em;
+  font-weight: 200;
+}
+
 /* Correct padding on smaller screens */
 @media (max-width: 767px) {
  header, footer{
@@ -329,4 +382,37 @@ i.icon-small-browser {
     padding: 20px 0;
     background:none;
   }
+}
+
+.page__header .page__title{
+  border-bottom: solid 3px #BFBFBF;
+  position: relative;
+  padding: 0.4em;
+  color: #444444;
+  font-weight: 600;
+  font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
+}
+
+.page__header .page__title::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #EC644B;
+  bottom: -3px;
+  width: 30%;
+}
+
+.page__link {
+  margin-top: 3em;
+  background: rgba(247, 244, 237, .8);
+  padding: 0.8em;
+}
+
+.page__link div {
+  width: calc(50% - 2em);
+}
+
+.page__link div p {
+  padding: 1em .3em;
+  margin: .2em;
 }
