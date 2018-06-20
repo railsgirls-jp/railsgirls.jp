@@ -22,5 +22,5 @@ defaults:
       hidden: false
 plugins:
   - jekyll-paginate
-paginate_path: "/blog/page:num"
+paginate_path: "/blog/:num"
 paginate: 15
