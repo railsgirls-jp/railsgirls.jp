@@ -9,9 +9,18 @@ exclude:
   - "README.md"
   - "Rakefile"
 url : http://railsgirls.jp
-collections:
-  blog:
-    output: true
-paginate_path: "blog/page:num"
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      hidden: true
+  -
+    scope:
+      path: "_posts/blog"
+    values:
+      hidden: false
 plugins:
-  - octopress-paginate
+  - jekyll-paginate
+paginate_path: "/blog/:num"
+paginate: 15

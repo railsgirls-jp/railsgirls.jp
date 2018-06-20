@@ -1,16 +1,12 @@
 ---
 layout: default
 title: Blog
-paginate:
-  collection: blog
-  reversed: true
-  per_page: 15
 ---
 
 <!-- 記事一覧 -->
 <div class="row row-eq-height" style="padding-top: 20px;">
 
-  {% for post in paginator.blog %}
+  {% for post in paginator.posts %}
 
   <article class="span4 entry" style="position: relative;">
     <div class="entry_inner">
