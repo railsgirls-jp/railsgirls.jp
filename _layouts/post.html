@@ -17,14 +17,14 @@
     </div>
 
     <div class="row page__link">
-      <div class="span4">
+      <div class="page__link--next">
         {% if page.next %}
           <p class="pager__item--next">
             <a href="{{ page.next.url | relative_url }}">&lt; {{ page.next.title }}</a>
           </p>
         {% endif %}
       </div>
-      <div class="span4 text-right">
+      <div class="page__link--prev">
         {% if page.previous %}
           <p class="pager__item--prev">
             <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }} &gt;</a>

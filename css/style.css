@@ -401,6 +401,10 @@ i.icon-small-browser {
   width: 30%;
 }
 
+.page__body {
+  word-break: break-all;
+}
+
 .page__link {
   margin-top: 3em;
   background: rgba(247, 244, 237, .8);
@@ -409,6 +413,15 @@ i.icon-small-browser {
 
 .page__link div {
   width: calc(50% - 2em);
+}
+
+.page__link .page__link--next {
+  float: left;
+}
+
+.page__link .page__link--prev {
+  float: right;
+  text-align: right;
 }
 
 .page__link div p {
