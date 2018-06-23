@@ -20,6 +20,7 @@ defaults:
       path: "_posts/blog"
     values:
       hidden: false
+      image: /images/railsgirls-sq.png
 plugins:
   - jekyll-paginate
 paginate_path: "/blog/:num"
