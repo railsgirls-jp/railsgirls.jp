@@ -127,7 +127,6 @@ Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタ
 rails new sample
 cd sample
 rails g scaffold book
-rails db:create
 rails db:migrate
 rails s
 {% endhighlight %}
@@ -218,7 +217,6 @@ node --version
 rails new sample
 cd sample
 rails g scaffold book
-rails db:create
 rails db:migrate
 rails s
 {% endhighlight %}
@@ -564,7 +562,6 @@ gem install rails --no-document
 rails new sample
 cd sample
 bundle exec rails g scaffold book
-bundle exec rails db:create
 bundle exec rails db:migrate
 bundle exec rails s -b 0.0.0.0
 {% endhighlight %}
