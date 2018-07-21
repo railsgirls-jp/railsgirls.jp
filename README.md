@@ -82,7 +82,7 @@ github の自分の(forkした先の)リポジトリへpushします。
 git push origin something_nice_branch_name
 ```
 
-github の自分のリポジトリへブラウザでアクセスし、 "copare & pull request" ボタンを押し、内容を記述し、pull request を送ります。
+github の自分のリポジトリへブラウザでアクセスし、 "compare & pull request" ボタンを押し、内容を記述し、pull request を送ります。
 
 みなさんのご協力に感謝します！
 
