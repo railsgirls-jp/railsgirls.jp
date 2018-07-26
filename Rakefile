@@ -42,6 +42,36 @@ task :post do
   end
 end # task :post
 
+# Usage: rake blog title="A Title" [date="2012-02-09"] [post_ext="html"]
+desc "Begin a new post in #{CONFIG['posts']}/blog"
+task :blog do
+  abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
+  title = ENV["title"] || "new-post"
+  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  begin
+    date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
+  rescue Exception => e
+    puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
+    exit -1
+  end
+  post_ext = ENV['post_ext'] || CONFIG['post_ext']
+  filename = File.join(CONFIG['posts'], 'blog', "#{date}-#{slug}.#{post_ext}")
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+
+  puts "Creating new post: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "title: \"#{title.gsub(/-/,' ')}\""
+    post.puts "date: #{date}"
+    post.puts "image: /images/railsgirls-sq.png"
+    post.puts "---"
+    post.puts ""
+  end
+end # task :blog
+
 # Usage: rake page name="about.html"
 # You can also specify a sub-directory path.
 # If you don't specify a file extension we create an index.markdown at the path specified

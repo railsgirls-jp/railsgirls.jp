@@ -43,6 +43,28 @@ rake page name="something"
 
 を実行します。この場合、something/index.html という名前でテンプレートが作られるので、これを編集します。このファイルも、どこかのページからリンクします。
 
+## ブログを書く
+
+```
+rake blog title="a cool entry"
+```
+
+を実行すると、year-month-date-a-cool-entry.markdown というテンプレートが ```_posts/blog``` ディレクトリに作られるので、これを編集します。
+画像は `images/blog` におきます。
+
+#### HTMLで書く
+ブログエントリはmarkdownだけでなく、htmlでも書くことができます。htmlで書きたい場合は、`post_ext` オプションをつけてください。
+```
+rake blog title="a cool entry" post_ext="html"
+```
+
+#### 記事一覧の画像を変更する
+ファイルの先頭の `image` に設定されている画像が記事一覧に表示されます。表示したい画像のパスに変更してください。
+```
+image: /images/blog/awesome.png
+```
+
+
 # pull request を送る
 
 pull request を送ることで、本家のページに変更依頼をすることができます。
@@ -60,7 +82,7 @@ github の自分の(forkした先の)リポジトリへpushします。
 git push origin something_nice_branch_name
 ```
 
-github の自分のリポジトリへブラウザでアクセスし、 "copare & pull request" ボタンを押し、内容を記述し、pull request を送ります。
+github の自分のリポジトリへブラウザでアクセスし、 "compare & pull request" ボタンを押し、内容を記述し、pull request を送ります。
 
 みなさんのご協力に感謝します！
 
