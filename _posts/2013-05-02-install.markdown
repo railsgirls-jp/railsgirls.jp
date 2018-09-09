@@ -140,24 +140,18 @@ rails s
 
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
-### *1.* Install Rails
+### *1.* Rubyのインストール
 
-[RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.4.0.exe) をダウンロードして、実行します。
-インストールのオプションは全てデフォルトを選択します。
+[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.4-2/rubyinstaller-devkit-2.4.4-2-x64.exe) をダウンロードして実行します。
+インストールのオプションは `Use UTF-8 as default external encodling` をチェックし、他の選択肢は全てデフォルトを選択します。Rubyのインストール後にコマンドプロンプトが立ち上がってMSYS2のインストールに進みますのでデフォルトの選択肢(何も入力せずにエンター)を選びます。
 
-`Command Prompt with Ruby on Rails`から以下のコマンドを実行します:
-
-{% highlight sh %}
-rails -v
-{% endhighlight %}
-
-「指定されたパスが見つかりません。」と表示される場合があります。これはインストーラがrailsコマンドのパスを正しくセットアップできていないときに起こりますが、簡単に直すことができます。以下のコマンドを実行してください。
+### *2.* Railsのインストール
 
 {% highlight sh %}
 gem install rails bundler --no-document
 {% endhighlight %}
 
-作業完了後に、もう一度以下のコマンドを実行してください。
+作業完了後に、以下のコマンドを実行してください。
 
 {% highlight sh %}
 rails -v
@@ -166,16 +160,16 @@ rails -v
 以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
 
 {% highlight sh %}
-Rails 5.1.4
+Rails 5.2.1
 {% endhighlight %}
 
-もしもRailsのバージョンが5.1よりも小さい場合は 以下のコマンドを実行することでバージョンアップできます。
+もしもRailsのバージョンが5.2よりも小さい場合は 以下のコマンドを実行することでバージョンアップできます。
 
 {% highlight sh %}
 gem update rails --no-document
 {% endhighlight %}
 
-### *2.* コードを編集するためのテキストエディタが必要になります。
+### *3.* コードを編集するためのテキストエディタが必要になります。
 
 このワークショップでは Atom エディタを推奨しています。
 
@@ -185,13 +179,13 @@ Windows Vista およびそれ以前のバージョンでは Atom エディタは
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
-### *3.* ブラウザを更新する
+### *4.* ブラウザを更新する
 
 もし Internet Explorer をお使いでしたら、[Firefox](https://mozilla.org/firefox) か [Google Chrome](https://google.com/chrome) をインストールすることをお勧めします。
 
 また、[whatbrowser.org](http://whatbrowser.org) を参照して、お使いのブラウザが最新版でなければ更新してください。
 
-### *4.* Install node
+### *5.* Install node
 
 これは厳密に言うと必要ではありませんが、 後で起こる可能性のある `ExecJS::RuntimeError` や `オブジェクトでサポートされていないプロパティまたはメソッドです` などの問題を回避してくれます。 ([参考 stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial))
 
@@ -206,7 +200,7 @@ node --version
 
 バージョンが表示されればOKです。
 
-### *5.* 動作確認
+### *6.* 動作確認
 
 コーチの方に以下の方法で動作確認をしてもらってください。
 
