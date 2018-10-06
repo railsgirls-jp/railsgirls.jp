@@ -32,7 +32,7 @@ Rails Girls Japan の支援内容は以下のとおりです。
 Rails Girls Japan では、Rails Girls イベントの支援以外に以下の活動も行っています。
 
  * オリジナルのドキュメント(英語)を日本語に翻訳し、このサイトで公開します。
- * イベントの内容紹介を行う[ブログ](http://blog.railgirls.jp)を執筆し、日本で開催されるRails Girlsイベントについて紹介します。
+ * イベントの内容紹介を行う[ブログ](http://blog.railsgirls.jp)を執筆し、日本で開催されるRails Girlsイベントについて紹介します。
 
 当サイトを手伝ってくれる方は[issue tracker](https://github.com/railsgirls-jp/railsgirls-jp.github.com/issues)にて連絡してください。
 
