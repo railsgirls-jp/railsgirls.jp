@@ -75,7 +75,7 @@ source ~/.bash_profile
 "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 2.5.1
+rbenv install 2.5.3
 {% endhighlight %}
 
 ※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
@@ -88,7 +88,7 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### 3-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
-rbenv global 2.5.1
+rbenv global 2.5.3
 {% endhighlight %}
 
 #### 3-6. Bundlerのインストール:
@@ -413,7 +413,7 @@ Cloud9を再起動して `$GEM_HOME`, `$GEM_PATH` を更新します。
 ### *5.* rbenv を使って Ruby の version を最新にする
 
 "ruby -v" コマンドでRubyのバージョンを確認できます。
-最新の2.5.1では無い場合は2.5.1をインストールしましょう。
+最新の2.5.3では無い場合は2.5.3をインストールしましょう。
 
 {% highlight sh %}
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -421,8 +421,8 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
-rbenv install 2.5.1
-rbenv global 2.5.1
+rbenv install 2.5.3
+rbenv global 2.5.3
 {% endhighlight %}
 
 ### *6.* Bundlerのインストール
@@ -531,13 +531,13 @@ source ~/.bashrc
 #### *5-2* rbenv を使って Ruby をインストール
 
 {% highlight sh %}
-rbenv install 2.5.1
+rbenv install 2.5.3
 {% endhighlight %}
 
 #### *5-3* デフォルトの Ruby を設定
 
 {% highlight sh %}
-rbenv global 2.5.1
+rbenv global 2.5.3
 {% endhighlight %}
 
 #### *5-4* Bundler のインストール
