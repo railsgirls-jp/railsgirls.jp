@@ -142,7 +142,7 @@ rails s
 
 ### *1.* Rubyのインストール
 
-[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.4-2/rubyinstaller-devkit-2.4.4-2-x64.exe) をダウンロードして実行します。
+[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.5-1/rubyinstaller-devkit-2.4.5-1-x64.exe) をダウンロードして実行します。
 インストールのオプションは `Use UTF-8 as default external encodling` をチェックし、他の選択肢は全てデフォルトを選択します。Rubyのインストール後にコマンドプロンプトが立ち上がってMSYS2のインストールに進みますのでデフォルトの選択肢(何も入力せずにエンター)を選びます。
 
 ### *2.* Railsのインストール
