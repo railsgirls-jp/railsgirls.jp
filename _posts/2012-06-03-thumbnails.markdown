@@ -12,7 +12,7 @@ __コーチへ__: 始めてのRailsアプリのStep4 でHTML の img タグの w
 
 ## *1.*ImageMagickのインストール
 
-* OS X: `brew install imagemagick` を実行します。もし `brew` コマンドが見つからない場合は[homebrewをインストール][in-homebrew]しましょう.
+* macOS: `brew install imagemagick` を実行します。もし `brew` コマンドが見つからない場合は[homebrewをインストール][in-homebrew]しましょう.
 * Windows: [ImageMagick installer][im-win] をインストールします。(先頭にある *download* リンクをクリックします)
 * Linux: Ubuntu か Debian を使っているなら `sudo apt-get install imagemagick` を実行します。他のディストリビューションを使っている場合は `apt-get` の代わりに適切なパッケージマネージャ(yum等)を使います。
 

@@ -15,7 +15,7 @@ Ruby on Rails上にアプリケーションを作るためには、
 もし、なにか問題が発生してもあわてずにコーチに声をかけてください。
 コーチと一緒に問題を解決しましょう。
 
-* [OS X 用セットアップ](#setup_for_os_x)
+* [macOS 用セットアップ](#setup_for_macos)
 * [Windows 用セットアップ](#setup_for_windows)
 * [Linux 用セットアップ](#setup_for_linux)
 * [Alternative Installment for all OS](#virtual-machine)
@@ -26,7 +26,7 @@ Ruby on Rails上にアプリケーションを作るためには、
 
 <hr />
 
-## <a id="setup_for_os_x">OS X 用セットアップ</a>
+## <a id="setup_for_macos">macOS 用セットアップ</a>
 
 ### *1.* オペレーティング・システムのバージョンを調べましょう。
 
@@ -45,9 +45,9 @@ Appleメニューをクリックして *About This Mac* (図 1) を選びます�
 
 図 2
 
-### *3.* rbenv を使って Ruby と Ruby on Rails をインストール(OS X 10.9 以上の場合):
+### *3.* rbenv を使って Ruby と Ruby on Rails をインストール(Mac OS X 10.9 以上の場合):
 
-OS X 10.9 以上の場合は、Homebrew と rbenv を使って環境をつくります。
+Mac OS X 10.9 以上の場合は、Homebrew と rbenv を使って環境をつくります。
 
 #### 3-1. Command line tools をターミナルからインストール:
 
