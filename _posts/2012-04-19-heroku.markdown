@@ -213,10 +213,16 @@ Password for 'https://git.heroku.com':   ← 上でコピーした文字列を�
 heroku run rails db:migrate
 {% endhighlight %}
 
-そのコマンドが実行されたら、 url でアプリを見ることができます。このアプリの例では、 [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com) です。もしくは、ターミナルで次のコマンドを実行すれば、そのページを見に行くことができます。
+そのコマンドが実行されたら、インターネットからアプリを見ることができます。このアプリの例ではURLは、 [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com) です。もしくは、クラウドIDE以外ならターミナルで次のコマンドを実行すれば、そのページを見に行くことができます。
 
 {% highlight sh %}
 heroku open
+{% endhighlight %}
+
+もし、これまでに出てきたコマンドの実行中に表示されるURLを見逃していた場合は、以下のコマンドを実行した時の `Web URL` の行(最後の行)を確認してください。
+
+{% highlight sh %}
+heroku apps:info
 {% endhighlight %}
 
 #### おわりに
