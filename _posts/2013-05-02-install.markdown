@@ -32,16 +32,16 @@ Ruby on Rails上にアプリケーションを作るためには、
 
 Appleメニューをクリックして *About This Mac* (図 1) を選びます。
 
-![Apple menu](/images/1.png "Apple menu")
+![Apple menu](/images/apple_menu.png "Apple menu")
 
 図 1
 
 ### *2.* 開いたウィンドウに使用しているオペレーティング・システムのバージョンが表示されます。(図 2)。
 
-バージョン番号が 10.`n` （`n` は 6 から 13の間）で始まっていたら、このドキュメントに従って進めます。
+バージョン番号が 10.`n` （`n` は 6 から 14の間）で始まっていたら、このドキュメントに従って進めます。
 これ以外のバージョンだったら、イベントでコーチと一緒にセットアップします。
 
-![About this Mac dialog](/images/2.png "About this Mac dialog")
+![About this Mac dialog](/images/about_this_mac.png "About this Mac dialog")
 
 図 2
 
