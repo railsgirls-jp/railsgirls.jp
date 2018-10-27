@@ -517,7 +517,7 @@ Rails Girlsは定期的に blog.railsgirls.com を更新しています。
 - フォローアップのイベントに興味をもったら、
 
 何かアイディアがあれはそれを、あるいは Rails Girls チームのためにボランティアをしたいと思ったら、
-お知らせください。グループのメーリングリスト http://groups.google.com/group/rails-girls-team に
+お知らせください。グループのメーリングリスト https://groups.google.com/group/rails-girls-team に
 登録してください！
 
 以上です。
