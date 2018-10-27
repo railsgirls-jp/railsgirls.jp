@@ -147,7 +147,7 @@ Official website and blog for Rails Girls movement can be found at http://railsg
 
 ## E-mail list
 
-Global mailing list for Rails Girls events at http://groups.google.com/group/rails-girls-team
+Global mailing list for Rails Girls events at https://groups.google.com/group/rails-girls-team
 
 ## Credits
 
