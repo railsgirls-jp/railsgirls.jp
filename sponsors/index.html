@@ -3,20 +3,57 @@ layout: default
 title: Rails Girls Japan Sponsors
 ---
 <style type="text/css">
-.sponsor {
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: 180px;
-  padding: 0px 10px 0px 10px;
+.event-box {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: #E0330C;
+  background: #FFF;
+  border: solid 3px #E0330C;
+  border-radius: 10px;
 }
-.sponsor img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+.event-box>p {
+  font-size: 18px;
+  margin: 0px;
+}
+
+.event-sponsor {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.event-sponsor>a {
+  display: block;
+  text-align: center;
+  flex-basis: 25%
+  min-width: 25%;
+  padding: 5px;
+}
+.event-sponsor img {
+  max-width: 80%;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.year-sponsor {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.year-sponsor>a {
+  display: block;
+  text-align: center;
+  flex-basis: 25%
+  min-width: 25%;
+  padding: 15px;
+}
+.year-sponsor img{
+  width: 300px;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 </style>
@@ -54,90 +91,95 @@ title: Rails Girls Japan Sponsors
 
 <hr>
 
-<div class="sponsor"><a href="http://ruby-no-kai.org" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/ruby-no-kai-long.png" alt="Nihon-Ruby-No-Kai" width="160"></a></div>
-<div class="sponsor"><a href="http://spicelife.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/spicelife-logo-landscape.png" alt="tmix" width="220"></a></div>
-<div class="sponsor"><a href="http://mogok.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/iij_sponsors.jpg" alt="IIJ" width="200"></a></div>
-<div class="sponsor"><a href="http://pepabo.com/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/fukuoka/pepabo.png" alt="GMO Pepabo" width="200"></a></div>
-<div class="sponsor"><a href="http://everyleaf.com/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/everyleaf-logo.png" alt="Everyleaf" width="200"></a></div>
-<div class="sponsor"><a href="http://www.esm.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/set-baseE_Y.png" alt="Eiwa System Management" width="150"></a></div>
-<div class="sponsor"><a href="http://www.heroku.com" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/heroku-logo.png" alt="heroku" width="200"></a></div>
-<div class="sponsor"><a href="http://yahoo.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/yahoo.png" alt="Yahoo!" width="200"></a></div>
-<div class="sponsor"><a href="http://www.allmedia.co.jp" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/allmedia-logo.jpg" alt="AMN" width="200"></a></div>
-<div class="sponsor"><a href="http://www.tpj.co.jp/" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/tpj-logo.png" alt="tpj" width="200"></a></div>
-<div class="sponsor"><a href="http://agileware.jp/" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kyoto/agileware.jpg" alt="agileware" width="200"></a></div>
-<div class="sponsor"><a href="http://www.sakura.ad.jp" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kyoto/sakura_internet.jpg" alt="sakura_internet" width="200"></a></div>
-<div class="sponsor"><a href="http://github.com/" style="float:right; margin:0 0 0 0; border:0;"><img src="http://railsgirls.com/images/clt/github_logo.png" alt="github" width="200"></a></div>
-<div class="sponsor"><a href="http://pixta.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/tokyo6_pixta_logo.png" alt="PIXTA" width="170"></a></div>
-<div class="sponsor"><a href="http://cookpad.com" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/cookpad-logo.jpg" alt="COOKPAD" width="200"></a></div>
-<div class="sponsor"><a href="http://www.mruby.jp" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/ruby-kaihatsu-logo.jpg" alt="mruby" width="200"></a></div>
-<div class="sponsor"><a href="http://oke-ya.com" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/okeya-logo.png" alt="oke-ya" width="180"></a></div>
-<div class="sponsor"><a href="http://chisako.wix.com/woman" style="float:right; margin:0 0 0 0px; border:0;"><img src="http://railsgirls.com/images/kobe_krk_logo.jpg" alt="kobe_krk" width="200"></a></div>
-<div class="sponsor"><a href="http://www.kumu.co.jp" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/Kumu_logo_white.png" alt="Kumu" width="200"></a></div>
-<div class="sponsor"><a href="http://www.hatena.ne.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/hatena.png" alt="Hatena" width="200"></a></div>
-<div class="sponsor"><a href="http://www.crandim.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/crandim_logo.png" alt="Crandim" width="200"></a></div>
-<div class="sponsor"><a href="http://www.happyelements.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/happyelements.jpg" alt="Happy Elements" width="200"></a></div>
-<div class="sponsor"><a href="http://www.a-tm.co.jp" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/ateam-logo.png" alt="ateam" width="200"></a></div>
-<div class="sponsor"><a href="http://www.ogis-ri.co.jp" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/ogisri-logo.jpg" alt="ogis-ri" width="200"></a></div>
-<div class="sponsor"><a href="http://www.railscp.com/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/railscp_com-logo.png" alt="Rails-Developer-Exam-Steering-Committee" width="150"></a></div>
-<div class="sponsor"><a href="http://www.ey-office.com/index.html" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/ey-office_logo.png" alt="EY-Office" width="200"></a></div>
-<div class="sponsor"><a href="http://www.digitalfukuoka.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/fukuoka/digitalfukuoka.jpg" alt="Digital Fukuoka" width="150"></a></div>
-<div class="sponsor"><a href="http://www.vareal.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/fukuoka/vareal.png" alt="Vareal" width="100"></a></div>
-<div class="sponsor"><a href="http://www.haw.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/fukuoka/haw.jpg" alt="Haw International" width="150"></a></div>
-<div class="sponsor"><a href="http://www.groovenauts.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/fukuoka/groovenauts.png" alt="Groovenauts" width="220"></a></div>
-<div class="sponsor"><a href="http://kg-wan.net/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/fukuoka/wan.jpg" alt="WAN" width="180"></a></div>
-<div class="sponsor"><a href="http://www.resola.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/fukuoka/resola.png" alt="Resola" width="220"></a></div>
-<div class="sponsor"><a href="https://froide.co.jp" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/fukuoka/froide.jpg" alt="Froide" width="180"></a></div>
-<div class="sponsor"><a href="https://froidale.jp" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/kitakyushu/froidale.png" alt="Froidale" width="180"></a></div>
-<div class="sponsor"><a href="http://www.kyoto-wu.ac.jp/" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kyoto/kyoto_wu_ac_jp.jpg" alt="Kumu" width="200"></a></div>
-<div class="sponsor"><a href="http://wbc.co.jp/" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kyoto/wbc.jpg" alt="wbc" width="250"></a></div>
-<div class="sponsor"><a href="http://kousha.shiojiri.com/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/logo_shiojirikousha.jpg" alt="shiojiri_kousha" width="200"></a></div>
-<div class="sponsor"><a href="http://www.comcre.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/logo-comcre.jpg" alt="comcre" width="200"></a></div>
-<div class="sponsor"><a href="http://remode-d.jp" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/logo-remode.png" alt="remode-d" width="180"></a></div>
-<div class="sponsor"><a href="http://avasys.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/logo-avasys.png" alt="avasys" width="200"></a></div>
-<div class="sponsor"><a href="http://www.cyberagent.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/cyberagent.gif" alt="CyberAgent" width="150"></a></div>
-<div class="sponsor"><a href="http://carrot.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/KCSC.png" alt="KCS Carrot" width="220"></a></div>
-<div class="sponsor"><a href="http://www.pasonatech.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/PTlogo.jpg" alt="PasonaTech" width="170"></a></div>
-<div class="sponsor"><a href="https://codeiq.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/codeiq_0411_FIX.jpg" alt="codeIQ" width="170"></a></div>
-<div class="sponsor"><a href="http://iplab.naist.jp/" style="float:right; margin:0 0 0; border:0;"><img src="http://railsgirls.com/images/iplab-logo.png" alt="iplab"></a></div>
-<div class="sponsor"><a href="http://tsaj.org/home/about/#en" style="float:right; margin:0 0 0; border:0;"><img src="http://railsgirls.com/images/tsaj-logo-o.png" alt="tsaj"></a></div>
-<div class="sponsor"><a href="http://standfirm.jp" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/standfirm-logo.png" alt="standfirm" width="200"></a></div>
-<div class="sponsor"><a href="http://www.pref.shimane.lg.jp/itsangyo/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/shimane-kensyo.png" alt="shimane" width="200"></a></div>
-<div class="sponsor"><a href="http://www.netlab.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/nacl-logo.png" alt="nacl" width="200"></a></div>
-<div class="sponsor"><a href="http://www.wacom-it.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/wacomit-logo.png" alt="wacomit" width="200"></a></div>
-<div class="sponsor"><a href="http://www.farend.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/farend-logo.png" alt="farend" width="200"></a></div>
-<div class="sponsor"><a href="http://www.tm-21.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/tm21-logo.png" alt="tm21" width="200"></a></div>
-<div class="sponsor"><a href="http://www.sjc-inc.co.jp" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/sjc_logo_g.png" alt="sjc" width="200"></a></div>
-<div class="sponsor"><a href="http://www.matsukei.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/mdc-logo.png" alt="mdc" width="200"></a></div>
-<div class="sponsor"><a href="http://uchibe.net" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/Uchibe_net_logo.png" alt="ucibe" width="200"></a></div>
-<div class="sponsor"><a href="http://www.jhsc.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/jhsc-logo.png" alt="jshc" width="200"></a></div>
-<div class="sponsor"><a href="http://www.eastback.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/easrb-logo.png" alt="easrb" width="200"></a></div>
-<div class="sponsor"><a href="http://www.probizmo.co.jp" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/probizmo_logo.png" alt="probizmo" width="200"></a></div>
-<div class="sponsor"><a href="http://www.mic-ltd.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/mic_logo.png" alt="mic" width="200"></a></div>
-<div class="sponsor"><a href="http://www.kouboum.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/kouboum-logo.png" alt="kouboum" width="200"></a></div>
-<div class="sponsor"><a href="http://www.shimane-oss.org/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/os4_logo.png" alt="oss" width="200"></a></div>
-<div class="sponsor"><a href="http://www.senchasoh-shop.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/senchasoh.png" alt="senchasoh" width="200"></a></div>
-<div class="sponsor"><a href="http://www.flossy.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/flossy-logo.png" alt="flossy" width="200"></a></div>
-<div class="sponsor"><a href="http://www.tamaya.org/crecla/index.html" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/crecla_logo.png" alt="crecla" width="200"></a></div>
-<div class="sponsor"><a href="http://corp.rakuten.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/rakuten-logo.gif" alt="rakuten" width="150"></a></div>
-<div class="sponsor"><a href="http://www.enishi-tech.com/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/enishitech_logo.png" alt="img_tag" width="200"></a></div>
-<div class="sponsor"><a href="http://www.local.or.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/local_logo.gif" alt="img_tag" width="200"></a></div>
-<div class="sponsor"><a href="http://www.xware.co.jp/" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/xware-logo.png" alt="xware" width="200"></a></div>
-<div class="sponsor"><a href="http://school.dhw.co.jp/school/yonago/" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/dhwyonago-logo.png" alt="dhwyonago" width="200"></a></div>
-<div class="sponsor"><a href="http://www.koushi-intec.co.jp/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/KOUSHI_INTEC_logomark_hor.png" alt="" width="200"></a></div>
-<div class="sponsor"><a href="http://paypal.com/" style="float:right; margin:0 0 0 15px; border:0;"><img src="http://railsgirls.com/images/tokyo5th_paypal_logo.jpeg" alt="paypal" width="200"></a></div>
-<div class="sponsor"><a href="https://koberb.doorkeeper.jp/" style="float:right; margin:0 0 0 10px; border:0;"><img src="https://dzpp79ucibp5a.cloudfront.net/groups_logos/1743_normal_1406038612_1222_normal_1403168180_%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A-2.png" alt="Kumu" width="100"></a></div>
-<div class="sponsor"><a href="https://youcube.jp/?utm_source=railsgirls&utm_medium=official" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kobe/youcube.png" alt="youcube" width="160"></a></div>
-<div class="sponsor"><a href="http://www.five-eggs.com/" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kobe/five-eggs_mark_color.png" alt="five-eggs" width="120"></a></div>
-<div class="sponsor"><a href="http://www.will3in.co.jp/" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/will3in_logo.png" alt="will3in" width="200"></a></div>
-<div class="sponsor"><a href="http://www.earlybrain.co.jp/" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/earlybrain_logo.png" alt="earlybrain" width="200"></a></div>
-<div class="sponsor"><a href="http://www.fenrir-inc.com/" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/Fenrir-logo.png" alt="fenrir" width="200"></a></div>
-<div class="sponsor"><a href="http://www.members.co.jp" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kitakyushu/members.png" alt="members" width="200"></a></div>
-<div class="sponsor"><a href="http://www.city.kitakyushu.lg.jp" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kitakyushu/kitakyushushi.png" alt="kitakyushushi" width="200"></a></div>
-<div class="sponsor"><a href="http://www.knowledge-ex.jp" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kitakyushu/kx_logo_full.png" alt="knowledge-ex" width="200"></a></div>
-<div class="sponsor"><a href="https://goo.gl/hlPd1D" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kitakyushu/Udemy_logo_medium_green.jpg" alt="udemy" width="200"></a></div>
-<div class="sponsor"><a href="http://www.crom.co.jp" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kitakyushu/crom_logo.png" alt="crom" width="200"></a></div>
-<div class="sponsor"><a href="https://monstar-lab.com" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kitakyushu/monstar-lab.png" alt="monstar-lab" width="200"></a></div>
-<div class="sponsor"><a href="http://art-cafe.me" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kitakyushu/art-cafe.png" alt="art-cafe" width="200"></a></div>
-<div class="sponsor"><a href="https://diveintocode.jp" style="float:right; margin:0 0 0 10px; border:0;"><img src="http://railsgirls.com/images/kitakyushu/dive_into_code_logo.png" alt="dive-into-code" width="200"></a></div>
-</div>
+<h2>2018年</h2>
+<h4>年間スポンサー</h4>
+  <div class="year-sponsor">
+    <a class="year-sponsor" href="https://www.esm.co.jp/"><img src="http://railsgirls.com/images/set-baseE_Y.png" alt="Eiwa System Management" ></a>
+    <a class="year-sponsor" href="https://github.com/"><img src="http://railsgirls.com/images/clt/github_logo.png" alt="github"></a>
+  </div>
+
+
+<h4>イベントスポンサー</h4>
+
+    <div class="event-box">
+      <p><a href="http://railsgirls.com/sendai">Sendai 1st</a></p>
+      <div class="event-sponsor">
+        <a class="event-sponsor" href="https://www.membersedge.co.jp/"><img src="http://railsgirls.com/images/sendai/members_edge.png" alt="MEMBERS EDGE"></a>
+        <a class="event-sponsor" href="https://4growth.jp/"><img src="http://railsgirls.com/images/sendai/4growth.png" alt="4Growth"></a>
+        <a class="event-sponsor" href="http://www.mwed.co.jp/"><img src="http://railsgirls.com/images/mwed_logo.jpg" alt="みんなのウェディング"></a>
+        <a class="event-sponsor" href="http://noraya-sendai.net/"><img src="http://railsgirls.com/images/sendai/noraya.png" alt="ノラヤ"></a>
+        <a class="event-sponsor" href="https://pepabo.com/"><img src="http://railsgirls.com/images/fukuoka/pepabo.png" alt="GMO Pepabo"></a>
+        <a class="event-sponsor" href="https://ruby-no-kai.org"><img src="http://railsgirls.com/images/ruby-no-kai-long.png" alt="Nihon-Ruby-No-Kai"></a>
+      </div>
+    </div>
+
+    <div class="event-box">
+      <p><a href="http://railsgirls.com/tokyo">Tokyo 10th</a></p>
+      <div class="event-sponsor">
+        <a class="event-sponsor" href="https://cookpad.com"><img src="http://railsgirls.com/images/cookpad-logo.jpg" alt="COOKPAD"></a>
+        <a class="event-sponsor" href="https://pepabo.com/"><img src="http://railsgirls.com/images/fukuoka/pepabo.png" alt="GMO Pepabo"></a>
+        <a class="event-sponsor" href="http://www.mwed.co.jp/"><img src="http://railsgirls.com/images/mwed_logo.jpg" alt="みんなのウェディング"></a>
+        <a class="event-sponsor" href="https://info.studyplus.co.jp/"><img src="http://railsgirls.com/images/Studyplus_Logo_Horizontal_Transparent.jpg" alt="Studyplus"></a>
+        <a class="event-sponsor" href="https://smarthr.jp/"><img src="http://railsgirls.com/images/smarthr.png" alt="SmartHR"></a>
+        <a class="event-sponsor" href="https://jp.corp-sansan.com/"><img src="http://railsgirls.com/images/eight_new_logo.png" alt="Eight"></a>
+        <a class="event-sponsor" href="https://everyleaf.com/"><img src="http://railsgirls.com/images/everyleaf-logo.png" alt="Everyleaf"></a>
+        <a class="event-sponsor" href="https://potepan.jp/"><img src="http://railsgirls.com/images/PCLOGO_03.png" alt="Potepan"></a>
+        <a class="event-sponsor" href="https://kinarino.jp/"><img src="http://railsgirls.com/images/kinarino.png" alt="kinarino"></a>
+        <a class="event-sponsor" href="https://cloud.google.com/"><img src="http://railsgirls.com/images/googlecloud.png" alt="Google Cloud"></a>
+        <a class="event-sponsor" href="https://bootcamp.fjord.jp/"><img src="http://railsgirls.com/images/fjord_small.png" alt="Fjord"></a>
+        <a class="event-sponsor" href="https://ruby-no-kai.org"><img src="http://railsgirls.com/images/ruby-no-kai-long.png" alt="Nihon-Ruby-No-Kai"></a>
+      </div>
+    </div>
+
+    <div class="event-box">
+      <p><a href="http://railsgirls.com/osaka">Osaka 5th</a></p>
+      <div class="event-sponsor">
+        <a class="event-sponsor" href="https://www.imedio.or.jp/"><img src="http://railsgirls.com/images/imedio.png" alt="imedio"></a>
+        <a class="event-sponsor" href="https://agileware.jp/"><img src="http://railsgirls.com/images/kyoto/agileware.jpg" alt="agileware"></a>
+        <a class="event-sponsor" href=""><img src="http://railsgirls.com/images/WAC_logo.jpg" alt="wac"></a>
+        <a class="event-sponsor" href="https://oke-ya.com"><img src="http://railsgirls.com/images/okeya-logo.png" alt="oke-ya"></a>
+        <a class="event-sponsor" href=""><img src="http://railsgirls.com/images/en-sam-ble_logo.png" alt="en-sam-ble"></a>
+        <a class="event-sponsor" href="https://ruby-no-kai.org"><img src="http://railsgirls.com/images/ruby-no-kai-long.png" alt="Nihon-Ruby-No-Kai"></a>
+      </div>
+    </div>
+
+    <div class="event-box">
+      <p><a href="http://railsgirls.com/tokyo-2018-05-18">Tokyo 9th</a></p>
+      <div class="event-sponsor">
+        <a class="event-sponsor" href="https://speee.jp/"><img src="http://railsgirls.com/images/speee.jpg" alt="Speee"></a>
+        <a class="event-sponsor" href="https://pepabo.com/"><img src="http://railsgirls.com/images/fukuoka/pepabo.png" alt="GMO Pepabo"></a>
+        <a class="event-sponsor" href="https://tabelog.com/"><img src="http://railsgirls.com/images/tabelog.png" alt="Tabelog"></a>
+        <a class="event-sponsor" href="https://bootcamp.fjord.jp/"><img src="http://railsgirls.com/images/fjord.png" alt="Fjord"></a>
+        <a class="event-sponsor" href="https://www.carrot.co.jp/"><img src="http://railsgirls.com/images/KCSC.png" alt="KCSCarrot"></a> 
+        <a class="event-sponsor" href="https://cloud.google.com/"><img src="http://railsgirls.com/images/googlecloud.png" alt="Google Cloud"></a>
+        <a class="event-sponsor" href="https://ruby-no-kai.org"><img src="http://railsgirls.com/images/ruby-no-kai-long.png" alt="Nihon-Ruby-No-Kai"></a>
+      </div>
+     </div>
+
+    <div class="event-box">
+      <p><a href="http://railsgirls.com/okayama2018">Okayama 3rd</a></p>
+      <div class="event-sponsor">
+        <a class="event-sponsor" href=""><img src="http://railsgirls.com/images/okayama/2nd/geekgirls.jpg" alt="ギークガールズ岡山"></a>
+        <a class="event-sponsor" href="https://okaruby.doorkeeper.jp/"><img src="http://railsgirls.com/images/okayama/okayama-rb-logo.png" alt="Okayama.rb"></a>
+        <a class="event-sponsor" href="https://okayama-u-techlab.com/"><img src="http://railsgirls.com/images/okayama/techlab-logo.png" alt="techlab"></a>
+        <a class="event-sponsor" href="https://creofuga.jp/"><img src="http://railsgirls.com/images/okayama/creofuga-logo.png" alt="creofuga"></a>
+        <a class="event-sponsor" href="http://spicelife.jp/"><img src="http://railsgirls.com/images/spicelife-logo-landscape.png" alt="tmix"></a>
+        <a class="event-sponsor" href="http://www.swlab.cs.okayama-u.ac.jp/lab/nom/"><img src="http://railsgirls.com/images/okayama/nomlab_logo.png" alt="nomlab"></a>
+        <a class="event-sponsor" href="https://cloud.google.com/"><img src="http://railsgirls.com/images/okayama/3rd/googlecloud.png" alt="Google Cloud"></a>
+        <a class="event-sponsor" href="https://class-tech.me/"><img src="http://railsgirls.com/images/okayama/3rd/classtech.png" alt="classtech"></a>
+      </div>
+    </div>
+
+    <div class="event-box">
+      <p><a href="http://railsgirls.com/nagoya">Nagoya 4th</a></p>
+      <div class="event-sponsor">
+        <a class="event-sponsor" href="https://www.misoca.jp/"><img src="http://railsgirls.com/images/misoca.png" alt="misoca"></a>
+        <a class="event-sponsor" href="https://www.a-tm.co.jp/"><img src="http://railsgirls.com/images/ateam-logo.png" alt="ateam"></a>
+        <a class="event-sponsor" href="http://spicelife.jp/"><img src="http://railsgirls.com/images/spicelife-logo-landscape.png" alt="tmix"></a>
+        <a class="event-sponsor" href="https://everyleaf.com/"><img src="http://railsgirls.com/images/everyleaf-logo.png" alt="Everyleaf"></a>
+        <a class="event-sponsor" href="https://www.brilliance.co.jp/"><img src="http://railsgirls.com/images/logo_brilliance+.png" alt="brilliance+"></a>
+      </div>
+    </div>
+
+<center><p>2018年以前のスポンサーについては、現在整備中です。</p></center>
 <!-- content -->
