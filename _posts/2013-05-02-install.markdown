@@ -489,7 +489,7 @@ Workspace を作成するには、[codenvy.io](https://codenvy.io) にログイ�
 
 * 左側の 'Workspaces' をクリックします。
 * 作成した Workspace の列をクリックして、設定画面を表示します。
-* 'Server' タブをクリックします。
+* 'Servers' タブをクリックします。
 * 'Add Server' ボタンを押して、次の設定を追加します。
   * 'Reference' 'rails-server'
   * 'Port' '3000'
