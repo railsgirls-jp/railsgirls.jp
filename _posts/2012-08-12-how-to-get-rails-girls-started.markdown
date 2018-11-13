@@ -35,7 +35,7 @@ Rails Girls Tokyoの場合、原田が言い始めたところ、かくたにさ
 #### 2. Rails Girlsメーリングリストに参加する
 <br/>
 イベント開催の情報を流し合うメーリングリストに参加する。MLは英語。
-[http://groups.google.com/group/rails-girls-team?hl=en](http://groups.google.com/group/rails-girls-team?hl=en)
+[https://groups.google.com/group/rails-girls-team?hl=en](https://groups.google.com/group/rails-girls-team?hl=en)
 <br/>
 必ずしも参加しなくていいかもしれない。質問などは、直接 contact@railsgirls.comに投げてもいいので。
 <br/>

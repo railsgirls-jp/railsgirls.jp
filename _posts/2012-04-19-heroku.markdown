@@ -52,6 +52,14 @@ brew install heroku/brew/heroku
 
 （環境により拡張子が表示されませんが、異常ではありません）
 
+##### codenvy.ioの場合
+
+codenvy.io上のターミナルから次のコマンドを入力しましょう。
+
+{% highlight sh %}
+curl https://cli-assets.heroku.com/install.sh | sh
+{% endhighlight %}
+
 #### Heroku にコマンドラインでログインしよう
 
 Heroku Toolbelt を無事インストールできたら、ターミナル（Mac）またはコマンドプロンプト（Windows）を起動して、次のコマンドを入力しましょう。
@@ -175,6 +183,8 @@ Total 134 (delta 26), reused 0 (delta 0)
 
 アプリのプッシュが終わってるのがわかりますか？ "Launching..." というテキストのところです。プッシュが成功したら **データベースのマイグレート** へ進んで下さい。
 
+__Coachより__: どのようなファイルがプッシュされ、どのようなファイルがされなかったか話してみてください。まだであればアップロードされるファイルについて話してみたり、config以下のいくつかのファイルについて可能な範囲で話してみてください。
+
 ##### ・ pushで認証が要求された場合
 
 もし下のように表示された場合は (Windowsでユーザー名が全角の場合に起きます) :
@@ -213,10 +223,16 @@ Password for 'https://git.heroku.com':   ← 上でコピーした文字列を�
 heroku run rails db:migrate
 {% endhighlight %}
 
-そのコマンドが実行されたら、 url でアプリを見ることができます。このアプリの例では、 [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com) です。もしくは、ターミナルで次のコマンドを実行すれば、そのページを見に行くことができます。
+そのコマンドが実行されたら、インターネットからアプリを見ることができます。このアプリの例ではURLは、 [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com) です。もしくは、クラウドIDE以外ならターミナルで次のコマンドを実行すれば、そのページを見に行くことができます。
 
 {% highlight sh %}
 heroku open
+{% endhighlight %}
+
+もし、これまでに出てきたコマンドの実行中に表示されるURLを見逃していた場合は、以下のコマンドを実行した時の `Web URL` の行(最後の行)を確認してください。
+
+{% highlight sh %}
+heroku apps:info
 {% endhighlight %}
 
 #### おわりに
