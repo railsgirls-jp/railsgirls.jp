@@ -127,7 +127,7 @@ Rails のサーバーが起動している事を確認したら、[http://localh
   before_action :authenticate_user!
 {% endhighlight %}
 
-`protect_from_forgery with: :exception` と書かれているところの後に追加してください。
+`end` と書かれているところの前に追加してください。
 
 ブラウザを開いてログインやログアウトを試してみてください。
 
