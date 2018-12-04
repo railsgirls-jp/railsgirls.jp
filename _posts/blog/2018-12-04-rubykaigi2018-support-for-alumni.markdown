@@ -7,15 +7,14 @@ image: /images/blog/rubykaigi2018-support-for-alumni.jpg
 
 Rails Girls Japan では、<a href="2017/09/23/rubykaigi2017-support-for-alumni/">昨年</a>に引き続き、
 これまでのRails Girls イベントの参加者の中から、
-RubyKaigi2018 への参加希望を募り、
-お申し出のあった3名の方への参加支援を行いました。
+RubyKaigi2018 への参加希望を募り、お申し出のあった3名の方への参加支援を行いました。
 
 <p><img src="/images/blog/rubykaigi2018-support-for-alumni.jpg" alt="参加者の方々と"></p>
 
 <blockquote>
   <p>
-  RubyKaigi は、日本で開催開催されるプログラミング言語 Rubyの国際カンファレンスで、海外からも多くのRubyistが参加し、
-  2018年は、5/31~6/2の3日間、仙台 国際センターで開催されました。</p>
+  RubyKaigiは、日本で開催開催されるプログラミング言語 Rubyの国際カンファレンスで、海外からも多くのRubyistが参加し、
+  2018年は、5/31~6/2の3日間、仙台国際センターで開催されました。</p>
 </blockquote>
 
 <p>RubyKaigi2018への参加支援の目的は、
@@ -26,8 +25,7 @@ RubyKaigi という技術的な国際カンファレンスに参加してもら�
 <p>参加して頂いた3名の方は、セッションだけではなく、たくさんのRubyistと交流を深め、
 RubyKaigiをとても楽しんでいらっしゃっていたようです。</p>
 
-このような支援の場を提供できるのは、
-Rails Girls イベントにご支援頂いている
+このような支援の場を提供できるのは、Rails Girls イベントにご支援頂いている
 スポンサーの方々のおかげです。
 <a href="http://railsgirls.jp/sponsors/">http://railsgirls.jp/sponsors/</a>
 
@@ -50,7 +48,7 @@ railsgirlsjp-invoice at googlegroups.com
 多くの刺激と出会いの機会をいただけて本当に感謝しています。
 本当にありがとうございました。
 
-### atttumiさん
+### atttsumiさん
 
 数年前から周りのエンジニアさん達から RubyKaigi の話を聞いており、いつか参加したいと思っていました。
 RubyKaigi は、想像していた通りのカジュアルな雰囲気でした。多くの講演を拝聴し、いろんな方と楽しく交流することができました。
