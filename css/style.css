@@ -73,7 +73,7 @@ hr {
 
 
 header {
-  height: 70px;
+  min-height: 70px;
   color: #fff;
   padding-top: 50px;
   background: #d3360b;
@@ -449,4 +449,64 @@ i.icon-small-browser {
   .github-corner .octo-arm {
     animation:octocat-wave 560ms ease-in-out
   }
+}
+
+.navbar .btn-navbar {
+  display: block;
+  float: left;
+  height: 24px;
+  padding: 7px 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #ffffff;
+  text-shadow: none;
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+  background-image: none;
+}
+
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:focus,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active,
+.navbar .btn-navbar.disabled,
+.navbar .btn-navbar[disabled] {
+  color: #ffffff;
+  background-color: inherit;
+  *background-color: inherit;
+}
+
+.navbar .btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 4px;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.navbar .brand {
+  display: block;
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: none;
+}
+
+.navbar .nav > li > a {
+  float: none;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: #f6e58d;
+  text-decoration: none;
+  background-color: transparent;
 }
