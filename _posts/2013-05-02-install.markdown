@@ -16,7 +16,7 @@ Ruby on Rails上にアプリケーションを作るためには、
 コーチと一緒に問題を解決しましょう。
 
 * [macOS 用セットアップ](#setup_for_macos)
-* [Windows 用セットアップ](#setup_for_windows)
+* [Windows 用セットアップ（WSLが使えない方向け）](#setup_for_windows_without_wsl)
 * [Linux 用セットアップ](#setup_for_linux)
 * [Alternative Installment for all OS](#virtual-machine)
 * [クラウドサービスを利用する](#using-a-cloud-service)
@@ -138,7 +138,7 @@ rails s
 
 <hr />
 
-## <a id="setup_for_windows">Windows 用セットアップ</a>
+## <a id="setup_for_windows_without_wsl">Windows 用セットアップ（WSLが使えない方向け）</a>
 
 ### *1.* Rubyのインストール
 
