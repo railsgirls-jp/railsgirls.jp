@@ -33,7 +33,7 @@ function addIcons() {
 }
 
 function initializeOsSwitchers() {
-  $(".os-specific").append("<span class='picker'>Choose your operating system: <a href='#' class='win-link'>Windows</a> | <a href='#' class='nix-link'>Other</a></span>").find(".win-link").click(function(event) {
+  $(".os-specific").append("<span class='picker'>オペレーティング・システムを選択: <a href='#' class='win-link'>Windows（コマンドプロンプト）</a> | <a href='#' class='nix-link'>その他</a></span>").find(".win-link").click(function(event) {
     event.preventDefault();
     saveOs("win");
 
