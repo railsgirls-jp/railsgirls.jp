@@ -141,9 +141,111 @@ rails s
 
 ## <a id="setup_for_windows">Windows 用セットアップ</a>
 
-### ここに実際の記事を書きます
+### *1.* WSLの導入
+
+*※ここから先の方法を実行するにはWindowsのパスワードが必要になります。事前に確認をしておいてください。*
+*※WSLでのペーストは右クリックで行います。*
+
+画面左下のWindowsボタンを押し、出てきた歯車ボタンを押して「設定」アプリケーションを開きます。設定アプリケーションの検索窓に「Windows の機能の有効化または無効化」と入力し（最後まで入力しなくてもOKです）、「Windows subsystem for Linux」にチェックを入れ、マシンを再起動します。
+
+続けてWindowsストアを開き、検索窓に「Ubuntu」と入力して「Ubuntu」アプリケーションをインストールします（「Ubuntu 18.04 LTS」ではなく、「Ubuntu」をインストールするようにしてください）。
+
+「Ubuntu」アプリケーションが起動すればWSLのインストールは成功です。起動したアプリケーション（ここからは*Bashウィンドウ*と呼びます）にはユーザー名とパスワードの入力を促す画面が表示されていますので、適当なユーザー名とパスワードを入力しましょう（パスワードは2回入力する必要があり、画面には表示されませんが正しく入力されています）。
+
+### *2.* Rubyのインストール
+
+以下のセクションでは、`apt`などのソフトウェアを使ってRubyの環境を構築していきます。
+
+#### 2-1 必要なソフトウェアのインストール
+
+Bashウィンドウで以下のコマンドを実行してください。
+
+{% highlight sh %}
+sudo apt update
+sudo apt upgrade -y
+sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev -y
+{% endhighlight %}
+
+#### 2-2 rbenvのインストール
+
+{% highlight sh %}
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+{% endhighlight %}
+
+#### 2-3 ruby-buildのインストール
+
+{% highlight sh %}
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+{% endhighlight %}
+  
+#### 2-4 Rubyのインストール
+
+{% highlight sh %}
+rbenv install 2.6.0
+rbenv global 2.6.0
+{% endhighlight %}
+
+作業完了後に、以下のコマンドを実行してください。
+
+{% highlight sh %}
+ruby -v
+{% endhighlight %}
+
+以下のように、インストールされたRubyのバージョンが表示されればOKです。
+
+{% highlight sh %}
+ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+{% endhighlight %}
+
+### *3.* Railsのインストール
+
+{% highlight sh %}
+gem install rails --no-document
+{% endhighlight %}
+
+作業完了後に、以下のコマンドを実行してください。
+
+{% highlight sh %}
+rails -v
+{% endhighlight %}
+
+以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
+
+{% highlight sh %}
+Rails 5.2.2
+{% endhighlight %}
 
 <hr />
+
+### *4.* コードを編集するのに必要なテキストエディタをインストールする。
+
+このワークショップでは Atom エディタを推奨しています。
+
+* [Atom エディタをダウンロードしてインストールする](https://atom.io/) 
+
+### *5.* 動作確認
+
+コーチの方に以下の方法で動作確認をしてもらってください。
+
+*コーチの方へ*:
+
+以下のコマンドでRailsが正しくインストールされているか確認してください。
+
+{% highlight sh %}
+rails new sample
+cd sample
+rails g scaffold book
+rails db:create
+rails db:migrate
+rails s
+{% endhighlight %}
+
+ブラウザのURL欄に `http://localhost:3000/books` と入力して、画面が表示されれば成功です。
+
+作ったプロジェクトは削除しておきましょう。
 
 ## <a id="setup_for_windows_without_wsl">Windows 用セットアップ（WSLが使えない方向け）</a>
 
@@ -579,4 +681,3 @@ bundle exec rails s -b 0.0.0.0
 * ガイドやチュートリアルで `rails` や `rake` から始まる Rails 関連のコマンドは、はじめに `bundle exec` をつけてから実行するようにして下さい。`rails new` コマンドは例外です。
 * ガイドやチュートリアルで `rails server` や `rails s` を実行するように指示している場合は、`rails server -b 0.0.0.0` のように `-b 0.0.0.0` を後につけて下さい。
 * ガイドやチュートリアルが、`http://localhost:3000` にブラウザでアクセスするように指示している場合は、「Workspace の設定」で記録した `http://node1.codenvy.io:12345` のようなアドレス を使ってアクセスして下さい。例えば、チュートリアルが `http://localhost:3000/posts` にアクセスするように指示している場合は、`http://node1.codenvy.io:12345/posts` にアクセスして下さい。
-
