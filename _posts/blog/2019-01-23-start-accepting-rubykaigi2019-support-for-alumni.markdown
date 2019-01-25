@@ -4,8 +4,8 @@ title: "RubyKaigi2019 参加支援募集のお知らせ"
 date: 2019-01-23
 image: /images/railsgirls-sq.png
 ---
-Rails Girls Japanでは、<a href="2017/09/23/rubykaigi2017-support-for-alumni/">2017年</a>,
-<a href="2018/12/04/rubykaigi2018-support-for-alumni/">2018年</a>と
+Rails Girls Japanでは、<a href="/2017/09/23/rubykaigi2017-support-for-alumni/">2017年</a>,
+<a href="/2018/12/04/rubykaigi2018-support-for-alumni/">2018年</a>と
 これまでのRails Girlsイベントの参加者の中から、
 RubyKaigiへの参加希望を募り、参加支援を行ってまいりました。
 
