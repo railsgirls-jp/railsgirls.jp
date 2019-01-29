@@ -169,6 +169,8 @@ sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadli
 
 #### 2-2 rbenvのインストール
 
+Bashウィンドウで以下のコマンドを実行してください。
+
 {% highlight sh %}
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
@@ -178,11 +180,15 @@ source ~/.bashrc
 
 #### 2-3 ruby-buildのインストール
 
+Bashウィンドウで以下のコマンドを実行してください。
+
 {% highlight sh %}
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 {% endhighlight %}
   
 #### 2-4 Rubyのインストール
+
+Bashウィンドウで以下のコマンドを実行してください。
 
 {% highlight sh %}
 rbenv install 2.6.0
@@ -202,6 +208,8 @@ ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
 {% endhighlight %}
 
 ### *3.* Railsのインストール
+
+Bashウィンドウで以下のコマンドを実行してください。
 
 {% highlight sh %}
 gem install rails --no-document
