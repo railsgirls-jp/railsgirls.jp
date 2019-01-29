@@ -161,6 +161,8 @@ rails s
 
 Bashウィンドウで以下のコマンドを実行してください。
 
+なお、最初のコマンドを実行する際にパスワードの入力を求められますが、先程Bashウィンドウに入力したパスワードを入力してください(Windowsのパスワードではないので注意してください)。
+
 {% highlight sh %}
 sudo apt update
 sudo apt upgrade -y
