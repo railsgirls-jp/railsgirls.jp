@@ -163,7 +163,7 @@ Bashウィンドウで以下のコマンドを実行してください。
 {% highlight sh %}
 sudo apt update
 sudo apt upgrade -y
-sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev -y
+sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs -y
 {% endhighlight %}
 
 #### 2-2 rbenvのインストール
