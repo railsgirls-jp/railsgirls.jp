@@ -42,7 +42,17 @@ Heroku でコマンドライン操作を行うためのアプリケーション�
 brew install heroku/brew/heroku
 {% endhighlight %}
 
-##### Windowsの場合
+##### Windows（WSL）の場合
+
+Ubuntuを起動して、次のコマンドを入力しましょう。
+
+{% highlight sh %}
+curl https://cli-assets.heroku.com/install.sh | sh
+{% endhighlight %}
+
+__Coachへ__: [Heroku CLIのページ](https://devcenter.heroku.com/articles/heroku-cli) を見るとUbuntuではsnapを使う手順を説明していますが、WSLではsnapの利用が困難であるため、Other installation methodsで紹介されている上記のコマンドでインストールします。
+
+##### Windows（コマンドプロンプト）の場合
 
 `64-bit` あるいは `32-bit` と書かれたリンクをクリックしてダウンロードしてください。
 
@@ -93,7 +103,6 @@ __Coachより__: Heroku か、従来のサーバーか、デプロイの利点�
 作成したコードをバージョン管理システムに追加します。ターミナル上で次のコマンドを入力しましょう。:
 
 {% highlight sh %}
-git init
 echo public/uploads >> .gitignore
 git add .
 git commit -m "initial commit"
