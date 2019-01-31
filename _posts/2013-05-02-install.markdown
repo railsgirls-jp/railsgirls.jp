@@ -193,8 +193,8 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 Bashウィンドウで以下のコマンドを実行してください。
 
 {% highlight sh %}
-rbenv install 2.6.0
-rbenv global 2.6.0
+rbenv install 2.6.1
+rbenv global 2.6.1
 {% endhighlight %}
 
 作業完了後に、以下のコマンドを実行してください。
@@ -206,7 +206,7 @@ ruby -v
 以下のように、インストールされたRubyのバージョンが表示されればOKです。
 
 {% highlight sh %}
-ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+ruby 2.6.1p33 (2019-01-30 revision 66950) [x86_64-linux]
 {% endhighlight %}
 
 ### *3.* Railsのインストール
