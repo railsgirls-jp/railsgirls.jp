@@ -124,7 +124,7 @@ cd sample
 rails g scaffold book
 rails db:create
 rails db:migrate
-rails s
+rails server
 {% endhighlight %}
 
 ブラウザのURL欄に `http://localhost:3000/books` と入力して、画面が表示されれば成功です。
@@ -245,7 +245,7 @@ cd sample
 rails g scaffold book
 rails db:create
 rails db:migrate
-rails s
+rails server
 {% endhighlight %}
 
 ブラウザのURL欄に `http://localhost:3000/books` と入力して、画面が表示されれば成功です。
@@ -328,7 +328,7 @@ cd sample
 rails g scaffold book
 rails db:create
 rails db:migrate
-rails s
+rails server
 {% endhighlight %}
 
 ブラウザのURL欄に `http://localhost:3000/books` と入力して、画面が表示されれば成功です。
@@ -674,7 +674,7 @@ cd sample
 bundle exec rails g scaffold book
 bundle exec rails db:create
 bundle exec rails db:migrate
-bundle exec rails s -b 0.0.0.0
+bundle exec rails server -b 0.0.0.0
 {% endhighlight %}
 
 ### *7.* プロジェクトを作成する場合に
