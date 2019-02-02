@@ -106,11 +106,7 @@ gem install rails --no-document
 
 Mac OS X 10.7 およびそれ以前のバージョンでは、 Atom エディタは非対応ですが、 [Sublime Text 2](http://www.sublimetext.com/2) エディタが利用可能です。
 
-### *5.* ブラウザを更新する
-
-[whatbrowser.org](http://whatbrowser.org) を参照して、お使いのブラウザが最新版でなければ更新してください。
-
-### *6.* 動作確認
+### *5.* 動作確認
 
 コーチの方に以下の方法で動作確認をしてもらってください。
 
@@ -293,13 +289,7 @@ Windows Vista およびそれ以前のバージョンでは Atom エディタは
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
-### *4.* ブラウザを更新する
-
-もし Internet Explorer をお使いでしたら、[Firefox](https://mozilla.org/firefox) か [Google Chrome](https://google.com/chrome) をインストールすることをお勧めします。
-
-また、[whatbrowser.org](http://whatbrowser.org) を参照して、お使いのブラウザが最新版でなければ更新してください。
-
-### *5.* Install node
+### *4.* Install node
 
 これは厳密に言うと必要ではありませんが、 後で起こる可能性のある `ExecJS::RuntimeError` や `オブジェクトでサポートされていないプロパティまたはメソッドです` などの問題を回避してくれます。 ([参考 stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial))
 
@@ -314,7 +304,7 @@ node --version
 
 バージョンが表示されればOKです。
 
-### *6.* 動作確認
+### *5.* 動作確認
 
 コーチの方に以下の方法で動作確認をしてもらってください。
 
@@ -457,10 +447,6 @@ rails server
 
 * [Sublime Text エディタをダウンロードしてインストールする](http://www.sublimetext.com/2)
 
-### *3.* ブラウザを更新する
-
-[whatbrowser.org](http://whatbrowser.org) を参照して、お使いのブラウザが最新版でなければ更新してください。
-
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
 <hr />
@@ -569,19 +555,13 @@ gem install rails --no-document
 
 [codenvy.io のサイト](https://codenvy.io/)
 
-### *1.* ブラウザを確認する
-
-Internet Explorer を利用している場合は、[Firefox](mozilla.org/firefox) または [Google Chrome](google.com/chrome)  をインストールしてください。
-
-インストールしているブラウザが最新ではない場合は、 [whatbrowser.org](http://whatbrowser.org) にアクセスして更新して下さい。
-
-### *2.* アカウントを作成する
+### *1.* アカウントを作成する
 
 ブラウザで [codenvy.io](https://codenvy.io) にアクセスして、無料でアカウントを作成することができます。
 
 ![](/images/codenvy/create-account.png)
 
-### *3.* Ruby on Rails の開発用に Workspace を作成する
+### *2.* Ruby on Rails の開発用に Workspace を作成する
 
 Workspace を作成するには、[codenvy.io](https://codenvy.io) にログインして、 'Workspaces' をクリックします。'Add Workspace' を押します。
 
@@ -599,7 +579,7 @@ Workspace を作成するには、[codenvy.io](https://codenvy.io) にログイ�
 
 * Codenvy は '/projects' というフォルダを作成します。ここにあなたが作成するコードを追加していきます。'Project Explorer' にて確認することができます。
 
-### *4.* Workspace の設定
+### *3.* Workspace の設定
 
 * 左側の 'Workspaces' をクリックします。
 * 作成した Workspace の列をクリックして、設定画面を表示します。
@@ -617,11 +597,11 @@ Workspace を作成するには、[codenvy.io](https://codenvy.io) にログイ�
 
 ![](/images/codenvy/server-tab.png)
 
-### *5.* Ruby と Ruby on Rails をインストールする。
+### *4.* Ruby と Ruby on Rails をインストールする。
 
 `Terminal` 内にて次のようにコマンドを入力して、Ruby と Ruby on Rails をインストールします。
 
-#### *5-0* 各種必要なプログラムのインストール
+#### *4-0* 各種必要なプログラムのインストール
 
 {% highlight sh %}
 sudo apt-get update -y && sudo apt-get install -y build-essential bzip2 libsqlite3-dev libssl-dev libreadline-dev nodejs tzdata zlib1g-dev
@@ -632,7 +612,7 @@ sudo apt-get update -y && sudo apt-get install -y build-essential bzip2 libsqlit
 * `[More]` ではリターン（エンター）キーを押します。
 `[Time zone:]` では `78` (`Tokyo`) を入力します。 
 
-#### *5-1* rbenv と ruby-build をインストール
+#### *4-1* rbenv と ruby-build をインストール
 
 {% highlight sh %}
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -642,31 +622,31 @@ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 source ~/.bashrc
 {% endhighlight %}
 
-#### *5-2* rbenv を使って Ruby をインストール
+#### *4-2* rbenv を使って Ruby をインストール
 
 {% highlight sh %}
 rbenv install 2.6.1
 {% endhighlight %}
 
-#### *5-3* デフォルトの Ruby を設定
+#### *4-3* デフォルトの Ruby を設定
 
 {% highlight sh %}
 rbenv global 2.6.1
 {% endhighlight %}
 
-#### *5-4* Bundler のインストール
+#### *4-4* Bundler のインストール
 
 {% highlight sh %}
 gem install bundler --no-document
 {% endhighlight %}
 
-#### *5-5* Rails のインストール
+#### *4-5* Rails のインストール
 
 {% highlight sh %}
 gem install rails --no-document
 {% endhighlight %}
 
-### *6.* 動作確認
+### *5.* 動作確認
 
 {% highlight sh %}
 rails new sample
@@ -677,7 +657,7 @@ bundle exec rails db:migrate
 bundle exec rails s -b 0.0.0.0
 {% endhighlight %}
 
-### *7.* プロジェクトを作成する場合に
+### *6.* プロジェクトを作成する場合に
 * 左側の `Projects` タブでフォルダやファイルの操作をすることができます。
 * 中央のエディタでファイルの編集を行います。
 * 下側の `Terminal` タブでコマンドを実行します。`Run` メニューから新しい`Terminal`を開くことができます。
