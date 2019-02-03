@@ -531,7 +531,7 @@ rbenv global 2.6.1
 gem install rails --no-document
 {% endhighlight %}
 
-#### *7.* 開発する
+### *7.* 開発する
 
 * 左側はフォルダとファイルを表示、選択できます。
 * 中央部はエディタです。ここでファイルを編集します。
