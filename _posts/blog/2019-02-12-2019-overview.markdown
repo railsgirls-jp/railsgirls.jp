@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "RubyKaigi2019 参加支援募集のお知らせ"
+title: "Rails Girls Japan 2018 年活動報告"
 date: 2019-01-23
 image: /images/railsgirls-sq.png
 ---
