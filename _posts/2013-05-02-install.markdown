@@ -137,11 +137,38 @@ rails server
 
 *※WSLでのペーストは右クリックで行います。*
 
-画面左下のWindowsボタンを押し、出てきた歯車ボタンを押して「設定」アプリケーションを開きます。設定アプリケーションの検索窓に「Windows の機能の有効化または無効化」と入力し（最後まで入力しなくてもOKです）、「Windows Subsystem for Linux」にチェックを入れ、マシンを再起動します。
+画面左下のWindowsボタンを押し、出てきた歯車ボタンを押して「設定」アプリケーションを開きます。
 
-続けて「Microsoft Store」を開き、検索窓に「Ubuntu」と入力して「Ubuntu」アプリケーションをインストールします（「Ubuntu 18.04 LTS」ではなく、「Ubuntu」をインストールするようにしてください）。
+![WSL install setting](/images/windows_install/wsl_install_setting1.png "wsl install setting")
 
-「Ubuntu」アプリケーションが起動すればWSLのインストールは成功です。起動したアプリケーション（ここからは*Bashウィンドウ*と呼びます）にはユーザー名とパスワードの入力を促す画面が表示されていますので、適当なユーザー名とパスワードを入力しましょう（パスワードは2回入力する必要があり、画面には表示されませんが正しく入力されています）。
+設定アプリケーションの検索窓に「Windows の機能の有効化または無効化」と入力します。（最後まで入力しなくてもOKです）
+
+![WSL install setting](/images/windows_install/wsl_install_setting2.png "wsl install setting")
+
+
+以下の画面が表示されたら、「Windows Subsystem for Linux」にチェックを入れ、マシンを再起動します。
+
+![WSL install select wsl](/images/windows_install/wsl_install_select_wsl.png "wsl install select wsl")
+
+続けて「Microsoft Store」を開きます。
+
+![WSL install open store](/images/windows_install/wsl_install_open_store.png "wsl install open store")
+
+
+検索窓に「Ubuntu」と入力して「Ubuntu」アプリケーションをインストールします（「Ubuntu 18.04 LTS」ではなく、「Ubuntu」をインストールするようにしてください）。
+
+![WSL install select ubuntu](/images/windows_install/wsl_install_select_ubuntu.png "wsl install select ubuntu")
+
+以下の画面が表示されるので、 '入手'ボタン、'起動'ボタンをクリックします。
+
+![WSL install get ubuntu](/images/windows_install/wsl_install_get_ubuntu.png "wsl install get ubuntu")
+![WSL install start ubuntu](/images/windows_install/wsl_install_start_ubuntu.png "wsl install start ubuntu")
+
+「Ubuntu」アプリケーションが起動すればWSLのインストールは成功です。
+
+起動したアプリケーション（ここからは*Bashウィンドウ*と呼びます）にはユーザー名とパスワードの入力を促す画面が表示されていますので、適当なユーザー名とパスワードを入力しましょう（パスワードは2回入力する必要があり、画面には表示されませんが正しく入力されています）。
+
+![WSL install Bash Window](/images/windows_install/wsl_install_bash_window.png "wsl install bash window")
 
 ### *2.* Rubyのインストール
 
@@ -253,7 +280,20 @@ rails server
 ### *1.* Rubyのインストール
 
 [RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.5-1/rubyinstaller-devkit-2.4.5-1-x64.exe) をダウンロードして実行します。
-インストールのオプションは `Use UTF-8 as default external encodling` をチェックし、他の選択肢は全てデフォルトを選択します。Rubyのインストール後にコマンドプロンプトが立ち上がってMSYS2のインストールに進みますのでデフォルトの選択肢(何も入力せずにエンター)を選びます。
+
+インストールのオプションは `Use UTF-8 as default external encodling` をチェックし、他の選択肢は全てデフォルトを選択します。
+![RubyInstaller Install options](/images/windows_install/rubyinstaller_install_options.png "rubyinstaller install options")
+
+Rubyのインストールが終了すると、以下の画面が表示されるので、'Finish'ボタンをクリックします。
+![RubyInstaller Install Finish](/images/windows_install/rubyinstaller_install_finish.png "rubyinstaller install finish")
+
+コマンドプロンプトが立ち上がってMSYS2のインストールに進みますのでデフォルトの選択肢(何も入力せずにエンター)を選びます。
+
+![RubyInstaller MSYS2 install](/images/windows_install/rubyinstaller_msys2_install.png "rubyinstaller msys2 install")
+
+コマンドプロンプトが立ち上がってMSYS2のインストールに進みますのでデフォルトの選択肢(何も入力せずにエンター)を選びます。
+
+MSYS2のインストール後、コマンドプロンプトが自動的に閉じるので、	Windowsスタートメニューからコマンドプロンプトを起動しておきましょう。
 
 ### *2.* Railsのインストール
 
