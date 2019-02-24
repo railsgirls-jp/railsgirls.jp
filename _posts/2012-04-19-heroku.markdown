@@ -78,21 +78,12 @@ Heroku Toolbelt を無事インストールできたら、ターミナル（Mac�
 heroku login
 {% endhighlight %}
 
-`Enter your Heroku credentials.（heroku の認証情報を入力してください）` と言われるので、先ほど登録したメールアドレスとパスワードを入力します。
+`heroku: Press any key to open up the browser to login or q to exit:` と言われますのでEnterキーを押してください。するとブラウザでherokuのページが開かれます。
+メールアドレスとパスワードの入力を求められたら先ほど登録したメールアドレスとパスワードを入力します。
 
-{% highlight sh %}
-heroku login
-Enter your Heroku credentials.
-Email: rails-girls@example.com
-Password:
-{% endhighlight %}
+ブラウザに以下の画面が表示されればherokuの準備はこれで終了です。
 
-メールアドレスは入力したそのまま画面上に表示されますが、パスワードは画面上に何も表示されません。
-
-入力は正常に受け付けられているので、反応がなくても気にせずに最後まで打ち、エンターキーを押してください。
-
-heroku の準備はこれで終了です。
-
+<img src="../images/heroku_logged_in.png" />
 
 __Coachより__: Heroku か、従来のサーバーか、デプロイの利点について話してみましょう。
 
