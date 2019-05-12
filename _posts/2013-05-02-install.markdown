@@ -278,7 +278,8 @@ rails server
 
 ### *1.* Rubyのインストール
 
-[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.5-1/rubyinstaller-devkit-2.4.5-1-x64.exe) をダウンロードして実行します。
+[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.3-1/rubyinstaller-devkit-2.6.3-1-x64.exe) をダウンロードして実行します。
+
 
 インストールのオプションは `Use UTF-8 as default external encodling` をチェックし、他の選択肢は全てデフォルトを選択します。
 ![RubyInstaller Install options](/images/windows_install/rubyinstaller_install_options.png "rubyinstaller install options")
@@ -297,7 +298,7 @@ MSYS2のインストール後、コマンドプロンプトが自動的に閉じ
 ### *2.* Railsのインストール
 
 {% highlight sh %}
-gem install rails bundler --no-document
+gem install rails --no-document
 {% endhighlight %}
 
 作業完了後に、以下のコマンドを実行してください。
@@ -380,12 +381,12 @@ server certificate B: certificate verify failed (https://rubygems.org/gems/i18n-
 gem -v
 {% endhighlight %}
 
-もし `2.6.5` より古いバージョンだったら、以下の手順で更新する必要があります:
+もし `3.0.3` より古いバージョンだったら、以下の手順で更新する必要があります:
 
-[ruby-gems-update gem](https://rubygems.org/downloads/rubygems-update-2.6.7.gem) をダウンロードし、それを `c:\rubygems-update-2.6.7.gem` として保存して実行してください:
+[ruby-gems-update gem](https://rubygems.org/downloads/rubygems-update-3.0.3.gem) をダウンロードし、それを `c:\rubygems-update-3.0.3.gem` として保存して実行してください:
 
 {% highlight sh %}
-gem install --local c:\\rubygems-update-2.6.7.gem
+gem install --local c:\\rubygems-update-3.0.3.gem
 update_rubygems --no-document
 gem uninstall rubygems-update -x
 {% endhighlight %}
@@ -396,7 +397,7 @@ Rubygems のバージョンをチェックしましょう。
 gem -v
 {% endhighlight %}
 
-バージョンが `2.6.5` より大きいことを確かめてください。
+バージョンが `3.0.3` より大きいことを確かめてください。
 もし失敗していたらやり直してください。
 
 続いて、bundler gem も更新が必要となる場合があります。まず `bundle` のバージョンをチェックしましょう。
@@ -405,7 +406,7 @@ gem -v
 bundle -v
 {% endhighlight %}
 
-もし `1.13.0` より古いバージョンだったら、以下の手順で更新する必要があります:
+もし `1.17.2` より古いバージョンだったら、以下の手順で更新する必要があります:
 
 {% highlight sh %}
 gem update bundler --no-document
@@ -417,7 +418,7 @@ gem update bundler --no-document
 bundle -v
 {% endhighlight %}
 
-バージョンが `1.13.0` より大きいことを確かめてください。
+バージョンが `1.17.2` より大きいことを確かめてください。
 もし失敗していたらやり直してください。
 
 
