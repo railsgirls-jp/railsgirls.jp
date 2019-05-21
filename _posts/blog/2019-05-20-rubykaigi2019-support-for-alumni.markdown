@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "RubyKaigi2019 参加支援についてのご報告"
+title: "RubyKaigi 2019 参加支援についてのご報告"
 date: 2019-05-21
 image: /images/blog/rubykaigi2019-support-for-alumni1.jpg
 ---
@@ -8,7 +8,7 @@ image: /images/blog/rubykaigi2019-support-for-alumni1.jpg
 Rails Girls Japanでは、2017年より
 Rails Girlsイベントの参加者の中から、RubyKaigiへの支援を行っております。
 
-今年もRubyKaigi2019への参加希望を募り、多くの応募を頂きました。
+今年もRubyKaigi 2019への参加希望を募り、多くの応募を頂きました。
 その中から5名の方に参加支援を行いました。
 
 
@@ -22,13 +22,12 @@ Rails Girlsイベントの参加者の中から、RubyKaigiへの支援を行っ
 </div>
 
 <blockquote>
-  <p>
-  RubyKaigiは、日本で開催開催されるプログラミング言語Rubyの国際カンファレンスで>、海外からも多くのRubyistが参加し、
-  2019年は、4/18~4/20の3日間、福岡国際会議場で開催されました。</p>
+  RubyKaigiは、日本で開催開催されるプログラミング言語Rubyの国際カンファレンスで、海外からも多くのRubyistが参加し、
+  2019年は、4/18~4/20の3日間、福岡国際会議場で開催されました。<br/>
   参加者の方々と、年間スポンサーの方々(株式会社リンクアンドモチベーション様、株式会社永和システムマネジメント様、GitHub様)
 </blockquote>
 
-RubyKaigi2019への参加支援の目的は、 RubyKaigiという技術的な国際カンファレンスに参加してもらうことで、 
+RubyKaigi 2019への参加支援の目的は、 RubyKaigiという技術的な国際カンファレンスに参加してもらうことで、 
 今後のプログラミングに役立てて欲しいということと、 
 世界中のRubyistと話すことで、Rubyコミュニティの楽しさを体験して欲しいというところにあります。
 
@@ -61,7 +60,7 @@ railsgirlsjp-invoice at googlegroups.com
 この機会を活かして、私もRubyで世の中をHappyにするお手伝いができたらいいなと思います。
 本当に感謝しています。ありがとうございます。
 
-### 鈴木美佳さん
+### 鈴木 美佳さん
 
 今回参加費支援をしていただいてRubyKaigi2019に初参加できました。
 
