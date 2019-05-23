@@ -137,21 +137,30 @@ __Coachより__: RDBMS とそうでないものについて話してみましょ
 
 #### アプリのcreate
 
-Heroku のアプリを作りましょう。ターミナルで次のコマンドを実行してください。 :
+Heroku のアプリを作りましょう。  
+まずは世界に１つだけのアプリの名前を考えましょう！  
+  
+名前が決まったら、ターミナルでコマンドを実行します。  
+例えば、アプリの名前を"my-first-app"と決めた場合、ターミナルで次のコマンドを実行してください。 :
 
 {% highlight sh %}
-heroku create
+heroku create my-first-app
 {% endhighlight %}
 
 次のようなものが見られます。 :
 
 {% highlight sh %}
-Creating evening-sky-7498... done, stack is cedar
-http://evening-sky-7498.herokuapp.com/ | git@heroku.com:evening-sky-7498.git
-Git remote heroku added
+Creating ⬢ my-first-app... done
+http://my-first-app.herokuapp.com/ | https://git.heroku.com/my-first-app.git
 {% endhighlight %}
 
-この場合では、 "evening-sky-7498" がアプリの名前です。
+もし、決めたアプリの名前が既に使われていたら、以下のようなメッセージが表示されます。 :
+{% highlight sh %}
+Creating ⬢ my-first-app... !
+ ▸    Name myfirst-app is already taken
+{% highlight sh %}
+
+この場合は、もう一度アプリの名前を考えてなおしてみてください。
 
 #### コードをpush
 
@@ -170,15 +179,20 @@ Compressing objects: 100% (115/115), done.
 Writing objects: 100% (134/134), 35.29 KiB, done.
 Total 134 (delta 26), reused 0 (delta 0)
 
------> Ruby app detected
------> Compiling Ruby/Rails
------> Using Ruby version: ruby-2.0.0
------> Installing dependencies using 1.6.3
-       Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
-       Fetching gem metadata from https://rubygems.org/..........
+remote: -----> Ruby app detected
+remote: -----> Compiling Ruby/Rails
+remote: -----> Using Ruby version: ruby-2.6.3
+remote: -----> Installing dependencies using bundler 2.0.1
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+remote:        Fetching gem metadata from https://rubygems.org/..........
 ...
------> Launching... done, v4
-       http://evening-sky-7498.herokuapp.com deployed to Heroku
+remote: -----> Launching...
+remote:        Released v6
+remote:        https://my-first-app.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/my-first-app.git
+ * [new branch]      master -> master
 {% endhighlight %}
 
 アプリのプッシュが終わってるのがわかりますか？ "Launching..." というテキストのところです。プッシュが成功したら **データベースのマイグレート** へ進んで下さい。
@@ -223,7 +237,7 @@ Password for 'https://git.heroku.com':   ← 上でコピーした文字列を�
 heroku run rails db:migrate
 {% endhighlight %}
 
-そのコマンドが実行されたら、インターネットからアプリを見ることができます。このアプリの例ではURLは、 [http://evening-sky-7498.herokuapp.com/](http://evening-sky-7498.herokuapp.com) です。もしくは、クラウドIDE以外ならターミナルで次のコマンドを実行すれば、そのページを見に行くことができます。
+そのコマンドが実行されたら、インターネットからアプリを見ることができます。このアプリの例ではURLは、 [http://my-first-app.herokuapp.com/](http://my-first-app.herokuapp.com) です。もしくは、クラウドIDE以外ならターミナルで次のコマンドを実行すれば、そのページを見に行くことができます。
 
 {% highlight sh %}
 heroku open
