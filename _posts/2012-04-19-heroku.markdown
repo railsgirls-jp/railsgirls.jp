@@ -139,7 +139,7 @@ __Coachより__: RDBMS とそうでないものについて話してみましょ
 
 Heroku のアプリを作りましょう。  
 まずは世界に１つだけのアプリの名前を考えましょう！  
-  
+
 名前が決まったら、ターミナルでコマンドを実行します。  
 例えば、アプリの名前を"my-first-app"と決めた場合、ターミナルで次のコマンドを実行してください。 :
 
@@ -158,7 +158,7 @@ http://my-first-app.herokuapp.com/ | https://git.heroku.com/my-first-app.git
 {% highlight sh %}
 Creating ⬢ my-first-app... !
  ▸    Name myfirst-app is already taken
-{% highlight sh %}
+{% endhighlight sh %}
 
 この場合は、もう一度アプリの名前を考えてなおしてみてください。
 
