@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RubyKaigi 2019 参加支援についてのご報告"
-date: 2019-05-21
+date: 2019-06-04
 image: /images/blog/rubykaigi2019-support-for-alumni1.jpg
 ---
 
@@ -28,7 +28,7 @@ Rails Girlsイベントの参加者の中から、RubyKaigiへの支援を行っ
 </blockquote>
 
 RubyKaigi 2019への参加支援の目的は、 RubyKaigiという技術的な国際カンファレンスに参加してもらうことで、 
-今後のプログラミングに役立てて欲しいということと、 
+今後のプログラミングの学習の経験に役立てて欲しいということと、 
 世界中のRubyistと話すことで、Rubyコミュニティの楽しさを体験して欲しいというところにあります。
 
 参加者の方々は、たくさんのRubyistと交流し、多くの刺激を受け、
