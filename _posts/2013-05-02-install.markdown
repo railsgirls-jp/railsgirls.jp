@@ -165,7 +165,7 @@ rails server
 
 「Ubuntu」アプリケーションが起動すればWSLのインストールは成功です。
 
-起動したアプリケーション（ここからは*Bashウィンドウ*と呼びます）にはユーザー名とパスワードの入力を促す画面が表示されていますので、適当なユーザー名とパスワードを入力しましょう（パスワードは2回入力する必要があり、画面には表示されませんが正しく入力されています）。
+起動したアプリケーション（ここからは*Bashウィンドウ*と呼びます）にはユーザー名とパスワードの入力を促す画面が表示されていますので、適当なユーザー名（半角英数小文字のみ）とパスワードを入力しましょう（パスワードは2回入力する必要があり、画面には表示されませんが正しく入力されています）。
 
 ![WSL install Bash Window](/images/windows_install/wsl_install_bash_window.png "wsl install bash window")
 
@@ -281,7 +281,7 @@ rails server
 [RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.3-1/rubyinstaller-devkit-2.6.3-1-x64.exe) をダウンロードして実行します。
 
 
-インストールのオプションは `Use UTF-8 as default external encodling` をチェックし、他の選択肢は全てデフォルトを選択します。
+インストールのオプションは `Use UTF-8 as default external encoding` をチェックし、他の選択肢は全てデフォルトを選択します。
 ![RubyInstaller Install options](/images/windows_install/rubyinstaller_install_options.png "rubyinstaller install options")
 
 Rubyのインストールが終了すると、以下の画面が表示されるので、'Finish'ボタンをクリックします。
