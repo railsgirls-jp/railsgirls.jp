@@ -237,6 +237,8 @@ Password for 'https://git.heroku.com':   ← 上でコピーした文字列を�
 heroku run rails db:migrate
 {% endhighlight %}
 
+公共のネットワークなどを使った場合、`ETIMEDOUT: connect ETIMEDOUT (IPアドレス):5000` というエラーが起きることがあります。エラーになった場合は実行するコマンドを `heroku run:detached rails db:migrate` に変更してみてください。
+
 そのコマンドが実行されたら、インターネットからアプリを見ることができます。このアプリの例ではURLは、 [http://my-first-app.herokuapp.com/](http://my-first-app.herokuapp.com) です。もしくは、クラウドIDE以外ならターミナルで次のコマンドを実行すれば、そのページを見に行くことができます。
 
 {% highlight sh %}
