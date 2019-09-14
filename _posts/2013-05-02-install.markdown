@@ -309,7 +309,7 @@ rails -v
 以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
 
 {% highlight sh %}
-Rails 5.2.3
+Rails 6.0.0
 {% endhighlight %}
 
 もしもRailsのバージョンが5.2よりも小さい場合は 以下のコマンドを実行することでバージョンアップできます。
@@ -328,20 +328,17 @@ Windows Vista およびそれ以前のバージョンでは Atom エディタは
 
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
-### *4.* Install node
+### *4.* JavaScriptライブラリのインストール
 
-これは厳密に言うと必要ではありませんが、 後で起こる可能性のある `ExecJS::RuntimeError` や `オブジェクトでサポートされていないプロパティまたはメソッドです` などの問題を回避してくれます。 ([参考 stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial))
-
-* こちらのサイト [https://nodejs.org/](https://nodejs.org/) から、LTS版をダウンロードし、インストールします。
+* nodeをインストールします。こちらのサイト [https://nodejs.org/](https://nodejs.org/) から、LTS版をダウンロードし、インストールします。
+* yarnをインストールします。こちらのサイト [https://yarnpkg.com/ja/docs/install#windows-stable](https://yarnpkg.com/ja/docs/install#windows-stable) で「Windows」「安定版」が選択されていることを確認し、「インストーラをダウンロードする」ボタンを押します。ダウンロードが完了したら、保存されたインストーラを実行してください。
 * `Command Prompt with Ruby on Rails` をもう一度開いてください。
-
-node のバージョンをチェックしましょう。
+* nodeとyarnのバージョンをチェックしましょう。それぞれ、バージョンが表示されればOKです。
 
 {% highlight sh %}
-node --version
+node -v
+yarn -v
 {% endhighlight %}
-
-バージョンが表示されればOKです。
 
 ### *5.* 動作確認
 
