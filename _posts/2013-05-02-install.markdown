@@ -278,8 +278,7 @@ rails server
 
 ### *1.* Rubyのインストール
 
-[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.3-1/rubyinstaller-devkit-2.6.3-1-x64.exe) をダウンロードして実行します。
-
+[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.4-1/rubyinstaller-devkit-2.6.4-1-x64.exe) をダウンロードして実行します。
 
 インストールのオプションは `Use UTF-8 as default external encoding` をチェックし、他の選択肢は全てデフォルトを選択します。
 ![RubyInstaller Install options](/images/windows_install/rubyinstaller_install_options.png "rubyinstaller install options")
