@@ -175,14 +175,28 @@ rails server
 
 #### 2-1 必要なソフトウェアのインストール
 
+最初に、WSLの時刻設定を行います。
+
 Bashウィンドウで以下のコマンドを実行してください。
 
 なお、最初のコマンドを実行する際にパスワードの入力を求められますが、先程Bashウィンドウに入力したパスワードを入力してください(Windowsのパスワードではないので注意してください)。
 
 {% highlight sh %}
+sudo dpkg-reconfigure tzdata
+{% endhighlight %}
+
+以下の画面が起動するので、「Asia」を矢印キーで移動して選択して、Tabキーを押してOkボタンに移動して、Enterキーを押してください。
+![WSL install timezone](/images/windows_install/timezone_1.png "wsl install timezone")
+
+都市を選択する以下の画面が起動するので、「Tokyo」を矢印キーで移動して選択して、Tabキーを押してOkボタンに移動して、Enterキーを押してください。
+![WSL install timezone](/images/windows_install/timezone_2.png "wsl install timezone")
+
+{% highlight sh %}
+sudo apt-get update
 sudo apt update
 sudo apt upgrade -y
-sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs -y
+sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs npm -y
+sudo npm install --global yarn
 {% endhighlight %}
 
 #### 2-2 rbenvのインストール
@@ -209,8 +223,8 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 Bashウィンドウで以下のコマンドを実行してください。
 
 {% highlight sh %}
-rbenv install 2.6.3
-rbenv global 2.6.3
+rbenv install 2.6.4
+rbenv global 2.6.4
 {% endhighlight %}
 
 作業完了後に、以下のコマンドを実行してください。
@@ -222,7 +236,7 @@ ruby -v
 以下のように、インストールされたRubyのバージョンが表示されればOKです。
 
 {% highlight sh %}
-ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
+ruby 2.6.4p104 (2019-08-28 revision 67798) [x86_64-linux]
 {% endhighlight %}
 
 ### *3.* Railsのインストール
@@ -242,7 +256,7 @@ rails -v
 以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
 
 {% highlight sh %}
-Rails 5.2.3
+Rails 6.0.0
 {% endhighlight %}
 
 <hr />
