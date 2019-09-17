@@ -192,10 +192,9 @@ sudo dpkg-reconfigure tzdata
 ![WSL install timezone](/images/windows_install/timezone_2.png "wsl install timezone")
 
 {% highlight sh %}
-sudo apt-get update
 sudo apt update
 sudo apt upgrade -y
-sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs npm -y
+sudo apt install autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs-dev node-gyp npm -y
 sudo npm install --global yarn
 {% endhighlight %}
 
