@@ -346,7 +346,7 @@ yarn -v
 
 *コーチの方へ*:
 
-以下のコマンドでRailsが正しくインストールされているか確認してください。
+以下のコマンドでRailsが正しくインストールされているか確認してください。実行後、ブラウザのURL欄に `http://localhost:3000/books` と入力して、画面が表示されれば成功です。作ったプロジェクトは削除しておきましょう。
 
 {% highlight sh %}
 rails new sample
@@ -356,9 +356,15 @@ rails db:migrate
 rails server
 {% endhighlight %}
 
-ブラウザのURL欄に `http://localhost:3000/books` と入力して、画面が表示されれば成功です。
+bundle install時にsqlite3 gemのインストールでエラーになる場合は、以下を試してみてください。ridkはMSYS2用パッケージマネージャです。
 
-作ったプロジェクトは削除しておきましょう。
+{% highlight sh %}
+gem uninstall sqlite3 --all
+ridk exec pacman -S mingw-w64-x86_64-sqlite3
+gem install sqlite3 --platform ruby
+{% endhighlight %}
+
+rails newで行われるbundle installがエラーで中断したときは、上記の修正後、 bundle install、rails webpacker:install の実行を忘れないでください。
 
 ## 出るかもしれないエラー
 
