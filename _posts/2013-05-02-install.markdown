@@ -92,7 +92,13 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 rbenv global 2.6.3
 {% endhighlight %}
 
-#### 3-6. Railsのインストール:
+#### 3-6. 必要なソフトウェアをインストール
+
+{% highlight sh %}
+brew install yarn
+{% endhighlight %}
+
+#### 3-7. Railsのインストール:
 
 {% highlight sh %}
 gem install rails --no-document
