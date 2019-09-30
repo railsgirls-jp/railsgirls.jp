@@ -119,6 +119,7 @@ rails new sample
 cd sample
 rails g scaffold book
 rails db:migrate
+rails webpacker:install
 rails server
 {% endhighlight %}
 
@@ -280,6 +281,7 @@ cd sample
 rails g scaffold book
 rails db:create
 rails db:migrate
+rails webpacker:install
 rails server
 {% endhighlight %}
 
@@ -366,6 +368,7 @@ rails new sample
 cd sample
 rails g scaffold book
 rails db:migrate
+rails webpacker:install
 rails server
 {% endhighlight %}
 
@@ -707,6 +710,7 @@ rails new sample
 cd sample
 bundle exec rails g scaffold book
 bundle exec rails db:migrate
+bundle exec rails webpacker:install
 bundle exec rails server -b 0.0.0.0
 {% endhighlight %}
 
