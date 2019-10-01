@@ -16,9 +16,9 @@ permalink: heroku
 
 [ユーザ登録画面](https://signup.heroku.com/)からアカウントを作成しましょう。
 
-<img src="../images/heroku_sign_up.jpg" />
+<img src="../images/heroku_sign_up.png" />
 
-「First name」に名前、「Last name」に苗字、「Email」にメールアドレス、「Company name」に勤務先や所属を入力し、国を選択、言語として Ruby を選択して「Create Free Account」ボタンを押します。
+「First name」に名前、「Last name」に苗字、「Email」にメールアドレス、「Role」でHobbyistを選択、国を選択、言語として Ruby を選択して最後に「I'm not a robot」にチェックを入れて「Create Free Account」ボタンを押します。
 
 しばらくすると入力したメールアドレスに「Confirm your account on Heroku」という件名のメールが届くので、本文中の activate 用の URL をクリックします。
 
