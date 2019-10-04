@@ -62,14 +62,6 @@ __Coachへ__: [Heroku CLIのページ](https://devcenter.heroku.com/articles/her
 
 （環境により拡張子が表示されませんが、異常ではありません）
 
-##### codenvy.ioの場合
-
-codenvy.io上のターミナルから次のコマンドを入力しましょう。
-
-{% highlight sh %}
-curl https://cli-assets.heroku.com/install.sh | sh
-{% endhighlight %}
-
 #### Heroku にコマンドラインでログインしよう
 
 Heroku Toolbelt を無事インストールできたら、ターミナル（Mac）またはコマンドプロンプト（Windows）を起動して、次のコマンドを入力しましょう。
