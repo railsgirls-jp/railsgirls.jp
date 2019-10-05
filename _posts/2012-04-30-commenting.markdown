@@ -11,9 +11,9 @@ Rails のインストールと ideas アプリ構築についての手順は、 
 
 ## *1.*Comment の scaffold をする
 
-Comment のコメント者名、コメント本文(コメント内容)、Idea テーブルへの関係 (`idea_id`) を scaffold しましょう。
+Comment のコメント者名、コメント本文(コメント内容)、Idea テーブルへの関係 (`references`) を scaffold しましょう。
 {% highlight sh %}
-rails generate scaffold comment user_name:string body:text idea_id:integer
+rails generate scaffold comment user_name:string body:text idea:references
 {% endhighlight %}
 これで新しくコメントテーブルが作成された事をデータベースに教えてあげるためのマイグレーションファイルが作成されました。
 マイグレーションを実行するには下記のコマンドを実行します。
