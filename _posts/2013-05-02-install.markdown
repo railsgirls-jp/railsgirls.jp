@@ -76,7 +76,7 @@ source ~/.bash_profile
 "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 2.6.3
+rbenv install 2.6.5
 {% endhighlight %}
 
 ※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
@@ -89,10 +89,16 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### 3-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
-rbenv global 2.6.3
+rbenv global 2.6.5
 {% endhighlight %}
 
-#### 3-6. Railsのインストール:
+#### 3-6. 必要なソフトウェアをインストール
+
+{% highlight sh %}
+brew install yarn
+{% endhighlight %}
+
+#### 3-7. Railsのインストール:
 
 {% highlight sh %}
 gem install rails --no-document
@@ -222,8 +228,8 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 Bashウィンドウで以下のコマンドを実行してください。
 
 {% highlight sh %}
-rbenv install 2.6.4
-rbenv global 2.6.4
+rbenv install 2.6.5
+rbenv global 2.6.5
 {% endhighlight %}
 
 作業完了後に、以下のコマンドを実行してください。
@@ -235,7 +241,7 @@ ruby -v
 以下のように、インストールされたRubyのバージョンが表示されればOKです。
 
 {% highlight sh %}
-ruby 2.6.4p104 (2019-08-28 revision 67798) [x86_64-linux]
+ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
 {% endhighlight %}
 
 ### *3.* Railsのインストール
@@ -291,7 +297,7 @@ rails server
 
 ### *1.* Rubyのインストール
 
-[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.4-1/rubyinstaller-devkit-2.6.4-1-x64.exe) をダウンロードして実行します。
+[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.5-1/rubyinstaller-devkit-2.6.5-1-x64.exe) をダウンロードして実行します。
 
 インストールのオプションは `Use UTF-8 as default external encoding` をチェックし、他の選択肢は全てデフォルトを選択します。
 ![RubyInstaller Install options](/images/windows_install/rubyinstaller_install_options.png "rubyinstaller install options")
@@ -580,7 +586,7 @@ AWS Cloud9 の画面に戻りましょう。少し待って利用可能な状態
 ### *5.* rbenv を使って Ruby の version を最新にする
 
 "ruby -v" コマンドでRubyのバージョンを確認できます。
-最新の2.6.3では無い場合は2.6.3をインストールしましょう。
+最新の2.6.5では無い場合は2.6.5をインストールしましょう。
 
 {% highlight sh %}
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -588,8 +594,8 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
-rbenv install 2.6.3
-rbenv global 2.6.3
+rbenv install 2.6.5
+rbenv global 2.6.5
 {% endhighlight %}
 
 ### *6.* Bundlerのインストール
@@ -692,13 +698,13 @@ source ~/.bashrc
 #### *4-2* rbenv を使って Ruby をインストール
 
 {% highlight sh %}
-rbenv install 2.6.3
+rbenv install 2.6.5
 {% endhighlight %}
 
 #### *4-3* デフォルトの Ruby を設定
 
 {% highlight sh %}
-rbenv global 2.6.3
+rbenv global 2.6.5
 {% endhighlight %}
 
 #### *4-4* Bundler のインストール
