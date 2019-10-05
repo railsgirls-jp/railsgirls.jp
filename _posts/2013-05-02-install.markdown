@@ -545,7 +545,7 @@ rails server
 * [Welcome to AWS Cloud9](https://console.aws.amazon.com/cloud9/home/product) にアクセスしてください。(サインインしていない場合は先にサインインをしてください)
 * Create environment をクリックします。
 * Environment name には好きな名前をつけましょう。Descriptionは任意なので空欄でも構いません。Next Step をクリックしましょう。
-* Configure settings は初期設定のままでOKです。Next Step をクリックしましょう。
+* Configure settings では Platform に Ubuntu Server を指定してください。その他は初期設定のままでOKです。Next Step をクリックしてください。
 * Review で入力内容を確認します。Create environment をクリックしましょう。
 * 利用可能になるまで少し待ってください。
 * 次のような画面が開いたらOKです。
@@ -583,34 +583,23 @@ AWS Cloud9 の画面に戻りましょう。少し待って利用可能な状態
 
 これで RVM が正常にアンインストールされました。
 
-### *5.* rbenv を使って Ruby の version を最新にする
+### *5.* Railsのインストール
 
-"ruby -v" コマンドでRubyのバージョンを確認できます。
-最新の2.6.5では無い場合は2.6.5をインストールしましょう。
-
-{% highlight sh %}
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-source ~/.bash_profile
-rbenv install 2.6.5
-rbenv global 2.6.5
-{% endhighlight %}
-
-### *6.* Bundlerのインストール
+次のコマンドを実行してしばらく待つと各種インストールが完了します。
 
 {% highlight sh %}
-gem install bundler --no-document
+bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
-### *7.* Railsのインストール
+インストールしたRubyとRailsのバージョンを確認してみましょう。
 
 {% highlight sh %}
-gem install rails --no-document
+source ~/.rvm/scripts/rvm
+ruby -v
+rails -v
 {% endhighlight %}
 
-#### *8.* 開発する
+#### *6.* 開発する
 
 * 左側はフォルダとファイルを表示、選択できます。
 * 中央部はエディタです。ここでファイルを編集します。
