@@ -149,7 +149,6 @@ Rails Girlsのイベントは必ずインストレーション・フェストか
 
 + [Bentobox slidedeck](http://speakerdeck.com/u/railsgirls/p/rails-girls-bentobox-exercise)
 + [Instruction video](http://vimeo.com/39049632)
-+ [Example video from Rails Girls ATL](http://vimeo.com/54912357)
 
 14:30 - 18:00 ワークショップ
 
