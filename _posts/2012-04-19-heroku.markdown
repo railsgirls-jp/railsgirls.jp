@@ -106,14 +106,14 @@ __Coachより__: バージョン管理システムと git について説明す�
 まず、 Heroku で動くデータベースが必要です。いつものデータベースとは違います。 Gemfile を次のように変更しましょう。 :
 
 {% highlight ruby %}
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.4'
 {% endhighlight %}
 
 ↓
 
 {% highlight ruby %}
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.4'
 end
 group :production do
   gem 'pg'
