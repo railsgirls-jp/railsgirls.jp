@@ -738,22 +738,22 @@ bundle exec rails g scaffold book title:string memo:text
 bundle exec rails db:migrate
 {% endhighlight %}
 
-#### *5.2 Rails6.0 テスト用サーバードメイン名を`config/application.rb`に追記
+#### *5.2 Rails6.0 サーバードメイン名を`config/application.rb`に追記
 
 『*3.* Workspace の設定』で設定したサーバーアドレスをドメインに追記します。
 codenvyのexploreから`sample/config/aapplication.rb`をダブルクリックしてエディタを開きます。
-（XXには恐らく数字が入ります。）
+`.codenvy.io`と追記することで、codenvyのサブドメインも全て対象となります。
 
 {% highlight sh %}
 module Sample
   class Application < Rails::Application
     config.load_defaults 6.0
-    config.hosts << "node20.codenvy.io" # <=ここに追記します。　数字は各自で異なります。
+    config.hosts << ".codenvy.io"   # <=ここに追記します。
    end
 end
 {% endhighlight %}
 
-#### *5.3 Rails6.0 テスト用サーバーの起動
+#### *5.3 Rails6.0 サーバーの起動
 
 {% highlight sh %}
 bundle exec rails server -b 0.0.0.0
