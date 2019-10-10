@@ -723,10 +723,15 @@ gem install bundler --no-document
 gem install rails --no-document
 {% endhighlight %}
 
+#### *4-7* config/webpacker.ymlのパラメータ変更
 
+エディターで`config/webpacker.yml`ファイルを開き、以下のパラメータを変更します。
 
-
-
+{% highlight sh %}
+development:
+  <<: *default
+  check_yarn_integrity: false 　　# << ここを`false`に変更
+{% endhighlight %}
 
 ### *5.* 動作確認
 
