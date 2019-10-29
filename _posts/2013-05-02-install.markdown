@@ -672,7 +672,7 @@ sudo apt-get update -y && sudo apt-get install -y build-essential bzip2 libsqlit
 インストールの途中、入力をする必要があります。以下のように入力して下さい。
 * `Geographic area: ` では `6` (`Asia`) を入力します。
 * `[More]` ではリターン（エンター）キーを押します。
-`[Time zone:]` では `78` (`Tokyo`) を入力します。
+`[Time zone:]` では `79` (`Tokyo`) を入力します。
 
 #### *4-1* rbenv と ruby-build をインストール
 
