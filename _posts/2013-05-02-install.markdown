@@ -666,7 +666,9 @@ Workspace を作成するには、[codenvy.io](https://codenvy.io) にログイ�
 #### *4-0* 各種必要なプログラムのインストール
 
 {% highlight sh %}
-sudo apt-get update -y && sudo apt-get install -y build-essential bzip2 libsqlite3-dev libssl-dev libreadline-dev nodejs tzdata zlib1g-dev
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y build-essential bzip2  libsqlite3-dev libssl-dev libreadline-dev  tzdata zlib1g-dev
 {% endhighlight %}
 
 インストールの途中、入力をする必要があります。以下のように入力して下さい。
@@ -674,7 +676,20 @@ sudo apt-get update -y && sudo apt-get install -y build-essential bzip2 libsqlit
 * `[More]` ではリターン（エンター）キーを押します。
 `[Time zone:]` では `78` (`Tokyo`) を入力します。
 
-#### *4-1* rbenv と ruby-build をインストール
+#### *4-1* node.js 、yarnのインストール
+
+{% highlight sh %}
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt install -y nodejs
+{% endhighlight %}
+
+{% highlight sh %}
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+{% endhighlight %}
+
+#### *4-2* rbenv と ruby-build をインストール
 
 {% highlight sh %}
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -684,39 +699,80 @@ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 source ~/.bashrc
 {% endhighlight %}
 
-#### *4-2* rbenv を使って Ruby をインストール
+#### *4-3* rbenv を使って Ruby をインストール
 
 {% highlight sh %}
 rbenv install 2.6.5
 {% endhighlight %}
 
-#### *4-3* デフォルトの Ruby を設定
+#### *4-4* デフォルトの Ruby を設定
 
 {% highlight sh %}
 rbenv global 2.6.5
 {% endhighlight %}
 
-#### *4-4* Bundler のインストール
+#### *4-5* Bundler のインストール
 
 {% highlight sh %}
 gem install bundler --no-document
 {% endhighlight %}
 
-#### *4-5* Rails のインストール
+#### *4-6* Rails のインストール
 
 {% highlight sh %}
 gem install rails --no-document
 {% endhighlight %}
 
+#### *4-7* config/webpacker.ymlのパラメータ変更
+
+エディターで`config/webpacker.yml`ファイルを開き、以下のパラメータを変更します。
+
+{% highlight sh %}
+development:
+  <<: *default
+  check_yarn_integrity: false 　　# << ここを`false`に変更
+{% endhighlight %}
+
 ### *5.* 動作確認
 
+#### *5.1 Rails6.0 にてテスト用サーバーの生成
 {% highlight sh %}
 rails new sample
 cd sample
-bundle exec rails g scaffold book
+bundle exec rails g scaffold book title:string memo:text
 bundle exec rails db:migrate
+{% endhighlight %}
+
+#### *5.2 Rails6.0 サーバードメイン名を`config/application.rb`に追記
+
+『*3.* Workspace の設定』で設定したサーバーアドレスをドメインに追記します。
+codenvyのexploreから`sample/config/aapplication.rb`をダブルクリックしてエディタを開きます。
+`.codenvy.io`と追記することで、codenvyのサブドメインも全て対象となります。
+
+{% highlight sh %}
+module Sample
+  class Application < Rails::Application
+    config.load_defaults 6.0
+    config.hosts << ".codenvy.io"   # <=ここに追記します。
+   end
+end
+{% endhighlight %}
+
+#### *5.3 Rails6.0 サーバーの起動
+
+{% highlight sh %}
 bundle exec rails server -b 0.0.0.0
 {% endhighlight %}
+
+#### *5.4 booksアプリの表示確認
+
+『*3.* Workspace の設定』で設定したサーバーURLに｀/books‘を付加してブラウザで開きます。
+
+URL例：　`http://node12.codenvy.io:50322/books`
+
+![](/images/codenvy/books-index.png)
+
+この画面が表示されれば正常に起動していますので確認終了です。
 
 ### *6.* プロジェクトを作成する場合に
 * 左側の `Projects` タブでフォルダやファイルの操作をすることができます。
