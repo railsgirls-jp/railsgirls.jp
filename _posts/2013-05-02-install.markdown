@@ -725,7 +725,7 @@ gem install rails --no-document
 
 
 
-### *5.* 動作確認
+### *5.* Rilas環境生成　＆　動作確認
 
 #### *5.1 Rails6.0 にてテスト用サーバーの生成
 {% highlight sh %}
@@ -760,13 +760,13 @@ module Sample
 end
 {% endhighlight %}
 
-#### *5.3 Rails6.0 サーバーの起動
+#### *5.4 Rails6.0 サーバーの起動
 
 {% highlight sh %}
 bundle exec rails server -b 0.0.0.0
 {% endhighlight %}
 
-#### *5.4 booksアプリの表示確認
+#### *5.5 booksアプリの表示確認
 
 『*3.* Workspace の設定』で設定したサーバーURLに｀/books‘を付加してブラウザで開きます。
 
