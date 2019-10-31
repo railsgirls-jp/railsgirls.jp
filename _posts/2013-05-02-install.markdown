@@ -674,7 +674,7 @@ sudo apt install -y build-essential bzip2  libsqlite3-dev libssl-dev libreadline
 インストールの途中、入力をする必要があります。以下のように入力して下さい。
 * `Geographic area: ` では `6` (`Asia`) を入力します。
 * `[More]` ではリターン（エンター）キーを押します。
-`[Time zone:]` では `78` (`Tokyo`) を入力します。
+`[Time zone:]` では `79` (`Tokyo`) を入力します。
 
 #### *4-1* node.js 、yarnのインストール
 
@@ -723,17 +723,9 @@ gem install bundler --no-document
 gem install rails --no-document
 {% endhighlight %}
 
-#### *4-7* config/webpacker.ymlのパラメータ変更
 
-エディターで`config/webpacker.yml`ファイルを開き、以下のパラメータを変更します。
 
-{% highlight sh %}
-development:
-  <<: *default
-  check_yarn_integrity: false 　　# << ここを`false`に変更
-{% endhighlight %}
-
-### *5.* 動作確認
+### *5.* Rilas環境生成　＆　動作確認
 
 #### *5.1 Rails6.0 にてテスト用サーバーの生成
 {% highlight sh %}
@@ -743,7 +735,17 @@ bundle exec rails g scaffold book title:string memo:text
 bundle exec rails db:migrate
 {% endhighlight %}
 
-#### *5.2 Rails6.0 サーバードメイン名を`config/application.rb`に追記
+#### *5.2* config/webpacker.ymlのパラメータ変更
+
+エディターで`config/webpacker.yml`ファイルを開き、以下のパラメータを変更します。
+
+{% highlight sh %}
+development:
+  <<: *default
+  check_yarn_integrity: false 　　# << ここを`false`に変更
+{% endhighlight %}
+
+#### *5.3 Rails6.0 サーバードメイン名を`config/application.rb`に追記
 
 『*3.* Workspace の設定』で設定したサーバーアドレスをドメインに追記します。
 codenvyのexploreから`sample/config/aapplication.rb`をダブルクリックしてエディタを開きます。
@@ -758,13 +760,13 @@ module Sample
 end
 {% endhighlight %}
 
-#### *5.3 Rails6.0 サーバーの起動
+#### *5.4 Rails6.0 サーバーの起動
 
 {% highlight sh %}
 bundle exec rails server -b 0.0.0.0
 {% endhighlight %}
 
-#### *5.4 booksアプリの表示確認
+#### *5.5 booksアプリの表示確認
 
 『*3.* Workspace の設定』で設定したサーバーURLに｀/books‘を付加してブラウザで開きます。
 
