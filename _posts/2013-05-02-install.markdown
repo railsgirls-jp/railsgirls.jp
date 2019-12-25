@@ -76,7 +76,7 @@ source ~/.bash_profile
 "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 2.6.5
+rbenv install 2.7.0
 {% endhighlight %}
 
 ※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
@@ -89,7 +89,7 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### 3-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
-rbenv global 2.6.5
+rbenv global 2.7.0
 {% endhighlight %}
 
 #### 3-6. 必要なソフトウェアをインストール
@@ -228,8 +228,8 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 Bashウィンドウで以下のコマンドを実行してください。
 
 {% highlight sh %}
-rbenv install 2.6.5
-rbenv global 2.6.5
+rbenv install 2.7.0
+rbenv global 2.7.0
 {% endhighlight %}
 
 作業完了後に、以下のコマンドを実行してください。
@@ -241,7 +241,7 @@ ruby -v
 以下のように、インストールされたRubyのバージョンが表示されればOKです。
 
 {% highlight sh %}
-ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
+ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]
 {% endhighlight %}
 
 ### *3.* Railsのインストール
@@ -261,7 +261,7 @@ rails -v
 以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
 
 {% highlight sh %}
-Rails 6.0.0
+Rails 6.0.2.1
 {% endhighlight %}
 
 <hr />
@@ -328,7 +328,7 @@ rails -v
 以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
 
 {% highlight sh %}
-Rails 6.0.0
+Rails 6.0.2.1
 {% endhighlight %}
 
 もしもRailsのバージョンが5.2よりも小さい場合は 以下のコマンドを実行することでバージョンアップできます。
@@ -725,7 +725,7 @@ gem install rails --no-document
 
 
 
-### *5.* Rilas環境生成　＆　動作確認
+### *5.* Rails環境生成　＆　動作確認
 
 #### *5.1 Rails6.0 にてテスト用サーバーの生成
 {% highlight sh %}
