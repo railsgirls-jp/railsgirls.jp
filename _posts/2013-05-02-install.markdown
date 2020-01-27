@@ -331,7 +331,7 @@ rails -v
 Rails 6.0.2.1
 {% endhighlight %}
 
-もしもRailsのバージョンが5.2よりも小さい場合は 以下のコマンドを実行することでバージョンアップできます。
+もしもRailsのバージョンが6.0よりも小さい場合は 以下のコマンドを実行することでバージョンアップできます。
 
 {% highlight sh %}
 gem update rails --no-document
