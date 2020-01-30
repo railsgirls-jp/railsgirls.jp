@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rails Girls Japan 2019 年活動報告と2020年の展望"
-date: 2019-01-29
+date: 2020-01-29
 image: /images/railsgirls-sq.png
 ---
 
