@@ -75,7 +75,7 @@ Rails Girls Japan のメンバーは以下のメンバーです。
  * 鳥井 雪: [yakitorii](https://github.com/yakitorii)
  * 江森 真由美: [emorima](https://github.com/emorima)
  * 秋元 利春: [springaki](https://github.com/springaki)(会計)
- * @yada-ITA
+ * やだ けいこ: [yada-ITA](https://github.com/yada-ITA)
  * Sho Hashimoto: [sho-h](https://github.com/sho-h)
  * 原田　洋子 : [yokolet](https://github.com/yokolet)<br/>
  * 辻田　さとみ : [satomicchy](https://github.com/satomicchy)<br/>
