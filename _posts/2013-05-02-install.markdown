@@ -204,8 +204,8 @@ sudo apt install autoconf bison build-essential libssl1.0-dev libyaml-dev librea
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 source ~/.bashrc
 nvm install --lts
-nvm alias default lts/* # ターミナル再起動時にlts版を使うようにする 
-nvm use default # ターミナルをここで再起動するなら省略可
+nvm alias default lts/*
+nvm use default
 npm install --global yarn
 {% endhighlight %}
 
