@@ -63,7 +63,7 @@ Rails Girls Japan が会計サポートを行う場合、余剰金をオーガ�
 
 Rails Girls Japan は日本での Rails Girls イベントの継続開催のサポートのために、オーガナイザーとコーチに対して以下の基準で交通費、または交通費と宿泊費の費用の補助を行います。
 
-* オーガナイザーの要請に応じて、地方間のコーチ派遣の交通費の資金援助を行います。交通費は公共交通機関を利用し1万円以上の場合に限り、上限を1万円として実費の半額を補助します。
+* オーガナイザーの要請に応じて、地方間のコーチ派遣の交通費の資金援助を行います。交通費は公共交通機関を利用し3千円以上の場合に限り、上限を1万円として実費の半額を補助します。
 * イベントを開催する予定のオーガナイザーが、イベント開催に必要なことを学ぶために、他の地域のイベントへの参加を希望する場合、交通費と宿泊費の全額を補助します。
   * 補助の対象は http://www.railsgirls.com/inyourcity から開催宣言をしたオーガナイザーに限ります。
 
@@ -75,7 +75,7 @@ Rails Girls Japan のメンバーは以下のメンバーです。
  * 鳥井 雪: [yakitorii](https://github.com/yakitorii)
  * 江森 真由美: [emorima](https://github.com/emorima)
  * 秋元 利春: [springaki](https://github.com/springaki)(会計)
- * @yada-ITA
+ * やだ けいこ: [yada-ITA](https://github.com/yada-ITA)
  * Sho Hashimoto: [sho-h](https://github.com/sho-h)
  * 原田　洋子 : [yokolet](https://github.com/yokolet)<br/>
  * 辻田　さとみ : [satomicchy](https://github.com/satomicchy)<br/>
