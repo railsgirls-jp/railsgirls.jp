@@ -200,8 +200,13 @@ sudo dpkg-reconfigure tzdata
 {% highlight sh %}
 sudo apt update
 sudo apt upgrade -y
-sudo apt install autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs-dev node-gyp npm -y
-sudo npm install --global yarn
+sudo apt install autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+nvm alias default lts/*
+nvm use default
+npm install --global yarn
 {% endhighlight %}
 
 #### 2-2 rbenvのインストール
