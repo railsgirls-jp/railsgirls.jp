@@ -64,6 +64,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 #### 3-3. [rbenv](https://github.com/rbenv/rbenv)をインストール:
 
+macOS Catalinaからデフォルトのshellがbashからzshに変更されています。 `echo $SHELL` を実行した結果が `bin/bash` のようにbashであれば以下のコマンドの通りで問題ありません。もしも結果が `bin/zsh` のようにzshであるときは、以下の `.bash_profile` を `.zshrc` に置き換えて実行してください。
+
 {% highlight sh %}
 brew update
 brew install rbenv
