@@ -59,7 +59,7 @@ xcode-select --install
 #### 3-2. [Homebrew](http://brew.sh/)をインストール:
 
 {% highlight sh %}
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 {% endhighlight %}
 
 #### 3-3. [rbenv](https://github.com/rbenv/rbenv)をインストール:
