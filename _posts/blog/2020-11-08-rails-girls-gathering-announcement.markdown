@@ -22,10 +22,6 @@ Rails Girlsと出会って、みなさんが感じ、考えたことなどを自
 
 開催日: 2020年12月12日(土) 13:00〜
 
-LTの募集、参加者の募集については、[Rails Girls Japan Twitter](https://twitter.com/railsgirlsjapan) でお知らせします。
-
-
-また、今回スタッフに、Nagoya More!から[@chiroru_choooco](https://twitter.com/chiroru_choooco)さん、
-Tokyo More!から[@neutral202010](https://twitter.com/neutral202010)さんに入ってもらっています。
+LTの募集、参加者の募集については、近日中に[Rails Girls Japan Twitter](https://twitter.com/railsgirlsjapan) でお知らせします。
 
 楽しいイベントにしたいと思っていますので、皆さんのご参加お待ちしております！
