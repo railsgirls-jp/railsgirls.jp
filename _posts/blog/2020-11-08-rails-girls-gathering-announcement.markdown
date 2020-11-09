@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rails Girls Gathering のお知らせ"
+title: "Rails Girls Gathering Japan のお知らせ"
 date: 2020-11-09
 image: /images/railsgirls-sq.png
 ---
@@ -16,7 +16,7 @@ Rails Girls Japanでも、オンラインで何かイベントができないか
 そこで、これまで各地のRails Girlsに参加されたGirlの皆さんや、
 時には遠方にまで足を運んでくれるコーチ、 
 スポンサーや、イベントのオーガナイザーとスタッフが集うイベントを開催できないかと考え、
-**Rails Girls Gathering** を開催することになりました。
+**Rails Girls Gathering Japan** を開催することになりました。
 
 Rails Girlsと出会って、みなさんが感じ、考えたことなどを自由にLTでお話して頂く機会になればと思っています。
 
