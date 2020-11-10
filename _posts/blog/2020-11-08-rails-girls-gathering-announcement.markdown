@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rails Girls Gathering Japan のお知らせ"
-date: 2020-11-09
+date: 2020-11-10
 image: /images/railsgirls-sq.png
 ---
 Rails Girls Japanの江森です。
