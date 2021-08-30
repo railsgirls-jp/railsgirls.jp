@@ -28,12 +28,30 @@ RubyKaigiとは
 
 [RubyKaigi Takeout 2021](https://rubykaigi.org/2021-takeout)
 
+### 支援内容
+
+RubyKaigi Takeout 2021 の参加チケット (すでに購入済みの場合はチケット代金)
+
+### お申し込み方法
 
 支援を希望される方は、<a href="https://forms.gle/PvESHb8J3q4qeKQq5">こちら</a>の入力フォームから、
 必要事項を記入の上、お申込みください。
 
-応募締切 : 2021/09/05 10:00
+応募要件
+* 以下のいずれかの経験を有すること
+  * 過去に Rails Girls イベントをオーガナイズして開催したことがある
+  * 過去に Rails Girls イベントに参加したことがある
+  * 過去に Rails Girls More! のようなフォローアップイベントに参加したことがある
 
-選考結果発表 : 2021/09/06
+    ※ Rails Girls イベントは http://railsgirls.jp/events/ に掲載されているものを指します
+
+* 参加支援費振込のための銀行口座等の情報を Rails Girls Japan メンバーに開示できること
+
+その他
+* blogに掲載するためのRubyKaigi Takeout 2021に参加しての感想の提出をお願いしています。
+
+##### 応募締切 : 2021/09/05 10:00
+##### 選考結果発表 : 2021/09/06
+
 
 ご応募お待ちしております。
