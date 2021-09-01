@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RubyKaigi Takeout 2021 参加支援募集のお知らせ"
-date: 2021-08-29
+date: 2021-09-01
 image: /images/railsgirls-sq.png
 ---
 Rails Girls Japanでは、2017年よりRails Girlsイベントの参加者の中から、
