@@ -69,6 +69,7 @@ macOS Catalinaからデフォルトのshellがbashからzshに変更されてい
 {% highlight sh %}
 brew update
 brew install rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 {% endhighlight %}
