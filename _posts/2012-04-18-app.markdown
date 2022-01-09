@@ -236,16 +236,16 @@ mount_uploader :picture, PictureUploader
 
 画像をアップロードするとわかりますが、これだけでは見栄えのいいものではありません。ファイルのpathだけを表示してるので、これもいじってみましょう。
 
-`app/views/ideas/show.html.erb` を開いて編集します。
+`app/views/ideas/_idea.html.erb` (`app/views/ideas/show.html.erb` で呼び出している部分テンプレート) を開いて編集します。
 
 {% highlight erb %}
-<%= @idea.picture %>
+<%= idea.picture %>
 {% endhighlight %}
 
 &nbsp;&nbsp;&#8595;
 
 {% highlight erb %}
-<%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
+<%= image_tag(idea.picture_url, width: 600) if idea.picture.present? %>
 {% endhighlight %}
 
 
