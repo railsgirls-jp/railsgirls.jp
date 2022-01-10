@@ -225,6 +225,17 @@ Username for 'https://git.heroku.com':   ← 何も入力せず Enter
 Password for 'https://git.heroku.com':   ← 上でコピーした文字列をペーストし Enter
 {% endhighlight %}
 
+##### ・ git push時、`Failed to install gems via Bundler.` が発生した場合
+
+herokuの動作環境と設定が異なる場合に起きます。設定を追加して git push ... してみましょう。
+
+{% highlight sh %}
+bundle lock --add-platform x86_64-linux
+git add .
+git commit -m "Added platform"
+git push heroku main
+{% endhighlight %}
+
 ##### ・ その他のエラーの場合
 
 画面表示を見ながらコーチと相談して問題を解決して下さい。
