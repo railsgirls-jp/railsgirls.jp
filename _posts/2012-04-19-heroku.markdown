@@ -56,9 +56,9 @@ __Coachへ__: [Heroku CLIのページ](https://devcenter.heroku.com/articles/her
 
 `64-bit` あるいは `32-bit` と書かれたリンクをクリックしてダウンロードしてください。
 
-（自分のWindowsが32bit版64bit版かは、コントロールパネルから確認できます。[Microsoftのこちらの記事](https://support.microsoft.com/ja-jp/help/958406)を参考に、確認してみてください）
+（自分のWindowsが32bit版64bit版かは、コントロールパネルから確認できます。[Microsoftのこちらの記事](https://support.microsoft.com/ja-jp/windows/32-%E3%83%93%E3%83%83%E3%83%88%E3%81%A8-64-%E3%83%93%E3%83%83%E3%83%88%E3%81%AE-windows-%E3%82%88%E3%81%8F%E5%AF%84%E3%81%9B%E3%82%89%E3%82%8C%E3%82%8B%E8%B3%AA%E5%95%8F-c6ca9541-8dce-4d48-0415-94a3faa2e13d)を参考に、確認してみてください）
 
-ダウンロードが済んだら、heroku-windows-amd64.exe（あるいは、heroku-windows-386.exe） をダブルクリックし、表示される指示に従ってインストールしてください。
+ダウンロードが済んだら、heroku-x64.exe（あるいは、heroku-x86.exe） をダブルクリックし、表示される指示に従ってインストールしてください。
 
 （環境により拡張子が表示されませんが、異常ではありません）
 
@@ -167,7 +167,7 @@ Creating ⬢ my-first-app... !
 さて、 Heroku にコードを送信しましょう。 ターミナルで次のコマンドを実行してください。 :
 
 {% highlight sh %}
-git push heroku master
+git push heroku main
 {% endhighlight %}
 
 そうすると、こんな出力が見られるはずです。 :
@@ -220,7 +220,7 @@ d42d086f-b127-4cf0-a2a9-acaf13287213
 
 
 {% highlight sh %}
-git push heroku master
+git push heroku main
 Username for 'https://git.heroku.com':   ← 何も入力せず Enter
 Password for 'https://git.heroku.com':   ← 上でコピーした文字列をペーストし Enter
 {% endhighlight %}
