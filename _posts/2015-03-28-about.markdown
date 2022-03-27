@@ -80,5 +80,6 @@ Rails Girls Japan のメンバーは以下のメンバーです。
  * 原田　洋子 : [yokolet](https://github.com/yokolet)<br/>
  * 辻田　さとみ : [satomicchy](https://github.com/satomicchy)<br/>
  * 小林 智恵: [cobachie](https://github.com/cobachie)<br/>
+ * 今野 夕貴: [thatblue](https://github.com/thatblue)<br/>
 
 <hr />
