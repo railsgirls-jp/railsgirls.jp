@@ -123,7 +123,8 @@ end
 そして、ターミナル上で次のコマンドを実行してセットアップしてください。
 
 {% highlight sh %}
-bundle install --without production
+bundle config set --local without 'production'
+bundle install
 {% endhighlight %}
 
 {% highlight sh %}
@@ -173,17 +174,24 @@ git push heroku main
 そうすると、こんな出力が見られるはずです。 :
 
 {% highlight sh %}
-Counting objects: 134, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (115/115), done.
-Writing objects: 100% (134/134), 35.29 KiB, done.
-Total 134 (delta 26), reused 0 (delta 0)
-
+Enumerating objects: 96, done.
+Counting objects: 100% (96/96), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (79/79), done.
+Writing objects: 100% (96/96), 22.59 KiB | 1.61 MiB/s, done.
+Total 96 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Determining which buildpack to use for this app
 remote: -----> Ruby app detected
+remote: -----> Installing bundler 2.3.10
+remote: -----> Removing BUNDLED WITH version in the Gemfile.lock
 remote: -----> Compiling Ruby/Rails
-remote: -----> Using Ruby version: ruby-2.6.3
-remote: -----> Installing dependencies using bundler 2.0.1
-remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+remote: -----> Using Ruby version: ruby-3.1.0
+remote: -----> Installing dependencies using bundler 2.3.10
+remote:        Running: BUNDLE_WITHOUT='development:test' BUNDLE_PATH=vendor/bundle BUNDLE_BIN=vendor/bundle/bin BUNDLE_DEPLOYMENT=1 bundle install -j4
 remote:        Fetching gem metadata from https://rubygems.org/..........
 ...
 remote: -----> Launching...
@@ -192,7 +200,7 @@ remote:        https://my-first-app.herokuapp.com/ deployed to Heroku
 remote:
 remote: Verifying deploy... done.
 To https://git.heroku.com/my-first-app.git
- * [new branch]      master -> master
+ * [new branch]      main -> main
 {% endhighlight %}
 
 アプリのプッシュが終わってるのがわかりますか？ "Launching..." というテキストのところです。プッシュが成功したら **データベースのマイグレート** へ進んで下さい。
