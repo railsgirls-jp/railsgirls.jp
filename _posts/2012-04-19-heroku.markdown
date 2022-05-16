@@ -56,9 +56,9 @@ __Coachへ__: [Heroku CLIのページ](https://devcenter.heroku.com/articles/her
 
 `64-bit` あるいは `32-bit` と書かれたリンクをクリックしてダウンロードしてください。
 
-（自分のWindowsが32bit版64bit版かは、コントロールパネルから確認できます。[Microsoftのこちらの記事](https://support.microsoft.com/ja-jp/help/958406)を参考に、確認してみてください）
+（自分のWindowsが32bit版64bit版かは、コントロールパネルから確認できます。[Microsoftのこちらの記事](https://support.microsoft.com/ja-jp/windows/32-%E3%83%93%E3%83%83%E3%83%88%E3%81%A8-64-%E3%83%93%E3%83%83%E3%83%88%E3%81%AE-windows-%E3%82%88%E3%81%8F%E5%AF%84%E3%81%9B%E3%82%89%E3%82%8C%E3%82%8B%E8%B3%AA%E5%95%8F-c6ca9541-8dce-4d48-0415-94a3faa2e13d)を参考に、確認してみてください）
 
-ダウンロードが済んだら、heroku-windows-amd64.exe（あるいは、heroku-windows-386.exe） をダブルクリックし、表示される指示に従ってインストールしてください。
+ダウンロードが済んだら、heroku-x64.exe（あるいは、heroku-x86.exe） をダブルクリックし、表示される指示に従ってインストールしてください。
 
 （環境により拡張子が表示されませんが、異常ではありません）
 
@@ -123,7 +123,8 @@ end
 そして、ターミナル上で次のコマンドを実行してセットアップしてください。
 
 {% highlight sh %}
-bundle install --without production
+bundle config set --local without 'production'
+bundle install
 {% endhighlight %}
 
 {% highlight sh %}
@@ -167,23 +168,30 @@ Creating ⬢ my-first-app... !
 さて、 Heroku にコードを送信しましょう。 ターミナルで次のコマンドを実行してください。 :
 
 {% highlight sh %}
-git push heroku master
+git push heroku main
 {% endhighlight %}
 
 そうすると、こんな出力が見られるはずです。 :
 
 {% highlight sh %}
-Counting objects: 134, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (115/115), done.
-Writing objects: 100% (134/134), 35.29 KiB, done.
-Total 134 (delta 26), reused 0 (delta 0)
-
+Enumerating objects: 96, done.
+Counting objects: 100% (96/96), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (79/79), done.
+Writing objects: 100% (96/96), 22.59 KiB | 1.61 MiB/s, done.
+Total 96 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Determining which buildpack to use for this app
 remote: -----> Ruby app detected
+remote: -----> Installing bundler 2.3.10
+remote: -----> Removing BUNDLED WITH version in the Gemfile.lock
 remote: -----> Compiling Ruby/Rails
-remote: -----> Using Ruby version: ruby-2.6.3
-remote: -----> Installing dependencies using bundler 2.0.1
-remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+remote: -----> Using Ruby version: ruby-3.1.0
+remote: -----> Installing dependencies using bundler 2.3.10
+remote:        Running: BUNDLE_WITHOUT='development:test' BUNDLE_PATH=vendor/bundle BUNDLE_BIN=vendor/bundle/bin BUNDLE_DEPLOYMENT=1 bundle install -j4
 remote:        Fetching gem metadata from https://rubygems.org/..........
 ...
 remote: -----> Launching...
@@ -192,7 +200,7 @@ remote:        https://my-first-app.herokuapp.com/ deployed to Heroku
 remote:
 remote: Verifying deploy... done.
 To https://git.heroku.com/my-first-app.git
- * [new branch]      master -> master
+ * [new branch]      main -> main
 {% endhighlight %}
 
 アプリのプッシュが終わってるのがわかりますか？ "Launching..." というテキストのところです。プッシュが成功したら **データベースのマイグレート** へ進んで下さい。
@@ -220,9 +228,20 @@ d42d086f-b127-4cf0-a2a9-acaf13287213
 
 
 {% highlight sh %}
-git push heroku master
+git push heroku main
 Username for 'https://git.heroku.com':   ← 何も入力せず Enter
 Password for 'https://git.heroku.com':   ← 上でコピーした文字列をペーストし Enter
+{% endhighlight %}
+
+##### ・ git push時、`Failed to install gems via Bundler.` が発生した場合
+
+herokuの動作環境と設定が異なる場合に起きます。設定を追加して git push ... してみましょう。
+
+{% highlight sh %}
+bundle lock --add-platform x86_64-linux
+git add .
+git commit -m "Added platform"
+git push heroku main
 {% endhighlight %}
 
 ##### ・ その他のエラーの場合

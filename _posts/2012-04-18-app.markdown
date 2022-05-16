@@ -49,7 +49,7 @@ rails server
 
 自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。(Nitorous.IOなどのクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直した後でURLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
 
-"Yay! You’re on Rails!" の画面が表示されれば、さきほど作ったアプリは正しく動作しています。
+Railsロゴの画面が表示されれば、さきほど作ったアプリは正しく動作しています。
 
 Terminal 上で CTRL-C（CTRL(Control)キーとCを同時に押す)を実行してサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
@@ -87,7 +87,7 @@ rails server
 テキストエディタで `app/views/layouts/application.html.erb` (Windowsの場合  `app¥views¥layouts¥application.html.erb`) を開くと、次の行があります。
 
 {% highlight erb %}
-<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 {% endhighlight %}
 
 この1行前に次のタグを追記してください。
@@ -139,7 +139,7 @@ rails server
 {% highlight html %}
 <footer>
   <div class="container">
-    Rails Girls 2020
+    Rails Girls 2022
   </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -158,11 +158,6 @@ th { border-bottom: 1px solid #DDD; }
 
 ファイルがきちんと保存されたことを確認して、何が変わったのかを見るためにブラウザを更新してみましょう。
 さらに、HTMLとCSSに変更を加えることもできます。
-
-JavaScriptやCoffeeScriptを実行する環境に問題があるというようなエラーメッセージがTerminalに表示された場合、
-[nodejsをインストール](/install#install-node)してください。
-この問題は、RailsInstallerを使っている場合は起こらないはずです。
-(ただし、Railsを```gem install rails```コマンドでインストールしている場合には起こるかもしれません)
 
 **Coachより:** CSSとレイアウトについてちょっと話をしてください。
 
@@ -230,27 +225,27 @@ mount_uploader :picture, PictureUploader
 場合によっては、 *TypeError: can't cast ActionDispatch::Http::UploadedFile to string* というエラーが起きることもあります。エラーになった場合は、 `app/views/ideas/_form.html.erb` の
 
 {% highlight erb %}
-<%= form_with(model: idea, local: true) do |form| %>
+<%= form_with(model: idea) do |form| %>
 {% endhighlight %}
 
 上記のコードを、以下のように変更してみてください。
 
 {% highlight erb %}
-<%= form_with(model: idea, local: true, html: {multipart: true}) do |form| %>
+<%= form_with(model: idea, html: {multipart: true}) do |form| %>
 {% endhighlight %}
 
 画像をアップロードするとわかりますが、これだけでは見栄えのいいものではありません。ファイルのpathだけを表示してるので、これもいじってみましょう。
 
-`app/views/ideas/show.html.erb` を開いて編集します。
+`app/views/ideas/_idea.html.erb` (`app/views/ideas/show.html.erb` で呼び出している部分テンプレート) を開いて編集します。
 
 {% highlight erb %}
-<%= @idea.picture %>
+<%= idea.picture %>
 {% endhighlight %}
 
 &nbsp;&nbsp;&#8595;
 
 {% highlight erb %}
-<%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
+<%= image_tag(idea.picture_url, width: 600) if idea.picture.present? %>
 {% endhighlight %}
 
 
