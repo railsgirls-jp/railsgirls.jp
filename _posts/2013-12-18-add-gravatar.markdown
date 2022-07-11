@@ -8,7 +8,7 @@ permalink: gravatar
 
 *Created by Catherine Jones*
 
-このガイドは、すでに [RailsGirls アプリ・チュートリアル](http://guides.railsgirls.com/app/) と [Deviseによる認証を追加してみよう](http://guides.railsgirls.com/devise/) でアプリを作った方を対象にしています。
+このガイドは、すでに [RailsGirls アプリ・チュートリアル](/app) と [Deviseによる認証を追加してみよう](/devise) でアプリを作った方を対象にしています。
 
 ### 重要
 
