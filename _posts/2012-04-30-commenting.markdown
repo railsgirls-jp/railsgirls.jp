@@ -71,7 +71,7 @@ app/views/ideas/show.html.erb を開いて、
     <strong><%= comment.user_name %></strong>
     <br />
     <p><%= comment.body %></p>
-    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></p>
+    <p><%= link_to 'Delete', comment_path(comment), data: { turbo_method: :delete, turbo_confirm: '削除してもよろしいですか？' } %></p>
   </div>
 <% end %>
 <%= render 'comments/form', comment: @comment %>
