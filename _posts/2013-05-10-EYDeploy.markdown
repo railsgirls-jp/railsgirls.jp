@@ -93,4 +93,4 @@ __コーチの方へ__: staging と production の違いについて、そして
 ### 追加の情報源
 
  * [ビデオチュートリアル(日本語)](http://www.engineyard.co.jp/jp/landing/tour)
- * [EngineYard の別のチュートリアル(英語)](https://support.cloud.engineyard.com/entries/20996751-Tutorial-How-to-Deploy-the-ToDo-Application-on-a-Trial-Account)
+ * [EngineYard の別のチュートリアル(英語)](https://support.cloud.engineyard.com/hc/en-us/articles/205407568-Tutorial-How-to-Deploy-the-ToDo-Application-on-a-Trial-Account)
