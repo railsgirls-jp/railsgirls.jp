@@ -118,3 +118,35 @@ end
 
 #Load custom rake scripts
 Dir['_rake/*.rake'].each { |r| load r }
+
+# Check HTML files by HTMLProofer: https://github.com/gjtorikian/html-proofer
+require 'html-proofer'
+task :test do
+  options = {
+    checks: [
+      'Links',
+      'Images',
+      'Favicon',
+      'Scripts',
+      'OpenGraph',
+    ],
+    allow_hash_href:    false,
+    allow_missing_href: true,
+    disable_external:   true,
+    enforce_https:      false,
+
+    ignore_empty_alt:   true,
+    ignore_missing_alt: true,
+
+    # NOTE: Ignore file, URL, and response as follows
+    ignore_files: [
+      /2017(.*)\.html/,
+      /2018(.*)\.html/,
+      /2019(.*)\.html/,
+      /2021(.*)\.html/,
+      /2022(.*)\.html/,
+    ],
+  }
+
+  HTMLProofer.check_directory('_site', options).run
+end
