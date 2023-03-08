@@ -1,0 +1,42 @@
+name: Test & Deploy
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - "*"
+  # Allows you to run this workflow manually from the Actions tab
+  # https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow
+  workflow_dispatch:
+
+jobs:
+  # Test job is always triggered as continuous integration
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: ☑️ Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 2
+
+    - name: 💎 Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+
+    - name: 🧪 Install gems
+      run: |
+        bundle install --jobs 4 --retry 3
+
+    - name: 🔧 Build & Test
+      run: |
+        bundle exec jekyll build
+        bundle exec rake test
+
+    - name: 🚀 Deploy to GitHub Pages
+      if:   github.ref == 'refs/heads/master' && job.status == 'success'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir:    ./_site
