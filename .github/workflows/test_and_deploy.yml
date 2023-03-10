@@ -26,9 +26,14 @@ jobs:
         ruby-version: 3.2
         bundler-cache: true
 
-    - name: 🔧 Build & Test
+    - name: 🔧 Build static pages
       run: |
         bundle exec jekyll build
+      env:
+        JEKYLL_ENV: production
+
+    - name: ✅ Test static pages
+      run: |
         bundle exec rake test
 
     - name: 🚀 Deploy to GitHub Pages
