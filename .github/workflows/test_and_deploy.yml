@@ -12,7 +12,7 @@ on:
 
 jobs:
   # Test job is always triggered as continuous integration
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: ☑️ Checkout code
