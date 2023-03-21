@@ -79,7 +79,7 @@ source ~/.bash_profile
 "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 3.1.2
+rbenv install 3.2.1
 {% endhighlight %}
 
 ※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
@@ -92,7 +92,7 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### 3-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
-rbenv global 3.1.2
+rbenv global 3.2.1
 {% endhighlight %}
 
 #### 3-7. Railsのインストール:
@@ -211,8 +211,8 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 Bashウィンドウで以下のコマンドを実行してください。
 
 {% highlight sh %}
-rbenv install 3.1.2
-rbenv global 3.1.2
+rbenv install 3.2.1
+rbenv global 3.2.1
 {% endhighlight %}
 
 作業完了後に、以下のコマンドを実行してください。
@@ -224,7 +224,7 @@ ruby -v
 以下のように、インストールされたRubyのバージョンが表示されればOKです。
 
 {% highlight sh %}
-ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x86_64-linux]
+ruby 3.2.1 (2023-02-08 revision 31819e82c8) [x86_64-linux]
 {% endhighlight %}
 
 ### *3.* Railsのインストール
@@ -244,7 +244,7 @@ rails -v
 以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
 
 {% highlight sh %}
-Rails 7.0.3
+Rails 7.0.4
 {% endhighlight %}
 
 <hr />
@@ -288,7 +288,7 @@ rails server
 
 ### *2.* Rubyのインストール
 
-[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.1.2-1/rubyinstaller-devkit-3.1.2-1-x64.exe) をダウンロードして実行します。
+[RubyInstaller](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.1-1/rubyinstaller-devkit-3.2.1-1-x64.exe) をダウンロードして実行します。
 
 
 ライセンス認証画面が表示されます。  
@@ -328,7 +328,7 @@ rails -v
 以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
 
 {% highlight sh %}
-Rails 7.0.3
+Rails 7.0.4
 {% endhighlight %}
 
 ### *4.* コードを編集するためのテキストエディタが必要になります。
