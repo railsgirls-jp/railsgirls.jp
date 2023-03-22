@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Rails Girls Heroku にアップ
+title: Rails Girls Heroku に deploy
 permalink: heroku
 ---
 
-# Heroku に Rails アプリをアップ
+# Heroku に Rails アプリを deploy しよう
 
 *Created by Terence Lee, [@hone02](https://twitter.com/hone02)*
 
@@ -12,7 +12,10 @@ permalink: heroku
 
 #### Heroku のアカウントを作成しよう
 
-アカウントの作成はもちろん無料です。
+<img src="../images/heroku-team-invitation.png" />
+
+RailsGirlsJPチームへの招待メールが送られます。
+招待メールからInvitationをAcceptしてください。
 
 [ユーザ登録画面](https://signup.heroku.com/)からアカウントを作成しましょう。
 
@@ -24,7 +27,11 @@ permalink: heroku
 
 <img src="../images/heroku_password.png" />
 
-heroku で用いるパスワードを入力してアカウントの作成は完了です。
+heroku で用いるパスワードを入力しましょう。
+
+MFAの設定が求められます。MFAの設定を行ってアカウントの作成は完了です。
+
+<img src="../images/heroku-mfa.png">
 
 #### Heroku CLI をインストールしよう
 
@@ -137,20 +144,20 @@ Heroku のアプリを作りましょう。
 例えば、アプリの名前を"my-first-app"と決めた場合、ターミナルで次のコマンドを実行してください。 :
 
 {% highlight sh %}
-heroku create my-first-app
+heroku create your-app-name -t railsgirls-japan
 {% endhighlight %}
 
 次のようなものが見られます。 :
 
 {% highlight sh %}
-Creating ⬢ my-first-app... done
+Creating ⬢ your-app-name... done
 http://my-first-app.herokuapp.com/ | https://git.heroku.com/my-first-app.git
 {% endhighlight %}
 
 もし、決めたアプリの名前が既に使われていたら、以下のようなメッセージが表示されます。 :
 {% highlight sh %}
-Creating ⬢ my-first-app... !
- ▸    Name myfirst-app is already taken
+Creating ⬢ your-app-name... !
+ ▸    Name your-app-name is already taken
 {% endhighlight sh %}
 
 この場合は、もう一度アプリの名前を考えてなおしてみてください。
