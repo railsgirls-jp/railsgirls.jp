@@ -31,7 +31,7 @@ Please follow the instructions for your Operating System from the list below. If
 *コーチの方へ*:
 インストール中に問題が発生した場合、この [Troubleshooting](https://github.com/railsgirls-jp/railsgirls-jp.github.io/wiki/Troubleshooting)  のページを参考にして下さい。
 
-## [出るかもしれないエラー](possible-errors-during-installation)
+## Possible errors during installation
 
 ### Gem::RemoteFetcher エラー
 
