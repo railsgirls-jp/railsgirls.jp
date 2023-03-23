@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Alternative development environment with VirtualBox
-permalink: virtual-machine
+permalink: install/virtual-machine
 ---
 
 # Introduction

@@ -494,7 +494,7 @@ rails server
 ## <a id="virtual-machine">仮想マシン</a>
 
 自分のコンピュータにインストールする代わりに仮想マシン上で開発環境をセットアップすることもできます。
-詳しいことは [ここ]({% post_url 2014-03-24-alternative-dev-environment %}) を参照してください。
+詳しいことは [ここ](/install/virtual-machine) を参照してください。
 
 <hr />
 
