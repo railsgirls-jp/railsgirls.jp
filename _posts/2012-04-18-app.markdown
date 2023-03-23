@@ -164,13 +164,13 @@ Rails にファイルをアップロードする機能を追加するには、�
 プロジェクトディレクトリ内の `Gemfile` を開いて、この行
 
 {% highlight ruby %}
-gem 'sqlite3'
+gem "sqlite3"
 {% endhighlight %}
 
 の直後に、次の一行を追加します。
 
 {% highlight ruby %}
-gem 'carrierwave'
+gem "carrierwave"
 {% endhighlight %}
 
 **Coachより:** 何のライブラリがあって、なぜ便利なのかを説明してください。オープンソースソフトウェアが何なのかも説明してください。
