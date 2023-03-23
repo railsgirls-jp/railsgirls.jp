@@ -337,15 +337,6 @@ Rails 7.0.4
 
 * [Visual Studio Codeをダウンロードしてインストールする](https://code.visualstudio.com/)
 
-Windows Vista およびそれ以前のバージョンでは Visual Studio Code は非対応ですが、[Sublime Text](http://www.sublimetext.com/2) を利用可能です。 
-
-※ Windows で Sublime Text を使う場合、日本語入力欄が入力箇所に出ない問題があります。  
-気になる場合は以下の手順で日本語入力パッチ(修正プログラム)をインストールしてください。  
-1. [Sublime Text 日本語入力パッチ](https://github.com/chikatoike/IMESupport/archive/master.zip)をダウンロードします。
-1. Sublime Text アプリメニューの Preferences から Browse Packeges を選び、フォルダを表示させます。
-1. ダウンロードしたzipを解凍してできたフォルダ(IMESupport-master)をここへコピーします。
-1. Sublime Text が起動している場合は再起動します。
-
 これで、Ruby on Railsのプログラミングを始められるまでの環境セットアップは終了です。おめでとう！
 
 ### *5.* 動作確認
