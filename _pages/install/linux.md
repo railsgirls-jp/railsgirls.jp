@@ -5,7 +5,7 @@ description: "Install Ruby and Rails on your Linux computer and get prepared for
 permalink: install/linux
 ---
 
-# Setup for Linux
+# Linux 用セットアップ
 
 {% include main-guide-intro.html %}
 
@@ -32,6 +32,12 @@ Run the following command for an automated install of Ruby and Rails on your com
 
 {% highlight sh %}
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
+{% endhighlight %}
+
+### Fedoraの場合:
+
+{% highlight sh %}
+bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
 
 ## _3._ Check the environment
