@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main_guide
 title: Rails Girls アプリ・チュートリアル
 permalink: app
 ---
@@ -8,64 +8,149 @@ permalink: app
 
 *Created by Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
 
-**まず、Railsがインストールされていることを確認してください。** [**もしくはこちらのリンクを見てインストールしてください。**](/install)
+{% include main-guide-intro.html %}
 
-## ツールを知る
+Welcome to the workshop! This is the guide you'll be starting with on the day of the workshop. Did you have trouble getting the installation to work? Ask your coach for help first.
 
-### <i class="icon-text-editor">&nbsp;</i> テキストエディタ
+## Help from the coach
 
-[Visual Studio Code](https://code.visualstudio.com/), [Sublime Text](http://www.sublimetext.com), Vim や Emacs は、テキストエディタの例です。コードを書いたりファイルを編集したりすることができます。
+When you see the box below, ask your coach to read it and help out where necessary.
 
-### <i class="icon-prompt">&nbsp;</i> ターミナル (Windows の場合はコマンドプロンプト)
+{% coach %}
+Hi coach 👋 Thank you so much for helping out today!
+{% endcoach %}
 
-rails serverを起動したりコマンドを実行したりするものです。
+## Learn about Ruby
 
-### <i class="icon-browser">&nbsp;</i> Webブラウザ (Firefox, Safari, Chrome)
+In these next couple guides you're going to create a new app. For this you'll be using the Ruby on Rails framework. The Rails framework is written in the Ruby programming language. To get a better idea of how Ruby works, read the [Rails Girls guide to Ruby](/ruby-intro) if you haven't ever written any Ruby, or go to the slightly more advanced [try.ruby-lang.org](https://try.ruby-lang.org/) course before you continue.
 
-アプリケーションを表示するためのものです。
-
-## *1.*アプリケーションを作る
+## アプリケーションを作る
 
 *railsgirls* という名前の Rails アプリを作っていきます。
 
 まず、Terminal を開いてください。
 
-* macOS: Spotlightで *Terminal* と入力して出てきた Terminal をクリックしてください。
-* Windows(WSLの方向け): スタートメニューをクリックして、すべてのプログラムから *Ubuntu* を探し、クリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Ubuntu* を入力し検索してください。)
-  * WSL上の `/mnt/c` ディレクトリは、Windows上の `Cドライブ` にあたります。*/mnt/c* に移動してから以降のコマンドを入力してください。
-* Windows(WSLが使えない方向け): スタートメニューをクリックして、すべてのプログラムから *Rubyx.x.x-x64 with MSYS2* を探し、*Start Command Prompt with Ruby*をクリックしてください。(みつからない場合は、「プログラムとファイルの検索」へ *Start Command Prompt with Ruby* を入力し検索してください。)
-* Linux (Ubuntu/Fedora): Dashホームで *Terminal* を探して、*Terminal* をクリックしてください。
-* クラウドサービス(Nitrousなど): 作成したアカウントでログインし、box が起動した状態で IDE 画面へ移動します。(詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。) ターミナルはブラウザの下部に表示されます。
-
-そして、Terminal上で次のコマンドを入力します:
-
+<div class="os-specific">
+  <div class="mac nix">
 {% highlight sh %}
 mkdir projects
-cd projects
-rails new railsgirls
-cd railsgirls
-rails server
 {% endhighlight %}
 
-自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。(Nitorous.IOなどのクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直した後でURLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
+    <div>
+<p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>ls</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
+    </div>
 
-Railsロゴの画面が表示されれば、さきほど作ったアプリは正しく動作しています。
+{% highlight sh %}
+cd projects
+{% endhighlight %}
 
-Terminal 上で CTRL-C（CTRL(Control)キーとCを同時に押す)を実行してサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
+    <div>
+<p>You can verify you are now in an empty directory or folder by again running the <code>ls</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
+    </div>
 
-**Coachより:** それぞれのコマンドが何なのか説明してみましょう。何が生成されましたか？そしてサーバーは何をしますか？
+{% highlight sh %}
+rails new railsgirls
+{% endhighlight %}
 
+    <div>
+<p>This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our Rails app by running:</p>
+    </div>
 
-## *2.*Idea の scaffold をする
+{% highlight sh %}
+cd railsgirls
+{% endhighlight %}
+
+    <div>
+<p>If you run <code>ls</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. You can then start the Rails server by running:</p>
+    </div>
+
+{% highlight sh %}
+rails server
+{% endhighlight %}
+  </div>
+
+  <div class="win">
+{% highlight sh %}
+mkdir projects
+{% endhighlight %}
+
+    <div>
+<p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>dir</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
+    </div>
+
+{% highlight sh %}
+cd projects
+{% endhighlight %}
+
+    <div>
+<p>You can verify you are now in an empty directory or folder by again running the <code>dir</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
+    </div>
+
+{% highlight sh %}
+rails new railsgirls
+{% endhighlight %}
+
+    <div>
+<p>This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our Rails app by running:</p>
+    </div>
+
+{% highlight sh %}
+cd railsgirls
+{% endhighlight %}
+
+    <div>
+<p>If you run <code>dir</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. You can then start the Rails server by running:</p>
+    </div>
+
+{% highlight sh %}
+rails server
+{% endhighlight %}
+  </div>
+</div>
+
+自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。(Replitなどのクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直した後でURLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install) を参照してください。)
+
+Railsロゴの画面が表示されれば、さきほど作ったアプリは正しく動作しています。The `rails new` generator created a lot of app code for you to get started and we'll be modifying it in the rest of this workshop.
+
+Notice in the Terminal window the command prompt is not visible because it is now running the Rails server. The command prompt will look something like this, but it may be different on your laptop:
+
+<div class="os-specific">
+  <div class="mac nix">
+{% highlight sh %}
+$
+{% endhighlight %}
+  </div>
+  <div class="win">
+{% highlight sh %}
+>
+{% endhighlight %}
+  </div>
+</div>
+
+When the command prompt is not visible you cannot execute new commands. If you try running `cd` or another command it will not work. Terminal 上で CTRL-C（CTRL(Control)キーとCを同時に押す)を実行してサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
+
+{% coach %}
+- Make sure it's clear what each command does: `cd`, `dir`/`ls`, `mkdir`, `rails server`.
+- Briefly explain what was generated by `rails new`.
+- Briefly explain what the Rails server does and why we need it.
+- Briefly explain how can you stop the server.
+{% endcoach %}
+
+## Idea の scaffold をする
 
 Rails の scaffold 機能を使って、list, add, remove, edit, view を生成します。これが Rails アプリの最初の一歩です。
 ここでは ideas という名前で作ります。
 
-**Coachより:** scaffold とはなんでしょう？ (コマンドの説明をしてください。1. ただのコマンド, 2. モデル名でDBテーブルと関係があるもの;命名規約, 3. 属性や型) また、migration 機能が何で、なぜ必要なのか。
-
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
 {% endhighlight %}
+
+{% coach %}
+- Explain what Rails scaffolding is. How does it help us create parts of an app quickly?
+- Briefly explain the `rails generate scaffold` command and how it works. What do they arguments mean?
+    - What is the model name argument?
+    - How do you specify database fields with `name:string` and what do they parts mean?
+{% endcoach %}
 
 scaffold は新しいファイルをプロジェクトのディレクトリに追加しますが、意図したように動作させるためには以下の 2 つのコマンドを実行してデータベースの更新と Rails server プロセスをリスタートする必要があります。
 
@@ -74,181 +159,11 @@ rails db:migrate
 rails server
 {% endhighlight %}
 
-ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(Nitrous のようなクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直してメニューから 'preview' - 'port 3000' を選び、アドレス欄の末尾に '/ideas' を加えてアクセスしてください。詳細は [インストール・レシピ](/install#using-a-cloud-service) を参照してください。)
+ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(Replit のようなクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直してメニューから 'preview' - 'port 3000' を選び、アドレス欄の末尾に '/ideas' を加えてアクセスしてください。詳細は [インストール・レシピ](/install) を参照してください。)
 
 いろいろクリックしてみたりしたら、 CTRL-C を押して、サーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
 
-## *3.*デザインする
-
-**Coachより:** HTML と Railsの関係について話してみましょう。views のどの部分が HTML で、どこが Embedded Ruby (ERB)ですか？どうやってこれらが MVC (モデルとコントローラが、動的に HTML や views を生成するロジックを管理しているもの) と関連づけられていますか？
-
-そのままのデザインはイケてないので、何かやってみましょう。Twitter Bootstrapフレームワークを使うと、ホント簡単に、いい感じのスタイルに変えられます。
-
-テキストエディタで `app/views/layouts/application.html.erb` (Windowsの場合  `app¥views¥layouts¥application.html.erb`) を開くと、次の行があります。
-
-{% highlight erb %}
-<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-{% endhighlight %}
-
-この1行前に次のタグを追記してください。
-
-{% highlight erb %}
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-{% endhighlight %}
-
-そして、この部分、
-
-{% highlight erb %}
-<%= yield %>
-{% endhighlight %}
-
-これを次のように置き換えてください。
-
-{% highlight erb %}
-<div class="container">
-  <%= yield %>
-</div>
-{% endhighlight %}
-
-次に、ナビゲーションバーとフッターをレイアウトに追加してみましょう。同じファイルの`<body>`の直後に以下を追加してください。
-
-{% highlight erb %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">The idea app</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link <%= 'active' if current_page?(controller: 'ideas') %>" href="/ideas">Ideas</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-{% endhighlight %}
-
-さらに、`</body>` の直前に以下を追加してください。
-
-{% highlight erb %}
-<footer class="mt-5 text-center">
-  <div class="container">
-    Rails Girls <%= Time.now.year %>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-{% endhighlight %}
-
-ここで、ideasの一覧のスタイルも変更してみましょう。`app/assets/stylesheets/application.css` を開いて、コードの一番下に次のcssを追加しましょう。
-
-
-{% highlight css %}
-#ideas > div {
-  border-top: 1px solid #c0c0c0;
-  margin-top: 30px;
-  padding-top: 30px;
-}
-{% endhighlight %}
-
-ファイルがきちんと保存されたことを確認して、何が変わったのかを見るためにブラウザを更新してみましょう。
-さらに、HTMLとCSSに変更を加えることもできます。
-
-**Coachより:** CSSとレイアウトについてちょっと話をしてください。
-
-## *4.*写真アップロード機能を追加する
-
-Rails にファイルをアップロードする機能を追加するには、ライブラリをインストールする必要があります。
-
-プロジェクトディレクトリ内の `Gemfile` を開いて、この行
-
-{% highlight ruby %}
-gem "sqlite3"
-{% endhighlight %}
-
-の直後に、次の一行を追加します。
-
-{% highlight ruby %}
-gem "carrierwave"
-{% endhighlight %}
-
-**Coachより:** 何のライブラリがあって、なぜ便利なのかを説明してください。オープンソースソフトウェアが何なのかも説明してください。
-
-サーバーを終了するためには、`CTRL-C`を押します。
-
-Terminal で、次のコマンドを実行してください:
-
-{% highlight sh %}
-bundle
-{% endhighlight %}
-
-そうすると、次のコマンドでアップロードを実行するコードを生成できます:
-
-{% highlight sh %}
-rails generate uploader Picture
-{% endhighlight %}
-
-それでは、Railsのサーバーを起動してみましょう。
-
-**ノート**: 人によっては、コマンドを入力する用のTerminalとは別のTerminalでRailsのサーバを動かしているかもしれません。
-もしそうなら、**Railsのサーバープロセスを再起動する**必要があります。
-
-`app/models/idea.rb` を開いて、次の行
-
-{% highlight ruby %}
-class Idea < ApplicationRecord
-{% endhighlight %}
-
-の直後に、
-
-{% highlight ruby %}
-mount_uploader :picture, PictureUploader
-{% endhighlight %}
-
-を追加します。さらに、`app/views/ideas/_form.html.erb` を開いて次のように編集します。
-
-{% highlight erb %}
-<%= form.text_field :picture %>
-{% endhighlight %}
-
-&nbsp;&nbsp;&#8595;
-
-{% highlight erb %}
-<%= form.file_field :picture %>
-{% endhighlight %}
-
-場合によっては、 *TypeError: can't cast ActionDispatch::Http::UploadedFile to string* というエラーが起きることもあります。エラーになった場合は、 `app/views/ideas/_form.html.erb` の
-
-{% highlight erb %}
-<%= form_with(model: idea) do |form| %>
-{% endhighlight %}
-
-上記のコードを、以下のように変更してみてください。
-
-{% highlight erb %}
-<%= form_with(model: idea, html: {multipart: true}) do |form| %>
-{% endhighlight %}
-
-画像をアップロードするとわかりますが、これだけでは見栄えのいいものではありません。ファイルのpathだけを表示してるので、これもいじってみましょう。
-
-`app/views/ideas/_idea.html.erb` (`app/views/ideas/show.html.erb` で呼び出している部分テンプレート) を開いて編集します。
-
-{% highlight erb %}
-<%= idea.picture %>
-{% endhighlight %}
-
-&nbsp;&nbsp;&#8595;
-
-{% highlight erb %}
-<%= image_tag(idea.picture_url, width: 600) if idea.picture.present? %>
-{% endhighlight %}
-
-
-**Coachより:** HTML についてちょっと話してください。
-
-
-## *5.*routes を調整する
+## routes を調整する
 
 <http://localhost:3000> を開いてみてください(クラウドサービスの場合は preview してください)。まだデフォルトページが見えると思います。ideas ページにリダイレクトするようにしましょう。
 
@@ -262,42 +177,10 @@ root to: redirect('/ideas')
 
 **Coachより:** routes について話してください。
 
-## アプリにページを追加する
-
-アプリに開発者(あなたです！)の情報を表示できるようにページを追加してみましょう。
-
-{% highlight sh %}
-rails generate controller pages info
-{% endhighlight %}
-
-このコマンドはプロジェクトの `app/views` 以下に `/pages` へのアクセスに対応するための新しいディレクトリを追加します。そこに `info.html.erb` という名前のあなたの情報のためのページが作られます。
-
-また、以下のシンプルなルーティングも routes.rb に追加されます。
-
-{% highlight ruby %}
-get "pages/info"
-{% endhighlight %}
-
-それでは、プロジェクトの `app/views/pages/info.html.erb` をテキストエディタで開いてあなたの情報を HTML で追記しましょう。その後はブラウザで [http://localhost:3000/pages/info](http://localhost:3000/pages/info) を開いて(またはクラウドサービスでは preview してアドレス欄の末尾に '/pages/info' を加えてアクセスして) 作成したページを確認してみましょう。
-
 ## 次は？
 
-* HTML や CSS を使ってデザインを追加しましょう。
-* アイデアの素晴らしさ評価値の項目を追加しましょう。
-* CoffeeScript (or JavaScript) を使って動きをつけてみましょう。
-* 写真のロードを早くするために、適切な写真のリサイズ機能を追加しましょう。
+You have now created your first app! Congratulations!
 
+From here we will continuing working on the app to improve the design with HTML and CSS, add more pages, add picture uploads, put your app online so that others can see it as well, share the code with others, allow people to leave comments, etc.
 
-## その他の手引き
-
-* Guide 0: [Handy cheatsheet for Ruby, Rails, console etc.](https://github.com/PragTob/rails-beginner-cheatsheet)
-* Guide 1: [Add commenting by Janika Liiv](/commenting)
-* Guide 2: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift) / [Put your app online with Shelly Cloud](/shellycloud) / [Put your app online with anynines](/anynines) / [Put your app online with Trucker.io](/trucker)
-* Guide 3: [Create thumbnail images for the uploads by Miha Filej](/thumbnails)
-* Guide 4: [Add design using HTML &amp; CSS by Alex Liao](/design)
-* Guide 5: [Add Authentication (user accounts) with Devise by Piotr Steininger](/devise)
-* Guide 6: [Adding profile pictures with Gravatar](/gravatar)
-* Guide 7: [Test your app with RSpec](/testing-rspec)
-* Guide 8: [Continuous Deployment with Travis-CI](/continuous-travis) / [Continuous Deployment with Codeship](/continuous)
-* Guide 9: [Go through additional explanations for the App by Lucy Bain](https://github.com/lbain/railsgirls)
-* Guide 10: [Adding a back-end with Active Admin](/backend-with-active-admin)
+Talk with your coach about the steps you took in this guide. Do you have questions about any of the steps? Ask them before moving on to the next guide.

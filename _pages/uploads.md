@@ -13,23 +13,23 @@ The ideas we added in the previous guide can benefit from a visual element, like
 
 ## Installing a Ruby gem
 
-To let us upload files in Rails app, we'll need to install a piece of software in the app first.
+Rails にファイルをアップロードする機能を追加するには、ライブラリをインストールする必要があります。
 
-Open the `Gemfile` file in your Text Editor. Below the following line:
+プロジェクトディレクトリ内の `Gemfile` を開いて、この行
 
 {% highlight ruby %}
 gem "sqlite3"
 {% endhighlight %}
 
-add this line to the file and save it:
+の直後に、次の一行を追加します。
 
 {% highlight ruby %}
 gem "carrierwave"
 {% endhighlight %}
 
-Open the Terminal app and press <kbd>Ctrl</kbd>+<kbd>C</kbd> to quit the Rails server.
+サーバーを終了するためには、<kbd>Ctrl</kbd>+<kbd>C</kbd>を押します。
 
-Then run the following command in the Terminal:
+Terminal で、次のコマンドを実行してください:
 
 {% highlight sh %}
 bundle install
@@ -66,13 +66,13 @@ Rails now knows about a way to upload pictures in your app. It needs a bit of he
 
 Open the `app/models/idea.rb` file in your Text Editor. This file is used to store your ideas in the database and fetch the ideas to show them. We'll change it to tell Rails which field is a file upload.
 
-Under the following line:
+次の行
 
 {% highlight ruby %}
 class Idea < ApplicationRecord
 {% endhighlight %}
 
-add this line and save the file:
+の直後に
 
 {% highlight ruby %}
 mount_uploader :picture, PictureUploader
@@ -84,7 +84,7 @@ This `mount_uploader` line tells the Idea model that the `picture` field is a fi
 
 Now that your Idea model knows that the `picture` field is a file upload, we can change the form to create and edit pictures to select a picture.
 
-Open the `app/views/ideas/_form.html.erb` file in your Text Editor and change the following line:
+`app/views/ideas/_form.html.erb` を開いて次のように編集します。
 
 {% highlight erb %}
 <%= form.text_field :picture %>
@@ -100,11 +100,23 @@ In your browser open <http://localhost:3000/ideas/new>.  Your "New idea" form wi
 
 Fill in the form to create a new idea, but this time select a picture as well using this new element/button. Any random image you have on your laptop will do, it's just a test.
 
+場合によっては、 *TypeError: can't cast ActionDispatch::Http::UploadedFile to string* というエラーが起きることもあります。エラーになった場合は、 `app/views/ideas/_form.html.erb` の
+
+{% highlight erb %}
+<%= form_with(model: idea) do |form| %>
+{% endhighlight %}
+
+上記のコードを、以下のように変更してみてください。
+
+{% highlight erb %}
+<%= form_with(model: idea, html: {multipart: true}) do |form| %>
+{% endhighlight %}
+
 ## Displaying the picture
 
 You've now added a picture to your idea! You can't see it yet after creating the idea, it will only show the filename right now. Let's change it so it shows the picture.
 
-To show the picture in the page of the idea itself, open the `app/views/ideas/_idea.html.erb` in the Text editor and change the following line:
+To show the picture in the page of the idea itself, `app/views/ideas/_idea.html.erb` (`app/views/ideas/show.html.erb` で呼び出している部分テンプレート) を開いて編集します。
 
 {% highlight erb %}
 <%= idea.picture %>

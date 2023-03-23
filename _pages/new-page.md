@@ -9,7 +9,7 @@ permalink: new-page
 
 {% include main-guide-intro.html %}
 
-Let's add an about page to our app that will display information about the author of this application — you!
+アプリに開発者(あなたです！)の情報を表示できるようにページを追加してみましょう。
 
 ## Generate a new page
 
@@ -19,7 +19,7 @@ In the Terminal app, run the following command:
 rails generate controller pages about
 {% endhighlight %}
 
-This command will create a new directory under `app/views/` called `pages`. In that directory a file called `about.html.erb` will be created. This file contains the content that will be displayed on your "about" page.
+このコマンドはプロジェクトの `app/views` 以下に `/pages` へのアクセスに対応するための新しいディレクトリを追加します。そこに `about.html.erb` という名前のあなたの情報のためのページが作られます。
 
 Open the `app/views/pages/about.html.erb` file. Add some information about yourself in the HTML. Something like the example below:
 
@@ -28,13 +28,13 @@ Open the `app/views/pages/about.html.erb` file. Add some information about yours
 <p>Hello there! I am YOUR NAME HERE and this is my amazing app!</p>
 {% endhighlight %}
 
-The same `rails generate` command has also added a new route to your `config/routes.rb`. This route configuration tells Rails which page should be shown when visiting that URL.
+また、以下のシンプルなルーティングも routes.rb に追加されます。This route configuration tells Rails which page should be shown when visiting that URL.
 
 {% highlight ruby %}
 get "pages/about"
 {% endhighlight %}
 
-To see your new about page, take your browser to <http://localhost:3000/pages/about> (or append `/pages/about` to your preview URL). You should now see the new page you just created!
+それでは、プロジェクトの `app/views/pages/about.html.erb` をテキストエディタで開いてあなたの情報を HTML で追記しましょう。その後はブラウザで <http://localhost:3000/pages/about> を開いて(またはクラウドサービスでは preview してアドレス欄の末尾に '/pages/about' を加えてアクセスして) 作成したページを確認してみましょう。
 
 {% coach %}
 Talk about routes for a moment. How does the `config/routes.rb` file define what routes Rails listens to? Explain that every page in the app needs a route in this file, otherwise Rails won't know how to show it.

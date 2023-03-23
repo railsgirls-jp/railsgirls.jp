@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main_guide
 title: Rails Girls インストール・レシピ
 permalink: install
 ---

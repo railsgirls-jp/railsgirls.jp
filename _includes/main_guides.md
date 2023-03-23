@@ -12,6 +12,8 @@ If you're ever stuck during a guide, please ask your coach for help and also con
   - [Installation guide for Linux](/install/linux) {% if page.permalink == 'install/linux' %}(Current page!){% endif %}
   - [Installation guide for a Virtual Machine](/install/virtual-machine) {% if page.permalink == 'install/virtual-machine' %}(Current page!){% endif %}
   - [Installation guide for a Cloud service](/install/replit) {% if page.permalink == 'install/replit' %}(Current page!){% endif %}
+  - [GitHub Codespaces を使う](/install/codespaces) {% if page.permalink == 'install/codespaces' %}(Current page!){% endif %}
+  - [AWS Cloud9 を使う](/install/cloud9) {% if page.permalink == 'install/cloud9' %}(Current page!){% endif %}
 * Guide 4: [Build Your First App](/app) {% if page.permalink == 'app' %}(Current page!){% endif %}
 * Guide 5: [Style your app using HTML and CSS](/html-and-css) {% if page.permalink == 'html-and-css' %}(Current page!){% endif %}
 * Guide 6: [Add a new page to your app](/new-page) {% if page.permalink == 'new-page' %}(Current page!){% endif %}
