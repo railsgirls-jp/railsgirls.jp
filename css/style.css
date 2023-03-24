@@ -510,3 +510,115 @@ i.icon-small-browser {
   text-decoration: none;
   background-color: transparent;
 }
+
+.guides-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.guides-list li {
+  padding: 20px 0;
+  min-height: 84px;
+}
+.guides-list li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.guides-list h3 {
+  margin: 0;
+  margin-left: 90px;
+  color: var(--highlight);
+}
+.guides-list p {
+  margin-left: 90px;
+  font-size: 18px;
+}
+
+.guide-icon {
+  position: relative;
+  top: 3px;
+  margin-right: 20px;
+
+  width: 70px;
+  height: 70px;
+  float: left;
+
+  color: #fff;
+  font-size: 1.8em;
+  line-height: 70px;
+  font-weight: bold;
+  text-align: center;
+
+  background-color: #d0d0d0;
+  border-radius: 70px;
+  transition: 0.1s background-color ease-in;
+  -webkit-transition: 0.1s background-color ease-in;
+  -moz-transition: 0.1s background-color ease-in;
+}
+.guide-icon:before {
+  content: attr(data-icon);
+  font-size: 120%;
+}
+.guide-icon-meta:before {
+  content: "?";
+  position: relative;
+}
+.guide-icon-other:before {
+  content: "❯";
+  position: relative;
+}
+a:hover .guide-icon,
+.guide-icon:hover {
+  background-color: #d3360b;
+  transition: 0.1s background-color ease-in;
+  -webkit-transition: 0.1s background-color ease-in;
+  -moz-transition: 0.1s background-color ease-in;
+}
+
+.os-specific .picker {
+  display: block;
+  float: none; /* override upstream */
+  text-align: right;
+}
+.os-specific .picker-options .active {
+  font-weight: bold;
+}
+.os-specific .picker-options > span:not(:last-child):after {
+  content: " | ";
+}
+.os-specific.big {
+  margin-bottom: 20px;
+}
+.os-specific.big .picker {
+  display: block;
+  text-align: center;
+}
+.os-specific.big .picker > span {
+  display: block;
+}
+.os-specific.big .picker-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.os-specific.big .picker-options > span:not(:last-child) {
+  margin-right: 15px;
+}
+.os-specific.big .picker-options > span:after {
+  content: "";
+}
+.os-specific.big .picker-options {
+  padding-top: 20px;
+  font-size: 1.3rem;
+}
+.os-specific.big .picker-options a {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 2px 10px;
+
+  border: 2px solid #DDD;
+  border-radius: 10px;
+}
+.os-specific.big .picker-options a.active,
+.os-specific.big .picker-options a:focus,
+.os-specific.big .picker-options a:hover {
+  border-color: currentcolor;
+}
