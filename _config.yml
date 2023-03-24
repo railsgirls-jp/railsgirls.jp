@@ -3,6 +3,7 @@ markdown: kramdown
 include:
   - _pages
   - _pages-jp
+  - _posts
 exclude:
   - ".rvmrc"
   - ".rbenv-version"
