@@ -1,6 +1,6 @@
 <hr>
 
-If you're ever stuck during a guide, please ask your coach for help and also consult this [handy cheatsheet for Ruby, Rails, the console, the Text Editor etc](https://www.pragtob.info/rails-beginner-cheatsheet/).
+ガイドを進めていて行き詰まったときはコーチに助けてもらいましょう。また [Ruby、Rails、コンソール、テキストエディターについての便利なチートシート](https://www.pragtob.info/rails-beginner-cheatsheet/) も参考にしてみてください。
 
 ## Guides
 
