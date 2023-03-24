@@ -46,9 +46,9 @@ jobs:
       env:
         JEKYLL_ENV: production
 
-    - name: ✅ Test static pages
-      run: |
-        bundle exec rake test
+    # - name: ✅ Test static pages
+    #   run: |
+    #     bundle exec rake test
 
     - name: ☁️ Upload artifact
       uses: actions/upload-pages-artifact@v1

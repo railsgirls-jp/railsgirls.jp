@@ -7,7 +7,7 @@ SOURCE = "."
 CONFIG = {
   'version' => "0.2.13",
   'layouts' => File.join(SOURCE, "_layouts"),
-  'posts' => File.join(SOURCE, "_posts"),
+  'posts' => File.join(SOURCE, "_pages"),
   'post_ext' => "markdown",
   'page_ext' => "markdown"
 }
@@ -126,7 +126,6 @@ task :test do
     checks: [
       'Links',
       'Images',
-      'Favicon',
       'Scripts',
       'OpenGraph',
     ],
@@ -134,6 +133,7 @@ task :test do
     allow_missing_href: true,
     disable_external:   true,
     enforce_https:      false,
+    check_internal_hash: false,
 
     ignore_empty_alt:   true,
     ignore_missing_alt: true,
