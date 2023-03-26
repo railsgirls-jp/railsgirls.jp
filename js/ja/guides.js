@@ -37,7 +37,7 @@ function addIcons() {
 function initializeOsSwitchers() {
   var osInstructions = $(".os-specific");
   var switcher = osInstructions.prepend(
-    "<span class='picker'><span class='picker-label'>Choose your Operating System:</span> " +
+    "<span class='picker'><span class='picker-label'>あなたのオペレーティングシステムを選んでください:</span> " +
       "<span class='picker-options'>" +
         "<span><a href='#' class='os-link win-link'>Windows</a></span>" +
         "<span><a href='#' class='os-link mac-link'>Mac</a></span>" +
