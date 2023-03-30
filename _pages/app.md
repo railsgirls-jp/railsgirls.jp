@@ -1,34 +1,34 @@
 ---
 layout: main_guide
-title: Rails Girls アプリ・チュートリアル
+title: はじめてのアプリを作る
 permalink: app
 ---
 
-# Rails Girls アプリ・チュートリアル
+# はじめてのアプリを作る
 
 *Created by Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
 
 {% include main-guide-intro.html %}
 
-Welcome to the workshop! This is the guide you'll be starting with on the day of the workshop. Did you have trouble getting the installation to work? Ask your coach for help first.
+ワークショップへようこそ！ワークショップ当日は、このガイドから始めます。インストールでうまく行かないことがありましたか？もしそうであれば、まずはコーチに相談しましょう。
 
-## Help from the coach
+## コーチからのサポート
 
-When you see the box below, ask your coach to read it and help out where necessary.
+以下のボックスが表示されているようなら、コーチに読んでもらい、必要に応じて助けてもらいましょう。
 
 {% coach %}
-Hi coach 👋 Thank you so much for helping out today!
+コーチの皆さん 👋 今日はサポートしてくれて本当にありがとうございます！
 {% endcoach %}
 
-## Learn about Ruby
+## Rubyについて学ぼう
 
-In these next couple guides you're going to create a new app. For this you'll be using the Ruby on Rails framework. The Rails framework is written in the Ruby programming language. To get a better idea of how Ruby works, read the [Rails Girls guide to Ruby](/ruby-intro) if you haven't ever written any Ruby, or go to the slightly more advanced [try.ruby-lang.org](https://try.ruby-lang.org/) course before you continue.
+この先のガイドで新しいアプリを作っていくことになります。そのためにRuby on Railsというフレームワークを使っていきます。Railsはプログラミング言語Rubyで作られています。今まで、まったくRubyでプログラムを書いたことがないのであれば、Rubyがどのように動くのかを知るために、[Rails GirlsのためのRubyのガイド](/ruby-intro) を読みましょう。あるいは、先に進む前にちょっと高度な [try.ruby-lang.org](https://try.ruby-lang.org/) というコースに取り組んでみましょう。
 
 ## アプリケーションを作る
 
-*railsgirls* という名前の Rails アプリを作っていきます。
+このガイドではRuby on Railsというフレームワークを使って *railsgirls* という名前のアプリを作っていきます。
 
-まず、Terminal を開いてください。
+まず、Terminal を開いて、以下のコマンドを入力してください。
 
 <div class="os-specific">
   <div class="mac nix">
@@ -37,7 +37,7 @@ mkdir projects
 {% endhighlight %}
 
     <div>
-<p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>ls</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
+<p><code>projects</code> というディレクトリが作られたことを、一覧表示するためコマンドで確認できます: <code>ls</code>. <code>projects</code> ディレクトリが表示されるはずです。ここで、今いるディレクトリを <code>projects</code> ディレクトリに変更するために、次のコマンドを実行します:</p>
     </div>
 
 {% highlight sh %}
@@ -45,7 +45,7 @@ cd projects
 {% endhighlight %}
 
     <div>
-<p>You can verify you are now in an empty directory or folder by again running the <code>ls</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
+<p><code>ls</code> をもう一度実行すると、空のディレクトリ、あるいはフォルダにいることがわかります。次に <code>railsgirls</code> という名前の新しいアプリを作るために以下のコマンドを実行します:</p>
     </div>
 
 {% highlight sh %}
@@ -53,7 +53,7 @@ rails new railsgirls
 {% endhighlight %}
 
     <div>
-<p>This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our Rails app by running:</p>
+<p>このコマンドは <code>railsgirls</code> というフォルダの中に新しいアプリを作ります。このため、また以下のコマンドを実行して、ディレクトリをRailsアプリの中に変更します:</p>
     </div>
 
 {% highlight sh %}
@@ -61,7 +61,7 @@ cd railsgirls
 {% endhighlight %}
 
     <div>
-<p>If you run <code>ls</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. You can then start the Rails server by running:</p>
+<p>ディレクトリの中で <code>ls</code> を実行すると、<code>app</code> や <code>config</code> といったフォルダが表示されるはずです. そして以下のコマンドでRailsアプリを起動できます:</p>
     </div>
 
 {% highlight sh %}
@@ -75,7 +75,7 @@ mkdir projects
 {% endhighlight %}
 
     <div>
-<p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>dir</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
+<p><code>projects</code> というディレクトリが作られたことを、一覧表示するためコマンドで確認できます: <code>dir</code>. <code>projects</code> ディレクトリが表示されるはずです。ここで、今いるディレクトリを <code>projects</code> ディレクトリに変更するために、次のコマンドを実行します:</p>
     </div>
 
 {% highlight sh %}
@@ -83,7 +83,7 @@ cd projects
 {% endhighlight %}
 
     <div>
-<p>You can verify you are now in an empty directory or folder by again running the <code>dir</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
+<p><code>dir</code> をもう一度実行すると、空のディレクトリ、あるいはフォルダにいることがわかります。次に <code>railsgirls</code> という名前の新しいアプリを作るために以下のコマンドを実行します:</p>
     </div>
 
 {% highlight sh %}
@@ -91,7 +91,7 @@ rails new railsgirls
 {% endhighlight %}
 
     <div>
-<p>This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our Rails app by running:</p>
+<p>このコマンドは <code>railsgirls</code> というフォルダの中に新しいアプリを作ります。このため、また以下のコマンドを実行して、ディレクトリをRailsアプリの中に変更します:</p>
     </div>
 
 {% highlight sh %}
@@ -99,7 +99,7 @@ cd railsgirls
 {% endhighlight %}
 
     <div>
-<p>If you run <code>dir</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. You can then start the Rails server by running:</p>
+<p>ディレクトリの中で <code>dir</code> を実行すると、<code>app</code> や <code>config</code> といったフォルダが表示されるはずです. そして以下のコマンドでRailsアプリを起動できます:</p>
     </div>
 
 {% highlight sh %}
@@ -108,11 +108,11 @@ rails server
   </div>
 </div>
 
-自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。(Replitなどのクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直した後でURLをアドレス欄に入力する代わりに、メニューから 'preview' - 'port 3000' を選んでください。詳細は [インストール・レシピ](/install) を参照してください。)
+自分のパソコン上のブラウザで <http://localhost:3000> にアクセスしてください。リンクをクリックすると新しいタブが開き、アドレスバーに `localhost:3000` と表示されます。クラウドサービスを使っている場合は(例 Replit)、代わりにプレビュー機能を使ってください(詳細は [インストールガイド](/install/replit) を参照してください)。
 
-Railsロゴの画面が表示されれば、さきほど作ったアプリは正しく動作しています。The `rails new` generator created a lot of app code for you to get started and we'll be modifying it in the rest of this workshop.
+Railsロゴの画面が表示されれば、さきほど作ったアプリは正しく動作しています。`rails new` ジェネレーターは、始めるのに必要なアプリのコードをたくさん生成しましたが、このワークショップの残りの中で変更していきます。
 
-Notice in the Terminal window the command prompt is not visible because it is now running the Rails server. The command prompt will look something like this, but it may be different on your laptop:
+ターミナルのウィンドウにコマンドプロンプトが見当たらないことに注意してください。なぜならRailsサーバが起動しているからです。コマンドプロンプトはこのように表示されますが、あなたのノートパソコンでは違っているかもしれません。
 
 <div class="os-specific">
   <div class="mac nix">
@@ -127,60 +127,59 @@ $
   </div>
 </div>
 
-When the command prompt is not visible you cannot execute new commands. If you try running `cd` or another command it will not work. Terminal 上で CTRL-C（CTRL(Control)キーとCを同時に押す)を実行してサーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
+コマンドプロンプトが表示されていないときは、新しいコマンドは実行できません。`cd` や他のコマンドを実行しようとしても動作しません。同じターミナルウィンドウで、Railsサーバを止めたり、通常のコマンドプロンプトに戻す場合は、Terminalで Commandキーを押しながら、Cを押して( <kbd>Ctrl</kbd>+<kbd>C</kbd> )、Railsサーバを終了します。
 
 {% coach %}
-- Make sure it's clear what each command does: `cd`, `dir`/`ls`, `mkdir`, `rails server`.
-- Briefly explain what was generated by `rails new`.
-- Briefly explain what the Rails server does and why we need it.
-- Briefly explain how can you stop the server.
+- それぞれのコマンドが何をするのか明確になっているか確認してください
+- `rails new` によって何が生成されるのか簡潔に説明してください
+- Railsサーバが何をするのか、そしてどうして必要なのかを簡潔に説明してください
+- どうやってサーバを止めるのか簡潔に説明してください
 {% endcoach %}
 
-## Idea の scaffold をする
+## Idea の scaffold を作る
 
-Rails の scaffold 機能を使って、list, add, remove, edit, view を生成します。これが Rails アプリの最初の一歩です。
-ここでは ideas という名前で作ります。
+今あなたは自分のアプリを持っています。でも、このアプリはまだ何もしません。Railsのロゴを表示するだけです。
+次に、一覧を表示したり、追加、削除、編集、閲覧できるようにするための出発点(この場合は *ideas* の出発点)を作るために、Railsのscaffoldという機能を使います。
+次のコマンドをターミナルで実行してください:
 
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
 {% endhighlight %}
 
 {% coach %}
-- Explain what Rails scaffolding is. How does it help us create parts of an app quickly?
-- Briefly explain the `rails generate scaffold` command and how it works. What do they arguments mean?
-    - What is the model name argument?
-    - How do you specify database fields with `name:string` and what do they parts mean?
+- Railsのscaffoldが何なのか説明してください。どのようにしてアプリのパーツを素早く作るのを助けてくれるのでしょうか？
+- `rails generate scaffold` というコマンドと、それがどのように動くのかを簡潔に説明してください。引数は何を意味しているのでしょうか？
+    - モデル名の引数は何ですか？
+    - `name:string` を使ってデータベースのフィールドをどう指定したのでしょうか？その部分は何を意味しているのでしょうか？
 {% endcoach %}
 
-scaffold は新しいファイルをプロジェクトのディレクトリに追加しますが、意図したように動作させるためには以下の 2 つのコマンドを実行してデータベースの更新と Rails server プロセスをリスタートする必要があります。
+scaffold は新しいファイルをプロジェクトのディレクトリに追加しますが、きちんと動作させるためには、他の2つのコマンドを実行して、データベースを更新し、サーバを再起動する必要があります。
 
 {% highlight sh %}
 rails db:migrate
 rails server
 {% endhighlight %}
 
-ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(Replit のようなクラウドサービスの場合は、```rails server -b 0.0.0.0```を実行してサーバを起動し直してメニューから 'preview' - 'port 3000' を選び、アドレス欄の末尾に '/ideas' を加えてアクセスしてください。詳細は [インストール・レシピ](/install) を参照してください。)
+ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(Replit のような)クラウドサービスを使っている場合は、代わりにプレビュー用のURLの末尾に `/ideas` を加える必要があります(詳細は [インストールガイド](/install/replit) 参照)。
 
-いろいろクリックしてみたりしたら、 CTRL-C を押して、サーバを終了します。(WindowsでCTRL-Cで終了しない場合は、CTRL-PAUSEを試してください。)
+いろいろクリックしてみたり、これらの少ないコマンドラインのコマンドを実行して得られたものをテストしてみましょう。新しいアイデアを作ったり、閲覧、編集、削除(破壊)できるはずです。
 
-## routes を調整する
+## routesを調整する
 
-<http://localhost:3000> を開いてみてください(クラウドサービスの場合は preview してください)。まだデフォルトページが見えると思います。ideas ページにリダイレクトするようにしましょう。
+[http://localhost:3000](http://localhost:3000) (あるいはプレビュー用のURL) にアクセスしてください。Railsのロゴしかないページが表示されると思います。ideas ページにリダイレクトするようにしましょう。
 
-`config/routes.rb` を開いて、最初の行の次に以下のコードを追記してください:
+ファイル `config/routes.rb` をテキストエディタで開いてください。最初の行の次に以下のコードを追記し、保存してください:
 
 {% highlight ruby %}
-root to: redirect('/ideas')
+root to: redirect("/ideas")
 {% endhighlight %}
 
-ルートパス(<http://localhost:3000/> またはクラウドサービスの場合は preview )をブラウザで表示して変更点を確認しましょう。
-
-**Coachより:** routes について話してください。
+ルートパス([http://localhost:3000](http://localhost:3000) あるいはプレビュー用のURL)をブラウザで表示して変更点を確認しましょう。ルートパスにアクセスするとideasの一覧ページが表示されるはずです。ブラウザのアドレスバーにあるラベルは、自動的に [http://localhost:3000/ideas](http://localhost:3000/ideas) に変わるはずです。
 
 ## 次は？
 
-You have now created your first app! Congratulations!
+はじめてのアプリを作りました！おめでとうございます！
 
-From here we will continuing working on the app to improve the design with HTML and CSS, add more pages, add picture uploads, put your app online so that others can see it as well, share the code with others, allow people to leave comments, etc.
+ここから、HTMLとCSSでデザインを改善し、ページを追加し、画像をアップロードできるようにし、あなたのアプリを他の人も見れるようにインターネットに公開し、コードを他の人にシェアし、コメントを残せるようにするなど、このアプリに取り組み続けていきます。
 
-Talk with your coach about the steps you took in this guide. Do you have questions about any of the steps? Ask them before moving on to the next guide.
+このガイドで行った手順について、コーチと話してみましょう。手順について質問はありませんか？次のガイドに進む前に質問しておきましょう。
