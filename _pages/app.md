@@ -37,7 +37,7 @@ mkdir projects
 {% endhighlight %}
 
     <div>
-<p><code>projects</code> というディレクトリが作られたことを、一覧表示するためコマンドで確認できます: <code>ls</code>. <code>projects</code> ディレクトリが表示されるはずです。ここで、今いるディレクトリを <code>projects</code> ディレクトリに変更するために、次のコマンドを実行します:</p>
+<code>projects</code> ディレクトリが作られたことを確認してみましょう。ディレクトリに含まれるものを一覧で表示する <code>ls</code> というコマンドがあります。このコマンドを実行し、<code>projects</code> が表示されることを確認してください。ここで、今いるディレクトリを <code>projects</code> に変更するため、次のコマンドを実行します:</p>
     </div>
 
 {% highlight sh %}
@@ -75,7 +75,7 @@ mkdir projects
 {% endhighlight %}
 
     <div>
-<p><code>projects</code> というディレクトリが作られたことを、一覧表示するためコマンドで確認できます: <code>dir</code>. <code>projects</code> ディレクトリが表示されるはずです。ここで、今いるディレクトリを <code>projects</code> ディレクトリに変更するために、次のコマンドを実行します:</p>
+<code>projects</code> ディレクトリが作られたことを確認してみましょう。ディレクトリに含まれるものを一覧で表示する <code>dir</code> というコマンドがあります。このコマンドを実行し、<code>projects</code> が表示されることを確認してください。ここで、今いるディレクトリを <code>projects</code> に変更するため、次のコマンドを実行します:</p>
     </div>
 
 {% highlight sh %}
