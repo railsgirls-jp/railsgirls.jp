@@ -1,50 +1,49 @@
 ---
 layout: main_guide
-title: Add a new page to your app
-description: "Add more pages to your Rails app by generating controlelrs and changing routes."
+title: アプリに新しいページを追加しよう
+description: "Railsアプリにページを追加するために、コントローラを生成し、ルーティングを変更しましょう。"
 permalink: new-page
 ---
 
-# Add a new page to your app
+# アプリに新しいページを追加しよう
 
 {% include main-guide-intro.html %}
 
 アプリに開発者(あなたです！)の情報を表示できるようにページを追加してみましょう。
 
-## Generate a new page
+## 新しいページを生成しよう
 
-In the Terminal app, run the following command:
+ターミナル上で以下のコマンドを実行します。
 
 {% highlight sh %}
 rails generate controller pages about
 {% endhighlight %}
 
-このコマンドはプロジェクトの `app/views` 以下に `/pages` へのアクセスに対応するための新しいディレクトリを追加します。そこに `about.html.erb` という名前のあなたの情報のためのページが作られます。
+このコマンドはプロジェクトの `app/views` 以下に `/pages` へのアクセスに対応するための新しいディレクトリを追加します。そこに `about.html.erb` という名前のページが作られます。
 
-Open the `app/views/pages/about.html.erb` file. Add some information about yourself in the HTML. Something like the example below:
+`app/views/pages/about.html.erb` ファイルを開きましょう。以下の例のようにHTMLの中に自分に関する情報を追加してください。
 
 {% highlight erb %}
 <h1>About me</h1>
 <p>Hello there! I am YOUR NAME HERE and this is my amazing app!</p>
 {% endhighlight %}
 
-また、以下のシンプルなルーティングも routes.rb に追加されます。This route configuration tells Rails which page should be shown when visiting that URL.
+また、先ほどの `rails generate` コマンドを実行したことで、以下のシンプルなルーティングも `config/routes.rb` に追加されます。この設定は、ブラウザからそのURLにアクセスしたときにどのページを表示させるかをRailsに指示しています。
 
 {% highlight ruby %}
 get "pages/about"
 {% endhighlight %}
 
-それでは、プロジェクトの `app/views/pages/about.html.erb` をテキストエディタで開いてあなたの情報を HTML で追記しましょう。その後はブラウザで <http://localhost:3000/pages/about> を開いて(またはクラウドサービスでは preview してアドレス欄の末尾に '/pages/about' を加えてアクセスして) 作成したページを確認してみましょう。
+新たに作成したaboutページを見るには、ブラウザで <http://localhost:3000/pages/about>（またはプレビューURLに`/pages/about`を追加）にアクセスしてください。あなたが作成した新しいページが表示されるはずです！
 
 {% coach %}
-Talk about routes for a moment. How does the `config/routes.rb` file define what routes Rails listens to? Explain that every page in the app needs a route in this file, otherwise Rails won't know how to show it.
+少しだけルーティングについて話をしましょう。Railsが認識するルーティングを `config/routes.rb` ファイルでどのように定義するのでしょうか。アプリ内のすべてのページがこのファイルにルーティングを持つ必要があり、そうでない場合Railsは各ページどのように表示すればよいのかわからないことを説明しましょう。
 {% endcoach %}
 
-## Add a link to your navigation bar
+## ナビゲーションバーにリンクを追加しよう
+新しく作成したページが機能することがわかったので、次はナビゲーションバーにリンクを作成して、サイトを訪れた人が該当のページへアクセスできるようにしましょう。そうすることで、そのページの存在を推測して自分で探そうとする必要がなくなります。
 
-Now that we know the new page works, let's make sure people can visit it by creating a link for it in the navigation bar. That way they don't have to guess that page exists and try to find it on their own.
-
-Open `app/views/layouts/application.html.erb` in your Text Editor and under these lines of HTML:
+テキストエディタで`app/views/layouts/application.html.erb`を開き、以下のHTMLの行の下に追加していきます。
 
 {% highlight erb %}
 <li class="nav-item">
@@ -52,7 +51,7 @@ Open `app/views/layouts/application.html.erb` in your Text Editor and under thes
 </li>
 {% endhighlight %}
 
-add the following lines of HTML to link to the new page:
+新しいページにリンクするためのHTMLを以下のように追加します。
 
 {% highlight erb %}
 <li class="nav-item">
@@ -60,20 +59,21 @@ add the following lines of HTML to link to the new page:
 </li>
 {% endhighlight %}
 
-Refresh the page in your Browser and click the newly created link to see if it works! You can now navigate between the ideas and the about pages in your app through one unified navigation bar.
+ブラウザのページを更新し、新しく作成したリンクをクリックして、動作するかどうかを確認しましょう！これで、1つの統一されたナビゲーションバーから、アプリのideaページとaboutページを行き来できるようになりました。
 
-## The changes in more detail
+## 変更点の詳細について
 
-By adding the new "nav item" to the navigation a new link has appeared in the navigation bar, styled by Bootstrap. This link points to the new about page.
+ナビゲーションに新しい `nav item` を追加することで、Bootstrapでスタイルされたナビゲーションバーに新しいリンクが表示されました。このリンクは、新しく追加されたaboutページを指しています。
 
-This link is made by using a `a`-element, which is the HTML for a link. Using the `href` property we tell the browser where to point to, in this case `/pages/about`. The "About" text between the `<a ... href="/pages/about">About</a>` link is what is shown as the label for the people looking at the page through the Browser.
+このリンクは、`a` 要素というリンクのためのHTMLを使うことによって作られます。`href` プロパティを使用して、ブラウザにリンクする場所を指示します（この場合、`/pages/about`）。 `<a ... href="/pages/about">About</a>` リンクの間にある「About」のテキストが、ブラウザを通してページを見る人のためのラベルとして表示されます。
 
-The middle part with the `class` property is what we use to indicate how the link should be displayed. If the link is "active", it is the page we're currently and it shows more brightly colored than the other link of the page we are currently not on.
+`li` タグに囲まれた中央の `class` プロパティは、リンクがどのように表示されるべきかを示すために使用しています。現在滞在しているページの場合 `class` プロパティに `active` が適用され、現在アクセスしていないページの他のリンクよりも明るい色で表示されます。
 
-To check if the page is currently active, Rails provides a helper called `current_page?`. This condition will be "true" if it matches our page selection: `controller: 'pages', action: 'about'`. The `controller` is the entrypoint for anything in the `/pages` path of this part of the app, and the `action` is the specific page, which is "about".
+各ページが現在滞在されていてアクティブかどうかをチェックするために、Railsは `current_page?` というヘルパーを提供しています。この条件は、例えば滞在しているページがaboutページだった場合に  `controller: 'pages', action: 'about'` と記述されている箇所に一致するため「true」になります。
+`controller` と書かれている部分はアプリの `/pages` パス内のすべてのエントリポイントであり、`action` は特定のページ、つまり 今回の例では"about" であることを示しています。
 
 {% coach %}
-The above goes in a bit more technical detail about HTML works and how ERB can change what HTML is shown in the Browser. Help elaborate if things are unclear. Demonstrate how the page in the Browser changes by changing the HTML and ERB code.
+上記で触れた内容は、HTMLの仕組みと、ERBがブラウザに表示されるHTMLをどのように変更できるかについて、より技術的に詳しく説明しています。もし不明な点があれば、補足説明をお願いします。HTMLとERBのコードを変更することで、ブラウザーに表示されるページがどのように変化するか、デモしてください。
 {% endcoach %}
 
-Knowing how to add a new page and change the nav bar, you can also add a [new homepage](/new-homepage) (the next guide) to your app.
+アプリに新しいページを追加しナビゲーションバーを変更する方法を学んだため、 同じように [新しいホームページ](/new-homepage) (次のガイド) をあなたのアプリに追加することが可能です。
