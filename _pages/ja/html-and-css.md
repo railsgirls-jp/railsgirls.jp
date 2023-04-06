@@ -15,7 +15,7 @@ permalink: html-and-css
 
 HTML（HyperText Markup Language）は、アプリのコンテンツの構造を作るために使います。ウェブサイト上の見出し、リスト、テーブル、リンクなどが何であるかをブラウザに伝える役割を担っています。[前のガイド](/app)で生成されたファイルもHTMLで構成されており、さらに拡張するためにRubyのコードを追加しています。
 
-`app/views/ideas/index.html`ファイルを開くと、以下が表示されるでしょう。このファイルの `<name>` タグで始まる部分はHTMLの開始を表し、スラッシュ記号 `</name>` で始まる部分はHTMLの終了を表します。このHTMLタグに対して `style`、`id`、`class` などのあらゆるプロパティを追加することができます。
+`app/views/ideas/index.html`ファイルを開くと、以下が表示されるでしょう。例えばこのファイルの `<div>` タグで始まる部分はHTMLの開始を表し、スラッシュ記号 `</div>` で始まる部分はHTMLの終了を表します。このHTMLタグに対して `style`、`id`、`class` などのあらゆるプロパティを追加することができます。
 
 {% highlight erb %}
 <h1>Ideas</h1>
@@ -27,10 +27,10 @@ HTML（HyperText Markup Language）は、アプリのコンテンツの構造を
 </div>
 {% endhighlight %}
 
-また、ファイル内には `<%`、`<%=`、`%>` というコードで示される、特殊な部分があります。これはHTMLによく似ていますが、そうではありません。この部分はRubyのコードとして実行され、あなたがアプリのデータベースに追加したアイデアたちを、HTMLに動的に表示させるためのものです。
+また、ファイル内には `<%`、`<%=`、`%>` というコードで示される、特殊な部分があります。これはHTMLによく似ていますが、そうではありません。この部分はRubyのコードとして実行され、あなたがアプリのデータベースに追加したデータを、動的にHTMLに表示させるためのものです。
 
 {% coach %}
-HTMLとRailsの関係について話してましょう。
+HTMLとRailsの関係について話しましょう。
 
 - HTMLとは何かをもう少し説明して、いくつかの例（このウェブサイトのソースコードなど）を挙げてみましょう。
 - Railsのビューのどの部分がHTMLでしょうか、また、Embedded Ruby（ERB）とは何でしょうか？
@@ -57,15 +57,15 @@ HTML、CSS、Railsの関係について話しましょう。
 
 ## アプリのスタイリングに役立つBootstrapを導入しよう
 
-Bootstrapはいくつかの異なるパーツから構成されていますが、最初に使用するのはCSSです。そのためには、アプリのHTMLに対して何行かのコードを追加する必要があります。具体的には、レイアウトのファイルに対してです。レイアウトファイルは、Railsのすべてのビューが内包されています。これにより、すべてのページで同じ基本レイアウトとCSSが読み込まれるようになります。
+Bootstrapはいくつかの異なるパーツから構成されていますが、最初に使用するのはCSSです。そのためには、アプリのHTMLに対して何行かのコードを追加する必要があります。具体的には、レイアウトのファイルに対してです。レイアウトファイルには、Railsのすべてのビューが内包されています。これにより、すべてのページで同じ基本レイアウトとCSSが読み込まれるようになります。
 
-テキストエディターで `app/views/layouts/application.html.erb` ファイルを開き、以下の行を追加します
+テキストエディターで `app/views/layouts/application.html.erb` ファイルを開きます
 
 {% highlight erb %}
 <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 {% endhighlight %}
 
-この1行前に次のタグを追記してください。
+上記が記述されている1行前に次のタグを追記してください。
 
 {% highlight erb %}
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -92,7 +92,7 @@ Bootstrapはいくつかの異なるパーツから構成されていますが�
 ## ナビゲーションバーを追加しよう
 
 ユーザーインターフェース（UI）がほとんどないWebサイトでは、迷子になりがちです。ナビゲーションバーとフッターをレイアウトに追加して、よりアプリのような外観にし、ページを探せるようにしましょう。
-同じファイルの`<body>`の直後に以下を追加してください。
+同じファイルの`<body>`の直後に以下を追加してください。これにより、アプリにナビゲーションバーが追加されます。
 
 {% highlight erb %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -112,7 +112,7 @@ Bootstrapはいくつかの異なるパーツから構成されていますが�
 </nav>
 {% endhighlight %}
 
-さらに、`</body>` の直前に以下を追加してください。これにより、「Rails Girls」というフッターと現在の年が追加され、ナビゲーションバーを機能させるために必要なBootstrap JavaScriptを読み込んでいます。
+さらに、ファイル末尾の `</body>` の直前に以下を追加してください。`<footer></fotter>` 部分により、「Rails Girls」というフッターと現在の年が追加され、`<script></script>` 部分によってナビゲーションバーを機能させるために必要なBootstrap JavaScriptを読み込んでいます。
 
 {% highlight erb %}
 <footer class="mt-5 text-center">
@@ -127,6 +127,6 @@ Bootstrapはいくつかの異なるパーツから構成されていますが�
 
 ## さらにスタイリングを追加しよう！
 
-このステップはオプションです。今後のガイドでは、より多くのスタイリングを更新していきます。次のステップに進みたい場合は、下のリストで次のガイドを開いてください。
+***このステップはオプションです。*** 今後のガイドでは、より多くのスタイリングを更新していきます。次のステップに進みたい場合は、下のリストで次のガイドを開いてください。
 
-あなたがすでにCSSをある程度知っている場合、HTMLとCSSでアプリをさらにスタイリングするにはテキストエディタで`app/assets/stylesheets/application.css`ファイルで編集が可能です。また、アプリのスタイリングにBootstrapを使用する方法をさらに得たい場合は、[Bootstrap documentation](https://getbootstrap.com/docs/5.2/getting-started/introduction/)を参照してみましょう。
+あなたがすでにCSSをある程度知っている場合、テキストエディタで`app/assets/stylesheets/application.css`ファイルを開いてHTMLとCSSを編集すると、アプリをさらにスタイリングすることが可能です。また、アプリのスタイリングにBootstrapを使用する方法をさらに得たい場合は、[Bootstrap documentation](https://getbootstrap.com/docs/5.2/getting-started/introduction/)を参照してみましょう。
