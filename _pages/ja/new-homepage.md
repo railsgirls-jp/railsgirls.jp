@@ -1,7 +1,7 @@
 ---
 layout: main_guide
-title: Add a new homepage
-description: "Customize your app's homepage with your own page."
+title: 新しいホーム画面を追加しよう
+description: "あなたのアプリのホーム画面をカスタマイズしましょう。"
 permalink: new-homepage
 ---
 
