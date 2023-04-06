@@ -398,7 +398,8 @@ i.icon-small-browser {
   display: block;
   border-bottom: solid 3px #EC644B;
   bottom: -3px;
-  width: 30%;
+  left: -1px;
+  width: 100%;
 }
 
 .page__body {
@@ -407,7 +408,7 @@ i.icon-small-browser {
 
 .page__link {
   margin-top: 3em;
-  background: rgba(247, 244, 237, .8);
+//  background: rgba(247, 244, 237, .8);
   padding: 0.8em;
 }
 
