@@ -384,14 +384,15 @@ i.icon-small-browser {
 }
 
 .page__header .page__title{
-  border-bottom: solid 3px #BFBFBF;
   position: relative;
   padding: 0.4em;
   color: #444444;
   font-weight: 600;
   font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
+  border-bottom: solid 3px #EC644B;
 }
 
+/*
 .page__header .page__title::before {
   position: absolute;
   content: " ";
@@ -401,6 +402,7 @@ i.icon-small-browser {
   left: -1px;
   width: 100%;
 }
+*/
 
 .page__body {
   word-break: break-all;
@@ -408,7 +410,6 @@ i.icon-small-browser {
 
 .page__link {
   margin-top: 3em;
-//  background: rgba(247, 244, 237, .8);
   padding: 0.8em;
 }
 
