@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<article class="container">
+  <div class="row">
+
+  <div class="span10">
+
+    <div class="page__header">
+      <h2 class="page__title">{{ page.title }}</h2>
+      <p class="page__date text-right">{{ page.date | date: '%Y/%m/%d' }}</p>
+    </div>
+
+    <div class="page__body">
+      {{ content }}
+    </div>
+
+    <div class="row page__link">
+      <div class="page__link--next">
+        {% if page.next %}
+          <p class="pager__item--next">
+            <a href="{{ page.next.url | relative_url }}">&lt; {{ page.next.title }}</a>
+          </p>
+        {% endif %}
+      </div>
+      <div class="page__link--prev">
+        {% if page.previous %}
+          <p class="pager__item--prev">
+            <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }} &gt;</a>
+          </p>
+        {% endif %}
+      </div>
+
+    </div><!--pager-->
+  </div>
+
+  </div>
+</article>

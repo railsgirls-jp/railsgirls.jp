@@ -7,7 +7,7 @@ SOURCE = "."
 CONFIG = {
   'version' => "0.2.13",
   'layouts' => File.join(SOURCE, "_layouts"),
-  'posts' => File.join(SOURCE, "_posts"),
+  'posts' => File.join(SOURCE, "_pages"),
   'post_ext' => "markdown",
   'page_ext' => "markdown"
 }
@@ -28,7 +28,7 @@ task :post do
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
-  
+
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
@@ -42,9 +42,39 @@ task :post do
   end
 end # task :post
 
+# Usage: rake blog title="A Title" [date="2012-02-09"] [post_ext="html"]
+desc "Begin a new post in #{CONFIG['posts']}/blog"
+task :blog do
+  abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
+  title = ENV["title"] || "new-post"
+  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  begin
+    date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
+  rescue Exception => e
+    puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
+    exit -1
+  end
+  post_ext = ENV['post_ext'] || CONFIG['post_ext']
+  filename = File.join(CONFIG['posts'], 'blog', "#{date}-#{slug}.#{post_ext}")
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+
+  puts "Creating new post: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "title: \"#{title.gsub(/-/,' ')}\""
+    post.puts "date: #{date}"
+    post.puts "image: /images/railsgirls-sq.png"
+    post.puts "---"
+    post.puts ""
+  end
+end # task :blog
+
 # Usage: rake page name="about.html"
 # You can also specify a sub-directory path.
-# If you don't specify a file extention we create an index.markdown at the path specified
+# If you don't specify a file extension we create an index.markdown at the path specified
 desc "Create a new page."
 task :page do
   name = ENV["name"] || "new-page.md"
@@ -54,7 +84,7 @@ task :page do
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
-  
+
   mkdir_p File.dirname(filename)
   puts "Creating new page: #{filename}"
   open(filename, 'w') do |post|
@@ -88,3 +118,35 @@ end
 
 #Load custom rake scripts
 Dir['_rake/*.rake'].each { |r| load r }
+
+# Check HTML files by HTMLProofer: https://github.com/gjtorikian/html-proofer
+require 'html-proofer'
+task :test do
+  options = {
+    checks: [
+      'Links',
+      'Images',
+      'Scripts',
+      'OpenGraph',
+    ],
+    allow_hash_href:    false,
+    allow_missing_href: true,
+    disable_external:   true,
+    enforce_https:      false,
+    check_internal_hash: false,
+
+    ignore_empty_alt:   true,
+    ignore_missing_alt: true,
+
+    # NOTE: Ignore file, URL, and response as follows
+    ignore_files: [
+      /2017(.*)\.html/,
+      /2018(.*)\.html/,
+      /2019(.*)\.html/,
+      /2021(.*)\.html/,
+      /2022(.*)\.html/,
+    ],
+  }
+
+  HTMLProofer.check_directory('_site', options).run
+end

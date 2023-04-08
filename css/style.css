@@ -52,7 +52,6 @@ p {
 }
 
 h3, h4, h5, a {
-  color:#e0330c;
   line-height:1.1;
 }
 
@@ -77,7 +76,7 @@ hr {
 
 
 header {
-  height: 70px;
+  min-height: 70px;
   color: #fff;
   padding-top: 50px;
   background: #d3360b;
@@ -147,7 +146,6 @@ footer a {
 .home li {
   padding: 1.5em 0;
   border-bottom: 1px solid #ddd;
-  cursor: pointer;
 }
 
 .home li:last-child {
@@ -180,10 +178,11 @@ footer a {
   -moz-transition: 0.10s background-color ease-in;
 }
 
-.home a,
-.home a:hover {
+.home li > a,
+.home li > a:hover {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .home h3 {
@@ -277,6 +276,8 @@ i.icon-small-browser {
   height:200px;
   background-position:0 -100px;
   margin-bottom:40px;
+  margin-left: 10px;
+  max-width: 320px;
   -webkit-transition:0.4s box-shadow;
 }
 
@@ -315,6 +316,58 @@ i.icon-small-browser {
   font-weight:400;
 }
 
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.entry {
+  position: relative;
+  overflow: hidden;
+  margin: 1em 1em 0;
+  box-sizing: border-box;
+  border-radius: .2em;
+  background: rgba(247, 244, 237, .8);
+  transition: ease .14s;
+  font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
+}
+
+.entry-header {
+  position: relative;
+  width: 100%;
+  line-height: 1.4;
+}
+
+.entry-header, .entry-inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.entry-title {
+  padding: .1em;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.entry-content {
+  padding: .5em;
+}
+
+.entry-content p {
+  margin: 0 0 .5em;
+}
+
+.entry-date {
+  padding: .1em;
+  font-size: 1em;
+  font-weight: 200;
+}
+
 /* Correct padding on smaller screens */
 @media (max-width: 767px) {
  header, footer{
@@ -322,13 +375,255 @@ i.icon-small-browser {
    margin-right:-20px;
    padding-left:20px;
    padding-right:20px;
- } 
+ }
 }
 
 /* Don't show the homepage image on mobile */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
   .hero {
     padding: 20px 0;
     background:none;
   }
+}
+
+.page__header .page__title{
+  position: relative;
+  padding: 0.4em;
+  color: #444444;
+  font-weight: 600;
+  font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
+  border-bottom: solid 3px #EC644B;
+}
+
+/*
+.page__header .page__title::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #EC644B;
+  bottom: -3px;
+  left: -1px;
+  width: 100%;
+}
+*/
+
+.page__body {
+  word-break: break-all;
+}
+
+.page__link {
+  margin-top: 3em;
+  padding: 0.8em;
+}
+
+.page__link div {
+  width: calc(50% - 2em);
+}
+
+.page__link .page__link--next {
+  float: left;
+}
+
+.page__link .page__link--prev {
+  float: right;
+  text-align: right;
+}
+
+.page__link div p {
+  padding: 1em .3em;
+  margin: .2em;
+}
+.github-corner:hover .octo-arm {
+  animation:octocat-wave 560ms ease-in-out
+}
+ @keyframes octocat-wave {
+  0%, 100% {
+    transform:rotate(0)
+  }
+  20%,60% {
+    transform:rotate(-25deg)
+  }
+  40%,80% {
+    transform:rotate(10deg)
+  }
+}
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm {
+    animation:none
+  }
+  .github-corner .octo-arm {
+    animation:octocat-wave 560ms ease-in-out
+  }
+}
+
+.navbar .btn-navbar {
+  display: block;
+  float: left;
+  height: 24px;
+  padding: 7px 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #ffffff;
+  text-shadow: none;
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+  background-image: none;
+}
+
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:focus,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active,
+.navbar .btn-navbar.disabled,
+.navbar .btn-navbar[disabled] {
+  color: #ffffff;
+  background-color: inherit;
+  *background-color: inherit;
+}
+
+.navbar .btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 4px;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.navbar .brand {
+  display: block;
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: none;
+}
+
+.navbar .nav > li > a {
+  float: none;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: #f6e58d;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.guides-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.guides-list li {
+  padding: 20px 0;
+  min-height: 84px;
+}
+.guides-list li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.guides-list h3 {
+  margin: 0;
+  margin-left: 90px;
+  color: var(--highlight);
+}
+.guides-list p {
+  margin-left: 90px;
+  font-size: 18px;
+}
+
+.guide-icon {
+  position: relative;
+  top: 3px;
+  margin-right: 20px;
+
+  width: 70px;
+  height: 70px;
+  float: left;
+
+  color: #fff;
+  font-size: 1.8em;
+  line-height: 70px;
+  font-weight: bold;
+  text-align: center;
+
+  background-color: #d0d0d0;
+  border-radius: 70px;
+  transition: 0.1s background-color ease-in;
+  -webkit-transition: 0.1s background-color ease-in;
+  -moz-transition: 0.1s background-color ease-in;
+}
+.guide-icon:before {
+  content: attr(data-icon);
+  font-size: 120%;
+}
+.guide-icon-meta:before {
+  content: "?";
+  position: relative;
+}
+.guide-icon-other:before {
+  content: "❯";
+  position: relative;
+}
+a:hover .guide-icon,
+.guide-icon:hover {
+  background-color: #d3360b;
+  transition: 0.1s background-color ease-in;
+  -webkit-transition: 0.1s background-color ease-in;
+  -moz-transition: 0.1s background-color ease-in;
+}
+
+.os-specific .picker {
+  display: block;
+  float: none; /* override upstream */
+  text-align: right;
+}
+.os-specific .picker-options .active {
+  font-weight: bold;
+}
+.os-specific .picker-options > span:not(:last-child):after {
+  content: " | ";
+}
+.os-specific.big {
+  margin-bottom: 20px;
+}
+.os-specific.big .picker {
+  display: block;
+  text-align: center;
+}
+.os-specific.big .picker > span {
+  display: block;
+}
+.os-specific.big .picker-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.os-specific.big .picker-options > span:not(:last-child) {
+  margin-right: 15px;
+}
+.os-specific.big .picker-options > span:after {
+  content: "";
+}
+.os-specific.big .picker-options {
+  padding-top: 20px;
+  font-size: 1.3rem;
+}
+.os-specific.big .picker-options a {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 2px 10px;
+
+  border: 2px solid #DDD;
+  border-radius: 10px;
+}
+.os-specific.big .picker-options a.active,
+.os-specific.big .picker-options a:focus,
+.os-specific.big .picker-options a:hover {
+  border-color: currentcolor;
 }

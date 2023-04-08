@@ -1,23 +1,31 @@
-# jekyll settings
-safe: true
-lsi: false
-pygments: true
 permalink: pretty
-markdown: redcarpet
-
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile", "Gemfile.lock"]
+markdown: kramdown
+include:
+  - _pages
+  - _pages-jp
+  - _posts
+exclude:
+  - ".rvmrc"
+  - ".rbenv-version"
+  - ".ruby-version"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "Rakefile"
 url : http://railsgirls.jp
-
-# user variables
-title : Rails Girls Guide -Japanese-
-tagline: Site Tagline
-author :
-  name : Yoko Harada
-  email : yokolet@gmail.com
-  github : railsgirls-jp
-  twitter : username
-  feedburner : feedname
-comments :
-  provider : disqus
-  disqus :
-    short_name : railsgirls-jp
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      hidden: true
+  -
+    scope:
+      path: "_posts/blog"
+    values:
+      hidden: false
+      image: /images/railsgirls-sq.png
+plugins:
+  - jekyll-paginate
+paginate_path: "/blog/:num"
+paginate: 15
