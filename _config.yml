@@ -12,7 +12,7 @@ exclude:
   - "Gemfile.lock"
   - "README.md"
   - "Rakefile"
-url : http://railsgirls.jp
+url : https://railsgirls.jp
 defaults:
   -
     scope:
