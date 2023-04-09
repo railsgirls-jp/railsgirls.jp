@@ -78,6 +78,7 @@ heroku login
 {% endhighlight %}
 
 `heroku: Press any key to open up the browser to login or q to exit:` と言われますのでEnterキーを押してください。するとブラウザでherokuのページが開かれます。
+WSL環境ではブラウザが開かないことがありますので、その場合は表示されているURLをコピーしてブラウザのアドレスバーに貼り付けるとログインできます。
 メールアドレスとパスワードの入力を求められたら先ほど登録したメールアドレスとパスワードを入力します。
 
 ブラウザに以下の画面が表示されればherokuの準備はこれで終了です。
