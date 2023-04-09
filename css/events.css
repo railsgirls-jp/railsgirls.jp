@@ -1,0 +1,148 @@
+#container {
+    padding-left: 70px;
+}
+
+.sponsor .grid_4 {
+    margin-left: 0px;
+    margin-bottom: 50px;
+    height: 69px;
+}
+
+.sponsor .grid_4:nth-child(4n+4) {
+    margin-right: 0;
+}
+
+.nagasaki#promo {
+    padding-left: 420px;
+    background: url('/images/events/nagasaki/logo-1st.png') no-repeat left top;
+    background-size: 390px;
+}
+
+#promo.new {
+    padding-bottom: 50px;
+}
+
+#promo.new h1 {
+    font-family: "expressway", 'Helvetica Neue', Helvetica, sans-serif;
+    letter-spacing: -3px;
+    height: 80px;
+    font-weight: bold;
+    color: #d3360b;
+    font-size: 52px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-indent: 0;
+}
+
+#promo h1 small {
+    display: block;
+    font-size: 24px;
+    color: #444;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+h3,
+h4,
+h5,
+a {
+    color: #e0330c;
+    line-height: 1.1;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px dotted #d3360b;
+}
+
+#share {
+    padding-top: 10px;
+}
+
+#share div {
+    float: left;
+}
+
+.feature {
+    float: left;
+}
+
+.feature p {
+    font-size: 17px;
+    padding: 20px 10px 30px;
+    width: 280px;
+}
+
+.feature p strong {
+    color: #d3360b;
+}
+
+#schedule td {
+    padding: 1em 0;
+    font-size: 15px;
+    color: #390c00;
+    vertical-align: baseline;
+}
+
+#schedule th {
+    width: 25%;
+    font-size: 15px;
+    font-weight: 200;
+    text-align: left;
+    vertical-align: baseline;
+}
+
+#schedule td h4 {
+    margin-bottom: 0.2em;
+}
+
+.grid_6 {
+    width: 460px;
+    float: left;
+}
+
+.grid_5 {
+    width: 380px;
+    float: right;
+}
+
+.coaches .grid_3 {
+    margin-left: 0;
+    height: 69px;
+    margin-right: 20px;
+    width: 200px;
+    display: block;
+    float: left;
+}
+
+.coaches .grid_3:nth-child(4n+4) {
+    margin-right: 0;
+}
+
+.coaches a {
+    font-size: 16px;
+    border: 0;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.coaches img {
+    float: left;
+    width: 48px;
+    border: 1px solid #ddd;
+    margin-right: 15px;
+}
+
+.coaches small {
+    color: #000;
+    display: block;
+    font-size: 90%;
+}
+
+.coach {
+    border-radius: 50px;
+}
+
+.list-black>li {
+    color: black;
+}
