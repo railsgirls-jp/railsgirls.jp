@@ -33,7 +33,7 @@ RubyKaigiとは
 ### 支援内容
 
 * RubyKaigi 2023 の参加チケット(すでに購入済みの場合はチケット代金)
-* 現地参加を希望する場合、居住地から RubyKaigi 2023 会場への交通費、宿泊費(2022/09/07〜2022/09/11の期間内)
+* 現地参加を希望する場合、居住地から RubyKaigi 2023 会場への交通費、宿泊費(2023/05/10〜2023/05/14の期間内)
   * 現地までの交通手段と宿泊の手配はご自分で行って頂き、後日精算させていただきます。
 
 ### お申し込み方法
@@ -43,7 +43,7 @@ RubyKaigiとは
 
 #### 応募要件
 * 以下のいずれかの経験を有すること<br>
-  ※Rails Girls イベントは [http://railsgirls.jp/events/](http://railsgirls.jp/events/) に掲載されているものを指します
+  ※Rails Girls イベントは [https://railsgirls.jp/events/](https://railsgirls.jp/events/) に掲載されているものを指します
     * 過去に Rails Girls イベントをオーガナイザー・スタッフとして運営したことがある
     * 過去に Rails Girls イベントに参加したことがある
     * 過去に Rails Girls more のようなフォローアップイベントに参加したことがある
