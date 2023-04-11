@@ -43,7 +43,7 @@ RubyKaigi Takeout 2021 の参加チケット (すでに購入済みの場合は�
   * 過去に Rails Girls イベントに参加したことがある
   * 過去に Rails Girls More! のようなフォローアップイベントに参加したことがある
 
-    ※ Rails Girls イベントは http://railsgirls.jp/events/ に掲載されているものを指します
+    ※ Rails Girls イベントは https://railsgirls.jp/events/ に掲載されているものを指します
 
 * 参加支援費振込のための銀行口座等の情報を Rails Girls Japan メンバーに開示できること
 

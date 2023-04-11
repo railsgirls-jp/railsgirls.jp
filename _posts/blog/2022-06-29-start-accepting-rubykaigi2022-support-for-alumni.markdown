@@ -41,7 +41,7 @@ RubyKaigiとは
 
 #### 応募要件
 * 以下のいずれかの経験を有すること<br>
-  ※Rails Girls イベントは [http://railsgirls.jp/events/](http://railsgirls.jp/events/) に掲載されているものを指します
+  ※Rails Girls イベントは [https://railsgirls.jp/events/](https://railsgirls.jp/events/) に掲載されているものを指します
     * 過去に Rails Girls イベントをオーガナイザー・スタッフとして運営したことがある
     * 過去に Rails Girls イベントに参加したことがある
     * 過去に Rails Girls more のようなフォローアップイベントに参加したことがある

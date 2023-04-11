@@ -36,7 +36,7 @@ RubyKaigiを楽しんでいらっしゃいました。
 
 このような支援の場を提供できるのは、Rails Girlsイベントにご支援頂いている スポンサーの方々のおかげです。 
 
-<a href="http://railsgirls.jp/sponsors/">http://railsgirls.jp/sponsors/</a>  
+<a href="https://railsgirls.jp/sponsors/">https://railsgirls.jp/sponsors/</a>  
 
 今後も、このような支援を引き続き行っていきたいと考えておりますので、 よろしくお願いいたします。
 
