@@ -6,169 +6,174 @@ permalink: github
 
 # GitHubに自分のアプリをPushする
 
-*Created by Alyson La, [@realalysonla](https://www.twitter.com/realalysonla)*
+*作成者： Alyson La, [@realalysonla](https://www.twitter.com/realalysonla)*
 *[Original page](https://railsgirls.com/)*
-*Translated by Yuki Torii [@yotii23](https://www.twitter.com/yotii23)*
 
-## はじめる前に必要な準備
+{% include main-guide-intro.html %}
 
-### Git と GitHub
+Gitは、アプリのソースコードを保存し、変更履歴を記録・追跡することが可能なツールです。オンラインでコードを共有して他の人とコラボレーションすることができます。
 
-* Gitがインストールされているか確認する
-
-	* ターミナルで
+{% coach %}
+  Gitやバージョン管理のこと、Gitを使った他の人とのコラボレーション、GitHub、Gitを使ったデプロイメント、オープンソースについて少し話しましょう。
+{% endcoach %}
+## Gitをインストールしよう
+Gitを使う前に、まずGitがすでにインストールされているかどうかを確認しましょう。ターミナルで次のコマンドを入力してください。
 
 {% highlight sh %}
 git --version
 {% endhighlight %}
 
-と入力してください (1.8以上のver.が表示されるのが望ましいです)
+1.8以上のver.が表示されるのが望ましいです
 
-* もしインストールされていなければ, [ここ](http://git-scm.com/downloads)からGitをダウンロードする
+<div class="os-specific">
+  <div class="win">
+  <a href="http://git-scm.com/downloads">Git</a>のウェブサイトにアクセスし、Windows用のGitインストーラーをダウンロードし、ダウンロードしたインストーラーを実行することで、Gitをインストールしてください。
+  </div>
+  <div class="mac">
+{% highlight sh %}
+brew install git
+{% endhighlight %}
+  </div>
+  <div class="nix">
+  <a href="https://git-scm.com/download/linux">Git</a>のドキュメントに記載されている、お使いのオペレーティングシステムの説明に従ってインストールしてください。
+  </div>
+</div>
 
-* ターミナルで
+インストールやアップグレードを行った後に、`git --version` コマンドを再度実行し、1.8以上のver.が表示されていることを確認しましょう。
+
+## Gitの設定をしよう
+Gitがインストールできていることを確認したら、Gitでローカルプロフィールを設定します。このプロフィールは、Gitに保存するファイルに誰が変更を加えたかを記録するために使われます。これにより、誰がいつどのような変更をしたのかを確認することができます。
+
+`your name` と `your email` は、自分の名前とメールアドレスに変更しましょう。本名とメールアドレスを使いたくない場合は、ニックネームや別名を使うこともできます。
+※ここで設定した名前とEメールアドレスは、他の人にも公開されます！
 
 {% highlight sh %}
 git config --global user.name "your-name"
-{% endhighlight %}
- と
-
-{% highlight sh %}
 git config --global user.email "your-email"
 {% endhighlight %}
 
- をタイプしてください。("your-name","your-email" は自分の名前とEmailを英数字で入れてください。)
+ Gitにプロフィールが設定されているかどうかを確認するには、以下のコマンドを実行し、`user.name` と `user.email` の設定が反映されていることを確認してみましょう。
 
 {% highlight sh %}
 git config --list
 {% endhighlight %}
 
- とタイプしてみて、nameとemailの設定が反映されていることを確認してみましょう。
-
-* [GitHub](https://github.com)でアカウントを作成します(無料です）。すでにアカウントがある人はログインしてください。
-
-## Saving work in Git
-
-Open the Terminal app, navigate to your _railsgirls_ app directory and run the following command. This will list out all the changed files in your app directory, which should be all the files for your app.
+## Gitに作業を保存しよう
+ターミナルを開き、railsgirlsのアプリディレクトリに移動して以下のコマンドを実行します。ディレクトリ内で変更があったファイル（今回はあなたのアプリのすべてのファイル）が全部リストアップされます。
 
 {% highlight sh %}
 git status
 {% endhighlight %}
 
-We want to save all these files in Git so they can be pushed to the GitHub repository you just created. By running the following command you will add all those files staging area in Git, ready to be saved (committed).
+これらのファイルを Git に保存して、あなたが作成したGitHubのリポジトリにプッシュできるようにしたいですね。次のコマンドを実行すると、これらのファイルが Git のステージングエリアに追加され、保存 (コミット) できるようになります。
 
 {% highlight sh %}
 git add .
 {% endhighlight %}
 
-The `git commit` command shown below will save the staged files in Git, along with the message "First commit".
+以下の `git commit` コマンドを実行すると、ステージングされたファイルが「First commit」というメッセージとともにGitに保存されます。
 
 {% highlight sh %}
 git commit -m "First commit"
 {% endhighlight %}
 
-(The `-m` in the above command stands for "message".)
+(上記コマンドの-mはmessageの略です)
 
-## Create a GitHub account
+## GitHubアカウントを作成しよう
+GitHubは、無料のオンライン・コード共有プラットフォームです。***Git*** で保存されたソースコードの ***ハブ*** となっています。これを利用して、アプリのソースコードを保存・共有することになります。
 
-GitHub is a free, online, code-sharing platform. It is a _hub_ for source code saved in _Git_. We will use this to save and share our app's source code.
+[ GitHubのウェブサイト](https://github.com)にアクセスし、アカウントを作成するか、すでにGithubでアカウントを持っている場合はログインします。
+## GitHubでコードを安全に共有しよう
+認証を管理する最も簡単な方法は、[Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)を作成することです。PATを利用することで、あなたのパソコンとGitHubのサイトに一致する認証情報が保存されていることになります。
 
-Visit the [GitHub website](https://github.com) and create an account or login if you already have an account at Github.
+コンピュータ上のコードをGitHubサイトの自分のアカウントに取り込むということは、インターネット経由で接続する必要があります。GitHubはHTTPSとSSHによる接続を提供しています。Personal Access Token (PAT) を使うには HTTPS 接続が必要です。これは、次のセクションでPATを作成するときに重要になります。
+## コマンドラインを使ってアプリをGitHubにプッシュしよう(Part1)
 
-## Securely sharing your code with GitHub
+GitHubのアカウントを取得したことで、保存したソースコードをGitHubにプッシュ（Git用語で ***アップロード*** の意味）して、他の人と共有することができるようになりました。
 
-The easiest method for managing authentication is creating a [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) that will have matching parts stored on your computer and also on the GitHub site.
+GitHubにサインインしたら、ナビゲーションバーの右上にあるプラスアイコン(`+`)をクリックします。ドロップダウンで、`New repository` を選択します。
+該当のリンクを見つからない場合はこちらの [新規リポジトリページ](https://github.com/new) に直接アクセスしてください。
 
-Because you are trying to get the code on your computer into your account on the GitHub website, you'll need to connect via the internet. GitHub offers connections over HTTPS and SSH. Using a Personal Access Token (PAT) requires that you use an HTTPS connection. This will be important in the next section, when you'll create your PAT. 
+`Create a new repository` ページで、リポジトリ名（「railsgirls」のような）を入力し、リポジトリの可視性に「公開」を選択後、「リポジトリの作成」ボタンをクリックしてください。フォームの残りの部分はそのままにしておきます。
 
-## Push your app to GitHub using the command line (part 1)
+リポジトリ作成後の次のページでは、アプリのソースコードをプッシュする場所をGitに伝えるために必要なリポジトリURLが表示されているでしょう。
 
-Now that you have a GitHub account, you can push (Git terminology for _upload_) your saved work to GitHub and share it with others.
+PATで動作するように、手順に表示されているURLがHTTPSであることを確認してください。一番上の `Quick setup` セクションで、「HTTPS」ボタンが選択されていない場合は、該当のボタンをクリックしてください。そして、すべての手順のリンクがhttpsで始まるように変更されていることをご確認ください。
 
-Once signed in to GitHub, click on the plus icon (`+`) in the top right corner of the navigation bar. In the dropdown, choose "New repository".
-Having trouble finding the right link? Visit this [new repository page](https://github.com/new) directly.
+「push an existing repository from the command line」に記載されている手順を使用しましょう。該当の手順の中で、`git remote add origin` で始まる行を探します。その行をすべてコピーして、ターミナルに貼り付けます。そしてEnterを押してください。
 
-On the "Create a new repository" page, enter a repository name (like "railsgirls"), choose "public" for the repository's visibility and click the "Create repository" button. Leave the rest of the form untouched.
+このステップでは、ローカルリポジトリに先ほど作成したGitHubリポジトリを指す「origin」という名前の接続用Gitリモートを作成します。
 
-The next page will list the repository URL we will need to tell Git where to push your app's source code to. 
+## パーソナルアクセストークンの作成をしよう
 
-Be certain you are viewing the instructions for HTTPS, so that it will work with the PAT. In the top "Quick setup" section, click on the "HTTPS" button if it is not already selected, and see that all the instructions change the links to start with `https`.
+次に、[PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic)を作成する必要があります。
 
-You should use the "push an existing repository from the command line" instructions. Within that section, find the line that starts with `git remote add origin`. Copy the entire line and paste it into the Terminal app. Then press enter.
+GitHubのパーソナルアクセストークンを作成するには、このURLから <https://github.com/settings/tokens> アクセスできます。または、GitHub にログインした状態であれば、どのページからでも設定画面にいくことが可能で、次の手順になります。
+まず、右上の自分のアバターをクリックします。次に、「Settings」、「Developer settings」、「Personal access tokens」、「Tokens (classic)」の順にクリックします。
 
-This step creates a Git _remote_, a _connection_, named "origin" pointing to the GitHub repository you just created in the local repository.
+「Personal access tokens (classic)」ページに移動したら、「Generate new token」のドロップダウンメニューをクリックし、「Generate new token (classic)」を選択してください。GitHubアカウントで2要素認証を設定している場合は、このタイミングで2FA認証する必要があります。
 
-## Create the Personal Access Token
+「New personal access token (classic)」の設定画面が表示されたら、「Note」の欄に何用のトークンかの説明を入力し(例: RailsGirls)、有効期限を選びます。(有効期限を過ぎてもこのプロジェクトを使用する予定がある場合は、PATの有効期限が切れたときにこの手順を繰り返す必要があります)
 
-Next you need to [create the PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic). 
+次に、「Select scopes」の設定箇所で、一番上の「repo」チェックボックスを選択すると、PATに「Full control of private repositories（プライベートリポジトリの完全制御）」が反映されます。
 
-You can access your GitHub personal access tokens here: <https://github.com/settings/tokens>. Or, when you are logged in to GitHub, you can start on any page and click on your avatar in the top right. Then click "Settings", then "Developer settings", then "Personal access tokens", then "Tokens (classic)".
+最後に、ページ下部の「Generate token」をクリックします。
 
-Once you are on the "Personal access tokens (classic)" page, click on the "Generate new token" dropdown menu and select "Generate new token (classic)". If you have set up two-factor authentication in your GitHub account, you will need to 2FA authenticate now. 
+次のページで、作成したあなたのPATが表示されます。このページにアクセスできるのは今回だけですので、次のセクションであるプッシュステップを完了するまでは、このページを閉じない方が良いでしょう。
 
-When you can see the "New personal access token (classic)" form, use the "Note" to describe this repo (e.g. "RailsGirls") and then select an expiration date. (If you plan to use this project beyond the expiration date, you'll need to repeat these steps when the PAT expires.)
+PATトークンをコピーし、安全なパスワード管理ツールに保存しておくことが望ましいです。その際、トークンの前後にスペースがないように注意しましょう。トークン表示箇所の最後にある四角が二つ重なったボタンで正確にコピーすることができます。
+## コマンドラインを使ってアプリをGitHubにプッシュしよう（Part2）
 
-Then, for scopes, select the top "repo" checkbox, that gives the PAT "Full control of private repositories".
-
-Click "Generate token" at the bottom of the page.
-
-On the next page you'll see your PAT. This is the only time you'll have access to it, so don't click away from this page until you have completed the _push_ step in the next section. 
-
-Copy and save the PAT token, ideally in a secure password manager. Be careful not to copy any spaces before or after the token -- you can use the two-squares copy button at the end of the token to be certain. You can keep the browser window open until you've completed the next step.
-
-## Push your app to GitHub using the command line (part 2)
-
-Now we want to _push_ the local changes in the Git repository to the repository on GitHub with the following command in your terminal.
+それでは、Gitリポジトリのローカルでの変更をGitHub上のリポジトリに ***push*** しましょう。ターミナルで以下のコマンドを実行します。
 
 {% highlight sh %}
 git push -u origin master
 {% endhighlight %}
 
-When the authentication prompt appears in your terminal, use your PAT as the password, example below. Note that when you paste your PAT in the password, it will not show. Don't paste again, or you will be entering the token twice.
+ターミナルに認証プロンプトが表示されたら、以下の例のようにパスワードに先ほど作成したあなたのPATを使用します。なお、パスワードにPATを貼り付けると、表示されなくなります。再度貼り付けると、トークンを2回入力することになるので、二重で貼り付けないように気をつけましょう。
 
 {% highlight sh %}
 Username: <your GitHub username>
 Password: <paste in your personal access token>
 {% endhighlight %}
 
-You may need your PAT every time you want to push your code, or you can save the PAT on your computer. This process varies per operating system, so your coach can help you with this process if you plan to keep pushing your code to GitHub.
+コードをプッシュするたびにPATが必要になる場合があるかもしれません。または、PATをコンピューターに保存することもできます。このプロセスはOSごとに異なるので、GitHubにコードを継続的にプッシュしたい場合は、コーチに相談してみましょう。
 
 {% coach %}
-Please help with caching the PAT, if the participants wants to. Find the latest guide for their operating system, or check out this guide for [storing the PAT on different Operating Systems](https://mgimond.github.io/Colby-summer-git-workshop-2021/authenticating-with-github.html#saving-tokens-in-windows).
+参加者が望むのであれば、PATの保存方法の確認に協力してください。参加者のオペレーティングシステムに対応した最新のガイドを見つけるか、[異なるオペレーティングシステムでPATを保存するためのガイド](https://mgimond.github.io/Colby-summer-git-workshop-2021/authenticating-with-github.html#saving-tokens-in-windows)を参照してください。
 {% endcoach %}
 
-Congratulations your app is on GitHub! Refresh the page in the Browser and you should see a bunch of files there now.
+これでGitHubにアプリがアップされました！ブラウザでGitHubの対象のリポジトリのページを更新すると、ファイルがたくさん表示されるはずです。
 
-## Saving more changes in Git
+## Gitでもっと多くの変更を保存してみよう
 
-If you want to continue making changes and pushing them to GitHub you'll need to use the following three commands.
+新たな変更をGitHubにプッシュしたい場合は、次の3つのコマンドを使用して実行しましょう。
 
-Add changes you want to save in Git to the _staging area_:
+Gitで保存したい変更点を ***ステージングエリア*** に追加します。
 
 {% highlight sh %}
 git add .
 {% endhighlight %}
 
-Save the changes with a commit message:
+コミットメッセージとともに変更を保存します。
 
 {% highlight sh %}
 git commit -m "Type your commit message here"
 {% endhighlight %}
 
-Use a descriptive message so you can find back what you changed in which commit and why.
+どのコミットで何を変更したのか、なぜ変更したのかを確認できるように、説明的なメッセージを心がけましょう。
 
 {% coach %}
-Talk about what makes a good commit message (active, descriptive and short).
+良いコミットメッセージの条件（アクティブ、説明的、短い）について話しましょう。
 {% endcoach %}
 
-And push the changes to GitHub:
+そして、変更をGItHubにプッシュしましょう。
 
 {% highlight sh %}
 git push origin master
 {% endhighlight %}
 
 ## 次に何をする？
-
 ### Gitについてもっと学ぶ
 
  * [trygit.org](http://try.github.io/)をチェックアウトする
