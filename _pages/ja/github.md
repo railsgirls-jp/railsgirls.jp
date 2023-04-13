@@ -23,11 +23,11 @@ Gitを使う前に、まずGitがすでにインストールされているか�
 git --version
 {% endhighlight %}
 
-1.8以上のver.が表示されるのが望ましいです
+1.8以上のver.が表示されるのが望ましいです。Gitがインストールされていない場合（`command not found` などのエラーが表示される）、またはバージョンが1.8より低い場合は、Gitをインストールまたはアップグレードしましょう。
 
 <div class="os-specific">
   <div class="win">
-  <a href="http://git-scm.com/downloads">Git</a>のウェブサイトにアクセスし、Windows用のGitインストーラーをダウンロードし、ダウンロードしたインストーラーを実行することで、Gitをインストールしてください。
+  <a href="http://git-scm.com/downloads">Git</a>のウェブサイトにアクセスし、Windows用のGitインストーラーをダウンロードして実行し、Gitをインストールしてください。
   </div>
   <div class="mac">
 {% highlight sh %}
@@ -44,28 +44,28 @@ brew install git
 ## Gitの設定をしよう
 Gitがインストールできていることを確認したら、Gitでローカルプロフィールを設定します。このプロフィールは、Gitに保存するファイルに誰が変更を加えたかを記録するために使われます。これにより、誰がいつどのような変更をしたのかを確認することができます。
 
-`your name` と `your email` は、自分の名前とメールアドレスに変更しましょう。本名とメールアドレスを使いたくない場合は、ニックネームや別名を使うこともできます。
-※ここで設定した名前とEメールアドレスは、他の人にも公開されます！
+`your name` と `your email` は、自分の名前とメールアドレスに変更しましょう。実際の本名とメールアドレスを使いたくない場合は、ニックネームや別名を使うこともできます。
+※ここで設定した名前とメールアドレスは、他の人にも公開されます！
 
 {% highlight sh %}
 git config --global user.name "your-name"
 git config --global user.email "your-email"
 {% endhighlight %}
 
- Gitにプロフィールが設定されているかどうかを確認するには、以下のコマンドを実行し、`user.name` と `user.email` の設定が反映されていることを確認してみましょう。
+ Gitにプロフィールが設定されているかは、以下のコマンドを実行し、`user.name` と `user.email` の設定の内容を確認してみましょう。
 
 {% highlight sh %}
 git config --list
 {% endhighlight %}
 
 ## Gitに作業を保存しよう
-ターミナルを開き、railsgirlsのアプリディレクトリに移動して以下のコマンドを実行します。ディレクトリ内で変更があったファイル（今回はあなたのアプリのすべてのファイル）が全部リストアップされます。
+ターミナルを開き、***railsgirls*** のアプリディレクトリに移動して以下のコマンドを実行します。ディレクトリ内で変更があったファイル（今回はあなたのアプリのすべてのファイル）が全部リストアップされるでしょう。
 
 {% highlight sh %}
 git status
 {% endhighlight %}
 
-これらのファイルを Git に保存して、あなたが作成したGitHubのリポジトリにプッシュできるようにしたいですね。次のコマンドを実行すると、これらのファイルが Git のステージングエリアに追加され、保存 (コミット) できるようになります。
+これらのファイルをGitに保存して、あなたが作成したGitHubのリポジトリにプッシュできるようにしたいですね。次のコマンドを実行すると、これらのファイルがGitのステージングエリアに追加され、保存 (コミット) できるようになります。
 
 {% highlight sh %}
 git add .
@@ -91,14 +91,14 @@ GitHubは、無料のオンライン・コード共有プラットフォーム�
 
 GitHubのアカウントを取得したことで、保存したソースコードをGitHubにプッシュ（Git用語で ***アップロード*** の意味）して、他の人と共有することができるようになりました。
 
-GitHubにサインインしたら、ナビゲーションバーの右上にあるプラスアイコン(`+`)をクリックします。ドロップダウンで、`New repository` を選択します。
+GitHubにサインインしたら、ナビゲーションバーの右上にあるプラスアイコン(`+`)をクリックします。ドロップダウンの中から、`New repository` を選択します。
 該当のリンクを見つからない場合はこちらの [新規リポジトリページ](https://github.com/new) に直接アクセスしてください。
 
-`Create a new repository` ページで、リポジトリ名（「railsgirls」のような）を入力し、リポジトリの可視性に「公開」を選択後、「リポジトリの作成」ボタンをクリックしてください。フォームの残りの部分はそのままにしておきます。
+`Create a new repository` ページで、リポジトリ名（例：railsgirls）を入力し、リポジトリの可視性を「公開」にし、「リポジトリの作成」ボタンをクリックしてください。フォームの残りの部分はそのままにしておきます。
 
 リポジトリ作成後の次のページでは、アプリのソースコードをプッシュする場所をGitに伝えるために必要なリポジトリURLが表示されているでしょう。
 
-PATで動作するように、手順に表示されているURLがHTTPSであることを確認してください。一番上の `Quick setup` セクションで、「HTTPS」ボタンが選択されていない場合は、該当のボタンをクリックしてください。そして、すべての手順のリンクがhttpsで始まるように変更されていることをご確認ください。
+PATで動作するように、手順に表示されているURLがHTTPSであることを確認してください。一番上の `Quick setup` セクションで、「HTTPS」ボタンが選択されていない場合は、該当のボタンをクリックしてください。そして、すべての手順のリンクが `https` で始まるように変更されていることを確認しましょう。
 
 「push an existing repository from the command line」に記載されている手順を使用しましょう。該当の手順の中で、`git remote add origin` で始まる行を探します。その行をすべてコピーして、ターミナルに貼り付けます。そしてEnterを押してください。
 
@@ -108,7 +108,7 @@ PATで動作するように、手順に表示されているURLがHTTPSである
 
 次に、[PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic)を作成する必要があります。
 
-GitHubのパーソナルアクセストークンを作成するには、このURLから <https://github.com/settings/tokens> アクセスできます。または、GitHub にログインした状態であれば、どのページからでも設定画面にいくことが可能で、次の手順になります。
+GitHubのパーソナルアクセストークンを作成するには、このURLから <https://github.com/settings/tokens> アクセスできます。または、GitHub にログインした状態であれば、次の手順でどのページからでも設定画面にいくことが可能です。
 まず、右上の自分のアバターをクリックします。次に、「Settings」、「Developer settings」、「Personal access tokens」、「Tokens (classic)」の順にクリックします。
 
 「Personal access tokens (classic)」ページに移動したら、「Generate new token」のドロップダウンメニューをクリックし、「Generate new token (classic)」を選択してください。GitHubアカウントで2要素認証を設定している場合は、このタイミングで2FA認証する必要があります。
@@ -130,7 +130,7 @@ PATトークンをコピーし、安全なパスワード管理ツールに保�
 git push -u origin master
 {% endhighlight %}
 
-ターミナルに認証プロンプトが表示されたら、以下の例のようにパスワードに先ほど作成したあなたのPATを使用します。なお、パスワードにPATを貼り付けると、表示されなくなります。再度貼り付けると、トークンを2回入力することになるので、二重で貼り付けないように気をつけましょう。
+ターミナルに認証プロンプトが表示されたら、以下の例のようにパスワードに先ほど作成したあなたのPATを使用します。なお、パスワードにPATを貼り付けてもターミナル状には表示されません。再度貼り付けると、トークンを2回入力することになるので、二重で貼り付けないように気をつけましょう。
 
 {% highlight sh %}
 Username: <your GitHub username>
@@ -140,7 +140,7 @@ Password: <paste in your personal access token>
 コードをプッシュするたびにPATが必要になる場合があるかもしれません。または、PATをコンピューターに保存することもできます。このプロセスはOSごとに異なるので、GitHubにコードを継続的にプッシュしたい場合は、コーチに相談してみましょう。
 
 {% coach %}
-参加者が望むのであれば、PATの保存方法の確認に協力してください。参加者のオペレーティングシステムに対応した最新のガイドを見つけるか、[異なるオペレーティングシステムでPATを保存するためのガイド](https://mgimond.github.io/Colby-summer-git-workshop-2021/authenticating-with-github.html#saving-tokens-in-windows)を参照してください。
+参加者が望むの場合、PATの保存方法の確認に協力してください。参加者のオペレーティングシステムに対応した最新のガイドを見つけるか、[異なるオペレーティングシステムでPATを保存するためのガイド](https://mgimond.github.io/Colby-summer-git-workshop-2021/authenticating-with-github.html#saving-tokens-in-windows)を参照してください。
 {% endcoach %}
 
 これでGitHubにアプリがアップされました！ブラウザでGitHubの対象のリポジトリのページを更新すると、ファイルがたくさん表示されるはずです。
@@ -164,7 +164,7 @@ git commit -m "Type your commit message here"
 どのコミットで何を変更したのか、なぜ変更したのかを確認できるように、説明的なメッセージを心がけましょう。
 
 {% coach %}
-良いコミットメッセージの条件（アクティブ、説明的、短い）について話しましょう。
+良いコミットメッセージの条件（実装内容、簡潔で説明的かなど）について話しましょう。
 {% endcoach %}
 
 そして、変更をGItHubにプッシュしましょう。
@@ -176,14 +176,15 @@ git push origin master
 ## 次に何をする？
 ### Gitについてもっと学ぶ
 
- * [trygit.org](http://try.github.io/)をチェックアウトする
- * [GITチートシート](https://github.github.com/training-kit/downloads/ja/github-git-cheat-sheet/)([PDF](https://github.github.com/training-kit/downloads/ja/github-git-cheat-sheet.pdf))を使う
- * [git-scm.org](http://git-scm.com/)でGitコマンドを眺めてみる
-
+ * [Gitチートシート](https://github.github.com/training-kit/downloads/ja/github-git-cheat-sheet/) に頻繁に使うコマンドがまとめられています。([PDF](https://github.github.com/training-kit/downloads/ja/github-git-cheat-sheet.pdf)) 版もあります。
+ * [Gitのドキュメント](https://git-scm.com/docs)でもっと多くのGitコマンドを調べてみましょう。
+ * GUI（グラフィカル・ユーザー・インターフェイス）を使ってみるのもよいでしょう。[GitHub Desktop](https://desktop.github.com/)のようなアプリを試してみてください。
+ * 将来、プロジェクトでより多くの人と仕事をするようになると、ブランチやプルリクエストを扱う機会が多くなるでしょう。
+ 
 ### オープンソースコミュニティーに参加する
 
- * GitHubで、RailsGirlsの仲間やコーチをフォローします
- * 彼らのプロジェクトにstar、watchします
- * レポジトリを[Fork](https://help.github.com/articles/fork-a-repo)し、クローンしてきて、自分のフォークに変更をpushします。その変更を[pull request](https://help.github.com/articles/using-pull-requests)でフォーク元にシェアしてみましょう!
+ * GitHubで、RailsGirlsの仲間やコーチをフォローしてみましょう。
+ * 彼らのプロジェクトにstarやwatchをつけてみましょう。
+ * プロジェクトのリポジトリを[Fork](https://help.github.com/articles/fork-a-repo)し、クローンして自分の変更ををpushすることができます。その変更を[pull request](https://help.github.com/articles/using-pull-requests)でフォーク元に共有してみましょう!
  * バグを見つけたら、プロジェクトにissueを作成しましょう
- * 他のオープンソースプロジェクトを調べます。プログラミング言語やキーワードで検索してみましょう。
+ * プログラミング言語やキーワードで検索して、他のオープンソースプロジェクトを調べてみましょう。
