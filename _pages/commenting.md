@@ -56,10 +56,7 @@ belongs_to :idea
 app/views/ideas/show.html.erb を開いて、
 
 {% highlight erb %}
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
-</p>
+<%= render @idea %>
 {% endhighlight %}
 
 このあとに、次のコードを追加します。
@@ -97,7 +94,7 @@ end
 
 {% highlight erb %}
 <div class="field">
-  <%= form.label :body %>
+  <%= form.label :body, style: "display: block" %>
   <%= form.text_area :body %>
 </div>
 {% endhighlight %}
@@ -112,8 +109,8 @@ end
 
 {% highlight erb %}
 <div class="field">
-  <%= form.label :idea_id %>
-  <%= form.number_field :idea_id %>
+  <%= form.label :idea_id, style: "display: block" %>
+  <%= form.text_field :idea_id %>
 </div>
 {% endhighlight %}
 
