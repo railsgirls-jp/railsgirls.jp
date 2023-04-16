@@ -1,33 +1,33 @@
 ---
 layout: main_guide
-title: Put your app online with Fly.io
-description: "Deploy your app to Fly.io by following this guide."
+title: Fly.ioであなたのアプリをオンラインにあげよう
+description: "このガイドに従って、アプリをFly.ioにデプロイしてましょう。"
 permalink: deployment/fly-io
 ---
 
-# Put your app online with Fly.io
+# Fly.ioであなたのアプリをオンラインにあげよう
 
-In this guide you'll deploy your app with [Fly.io](https://fly.io/app) to make it available to everyone online. After this guide you can share the link with your friends and family to show what you have created during this workshop.
+このガイドでは、作成したアプリを[Fly.io](https://fly.io/app)にデプロイして、オンラインで誰でも利用できるようにします。このガイドの後、友人や家族とリンクを共有し、このワークショップで作成したものを見せることができるようになります。
 
-Deploying a single small app with Fly.io is free, with some limitations.
+Fly.ioで小さなアプリを1つだけデプロイする場合、無料で利用が可能ですが、いくつかの制限があります。
 
 {% coach %}
-Talk about the benefits of deploying to Fly.io versus traditional servers.
+Fly.ioに導入するメリットと従来のサーバーとの比較について話してみましょう。
 {% endcoach %}
 
-## Change the production database
+## 本番用データベースを変更しよう
 
-Locally your app uses SQLite as the database to store your ideas. It's easier to use another database on Fly.io deploys. To deploy with Fly.io we'll change the database in production to use PostgreSQL.
+ローカル環境では、あなたのアプリはデータを保存するためのデータベースとしてSQLiteを使用しています。Fly.ioのデプロイでは、別のデータベースを使用する方が簡単です。Fly.ioでデプロイするために、本番用のデータベースをPostgreSQLを使用するように変更していきましょう。
 
-### Install the pg gem
+### pg gemをインストール使用
 
-Open the `Gemfile` file in your Text Editor and change the following line:
+テキストエディターで`Gemfile`ファイルを開き、以下の行を
 
 {% highlight ruby %}
 gem "sqlite3"
 {% endhighlight %}
 
-into these lines:
+以下に変更します。
 
 {% highlight ruby %}
 group :development do
@@ -38,21 +38,21 @@ group :production do
 end
 {% endhighlight %}
 
-Next, run the command below to setup the new database gem:
+次に、以下のコマンドを実行し、新しいデータベースgemをセットアップします。
 
 {% highlight sh %}
 bundle install --without production
 {% endhighlight %}
 
-### Update the database configuration
+### データベースの設定を更新しよう
 
-Up next, you'll need to change the database configuration for the production environment.
+続いて、本番環境のデータベース構成を変更する必要があります。
 
 {% coach %}
-Explain what the different Rails environments are. What is "production"?
+Railsのさまざまな環境とは何かを説明しましょう。`Production` とは何でしょうか？
 {% endcoach %}
 
-Open the `config/database.yml` file in your Text Editor. Change the following lines in the file:
+テキストエディタで `config/database.yml` ファイルを開きましょう。ファイル内の以下の行を
 
 {% highlight yaml %}
 production:
@@ -60,7 +60,7 @@ production:
   database: db/production.sqlite3
 {% endhighlight %}
 
-to these lines:
+以下のように変更します。
 
 {% highlight yaml %}
 production:
@@ -72,44 +72,44 @@ production:
   password: <%= ENV["RAILSGIRLS_DATABASE_PASSWORD"] %>
 {% endhighlight %}
 
-Save the changes in Git by creating a new commit. We'll need to update our app in Git to deploy these changes.
+新しいコミットを作成し、Git に変更を保存します。デプロイするために、これらの変更をGitに保存されているアプリに対して更新する必要があります。
 
 {% highlight sh %}
 git add .
 git commit -m "Use PostgreSQL as the production database"
 {% endhighlight %}
 
-## Create a Fly.io account
+## Fly.ioのアカウントを作成しよう
 
-Visit the [Fly.io sign up page](https://fly.io/app/sign-up) and fill in the form to make a new user account.
+Fly.ioの[サインアップページ](https://fly.io/app/sign-up)にアクセスし、フォームに必要事項を入力して、新規ユーザーアカウントを作成しましょう。
 
-On the next screen, click the "Try Fly.io for free" link. You do not need to enter your Credit Card to use Fly.io for free.
+次の画面で、「Try Fly.io for free」リンクをクリックします。Fly.ioを無料で利用するためにクレジットカードを入力する必要はありません。
 
-## Install the Fly.io CLI
+## Fly.io CLIをインストールしよう
 
-To deploy apps with Fly.io, you'll need to use the Fly.io CLI: a tool for the Terminal app.
+Fly.ioでアプリをデプロイするには、Fly.io CLIというターミナルアプリのツールを使用する必要があります。
 
-Follow the [installation instructions on this Fly.io docs page](https://fly.io/docs/hands-on/install-flyctl/). Continue with this guide when the Fly.io CLI has been installed.
+この[Fly.ioのドキュメントページ](https://fly.io/docs/hands-on/install-flyctl/)のインストール手順に従ってインストールをしてください。Fly.io CLIのインストールが完了したら、このガイドの続きを進めていきましょう。
 
-## Login to the Fly.io CLI
+## Fly.io CLIにログインしよう
 
-Run the following command to connect your Fly.io user account to your laptop and deploy your app with Fly.io in the Terminal app.
+以下のコマンドを実行して、Fly.ioのユーザーアカウントをあなたのパソコン環境に反映させ、ターミナルアプリでFly.ioを使用してアプリをデプロイします。
 
 {% highlight sh %}
 flyctl auth login
 {% endhighlight %}
 
-It will open your Browser with a new tab/window. Either login to your Fly.io user account you created earlier, or click the button starting with "Continue as ...". You are now logged into Fly.io with the CLI.
+ブラウザ上に新しいタブまたはウィンドウが表示されます。先ほど作成したFly.ioのユーザーアカウントでログインするか、「Continue as ...」で始まるボタンをクリックします。これでFly.ioにCLIでログインしたことになります。
 
-## Configure the app
+## デプロイのためにアプリの設定をしよう
 
-Run the following command create the necessary configuration in your app to deploy it.
+以下のコマンドを実行し、アプリに必要な設定を行い、デプロイを実行します。
 
 {% highlight sh %}
 fly launch
 {% endhighlight %}
 
-When prompted for questions, enter or select the following:
+質問の回答を求められるため、以下を入力または選択してください。
 
 - Choose an app name:
     - Enter: railsgirls-yourname
@@ -123,33 +123,34 @@ When prompted for questions, enter or select the following:
 - Would you like to set up an Upstash Redis database now?:
     - Press <kbd>n</kbd> and then press <kbd>Enter</kbd>.
 
-Your app is now configured to deploy with Fly.io. You'll need to commit these changes before you can deploy. Commit your changes with this command:
+これで、アプリがFly.ioでデプロイができるように設定が完了しました。デプロイする前に、これらの変更をコミットする必要があります。以下のコマンドで変更をコミットしましょう。
 
 {% highlight sh %}
 git add .
 git commit -m "Configure for Fly.io deployment"
 {% endhighlight %}
 
-## Deploy the app in the future
+## デプロイを実行しよう
 
-If you made any new changes to your app and want to deploy the changes in the future, run the following command:
+以下のコマンドを実行するとデプロイが行われます。
+アプリに新しい変更を加え、今後その変更をデプロイしたい場合も、同様です。
 
 {% highlight sh %}
 fly deploy
 {% endhighlight %}
 
 You'll see a lot of text being printed about the results of the steps needed to deploy the app. Wait until it's done. It should say "v0 deployed successfully".
+アプリのデプロイが完了するまでに必要なステップの結果がターミナル上にたくさんのテキストとして出力されていると思います。出力が完了するまで待地ましょう。デプロイが完了すると「v0 deployed successfully」と表示されるはずです。
+## デプロイされたアプリを見てみよう
 
-## View your deployed app
-
-Your app should now be deployed. This means it's online for people to see. To know where you can view it, run the following command to open it in your Browser:
+これで、あなたのアプリは今、デプロイがされました。これはつまり、他の人たちがオンラインでアプリを見ることが可能であることを意味します。実際にアプリを見るために、以下のコマンドを実行して、ブラウザで開いてみましょう。
 
 {% highlight sh %}
 fly open
 {% endhighlight %}
 
-You now have your first app deploy! Congratulations! Share the link you see in your Browser's address bar!
+これで、最初のアプリのデプロイが完了しました！おめでとうございます！ブラウザのアドレスバーに表示されたリンクを共有して他の人たちにも見てもらいましょう！
 
 ---
 
-You do not need to deploy your app on another services. Continue with the next numbered guide in the list below.
+Fly.ioでデプロイを実行したため、他のサービスにアプリをデプロイする必要はありません。次の番号のガイドに進みましょう。
