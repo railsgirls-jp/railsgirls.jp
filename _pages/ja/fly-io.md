@@ -7,7 +7,9 @@ permalink: deployment/fly-io
 
 # Fly.ioであなたのアプリをオンラインにあげよう
 
-このガイドでは、作成したアプリを[Fly.io](https://fly.io/app)にデプロイして、オンラインで誰でも利用できるようにします。このガイドの後、友人や家族とリンクを共有し、このワークショップで作成したものを見せることができるようになります。
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
+
+このガイドでは、作成したアプリを[Fly.io](https://fly.io/)にデプロイして、オンラインで誰でも利用できるようにします。このガイドの後、友人や家族とリンクを共有し、このワークショップで作成したものを見せることができるようになります。
 
 Fly.ioで小さなアプリを1つだけデプロイする場合、無料で利用が可能ですが、いくつかの制限があります。
 
@@ -49,7 +51,7 @@ bundle install --without production
 続いて、本番環境のデータベース構成を変更する必要があります。
 
 {% coach %}
-Railsのさまざまな環境とは何かを説明しましょう。`Production` とは何でしょうか？
+Railsの複数ある環境が何かを説明しましょう。`Production` とは何でしょうか？
 {% endcoach %}
 
 テキストエディタで `config/database.yml` ファイルを開きましょう。ファイル内の以下の行を
@@ -112,16 +114,16 @@ fly launch
 質問の回答を求められるため、以下を入力または選択してください。
 
 - Choose an app name:
-    - Enter: railsgirls-yourname
-    - Change "yourname" to your (nick)name.
+    - `railsgirls-yourname` を入力し、Enterを押します。
+    - "yourname"の部分はあなたの名前かニックネームに変更しましょう。
 - Choose a region for deployment:
-    - Choose the region closest to you with the arrow keys and then press <kbd>Enter</kbd>.
+    - 矢印キーで自分に一番近い地域を選び、次に <kbd>Enter</kbd> を押しましょう。
 - Would you like to set up a Postgresql database now?
-    - Press <kbd>y</kbd> and then press <kbd>Enter</kbd>.
+    - <kbd>y</kbd> を入力して <kbd>Enter</kbd> を押しましょう。
 - Select configuration:
-    - Choose "Development" from the list.
+    - リストの中から"Development"を選択しましょう。 
 - Would you like to set up an Upstash Redis database now?:
-    - Press <kbd>n</kbd> and then press <kbd>Enter</kbd>.
+    - <kbd>n</kbd> を入力して <kbd>Enter</kbd> を押しましょう。
 
 これで、アプリがFly.ioでデプロイができるように設定が完了しました。デプロイする前に、これらの変更をコミットする必要があります。以下のコマンドで変更をコミットしましょう。
 
@@ -139,8 +141,8 @@ git commit -m "Configure for Fly.io deployment"
 fly deploy
 {% endhighlight %}
 
-You'll see a lot of text being printed about the results of the steps needed to deploy the app. Wait until it's done. It should say "v0 deployed successfully".
 アプリのデプロイが完了するまでに必要なステップの結果がターミナル上にたくさんのテキストとして出力されていると思います。出力が完了するまで待地ましょう。デプロイが完了すると「v0 deployed successfully」と表示されるはずです。
+
 ## デプロイされたアプリを見てみよう
 
 これで、あなたのアプリは今、デプロイがされました。これはつまり、他の人たちがオンラインでアプリを見ることが可能であることを意味します。実際にアプリを見るために、以下のコマンドを実行して、ブラウザで開いてみましょう。
@@ -149,7 +151,7 @@ You'll see a lot of text being printed about the results of the steps needed to 
 fly open
 {% endhighlight %}
 
-これで、最初のアプリのデプロイが完了しました！おめでとうございます！ブラウザのアドレスバーに表示されたリンクを共有して他の人たちにも見てもらいましょう！
+最初のアプリのデプロイが完了しました！おめでとうございます！ブラウザのアドレスバーに表示されたリンクを共有して他の人たちにも見てもらいましょう！
 
 ---
 
