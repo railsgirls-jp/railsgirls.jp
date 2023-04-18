@@ -7,6 +7,8 @@ permalink: new-page
 
 # アプリに新しいページを追加しよう
 
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
+
 {% include main-guide-intro.html %}
 
 アプリに開発者(あなたです！)の情報を表示できるようにページを追加してみましょう。
