@@ -7,6 +7,8 @@ permalink: new-homepage
 
 # 新しいホーム画面を追加しよう
 
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
+
 {% include main-guide-intro.html %}
 
 このガイドでは、新たに別のページを追加します。追加したページは新しいホーム画面になります。<http://localhost:3000> にアクセスしてアプリを開いた時に最初に表示されるページです。Railsのコントローラ、ビュー、ルーティングがどのように機能するかを知っている場合は、このガイドを読み飛ばしてかまいません。
