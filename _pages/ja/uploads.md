@@ -7,6 +7,8 @@ permalink: uploads
 
 # 画像アップロード機能を追加する
 
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
+
 {% include main-guide-intro.html %}
 
 前のガイドまでで作成したアプリに対して想像力を膨らませるために、写真や絵などの視覚的な要素があると便利です。idea modelにファイルアップロード機能を追加することで、画像を添付することができるようになります。
