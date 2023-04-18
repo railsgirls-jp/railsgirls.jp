@@ -7,6 +7,8 @@ permalink: html-and-css
 
 # HTMLとCSSを使ってアプリをスタイリングしよう
 
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
+
 {% include main-guide-intro.html %}
 
 現在のアプリは、白地に黒文字のシンプルな状態で、見た目が良いとは言えません。HTMLとCSSを使って、この点を改善しましょう！
