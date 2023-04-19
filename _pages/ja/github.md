@@ -30,16 +30,16 @@ git --version
 
 <div class="os-specific">
   <div class="mac">
-  <p>以下のコマンドをターミナルで実行すると、macOSにGitをインストールまたはアップグレードすることができます。</p>
+<p>以下のコマンドをターミナルで実行すると、macOSにGitをインストールまたはアップグレードすることができます。</p>
 {% highlight sh %}
 brew install git
 {% endhighlight %}
   </div>
   <div class="nix">
-  Gitのドキュメントに記載されている、<a href="https://git-scm.com/download/linux">お使いのオペレーティングシステムの説明</a>に従ってインストールしてください。
+<p>Gitのドキュメントに記載されている、<a href="https://git-scm.com/download/linux">お使いのオペレーティングシステムの説明</a>に従ってインストールしてください。</p>
   </div>
   <div class="win">
-  <a href="http://git-scm.com/downloads">Git</a>のウェブサイトにアクセスし、Windows用のGitインストーラーをダウンロードして実行し、Gitをインストールしてください。
+<p><a href="http://git-scm.com/downloads">Git</a>のウェブサイトにアクセスし、Windows用のGitインストーラーをダウンロードして実行し、Gitをインストールしてください。</p>
   </div>
 </div>
 
