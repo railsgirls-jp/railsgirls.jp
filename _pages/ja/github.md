@@ -17,6 +17,7 @@ Gitは、アプリのソースコードを保存し、変更履歴を記録・�
 {% coach %}
 Gitやバージョン管理のこと、Gitを使った他の人とのコラボレーション、GitHub、Gitを使ったデプロイメント、オープンソースについて少し話しましょう。
 {% endcoach %}
+
 ## Gitをインストールしよう
 
 Gitを使う前に、まずGitがすでにインストールされているかどうかを確認しましょう。ターミナルで次のコマンドを入力してください。
@@ -25,12 +26,9 @@ Gitを使う前に、まずGitがすでにインストールされているか�
 git --version
 {% endhighlight %}
 
-1.8以上のバージョンが表示されるのがはずです。Gitがインストールされていない場合（`command not found` などのエラーが表示される）、またはバージョンが1.8より低い場合は、Gitをインストールまたはアップグレードしましょう。
+1.8以上のバージョンが表示されるはずです。Gitがインストールされていない場合（`command not found` などのエラーが表示される）、またはバージョンが1.8より低い場合は、Gitをインストールまたはアップグレードしましょう。
 
 <div class="os-specific">
-  <div class="win">
-  <a href="http://git-scm.com/downloads">Git</a>のウェブサイトにアクセスし、Windows用のGitインストーラーをダウンロードして実行し、Gitをインストールしてください。
-  </div>
   <div class="mac">
   <p>以下のコマンドをターミナルで実行すると、macOSにGitをインストールまたはアップグレードすることができます。</p>
 {% highlight sh %}
@@ -39,6 +37,9 @@ brew install git
   </div>
   <div class="nix">
   Gitのドキュメントに記載されている、<a href="https://git-scm.com/download/linux">お使いのオペレーティングシステムの説明</a>に従ってインストールしてください。
+  </div>
+  <div class="win">
+  <a href="http://git-scm.com/downloads">Git</a>のウェブサイトにアクセスし、Windows用のGitインストーラーをダウンロードして実行し、Gitをインストールしてください。
   </div>
 </div>
 
@@ -89,11 +90,13 @@ git commit -m "First commit"
 GitHubは、無料のオンライン・コード共有プラットフォームです。_Git_ で保存されたソースコードの _ハブ_ となっています。これを利用して、アプリのソースコードを保存・共有することになります。
 
 [GitHubのウェブサイト](https://github.com)にアクセスし、アカウントを作成するか、すでにGithubでアカウントを持っている場合はログインします。
+
 ## GitHubでコードを安全に共有しよう
 
 認証を管理する最も簡単な方法は、[Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)を作成することです。PATを利用することで、あなたのパソコンとGitHubのサイトの両方に認証情報が保存されていることになります。
 
 コンピュータ上のコードをGitHubサイトの自分のアカウントに取り込むということは、インターネット経由で接続する必要があります。GitHubはHTTPSとSSHによる接続を提供しています。Personal Access Token (PAT) を使うには HTTPS 接続が必要です。これは、次のセクションでPATを作成するときに重要になります。
+
 ## コマンドラインを使ってアプリをGitHubにプッシュしよう(Part1)
 
 GitHubのアカウントを取得したことで、保存したソースコードをGitHubにプッシュ（Git用語で _アップロード_ の意味）して、他の人と共有することができるようになりました。
@@ -105,7 +108,7 @@ GitHubにサインインしたら、ナビゲーションバーの右上にあ�
 
 リポジトリ作成後の次のページでは、アプリのソースコードをプッシュする場所をGitに伝えるために必要なリポジトリURLが表示されているでしょう。
 
-PATで動作するように、手順に表示されているURLがHTTPSの説明になっているか確認しましょう。一番上の `Quick setup` セクションで、「HTTPS」ボタンが選択されていない場合は、該当のボタンをクリックしてください。そして、すべての手順のリンクが `https` で始まるように変更されていることを確認しましょう。
+PATで動作するように、HTTPS用の手順が画面に表示されていることを確認しましょう。一番上の `Quick setup` セクションで、「HTTPS」ボタンが選択されていない場合は、該当のボタンをクリックしてください。そして、すべての手順のリンクが `https` で始まるように変更されていることを確認しましょう。
 
 「push an existing repository from the command line」に記載されている手順を使用しましょう。該当の手順の中で、`git remote add origin` で始まる行を探します。その行をすべてコピーして、ターミナルに貼り付けます。そしてEnterを押してください。
 
@@ -129,6 +132,7 @@ GitHubのパーソナルアクセストークンを作成するには、このUR
 次のページで、作成したあなたのPATが表示されます。このページにアクセスできるのはこの時だけですので、次のセクションである _push_ する手順を完了するまでは、このページを閉じない方が良いでしょう。
 
 PATトークンはコピーして安全なパスワード管理ツールに保存しておきましょう。その際、トークンの前後にスペースがないように注意しましょう。トークン表示箇所の最後にある四角が二つ重なったボタンで正確にコピーすることができます。
+
 ## コマンドラインを使ってアプリをGitHubにプッシュしよう（Part2）
 
 それでは、Gitリポジトリのローカルでの変更をGitHub上のリポジトリに _push_ しましょう。ターミナルで以下のコマンドを実行します。
@@ -181,6 +185,7 @@ git push origin master
 {% endhighlight %}
 
 ## 次に何をする？
+
 ### Gitについてもっと学ぶ
 
 * [Gitチートシート](https://github.github.com/training-kit/downloads/ja/github-git-cheat-sheet/) に頻繁に使うコマンドがまとめられています。([PDF](https://github.github.com/training-kit/downloads/ja/github-git-cheat-sheet.pdf)版もあります。)
