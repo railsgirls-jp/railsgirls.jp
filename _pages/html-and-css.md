@@ -1,21 +1,23 @@
 ---
 layout: main_guide
-title: Style your app using HTML and CSS
-description: "Give your app a new look with HTML and CSS using Bootstrap."
+title: HTMLとCSSを使ってアプリをスタイリングしよう
+description: "Bootstrapを導入し、HTMLとCSSであなたのアプリの見た目を変更しましょう"
 permalink: html-and-css
 ---
 
-# Style your app using HTML and CSS
+# HTMLとCSSを使ってアプリをスタイリングしよう
+
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
 
 {% include main-guide-intro.html %}
 
-The app doesn't look very nice right now: it's the standard plain black text on a white background. Let's improve that using HTML and CSS!
+現在のアプリは、白地に黒文字のシンプルな状態で、見た目が良いとは言えません。HTMLとCSSを使って、この点を改善しましょう！
 
-## What is HTML?
+## HTMLとは?
 
-HTML (HyperText Markup Language) is used to structure your app. It tells the browser what is a heading, a list, a table, a link, etc. on the website. The scaffolding that was generated in the [previous guide](/app) is also made up of HTML, with some Ruby added to it to make it more dynamic.
+HTML（HyperText Markup Language）は、アプリのコンテンツの構造を作るために使います。ウェブサイト上の見出し、リスト、テーブル、リンクなどが何であるかをブラウザに伝える役割を担っています。[前のガイド](/app)で生成されたファイルもHTMLで構成されており、さらに拡張するためにRubyのコードを追加しています。
 
-Open up the `app/views/ideas/index.html` file and you should see something like the example below. The parts of the file that start with a `<name>` tag opens an HTML tag, and the one with the forward slash symbol in it `</name>`, closes it. You can add all kinds of properties to it, like `style`, `id` and `class`.
+`app/views/ideas/index.html`ファイルを開くと、以下が表示されるでしょう。例えばこのファイルの `<div>` タグで始まる部分はHTMLタグの開始を表し、スラッシュ記号で始まる部分 `</div>` はHTMLタグの終了を表します。このHTMLタグに対して `style`、`id`、`class` などのあらゆるプロパティを追加することができます。
 
 {% highlight erb %}
 <h1>Ideas</h1>
@@ -27,51 +29,51 @@ Open up the `app/views/ideas/index.html` file and you should see something like 
 </div>
 {% endhighlight %}
 
-There are also special kinds of parts in the file indicated with the `<%`, `<%=` and `%>` code. This looks a lot like HTML, but it's not. It is a flavor of Ruby that makes the HTML show things dynamically, like all the different ideas you added to your app's database.
+また、ファイル内には `<%`、`<%=`、`%>` というコードで示される、特殊な部分があります。これはHTMLによく似ていますが、そうではありません。この部分はRubyのコードとして実行され、あなたがアプリのデータベースに追加したデータ（今回の場合はひとつ前のガイドで作成したideaアプリに対するデータ）を、動的にHTMLに表示させるためのものです。
 
 {% coach %}
-Talk about the relationship between HTML and Rails.
+HTMLとRailsの関係について話しましょう。
 
-- Explain a little bit more what HTML is and give some examples (like this website's source code).
-- What part of Rails views are HTML and what is Embedded Ruby (ERB)?
-- What is Model View Controller and how does this relate to it?
-    - Models and controllers are responsible for generating the HTML views.
+- HTMLとは何かをもう少し説明して、いくつかの例（このウェブサイトのソースコードなど）を挙げてみましょう。
+- Railsのビューのどの部分がHTMLでしょうか、また、Embedded Ruby（ERB）とは何でしょうか？
+- Model View Controllerとは何でしょうか、また、どのような関係性でしょうか？
+    - モデルとコントローラは、HTMLビューを生成する役割を担っています。
 {% endcoach %}
 
-## What is CSS?
+## CSSとは?
 
-CSS (Cascading Style Sheets) allows you to specify how the HTML should look like, what text and background color elements should have, what fonts to use, what size they are, where they are on the page, etc.
+CSS（Cascading Style Sheets）を利用すると、HTMLがどのように見えるか、要素にどんなテキストや背景色が必要か、どんなフォントを使うか、どんなサイズか、ページ内のどこにあるかなどを指定することができます。
 
-In this guide you won't be writing CSS yourself to style your app, but rely on the [Bootstrap project][Bootstrap] to do the heavy lifting for you. It provides the framework for CSS to style and apply design to your app. There are many CSS classes available you can apply to your HTML. It helps you get started quickly.
+このガイドでは、アプリのスタイルを決めるために自分でCSSを記述するのではなく、[Bootstrap](Bootstrap)というフレームワークを導入します。Bootstrapは、CSSのフレームワークを提供し、あなたのアプリにスタイル、デザインを適用します。HTMLに適用できる多くのCSSクラスが用意されているため、手軽に導入することができます。
 
-If you're interested in learning more about CSS, we suggest taking a look at this [getting started with CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started) tutorial after this workshop.
+CSSについてもっと知りたい方は、このワークショップの後、[CSSのチュートリアル](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started)をご覧になることをお勧めします。
 
 [Bootstrap]: https://getbootstrap.com
 
 {% coach %}
-Talk about the relationship between HTML, CSS and Rails.
+HTML、CSS、Railsの関係について話しましょう。
 
-- How does Bootstrap work and how does it style the app pages?
-- Briefly show some [Bootstrap examples](https://getbootstrap.com/docs/5.2/examples/) and show what you can accomplish with using a framework like Bootstrap.
+- Bootstrapはどのように動作し、どのようにアプリのページをスタイリングするのでしょうか？
+- [Bootstrapの例](https://getbootstrap.com/docs/5.2/examples/)をいくつか簡単に紹介し、Bootstrapのようなフレームワークを使うことで何が実現できるかを紹介しましょう。
 {% endcoach %}
 
-## Add Bootstrap to help style your app
+## アプリのスタイリングに役立つBootstrapを導入しよう
 
-Bootstrap consists of a couple different parts, the first we'll use is the CSS. To use it, we need to add it to our app by adding some lines of code the HTML. Specifically the layout file. The layout file is the file that all your Rails views are wrapped in. It makes sure all pages have the same basic layout and CSS loaded.
+Bootstrapはいくつかの異なるパーツから構成されていますが、最初に使用するのはCSSです。そのためには、アプリのHTMLに対して何行かのコードを追加する必要があります。具体的には、レイアウトのファイルに対してです。レイアウトファイルは、Railsのすべてのビューに対して共通のレイアウトパーツを提供します。これにより、すべてのページで同じ基本レイアウトとCSSが読み込まれるようになります。
 
-Open the `app/views/layouts/application.html.erb` file in your Text Editor and above the following line:
+テキストエディターで `app/views/layouts/application.html.erb` ファイルを開きます
 
 {% highlight erb %}
 <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 {% endhighlight %}
 
-この1行前に次のタグを追記してください。
+上記が記述されている1行前に次のタグを追記してください。
 
 {% highlight erb %}
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 {% endhighlight %}
 
-This loads Bootstrap from a server on the Internet. That way you don't have to install it locally before you can use it.
+これは、インターネット上のサーバーからBootstrapを読み込んでいます。そのため、使用する前にローカルにインストールする必要がありません。
 
 そして、この部分、
 
@@ -87,13 +89,12 @@ This loads Bootstrap from a server on the Internet. That way you don't have to i
 </div>
 {% endhighlight %}
 
-Refresh your app in the Browser. Already the app looks a bit better and has the app content front and center. Your app is now using the Bootstrap system for styling using its CSS.
+ブラウザでアプリを更新しましょう。アプリの見た目が少し良くなり、コンテンツが前面中央に表示されています。あなたのアプリには、BootstrapのCSSを使ったスタイリングが反映されています。
 
-## Add a navigation bar
+## ナビゲーションバーを追加しよう
 
-It's easy to get lost on a website that has very little of a User Interface (UI). Let's add a navigation bar and footer to the layout to give it more the appearance of an app and allow us to find our way around.
-
-次に、ナビゲーションバーとフッターをレイアウトに追加してみましょう。同じファイルの`<body>`の直後に以下を追加してください。
+ユーザーインターフェース（UI）がほとんどないWebサイトでは、迷子になりがちです。ナビゲーションバーとフッターをレイアウトに追加して、よりアプリのような外観にし、ページを探せるようにしましょう。
+同じファイルの`<body>`の直後に以下を追加してください。これにより、アプリにナビゲーションバーが追加されます。
 
 {% highlight erb %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -113,7 +114,7 @@ It's easy to get lost on a website that has very little of a User Interface (UI)
 </nav>
 {% endhighlight %}
 
-さらに、`</body>` の直前に以下を追加してください。This will add a footer saying "Rails Girls" along with the current year, and include the Bootstrap JavaScript needed for the navigation bar functionality.
+さらに、ファイル末尾の `</body>` の直前に以下を追加してください。`<footer></fotter>` 部分により、「Rails Girls」というフッターと現在の年が追加され、`<script></script>` 部分によってナビゲーションバーを機能させるために必要なBootstrap JavaScriptを読み込んでいます。
 
 {% highlight erb %}
 <footer class="mt-5 text-center">
@@ -126,8 +127,8 @@ It's easy to get lost on a website that has very little of a User Interface (UI)
 
 ファイルがきちんと保存されたことを確認して、何が変わったのかを見るためにブラウザを更新してみましょう。
 
-## Add more styling!
+## さらにスタイリングを追加しよう！
 
-_This step is optional. We'll be updating more styling in future guides. If you want to move on, open the next guide in the list below._
+***このステップはオプションです。*** 今後のガイドでは、より多くのスタイリングを更新していきます。次のステップに進みたい場合は、下のリストで次のガイドを開いてください。
 
-To further style the app with HTML & CSS, you can edit the `app/assets/stylesheets/application.css` file in your Text Editor if you already know some CSS. It's also possible to reference the [Bootstrap documentation](https://getbootstrap.com/docs/5.2/getting-started/introduction/) for more information on how to use Bootstrap for styling the app.
+あなたがすでにCSSをある程度知っている場合、テキストエディタで`app/assets/stylesheets/application.css`ファイルを開いてHTMLとCSSを編集すると、アプリをさらにスタイリングすることが可能です。また、アプリのスタイリングにBootstrapを使用する方法をさらに得たい場合は、[Bootstrap documentation](https://getbootstrap.com/docs/5.2/getting-started/introduction/)を参照してみましょう。

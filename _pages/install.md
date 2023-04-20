@@ -10,51 +10,59 @@ permalink: install
 
 {% include main-guide-intro.html %}
 
-To build apps and other things with Ruby on Rails, we need to setup some software and the developer environment for your computer. Make sure you're familiar with [the tools you'll need for these guides](/tools) before continuing. From there we'll guide you through the steps needed to prepare for the workshop, and while doing so give you a bit of background info on what we're doing.
+Ruby on Railsでアプリや他のものを作るために、いくつかソフトウェアや開発環境をあなたのコンピュータにセットアップする必要があります。先に進む前に、[このガイドで必要になるツール](/tools) についてよく理解しておいてください。それを元にワークショップの準備に必要な手順をガイドします。この手順の中でやっていることの背景についても少し説明します。
 
-Don't worry too much about the installation steps and understand everything about them. These are the required steps to get through to get to the real programming part of the workshop.
+インストールの手順についてはあまり気せずに理解してください。これらは、ワークショップで重要なプログラミングする部分にたどり着くための手段なのですから。
 
-These setup guides assume no prior knowledge. That's easier said than done. Things that may seem obvious to us might be _abracadabra_ to you. If this is the case, please: let your event organizers know. We can use your feedback to improve these guides!
+これらのセットアップガイドは予備知識がないことを前提にしています。でもそれは「言うは易く行うは難し」です。私たちにとっては明らかに思えることでも、あなたにとっては呪文のように感じるかもしれません。そんなときはイベントのオーガナイザーに知らせてください。あなたのフィードバックで、このガイドを改善することができるのです！
 
-Please follow the instructions for your Operating System from the list below. If you run into any problems, don't panic. Check the [known errors section](#possible-errors-during-installation) or inform the organizers/coaches at the event and we can solve it together.
+一覧にある、あなたのオペレーティングシステムに合った手順に従ってください。何か問題に遭遇しても、慌てないでください。[知られているエラーの節](#possible-errors-during-installation) を確認するか、イベントのオーガナイザーやコーチたちに知らせてください。一緒に解決しましょう。
 
 - [macOS 用セットアップ](/install/macos)
 - [Windows 用セットアップ](/install/windows)
 - [Windows 用セットアップ（WSL）](/install/windows-wsl)
 - [Linux 用セットアップ](/install/linux)
-- Alternative installation methods. Use these if the above guides do not work.
-    - [Setup on a Virtual Machine](/install/virtual-machine)
-    - [Using the Replit Cloud Service - No Installation Required](/install/replit)
+- その他のインストール方法です。上記のガイドでうまくいかなかったら取り組んでみましょう。
+    - [仮想マシンにセットアップする](/install/virtual-machine)
+    - [クラウドサービス Replit を使う - 何もインストールする必要はありません](/install/replit)
     - [GitHub Codespaces を使う](/install/codespaces)
     - [AWS Cloud9 を使う](/install/cloud9)
 
-*コーチの方へ*:
-インストール中に問題が発生した場合、この [Troubleshooting](https://github.com/railsgirls-jp/railsgirls-jp.github.io/wiki/Troubleshooting)  のページを参考にして下さい。
+{% coach %}
+インストール中に問題が発生した場合、この [Troubleshooting](https://github.com/railsgirls-jp/railsgirls-jp.github.io/wiki/Troubleshooting) のページを参考にしてください。
+{% endcoach %}
 
 ## Possible errors during installation
+## インストール中に起こりうるエラー
 
 ### Gem::RemoteFetcher エラー
 
-`rails new railsgirls` や `gem update rails` を実行すると下記のようなエラーが出るかもしれません:
+`rails new railsgirls` や `gem update rails` を実行すると以下のようなエラーが発生するかもしれません:
 
 {% highlight sh %}
 Gem::RemoteFetcher::FetchError: SSL_connect returned=1 errno=0 state=SSLv3 read
 server certificate B: certificate verify failed (https://rubygems.org/gems/i18n-0.6.11.gem)
 {% endhighlight %}
 
-これは Rubygems のバージョンが古く、更新が必要であることを意味していますので、まず Rubygems のバージョンをチェックしましょう。
+これは Rubygems のバージョンが古く、手動で更新する必要があることを意味しています。まずは Rubygems のバージョンを確認しましょう。
 
 {% highlight sh %}
 gem -v
 {% endhighlight %}
 
-もし `3.0.3` より古いバージョンだったら、以下の手順で更新する必要があります:
+もし `3.0.3` より古いバージョンだった場合、以下の手順で更新する必要があります:
 
-[ruby-gems-update gem](https://rubygems.org/downloads/rubygems-update-3.0.3.gem) をダウンロードし、それを `c:\rubygems-update-3.0.3.gem` として保存して実行してください:
+まず [ruby-gems-update gem](https://rubygems.org/downloads/rubygems-update-3.0.3.gem) をダウンロードし、それを `c:\rubygems-update-3.0.3.gem` として保存して、以下を実行してください:
 
 {% highlight sh %}
 gem install --local c:\\rubygems-update-3.0.3.gem
+{% endhighlight %}
+
+{% highlight sh %}
 update_rubygems --no-document
+{% endhighlight %}
+
+{% highlight sh %}
 gem uninstall rubygems-update -x
 {% endhighlight %}
 
@@ -64,8 +72,9 @@ Rubygems のバージョンをチェックしましょう。
 gem -v
 {% endhighlight %}
 
-バージョンが `3.0.3` より大きいことを確かめてください。
-もし失敗していたらやり直してください。
+バージョンが `3.0.3` 以上であることを確かめてください。もし失敗していたらやり直してください。
+
+まだ、問題が起きているようならば、いつでも [rubygems.org](https://rubygems.org/pages/download) で最新の rubygems を見つけられます。**GEM** をクリックすると最新のバージョンが手に入ります。
 
 続いて、bundler gem も更新が必要となる場合があります。まず `bundle` のバージョンをチェックしましょう。
 
@@ -88,13 +97,14 @@ bundle -v
 バージョンが `1.17.2` より大きいことを確かめてください。
 もし失敗していたらやり直してください。
 
-### During bundle install
+### bundle install 実行中にエラーが発生する
 
-The `Gem::RemoteFetcher::FetchError: SSL_connect` can also occur during the `bundle install` stage when creating a new rails app.
+新しくアプリを作るとき、`bundle install` 実行中に `Gem::RemoteFetcher::FetchError: SSL_connect` も発生するかもしれません。
 
 The error will make mention of [this RailsApps guide](https://railsapps.github.io/openssl-certificate-verify-failed.html). What is relevant for Windows users at this point is [this GitHub gist](https://gist.github.com/867550). The described manual way has proven to be successful to solve the `bundle install` error.
+[このRailsApps ガイド](https://railsapps.github.io/openssl-certificate-verify-failed.html) で、エラーについて説明されています。現時点でWindowsのユーザに関係があるのは [このGitHubのgist](https://gist.github.com/867550) です。説明されている方法で `bundle install` のエラーが解決することが証明されています。
 
-### 'x64_mingw' is not a valid platform エラー
+### エラー 'x64_mingw' is not a valid platform が発生する
 
 `rails server` を実行すると以下のようなエラーが出ることがあります:
 
@@ -102,17 +112,16 @@ The error will make mention of [this RailsApps guide](https://railsapps.github.i
 'x64_mingw' is not a valid platform
 {% endhighlight %}
 
-もし RailsInstaller を実行した後でこのエラーが出たときには、`Gemfile` というファイルをちょっとだけ編集する必要があります:
+もし RailsInstaller を実行した後でこのエラーが出たときには、`Gemfile` というファイルを少しだけ編集する必要があります:
 
-そのファイルの最後の方に下記のような行があるはずです。
-もしなければ付け加えましょう:
+そのファイルの最後の方を確認してください。おそらく最終行の1つとして以下のような行があるはずです。
 
 {% highlight sh %}
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 {% endhighlight %}
 
-このように `:x64_mingw` と書かれていたら、 `:x64_mingw` の部分を削除してください。
-つまり上の行を下記のように変更するわけです:
+この行に `:x64_mingw` と書かれていたら、`:x64_mingw` の部分を削除してください。
+最終的に以下のようになるはずです:
 
 {% highlight sh %}
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
@@ -120,14 +129,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 ファイルを編集し終わったら、再びコマンドプロンプトで `bundle update` を実行してみてください。
 
-### The sqlite3 gem failed to install
+### sqlite3 gemのインストールに失敗する
 
-When running `rails new myapp` the `sqlite3` gem may fail to install. When this happens, first close the Windows Command Prompt app. Then re-open the Windows Command Prompt.
+`rails new myapp` を実行しているときに、gem `sqlite3` のインストールに失敗するかもしれません。そのときは、まず、Windowsのコマンドプロンプトを閉じてください。そしてWindowsのコマンドプロンプトを再度起動してください。
 
-Next, install the `sqlite3` gem separately from the `rails` gem by running the following command:
+次に、以下のコマンドを実行して `sqlite3` を `rails` とは別にインストールします。
 
 {% highlight sh %}
 gem install sqlite3
 {% endhighlight %}
 
-If this succeeds, remove the `myapp` directory the rails installer created and return to the installation instructions, to run `rails new myapp` again.
+うまくいけば、railsインストーラーが作成したディレクトリ `myapp` を削除し、インストール手順に戻って、再度 `rails new myapp` を実行してください。

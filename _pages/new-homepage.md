@@ -1,21 +1,23 @@
 ---
 layout: main_guide
-title: Add a new homepage
-description: "Customize your app's homepage with your own page."
+title: 新しいホーム画面を追加しよう
+description: "あなたのアプリのホーム画面をカスタマイズしましょう。"
 permalink: new-homepage
 ---
 
-# Add a new homepage
+# 新しいホーム画面を追加しよう
+
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
 
 {% include main-guide-intro.html %}
 
-In this guide we'll add another page. This will be our new homepage: the first page that will be shown when you open your app when you visit <http://localhost:3000>. Feel free to skip this guide if you know how Rails controllers, views and routes work.
+このガイドでは、新たに別のページを追加します。追加したページは新しいホーム画面になります。<http://localhost:3000> にアクセスしてアプリを開いた時に最初に表示されるページです。Railsのコントローラ、ビュー、ルーティングがどのように機能するかを知っている場合は、このガイドを読み飛ばしてかまいません。
 
-In the previous guide a "pages" controller was already generated, we do not need to do this again. Rails will stop us if we do try to. Instead, we'll need to add the page manually ourselves.
+前回のガイドで、「pages」コントローラはすでに生成されているため、再度コントローラの生成を行う必要はありません。もしやろうとした場合はRailsに止められます。今回は、手動でビューのページを追加する必要があります。
 
-## Add a new view
+## 新しいビューを追加しよう
 
-Instead we'll add another page on our own. Run the following command in the Terminal app to add another "view" file used to display page content.
+それではまず、新しいページを独自に追加しましょう。ターミナルで以下のコマンドを実行し、ページのコンテンツを表示するための新たな「ビュー」ファイルを追加します。
 
 <div class="os-specific">
   <div class="mac nix">
@@ -30,9 +32,9 @@ ni app/views/pages/homepage.html.erb
   </div>
 </div>
 
-Then open the newly created file in your Text editor: `app/views/pages/homepage.html.erb`
+次に、新しく作成した`app/views/pages/homepage.html.erb`ファイルをテキストエディタで開きましょう。
 
-Add some content to it, like the following, and save the file:
+そこに以下のようなコンテンツを追加して、ファイルを保存します。
 
 {% highlight erb %}
 <div class="px-4 py-5 my-5 text-center">
@@ -43,25 +45,26 @@ Add some content to it, like the following, and save the file:
 </div>
 {% endhighlight %}
 
-## Configuring the route
+## ルーティングを設定しよう
 
-To tell Rails when to show this page, open the `config/routes.rb` file in your Text Editor. Change the following line:
+追加したページをいつ表示するかをRailsに指示するために、テキストエディタで`config/routes.rb`ファイルを開き、以下の箇所を編集します。
 
 {% highlight ruby %}
 root to: redirect("/ideas")
 {% endhighlight %}
 
-to this instead and save the file:
+上記を以下に変更して、ファイルを保存します。
 
 {% highlight ruby %}
 root "pages#homepage"
 {% endhighlight %}
 
-When you now visit the root path of the app, <http://localhost:3000>, you should see your new homepage!
+アプリのルートパスである<http://localhost:3000>にアクセスすると、新しいホーム画面が表示されるはずです！
 
-## Updating the navigation bar
+## ナビゲーションバーを更新しよう
 
-Lastly, to make the new root page accessible through the navigation bar, open the `app/views/layouts/application.html.erb` file in your Text Editor. Above the following lines:
+最後に、ナビゲーションバーから新しいルートページにアクセスできるようにするために、`app/views/layouts/application.html.erb`ファイルをテキストエディタで開いてください。
+以下の行の上に
 
 {% highlight erb %}
 <li class="nav-item">
@@ -69,7 +72,7 @@ Lastly, to make the new root page accessible through the navigation bar, open th
 </li>
 {% endhighlight %}
 
-add a new link with the lines below, and save the file:
+以下のリンクを新たに追加し、ファイルを保存します。
 
 {% highlight erb %}
 <li class="nav-item">
@@ -77,4 +80,4 @@ add a new link with the lines below, and save the file:
 </li>
 {% endhighlight %}
 
-When you refresh the page in the browser, and click the "The ideas app" link, it will open the new homepage. Try out all the links in the navigation bar. Do they take you to the page you expected?
+ブラウザでページを更新し、「The ideas app」のリンクをクリックすると、新しいホーム画面が表示されます。ナビゲーションバーにあるすべてのリンクを試してみてください。思ったとおりのページにたどり着けますか？
