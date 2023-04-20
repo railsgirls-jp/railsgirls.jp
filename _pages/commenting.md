@@ -160,10 +160,7 @@ We can the relationship between ideas and comments to fetch them from the databa
 `app/views/ideas/show.html.erb` を開いて、
 
 {% highlight erb %}
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag(@idea.picture_url, width: 600) if @idea.picture? %>
-</p>
+<%= render @idea %>
 {% endhighlight %}
 
 このあとに、次のコードを追加します。
@@ -215,12 +212,12 @@ In this new file copy-paste these lines:
 {% highlight erb %}
 <%= form_with(model: [idea, idea.comments.build]) do |form| %>
   <div class="mb-3">
-    <%= form.label :user_name, "Your name", class: "form-label" %>
+    <%= form.label :user_name, "Your name", class: "form-label", style: "display: block"  %>
     <%= form.text_field :user_name, class: "form-control" %>
   </div>
 
   <div class="mb-3">
-    <%= form.label :body, "Comment message", class: "form-label" %>
+    <%= form.label :body, "Comment message", class: "form-label", style: "display: block"  %>
     <%= form.text_area :body, class: "form-control" %>
   </div>
 
