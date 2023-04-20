@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main_guide
 title: You better check you app, before you wreck your app
 permalink: testing-rspec
 ---
