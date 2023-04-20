@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main_guide
 title: Alternative development environment with VirtualBox
 permalink: install/virtual-machine
 ---

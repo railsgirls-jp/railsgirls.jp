@@ -1,14 +1,14 @@
 ---
 layout: main_guide
-title: Start of the guide
-description: "Start your journey to building your first Ruby on Rails app here!"
+title: はじめに
+description: "初めてのRailsアプリ作りの旅は、ここからはじめましょう！"
 permalink: start
 ---
 
-# Start of the guide
+# はじめに
 
-Welcome to the Rails Girls guides! In these guides you'll learn how to make an app using the Ruby on Rails framework (which is why this event is called _Rails_ Girls). When you have made your first app, you'll deploy it to a hosting service so that you can view it on the Internet and share it with others.
+Rails Girlsガイドへようこそ！ このガイドであなたはRuby on Railsというフレームワーク(このイベントが _Rails Gilrs_ と呼ばれている由来です)を使ったアプリの作り方を学べます。 はじめてのアプリを作ったら、インターネットから見たり、シェアできるようにホスティングサイトに配置します。
 
-Please follow the numbered guides in order. Each guide assumes you followed the previous guide. When you're done with the workshop and/or completed all the numbered guides, feel free to explore the [other guides](/#other-guides) as well. Ask you coach for suggestions!
+番号のついたガイドの順番を守ってください。どのガイドもその前のガイドに従っていることを前提にしています。ワークショップ終えたら、[他のガイド](/#other-guides)も自由に見てみてください。コーチに提案してもらいましょう！
 
-The first guides help you get set up with the tools you'll need and installing Rails on your machine. Use the __Guides__ list lower on this page to navigate your way to the next guide.
+最初のガイドは必要なツールを設定したり、Railsをコンピューターにインストールするのを助けてくれます。このページの下にある __Guides__ の一覧を使って、次のガイドに進むことができます。

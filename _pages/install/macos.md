@@ -5,7 +5,7 @@ description: "Install Ruby and Rails on your Mac computer and get prepared for t
 permalink: install/macos
 ---
 
-# Setup for Mac
+# macOS 用セットアップ
 
 {% include main-guide-intro.html %}
 
@@ -13,7 +13,7 @@ To build apps and other things with Ruby on Rails, we need to setup some softwar
 
 <div class="help-notice">Make sure you're familiar with <a href="/tools">the tools you'll need for this guides</a> before continuing.</div>
 
-## Install the Command Line Tools
+## Command line tools をターミナルからインストール
 
 Most Mac users never get into programming, so Apple figured it'd be a good idea not to ship the tools needed to run programming languages with every laptop to save some space. They did make it easy to install them, running just a single command.
 
@@ -25,7 +25,7 @@ xcode-select --install
 
 A window will pop up asking you to confirm that you want to install these tools, and agree to the Terms and Conditions. Once you do, an installer will start downloading and installing the tools. This will take quite some time, so feel free to grab a tea or coffee. The steps following this one will only work after the Command Line Tools installer has completed, so no point in skipping ahead.
 
-## Install Homebrew
+## Homebrewをインストール
 
 [Homebrew](https://brew.sh/), like the Command Line Tools, is a stepping stone towards being able to install Ruby. Homebrew allows us to install other tools using simple, standardised commands. Otherwise we'd have to figure out how each of these other tools needs to be installed. By having Homebrew figure that out for us, we can focus on the good stuff: building apps.
 
@@ -47,7 +47,7 @@ Using Homebrew, we can now install Git, the version management system we'll be u
 brew install git
 {% endhighlight %}
 
-## Install rbenv
+## rbenvをインストール
 
 Ruby, the programming language we use, releases new versions all the time. Some clever folks wrote a tool that allows us to easily install specific versions. We'll use this to make sure you're running the same version as the rest of us.
 
@@ -65,15 +65,15 @@ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 source ~/.zshrc
 {% endhighlight %}
 
-## Install Ruby with rbenv
+## rbenv を用いて Ruby をインストール
 
-Now that rbenv is installed, let's install Ruby! We'll be installing version 3.1.3, but it could be that during the event you'll be asked to install a different version. In that case, just replace the version number in the command.
+Now that rbenv is installed, let's install Ruby! We'll be installing version 3.2.1, but it could be that during the event you'll be asked to install a different version. In that case, just replace the version number in the command. "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
 
 {% highlight sh %}
-rbenv install 3.1.3
+rbenv install 3.2.1
 {% endhighlight %}
 
-## Set default Ruby
+## デフォルトのRuby を設定
 
 rbenv allows us to manage a bunch of Ruby versions, but it doesn't always quite know which version you want to use. To help it with that, we'll tell it that the version we just installed is in fact the one we want to use.
 
@@ -91,7 +91,7 @@ The result should be something that includes the number `3.1.3`.
 
 If the version you get starts with `2.6`, first try restarting your terminal. If it still shows the wrong version something went wrong when setting up rbenv, and your Terminal is still using an older version of Ruby that ships with your Mac. Ask your coach, if present, for help, otherwise stop here and ask for help on the day of the workshop from one of the coaches.
 
-## Install Rails
+## Railsのインストール
 
 Finally, we've arrived at the part where you'll install Rails, the tool we'll focus on during the workshop:
 
@@ -107,7 +107,7 @@ rails --version
 
 This should output `Rails 7.0.4.2`, but a higher version is also good.
 
-## Test if Rails works
+### Rails の動作確認
 
 Almost there! We've installed a chain of tools: Command Line Tools, Homebrew, Git, rbenv, Ruby and now finally: Rails. Let's see if everything works as intended.
 

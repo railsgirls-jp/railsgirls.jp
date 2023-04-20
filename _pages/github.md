@@ -1,271 +1,202 @@
 ---
-layout: default
-
+layout: main_guide
 title: GitHubにpushしてみよう ( How to Push to GitHub )
-
 permalink: github
 ---
 
 # GitHubに自分のアプリをPushする
 
-*Created by Alyson La, [@realalysonla](https://www.twitter.com/realalysonla)*
+*作成者： Alyson La, [@realalysonla](https://www.twitter.com/realalysonla)*
 *[Original page](https://railsgirls.com/)*
-*Translated by Yuki Torii [@yotii23](https://www.twitter.com/yotii23)*
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
 
-## はじめる前に必要な準備
+{% include main-guide-intro.html %}
 
-### Git と GitHub
+Gitは、アプリのソースコードを保存し、変更履歴を記録・追跡することが可能なツールです。オンラインでコードを共有して他の人とコラボレーションすることができます。
 
-* Gitがインストールされているか確認する
+{% coach %}
+Gitやバージョン管理のこと、Gitを使った他の人とのコラボレーション、GitHub、Gitを使ったデプロイメント、オープンソースについて少し話しましょう。
+{% endcoach %}
 
-	* ターミナルで
+## Gitをインストールしよう
+
+Gitを使う前に、まずGitがすでにインストールされているかどうかを確認しましょう。ターミナルで次のコマンドを入力してください。
 
 {% highlight sh %}
 git --version
 {% endhighlight %}
 
-と入力してください (1.8以上のver.が表示されるのが望ましいです)
+1.8以上のバージョンが表示されるはずです。Gitがインストールされていない場合（`command not found` などのエラーが表示される）、またはバージョンが1.8より低い場合は、Gitをインストールまたはアップグレードしましょう。
 
-* もしインストールされていなければ, [ここ](http://git-scm.com/downloads)からGitをダウンロードする
+<div class="os-specific">
+  <div class="mac">
+<p>以下のコマンドをターミナルで実行すると、macOSにGitをインストールまたはアップグレードすることができます。</p>
+{% highlight sh %}
+brew install git
+{% endhighlight %}
+  </div>
+  <div class="nix">
+<p>Gitのドキュメントに記載されている、<a href="https://git-scm.com/download/linux">お使いのオペレーティングシステムの説明</a>に従ってインストールしてください。</p>
+  </div>
+  <div class="win">
+<p><a href="http://git-scm.com/downloads">Git</a>のウェブサイトにアクセスし、Windows用のGitインストーラーをダウンロードして実行し、Gitをインストールしてください。</p>
+  </div>
+</div>
 
-* ターミナルで
+インストールやアップグレードを行った後に、`git --version` コマンドを再度実行し、1.8以上のバージョンが表示されていることを確認しましょう。
+
+## Gitの設定をしよう
+
+Gitがインストールできていることを確認したら、Gitでローカルプロフィールを設定します。このプロフィールは、Gitに保存するファイルに誰が変更を加えたかを記録するために使われます。これにより、誰がいつどのような変更をしたのかを確認することができます。
+
+`your name` と `your email` は、自分の名前とメールアドレスに変更しましょう。実際の本名とメールアドレスを使いたくない場合は、ニックネームや別名を使うこともできます。
+※ここで設定した名前とメールアドレスは、他の人にも公開されます！
 
 {% highlight sh %}
 git config --global user.name "your-name"
-{% endhighlight %}
- と
-
-{% highlight sh %}
 git config --global user.email "your-email"
 {% endhighlight %}
 
- をタイプしてください。("your-name","your-email" は自分の名前とEmailを英数字で入れてください。)
+Gitにプロフィールが設定されているかは、以下のコマンドを実行し、`user.name` と `user.email` の設定の内容を確認してみましょう。
 
 {% highlight sh %}
 git config --list
 {% endhighlight %}
 
- とタイプしてみて、nameとemailの設定が反映されていることを確認してみましょう。
+## Gitに作業を保存しよう
 
-* [GitHub](https://github.com)でアカウントを作成します(無料です）。すでにアカウントがある人はログインしてください。
-
-**Coachより:** gitとバージョン管理、そしてオープンソースについてちょっと話してください。
-
-## 自分のアプリを、コマンドラインでGitHubにPushする
-
-GitHubの自分のプロフィールページで、Repositories タブから 'New' ![screen shot 2017-01-25](../images/github-new-button.png) をクリックしましょう。
-名前(例：rails-girls)と、アプリについての短い説明をつけて、"public"レポジトリを選び、"create repository"をクリックします。
-
-コマンドライン上で、`cd`で自分のrailsgirlsフォルダに入り、次のように入力します:
-
-{% highlight sh %}
-git init
-{% endhighlight %}
-
-これによって、自分のプロジェクトのgitレポジトリが初期化されます。
-
-*メモ:* 最近のRailsではrails newの時にgit initを実行するようになっていますが間違って2度実行しても問題ありません。
-
-`README.md` というファイルが、railsgirlsディレクトリに存在するか確認します:
-
-<div class="os-specific">
-  <div class="nix">
-{% highlight sh %}
-ls README.md
-{% endhighlight %}
-  </div>
-  <div class="win">
-{% highlight sh %}
-dir README.md
-{% endhighlight %}
-  </div>
-</div>
-
-存在しない場合は、以下の通りにタイプして、"README.md" というファイルを作成します。
-
-<div class="os-specific">
-  <div class="nix">
-{% highlight sh %}
-touch README.md
-{% endhighlight %}
-  </div>
-  <div class="win">
-{% highlight sh %}
-type nul > README.md
-{% endhighlight %}
-  </div>
-</div>
-
-**Coachより:** `README.md` についてちょっと話してください。
-
-次に、以下のように入力してください:
+ターミナルを開き、_railsgirls_ のアプリディレクトリに移動して以下のコマンドを実行します。ディレクトリ内で変更があったファイル（今回はあなたのアプリのすべてのファイル）が全部リストアップされるでしょう。
 
 {% highlight sh %}
 git status
 {% endhighlight %}
 
-これで、現在あなたのワーキングディレクトリ内にある、全てのファイルの一覧が表示されます。
-
-**Coachより:** あなたのお気に入りのgitコマンドについて話をしてください。
-
-次に、すでに[Heroku guide](/heroku)の章で実行していなければ以下のように入力してください:
-
-{% highlight sh %}
-echo public/uploads >> .gitignore
-{% endhighlight %}
-
-これは、アップロードしたファイルをgitの管理対象から除外するようにしています。
-
-**Coachより:** アップロードしたファイルがgitの管理対象になるとどのような問題があるか話してみてください。
-
-次に、以下のように入力してください:
+これらのファイルをGitに保存して、あなたが作成したGitHubのリポジトリにプッシュできるようにしたいですね。次のコマンドを実行すると、すべてのファイルがGitのステージングエリアに追加され、保存 (コミット) できるようになります。
 
 {% highlight sh %}
 git add .
 {% endhighlight %}
 
-これは、すべてのファイルと変更をステージング領域に追加します。
-
-次に、以下のように入力してください:
+以下の `git commit` コマンドを実行すると、ステージングエリアに追加されたファイルが「First commit」というメッセージとともにGitに保存されます。
 
 {% highlight sh %}
-git commit -m "first commit"
+git commit -m "First commit"
 {% endhighlight %}
 
-これによって、"first commit"というメッセージとともに全てのファイルがコミットされます。
+(上記コマンドの `-m` は "message" の略です)
 
-### GitHub に SSH キーを設定する
+## GitHubアカウントを作成しよう
 
-#### 既存の SSH キーを確認する
+GitHubは、無料のオンライン・コード共有プラットフォームです。_Git_ で保存されたソースコードの _ハブ_ となっています。これを利用して、アプリのソースコードを保存・共有することになります。
 
-すでに SSH キーがつくられているかを確認します。ターミナルで以下のように入力してください。
-Windows の場合は Git Bash を開いて実行してください。
+[GitHubのウェブサイト](https://github.com)にアクセスし、アカウントを作成するか、すでにGithubでアカウントを持っている場合はログインします。
+
+## GitHubでコードを安全に共有しよう
+
+認証を管理する最も簡単な方法は、[Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)を作成することです。PATを利用することで、あなたのパソコンとGitHubのサイトの両方に認証情報が保存されていることになります。
+
+コンピュータ上のコードをGitHubサイトの自分のアカウントに取り込むということは、インターネット経由で接続する必要があります。GitHubはHTTPSとSSHによる接続を提供しています。Personal Access Token (PAT) を使うには HTTPS 接続が必要です。これは、次のセクションでPATを作成するときに重要になります。
+
+## コマンドラインを使ってアプリをGitHubにプッシュしよう(Part1)
+
+GitHubのアカウントを取得したことで、保存したソースコードをGitHubにプッシュ（Git用語で _アップロード_ の意味）して、他の人と共有することができるようになりました。
+
+GitHubにサインインしたら、ナビゲーションバーの右上にあるプラスアイコン(`+`)をクリックします。ドロップダウンの中から、`New repository` を選択します。
+該当のリンクが見つからない場合はこちらの [新規リポジトリページ](https://github.com/new) に直接アクセスしてください。
+
+`Create a new repository` ページで、リポジトリ名（例：railsgirls）を入力し、リポジトリの可視性を「Public」にし、「Create repository」ボタンをクリックしてください。フォームの残りの部分はそのままにしておきます。
+
+リポジトリ作成後の次のページでは、アプリのソースコードをプッシュする場所をGitに伝えるために必要なリポジトリURLが表示されているでしょう。
+
+PATで動作するように、HTTPS用の手順が画面に表示されていることを確認しましょう。一番上の `Quick setup` セクションで、「HTTPS」ボタンが選択されていない場合は、該当のボタンをクリックしてください。そして、すべての手順のリンクが `https` で始まるように変更されていることを確認しましょう。
+
+「push an existing repository from the command line」に記載されている手順を使用しましょう。該当の手順の中で、`git remote add origin` で始まる行を探します。その行をすべてコピーして、ターミナルに貼り付けます。そしてEnterを押してください。
+
+このステップでは、ローカルリポジトリに先ほど作成したGitHubリポジトリを指す"origin"というGit _リモート_ 、すなわち _接続先_ を作成します。
+
+## パーソナルアクセストークンの作成をしよう
+
+次に、[PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic)を作成する必要があります。
+
+GitHubのパーソナルアクセストークンを作成するには、このURLから <https://github.com/settings/tokens> アクセスできます。または、GitHub にログインした状態であれば、次の手順でどのページからでも設定画面にいくことが可能です。
+まず、右上の自分のアバターをクリックします。次に、「Settings」、「Developer settings」、「Personal access tokens」、「Tokens (classic)」の順にクリックします。
+
+「Personal access tokens (classic)」ページに移動したら、「Generate new token」のドロップダウンメニューをクリックし、「Generate new token (classic)」を選択してください。GitHubアカウントで2要素認証を有効にしている場合は、このタイミングで2要素認証する必要があります。
+
+「New personal access token (classic)」の設定画面が表示されたら、「Note」の欄に何用のトークンかの説明を入力し(例: RailsGirls)、有効期限を選びます。(有効期限を過ぎてもこのプロジェクトを使用する予定がある場合は、PATの有効期限が切れたときにこの手順を繰り返す必要があります)
+
+次に、「Select scopes」の設定箇所で、一番上の「repo」チェックボックスを選択すると、PATに「Full control of private repositories（プライベートリポジトリの完全制御）」が反映されます。
+
+最後に、ページ下部の「Generate token」をクリックします。
+
+次のページで、作成したあなたのPATが表示されます。このページにアクセスできるのはこの時だけですので、次のセクションである _push_ する手順を完了するまでは、このページを閉じない方が良いでしょう。
+
+PATトークンはコピーして安全なパスワード管理ツールに保存しておきましょう。その際、トークンの前後にスペースがないように注意しましょう。トークン表示箇所の最後にある四角が二つ重なったボタンで正確にコピーすることができます。
+
+## コマンドラインを使ってアプリをGitHubにプッシュしよう（Part2）
+
+それでは、Gitリポジトリのローカルでの変更をGitHub上のリポジトリに _push_ しましょう。ターミナルで以下のコマンドを実行します。
 
 {% highlight sh %}
-ls -al ~/.ssh
+git push -u origin master
 {% endhighlight %}
 
-~/.ssh ディレクトリ内のファイルが一覧で表示されますので `xxx.pub` という公開 SSH キーがあるかを確認しましょう。
-デフォルト設定でつくられている場合、次のような名前になっています。
-- id_rsa.pub
-- id_ecdsa.pub
-- id_ed25519.pub
-
-#### SSH キーを生成する
-
-（既存の SSH キーを使う場合は、この手順はスキップしてください。）
-
-SSH キーが存在しなかった場合、または、持っている SSH キーとは別のものを生成したい場合には新しい SSH キーをつくります。
-
-ターミナル（Windows の場合は Git Bash）で以下のコマンドを実行してください。（your_email@example.com の部分にはあなたのメールアドレスが入ります。）
+ターミナルに認証プロンプトが表示されたら、以下の例のようにパスワードに先ほど作成したあなたのPATを使用します。なお、パスワードにPATを貼り付けてもターミナル上には表示されません。再度貼り付けると、トークンを2回入力することになるので、二重で貼り付けないように気をつけましょう。
 
 {% highlight sh %}
-ssh-keygen -t ed25519 -C "your_email@example.com"
+Username: <your GitHub username>
+Password: <paste in your personal access token>
 {% endhighlight %}
 
-すると以下のようなメッセージが表示されます。
+コードをプッシュするたびにPATが必要になる場合があるかもしれませんが、PATをコンピューターに保存することもできます。このプロセスはOSごとに異なるので、GitHubにコードを継続的にプッシュしたい場合は、コーチに相談してみましょう。
 
-{% highlight sh %}
-Generating public/private ed25519 key pair.
-Enter file in which to save the key (/Users/your-name/.ssh/id_ed25519):
-{% endhighlight %}
+{% coach %}
+参加者が望む場合、PATの保存方法の確認と実践に協力してください。参加者のオペレーティングシステムに対応した最新のガイドを見たり、[異なるオペレーティングシステムでPATを保存するためのガイド](https://mgimond.github.io/Colby-summer-git-workshop-2021/authenticating-with-github.html#saving-tokens-in-windows)を参照してください。
+{% endcoach %}
 
-SSH キーを保存するファイルを聞かれますので、
-デフォルトの `~/.ssh/id_ed25519` で問題なければ何も入力せずに Enter を押します。
-変更したい場合は、任意のファイルパスを指定しましょう。
+これでGitHubにアプリがアップされました！ブラウザでGitHubの対象のリポジトリのページを更新すると、ファイルがたくさん表示されるはずです。
 
-{% highlight sh %}
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-{% endhighlight %}
+## Gitでもっと多くの変更を保存してみよう
 
-次に SSH キーを使うときのパスフレーズを設定します。
-入力してもターミナル上では何も表示されませんので間違えないように入力しましょう。
+新たな変更をGitHubにプッシュしたい場合は、次の3つのコマンドを使用して実行しましょう。
 
-#### GitHub アカウントに SSH キーを追加する
-
-GitHub に登録する 公開 SSH キーをクリップボードにコピーします。
-（任意のファイルに SSH キーを生成した場合は、`~/.ssh/id_ed25519.pub` の部分を読み替えてください。）
-
-##### macOS の場合
-{% highlight sh %}
-pbcopy < ~/.ssh/id_ed25519.pub
-{% endhighlight %}
-
-##### Windows の場合
-{% highlight sh %}
-clip < ~/.ssh/id_ed25519.pub
-{% endhighlight %}
-
-##### Linux（WSL含む） の場合
-{% highlight sh %}
-cat ~/.ssh/id_ed25519.pub
-# ターミナルに出てきたテキストをコピー。
-{% endhighlight %}
-
-ブラウザで GitHub のサイトにアクセスし、Settings（設定） の [SSH and GPG keys ページ](https://github.com/settings/keys) を開きます。
-（ヘッダーのプロフィールアイコンをクリックして、[Settings] > [SSH and GPG keys] から遷移することもできます。）
-
-[New SSH key] ボタンをクリックして新規登録ページを開き、以下の情報を入力します。
-
-- **Title**
-  - 登録する SSH キーを説明するタイトルを入力します
-- **Key**
-  - クリップボードにコピーした SSH キーを貼り付けます。（macOS は `⌘ + v` 、Windows は `Ctrl + v` で貼り付けられます。）
-
-[Add SSH key] ボタンをクリックします。
-GitHub のパスワードの入力を求められた場合はメッセージに従って入力します。
-
-### GitHub にソースコードをプッシュする
-
-次に、以下のように入力してください(usernameの部分は、あなたのGitHubでのユーザー名が入ります):
-
-{% highlight sh %}
-git remote add origin git@github.com:username/rails-girls.git
-{% endhighlight %}
-
-_あなたのGitHubのリポジトリページには、リポジトリURLの一覧が表示されています。いちいち手で入力するより、その一覧から気軽にコピー&ペーストしましょう。GitHubのリポジトリページから、URLの隣のクリップボードアイコンをクリックすることで、コピー&ペーストすることが出来ます。_
-
-このコマンドは"origin"という名前のリモート、あるいは _コネクション_ を作ります。これは、先ほど作ったGitHubのリポジトリを指しています。
-
-
-では、以下のように入力してみましょう:
-
-{% highlight sh %}
-git push -u origin main
-{% endhighlight %}
-
-これによって、あなたの"main"ブランチのコミットが、GitHubに送られます。
-
-おめでとうございます、これでアプリケーションはGitHubに載りました。上でoriginに指定したhttps://github.com/username/rails-girlsのURLをブラウザでチェックしてみましょう。 (.git部分は外します）
-
-もし続けてファイルを変更し、GitHubにpushしたい場合は、次の三つのコマンドで行うことが出来ます。
+Gitで保存したい変更点を _ステージングエリア_ に追加します。
 
 {% highlight sh %}
 git add .
+{% endhighlight %}
 
-git commit -m "type your commit message here"
+コミットメッセージとともに変更を保存します。
 
-git push origin main
+{% highlight sh %}
+git commit -m "Type your commit message here"
+{% endhighlight %}
+
+どのコミットで何を変更したのか、なぜ変更したのかを確認できるように、説明的なメッセージを心がけましょう。
+
+{% coach %}
+良いコミットメッセージの条件（実装内容、簡潔で説明的かなど）について話しましょう。
+{% endcoach %}
+
+そして、変更をGItHubにプッシュしましょう。
+
+{% highlight sh %}
+git push origin master
 {% endhighlight %}
 
 ## 次に何をする？
 
-### オープンソースコミュニティーに参加する
-
- * GitHubで、RailsGirlsの仲間やコーチをフォローします
- * 彼らのプロジェクトにstar、watchします
- * レポジトリを[Fork](https://help.github.com/articles/fork-a-repo)し、クローンしてきて、自分のフォークに変更をpushします。その変更を[pull request](https://help.github.com/articles/using-pull-requests)でフォーク元にシェアしてみましょう!
- * バグを見つけたら、プロジェクトにissueを作成しましょう
- * 他のオープンソースプロジェクトを調べます。プログラミング言語やキーワードで検索してみましょう。
-
 ### Gitについてもっと学ぶ
 
- * [trygit.org](http://try.github.io/)をチェックアウトする
- * [GITチートシート](https://github.github.com/training-kit/downloads/ja/github-git-cheat-sheet/)([PDF](https://github.github.com/training-kit/downloads/ja/github-git-cheat-sheet.pdf))を使う
- * [git-scm.org](http://git-scm.com/)でGitコマンドを眺めてみる
+* [Gitチートシート](https://github.github.com/training-kit/downloads/ja/github-git-cheat-sheet/) に頻繁に使うコマンドがまとめられています。([PDF](https://github.github.com/training-kit/downloads/ja/github-git-cheat-sheet.pdf)版もあります。)
+* [Gitのドキュメント](https://git-scm.com/docs)でもっと多くのGitコマンドを調べてみましょう。
+* ターミナル操作よりもPCの画面上で操作がしたい場合はGUI（グラフィカル・ユーザー・インターフェイス）を使ってみるのもよいでしょう。[GitHub Desktop](https://desktop.github.com/)のようなアプリを試してみてください。
+* 将来、プロジェクトでより多くの人と仕事をするようになると、ブランチやプルリクエストを扱う機会が多くなるでしょう。
+ 
+### オープンソースコミュニティーに参加する
 
-
-
-
-
+* GitHubで、RailsGirlsの仲間やコーチをフォローしてどんな活動をしているか見てみましょう。
+* 彼らのプロジェクトにstarやwatchをつけてみましょう。
+* プロジェクトのリポジトリを[Fork](https://docs.github.com/ja/get-started/quickstart/fork-a-repo)し、クローンして自分の変更ををpushすることができます。その変更を[プルリクエスト](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)でフォーク元に共有してみましょう!
+* バグを見つけたら、プロジェクトにissueを作成しましょう
+* プログラミング言語やキーワードで検索して、他のオープンソースプロジェクトを調べてみましょう。

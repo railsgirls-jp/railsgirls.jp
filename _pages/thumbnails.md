@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main_guide
 title: アイデア一覧を表示したときにサムネイル表示してみよう
 permalink: thumbnails
 ---
@@ -8,36 +8,61 @@ permalink: thumbnails
 
 *Created by Miha Filej, [@mfilej](https://twitter.com/mfilej), Translated by Hiroshi SHIBATA*
 
-__コーチへ__: 始めてのRailsアプリのStep4 でHTML の img タグの width を指定したことについて説明しましょう。また、それがサーバーで画像サイズを変更することの違いも話しあってみましょう。
+{% include main-guide-intro.html %}
 
-## *1.*ImageMagickのインストール
+The Internet is all about speed. The faster your page loads, the less likely people are to click away. And we want people to stick around to share our great ideas with our ideas app! Also, people with data plans visiting your website will thank you for requiring less data to be transmitted.
 
-* macOS: `brew install imagemagick` を実行します。もし `brew` コマンドが見つからない場合は[homebrewをインストール][in-homebrew]しましょう.
-* Windows: [ImageMagick installer][im-win] をインストールします。(先頭にある *download* リンクをクリックします)
-* Linux: Ubuntu か Debian を使っているなら `sudo apt-get install imagemagick` を実行します。他のディストリビューションを使っている場合は `apt-get` の代わりに適切なパッケージマネージャ(yum等)を使います。
+One way to speed up page loads is by displaying images in a smaller size. The smaller an image is, the fast it will be transmitted over the Internet.
 
-  [im-win]: http://www.imagemagick.org/script/download.php#windows
-  [in-homebrew]: https://brew.sh/
+## Install ImageMagick
 
-__コーチへ__: ImageMagick とは何をするものかを話しあいましょう。ImageMagick と gem(ライブラリ)と異なる部分や gem を追加する前に何故インストールしたかについても話してみましょう。
+We'll be using the ImageMagick tool to resize the pictures uploaded to your ideas.
 
-Rails アプリケーションの `Gemfile` を開いて
+<div class="os-specific">
+  <div class="mac">
+<p>Run the following command in the Terminal app:</p>
+{% highlight sh %}
+brew install imagemagick
+{% endhighlight %}
+  </div>
+  <div class="nix">
+<p>If you are on Ubuntu, run the following command in the Terminal app:</p>
+{% highlight sh %}
+sudo apt-get install imagemagick
+{% endhighlight %}
+  </div>
+  <div class="win">
+<p>Download and run the <a href="https://www.imagemagick.org/script/download.php#windows">ImageMagick installer</a> (use the first <em>download</em> link). In the installation wizard, make sure you check the checkbox to install legacy binaries.</p>
+  </div>
+</div>
+
+{% coach %}
+Explain what is ImageMagick and how is it different from libraries/gems we used before?
+{% endcoach %}
+
+## Install a Ruby gem for ImageMagick
+
+For Ruby to talk with ImageMagick, we'll be using the `mini_magick` Ruby gem. First we will need to add it to our app and install it.
+
+Open `Gemfile` in your Text Editor and add this line:
 
 {% highlight ruby %}
-gem 'carrierwave'
+gem "mini_magick"
 {% endhighlight %}
 
-の下に
+below the line:
 
 {% highlight ruby %}
-gem 'mini_magick'
+gem "carrierwave"
 {% endhighlight %}
 
-を追加します。その後に Terminal で以下のコマンドを実行します。
+In the Terminal app run this command:
 
 {% highlight sh %}
-bundle
+bundle install
 {% endhighlight %}
+
+Make sure to (re)start your Rails server after installation.
 
 ## *2.*画像をアップロードした時にサムネイルを作成しよう
 
@@ -49,7 +74,9 @@ bundle
 
 上の行の `#` を削除します。
 
-__コーチへ__: コード上のコメントの用途やどのような時に使うかを説明しましょう
+{% coach %}
+コード上のコメントの用途やどのような時に使うかを説明しましょう
+{% endcoach %}
 
 削除した場所のすぐ下に以下を追加します。
 
@@ -76,3 +103,7 @@ end
 {% endhighlight %}
 
 これで、idea の一覧を開いた時にサムネイルが表示されるようになりました。
+
+{% coach %}
+Explain what specifying the image width in HTML and how it differs from resizing images on the server. Both images may look small, but only one is resized as a thumbnail.
+{% endcoach %}

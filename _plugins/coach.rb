@@ -7,7 +7,7 @@ module Jekyll
       converter = site.find_converter_instance(::Jekyll::Converters::Markdown)
       <<~COACH_ELEMENT
         <div class="coach-notice">
-          <div><strong title="Ask the coach for a explanation about this step">Help from the coach</strong></div>
+          <div><strong title="この手順について説明してもらうようコーチにお願いしましょう">Help from the coach</strong></div>
           #{converter.convert(super)}
         </div>
       COACH_ELEMENT
