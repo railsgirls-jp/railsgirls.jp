@@ -109,7 +109,7 @@ Add the following either before or after the above diary entries (again, do adju
       <li><a href="http://guides.rubyonrails.org">Ruby on Rails Guides</a></li>
     </ul>
   </div>
-  <img src="http://railsgirls.com/images/rg-warsaw.png" />
+  <img src="https://railsgirls.com/images/rg-warsaw.png" />
 {% endhighlight %}
 
 This is an HTML unordered list with some list items containing anchors (links) with hypertext references (URLs) to other pages. It’s followed by a paragraph containing an image – and the image’s source is at the given URL.

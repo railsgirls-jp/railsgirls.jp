@@ -44,7 +44,7 @@ Rails Girls Tokyoの場合、原田が言い始めたところ、かくたにさ
 #### 3. Shout Out
 <br/>
 ここのフォームに「この街でやるよー！」と書き込む。英語。
-[http://railsgirls.com/inyourcity](http://railsgirls.com/inyourcity)
+[https://railsgirls.com/inyourcity](https://railsgirls.com/inyourcity)
 <br/>
 このとき、誰がこの Shout Out を Rails Gilrs ML に流してくれたかを
 見ておくといい。その人が、Shout Outしたイベントの担当者らしい。
