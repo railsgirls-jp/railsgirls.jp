@@ -197,12 +197,6 @@ pbcopy < ~/.ssh/id_ed25519.pub
 clip < ~/.ssh/id_ed25519.pub
 {% endhighlight %}
 
-##### Linux（WSL含む） の場合
-{% highlight sh %}
-cat ~/.ssh/id_ed25519.pub
-# ターミナルに出てきたテキストをコピー。
-{% endhighlight %}
-
 ブラウザで GitHub のサイトにアクセスし、Settings（設定） の [SSH and GPG keys ページ](https://github.com/settings/keys) を開きます。
 （ヘッダーのプロフィールアイコンをクリックして、[Settings] > [SSH and GPG keys] から遷移することもできます。）
 
