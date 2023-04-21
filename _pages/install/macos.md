@@ -1,35 +1,37 @@
 ---
 layout: main_guide
-title: Setup on Mac
-description: "Install Ruby and Rails on your Mac computer and get prepared for the Rails Girls workshop."
+title: Mac用セットアップ
+description: "RubyとRailsをあなたのMacコンピュータにインストールし、Rails Girlsワークショップの準備をしましょう。"
 permalink: install/macos
 ---
 
-# macOS 用セットアップ
+# Mac用セットアップ
+
+*翻訳者: Goh Matsumoto, [@urimaro](https://twitter.com/urimaro)*
 
 {% include main-guide-intro.html %}
 
-To build apps and other things with Ruby on Rails, we need to setup some software and the developer environment for your computer.
+Ruby on Railsでアプリや他のものを作るために、いくつかソフトウェアや開発環境をあなたのコンピュータにセットアップする必要があります。
 
-<div class="help-notice">Make sure you're familiar with <a href="/tools">the tools you'll need for this guides</a> before continuing.</div>
+<div class="help-notice">先に進む前に、<a href="/tools">このガイドで必要になるツール</a> についてよく理解しておいてください。</div>
 
-## Command line tools をターミナルからインストール
+## Command Line Tools をインストールする
 
-Most Mac users never get into programming, so Apple figured it'd be a good idea not to ship the tools needed to run programming languages with every laptop to save some space. They did make it easy to install them, running just a single command.
+ほとんどのMacユーザはプログラミングをしません。このためAppleは、ハードディスクの容量を節約するために、すべてのノートパソコンに対して、プラグラミング言語を実行するのに必要なツールをインストールしないまま出荷したほうが良いと考えたようです。その代わりに、1つのコマンドを実行するだけでインストールできるようにしました。
 
-Enter the following command in the Terminal app and press the <kbd>Enter</kbd> key. You may be asked to enter a password, this is the password of your user account on your Mac. Enter your password and press <kbd>Enter</kbd>.
+以下のコマンドをターミナルに入力し、<kbd>Enter</kbd> キーを押しましょう。パスワードを入力するよう求められるかもしれません。これはMacのアカウントのパスワードです。パスワードを入力して <kbd>Enter</kbd> キーを押しましょう。
 
 {% highlight sh %}
 xcode-select --install
 {% endhighlight %}
 
-A window will pop up asking you to confirm that you want to install these tools, and agree to the Terms and Conditions. Once you do, an installer will start downloading and installing the tools. This will take quite some time, so feel free to grab a tea or coffee. The steps following this one will only work after the Command Line Tools installer has completed, so no point in skipping ahead.
+これらのツールをインストールするのか確認し、利用規約に同意するよう求めるウィンドウがポップアップします。同意するとインストーラーがツールをダウンロードし、インストールします。この処理には少し時間がかかるので、紅茶やコーヒーを飲みながら気楽に待ちましょう。このあとの手順は、Command Line Toolsのインストーラの処理が完了しないと動作しません。そのため、先に進んでも意味がありません。
 
-## Homebrewをインストール
+## Homebrewをインストールする
 
-[Homebrew](https://brew.sh/), like the Command Line Tools, is a stepping stone towards being able to install Ruby. Homebrew allows us to install other tools using simple, standardised commands. Otherwise we'd have to figure out how each of these other tools needs to be installed. By having Homebrew figure that out for us, we can focus on the good stuff: building apps.
+Command Line Toolsのような [Homebrew](https://brew.sh/) は、Rubyをインストールできるようになるための足がかりです。Homebrewは、単純かつ標準化されたコマンドで他のツールをインストールできるようにします。そうでなければ、これらの他のツールをどのようにインストールする必要があるのか一つずつ把握しなければなりません。Homebrewが解決してくれることで、アプリを作るような、大事なことに集中にできます。
 
-Enter the following command in the Terminal app and press the <kbd>Enter</kbd> key. You will be asked to enter a password–this is the password you use to unlock your laptop. Enter your password and press <kbd>Enter</kbd>.
+ターミナルに以下のコマンドを入力し、<kbd>enter</kbd> キーを押しましょう。あなたのコンピュータのロックを解除するときに使うパスワードを入力するよう求められます。パスワードを入力して <kbd>Enter</kbd> キーを押しましょう。
 
 {% highlight sh %}
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -39,19 +41,19 @@ Enter the following command in the Terminal app and press the <kbd>Enter</kbd> k
 brew update
 {% endhighlight %}
 
-## Install Git
+## Gitをインストールする
 
-Using Homebrew, we can now install Git, the version management system we'll be using for this workshop. A version management system gives you a particularly handy superpower: it allows us to travel back and forth in time. Well, at least while working with files on our computer. We'll show you how to use this during the workshop!
+これでHomebrewを使ってGitをインストールできます。Gitはこのワークショップで使っていくバージョン管理システムです。バージョン管理システムはとても役に立つ強力な力を与えてくれます。時間を行き来できるようになります。少なくともコンピュータでファイルを操作する間は。ワークショップを通じてどのように使うのか紹介します！
 
 {% highlight sh %}
 brew install git
 {% endhighlight %}
 
-## rbenvをインストール
+## rbenvをインストールする
 
-Ruby, the programming language we use, releases new versions all the time. Some clever folks wrote a tool that allows us to easily install specific versions. We'll use this to make sure you're running the same version as the rest of us.
+私たちが使うプログラミング言語Rubyは、一年中新しいバージョンがリリースされています。ある賢い人たちが特定のバージョンを簡単にインストールできるツールを作ってくれました。みんなと同じバージョンを確実に使えるようにするために、これを使います。
 
-Run the following commands to install [rbenv](https://github.com/rbenv/rbenv) via Homebrew:
+Homebrewでインストールするために以下のコマンドを実行しましょう。
 
 {% highlight sh %}
 brew install rbenv
@@ -65,82 +67,88 @@ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 source ~/.zshrc
 {% endhighlight %}
 
-## rbenv を用いて Ruby をインストール
+## rbenvを用いてRubyをインストールする
 
-Now that rbenv is installed, let's install Ruby! We'll be installing version 3.2.1, but it could be that during the event you'll be asked to install a different version. In that case, just replace the version number in the command. "rbenv install -l" コマンドでrbenvでインストール可能なRubyのバージョンを確認できます。
+rbenvがインストールされたので、Rubyをインストールしましょう！バージョン3.2.1をインストールしますが、イベントでは他のバージョンをインストールするようにお願いされるかもしれません。その場合、コマンドに含まれるバージョン番号を単純に入れ替えてください。
 
 {% highlight sh %}
 rbenv install 3.2.1
 {% endhighlight %}
 
-## デフォルトのRuby を設定
-
-rbenv allows us to manage a bunch of Ruby versions, but it doesn't always quite know which version you want to use. To help it with that, we'll tell it that the version we just installed is in fact the one we want to use.
+rbenvでインストールできるRubyのバージョンは、以下のコマンドで確認できます。
 
 {% highlight sh %}
-rbenv global 3.1.3
+rbenv install -l
 {% endhighlight %}
 
-Check that your Ruby version matches what you installed.
+## デフォルトのRubyを設定する
+
+rbenvによってたくさんのバージョンのRubyを管理できるようになりますが、どのバージョンを使おうとしているのか曖昧になってしまうことがあります。これを避けるために、今インストールしたバージョンが実際に使いたいものであることをrbenvに教えてあげましょう。
+
+{% highlight sh %}
+rbenv global 3.2.1
+{% endhighlight %}
+
+Rubyのバージョンがインストールしたものと一致するか確認しましょう。
 
 {% highlight sh %}
 ruby --version
 {% endhighlight %}
 
-The result should be something that includes the number `3.1.3`.
+`3.2.1` という数字が含まれた結果になるはずです。
 
-If the version you get starts with `2.6`, first try restarting your terminal. If it still shows the wrong version something went wrong when setting up rbenv, and your Terminal is still using an older version of Ruby that ships with your Mac. Ask your coach, if present, for help, otherwise stop here and ask for help on the day of the workshop from one of the coaches.
+`2.6` から始まるバージョンが表示されたら、まずはターミナルを再起動してみましょう。それでもまだ `2.6` から始まるバージョンが表示される場合、rbenvのセットアップで何かがうまくいかなかったために、あなたのターミナルは、Macが出荷されたときからインストールされている古いRubyを使っています。
 
-## Railsのインストール
+## Railsをインストールする
 
-Finally, we've arrived at the part where you'll install Rails, the tool we'll focus on during the workshop:
+ついにワークショップで中心的なツールであるRailsをインストールするところまでたどり着きました。
 
 {% highlight sh %}
 gem install rails --no-document
 {% endhighlight %}
 
-Just like we did with Ruby, let's check whether Rails also installed successfully:
+Rubyをインストールしたときと同じように、Railsのインストールに成功したことを確認しましょう。
 
 {% highlight sh %}
 rails --version
 {% endhighlight %}
 
-This should output `Rails 7.0.4.2`, but a higher version is also good.
+`Rails 7.0.4.2` と表示されるはずですが、それ以上のバージョンでも良いです。
 
-### Rails の動作確認
+### Railsの動作を確認する
 
-Almost there! We've installed a chain of tools: Command Line Tools, Homebrew, Git, rbenv, Ruby and now finally: Rails. Let's see if everything works as intended.
+あともう一歩です！関連するツールをインストールしてきました: Command Line Tools、Homebrew、Git、rbenv、Ruby、そして最後にRails。すべてが期待通りに動作するか確認してみましょう。
 
-To test this, we'll create a new app. Don't expect too much, it will just show a single webpage showing the "Rails" logo. During the workshop you'll turn that page into an actual app. For now, we just need to make sure that you can see that logo. Let's get started with our final set of Terminal commands!
+このことを確認するために、新しいアプリを作ります。でも、あまり期待しないでください。このアプリはRailsのロゴが入ったページを1つ表示するだけです。ワークショップを通して、そのページを実際のアプリに変えていきます。今のところはロゴが表示されることを確認するだけです。最後のターミナルコマンドを始めましょう！
 
-Check that everything is working by first running the application generator command. This will create a new Rails app which we can test with.
+まずはじめにアプリを生成するジェネレータコマンドを実行して、すべて機能することを確認しましょう。このコマンドでテスト用に新しいRailsアプリを作成します
 
 {% highlight sh %}
 rails new railsgirlsapp
 {% endhighlight %}
 
-The `rails new` command creates a new folder on your computer called "railsgirlsapp", containing all the code for your application. Let's open that directory in the Terminal using the `cd` command:
+`rails new` コマンドは、あなたのコンピュータにアプリのコードをすべて含む "railsgirlsapp" というフォルダを作成します。`cd` コマンドを実行して、このディレクトリをターミナルで開いてみましょう。
 
 {% highlight sh %}
 cd railsgirlsapp
 {% endhighlight %}
 
-Next, you'll start the Rails server briefly to make sure it starts properly. This is where the magic happens.
+次に、適切に動くことを確認するために、サッとRailsサーバを起動します。ここで魔法がかかります。
 
 {% highlight sh %}
 rails server
 {% endhighlight %}
 
-Unlike previous commands, this one will not stop until you press the <kbd>ctrl</kbd> + <kbd>c</kbd> keys together to stop it. You have just started a web server on your laptop, and it is ready to start taking visitors and show them your sample application. Let's not keep it waiting.
+今まで実行したコマンドとは違い、このコマンドは  <kbd>ctrl</kbd> キーを押しながら <kbd>c</kbd> キーを押すまで止まりません。あなたはwebサーバーをノートパソコンで起動しました。いつでも訪問者を受け入れ、サンプルアプリを見せる準備ができています。待ち続けるのはやめましょう。
 
-Go to <http://localhost:3000> in your Browser. You should see the Rails logo appear.
+ブラウザで <http://localhost:3000> にアクセスしましょう。Railsのロゴが表示されるはずです。
 
-If at any point during this guide you ran into a problem and can't continue. Not a problem! Contact the workshop organizers and let them know about your problem. Some workshops have dedicated set up evenings and otherwise they can help you on the day of the workshop itself.
+このガイドに取り組んでいる間に問題にぶつかって進められなくなったとしても、問題ありません！ワークショップの主催者たちに声をかけて、どんな問題が起きているのか伝えてください。ワークショップによっては、夕方からセットアップのための時間を設けていますし、そうでなくても、ワークショップの日に助けてくれます。
 
-If you do see a Rails logo in your Browser, you now have a working Ruby on Rails programming setup. Congratulations!
+ブラウザにRailsのロゴが表示されたら、これでRuby on Railsを使ってプログラミングする準備ができたことになります。おめでとうございます！
 
-You're ready for the workshop. If you are preparing before the workshop, you don't have to continue with guides until the day of the workshop. See you then!
+ワークショップの準備ができました。ワークショップの前に準備するのであれば、ワークショップ当日までこれ以上ガイドを進める必要はありません。ワークショップでお会いしましょう！
 
 {% coach %}
-If there's a coach present, they can help verify the installation by using the scaffold command and inputting data with the generated page with coaches to ensure everything is working. Remove the test app `myapp` to make super sure no-one is working in the wrong folder, while following the steps of the workshop.
+コーチがいるのであれば、コーチと一緒にscaffoldコマンドを実行し、生成された画面でデータを入力して、すべて機能していることを確認することで、インストールできたことを確認するのを手伝ってくれます。この後のワークショップの手順に従いながら、テスト用のアプリ `myapp` を削除し、誰も間違ったフォルダで作業していないことを疑いのないものにしてください。
 {% endcoach %}
