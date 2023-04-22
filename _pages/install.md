@@ -100,7 +100,7 @@ bundle -v
 
 新しくアプリを作るとき、`bundle install` 実行中に `Gem::RemoteFetcher::FetchError: SSL_connect` も発生するかもしれません。
 
-[この RailsApps ガイド](https://railsapps.github.io/openssl-certificate-verify-failed.html) で、エラーについて説明されています。現時点で Windows のユーザに関係があるのは [この GitHub の gist](https://gist.github.com/867550) です。説明されている方法で `bundle install` のエラーが解決することが証明されています。
+[この RailsApps ガイド](https://railsapps.github.io/openssl-certificate-verify-failed.html) で、エラーについて説明されています。現時点で Windows のユーザに関係があるのは [この GitHub の gist](https://gist.github.com/867550) です。説明されている方法で `bundle install` のエラーが解決することが示されています。
 
 ### エラー 'x64_mingw' is not a valid platform が発生する
 
