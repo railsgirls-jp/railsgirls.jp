@@ -10,7 +10,7 @@ permalink: install
 
 {% include main-guide-intro.html %}
 
-Ruby on Railsでアプリや他のものを作るために、いくつかソフトウェアや開発環境をあなたのコンピュータにセットアップする必要があります。先に進む前に、[このガイドで必要になるツール](/tools) についてよく理解しておいてください。それを元にワークショップの準備に必要な手順をガイドします。この手順の中でやっていることの背景についても少し説明します。
+Ruby on Rails でアプリや他のものを作るために、いくつかソフトウェアや開発環境をあなたのコンピュータにセットアップする必要があります。先に進む前に、[このガイドで必要になるツール](/tools) についてよく理解しておいてください。それを元にワークショップの準備に必要な手順をガイドします。この手順の中でやっていることの背景についても少し説明します。
 
 インストールの手順についてはあまり気せずに理解してください。これらは、ワークショップで重要なプログラミングする部分にたどり着くための手段なのですから。
 
@@ -100,7 +100,7 @@ bundle -v
 
 新しくアプリを作るとき、`bundle install` 実行中に `Gem::RemoteFetcher::FetchError: SSL_connect` も発生するかもしれません。
 
-[このRailsApps ガイド](https://railsapps.github.io/openssl-certificate-verify-failed.html) で、エラーについて説明されています。現時点でWindowsのユーザに関係があるのは [このGitHubのgist](https://gist.github.com/867550) です。説明されている方法で `bundle install` のエラーが解決することが証明されています。
+[この RailsApps ガイド](https://railsapps.github.io/openssl-certificate-verify-failed.html) で、エラーについて説明されています。現時点で Windows のユーザに関係があるのは [この GitHub の gist](https://gist.github.com/867550) です。説明されている方法で `bundle install` のエラーが解決することが証明されています。
 
 ### エラー 'x64_mingw' is not a valid platform が発生する
 
@@ -127,9 +127,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 ファイルを編集し終わったら、再びコマンドプロンプトで `bundle update` を実行してみてください。
 
-### sqlite3 gemのインストールに失敗する
+### sqlite3 gem のインストールに失敗する
 
-`rails new myapp` を実行しているときに、gem `sqlite3` のインストールに失敗するかもしれません。そのときは、まず、Windowsのコマンドプロンプトを閉じてください。そしてWindowsのコマンドプロンプトを再度起動してください。
+`rails new myapp` を実行しているときに、gem `sqlite3` のインストールに失敗するかもしれません。そのときは、まず、Windows のコマンドプロンプトを閉じてください。そして Windows のコマンドプロンプトを再度起動してください。
 
 次に、以下のコマンドを実行して `sqlite3` を `rails` とは別にインストールします。
 
