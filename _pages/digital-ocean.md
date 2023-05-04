@@ -1,27 +1,27 @@
 ---
 layout: main_guide
 title: Rails Girls on DigitalOcean
-description: "Deploy your app to DigitalOcean by following this guide."
+description: "このガイドに沿ってDigitalOceanであなたのアプリをデプロイしよう"
 permalink: digitalocean
 ---
 
-# Put Your App Online With DigitalOcean App Platform
+# DigitalOceanであなたのアプリをオンラインにあげよう
 
 *Created by [Colin Alston](https://github.com/calston)*
 
-## Change the production database
+## 本番用データベースを変更しよう
 
-Locally your app uses SQLite as the database to store your ideas. It's easier to use another database on DigitalOcean deploys. To deploy with DigitalOcean we'll change the database in production to use PostgreSQL.
+ローカル環境では、あなたのアプリはデータを保存するためのデータベースとしてSQLiteを使用しています。DigitalOceanのデプロイでは、別のデータベースを使用する方が簡単です。DigitalOceanでデプロイするために、本番用のデータベースをPostgreSQLを使用するように変更していきましょう。
 
-### Install the pg gem
+### pg gemをインストールしよう
 
-Open the `Gemfile` file in your Text Editor and change the following line:
+テキストエディターで`Gemfile`ファイルを開き、以下の行を
 
 {% highlight ruby %}
 gem "sqlite3"
 {% endhighlight %}
 
-into these lines:
+以下に変更します。
 
 {% highlight ruby %}
 group :development do
@@ -32,21 +32,21 @@ group :production do
 end
 {% endhighlight %}
 
-Next, run the command below to setup the new database gem:
+次に、以下のコマンドを実行し、新しいデータベースgemをセットアップします。
 
 {% highlight sh %}
 bundle install --without production
 {% endhighlight %}
 
-### Update the database configuration
+### データベースの設定を更新しよう
 
-Up next, you'll need to change the database configuration for the production environment.
+続いて、本番環境のデータベース構成を変更する必要があります。
 
 {% coach %}
-Explain what the different Rails environments are. What is "production"?
+Railsの複数ある環境が何かを説明しましょう。`Production` とは何でしょうか？
 {% endcoach %}
 
-Open the `config/database.yml` file in your Text Editor. Change the following lines in the file:
+テキストエディタで `config/database.yml` ファイルを開きましょう。ファイル内の以下の行を
 
 {% highlight yaml %}
 production:
@@ -54,7 +54,7 @@ production:
   database: db/production.sqlite3
 {% endhighlight %}
 
-to these lines:
+以下のように変更します。
 
 {% highlight yaml %}
 production:
@@ -66,84 +66,84 @@ production:
   password: <%= ENV["RAILSGIRLS_DATABASE_PASSWORD"] %>
 {% endhighlight %}
 
-Save the changes in Git by creating a new commit. We'll need to update our app in Git to deploy these changes.
+新しいコミットを作成し、Git に変更を保存します。デプロイするために、これらの変更をGitに保存されているアプリに対して更新する必要があります。
 
 {% highlight sh %}
 git add .
 git commit -m "Use PostgreSQL as the production database"
 {% endhighlight %}
 
-## Create an account
+## アカウントを作成しよう
 
-Head to [https://www.digitalocean.com/go/app-platform](https://www.digitalocean.com/go/app-platform) and sign up for the 60 day free trial.
+[https://www.digitalocean.com/go/app-platform](https://www.digitalocean.com/go/app-platform) にアクセスして60日間の無料体験に申し込みましょう。
 
 ![Trial page](/images/digitalocean/1.png)
 
-Sign up using Github to link your account
+Githubを使ってサインアップし、アカウントを連携させます。
 
 ![Github Authorization](/images/digitalocean/githuboauth.png)
 
-You will need a credit card but will receive $200 to start with if this is your first time using DigitalOcean.
+クレジットカードの登録が必要ですが、DigitalOceanを初めて利用される方には、200ドル分のキャッシュバックがあります。
 
 ![Complete signup](/images/digitalocean/2.png)
 
-## Create an application
+## アプリケーションを作成しよう
 
-Click on `Deploy a web application` to get started.
+`Deploy a web application` をクリックして準備を始めましょう。
 
 ![Deploy a web application](/images/digitalocean/create-app-1.png)
 
-Choose "Deploy your web app" to add an existing GitHub repository
+"Deploy your web app" を選んで既存のGitHubリポジトリを追加します。
 
 ![Deply source](/images/digitalocean/create-app-2.png)
 
-Authorize DigitalOcean to read your repositories
+DigitalOceanがあなたのリポジトリを読み取ることを許可します。
 
 ![Authorize DigitalOcean](/images/digitalocean/create-app-3.png)
 
-Select the repository for your application
+あなたのアプリケーションのリポジトリを選択します。
 
 ![Choose repo](/images/digitalocean/create-app-4.png)
 ![Choose branch](/images/digitalocean/create-app-5.png)
 
-Click `Next` to continue then `Edit Plan` to ensure we use the appropriate resources. We will start with a Basic plan and the smallest container size which should be sufficient.
+`Next` をクリックし、`Edit Plan` をクリックして適切なリソースの利用を確認します。今回は、基本プランと最小のコンテナサイズから始めますが、これで十分でしょう。
 
 ![Container size](/images/digitalocean/create-app-7.png)
 
-Continue through the next steps until the end. We should not need to change anything else.
+`Next` をクリックして最後まで進みましょう。もう何も変更する必要はありません。
 
 ![Environment](/images/digitalocean/create-app-8.png)
 ![Region](/images/digitalocean/create-app-9.png)
 
-## Deploying our Rails application
+## あなたのRailsアプリケーションをデプロイしよう
 
-Wait for the application to build, you can view realtime logs of the process while it happens.
+アプリケーションがビルドされるのを待ちます。その間、プロセスのリアルタイムのログを見ることができます。
 
 ![Build](/images/digitalocean/building.png)
 
-If all went well you should see your application is available, however it still needs to be initialized and have a database added.
+全てがうまくいけば、アプリケーションが利用できるようになりますが、データベースの追加と初期化が必要です。
 
 ![Deployment](/images/digitalocean/deploy.png)
 
-Click on `Create` and `Create/Attach Database` to connect a PostgreSQL database.
+`Create` と `Create/Attach Database` をクリックしてPostgreSQLのデータベースに接続しましょう。
 
 ![Database](/images/digitalocean/database.png)
 
-The application will automatically be configured with the database credentials
+アプリケーションに対して、自動的にデータベースの認証情報が設定されます。
 
-## Configuration
-You can now head to the `Console` to access your application container and setup the database.
+## データベースを設定しよう
+これで `Console` 上でアプリケーションコンテナにアクセスし、データベースを設定することができます。
 
-Type `rails db:migrate` into the terminal and press Enter. You should see the database being setup with the Rails schema.
+`rails db:migrate` とターミナルに入力してエンターを押します。 Railsのschemaでデータベースがセットアップされているのが確認できるはずです。
 
 ![Migrate](/images/digitalocean/migrate.png)
 
-If all went well you should now be able to click on the `Live App` button which links to the live server.
+すべてがうまくいくと、ライブサーバーに接続する `Live App` ボタンをクリックすることができるでしょう。
 
 ![Tada](/images/digitalocean/fin.png)
 
-## Conclusion
+## まとめ
 
-Your Rails app is now running in the cloud on DigitalOcean. You can push your changes to GitHub and they'll show up automatically the live URL after some time. Share the URL to show off your app to your friends!
+これで、あなたのRailsアプリはDigitalOceanのクラウド上で動作するようになりました。変更をGitHubにプッシュすれば、しばらくして自動的にライブURLに反映されます。このURLを共有すれば、友達にあなたのアプリを自慢できます！
 
-Keep an eye out when your free credits run out and delete the app if you no longer need it.
+無料クレジットの期限に注意し、不要になったらアプリを削除することを忘れないようにしましょう。
