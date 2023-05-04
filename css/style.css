@@ -624,3 +624,38 @@ a:hover .guide-icon,
 .os-specific.big .picker-options a:hover {
   border-color: currentcolor;
 }
+
+[class*=-notice] {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  font-size: 120%;
+  border-radius: 10px;
+}
+[class*=-notice] :last-child {
+  margin-bottom: 0;
+}
+
+.guide-notice {
+  background-color: #FEF8EA;
+}
+.help-notice {
+  background-color: #FEF8EA;
+}
+.help-notice:before {
+  content: "ℹ️";
+  margin-right: 10px;
+}
+.coach-notice {
+  border: 2px solid #8102BB;
+}
+.coach-notice > div {
+  cursor: help;
+}
+.warning-notice {
+  border: 2px solid var(--highlight);
+}
+.warning-notice:before {
+  content: "Warning";
+  display: block;
+  font-weight: bold;
+}
