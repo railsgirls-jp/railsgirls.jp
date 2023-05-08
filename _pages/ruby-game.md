@@ -6,7 +6,7 @@ permalink: ruby-game
 
 # Write a little game in Ruby!
 
-*Created by Patrick Huesler, [@phuesler](https://twitter.com/phuesler) & Floor Drees, [@floordrees](https://twitter.com/floordrees) for [Rails Girls The Hague](http://railsgirls.com/thehague)* 
+*Created by Patrick Huesler, [@phuesler](https://twitter.com/phuesler) & Floor Drees, [@floordrees](https://twitter.com/floordrees) for [Rails Girls The Hague](https://railsgirls.com/thehague)*
 
 [gosu](http://www.libgosu.org/) is a 2D game development library. Gosu features easy to use and game-friendly interfaces to 2D graphics and text (accelerated by 3D hardware), sound samples and music as well as keyboard, mouse and gamepad/joystick input. Also includes demos for integration with RMagick, Chipmunk and OpenGL.
 
@@ -38,14 +38,14 @@ git clone https://github.com/FloorD/gosu_tutorial_RG_TH.git
 {% endhighlight %}
 
 aaand change into the proper directory using
-{% highlight sh %} 
+{% highlight sh %}
 cd gosu_tutorial_RG_TH/jumpingem
 {% endhighlight %}
 
 ### Run!
 
 To play our little game, open it using the terminal:
-{% highlight sh %} 
+{% highlight sh %}
 ruby game.rb
 {% endhighlight %}
 
@@ -53,9 +53,9 @@ ruby game.rb
 
 Let's inspect some code, shall we? Open `game.rb` in your texteditor. See the
 
-{% highlight ruby %} 
+{% highlight ruby %}
 !/usr/bin/env ruby -w
-require 'rubygems' 
+require 'rubygems'
 require 'gosu'
 include Gosu
 {% endhighlight %}
@@ -63,13 +63,13 @@ include Gosu
 ... right at the top of your file? Here we make sure we 'call' the necessary gem, so we can move on to our `class` (or multiple classes).
 So we have our
 
-{% highlight ruby %} 
-class Game < Window 
+{% highlight ruby %}
+class Game < Window
 end
 {% endhighlight %}
 
 ... thing going on. The `def`'s you see within this Game class, are  methods. Here we **def**ine which instructions the program should follow. Just take a look at the following snippet:
-{% highlight ruby %} 
+{% highlight ruby %}
 def draw
   draw_quad 0, 400, Color::WHITE, 640, 400, Color::WHITE, 640, 500, Color::WHITE, 0, 500, Color::WHITE
     if @dir == :left then
@@ -87,7 +87,7 @@ Want to play around a bit? Copy the contents of `game.rb` in a new `.rb` file. S
 
 Think you have more graphic skills than Patrick (you probably do)? Then you can try and create a new `sprites.png`! Don't forget to call it here:
 
-{% highlight ruby %} 
+{% highlight ruby %}
 def initialize
     super(640, 480, false)
     self.caption = "Jump 'n Run"

@@ -202,7 +202,7 @@ In case your Terminal shows you an error message that *sort of* implies there is
 Open `app/views/layouts/application.html.erb` in your text editor and replace the line
 
 {% highlight html %}
-<link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
+<link rel="stylesheet" href="https://railsgirls.com/assets/bootstrap.css">
 {% endhighlight %}
 
 with
