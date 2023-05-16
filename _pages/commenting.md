@@ -9,8 +9,10 @@ permalink: commenting
 
 {% include main-guide-intro.html %}
 
-*railsgirls* アプリのideas へコメントができるような追加をします。In this guide we'll be relying less on the Rails generators to create scaffolding. We'll be writing more Ruby code to implement this feature.
+*railsgirls* アプリのideas へコメントができるような機能の追加をします。
 
+In this guide we'll be relying less on the Rails generators to create scaffolding. We'll be writing more Ruby code to implement this feature.
+このガイドでは、雛形を作るためにRailsのジェネレータを使わずに進めていきます。この機能を実装するためにより多くのRubyのコードを書いていくことになります。
 ## Add comment routes
 
 We'll start by creating a new route for the comments. This will be nested under the ideas routes, so we can derive which idea the comment belongs to from the route.
