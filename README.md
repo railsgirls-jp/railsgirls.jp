@@ -1,69 +1,73 @@
 # Rails Girls Guides 日本語版
 
-Rails Girls Guideの邦訳です。
+Rails Girls Guide の邦訳です。
 
-翻訳に参加する場合は、issueを開いて、どの部分を翻訳しているかを書きましょう。翻訳が終わってpushしたらissueを close します。
+翻訳に参加する場合は、issue を開いて、どの部分を翻訳しているかを書きましょう。翻訳が終わって push したら issue を close します。
 
-Rails Girls Tokyo開催に向けて話しあうメーリングリストは　https://groups.google.com/forum/#!forum/rails-girls-tokyo です。MLは公開していないので、参加リクエストをください。
+Rails Girls Tokyo 開催に向けて話しあうメーリングリストは https://groups.google.com/forum/#!forum/rails-girls-tokyo です。ML は公開していないので、参加リクエストをください。
 
 # 編集方法
 
-Rails Girls JP(Japanese) のサイトを編集したい場合は、このリポジトリの"Fork"ボタンをクリックしてForkしてください。以下の手順でローカルにファイルをダウンロードし、環境をつくります。
+Rails Girls JP (Japanese) のサイトを編集したい場合は、このリポジトリの "Fork" ボタンをクリックして fork してください。以下の手順でローカルにファイルをダウンロードし、環境をつくります。
 
 ```
-git clone git@github.com:YOURNAME/railsgirls-jp.github.io.git
-cd railsgirls-jp.github.io
-bundle install
+$ git clone git@github.com:YOURNAME/railsgirls.jp.git
+$ cd railsgirls.jp
+$ bundle install
 ```
 
-閲覧する場合は、以下の手順でWebサーバを起動し、ブラウザから http://localhost:4000 へアクセスします。
+閲覧する場合は、以下の手順で Web サーバを起動し、ブラウザから http://localhost:4000 へアクセスします。
 
 ```
-bundle exec jekyll serve --watch
+$ bundle exec jekyll serve --watch
 ```
 
 ## 既存のページを編集
 
-```_posts``` ディレクトリ以下にある、各ページのファイルを編集してください。
+`_posts` ディレクトリ以下にある、各ページのファイルを編集してください。
 
 ## ページを追加
 
 ```
-rake post title="my fabulous post"
+$ rake post title="my fabulous post"
 ```
 
-を実行すると、year-month-date-my-fabulous-post.markdown というテンプレートが ```_post``` ディレクトリに作られるので、これを編集します。```_post``` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われます。permalinkがある場合は、どこかのページから permalink で指定した URL へリンクします。
+を実行すると、`YYYY-MM-DD-my-fabulous-post.markdown` というテンプレートが `_posts` ディレクトリに作られるので、これを編集します。`_posts` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われます。permalink がある場合は、どこかのページから permalink で指定した URL へリンクします。
 
 ## 独立したページを追加
+
 このサイトの About や Event のような独立したページを作りたい場合は
 
 ```
-rake page name="something"
+$ rake page name="something"
 ```
 
-を実行します。この場合、something/index.html という名前でテンプレートが作られるので、これを編集します。このファイルも、どこかのページからリンクします。
+を実行します。この場合、`something/index.html` という名前でテンプレートが作られるので、これを編集します。このファイルも、どこかのページからリンクします。
 
 ## ブログを書く
 
 ```
-rake blog title="a cool entry"
+$ rake blog title="a cool entry"
 ```
 
-を実行すると、year-month-date-a-cool-entry.markdown というテンプレートが ```_posts/blog``` ディレクトリに作られるので、これを編集します。
+を実行すると `YYYY-MM-DD-a-cool-entry.markdown` というテンプレートが `_posts/blog` ディレクトリに作られるので、これを編集します。
 画像は `images/blog` におきます。
 
-#### HTMLで書く
-ブログエントリはmarkdownだけでなく、htmlでも書くことができます。htmlで書きたい場合は、`post_ext` オプションをつけてください。
+#### HTML で書く
+
+ブログエントリは markdown だけでなく、html でも書くことができます。html で書きたい場合は、`post_ext` オプションをつけてください。
+
 ```
-rake blog title="a cool entry" post_ext="html"
+$ rake blog title="a cool entry" post_ext="html"
 ```
 
 #### 記事一覧の画像を変更する
+
 ファイルの先頭の `image` に設定されている画像が記事一覧に表示されます。表示したい画像のパスに変更してください。
+
 ```
 image: /images/blog/awesome.png
 ```
-
 
 # pull request を送る
 
@@ -72,25 +76,26 @@ pull request を送ることで、本家のページに変更依頼をするこ�
 まず、ブランチを作成し、変更をコミットします。
 
 ```
-git checkout -b something_nice_branch_name
-git add 変更したファイル
-git commit -m "変更内容をここにコメントとして書きます"
+$ git checkout -b something_nice_branch_name
+$ git add 変更したファイル
+$ git commit -m "変更内容をここにコメントとして書きます"
 ```
 
-github の自分の(forkした先の)リポジトリへpushします。
+github の自分の (fork した先の) リポジトリへ push します。
+
 ```
-git push origin something_nice_branch_name
+$ git push origin something_nice_branch_name
 ```
 
 github の自分のリポジトリへブラウザでアクセスし、 "compare & pull request" ボタンを押し、内容を記述し、pull request を送ります。
 
 みなさんのご協力に感謝します！
 
-----
+---
 
-以下、オリジナルのREADMEそのままです。
+以下、オリジナルの README そのままです。
 
-----
+---
 
 Our aim is to give tools for women to understand technology. The Rails Girls events do this by providing a great first experience on building the Internet.
 
