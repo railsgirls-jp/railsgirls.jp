@@ -5,58 +5,58 @@ description: "Learn how the Ruby language syntax works and how to make dynamic H
 permalink: ruby-intro
 ---
 
-# Introduction to Ruby
+# Rubyの概要
 
-In the Rails Girls workshop you'll be working with the Ruby programming language, among others. The Rails framework that will run your app is written in Ruby, and to change it you need to write Ruby code.
+Rails Girlsワークショップでは、特にプログラミング言語Rubyを扱います。アプリを実行するRailsフレームワークは、Rubyで記述されています。これを変更するには Rubyコードを書く必要があります。
 
-Ruby is a language that's optimized for developer happiness, but like anything it will take some getting used to.
+Ruby は開発者の利便性を考慮して最適化された言語です。しかし、他の言語と同様に慣れるまでに時間がかかります。
 
-In programming, there are a lot of different ways to builds apps. This guide will be focussing on a small set of Ruby concepts you need to write your app. It assumes you haven't written any code before. If you want to learn more after this workshop, there are a lot of resources out there. Ask you coach or the organizers.
+プログラミングでは、アプリを構築する方法には様々なものがあります。このガイドでは、アプリを作成するために必要なRubyの概念の一部に焦点を当てます。これまでにRubyのコードを書いたことがない方を前提としています。このワークショップの後でさらに詳しく知りたい場合は、ほかにたくさんの教材があります。コーチかオーガナイザーに聞いてください。
 
 ## Hello world
 
-All good apps start with the "Hello world!" starter. You write your first code and your code greets you back.
+優れたアプリはすべて「Hello world!」という起点で始まります。最初のコードを書くと、コードが挨拶をしてくれます。
 
-Create a new file on your laptop–anywhere will do for now, just remember where–and name it `app.rb`. The `.rb` extension tells you, your (future) team and the computer what kind of file it is: a Ruby program.
+PC上に新しいファイルを作成します。ファイル名は`app.rb`と名前をつけます。作成するディレクトリはどこでも大丈夫ですが、作成した場所を覚えておいてください。拡張子の`.rb`は、あなた、あなたの（将来の）チーム、およびコンピュータに、それがどのような種類のファイルであるかを伝えます。つまり、`app.rb`はRubyプログラムです。
 
-In this `app.rb` file you can write Ruby code. Open the file in your Text Editor. Start by copying in this small example below to the new file and save the file.
+`app.rb`ファイルには Rubyコードを記述できます。テキストエディタでファイルを開きます。まず、以下の小さな例を新しいファイルにコピーし、ファイルを保存します。
 
 {% highlight ruby %}
 puts "Hello world!"
 {% endhighlight %}
 
-This app `puts` something. That means it will print something to the Terminal. In this case the text "Hello world!". Text values are indicated with double quotes (`"`) or single quotes (`'`) surrounding it.
+このアプリでは、なにかを`puts`します。つまり、ターミナルに何かしらのデータを出力します。この場合、文字列「Hello world!」です。文字列は二重引用符 (`"`) または一重引用符 (`'`) で囲みます。
 
-In the Terminal app you can run this app with the following command:
+ターミナルでは、次のコマンドを使用してこのアプリを実行できます。
 
 {% highlight sh %}
 ruby app.rb
 {% endhighlight %}
 
-Make sure you're in the same directory in the Terminal app as you created your `app.rb` file in. (You can also type in `ruby` and drag the file to your Terminal. It should add the path to the file to the Terminal command.)
+先程の`app.rb`ファイルを作成した時と同じディレクトリにいることをターミナルで確認してください。(`ruby`とターミナルで打ってから、`app.rb`ファイルをターミナルへドラッグしてください。これにより、ファイルパスがターミナルのコマンドに追加されます。)
 
-If it ran successfully you should see this output in the Terminal app:
+正常に実行された場合は、ターミナルに次の出力が表示されるはずです。
 
 {% highlight sh %}
 Hello world!
 {% endhighlight %}
 
-Your app is greeting you!
+あなたのアプリが挨拶してくれています！
 
-## Do some math
+## 計算してみよう
 
-To make your app more dynamic you can perform calculations on values:
+アプリをより動的にするために、数値の計算を実行できます。
 
 {% highlight ruby %}
 puts 100 + 23
 # 123
 {% endhighlight %}
 
-**Quick explanation about how to run Ruby apps**: Every time you see an example like the one above, you can copy the code into a local file, `app.rb` or a new one, to test it out. Then run it with the `ruby` command and the filename to see the output. For example: `ruby app.rb`
+**Rubyアプリの実行方法についての簡単な説明**: 上記のような例が表示されるたびに、コードをローカルファイル`app.rb`または新しいファイルにコピーして実行できます。次に、`ruby`コマンドとファイル名を指定して実行して、出力を確認します。例えば：`ruby app.rb`
 
-**Quick explanation about comments**: If you see the hashtag symbol (`#`)—also known as the number or pound symbol–in a code example, everything after that is considered a comment. Comments won't be run as Ruby code in your program. When you see a line of text with `# some text`, this is there to help explain what's happening and can be left out of your app code. It shows the printed output or the result of a line of code. It is also used to explain what certain code is doing in code examples themselves, without interfering with how the code works.
+**コメントに関する簡単な説明**: コード例にハッシュタグ記号 (`#`) (数字またはポンド記号とも知られている) が表示されている場合、それ以降はすべてコメントとみなされます。コメントはプログラム内でRubyのコードとして実行されません。`# some text`というテキスト行が表示されている場合、これは何が起こっているかを説明するためのものであり、アプリのコードから除外できます。出力結果やコード行の結果を示します。また、コード例自体で特定のコードが何を行っているかを説明するためにも使用されます。コードの動作を妨げることもありません。
 
-A couple other ways to perform calculations are shown below:
+計算を実行する他のいくつかの方法を以下に示します。
 
 {% highlight ruby %}
 puts 100 - 30
@@ -69,55 +69,55 @@ puts 10 / 5
 # 2
 {% endhighlight %}
 
-In the Terminal app run the app with the following command. It should print the results of the different calculations below one another.
+ターミナルで、次のコマンドを使用してアプリを実行します。さまざまな計算結果が、複数行に分かれて表示されるはずです。
 
 {% highlight sh %}
 ruby app.rb
 {% endhighlight %}
 
-## Variables
+## 変数
 
-Apps move around data as they process or change it. Data can get assigned to "variables". Variables hold data and point to a location in the computer's memory. When you reference a variable in our apps, you access the data in the computer's memory.
+アプリは、データを処理または変更するときにデータを移動します。データは「変数」に代入できます。変数はデータを保持し、コンピューターのメモリ内の場所を指します。アプリで変数を参照する時に、コンピューターのメモリ内のデータにアクセスします。
 
-In the example below the code has changed to define a variable named `greeting`. You can recognize this by the `greeting =` statement, ending with an equals sign. This form of statement assigns the value "Hello your name here" to the `greetings` variable. This variable holds some data, in this case the text value "Hello your name here". When we run this changed app, it will output "Hello your name here".
+以下の例では、 `greeting`という名前の変数を定義するようにコードが変更されています。`greeting =`という文法が等号の記号で終わっています。このことから、`greetings`変数に「Hello your name here」を代入していることがわかります。変数はなんらかのデータを保持するものです。この場合は文字列の「Hello your name here」です。この変更したアプリを実行すると「Hello your name here」と出力されます。
 
 {% highlight ruby %}
 greeting = "Hello your name here"
 puts greeting
 {% endhighlight %}
 
-Change the text between the quotes (`"`) to print your own text.
+自分で考えた文字列を出力するためには、引用符 (`"`) の間の文字列を変更します。
 
-## If-statement
+## if文
 
-A way to control the flow of your application is by using if-statements. These are branches in your code that do one thing or another based on one or more values.
+アプリケーションの処理の流れを制御する方法は、if文を使用することです。これらは、1つまたは複数の条件に基づいて何らかの処理を実行するコード内の条件分岐です。
 
-Using the `if` keyword, you can check if a condition is true. In the example below it checks if one value is larger than the other with the greater than symbol (`>`).
+`if`キーワードを使用すると、条件がtrueかどうかを確認できます。以下の例では、大なり記号 (`>`) を使用して、一方の値が他方の値より大きいかどうかを確認します。
 
 {% highlight ruby %}
-if 20 > 10 # if 20 is larger than 10
+if 20 > 10 # もし、20が10より大きい場合
   puts "20 is larger than 10"
 end
 {% endhighlight %}
 
-An if-statement consists of a `if` and `end`keyword. The `if` keyword starts the if-statement, and the `end` keyword closes it.  Every line of code between the `if` and `end` keywords is what Ruby will run if the condition after the `if` keyword is true.
+if文は`if`と`end`キーワードで構成されます。`if`キーワードはif文を開始し、`end`キーワードはif文を閉じます。`if`と`end`キーワードの間にあるコードの各行は、`if`キーワードの後に書かれている条件がtrueの場合に、Rubyが実行するものです。
 
-There are several ways to check values, some examples:
+値を確認するにはいくつかの方法があり、その例をいくつか示します。
 
 {% highlight ruby %}
-# Compare two texts
+# ２つの文字列を比較します
 if "Matz" == "Matz"
-  # Do something when the names match
-  # The double equal sign checks if two values match exactly
+  # 文字列が一致する場合、ここに書かれているコードを実行します
+  # == は2つの文字列が合致しているかを確認する記号です
 end
 
 if "Jim" != "Jane"
-  # Do something when the names don't match
-  # The exclamation mark with an equal sign checks if two values don't match
+  # 文字列が一致しない時に、ここに書かれているコードを実行します
+  # != は2つの文字列が合致しないかを確認する記号です
 end
 {% endhighlight %}
 
-In the examples above we've used values directly and these won't change, so an if-statement is not really necessary. In the real world, you'll most likely be using variables in if-statements. And the values in those variables will be based on some user input.
+上記の例では文字列を直接使用しており、文字列は変更されないため、if文は実際には必要ありません。現実の世界では、if文で変数を使うことがほとんどでしょう。これらの変数の値は、ユーザー入力に基づいています。
 
 {% highlight ruby %}
 value1 = 20
@@ -127,18 +127,18 @@ if value1 > value2
 end
 {% endhighlight %}
 
-You may also want to do some other behavior if the if-statements condition does not match.
+if文の条件が一致しない場合は、他の動作を実行することもできます。
 
 {% highlight ruby %}
 if value1 > value2
   puts "Yes"
 else
-  # This code is run when the if-statement's condition isn't true
+  # このコードはif文の条件がtrueでない時に、実行されます
   puts "No"
 end
 {% endhighlight %}
 
-It's even possible to create more branches in the same if-statement.
+同じif文内で、さらに多くの条件分岐を作成することもできます。
 
 {% highlight ruby %}
 if value1 == value2
@@ -150,11 +150,11 @@ else
 end
 {% endhighlight %}
 
-## Methods
+## メソッド
 
-One way to organize the code of the app is to use methods. Methods are reusable blocks of code that can be called by their name.
+アプリのコードを整理する方法のひとつとして、メソッドを使用する方法があります。メソッドは、再利用可能なコードのブロックです。指定した名前で呼び出すことができます。
 
-In the example below a method called `say_hello` has been defined with the `def` keyword for "define". The end of the method is indicated with the `end` keyword. When this method is called it performs everything between the line starting with `def` keyword and the line containing the `end` keyword.
+以下の例では、`say_hello`と呼ばれるメソッドが`def`キーワード（"define"という意味）と共に、定義されています。メソッドの終了は`end`キーワードで示されます。このメソッドが呼び出されると、`def`キーワードで始まる行と`end`キーワードを含む行の間のすべてが実行されます。
 
 {% highlight ruby %}
 def say_hello
@@ -162,16 +162,16 @@ def say_hello
 end
 {% endhighlight %}
 
-On its own, the method definition does nothing. This method is not called yet and the greeting is not printed.
+メソッド定義自体は何も行いません。このメソッドはまだ呼び出されておらず、挨拶は出力されません。
 
-You can use its name to call the method like so:
+次のように、その名前を使用してメソッドを呼び出すことができます。
 
 {% highlight ruby %}
 say_hello
 # Hello world
 {% endhighlight %}
 
-Once defined methods can be called many times. That makes it easier to do the same thing many times in an app.
+一度定義したメソッドは何度でも呼び出すことができます。これにより、アプリ内で手軽に同じことを何度も実行できるようになります。
 
 {% highlight ruby %}
 say_hello
@@ -182,9 +182,9 @@ say_hello
 # Hello world
 {% endhighlight %}
 
-### Method return values
+### メソッドの戻り値
 
-Methods return the value of the statement on the method's last line. If we don't want the method to always print the result to the Terminal, we can return it instead.
+メソッドは、メソッドの最後の行にあるコードの値を返します。メソッドが常にターミナルへ結果を出力させたくない場合は、代わりに結果を返すことができます。
 
 {% highlight ruby %}
 def say_hello
@@ -192,17 +192,17 @@ def say_hello
 end
 {% endhighlight %}
 
-To print the return value you need to pass the value returned by the method to the `puts` method like so:
+戻り値を出力するには、次のように`say_hello`メソッドの戻り値を`puts`メソッドに渡す必要があります。
 
 {% highlight ruby %}
 puts say_hello
 {% endhighlight %}
 
-This way of writing Ruby code is most commonly used, because it allows you to do more things than only print the return value, but perform other operations on it as well. In most apps you won't need to `puts`, or print, the values all the time. That's only for illustrative purposes in this guide.
+Rubyコードの書き方として、最も一般的なのものは、戻り値に対して他の処理を実行することです。戻り値を出力するだけではありません。ほとんどのアプリでは、値を`puts`メソッドで常に表示したりする必要はありません。このガイドでは、あくまでも説明のために、このような使い方をしています。
 
-### Method parameters
+### メソッド引数
 
-To make the method more dynamic you can use define it with a parameter. Then when you call it, pass in the name you want it to print.
+メソッドをより動的にするためには、引数を使用してメソッドを定義します。次に、それを呼び出すときに、表示させたい文字列を引数として渡します。
 
 {% highlight ruby %}
 def say_hello(your_name)
@@ -213,23 +213,23 @@ puts say_hello("Your name")
 # "Hello Your name"
 {% endhighlight %}
 
-When the `say_hello` method is called, the "Your name" value becomes the variable `your_name` in the method code. You can recognize this in the method definition line `def say_hello(your_name)`. The text `your_name` between the parentheses is the variable name. Then on the line with the `puts`, it's combined with the greeting: `"Hello #{your_name}!"`.
+`say_hello`メソッドが呼び出される時に、「Your name」の文字列は`say_hello`メソッド内の変数`your_name`になります。これは`def say_hello(your_name)`メソッドを定義している行で確認できます。括弧内の`your_name`は変数名です。次に`puts`の行では`say_hello`メソッドを組み合わせています。
 
-**Quick explanation on the `#` symbol usage**: Previously, this guide said that the hashtag symbol is used to indicate code comments. There are a couple exceptions, the most common one being combing two text values. In combination with curly brackets in double quoted text values, a variable can be inserted into another text value: `Text #{variable}`.
+**#シンボルの使用法に関する簡単な説明**: 以前、このガイドでは、ハッシュタグのシンボルはコメントを示すために使用されると説明しました。これには、いくつかの例外がありますが、最も一般的な例外は2つの文字列を結合することです。二重引用符(`"`)で囲まれた文字列と中括弧(`{}`)と組み合わせて、変数を別の文字列に挿入できます。`"Text #{variable}"`
 
-You'll notice that the way we call the method has changed, it now includes parentheses around the method parameters. The parentheses can be left out when no parameters are given.
+メソッドの呼び出し方法が変更され、メソッドの引数を括弧で囲むようになったことがわかります。引数を指定しない場合は、括弧を省略できます。
 
 {% highlight ruby %}
 def say_hello_without_parameter
   "Hello world!"
 end
 
-# Both ways of calling the method will work
+# どちらの方法でもメソッドを呼び出すことはできます
 puts say_hello_without_parameter
 puts say_hello_without_parameter()
 {% endhighlight %}
 
-Multiple method parameters can be defined. Use a comma between every parameter name. Parameters are added in order and can be referenced as such: the first value you give in will become the method's first parameter.
+メソッドには複数の引数を定義できます。すべての引数名の間にカンマを使用します。引数は順番に追加され、そのまま参照できます。最初に指定した値がメソッドの最初の引数になります。
 
 {% highlight ruby %}
 def say_hello_and_hobby(your_name, your_hobby)
@@ -243,13 +243,13 @@ puts say_hello_and_hobby("Yukihiro Matsumoto", "writing Ruby code")
 # "Hello Yukihiro Matsumoto! Your hobby is: writing Ruby code"
 {% endhighlight %}
 
-Calling the method with different method parameters changes the text that is printed.
+異なる引数を指定してメソッドを呼び出すと、出力される文字列が変更されます。
 
-## Classes
+## クラス
 
-The next step of organizing Ruby code is by using classes. By defining a class you can group several methods that relate to the same topic. We'll start with a class without methods to explain how classes work.
+Rubyコードを整理する次のステップは、クラスを使用することです。クラスを定義すると、同じトピックに関連する複数のメソッドをグループ化できます。クラスがどのように機能するかを説明するために、メソッドのないクラスから始めます。
 
-In the example below we have a class called `Greeter`. To use this class, we can initialize it with the `new` method on the class. We tell Ruby we want to call a method on the class by using the dot notation: `object.method`. In the example below that is the method `new`.
+以下の例には、 `Greeter`というクラスがあります。このクラスを使用するには、クラスの`new`メソッドを使用して初期化します。`Object.method`というドット表記を使用して、クラスのメソッドを呼び出したいことをRubyに伝えます。以下の例では、`new`メソッドがそう呼び出されています。
 
 {% highlight ruby %}
 class Greeter
@@ -258,7 +258,7 @@ end
 Greeter.new
 {% endhighlight %}
 
-Since our class doesn't do anything yet, let's add a method to it. In the example below, the `say_hello` method has been added to the class. We can tell because it's within the `class Greeter` and last `end` statement. Then, the Greeter class instance is assigned to a variable with `greeter =`. On the next line you can call the `say_hello` method on the `greeter` variable, which points to the class instance.
+このクラスはまだ何も実行していないので、メソッドを追加しましょう。以下の例では、`say_hello`メソッドがクラスに追加されています。`class Greeter`と最後の`end`の間に、メソッドを追加します。次に、Greeterクラスのインスタンスを`greeter =`で変数に代入します。次の行では、クラスインスタンスを指す変数`greeter`が、`say_hello`メソッドを呼び出していることがわかります。
 
 {% highlight ruby %}
 class Greeter
@@ -272,20 +272,20 @@ puts greeter.say_hello
 # "Hello world"
 {% endhighlight %}
 
-## Calling methods on values and variables
+## 値と変数に対するメソッドの呼び出し
 
-Everything in Ruby is an object, a class or an instance of a class. That means you can call methods on those objects. The "Hello world" text is an object, the value `true` is, and even the number `10` is.
+Rubyのいかなるものはオブジェクト、クラス、またはクラスのインスタンスです。つまり、それらのオブジェクトはメソッドを呼び出すことができます。「Hello world」という文字列はオブジェクトであり、数値`10`と`true`もオブジェクトです。
 
-Ruby has many types of objects that already have methods defined on them. In the example below you'll have Ruby calculate the number of individual characters in the text "Hello world". The result is 11.
+Rubyには、すでにメソッドが定義されているさまざまなタイプのオブジェクトがあります。以下の例では、Rubyに「Hello world」という文字列の文字数を計算させます。結果は11です。
 
 {% highlight ruby %}
 puts "Hello world".length
 # 11
 {% endhighlight %}
 
-Using the dot notation you tell Ruby you want to call a method on the value, in this case `length`.
+ドット表記を使用して、Rubyに値に対してメソッドを呼び出すことを伝えます この場合は`length`。
 
-It's also possible to first assign the value to a variable and then call the method on it. In this case you'll call the method `length` on the variable `text`.
+最初に文字列を変数に代入してから、その変数からメソッドを呼び出すこともできます。この場合、変数`text`に対して`length`メソッドを呼び出します。
 
 {% highlight ruby %}
 text = "Hello world"
@@ -293,7 +293,7 @@ puts text.length
 # 11
 {% endhighlight %}
 
-Some of these methods also accept parameters. In the example below you'll change the value stored on the `text` variable to output something different. For example, if you run the code below, it will replace "Hello" with "Hi there" in the `greeting` variable.
+これらのメソッドの中には引数を受け付けるものもあります。以下の例では、変数`text`に代入されている値を変更して、異なるものを出力します。例えば、以下のコードを実行すると、変数`greeting`内の「Hello」が「Hi there」に置き換えられます。
 
 {% highlight ruby %}
 text = "Hello your name here"
@@ -301,22 +301,22 @@ puts text.sub("Hello", "Hi there")
 # "Hi there your name here"
 {% endhighlight %}
 
-Ruby has many built-in methods, making it possible to do all kinds of operations. A couple examples are shown below.
+Rubyには多くの組み込みメソッドがあり、あらゆる種類の操作を行うことができます。いくつかの例を以下に示します。
 
 {% highlight ruby %}
-puts "Hello world".upcase # Make all letters uppercase
+puts "Hello world".upcase # 全ての文字を大文字にします
 # HELLO WORLD
 
-puts "Hello world".reverse # Reverse the text
+puts "Hello world".reverse # 文字を逆順に並び替えます
 # dlrow olleH
 
-puts "Hello world".count("l") # Count the number of occurrences of the letter "l"
+puts "Hello world".count("l") # lが何個文字列に含まれているかをカウントします。
 # 3
 {% endhighlight %}
 
-## Class instance variables
+## クラスインスタンス変数
 
-Let's go back to your own Greeter class you created earlier. You previously added parameters to methods, let's add a parameter to the class now.
+前に作成した独自のGreeterクラスに戻りましょう。前にメソッドに引数を追加しました。今度はクラスに引数を追加しましょう。
 
 {% highlight ruby %}
 greeter = Greeter.new("students")
@@ -324,7 +324,7 @@ puts greeter.say_hello
 # Hello students!
 {% endhighlight %}
 
-Like the `say_hello` method, the `new` word also references a method. An object with the value `"students"` is given. This `new` method is a little different, it will eventually call the `initialize` method on the Greeter class.
+`say_hello`メソッドと同様に、この`new`もメソッドです。オブジェクトである文字列`"students"`が与えられます。この`new`メソッドは少し異なり、最終的にGreeterクラスの`initialize`メソッドを呼び出します。
 
 {% highlight ruby %}
 class Greeter
@@ -338,11 +338,11 @@ class Greeter
 end
 {% endhighlight %}
 
-You'll notice something new in the example above. There are two types of variables, the `name` method parameter that becomes a variable, and the `@name` variable. The last one is called an instance variable. You can recognize it by the `@` symbol in front of it. Instance variables can be referenced all through a class where a normal variable cannot. Normal variables can only be referenced within the context of the method in which they are declared. Once declared in the `initialize` method of the Greeter class, you can reference it in the `say_hello` method later.
+上の例では、何か新しいことに気づくでしょう。変数は2種類あります。メソッドの引数`name`と変数`@name`に分けることができます。後者の変数はインスタンス変数と呼ばれます。`@`記号で、インスタンス変数であることを認識できます。インスタンス変数は、通常の変数では不可能なクラス全体を通して参照することができます。通常の変数は、宣言したメソッドのコンテキスト内でのみ参照できます。Greeter クラスの`initialize`メソッドで宣言すると、後の`say_hello`メソッド内で参照することできます。
 
-## Loops
+## ループ
 
-For the last topic we'll be briefly looking at loops. Loops are a way to run the same code for different values. Like greeting multiple people, as shown in the example below.
+最後のトピックでは、ループについて簡単に説明します。ループは、異なる値に対して同じコードを実行する方法です。以下の例に示すように、複数の人に挨拶することができます。
 
 {% highlight ruby %}
 names = ["students", "Rails Girls", "coaches"]
@@ -352,11 +352,11 @@ names.each do |name|
 end
 {% endhighlight %}
 
-The `names` list is called an Array, you can recognize them by the square brackets surrounding the several text values. Each value in the Array is separated by a comma. By calling the `each` method on the Array of names, you can perform a block of code for each value in the Array.
+この`names`リストは配列と呼ばれます。いくつかの文字列を囲む角括弧によって、配列であると認識できます。配列内の要素はカンマで区切られます。配列`names`に対して`each`メソッドを呼び出すことにより、配列内の各要素に対してコードのブロックを実行できます。
 
-Blocks are a common occurrence in Ruby. They can be recognized by the `do` keyword, like in `names.each do`. Block parameters look a little different, instead of parentheses, it uses what's called the pipe symbol `|`, like in `|name|`. As the block gets called multiple times, the value in the `name` variable will change with each time the loop is called. First it will be "students", then "Rails Girls" and finally "coaches".
+Rubyではブロックがよく出てきます。これらは、`name.each do`の中の`do`キーワードによって認識できます。ブロック引数の見た目は少し異なり、かっこの代わりに、 `|`のようなパイプシンボルと呼ばれるものが使用されます。今回は`|name|`。ブロックが複数回呼び出されると、ループが呼び出されるたびに変数`name`の値が変化します。最初は「students」、次に「Rails Girls」、最後に「coaches」になります。
 
-The output of this app will be:
+このアプリの出力は、次のようになります：
 
 {% highlight text %}
 Hello students!
@@ -364,13 +364,13 @@ Hello Rails Girls!
 Hello coaches!
 {% endhighlight %}
 
-## Embedded Ruby (ERB)
+## 組み込みルビー(ERB)
 
-When writing Rails apps you'll encounter ERB (Embedded Ruby). This is a slightly different way of writing Ruby. This way of writing Ruby is embedded in HTML files. This helps make the Rails app show the content on webpages dynamically.
+Railsアプリを作成するときは、ERB (Embedded Ruby) に遭遇するでしょう。これはRubyの少し異なる書き方です。この書き方のRubyはHTMLファイルに埋め込まれています。これは、Rails プリが Web ページ上のコンテンツを動的に表示するのに役立ちます。
 
-You'll recognize it by the file extension ending with `.erb`. A full filename looks something like `index.html.erb`.
+`.erb`で終わるファイル拡張子でERBであることがわかります。ちゃんとファイル名を書くと、ファイル名は、`index.html.erb`のようになります。
 
-In an ERB file you'll find HTML tags. You can recognize them by the lines that start with a smaller than symbol `<`, and end with a greater than symbol `>`. The letter or letters between those symbol indicate what type of element the page should render: a "p" for paragraph, an "a" for a link, an "img" for an image, an "ul" or "ol" for a list and many other types of elements. Each element has an opening tag like this: `<p>` and a closing tag with a slash symbol in it: `</p>`. You can nest these elements in on another to create webpages much like this one.
+ERB ファイルには HTML タグがあります。これらは、小なり記号(`<`)で始まり、大なり記号(`>`)で終わる行によって識別できます。これらの記号の間の文字は、ページがレンダリングする要素のタイプを示します。段落の場合は「p」、リンクの場合は「a」、画像の場合は「img」、画像の場合は「ul」または「ol」です。他に多くの種類の要素があります。各要素には、次のような開始タグ`<p>`と、スラッシュ記号を含む終了タグ`</p>`があります。これらの要素を別の要素にネストして、このような Web ページを作成できます。
 
 {% highlight html %}
 <p>I am a paragraph</p>
@@ -388,9 +388,9 @@ In an ERB file you'll find HTML tags. You can recognize them by the lines that s
 </div>
 {% endhighlight %}
 
-Where ERB comes in is to make the page show things dynamically. For example: when you enter a search phrase on Google.com, it shows different results for different phrases. That's done with some language like ERB, where ERB is one of the ways used by Ruby apps.
+ERB 登場するのは、ページ内容を動的に表示させることです。たとえば、Google.comで検索フレーズを入力すると、フレーズごとに異なる結果が表示されます。これはERBなどの言語で行われます。ERBは Rubyアプリで使用される方法の1つです。
 
-In the example below the code will use a loop to render a list of ideas. The ERB elements can be recognized by the same HTML symbols, but they also include a percentage symbol: `<%` and `%>`. If you want to print something on the page, use the `<%=` tag opener with the percentage symbol and the equals symbol.
+以下のコード例では、ループを使用してアイデアのリストを表示します。ERB要素は同じ HTML記号で認識できますが、パーセント記号 (`<%`および`%>`)も含まれています。ページ上に何かを表示したい場合は、パーセント記号と等号を備えた開始タグ`<%=`を使用します。
 
 {% highlight erb %}
 <% @ideas.each do |ideas| %>
@@ -398,7 +398,7 @@ In the example below the code will use a loop to render a list of ideas. The ERB
 <% end %>
 {% endhighlight %}
 
-The output of which can be something like this:
+出力は次のようになります。
 
 {% highlight html %}
 <p>Flying car</p>
@@ -406,32 +406,32 @@ The output of which can be something like this:
 <p>Time travel</p>
 {% endhighlight %}
 
-A short reference of how ERB works:
+ERB の仕組みに関する簡単なリファレンス:
 
 {% highlight erb %}
-# Use the <% and %> symbols for logic
+# Rubyのコードで処理させたいときは、<% と %>を使います
 <% Ruby code here %>
 
-# For example an if-statement
+# if文の例
 <% if a > b %>
   Show something if a is larger than b
 <% end %>
 
-# For example a loop
+# ループの例
 <% @ideas.each do |ideas| %>
   <p><%= item.title %></p>
 <% end %>
 
-# Use the <%= and %> symbols for printing text on the webpage
+# Webページに文字列を出力する場合、<%= と %> を使用します
 <%= variable_name %>
 <%= object.method_name %>
 <%= item.title %>
 {% endhighlight %}
 
-## Next steps
+## 次のステップ
 
-You've now read a short introduction to Ruby. This guide doesn't cover everything, but you should have an idea of the Ruby language syntax.
+これで、Rubyの概要を読み終わりました。このガイドではすべてを説明できているわけではありませんが、Ruby言語の構文については理解しておく必要があります。
 
-Interested in learning more about Ruby and the different types of data Ruby supports? Try out Ruby on [Try Ruby](https://try.ruby-lang.org/).
+RubyとRubyがサポートするさまざまな種類のデータについて詳しく知りたいですか? [Rubyを試す](https://try.ruby-lang.org/)でRubyを試してください。
 
-If you want to continue working on your app instead, follow the [main guides](/#guides).
+代わりにアプリの作業を続行したい場合は、[メインガイド](/#guides)に従ってください。
