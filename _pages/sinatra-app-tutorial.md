@@ -4,25 +4,25 @@ title: Rails Girls Sinatra tutorial
 permalink: sinatra-app
 ---
 
-# Create your first voting app with Sinatra
+# Sinatraを使って初めての投票アプリを作ってみよう
 
-*Created by Piotr Szotkowski, [@chastell](https://twitter.com/chastell)*
+*Created by Piotr Szotkowski, [@chastell](https://twitter.com/chastell)* / *翻訳者: Junichi Ito, [@jnchito](https://twitter.com/jnchito)*
 
-We will create a little voting app from scratch using a web development framework for Ruby called Sinatra, which is much like Ruby on Rails. Just another tool to get the job done really, and a fun one too!
+SinatraというRuby製のweb開発フレームワークを使って、ゼロから簡単な投票アプリを作ってみましょう。SinatraはRuby on Railsによく似ています。Railsと同様に、Sinatraも何かやりたいことを実現できて、とても楽しいツールです！
 
-Imagine your group of friends is figuring out what to order for your weekly movie watching marathon. With the many fast food options out there, this can become quite a discussion. This is where our app comes into play!
+毎週開催している映画鑑賞マラソン向けに、友だちのグループでどんな軽食を注文しようか相談している様子を想像してください。ファストフードの選択肢はたくさんあるため、注文を決める議論には時間がかかりそうです。そこで私たちのアプリが活躍します！
 
-__COACH__: Explain shortly what [Sinatra](http://www.sinatrarb.com) is.
+__COACH__: 手短に [Sinatra](https://www.sinatrarb.com) が何なのかを説明してください。
 
-## Install Sinatra
+## Sinatraをインストールする
 
-Remember how we needed to install Ruby on Rails? Similarly we need to install Sinatra:
+Ruby on Railsをインストールするのに必要だった作業を思い出してください。Sinatraでも同じことをする必要があります。
 
 `gem install sinatra`
 
-### Create your first Sinatra app
+### 初めてのSinatraアプリを作る
 
-Create a `suffragist.rb` file with the following contents:
+`suffragist.rb` ファイルを作成し、以下の内容を書き込んでください。
 
 {% highlight ruby %}
 require 'sinatra'
@@ -33,26 +33,21 @@ end
 {% endhighlight %}
 
 
-You can actually call your Ruby file whatever you'd like. `vote.rb` for instance would totally work as well, when used consistently. But [suffragist](http://www.vocabulary.com/dictionary/suffragist) actually references to a super important event in the women's rights movement, so let's just go with that for now!  
+このRubyファイルには好きな名前を付けることができます。たとえば`vote.rb`という名前を付けても同じように動作します。しかし、"suffragist"（訳注：[「婦人参政権論者」](https://ejje.weblio.jp/content/suffragist)の意）は女性の権利運動における重要なできごとに関連しているので、今回はこの名前で行きましょう！
 
 
-### Run your app
+### アプリを動かす
 
-Go to the directory where you put your app and run `ruby suffragist.rb`.
-Now you can visit <a href="localhost:4567" target="_blank">localhost:4567</a>. You should
-see a ‘Hello, voter!’ page, which means that the generation of your new
-app worked correctly. Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to shut down the server. If <kbd>Ctrl</kbd>+<kbd>C</kbd> does not work for you it means you are probably Windows user and <kbd>Ctrl</kbd>+<kbd>Z</kbd>/ <kbd>Ctrl</kbd>+<kbd>Pause</kbd> / <kbd>Ctrl</kbd>+<kbd>Break</kbd> will fix the issue)
+アプリを配置したディレクトリに移動し、`ruby suffragist.rb`を実行してください。すると、<a href="localhost:4567" target="_blank">localhost:4567</a>にアクセスできます。ページには"Hello, voter!"と表示されているはずです。これは新しく作ったアプリが正常にページを生成した証拠です。ターミナル上で <kbd>Ctrl</kbd>+<kbd>C</kbd> を入力し、サーバを停止してください（ <kbd>Ctrl</kbd>+<kbd>C</kbd> で停止できない場合は、Windows環境だからかもしれません。その場合は <kbd>Ctrl</kbd>+<kbd>Z</kbd>/ <kbd>Ctrl</kbd>+<kbd>Pause</kbd> / <kbd>Ctrl</kbd>+<kbd>Break</kbd> を入力すれば停止するはずです）。
 
-__COACH__: Explain POST and GET methods, and how to communicate with the browser.
+__COACH__: POSTメソッドとGETメソッドについて説明してください。さらに、それがブラウザとどのように通信するのかについても説明してください。
 
 
+### indexビューを追加する
 
-### Add the index view
+きちんと整理整頓するために、ビューを保存するディレクトリを作りましょう（そのディレクトリは`views`という名前にします）。
 
-To keep everything in order let’s make
-a directory for our views (and name it `views`).
-
-Put this code into an `index.erb` file in the `views` directory:
+`views`ディレクトリに`index.erb`というファイルを作り、以下のコードを入力してください。
 
 {% highlight erb %}
 <!DOCTYPE html>
@@ -81,7 +76,7 @@ Put this code into an `index.erb` file in the `views` directory:
 </html>
 {% endhighlight %}
 
-And into `suffragist.rb`:
+`suffragist.rb`には以下のコードを入力します。
 
 {% highlight ruby %}
 Choices = {
@@ -92,7 +87,7 @@ Choices = {
 }
 {% endhighlight %}
 
-Change the `get` action:
+それから `get` アクションを変更してください。
 
 {% highlight ruby %}
 get '/' do
@@ -100,18 +95,14 @@ get '/' do
 end
 {% endhighlight %}
 
-Run `ruby suffragist.rb`, check your
-results and shut down the server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+`ruby suffragist.rb`を実行し、結果を確認したらサーバを <kbd>Ctrl</kbd>+<kbd>C</kbd> で停止してください。
 
-__COACH__: Talk a little about HTML and erb. Explain
-templates. Explain what global constants are.
+__COACH__: HTMLとerbについて簡単に話してください。テンプレートについても説明してください。グローバルな定数が何なのかも説明してください。
 
 
+### テンプレート
 
-### Templates
-
-Adjust the `index.erb` file in the `views`
-directory and add the `<h1>…</h1>` line:
+`views`ディレクトリの`index.erb`ファイルを開いて、 `<h1>…</h1>` の行を追加してください。
 
 {% highlight erb %}
   <body class='container'>
@@ -119,7 +110,7 @@ directory and add the `<h1>…</h1>` line:
     <p>What's for dinner?</p>
 {% endhighlight %}
 
-Change the `get` action:
+`get`アクションを以下のように変更してください。
 
 {% highlight ruby %}
 get '/' do
@@ -128,14 +119,12 @@ get '/' do
 end
 {% endhighlight %}
 
-__COACH__: Explain what instance variables are and
-how Sinatra makes them visible in the views.
+__COACH__: インスタンス変数とは何なのか、そしてSintraではそれをどうやってビューで表示しているのかを説明してください。
 
 
+### 結果を投票（POST）できる機能を追加する
 
-### Add the ability to POST results
-
-Put this into `suffragist.rb`:
+以下のコードを`suffragist.rb`に追加します。
 
 {% highlight ruby %}
 post '/cast' do
@@ -145,8 +134,7 @@ post '/cast' do
 end
 {% endhighlight %}
 
-Create a new file in the `views` directory, `cast.erb`,
-and put there some HTML with embedded Ruby code:
+`views`ディレクトリに`cast.erb`という新しいファイルを作成し、Rubyのコードが埋め込まれたHTMLを入力してください。
 
 {% highlight erb %}
 <!DOCTYPE html>
@@ -164,15 +152,12 @@ and put there some HTML with embedded Ruby code:
 </html>
 {% endhighlight %}
 
-__COACH__: Explain how POST works. How to catch what
-was sent in the form? Where do `params` come from?
 
+__COACH__: POSTがどのように動作するのかを説明してください。フォームから何が送信されたのかを確認するにはどうすればいいですか？`params`はどこからやってきたのでしょうか？
 
+### 共通レイアウトを使ってリファクタリングする
 
-### Factor out a common layout
-
-Create a `layout.erb` file in the `views`
-directory. Put the following in there:
+`views`ディレクトリに`layout.erb`を作成してください。そこに次のコードを入力してください。
 
 {% highlight erb %}
 <!DOCTYPE html>
@@ -189,17 +174,14 @@ directory. Put the following in there:
 </html>
 {% endhighlight %}
 
-Remove the above part from the other two templates
-(`index.erb` and `cast.erb` in the `views` directory).
+他の2つのテンプレートから上記のコードを削除してください（2つのテンプレートとは`views`ディレクトリの`index.erb`と`cast.erb`のことです）。
 
-__COACH__: Talk about the structure of HTML documents and how factoring
-out common code work in general. Explain what `yield` does.
+__COACH__: HTMLの構造と、コードを共通化する一般的なリファクタリング方法について説明してください。`yield`の役割についても説明してください。
 
 
+### resultsというルーティングとビューを追加する
 
-### Add the results route and the results view
-
-Paste the following code into `suffragist.rb`:
+以下のコードを`suffragist.rb`にペーストしてください。
 
 {% highlight ruby %}
 get '/results' do
@@ -208,7 +190,7 @@ get '/results' do
 end
 {% endhighlight %}
 
-Create a new file in the `views` directory, called `results.erb`.
+`views`ディレクトリに`results.erb`という新しいファイルを作成してください。
 
 {% highlight erb %}
 <table class='table table-hover table-striped'>
@@ -226,23 +208,22 @@ Create a new file in the `views` directory, called `results.erb`.
 Run `ruby suffragist.rb`, check
 your results and shut down the server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-__COACH__: Explain HTML tables and how the
-missing values from the hash default to zero.
+`ruby suffragist.rb`を実行し、結果を確認したら <kbd>Ctrl</kbd>+<kbd>C</kbd> でサーバを停止してください。
+
+__COACH__: HTMLテーブルについて説明してください。ハッシュの値が見つからないときにデフォルトで0になる理由についても説明してください。
 
 
+### YAML::Storeを使って結果を永続化する
 
-### Persist the results using YAML::Store
+新しいことをやるときが来ました！選択した結果を保存しましょう。
 
-Time for something new! Let’s store our choices.
-
-Add the following to the top of `suffragist.rb`:
+`suffragist.rb`の一番上に以下のコードを追加してください。
 
 {% highlight ruby %}
 require 'yaml/store'
 {% endhighlight %}
 
-Add some more code into `suffragist.rb` – replace
-`post '/cast'` and `get '/results'` with the following:
+`suffragist.rb`にさらにコードを追加します。`post '/cast'` と `get '/results'` を以下のコードに置き換えてください。
 
 {% highlight ruby %}
 post '/cast' do
@@ -265,27 +246,24 @@ get '/results' do
 end
 {% endhighlight %}
 
-__COACH__: Explain what YAML is.
+__COACH__: YAMLが何なのかを説明してください。
 
 
-### See how the YAML file changes when votes are cast
+### 投票時のYAMLファイルの変化を確認する
 
-Let’s open `votes.yml`. And vote. And check again.
+`votes.yml`を開きましょう。そして投票してください。それからもう一度確認してください。
 
-__COACH__: There will be situations when one or more students will
-forget to shut down the server before running it again. It’s a good
-opportunity to search the Internet for a solution. They don’t
-have to know everything about killing processes to find a solution.
+__COACH__: サーバを再実行する前にサーバの停止を忘れる生徒がときどきいます。
+解決策をインターネットで検索する良い機会です。解決策を検索する上で、プロセスをすべてkillする全ての方法を知る必要はありません。
 
-__COACH__: In the end explain shortly the differences between Sinatra and Rails.
+__COACH__: 最後にSinatraとRailsの違いを簡単に説明してください。
 
 
+## アプリで遊んでみる
 
-## Play with the app
+自分の好きなようにアプリを変更してみましょう。
 
-Try to change things in the app in any way you see fit:
-
-* Add some additional logic to the views.
-* Redirect to the results outright.
-* Add other votings; how would the YAML file need to change?
-* Try to style the file in different ways.
+* ビューにロジックを追加してみる
+* resultsに直接リダイレクトしてみる
+* さらに投票してみる。YAMLファイルはどう変化するか？
+* いろんな方法でファイルにスタイルを適用してみる
