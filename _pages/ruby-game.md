@@ -4,54 +4,50 @@ title: Write a little game in Ruby!
 permalink: ruby-game
 ---
 
-# Write a little game in Ruby!
+# Rubyで簡単なゲームを作ってみよう！
 
-*Created by Patrick Huesler, [@phuesler](https://twitter.com/phuesler) & Floor Drees, [@floordrees](https://twitter.com/floordrees) for [Rails Girls The Hague](https://railsgirls.com/thehague)*
+*Created by Patrick Huesler, [@phuesler](https://twitter.com/phuesler) & Floor Drees, [@floordrees](https://twitter.com/floordrees) for [Rails Girls The Hague](https://railsgirls.com/thehague)* / *翻訳者: Yuya Yoshioka, [@yuya333_](https://twitter.com/yuya333_)*
 
-[gosu](http://www.libgosu.org/) is a 2D game development library. Gosu features easy to use and game-friendly interfaces to 2D graphics and text (accelerated by 3D hardware), sound samples and music as well as keyboard, mouse and gamepad/joystick input. Also includes demos for integration with RMagick, Chipmunk and OpenGL.
+[gosu](http://www.libgosu.org/)は2Dゲームを開発するためのライブラリです。Gosuは2Dグラフィックスやテキスト（３Dハードウェアによる高速化），音源のサンプルや音楽，キーボード，マウス，ゲームパッド/ジョイスティックの入力に対して，使いやすくゲームに適したインタフェースを提供しているという特徴があります。また，RMagick，Chipmunk，OpenGLとの統合のデモも含まれています。
 
-The actual source code, wiki, issue tracker etc. are all [hosted on GitHub](http://github.com/jlnr/gosu/). The best entry point into Gosu's documentation is the [wiki home page](http://github.com/jlnr/gosu/wiki).
-Install:
+実際のソースコード，wikiやissue trackerは[GitHub上に公開されています](http://github.com/jlnr/gosu/)。Gosuのドキュメントの最適な入り口は[wikiのホームページ](http://github.com/jlnr/gosu/wiki)です。
+インストール方法:
 {% highlight sh %}
 gem install gosu
 {% endhighlight %}
 
-or add `gem "gosu", "~> 0.7.48"` to your Gemfile and run `bundle`.
-Play around with the example games:
+もしくは，`gem "gosu", "~> 0.7.48"` をGemfileに追加して `bundle` を実行してください。
+サンプルゲームを試してみましょう:
 {% highlight sh %}
 cd $GEM_HOME/gems/gosu-0.7.48/examples
 {% endhighlight %}
 
-and then: `ruby CptnRuby.rb`
+そして `ruby CptnRuby.rb`または`ruby RMagickIntegration.rb`または`ruby Tutorial.rb`を実行してください。
 
-or: `ruby RMagickIntegration.rb`
+### 先ほどの例ですでに十分なはずです！
 
-or: `ruby Tutorial.rb`
+レポジトリをターミナル（もしくは新しいタブ）を開いてコピーしましょう。もしRails Girlsのアプリケーションを開発していれば，```cd```コマンドを実行してホームディレクトリに移動してください。
 
-### Enough with those examples already!
-
-Copy the repository by opening (a new tab in your) terminal. If you were working on the Rails Girls app in the mean time, make sure you're in your home directory by running ```cd```.
-
-Now run
+次のコマンドを実行しましょう。
 {% highlight sh %}
 git clone https://github.com/FloorD/gosu_tutorial_RG_TH.git
 {% endhighlight %}
 
-aaand change into the proper directory using
+そして，以下のコマンドを使用して適切なディレクトリに移動してください。
 {% highlight sh %}
 cd gosu_tutorial_RG_TH/jumpingem
 {% endhighlight %}
 
-### Run!
+### 実行しましょう！
 
-To play our little game, open it using the terminal:
+ミニゲームで遊ぶために，ターミナルを使用して起動してみましょう。
 {% highlight sh %}
 ruby game.rb
 {% endhighlight %}
 
-### So how does this work?
+### このゲームはどのように動いているのでしょうか？
 
-Let's inspect some code, shall we? Open `game.rb` in your texteditor. See the
+コードを調べてみませんか？テキストエディターで`game.rb`を開き，ファイルの先頭の以下のコードを見てみましょう。
 
 {% highlight ruby %}
 !/usr/bin/env ruby -w
@@ -60,15 +56,15 @@ require 'gosu'
 include Gosu
 {% endhighlight %}
 
-... right at the top of your file? Here we make sure we 'call' the necessary gem, so we can move on to our `class` (or multiple classes).
-So we have our
+ここでは，必要なgemを'呼び出している'ことを確認しましょう。それでは，`class`（もしくは多重クラス）に移動しましょう。
+ここには以下のコードがありますね。
 
 {% highlight ruby %}
 class Game < Window
 end
 {% endhighlight %}
 
-... thing going on. The `def`'s you see within this Game class, are  methods. Here we **def**ine which instructions the program should follow. Just take a look at the following snippet:
+このGameクラスの中に書かれている`def`はメソッドです。ここでは，どのようにプログラムの処理が行われるべきか定義(**def**ine)しています。次のスニペットを見てください。
 {% highlight ruby %}
 def draw
   draw_quad 0, 400, Color::WHITE, 640, 400, Color::WHITE, 640, 500, Color::WHITE, 0, 500, Color::WHITE
@@ -83,9 +79,9 @@ def draw
 end
 {% endhighlight %}
 
-Want to play around a bit? Copy the contents of `game.rb` in a new `.rb` file. Save it and name it as you'd like. Now try and change some stuff in the game and run it in your terminal to see the changes.
+少し試してみたくないですか？`game.rb`の中身を別の`.rb`ファイルにコピーしましょう。保存し好きな名前をつけましょう。ゲームで遊んでみて，中身を少し変えてターミナルで実行し，変化をみてみましょう。
 
-Think you have more graphic skills than Patrick (you probably do)? Then you can try and create a new `sprites.png`! Don't forget to call it here:
+あなたはPatrickよりも優れたグラフィックスのスキルを持っていると思いますか？（もしかしたら本当に持っていますか？）それなら，新しい`sprites.png`を作ってみましょう！ここで呼び出しているコードを忘れないでください。
 
 {% highlight ruby %}
 def initialize
@@ -99,10 +95,10 @@ def initialize
   end
 {% endhighlight %}
 
-And see the `Game.new.show`? That creates a new instance. It has no memory, so when you get stuck in the game, you can just start a new game. Have fun!
+`Game.new.show`がわかりますか？これは新しいインスタンスを作ります。メモリがなくなり，ゲームが動かなくなった時は新しいゲームを始めてください。楽しんでください！
 
-#### Credits
+#### クレジット
 
-The assets used in vim adventures, you can find them [here](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
+vim adventuresで使用されるアセットは[ここ](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)で見つけられます。
 
-The sounds usedm you'll find over at [Matthew Klingensmith (www.matthewklingensmith.com)](http://opengameart.org/content/matts-creative-commons-music)
+使用されている音源は，[Matthew Klingensmith (www.matthewklingensmith.com)](http://opengameart.org/content/matts-creative-commons-music)で見つけられます。
