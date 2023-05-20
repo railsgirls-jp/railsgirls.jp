@@ -69,6 +69,7 @@ end
 {% endhighlight %}
 
 commentは、`Idea`モデルを参照する`belongs_to :idea`という行によって、文字通り「ideaに属している」ことをすでに認識しています。これは、先ほどのマイグレーションで自動的に追加されました。
+
 ## データベースからコメントを取得しよう
 
 `app/controllers/ideas_controller.rb`には`def show`と書かれた行があります。Rubyではこれらをメソッドと呼んでいます。`show`メソッドはデータベースからビュー（以前編集したHTMLが含まれるファイル） で使用するデータを読み込む役割を担っています。
@@ -106,7 +107,7 @@ ni app/controllers/comments_controller.rb
 
 {% highlight ruby %}
 class CommentsController < ApplicationController
-  before_action :set_idea, only: %i[create]
+  before_action :set_idea, only: %i[create destroy]
   before_action :set_comment, only: %i[destroy]
 
   def create
@@ -122,7 +123,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
 
-    redirect_to comments_url, notice: "Comment was successfully destroyed."
+    redirect_to idea_path(@idea), notice: "Comment was successfully destroyed."
   end
 
   private
@@ -160,7 +161,7 @@ end
     <div>
       <p><strong><%= comment.user_name %></strong></p>
       <p><%= comment.body %></p>
-      <%= button_to "Destroy this comment", comment_path(comment), method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
+      <%= button_to "Destroy this comment", idea_comment_path(@idea, comment), method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
     </div>
   <% end %>
 <% else %>
@@ -168,7 +169,7 @@ end
 <% end %>
 
 <h2>Add a new comment</h2>
-<%= render partial: "comments/form", locals: { comment: @comment } %>
+<%= render partial: "comments/form", locals: { idea: @idea } %>
 {% endhighlight %}
 
 このコードでcommentsが表示されますが、その前にcommentsを作成する手段が必要です。そのために、最後の2行ではコメント投稿フォームをレンダリングしています。コメント投稿フォームは次のステップで作成します。
