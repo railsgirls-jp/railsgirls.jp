@@ -60,14 +60,14 @@ irb(main):002:0> exit
 ## 管理パネルへのアクセス
  [http://localhost:3000/admin](http://localhost:3000/admin) にアクセスし、先ほど作成した認証情報でログインします。
 
-ほら見て！新しいActive Adminダッシュボードにアクセスできました。
+見てください！新しいActive Adminダッシュボードにアクセスできました。
 
 ## バックエンドに「Ideas」を追加
 `Idea`モデルを Active Admin に登録するためには、以下を実行します。
 {% highlight sh %}
 $ rails generate active_admin:resource Idea
 {% endhighlight %}
-管理ページを更新すると、ナビゲーションに[Ideas](http://localhost:3000/admin/ideas)が表示されます。
+管理画面を更新すると、ナビゲーションに[Ideas](http://localhost:3000/admin/ideas)が表示されます。
 
 *「Idea」を任意のモデルに置き換えて、そのモデルを Active Admin に登録することもできます。*
 
@@ -89,7 +89,7 @@ resources :ideas, only: [:show, :index]
 
 **フロントエンドコードから、次のような、使用できなくなったリンクを削除するのを忘れないでください。** `<%= link_to 'New Idea', new_idea_path %>`, `<%= link_to 'Edit', edit_idea_path(idea) %>`, `<%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %>`
 
-さあ見て！新しい管理パネルからアイデアを管理できるようになりました！
+さあ見てください！新しい管理パネルからアイデアを管理できるようになりました！
 
 ## 次は?
 
