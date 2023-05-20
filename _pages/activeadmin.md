@@ -57,7 +57,7 @@ irb(main):001:0> AdminUser.create(:email => 'admin@railsgirls.com', :password =>
 irb(main):002:0> exit
 {% endhighlight %}
 
-## 管理パネルへのアクセス
+## 管理画面へのアクセス
  [http://localhost:3000/admin](http://localhost:3000/admin) にアクセスし、先ほど作成した認証情報でログインします。
 
 見てください！新しいActive Adminダッシュボードにアクセスできました。
@@ -89,7 +89,7 @@ resources :ideas, only: [:show, :index]
 
 **フロントエンドコードから、次のような、使用できなくなったリンクを削除するのを忘れないでください。** `<%= link_to 'New Idea', new_idea_path %>`, `<%= link_to 'Edit', edit_idea_path(idea) %>`, `<%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %>`
 
-さあ見てください！新しい管理パネルからアイデアを管理できるようになりました！
+さあ見てください！新しい管理画面からアイデアを管理できるようになりました！
 
 ## 次は?
 
