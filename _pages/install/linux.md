@@ -9,65 +9,65 @@ permalink: install/linux
 
 {% include main-guide-intro.html %}
 
-To install the Ruby on Rails development environment you just need to copy the lines below for your Linux distribution (Ubuntu or Fedora), paste it in the Terminal and press Enter. Enjoy the text flying on the screen; it will take quite some time. Grabbing a refreshing drink before starting is encouraged.
+Ruby on Railsの開発環境をインストールするためには、ただ、以下の行をコピーしてLinuxディストリビューション(Ubuntu または Fedora)に貼り付けてEnterを押すだけです。スクリーンに飛び交うテキストをお楽しみください。インストールにはかなり時間がかかります。作業を始める前に飲み物をとることをおすすめします。
 
-<div class="help-notice">Make sure you're familiar with <a href="/tools">the tools you'll need for this guides</a> before continuing.</div>
+<div class="help-notice">作業を続ける前に、<a href="/tools">本ガイドに必要なツール</a>をよく理解してください。</div>
 
-## _1._ Install dependencies
+## _1._ 依存関係のインストール
 
-### For Ubuntu
+### Ubuntuの場合
 
-Install the curl program on your computer before continuing. This is required to run the install script in the next step.
+Curlをインストールしてください。これは次のステップでスクリプトをインストールするのに必要です。
 
 {% highlight sh %}
 sudo apt-get update
 sudo apt-get install curl
 {% endhighlight %}
 
-## _2._ Install Rails
+## _2._ Railsをインストール
 
-### For Ubuntu
+### Ubuntuの場合
 
-Run the following command for an automated install of Ruby and Rails on your computer.
+次のコマンドを実行して、Ruby on Railsをコンピュータへ自動的にインストールします。
 
 {% highlight sh %}
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
-### Fedoraの場合:
+### Fedoraの場合
 
 {% highlight sh %}
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
 
-## _3._ Check the environment
+## _3._ 開発環境の確認
 
-Check that everything is working by running the application generator command.
+アプリケーション生成コマンド（以下のコマンド）を実行して、全てが動作していることを確認します。
 
 {% highlight sh %}
 rails new myapp
 {% endhighlight %}
 
-Navigate into the app directory:
+カレントディレクトリをアプリケーションに移動し、
 
 {% highlight sh %}
 cd myapp
 {% endhighlight %}
 
-Start the Rails server:
+Railsサーバーを起動します。
 
 {% highlight sh %}
 rails server
 {% endhighlight %}
 
-Go to <http://localhost:3000> in your Browser. You should see the Rails logo appear.
+ブラウザで<http://localhost:3000> を確認します. Railsのロゴが表示されるはずです。
 
-If at any point during this guide you ran into a problem and can't continue. Not a problem! Contact the workshop organizers and let them know about your problem. Most workshops have dedicated set up evenings or they can help you on the day of the workshop itself.
+もし、ガイドの途中で何らかの不具合が起こりうまく続けられなかったとして、問題ありません！　ワークショップオーガナイザーへ連絡して、不具合を教えてください。ほとんどのワークショップではその日の夜に対応します。そうでなくても、1営業日中に回答し、あなたの手助けをします。
 
-If you do see a Rails logo in your Browser, you now have a working Ruby on Rails programming setup. Congrats!
+ブラウザにRailsのロゴが表示されたなら、Ruby on Railsのプログラミングのセットアップは完了しました。おめでとうございます！
 
-You're ready for the workshop. If you are preparing before the workshop, you don't have to continue with guides until the day of the workshop. See you then!
+もし本ワークショップの前に準備をしているなら、ワークショップ当日までガイドを続ける必要はありません。それではまた！
 
 {% coach %}
-If there's a coach present, they can help verify the installation by using the scaffold command and inputting data with the generated page with coaches to ensure everything is working. Remove the test app `myapp` to make super sure no-one is working in the wrong folder, while following the steps of the workshop.
+もしその場にコーチがいるなら、インストール出来たかどうかの検証を手助けできます。それにはscaffoldコマンドの使用し、その後生成したページにデータのインプットを行います。ワークショップの手順に従っている間、テスト アプリ「myapp」を削除して、間違ったフォルダーで作業している人がいないことを確認します。
 {% endcoach %}
