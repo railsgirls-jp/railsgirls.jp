@@ -7,6 +7,8 @@ permalink: ruby-intro
 
 # Rubyの概要
 
+*翻訳者: Kengo Nishimura, [@sontixyou](https://twitter.com/sontixyou)*
+
 Rails Girlsワークショップでは、特にプログラミング言語Rubyを扱います。アプリを実行するRailsフレームワークは、Rubyで記述されています。これを変更するには Rubyコードを書く必要があります。
 
 Ruby は開発者の利便性を考慮して最適化された言語です。しかし、他の言語と同様に慣れるまでに時間がかかります。
