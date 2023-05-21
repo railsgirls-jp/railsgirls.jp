@@ -57,7 +57,7 @@ ul li {
   line-height: 1.5;
 }
 
-a {
+a, a:focus {
   color: #E0330C;
 }
 
