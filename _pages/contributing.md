@@ -14,14 +14,15 @@ permalink: contributing
 
 3.　Fork -> cloneした中の `_posts` ディレクトリに、ファイル名を `YYYY-MM-DD-guide_name.markdown` としてファイルを作ります。
 
-4. In this file, you'll need to add some YAML front matter at the top of the file so it looks like the following example, taken from this guide that you are currently viewing:
+4. このファイルでは、次の例のようになるように、ファイルの先頭にいくつかのYAML front matterを追加する必要があります。この例は、あなたが閲覧している本手引きから引用しています。
 
     <pre>
     ---
     layout: default
-    title: Contributing a Guide
+    title: 自分流の手引きを送る手順
     permalink: contributing
-    ---</pre>
+    ---
+    </pre>
 
 5.　作成した新しい手引きをcommitします。
 
