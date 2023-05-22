@@ -32,7 +32,6 @@ Ruby on Railsでアプリや他のものを作るために、いくつかソフ�
 インストール中に問題が発生した場合、この [Troubleshooting](https://github.com/railsgirls-jp/railsgirls-jp.github.io/wiki/Troubleshooting) のページを参考にしてください。
 {% endcoach %}
 
-## Possible errors during installation
 ## インストール中に起こりうるエラー
 
 ### Gem::RemoteFetcher エラー
@@ -101,7 +100,6 @@ bundle -v
 
 新しくアプリを作るとき、`bundle install` 実行中に `Gem::RemoteFetcher::FetchError: SSL_connect` も発生するかもしれません。
 
-The error will make mention of [this RailsApps guide](https://railsapps.github.io/openssl-certificate-verify-failed.html). What is relevant for Windows users at this point is [this GitHub gist](https://gist.github.com/867550). The described manual way has proven to be successful to solve the `bundle install` error.
 [このRailsApps ガイド](https://railsapps.github.io/openssl-certificate-verify-failed.html) で、エラーについて説明されています。現時点でWindowsのユーザに関係があるのは [このGitHubのgist](https://gist.github.com/867550) です。説明されている方法で `bundle install` のエラーが解決することが証明されています。
 
 ### エラー 'x64_mingw' is not a valid platform が発生する
