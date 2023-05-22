@@ -4,21 +4,23 @@ title: You better check you app, before you wreck your app
 permalink: testing-rspec
 ---
 
-# Test your app with RSpec
+# RSpecでアプリをテストしよう
 
-*Created by Clemens Helm, [@clemenshelm](https://twitter.com/clemenshelm) and Floor Drees, [@floordrees](https://twitter.com/floordrees)*
+*Created by Clemens Helm, [@clemenshelm](https://twitter.com/clemenshelm) and Floor Drees, [@floordrees](https://twitter.com/floordrees)*/
 
 *Updated by Ana Schwendler, [@anaschwendler](https://twitter.com/anaschwendler)*
 
-**This guide assumes that you have already built a Rails Girls app by** [**following the app development guide**](/app).
+*翻訳者: Ryoki Inoue, [@r_i_engineer](https://twitter.com/r_i_engineer)*
 
-[RSpec](https://github.com/rspec/rspec-rails) is a Ruby testing framework, that describes our application's behavior in a syntax that doesn't look much like Ruby. It outputs test results in your terminal, so you'll test your reading skills as well (pun intended).
+**このガイドでは、Rails Girlsアプリをすでに構築していることを前提に説明します。** [**アプリ構築の方法はこちら**](/app)
 
-__COACH__: Talk about testing and Behavior-Driven Development.
+[RSpec](https://github.com/rspec/rspec-rails)は Ruby のテストフレームワークで、Rubyとは少し違うような文法でアプリケーションの動作を記述します。ターミナルにテスト結果が出力されるので、自分の読解力も試されます(冗談です笑)
 
-## *1.*Add RSpec gem
+__COACH__: テストと行動駆動型開発について説明してください。
 
-Open up your `Gemfile` and add this line to the `:development` and `:test` groups, above the end tag:
+## *1.*RSpecのgemを追加する
+
+Gemfileを開き、:development, :testのendタグの上に、以下の行を追加します。
 
 {% highlight ruby %}
 group :development, :test do
@@ -27,46 +29,45 @@ group :development, :test do
 end
 {% endhighlight %}
 
-and run
+以下を実行します。
 {% highlight sh %}
 bundle install
 {% endhighlight %}
-to install the gem.
+gemをインストールします。
 
-Next create the `spec/` directory inside your application:
+次に`spec/`ディレクトリを作成します。
 
 {% highlight sh %}
 mkdir spec/
 {% endhighlight %}
 
-The `spec/` directory is where your tests will reside. Finally run the following command:
+`spec/` ディレクトリはテストファイルが置かれる場所です。最後に次のコマンドを実行します。
 
 {% highlight sh %}
 rails generate rspec:install
 {% endhighlight %}
 
 
-This adds the following files which are used for configuration:
+これにより設定に使用される以下のファイルが追加されます。
 
 - `.rspec`
 - `spec/spec_helper.rb`
 - `spec/rails_helper.rb`
 
-## *2.*Create your first test!
+## *2.*最初のテストを作成します!
 
-Rubyists often use the words 'test' and 'specification' interchangeably, that's why you'll store your tests in the 'specs' folder.
-To do that, do the following steps:
+Rubyistはよく「テスト」と「仕様」という言葉を使い分けていますが、それはテストを「specs」フォルダに格納するためです。そのためには、以下の手順を実行します。
 
-We will be creating a test for ou `idea` model, to do that in the elegant way in Rails:
+Railsで簡潔な方法でそれを行うために、ideaモデルのテストを作成します。
 
-* Create a `models` folder in your `spec` folder, by running in the terminal:
+* specフォルダの中にmodelsフォルダを作成するため以下をターミナルで実行します。
 {% highlight sh %}
 mkdir spec/models
 {% endhighlight %}
 
-* Save your test as `idea_spec.rb` (`<model_name>_spec.rb`).
+* テストを`idea_spec.rb` (`<モデル名>_spec.rb`)として保存します。
 
-Inside that new file, in our first test we will want to guarantee that an idea has a name. In order to do that let's describe one of our specifications:
+その新しいファイル内で、最初のテストでideaに名前があることを確認します。そのため仕様の1つを説明しましょう。
 
 {% highlight ruby %}
 require "rails_helper"
@@ -78,16 +79,16 @@ RSpec.describe Idea, type: :model do
 end
 {% endhighlight %}
 
-In your terminal run
+ターミナルで以下を実行します。
 {% highlight sh %}
 rspec spec/models/idea_spec.rb
 {% endhighlight %}
 
-which will output that your test is pending as it's not yet implemented.
+これは、テストがまだ実装されていないため保留中であることを出力します。
 
-__COACH__: Talk about googling terminal output.
+__COACH__: ターミナル出力についてグーグル検索するよう説明してください。
 
-Let's do something about that!
+それをどうにかしていきます。
 {% highlight ruby %}
 require "rails_helper"
 
@@ -99,11 +100,13 @@ RSpec.describe Idea, type: :model do
 end
 {% endhighlight %}
 
-should give you a more satisfying output.
+これにより期待している出力が得られるはずです。
 
-## *3.*Refactoring
+## *3.*リファクタリング
 
-You could actually also create two ideas, to be sure that our project is creating ideas in the right way:
+実際に 2 つのIdeaを作成して、プロジェクトが正しい方法でIdeaを作成していることを確認することもできます。
+
+
 
 {% highlight ruby %}
 require "rails_helper"
@@ -117,28 +120,28 @@ RSpec.describe Idea, type: :model do
 end
 {% endhighlight %}
 
-which test more things.
+というように、より多くのことをテストすることができます。
 
-__COACH__: Talk a bit about refactoring.
+__COACH__: リファクタリングについて説明してください。
 
-## *4.*Marking to-do's with tests
+## *4.*テストでTo Doにマークを付ける
 
-Yeah! To-do lists. Awesome.
-A nifty RSpec feature is the functionality to mark certain tests as pending. In other words, your first thinking about what the implementation should accomplish then write in a test to verify if it is working.
+テストでTo Doリストを作れたら便利ですよね。
+RSpecの便利な機能として、特定のテストを保留にする機能があります。つまり、最初に「何を実装するか」を考え、それがうまくいっているかどうかを検証するためのテストを記述するのです。
 
-Let's create our next test, by adding the lines below to our `idea_spec.rb`
+次のテストは、`idea_spec.rb`に以下の行を追加して作成しましょう。
 
 {% highlight ruby %}
 it "has a description"
 {% endhighlight %}
 
-will mark a test as pending.
+テストを保留としてマークします。
 
-Can you finish this test? Can you think about other tests?
+このテストを完成させますか?それとも他のテストについて考えますか？
 
-## *5.*Behavior-Driven Development
-__COACH__: Talk a bit about Behavior-Driven Development.
+## *5.*行動主導型開発
+__COACH__: 行動主導型開発について説明してください。
 
-By now you can create more tests alone. Feel free to talk to your coach to do that, or ways to create more tests.
+もう一人でいろんなテストを作れるようになったのではないでしょうか。もっといろんなテストを書きたい時はコーチに遠慮なく相談してください。
 
-Happy testing!
+それではテストを楽しんでください。
