@@ -226,7 +226,7 @@ def say_hello_without_parameter
   "Hello world!"
 end
 
-# どちらの方法でもメソッドを呼び出すことはできます
+# どちらの方法でもメソッドを呼び出すことができます
 puts say_hello_without_parameter
 puts say_hello_without_parameter()
 {% endhighlight %}
@@ -251,7 +251,7 @@ puts say_hello_and_hobby("Yukihiro Matsumoto", "writing Ruby code")
 
 Rubyコードを整理する次のステップは、クラスを使用することです。クラスを定義すると、同じトピックに関連する複数のメソッドをグループ化できます。クラスがどのように機能するかを説明するために、メソッドのないクラスから始めます。
 
-以下の例には、 `Greeter`というクラスがあります。このクラスを使用するには、クラスの`new`メソッドを使用して初期化します。`Object.method`というドット表記を使用して、クラスのメソッドを呼び出したいことをRubyに伝えます。以下の例では、`new`メソッドがそう呼び出されています。
+以下の例には、 `Greeter`というクラスがあります。このクラスを使用するには、クラスの`new`メソッドを使用して初期化します。`Object.method`というドット表記を使用して、クラスのメソッドを呼び出したいことをRubyに伝えます。以下の例では、`new`というメソッドを呼び出しています。
 
 {% highlight ruby %}
 class Greeter
@@ -285,7 +285,7 @@ puts "Hello world".length
 # 11
 {% endhighlight %}
 
-ドット表記を使用して、Rubyに値に対してメソッドを呼び出すことを伝えます この場合は`length`。
+ドット表記を使用して、Rubyに値に対してメソッドを呼び出すことを伝えます この場合は`length`です。
 
 最初に文字列を変数に代入してから、その変数からメソッドを呼び出すこともできます。この場合、変数`text`に対して`length`メソッドを呼び出します。
 
