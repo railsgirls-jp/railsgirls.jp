@@ -83,7 +83,7 @@ Githubを使ってサインアップし、アカウントを連携させます�
 
 ![Github Authorization](/images/digitalocean/githuboauth.png)
 
-クレジットカードの登録が必要ですが、DigitalOceanを初めて利用される方には、200ドル分のキャッシュバックがあります。
+クレジットカードの登録が必要ですが、DigitalOceanを初めて利用される方には、200ドル分のクレジットが与えられます。
 
 ![Complete signup](/images/digitalocean/2.png)
 
@@ -121,7 +121,7 @@ DigitalOceanがあなたのリポジトリを読み取ることを許可しま�
 
 ![Build](/images/digitalocean/building.png)
 
-全てがうまくいけば、アプリケーションが利用できるようになりますが、データベースの追加と初期化が必要です。
+全てがうまくいけば、アプリケーションが利用できるようになりますが、アプリケーションの初期化とデータベースの追加が必要です。
 
 ![Deployment](/images/digitalocean/deploy.png)
 
