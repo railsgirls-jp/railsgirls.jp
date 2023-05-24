@@ -4,7 +4,7 @@ title: アイデア一覧を表示したときにサムネイル表示してみ�
 permalink: thumbnails
 ---
 
-# Carrierwave を使ってサムネイルを作ってみよう
+# CarrierWave を使ってサムネイルを作ってみよう
 
 *Created by Miha Filej, [@mfilej](https://twitter.com/mfilej), Translated by Hiroshi SHIBATA*
 
