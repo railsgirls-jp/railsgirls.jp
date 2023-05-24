@@ -4,7 +4,7 @@ title: Rails Girls Diary tutorial
 permalink: diary-app
 ---
 
-# Ruby on Railsで初めての日記アプリを作る
+# Ruby on Railsで初めての日記アプリを作ろう
 
 *Created by Piotr Szotkowski ([chastell](http://chastell.net)) and Tomasz Stachewicz ([tomash](http://tomash.wrug.eu/about.html))* / *翻訳者 Shuto Nakano([shoooout](https://github.com/shoooout))*
 
@@ -56,7 +56,7 @@ __COACH__: ローカルファイルはブラウザで開くことができ、URL
 
 ### HTMLの雛形
 
-`index.html`に以下の記述を追加し、HTMLの雛形を作成します:
+`index.html`に以下の記述を追加し、HTMLの雛形を作成します。
 
 {% highlight erb %}
 <!doctype html>
@@ -71,24 +71,24 @@ __COACH__: ローカルファイルはブラウザで開くことができ、URL
 </html>
 {% endhighlight %}
 
-__COACH__: `<head>`と`<body>`のHTMLの主な2つのパーツについて説明してください。`<title>`と、必要であれば`<meta>`、`<link>`、`<script>`について簡単に説明してください。参加者が希望が無ければ、BootstrapがあるのでCSSについては省略できます。
+__COACH__: HTMLのメインパーツである`<head>`と`<body>`について説明してください。`<title>`タグに加え、必要に応じて`<meta>`、`<link>`、`<script>`について簡単に説明してください。参加者の希望が無い場合は、CSSについてはBootstrapがあるので省略可能です。
 
 ### 最初に表示される内容
 
-`<body>`と`</body>`の間にHTMLを追加します(内容は自由に調整してください):
+`<body>`と`</body>`の間にHTMLを追加します(内容は自由に調整してください)。
 
 {% highlight erb %}
 <h1>My Rails Girls Diary</h1>
 <div>
   <h2>Submitted a Rails Girls application</h2>
-    <p>1.02.2014</p>
-    <p>Just submitted an application to a Rails Girls workshop. Can’t wait to see whether I’ll get in!</p>
-    <h2>Got in!</h2>
-    <p>15.02.2014</p>
-    <p>Received an email that my application got accepted! I’ll be at a RG workshop next week!</p>
+  <p>1.02.2014</p>
+  <p>Just submitted an application to a Rails Girls workshop. Can’t wait to see whether I’ll get in!</p>
+  <h2>Got in!</h2>
+  <p>15.02.2014</p>
+  <p>Received an email that my application got accepted! I’ll be at a RG workshop next week!</p>
   <h2>The first day starts…</h2>
-    <p>22.02.2014</p>
-    <p>Today is the first day of the Rails Girls workshop. My coach is quite strange but it seems we all have Rails installed now and can start learning.</p>
+  <p>22.02.2014</p>
+  <p>Today is the first day of the Rails Girls workshop. My coach is quite strange but it seems we all have Rails installed now and can start learning.</p>
 </div>
 {% endhighlight %}
 
@@ -98,7 +98,7 @@ __COACH__: HTMLタグとその意味について簡単に説明してくださ�
 
 ### HTMLを追加する
 
-先ほど`index.html`に追加したものの前後どちらかに以下を追加する（これも好みで調整してください）:
+先ほど`index.html`に追加したものの前後どちらかに以下を追加しましょう（これも好みで調整してください）。
 
 {% highlight erb %}
 <div>
@@ -118,7 +118,7 @@ __COACH__: Webの仕組みと、HTMLの要素や属性について簡単に説�
 
 CSSが適用された、ベースとなるアプリのレポジトリへのリンクは[こちら](https://github.com/krzysztofbialek/Rails-Girls-Warsaw-App)です。
 
-## Railsを使う
+## Railsで動かそう
 
 __COACH__: もし参加者がWindowsを使用している場合、これより先をベースにしてNitrous.IOを使用することを検討してください。
 
@@ -147,9 +147,9 @@ __COACH__: URLとURLの階層について説明してください。Railsにお�
 
 ### ビューをトップページにする
 
-`config/routes.rb`を編集し、`root 'welcome#index'`のコメントアウトを削除（先頭の`#`を削除）します。これにより、アプリケーションのルートは`Welcome#index`によってレンダリングされるビューになります。[http://localhost:3000](http://localhost:3000)にアクセスし、アプリケーションのトップページがこのビューになっていることを確認してください。（「Welcome aboard」のページではない）
+`config/routes.rb`を編集し、`root 'welcome#index'`のコメントアウトを削除（先頭の`#`を削除）します。これにより、アプリケーションのルートは`Welcome#index`によってレンダリングされるビューになります。[http://localhost:3000](http://localhost:3000)にアクセスし、アプリケーションのトップページがこのビューになっていることを確認してください。（「Welcome aboard」のページではなくなっているでしょう）
 
-__COACH__: URLのルートがアプリケーションのメインページになり、ブラウザのアドレスバーにホスト名を入力したときに表示されるページであることを説明してください。
+__COACH__: なぜURLのルートがアプリケーションのメインページになり、ブラウザのアドレスバーにホスト名を入力したときに表示されるページになるのかを説明してください。
 
 ### HTMLを追加する
 
@@ -161,7 +161,7 @@ __COACH__: ビューには`<body>`と`</body>`の間の部分しか含まれず�
 
 ### 内容を繰り返す
 
-リンクのリストの構造を見てみると、どれも他の項目と似ています。リンクを生のHTMLとして記述するのではなく、抽象化してURLと名前の組み合わせを繰り返し処理することにします。
+リンクのリストの構造を見てみると、どれも他の項目と似ています。リンクをHTMLとしてそのまま記述するのではなく、抽象化してURLと名前の組み合わせを繰り返し処理することにします。
 
 `<ul>`タグの内容を以下のように書き換えてください:
 
@@ -182,7 +182,7 @@ __COACH__: ビューには`<body>`と`</body>`の間の部分しか含まれず�
 
 __COACH__: 配列とは何か、`<%`や`<%=`のERBタグの意味、繰り返し処理の仕組みについて説明してください。
 
-`@websites`配列のように、データをビューで定義できますが、これは長期的に見た時問題になります。まずは`@websites`配列をビューからコントローラーに移動させます。ビューから削除し、`app/controllers/welcome_controller.rb`の`index`メソッドに以下のように追加してください:
+`@websites`配列のように、データをビューで定義できますが、これは長期的に見た時問題になります。まずは`@websites`配列をビューからコントローラーに移動させます。ビューから削除し、`app/controllers/welcome_controller.rb`の`index`メソッドに以下のように追加してください。
 
 {% highlight ruby %}
 class WelcomeController < ApplicationController
@@ -198,7 +198,7 @@ end
 
 この`@`で始まる変数はインスタンス変数と呼ばれ、ビューとコントローラーの両方からアクセスできます。ブラウザを更新しても変化しないのはこのためです。
 
-__COACH__: `WelcomeController#index`のアクションとビューの関係について説明してください。`@websites`、`url`、`name`について説明してください。
+__COACH__: `WelcomeController#index`のアクションとビューの関係について説明してください。`@websites`の配列で処理した場合と、`<ul>``<li>`でURLとリンク名を記載した場合の違いに注意し強調してください。
 
 ### モデルを作成する
 
@@ -214,7 +214,7 @@ __COACH__: データベースとは何なのか（抽象的に説明すると、
 
 ### Railsコンソールでモデルを操作する
 
-モデルを作成したので、モデルのインスタンスを作成できるようになりました。つまり、日記の記事を作成できるようになりました。そのためにRailsコンソールについて学びます。`rails console`を実行してRailsコンソールを起動し`>>`が表示されたら、次のようにしていくつか記事を作成してください:
+モデルができたので、次はそのモデルのインスタンス、つまりHTMLビューにハードコーディングされていない実際の日記エントリーを作成することにしましょう。そのためにRailsコンソールについて学びます。`rails console`を実行してRailsコンソールを起動し`>>`が表示されたら、次のようにしていくつか記事を作成してください。
 
 {% highlight sh %}
 >> Entry.create "title" => "Submitted a Rails Girls application", "date" => Date.new(2014, 2, 1), "contents" => "Just submitted an application to a Rails Girls workshop. Can’t wait to see whether I’ll get in!"
@@ -226,19 +226,19 @@ __COACH__: データベースとは何なのか（抽象的に説明すると、
 
 Railsコンソールでは、`rails server`と同様に、バックグラウンドで何が起こっているかをログとして表示してくれます。例えば、`Entry.all`を実行すると、すべての記事の配列を取得できます。
 
-__COACH__: 何が起きているのかをゆっくり説明する。
+__COACH__: 何が起きているのかをゆっくり説明してください。
 
 ## DBに保存された内容を表示する
 
 ### モデルのインスタンスを既存のビューに追加する
 
-`WelcomeController#index`アクション（`app/controllers/welcome_controller.rb`）を編集し、`@websites`を定義した前後に次の行を追加してください:
+`WelcomeController#index`アクション（`app/controllers/welcome_controller.rb`）を編集し、`@websites`を定義した前後に次の行を追加してください。
 
 {% highlight ruby %}
 @entries = Entry.all
 {% endhighlight %}
 
-`app/views/welcome/index.html.erb`ビューを編集し、日記の記事を表示している部分を次のように置き換えてください:
+`app/views/welcome/index.html.erb`ビューを編集し、日記の記事を表示している部分を次のように置き換えてください。
 
 {% highlight erb %}
 <% for entry in @entries %>
@@ -248,11 +248,11 @@ __COACH__: 何が起きているのかをゆっくり説明する。
 <% end %>
 {% endhighlight %}
 
-__COACH__: 何が起きたのかを話し合ってください。記事の順番はどのようになっているのか、どのように並び替えることができるのか（日付の降順にするなど）、どこで並び替えるべきかについて話し合ってください。
+__COACH__: 何が起きたのかを話し合ってください。記事の順番はどのようになっているのか、どのように並び替えることができるのか（日付の降順にするなど）、どこで並び替えるべきかについて話し合いましょう。
 
 ### 日記の記事を操作するためのコントローラを作成する
 
-モデルができたので、モデルのインスタンスに関連する処理するためのコントローラが必要です。（新しい記事の作成、表示、編集、削除など）。`rails generate controller Entries`を実行してください。これにより、`EntriesController`クラスが生成されます。`rake routes`で確認すると、コントローラを作成するだけでなく、URLをコントローラのアクションに指定する必要があることに気づくと思います。
+モデルができたので、モデルのインスタンスに関連する処理するためのコントローラが必要です。（新しい記事の作成、表示、編集、削除など）。`rails generate controller Entries`を実行してください。これにより、`EntriesController`クラスが生成されます。`rake routes`を確認しましょう。コントローラを作成するだけでは不十分で、URLをコントローラのアクションに指定する必要があることに注意してください。
 
 `config/routes.rb`を編集し、`Diary::Application.routes.draw`ブロックの中に`resources "entries"`を追加してください。再度`rake routes`を実行すると、新しいルートが追加されていることが確認できると思います。
 
@@ -273,7 +273,7 @@ __COACH__: アクションがデフォルトで関連するビューをレンダ
 
 `app/controllers/welcome_controller.rb`ファイルを開き、（`def index`で始まる）`WelcomeController#index`メソッドを探してください。`@entries`変数を定義している行（`@entries =`で始まる行）を、`EntriesController#index`（`app/controllers/entries_controller.rb`にある`EntriesController`の`index`メソッド）にコピーしてください。同様に、`app/views/welcome/index.html.erb`ビューの、`@entries.each`ブロック（インデントされたすべての行と対応する`end`を含む）を`app/views/entries/index.html.erb`ビューにコピーしてください。ブラウザを更新すると、日記の記事の一覧が表示されるはずです。
 
-__COACH__: ほとんど変化が内容に見えるが、重要な変化があることを説明してください。これまではアプリケーションのメインページのコンテキストで動作していましたが、今は日記の記事の一覧のコンテキストで動作しています（例えば、メインページで表示していた他のウェブサイトへのリンクなどはありません）。
+__COACH__: ほとんど変化がないように見えますが、重要な変化があることを説明してください。これまではアプリケーションのメインページのコンテキストで動作していましたが、今は日記の記事の一覧のコンテキストで動作しています（例えば、メインページで表示していた他のウェブサイトへのリンクなどはありません）。
 
 ### 一つの記事を表示するビューを作成する
 
@@ -289,7 +289,7 @@ def show
 end
 {% endhighlight %}
 
-これは、「`id`パラメータを取得し、`Entry.find`メソッドで該当する記事を見つける」という意味です。次に、`app/views/entries/show.html.erb`ビューを編集し、次のコードを追加してください:
+これは、「`id`パラメータを取得し、`Entry.find`メソッドで該当する記事を見つける」という意味です。次に、`app/views/entries/show.html.erb`ビューを編集し、次のコードを追加してください。
 
 {% highlight erb %}
 <h2><%= @entry.title %></h2>
@@ -329,7 +329,7 @@ __COACH__: `link_to`メソッドのHTMLがどのようになるかを説明し�
 
 全記事の一覧と1つの記事を表示できるようになったため、新しい日記の記事を作成できるようにしましょう。`rake routes`を実行し、新しい記事の作成を担当するURLとアクションを確認してください。
 
-全記事の一覧に移動し、新しい記事を作成するためのリンクを追加してください:
+全記事の一覧に移動し、新しい記事を作成するためのリンクを追加してください。
 
 {% highlight erb %}
 <%= link_to("New entry", new_entry_path) %>
@@ -339,7 +339,7 @@ __COACH__: `link_to`メソッドのHTMLがどのようになるかを説明し�
 
 __COACH__: この過程をここでしっかりと理解させてください。
 
-`app/views/entries/new.html.erb`ビューを作成し、以下のコードを追加してください:
+`app/views/entries/new.html.erb`ビューを作成し、以下のコードを追加してください。
 
 {% highlight erb %}
 <%= form_for(Entry.new) do |form| %>
@@ -352,13 +352,13 @@ __COACH__: この過程をここでしっかりと理解させてください。
 <p><%= link_to("Back to all entries", entries_path) %></p>
 {% endhighlight %}
 
-**Note:** ここではlabelについては省略する
+**Note:** ここではlabelについては省略可能です。
 
 __COACH__: `form_for`のヘルパーが生成するHTMLは、どのように表示され動作するのかを説明してください。
 
 ### 「新しい記事」のフォームを扱う
 
-ブラウザを更新し、新しい記事を追加してみてください。これまでに何度も目にした「unknown action」エラーが表示されるはずです。`EntriesController`にアクションを追加し、まずはアクションが受け取るものを表示してみましょう:
+ブラウザを更新し、新しい記事を追加してみてください。これまでに何度も目にした「unknown action」エラーが表示されるはずです。`EntriesController`にアクションを追加し、まずはアクションが受け取るものを表示してみましょう。
 
 {% highlight ruby %}
 def create
@@ -372,7 +372,7 @@ __COACH__: テキストエリアとテキストフィールドを入力してフ
 
 ### 新しい記事を作成して永続化する
 
-`create`アクションを以下のように編集してください:
+`create`アクションを以下のように編集してください。
 
 {% highlight ruby %}
 def create
@@ -389,7 +389,7 @@ Railsコンソールでの作成と同じように、新しい記事のパラメ
 - これはすぐに削除されるでしょう
 - しかしワークショップの前には削除されないかもしれません ;)
 
-このエラーはセキュリティ対策のためです。ユーザーがPOSTしたいパラメータを簡単に設定できるため、Railsはユーザーが設定すべきでないパラメータ（例えば'id'）を設定しようとする悪意のあるユーザーから保護してくれます。`create`アクションの最初の行を以下のように変更して、ユーザーが設定できるパラメータを宣言する必要があります:
+このエラーはセキュリティ対策のためです。ユーザーがPOSTしたいパラメータを簡単に設定できるため、Railsはユーザーが設定すべきでないパラメータ（例えば'id'）を設定しようとする悪意のあるユーザーから保護してくれます。`create`アクションの最初の行を以下のように変更して、ユーザーが設定できるパラメータを宣言する必要があります。
 
 {% highlight ruby %}
 entry_params = params["entry"].permit("title", "contents")
@@ -403,9 +403,9 @@ __COACH__: 新しい記事のパラメータを`params`から取得すること�
 
 記事の表示と作成ができるようになったので、記事の編集も追加しましょう。`rake routes`を実行し、記事の編集の役割を持つルートを確認してみてください。
 
-__COACH__: これまでの過程をここでしっかりと理解させてください。
+__COACH__: これまでの過程を今一度よく理解できるようにしましょう。
 
-`app/views/entries/show.html.erb`ビューを編集し、以下のコードを追加してください:
+`app/views/entries/show.html.erb`ビューを編集し、以下のコードを追加してください。
 
 {% highlight erb %}
 <p><%= link_to("Edit this entry", edit_entry_path(@entry)) %></p>
@@ -413,9 +413,9 @@ __COACH__: これまでの過程をここでしっかりと理解させてくだ
 
 ブラウザを更新し、リンクをクリックしてください。’Unknown action’のエラーが表示されるので、アクションと空のビューを追加してください。
 
-__COACH__: ここでもしっかりと理解させてください。
+__COACH__: ここでもしっかりと理解を深めましょう。
 
-では、`edit`アクションが正しい記事を表示していることをビューで確認しましょう。`edit`アクションがURLのidに基づいて正しい記事を取得するようにしてください:
+では、`edit`アクションが正しい記事を表示していることをビューで確認しましょう。`edit`アクションがURLのidに基づいて正しい記事を取得するようにしてください。
 
 {% highlight ruby %}
 def edit
@@ -423,7 +423,7 @@ def edit
 end
 {% endhighlight %}
 
-`app/views/entries/new.html.erb`の内容を`app/views/entries/edit.html.erb`にコピーしてください。ただし、最初の行を指定の記事のフォームに変更し、オプションでこの記事の表示画面へのリンクを追加してください:
+`app/views/entries/new.html.erb`の内容を`app/views/entries/edit.html.erb`にコピーしてください。ただし、最初の行を指定の記事のフォームに変更し、オプションでこの記事の表示画面へのリンクを追加してください。
 
 {% highlight erb %}
 <%= form_for(@entry) do |form| %>
@@ -437,9 +437,9 @@ end
 <p><%= link_to("Back to all entries", entries_path) %></p>
 {% endhighlight %}
 
-__COACH__: これまでの過程をここでしっかりと理解させてください。
+__COACH__: これまでの過程をここでしっかりと理解できるようにしましょう。
 
-では、フォームを送信してみましょう。どのアクションが不足していますか？ コントローラに追加してください:
+では、フォームを送信してみましょう。どのアクションが不足していますか？ コントローラに追加してください。
 
 {% highlight ruby %}
 def update
@@ -456,7 +456,7 @@ __COACH__: パラメータの許可から記事の検索、リダイレクトま
 
 ## その他機能のアイデア
 
-初めて作成したアプリケーションで遊んでみましょう! 以下の機能を追加してみてください:
+初めて作成したアプリケーションで遊んでみましょう! 以下の機能を追加してみてください。
 
 - パーシャルにフォームを抽出する
 - 記事の一覧から記事の編集へのリンク
