@@ -1,26 +1,27 @@
 ---
 layout: guide
-title: Simplify your tests with shoulda matchers
+title: shoulda matchersでテストを簡潔にしよう
 permalink: testing-shoulda-matchers
 ---
 
-# Simplifying your tests with Shoulda Matchers
+# Shoulda Matchersでテストを簡潔にしよう
 
-*Created by Ana Schwendler, [@anaschwendler](https://twitter.com/anaschwendler)*
+*作成者： Ana Schwendler, [@anaschwendler](https://twitter.com/anaschwendler)*
 
-**This guide assumes that you have already built a Rails Girls app by** [**following the app development guide**](/app)
-**the RSpec tutorial by** [**this guide**](/testing-rspec)
-**and the Commenting tutorial by** [**this guide**](/commenting)
+**このガイドは** [**Rails Girls アプリ・チュートリアル**](/app)
+**及び** [**Rspecチュートリアル**](/testing-rspec)
+**、そして** [**コメント機能チュートリアル**](/commenting)
+**を完了して、Rails Girlsアプリが作成済みの方を対象にしています。**
 
-[Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers) is a Ruby testing gem, that provides RSpec- and Minitest-compatible one-liners that test common Rails functionality. These tests would otherwise be much longer, more complex, and error-prone.
+[Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers) はRubyのテスト用Gemで、Railsの一般的な機能テストをRSpecとMinitest互換のワンライナーにします。こちらを使用しない場合機能テストはより冗長で複雑になり、エラーが起きやすくなるでしょう。
 
 {% coach %}
-Talk about testing and Behavior-Driven Development.
+テストと振る舞い駆動開発について説明してください。
 {% endcoach %}
 
-## *1.* Add Shoulda Matchers gem
+## *1.* Shoulda Matchers gemを追加する
 
-Open up your `Gemfile` and add this line to the `:test` group, above the end tag:
+`Gemfile`を開いて`:test` グループのendタグの上に以下の行を追加します。
 
 {% highlight ruby %}
 group :test do
@@ -29,26 +30,26 @@ group :test do
 end
 {% endhighlight %}
 
-and run
+そしてgemをインストールする為に以下のコマンドを実行してください。
 {% highlight sh %}
 bundle install
 {% endhighlight %}
-to install the gem.
+
 
 {% coach %}
-Talk about googling terminal output.
+ターミナルの出力内容をgoogle検索して、結果について説明してください。
 {% endcoach %}
 
-## *2.* Adjust your `rails_helper.rb`
+## *2.* `rails_helper.rb`を修正する
 
-In our case, we will be using RSpec to test our project, so we need to say to our `rails_helper.rb` that we are using Shoulda Matchers:
+今回のケースでは、RSpecを利用してプロジェクトをテストするので、`rails_helper.rb` にShoulda Matchersを使用することを記述する必要があります。
 
-Place above the last end tag (check the indentation):
+最後のendタグの上に配置してください(インデントも確認してください)
 
 {% highlight ruby %}
   Shoulda::Matchers.configure do |config|
     config.integrate do |with|
-      # Choose a test framework:
+      # テストフレームワークを選択:
       with.test_framework :rspec
       with.library :rails
     end
@@ -56,22 +57,22 @@ Place above the last end tag (check the indentation):
 {% endhighlight %}
 
 {% coach %}
-Talk about why we are adjusting the gem inside `rails_helper.rb`.
+なぜ`rails_helper.rb`内のGemの記述を修正しているのか説明してください。
 {% endcoach %}
 
-In your terminal run
+ターミナル上で以下のコマンドを実行してください。
 {% highlight sh %}
 rspec spec/models/idea_spec.rb
 {% endhighlight %}
 
-It should show that our test is running ok.
+テストが正常に動作していることが表示されるはずです。
 
-## *3.* Testing!
+## *3.* テストしましょう！
 
-It is pretty simple to test using Shoulda Matchers.
-For our first test we already stated that an Idea has many comments, in the [**Comments for Rails Girls App tutorial**](/commenting)
+Shoulda Matchersを使ったテストはとても簡単です。
+最初のテストは[**Rails Girls アプリのコメント機能**](/commenting)で既に記述した、「ideaは複数のcommentを所有することができること」についてです。
 
-To test if that is working properly, we can add the lines below to our `spec/lib/idea_spec.rb`, above the first test that we've created:
+これが正しく動作しているかをどうかをテストする為には、`spec/lib/idea_spec.rb`内の最初に作成したテストケースの真上に、以下の行を追加します。
 
 {% highlight ruby %}
   describe "associations" do
@@ -79,20 +80,20 @@ To test if that is working properly, we can add the lines below to our `spec/lib
   end
 {% endhighlight %}
 
-This is an association test.
+これは関連付けのテストです。
 {% coach %}
-Talk about association tests.
+関連付けのテストについて説明してください。
 {% endcoach %}
 
-## *4.* Test-Driven Development
+## *4.* テスト駆動開発
 
 {% coach %}
-Talk about TDD, and how we start adding features to our app by testing it first.
+テスト駆動開発と、テストから始めるアプリの機能開発について説明してください。
 {% endcoach %}
 
-Another feature we can add to our app is to make ideas always named. How could we do that? Let's get started saying ideas should always have a name.
+私たちがアプリに追加出来るもう一つの機能は、ideaに常に名前を付けられるようにすることです。どうすればそのような機能を実装できるのでしょうか？まずideaには必ず名前があるということから始めてみましょう。
 
-Let's begin by creating a test for it. We can do that by adding the following lines to our `spec/lib/idea_spec.rb`:
+それでは対象のテストを作ることから始めましょう。`spec/lib/idea_spec.rb`に次の行を追加します。
 
 {% highlight ruby %}
   describe "validations" do
@@ -100,31 +101,32 @@ Let's begin by creating a test for it. We can do that by adding the following li
   end
 {% endhighlight %}
 
-add it below our association test.
+この行を関連付けテストの下に追加してください。
 
-After that, in your terminal run
+そしてターミナル上で以下のコマンドを実行します。
 {% highlight sh %}
 rspec spec/models/idea_spec.rb
 {% endhighlight %}
 
-It should gives us that we are not properly validating it (and we really are not). So to validate that, we need to add the following lines to our model, so we can validate the presence of name in our Idea.
+これは適切なバリデーションが行われていないことを示しています(実際にバリデーションしていません)。
+そこで、次の行をモデルに追加してideaにnameが存在することを検証する必要があります。
 
 {% highlight ruby %}
   validates :name, presence: true
 {% endhighlight %}
 
-add it below our has_many statement.
+この行をhas_many文の下に追加してください。
 
-now, back in your terminal run
+そして、ターミナルに戻って以下のコマンドを実行します。
 {% highlight sh %}
 rspec spec/models/idea_spec.rb
 {% endhighlight %}
 
-It should give the positive result.
+正常な結果が返ってくるはずです。
 
-## *5.* Do it by yourself!
-Can you continue this tutorial by doing a test to validate the presence of a description?
+## *5.* 自分で進めてみよう！
+このチュートリアルの続きとして、ideaの説明(description)の存在を検証するテストを行うことが出来ますか？
 
-Can you imagine another tests to make?
+他のテストケースを作る想像ができますか？
 
-Happy testing!
+それでは善いテストを！
