@@ -39,7 +39,7 @@ Ideaと同様にCommentモデルを作成しますが、コントローラやそ
 rails generate model comment user_name:string body:text idea:references
 {% endhighlight %}
 
-新しいマイグレーションファイルが作成されました。以下のコマンドでマイグレーションを実行して、データベースにcommentsテーブルを作成します。
+新しいマイグレーションファイルが作成されました。データベースにcommentsテーブルを作成します。以下のコマンドでマイグレーションを実行します。
 
 {% highlight sh %}
 rails db:migrate
