@@ -28,7 +28,7 @@ resources :ideas do
 end
 {% endhighlight %}
 
-## Commentモデルの作成
+## Commentモデルの作成しよう
 
 Ideaと同様にCommentモデルを作成しますが、コントローラやその他多くのファイルは省略します。
 このガイドでは生成されたコードに依存するのではなく、自らの手で多くの変更を加えていきます。
