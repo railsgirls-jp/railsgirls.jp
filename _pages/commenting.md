@@ -47,7 +47,7 @@ rails db:migrate
 
 ## *2.*モデルに関係 (relations) を追加する
 
-Railsはideasとcommentsの2つのオブジェクトの関係を知っている必要があります。その結果、特定のideaに関連するcommentsのみ取得できます。1つのideaは複数のcommentsが持つことができ、1つのcommentは1つのideaのみ持つことができます。
+アプリはideasとcommentsの2つのオブジェクトの関係を知っている必要があります。その結果、特定のideaに関連するcommentsのみ取得できます。1つのideaは複数のcommentsが持つことができ、1つのcommentは1つのideaのみ持つことができます。
 
 `app/models/idea.rb` を開いて、以下の行を探してください。
 
