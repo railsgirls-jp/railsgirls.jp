@@ -214,7 +214,7 @@ ni app/views/comments/_form.html.erb
 <% end %>
 {% endhighlight %}
 
-ブラウザを更新すると、ideaの詳細ページにcommentを追加するためのフォームが表示されます。名前、メッセージを入力してください。そして、「コメントを作成する」ボタンをクリックします。すると、ページの上部に緑色で「Comment was successfully created.」と表示されるはずです。
+ブラウザで再度読み込むと、ideaの詳細ページにcommentを追加するためのフォームが表示されます。名前、メッセージを入力してください。そして、「Create comment」ボタンをクリックします。すると、ページの上部に緑色で「Comment was successfully created.」と表示されるはずです。
 
 おめでとうございます！あなたのアプリがcommentをサポートするようになりました！`Comment` というコメント用の新しいモデルを追加しました。このモデルは、commentsを保存するためにデータベースとやり取りします。新しい`CommentsController`は、commentsの作成と削除をモデルに指示します。ビューが更新されて、ideaごとのcommentsを表示し、フォームで新しいcommentを作成し、また削除ボタンでcommentを削除できるようになりました。
 
