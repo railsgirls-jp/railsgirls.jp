@@ -12,9 +12,11 @@ permalink: commenting
 
 *railsgirls* アプリのideasへコメントができる機能の追加をします。このガイドでは、Railsジェネレータによる雛形の作成を最小限に抑えて進めていきます。そのため、この機能を実装するためにより多くのRubyのコードを書いていくことになります。
 
-## comment routesを追加しよう
+## comment ルーティングを追加しよう
 
-まず、comments routeを追加をします。comment routeはideas routesの下にネストされるため、routeからcommentがどのideasに紐づくかを特定できるようになります。
+まず、コメントのための新しいルーティングを追加をします。commentルーティングはideasルーティングの下にネストされるため、ルーティングからcommentがどのideasに紐づくかを特定できるようになります。
+
+`config/routes.rb`を開きます。次の行に変更を加えます。
 {% highlight ruby %}
 resources :ideas
 {% endhighlight %}
