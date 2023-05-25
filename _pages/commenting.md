@@ -104,7 +104,7 @@ ni app/controllers/comments_controller.rb
   </div>
 </div>
 
-作成したファイルをテキストエディタで開き、空の状態にして、次のコードをコピーペーストします。
+作成したファイルをテキストエディタで開き、空っぽになっているはずなので、次のコードをコピーペーストします。
 
 {% highlight ruby %}
 class CommentsController < ApplicationController
