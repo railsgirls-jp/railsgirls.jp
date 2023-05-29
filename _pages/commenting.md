@@ -1,27 +1,28 @@
 ---
 layout: main_guide
-title: Rails Girls アプリのコメント機能
+title: コメント機能を追加しよう
 permalink: commenting
 ---
-# Rails Girls アプリのコメント機能
+# コメント機能を追加しよう
 
-*Created by Janika Liiv, [@janikaliiv](https://twitter.com/janikaliiv)*
+*作成者: Janika Liiv, [@janikaliiv](https://twitter.com/janikaliiv)* / 
+*翻訳者: Yugo Fukano, [@yukyu30](https://github.com/yukyu30)*
 
 {% include main-guide-intro.html %}
 
-*railsgirls* アプリのideas へコメントができるような追加をします。In this guide we'll be relying less on the Rails generators to create scaffolding. We'll be writing more Ruby code to implement this feature.
+*railsgirls* アプリにアイデアへコメントができる機能の追加をします。このガイドでは、Railsジェネレータによる雛形の作成を最小限に抑えて進めていきます。そのため、この機能を実装するためにより多くのRubyのコードを書いていくことになります。
 
-## Add comment routes
+## comment ルーティングを追加しよう
 
-We'll start by creating a new route for the comments. This will be nested under the ideas routes, so we can derive which idea the comment belongs to from the route.
+まず、コメントのための新しいルーティングを追加をします。commentルーティングはideaルーティングの下にネストされるため、ルーティングからコメントがどのアイデアに紐づくかを特定できるようになります。
 
-Open the `config/routes.rb` file. Change the following line:
+`config/routes.rb`を開きます。次の行に変更を加えます。
 
 {% highlight ruby %}
 resources :ideas
 {% endhighlight %}
 
-to these lines:
+以下のように変更します。
 
 {% highlight ruby %}
 resources :ideas do
@@ -29,17 +30,17 @@ resources :ideas do
 end
 {% endhighlight %}
 
-## Create comment model
+## Commentモデルの作成しよう
 
-Next up, creating a comment model, like we did with the ideas before, but without the controller and a bunch of other things. In this guide we'll be making more changes ourselves, rather than relying on generated code.
+Ideaと同様にCommentモデルを作成しますが、コントローラやその他多くのファイルは省略します。このガイドでは生成されたコードに依存するのではなく、自らの手で多くの変更を加えていきます。
 
-The command below will create a Comment model with a name, message body and with a reference to the ideas table. The latter will make it possible to leave comments on a specific idea, so they won't show on other idea pages.
+以下のコマンドは名前、メッセージ本文、ideasテーブルへの参照を持つCommentモデルを作成します。ideasテーブルの参照によってコメントは特定のアイデアに紐づき、他のアイデア詳細ページには表示されません。
 
 {% highlight sh %}
 rails generate model comment user_name:string body:text idea:references
 {% endhighlight %}
 
-A migration file has also been created. It lets your database know about the new comments table. Run the migrations using this command:
+新しいマイグレーションファイルが作成されました。データベースにcommentsテーブルを作成します。以下のコマンドでマイグレーションを実行します。
 
 {% highlight sh %}
 rails db:migrate
@@ -47,39 +48,35 @@ rails db:migrate
 
 ## *2.*モデルに関係 (relations) を追加する
 
-ideas と comments オブジェクト間の接続を Rails に認識させる必要があります。
-一つの idea はたくさんの comments を所有することができるものとして、Idea モデルに認識させます。
-`app/models/idea.rb` を開いて、
+アプリはアイデアとコメントの2つのオブジェクトの関係を知っている必要があります。その結果、特定のアイデアに関連するコメントのみ取得できます。1つのアイデアは複数のコメントを持つことができ、1つのコメントは1つのアイデアのみ持つことができます。
+
+`app/models/idea.rb` を開いて、以下の行を探してください。
 
 {% highlight ruby %}
 class Idea < ApplicationRecord
 {% endhighlight %}
 
-この行のあとに、次のコードを追加します。
+この行のあとに、次のコードを追加し、Ideaモデルに複数のコメントが紐づくことを認識させます。
 
 {% highlight ruby %}
 has_many :comments
 {% endhighlight %}
 
-また、comment は、ある idea に属するものとして認識させます。`app/models/comment.rb` を開いて、
+次に、1つのコメントが1つのアイデアに紐づくことを認識させる必要があります。`app/models/comment.rb`を開いてみてください。そこには次の内容が書かれています。
 
 {% highlight ruby %}
 class Comment < ApplicationRecord
+  belongs_to :idea
+end
 {% endhighlight %}
 
-この行のあとに、次のコードを追加します。
+commentは、`Idea`モデルを参照する`belongs_to :idea`という行によって、文字通り「アイデアに属している」ことをすでに認識しています。これは、先ほどのマイグレーションで自動的に追加されました。
 
-{% highlight ruby %}
-belongs_to :idea
-{% endhighlight %}
+## データベースからコメントを取得しよう
 
-The comment already knows it "belongs to" an idea because of the line `belongs_to :idea`, which references back to the `Idea` model. This was automatically added by the migration we made earlier.
+`app/controllers/ideas_controller.rb`には`def show`と書かれた行があります。Rubyではこれらをメソッドと呼んでいます。`show`メソッドはデータベースからビュー（以前編集したHTMLが含まれるファイル） で使用するデータを読み込む役割を担っています。
 
-## Loading comments from the database
-
-In `app/controllers/ideas_controller.rb` find the line that says `def show`. This is what we call a Ruby method, and it is responsible for loading things from the database to be used in the views (files with HTML we've edited before).
-
-Change the `show` method so that it looks like this:
+`show`メソッドを以下のように変更します。
 
 {% highlight ruby %}
 def show
@@ -87,13 +84,13 @@ def show
 end
 {% endhighlight %}
 
-This will load the comments that belong a specific idea object from the database. We can then access the comments using the `@comments` instance variable in the view later.
+これにより、特定のアイデアに紐づくコメントがデータベースから取得できます。そして、ビューでインスタンス変数`@comments`を使用してコメントにアクセスできます。
 
-## Making a comments controller
+## CommentsControllerを作成しよう
 
-To store comments in the database, and remove them again later, we'll need a Rails controller. Like the IdeasController, this controller will perform databases queries, but for comments instead.
+コメントをデータベースに保存、データベースから削除するためには、Railsのコントローラが必要です。IdeasControllerのようにコントローラはデータベースへのクエリを実行します。今回はコメントを対象としたコントローラを作成します。
 
-Create a file in the `app/controllers/` directory named `comments_controller.rb`.
+`app/controllers/`ディレクトリに`comments_controller.rb`という新しいファイルを作ります。
 
 <div class="os-specific">
   <div class="mac nix">
@@ -108,11 +105,11 @@ ni app/controllers/comments_controller.rb
   </div>
 </div>
 
-Open the file you just created in your Text Editor, it should be empty, and copy-paste in this code:
+作成したファイルをテキストエディタで開き、空っぽになっているはずなので、次のコードをコピーペーストします。
 
 {% highlight ruby %}
 class CommentsController < ApplicationController
-  before_action :set_idea, only: %i[create]
+  before_action :set_idea, only: %i[create destroy]
   before_action :set_comment, only: %i[destroy]
 
   def create
@@ -128,7 +125,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
 
-    redirect_to comments_url, notice: "Comment was successfully destroyed."
+    redirect_to idea_path(@idea), notice: "Comment was successfully destroyed."
   end
 
   private
@@ -147,23 +144,17 @@ class CommentsController < ApplicationController
 end
 {% endhighlight %}
 
-This controller will listen to requests to create and delete (destroy) comments. When it receives such a request, it will tell the database what to store or remove, and redirect you back to the page you came from. But first, let's make the pages that will talk to this controller.
+このコントローラは、コメントの作成（create）と削除 （destory）のリクエストを受け付けます。このようなリクエストを受け取ると、データベースに保存や削除を指示し、元のページにリダイレクトします。しかし、その前に、このコントローラと通信するためページを作ってみましょう。
 
 {% coach %}
-Explain how controllers work and interact with HTTP requests, models and views.
+コントローラがどのように動作し、HTTPリクエスト、モデル、ビューと相互作用するかを説明しよう。
 {% endcoach %}
 
-## Display the comments
+## コメントを表示しよう
 
-We can the relationship between ideas and comments to fetch them from the database and show them in your app.
+アイデアに紐づくコメントをデータベースから取得し、アプリに表示します。
 
-`app/views/ideas/show.html.erb` を開いて、
-
-{% highlight erb %}
-<%= render @idea %>
-{% endhighlight %}
-
-このあとに、次のコードを追加します。
+`app/views/ideas/show.html.erb` を開いて、最後の行に次のコードを追加します。
 
 {% highlight erb %}
 <h2>Comments</h2>
@@ -172,7 +163,7 @@ We can the relationship between ideas and comments to fetch them from the databa
     <div>
       <p><strong><%= comment.user_name %></strong></p>
       <p><%= comment.body %></p>
-      <%= button_to "Destroy this comment", comment_path(comment), method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
+      <%= button_to "Destroy this comment", idea_comment_path(@idea, comment), method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
     </div>
   <% end %>
 <% else %>
@@ -180,17 +171,17 @@ We can the relationship between ideas and comments to fetch them from the databa
 <% end %>
 
 <h2>Add a new comment</h2>
-<%= render partial: "comments/form", locals: { comment: @comment } %>
+<%= render partial: "comments/form", locals: { idea: @idea } %>
 {% endhighlight %}
 
-This code will show the comments, but first we'll need a way to create comments. For that the last two lines render a comment submission form, which we'll create next.
+このコードでコメントが表示されますが、その前にコメントを作成する手段が必要です。そのために、最後の2行ではコメント投稿フォームをレンダリングしています。コメント投稿フォームは次のステップで作成します。
 
-## Create the comment form
+## コメントフォームを作成しよう
 
-To submit the form, we need to create a file with the form, so that it can be displayed.
+フォームからデータを送信するためには、フォームを表示できるようにファイルを作成する必要があります。
 
-Create a new directory in the `app/views/` directory named `comments/`.
-Then, in that new directory, create a new file called `_form.html.erb`.
+`app/views/`ディレクトリに新たに`comments/`ディレクトリを作成します。
+そして、そのディレクトリの下に`_form.html.erb`というファイルを作成します。
 
 <div class="os-specific">
   <div class="mac nix">
@@ -207,7 +198,7 @@ ni app/views/comments/_form.html.erb
   </div>
 </div>
 
-In this new file copy-paste these lines:
+この新しいファイルに、次の行をコピーペーストしてください。
 
 {% highlight erb %}
 <%= form_with(model: [idea, idea.comments.build]) do |form| %>
@@ -225,8 +216,8 @@ In this new file copy-paste these lines:
 <% end %>
 {% endhighlight %}
 
-When you refresh your browser, the idea detail page should now have a form for adding a comment. Fill in your name and add a message. Then click the "Create comment" button. It should now say "Comment was successfully created." at the top of the page in green.
+ブラウザで再度読み込むと、アイデア詳細ページにコメントを追加するためのフォームが表示されます。名前、メッセージを入力してください。そして、「Create comment」ボタンをクリックします。すると、ページの上部に緑色で「Comment was successfully created.」と表示されるはずです。
 
-Congratulations! Your app now supports comments. We've added a new models for comments, named `Comment`, which talks to the database to store these comments. A new `CommentsController` controller that tells the model what to do, creating or deleting comments. The views are updated to show the comments per idea, create new comments with the form and delete them again with the delete buttons.
+おめでとうございます！あなたのアプリがコメントをサポートするようになりました！`Comment` というコメント用の新しいモデルを追加しました。このモデルは、コメントを保存するためにデータベースとやり取りします。新しい`CommentsController`は、コメントの作成と削除をモデルに指示します。ビューが更新されて、アイデアごとのコメントを表示し、フォームで新しいコメントを作成し、また削除ボタンでコメントを削除できるようになりました。
 
-If you're interested, check out the detail page of a different idea. If all goes well, you should not be seeing the same comments on that idea detail page as the other one.
+気になる方は、別のアイデア詳細ページをチェックしてみてください。正しく動作していれば、そのアイデア詳細ページで他のアイデアと同じコメントが表示されることはないはずです。
