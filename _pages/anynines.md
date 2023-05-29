@@ -12,7 +12,7 @@ permalink: anynines
 ### anyninesをインストールしよう
 1. [anyninesのアカウントを作成します。](https://anynines.com/)
 
-2. anyninesを利用するには[anyninesを利用するためのコマンドを実行しインストールします。](https://anynines.zendesk.com/hc/en-us/community/posts/234540388-How-to-install-the-CLI-v6)
+2. anyninesを利用するための[コマンドラインインターフェイスをダウンロードし、インストールします。](https://anynines.zendesk.com/hc/en-us/community/posts/234540388-How-to-install-the-CLI-v6)
 
 3. 次に、anyninesのAPIエンドポイントを選択し、ユーザー資格情報を使用して認証します。
 
@@ -27,7 +27,7 @@ cf login -u [your@email] -p [yourpassword]
 cf login
 {% endhighlight %}
 
-... メールアドレスとパスワードの入力を求められます。
+... メールアドレスとパスワードの入力を求められるでしょう。
 
 `cf`とは何でしょうか？これは[Cloud Foundry](https://www.cloudfoundry.com/)の略で、anynines の裏側で使用しているシステムです。
 
@@ -44,7 +44,7 @@ $> cf create-service mysql Pluto-free [service-name-you-can-choose]
 {% endhighlight %}
 (実際にはどんな名前でも構いません。ただ名前は大切です！)
 
-次に、MySQLサービスインスタンスをアプリケーションにバインドして、アプリケーションに MySQLインスタンスへのアクセスを許可するには、次のように入力します。
+次に、MySQLサービスインスタンスをアプリケーションにバインドして、アプリケーションに MySQLインスタンスへのアクセスを許可するために、次のように入力します。
 
 {% highlight sh %}
 $> cf bind-service [app-name-you-have-chosen-above] [service-name-you-have-chosen-above]
@@ -55,7 +55,7 @@ $> cf bind-service [app-name-you-have-chosen-above] [service-name-you-have-chose
 $> cf restart [app-name-you-have-chosen-above]
 {% endhighlight %}
 
-これが表示されます。
+これが表示されるでしょう。
 {% highlight sh %}
 Creating service postgresql-d2197... OK
 Binding postgresql-d2197 to railsgirls... OK
