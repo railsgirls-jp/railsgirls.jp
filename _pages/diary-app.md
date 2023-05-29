@@ -260,7 +260,7 @@ __COACH__: Railsのルートリソースがどのように動作して、URLを�
 
 ### 全ての記事を表示するビューを作成する
 
-`rake routes`の出力を見ると、URLがそれぞれのコントローラのアクションにマッピングされていることがわかります。では、何が足りないのかを確認しましょう。ブラウザで[http://localhost:3000/entries](http://localhost:3000/entries)を開いてください。どうやら`index`アクションがないので追加しましょう。`app/controllers/entries_controller.rb`を開き、クラスの中に次の空のメソッドを追加してください:
+`rake routes`の出力を見ると、URLがそれぞれのコントローラのアクションにマッピングされていることがわかります。では、何が足りないのかを確認しましょう。ブラウザで[http://localhost:3000/entries](http://localhost:3000/entries)を開いてください。どうやら`index`アクションがないので追加しましょう。`app/controllers/entries_controller.rb`を開き、クラスの中に次の空のメソッドを追加してください。
 
 {% highlight ruby %}
 def index
@@ -281,7 +281,7 @@ __COACH__: ほとんど変化がないように見えますが、重要な変化
 
 __COACH__: 必要であれば、足りないアクションとビューを追加するプロセスを説明してください。`rake routes`の出力を理解することから始めてください。
 
-これでURLの末尾の`1`を解釈して、表示することができるようになりました。`EntriesController#show`アクションを次のように変更してください:
+これでURLの末尾の`1`を解釈して、表示することができるようになりました。`EntriesController#show`アクションを次のように変更してください。
 
 {% highlight ruby %}
 def show
@@ -305,7 +305,7 @@ __COACH__: `rake routes`のURLテンプレートの`:id`部分が、`params`ハ�
 
 Run `rake routes` again; notice how the row for the `entries#show` action starts with `entry` in the ‘prefix’ column. Go to the `app/views/entries/index.html.erb` view and change the line responsible for displaying the title to the below:
 
-再度 `rake routes`を実行し、`entries#show`アクションの行は’prefix’列が`entry`で始まっていることを確認してください。`app/views/entries/index.html.erb`ビューに移動し、タイトルを表示する行を以下のように変更してください:
+再度 `rake routes`を実行し、`entries#show`アクションの行は’prefix’列が`entry`で始まっていることを確認してください。`app/views/entries/index.html.erb`ビューに移動し、タイトルを表示する行を以下のように変更してください。
 
 {% highlight erb %}
 <h2><%= link_to(entry.title, entry_path(entry)) %></h2>
@@ -315,7 +315,7 @@ Run `rake routes` again; notice how the row for the `entries#show` action starts
 
 __COACH__: `link_to`メソッドのHTMLがどのようになるかを説明してください。`rake routes`の`entry`プレフィックスと`entry_path`の関係を説明してください。`entry_path`メソッドが`entry`引数を必要とする理由を説明してください。`entry_path`メソッドと異なる`entry_url`メソッドが何をするのかを説明してください。
 
-次に、各記事の画面から全記事の一覧に戻れるようにしてみましょう。`app/views/entries/show.html.erb`テンプレートを編集し、次のように全記事の一覧へのリンクを追加してください:
+次に、各記事の画面から全記事の一覧に戻れるようにしてみましょう。`app/views/entries/show.html.erb`テンプレートを編集し、次のように全記事の一覧へのリンクを追加してください。
 
 {% highlight erb %}
 <p><%= link_to("Back to all entries", entries_path) %></p>
@@ -337,7 +337,7 @@ __COACH__: `link_to`メソッドのHTMLがどのようになるかを説明し�
 
 リンクをクリックすると、アクションとビューが不足しているエラーが表示されます。
 
-__COACH__: この過程をここでしっかりと理解させてください。
+__COACH__: この過程をしっかりと理解できるようにしましょう。
 
 `app/views/entries/new.html.erb`ビューを作成し、以下のコードを追加してください。
 
