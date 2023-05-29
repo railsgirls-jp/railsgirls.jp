@@ -130,15 +130,19 @@ $
 コマンドプロンプトが表示されていないときは、新しいコマンドは実行できません。`cd` や他のコマンドを実行しようとしても動作しません。同じターミナルウィンドウで、Railsサーバを止めたり、通常のコマンドプロンプトに戻す場合は、Terminalで Commandキーを押しながら、Cを押して( <kbd>Ctrl</kbd>+<kbd>C</kbd> )、Railsサーバを終了します。
 
 {% coach %}
-- それぞれのコマンドが何をするのか明確になっているか確認してください
+- Make sure it's clear what each command does: `cd`, `dir`/`ls`, `mkdir`.
 - `rails new` によって何が生成されるのか簡潔に説明してください
-- Railsサーバが何をするのか、そしてどうして必要なのかを簡潔に説明してください
+- Briefly explain what the `rails server` command does and why we need it.
 - どうやってサーバを止めるのか簡潔に説明してください
+
+Resources: Guide to the Guide [creating the application](https://guides.railsgirls.com/guide-to-the-guide#1_create_the_application), Rails Guides [rails new](https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application)
+
 {% endcoach %}
 
 ## Idea の scaffold を作る
 
-今あなたは自分のアプリを持っています。でも、このアプリはまだ何もしません。Railsのロゴを表示するだけです。
+You now have your own app, but it doesn't do anything yet. It only shows the Rails logo.
+
 次に、一覧を表示したり、追加、削除、編集、閲覧できるようにするための出発点(この場合は *ideas* の出発点)を作るために、Railsのscaffoldという機能を使います。
 次のコマンドをターミナルで実行してください:
 
@@ -151,6 +155,8 @@ rails generate scaffold idea name:string description:text picture:string
 - `rails generate scaffold` というコマンドと、それがどのように動くのかを簡潔に説明してください。引数は何を意味しているのでしょうか？
     - モデル名の引数は何ですか？
     - `name:string` を使ってデータベースのフィールドをどう指定したのでしょうか？その部分は何を意味しているのでしょうか？
+
+Resource: Guide to the guide [scaffolding](https://guides.railsgirls.com/guide-to-the-guide#2_create_idea_scaffold)
 {% endcoach %}
 
 scaffold は新しいファイルをプロジェクトのディレクトリに追加しますが、きちんと動作させるためには、他の2つのコマンドを実行して、データベースを更新し、サーバを再起動する必要があります。
@@ -159,6 +165,12 @@ scaffold は新しいファイルをプロジェクトのディレクトリに�
 rails db:migrate
 rails server
 {% endhighlight %}
+
+{% coach %}
+What are database migrations and why do you need them?
+
+Resource: Guide to the guide [scaffolding](https://guides.railsgirls.com/guide-to-the-guide#2_create_idea_scaffold) or Rails Beginner [rails commands](https://www.pragtob.info/rails-beginner-cheatsheet#rails-commands)
+{% endcoach %}
 
 ブラウザで [http://localhost:3000/ideas](http://localhost:3000/ideas) にアクセスしてください。(Replit のような)クラウドサービスを使っている場合は、代わりにプレビュー用のURLの末尾に `/ideas` を加える必要があります(詳細は [インストールガイド](/install/replit) 参照)。
 

@@ -40,6 +40,8 @@ get "pages/about"
 
 {% coach %}
 少しだけルーティングについて話をしましょう。Railsが認識するルーティングを `config/routes.rb` ファイルでどのように定義するのでしょうか。アプリ内のすべてのページがこのファイルにルーティングを持つ必要があり、そうでない場合Railsは各ページどのように表示すればよいのかわからないことを説明しましょう。
+
+Resource: Guide to the guide [finetune the routes](https://guides.railsgirls.com/guide-to-the-guide#3_finetune_the_routes) or Rails Guides [first route](https://guides.rubyonrails.org/getting_started.html#say-hello-rails)
 {% endcoach %}
 
 ## ナビゲーションバーにリンクを追加しよう
@@ -77,6 +79,8 @@ get "pages/about"
 
 {% coach %}
 上記で触れた内容は、HTMLの仕組みと、ERBがブラウザに表示されるHTMLをどのように変更できるかについて、より技術的に詳しく説明しています。もし不明な点があれば、補足説明をお願いします。HTMLとERBのコードを変更することで、ブラウザーに表示されるページがどのように変化するか、デモしてください。
+
+Resource: Rails Beginner [ERB](https://www.pragtob.info/rails-beginner-cheatsheet#rails-erb)
 {% endcoach %}
 
 アプリに新しいページを追加しナビゲーションバーを変更する方法を学んだため、 同じように [新しいホームページ](/new-homepage) (次のガイド) をあなたのアプリに追加することが可能です。

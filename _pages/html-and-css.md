@@ -38,6 +38,8 @@ HTMLとRailsの関係について話しましょう。
 - Railsのビューのどの部分がHTMLでしょうか、また、Embedded Ruby（ERB）とは何でしょうか？
 - Model View Controllerとは何でしょうか、また、どのような関係性でしょうか？
     - モデルとコントローラは、HTMLビューを生成する役割を担っています。
+
+Resources: Guide to the guide [Design](https://guides.railsgirls.com/guide-to-the-guide#4_design)
 {% endcoach %}
 
 ## CSSとは?
@@ -55,6 +57,8 @@ HTML、CSS、Railsの関係について話しましょう。
 
 - Bootstrapはどのように動作し、どのようにアプリのページをスタイリングするのでしょうか？
 - [Bootstrapの例](https://getbootstrap.com/docs/5.2/examples/)をいくつか簡単に紹介し、Bootstrapのようなフレームワークを使うことで何が実現できるかを紹介しましょう。
+
+Resource: W3Schools [What is Bootstrap](https://www.w3schools.com/whatis/whatis_bootstrap.asp)
 {% endcoach %}
 
 ## アプリのスタイリングに役立つBootstrapを導入しよう

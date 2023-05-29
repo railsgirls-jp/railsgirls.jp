@@ -41,6 +41,8 @@ bundle install
 
 {% coach %}
 ライブラリ（Ruby gems）とは何か、なぜ便利なのかを説明しましょう。同様にオープンソースソフトウェアとは何かについて説明をお願いします。
+
+Resources: RubyGems GitHub [introduction](https://github.com/rubygems/rubygems#rubygems-) and Wikipedia [OSS](https://en.wikipedia.org/wiki/Open-source_software)
 {% endcoach %}
 
 
