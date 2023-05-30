@@ -29,7 +29,7 @@ $ bundle exec jekyll serve --watch
 ## ページを追加
 
 ```
-$ rake post title="my fabulous post"
+$ bundle exec rake post title="my fabulous post"
 ```
 
 を実行すると、`YYYY-MM-DD-my-fabulous-post.markdown` というテンプレートが `_posts` ディレクトリに作られるので、これを編集します。`_posts` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われます。permalink がある場合は、どこかのページから permalink で指定した URL へリンクします。
@@ -39,7 +39,7 @@ $ rake post title="my fabulous post"
 このサイトの About や Event のような独立したページを作りたい場合は
 
 ```
-$ rake page name="something"
+$ bundle exec rake page name="something"
 ```
 
 を実行します。この場合、`something/index.html` という名前でテンプレートが作られるので、これを編集します。このファイルも、どこかのページからリンクします。
@@ -47,7 +47,7 @@ $ rake page name="something"
 ## ブログを書く
 
 ```
-$ rake blog title="a cool entry"
+$ bundle exec rake blog title="a cool entry"
 ```
 
 を実行すると `YYYY-MM-DD-a-cool-entry.markdown` というテンプレートが `_posts/blog` ディレクトリに作られるので、これを編集します。
@@ -58,7 +58,7 @@ $ rake blog title="a cool entry"
 ブログエントリは markdown だけでなく、html でも書くことができます。html で書きたい場合は、`post_ext` オプションをつけてください。
 
 ```
-$ rake blog title="a cool entry" post_ext="html"
+$ bundle exec rake blog title="a cool entry" post_ext="html"
 ```
 
 #### 記事一覧の画像を変更する
