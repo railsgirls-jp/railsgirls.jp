@@ -2,34 +2,34 @@
 
 ガイドを進めていて行き詰まったときはコーチに助けてもらいましょう。また [Ruby、Rails、コンソール、テキストエディターについての便利なチートシート](https://www.pragtob.info/rails-beginner-cheatsheet/) も参考にしてみてください。
 
-## Guides
+## ガイド
 
-* Guide 1: [Start of the guide](/start) {% if page.permalink == 'start' %}(Current page!){% endif %}
-* Guide 2: [Get to know the tools](/tools) {% if page.permalink == 'tools' %}(Current page!){% endif %}
-* Guide 3: [Guide to install Rails](/install) {% if page.permalink == 'install' %}(Current page!){% endif %}
-  - [Installation guide for macOS](/install/macos) {% if page.permalink == 'install/macos' %}(Current page!){% endif %}
-  - [Installation guide for Windows](/install/windows) {% if page.permalink == 'install/windows' %}(Current page!){% endif %}
-  - [Installation guide for Linux](/install/linux) {% if page.permalink == 'install/linux' %}(Current page!){% endif %}
-  - [Installation guide for a Virtual Machine](/install/virtual-machine) {% if page.permalink == 'install/virtual-machine' %}(Current page!){% endif %}
-  - [Installation guide for a Cloud service](/install/replit) {% if page.permalink == 'install/replit' %}(Current page!){% endif %}
-  - [GitHub Codespaces を使う](/install/codespaces) {% if page.permalink == 'install/codespaces' %}(Current page!){% endif %}
-  - [AWS Cloud9 を使う](/install/cloud9) {% if page.permalink == 'install/cloud9' %}(Current page!){% endif %}
-* Guide 4: [Build Your First App](/app) {% if page.permalink == 'app' %}(Current page!){% endif %}
-* Guide 5: [Style your app using HTML and CSS](/html-and-css) {% if page.permalink == 'html-and-css' %}(Current page!){% endif %}
-* Guide 6: [Add a new page to your app](/new-page) {% if page.permalink == 'new-page' %}(Current page!){% endif %}
-* Guide 7: [Add a new homepage to your app](/new-homepage) {% if page.permalink == 'new-homepage' %}(Current page!){% endif %}
-* Guide 8: [Add picture uploads](/uploads) {% if page.permalink == 'uploads' %}(Current page!){% endif %}
-* Guide 9: [Push Your App to GitHub](/github) {% if page.permalink == 'github' %}(Current page!){% endif %}
-* Guide 10: [Put your app online](/deployment) {% if page.permalink == 'deployment' %}(Current page!){% endif %} with one of these services:
-  - [Fly.io](/deployment/fly-io) {% if page.permalink == 'deployment/fly-io' %}(Current page!){% endif %}
-  - [Heroku](/heroku) {% if page.permalink == 'heroku' %}(Current page!){% endif %}
-  - [DigitalOcean](/digitalocean) {% if page.permalink == 'digitalocean' %}(Current page!){% endif %}
-  - [OpenShift](/openshift) {% if page.permalink == 'openshift' %}(Current page!){% endif %}
-  - [Anynines](/anynines) {% if page.permalink == 'anynines' %}(Current page!){% endif %}
-  - [Engine Yard](/engineyard) {% if page.permalink == 'engineyard' %}(Current page!){% endif %}
-* Guide 11: [Style the idea pages using HTML and CSS](/design) {% if page.permalink == 'design' %}(Current page!){% endif %}
-* Guide 12: [Add comments to your app](/commenting) {% if page.permalink == 'commenting' %}(Current page!){% endif %}
-* Guide 13: [Create picture thumbnails](/thumbnails) {% if page.permalink == 'thumbnails' %}(Current page!){% endif %}
-* Guide 14: [Test your app with RSpec](/testing-rspec) {% if page.permalink == 'testing-rspec' %}(Current page!){% endif %}
+* ガイド 1: [はじめに](/start) {% if page.permalink == 'start' %}(このページです！){% endif %}
+* ガイド 2: [ツールについて知ろう](/tools) {% if page.permalink == 'tools' %}(このページです！){% endif %}
+* ガイド 3: [Railsインストールガイド](/install) {% if page.permalink == 'install' %}(このページです！){% endif %}
+  - [macOS 用セットアップ](/install/macos) {% if page.permalink == 'install/macos' %}(このページです！){% endif %}
+  - [Windows 用セットアップ](/install/windows) {% if page.permalink == 'install/windows' %}(このページです！){% endif %}
+  - [Linux 用セットアップ](/install/linux) {% if page.permalink == 'install/linux' %}(このページです！){% endif %}
+  - [仮想マシンにセットアップする](/install/virtual-machine) {% if page.permalink == 'install/virtual-machine' %}(このページです！){% endif %}
+  - [クラウドサービス Replit を使う](/install/replit) {% if page.permalink == 'install/replit' %}(このページです！){% endif %}
+  - [GitHub Codespaces を使う](/install/codespaces) {% if page.permalink == 'install/codespaces' %}(このページです！){% endif %}
+  - [AWS Cloud9 を使う](/install/cloud9) {% if page.permalink == 'install/cloud9' %}(この){% endif %}
+* ガイド 4: [はじめてのアプリを作る](/app) {% if page.permalink == 'app' %}(このページです！){% endif %}
+* ガイド 5: [HTMLとCSSを使ってアプリをスタイリングしよう](/html-and-css) {% if page.permalink == 'html-and-css' %}(このページです！){% endif %}
+* ガイド 6: [アプリに新しいページを追加しよう](/new-page) {% if page.permalink == 'new-page' %}(このページです！){% endif %}
+* ガイド 7: [あなたのアプリに新しいホーム画面を追加しよう](/new-homepage) {% if page.permalink == 'new-homepage' %}(このページです！){% endif %}
+* ガイド 8: [画像アップロード機能を追加しよう](/uploads) {% if page.permalink == 'uploads' %}(このページです！){% endif %}
+* ガイド 9: [GitHub であなたのアプリのコードを公開しよう](/github) {% if page.permalink == 'github' %}(このページです！){% endif %}
+* ガイド 10: [あなたのアプリをインターネットに公開しよう](/deployment) {% if page.permalink == 'deployment' %}(このページです！){% endif %} with one of these services:
+  - [Fly.io](/deployment/fly-io) {% if page.permalink == 'deployment/fly-io' %}(このページです！){% endif %}
+  - [Heroku](/heroku) {% if page.permalink == 'heroku' %}(このページです！){% endif %}
+  - [DigitalOcean](/digitalocean) {% if page.permalink == 'digitalocean' %}(このページです！){% endif %}
+  - [OpenShift](/openshift) {% if page.permalink == 'openshift' %}(このページです！){% endif %}
+  - [Anynines](/anynines) {% if page.permalink == 'anynines' %}(このページです！){% endif %}
+  - [Engine Yard](/engineyard) {% if page.permalink == 'engineyard' %}(このページです！){% endif %}
+* ガイド 11: [HTML & CSS を使ってデザインしてみよう](/design) {% if page.permalink == 'design' %}(このページです！){% endif %}
+* ガイド 12: [あなたのアプリにコメント出来るようにしましょう](/commenting) {% if page.permalink == 'commenting' %}(このページです！){% endif %}
+* ガイド 13: [Carrierwave を使って画像をリサイズしよう](/thumbnails) {% if page.permalink == 'thumbnails' %}(このページです！){% endif %}
+* ガイド 14: [Test your app with RSpec](/testing-rspec) {% if page.permalink == 'testing-rspec' %}(このページです！){% endif %}
 
-[View all guides](/)
+[全てのガイドを見る](/)
