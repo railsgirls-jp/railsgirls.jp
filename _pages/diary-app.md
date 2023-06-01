@@ -4,59 +4,59 @@ title: Rails Girls Diary tutorial
 permalink: diary-app
 ---
 
-# Create your first diary app with Ruby on Rails
+# Ruby on Railsで初めての日記アプリを作ろう
 
-*Created by Piotr Szotkowski ([chastell](http://chastell.net)) and Tomasz Stachewicz ([tomash](http://tomash.wrug.eu/about.html))*
+*Created by Piotr Szotkowski ([chastell](http://chastell.net)) and Tomasz Stachewicz ([tomash](http://tomash.wrug.eu/about.html))* / *翻訳者 Shuto Nakano([shoooout](https://github.com/shoooout))*
 
-We will create a little voting app from scratch using a web development framework for Ruby called Rails. Think what your first application should be about – ideally something simple that includes a collection of some sort: e.g., a to-do list, a diary, etc. We’ll use a diary as the base here.
+RailsというRubyのWeb開発フレームワークを使って簡単な投票アプリを1から作成します。最初のアプリケーションは何にするか考えてみましょう。例えば、ToDoリストや日記など、何らかのコレクションを含むシンプルなものが理想です。ここでは日記をベースにしたアプリケーションを作成します。
 
-__COACH__: For the rationale behind this slightly different beginners tutorial, take a look at this [post](http://dotclass.org/rails-girls-warsaw-programme/).
-
-
-**Make sure you have Rails installed.** [**Follow the installation guide**](/install) to get set up.
+__COACH__: この初心者向けチュートリアルの背景については、 [こちら](http://dotclass.org/rails-girls-warsaw-programme/)をご覧ください。
 
 
-## Get to know the tools
+**Railsがインストールされていることを確認してください。** セットアップ方法は[**インストールガイド**](/install) に従ってください。
+
+
+## ツールについて知る
 
 <div class="indent" markdown="1">
 
 <h3><i class="icon-text-editor">&nbsp;</i></h3>
 
-### Text Editor
+### テキストエディタ
 
-* [Visual Studio Code](https://code.visualstudio.com/), [Sublime Text](http://www.sublimetext.com),  Vim and Emacs are examples of text editors your can use for writing code and editing files.
+* [Visual Studio Code](https://code.visualstudio.com/)、[Sublime Text](http://www.sublimetext.com)、Vim、Emacsなどのテキストエディタは、コードを書いたりファイルを編集することができます。
 
 <h3><i class="icon-prompt">&nbsp;</i></h3>
 
-### Terminal (known as Command Prompt on Windows)
+### ターミナル (Windowsのコマンドプロンプト)
 
-* Where you start the rails server and run commands.
+* Railsサーバーを起動したり、コマンドを実行する場所です。
 
 <h3><i class="icon-browser">&nbsp;</i></h3>
 
-### Web browser
+### Webブラウザ
 
-* (Firefox, Safari, Chrome) for viewing your application.
+* Firefox、Safari、ChromeなどのWebブラウザで、作成したアプリケーションを閲覧できます。
 
-__COACH__: Assist with the installation; make sure the text editor is set up properly (e.g., check whether the encoding is UTF-8).
+__COACH__: インストールを補助してください。テキストエディタが正しく設定されているか確認してください（例：エンコーディングがUTF-8であるか）。
 
 </div>
 
-### Important
+### 重要事項
 
-It is important that you select the instructions specific to your operating system - the commands you need to run on a Windows computer are slightly different to Mac or Linux. If you're having trouble check the Operating System switcher at the bottom of the commands. In case you're using a cloud service (e.g. nitrous), you need to run the Linux commands even if you are on a Windows computer.
+使用しているオペレーティングシステムに適した説明を選ぶことが重要です。Windowsコンピュータ上で実行するコマンドは、MacやLinuxのものとは少し異なります。クラウドサービス(例: nitrous)を使用している場合は、WindowsコンピューターであってもLinuxコマンドを実行する必要があります。
 
-## Pure HTML
+## HTML
 
-### File and folder
+### ファイルとフォルダ
 
-Create a new directory (folder) and create a file named `index.html` in it. Open that file in your editor and web browser.
+新しく作成したディレクトリ（フォルダ）の中に`index.html`を作成してください。そして、そのファイルをエディタとブラウザで開いてください。
 
-__COACH__: Explain that browsers can open local files, only the URL looks stranger than usual.
+__COACH__: ローカルファイルはブラウザで開くことができ、URLが通常とは異なることを説明してください。
 
-### HTML skeleton
+### HTMLの雛形
 
-Start by adding a general skeleton for your HTML by writing the below into the `index.html` file:
+`index.html`に以下の記述を追加し、HTMLの雛形を作成します。
 
 {% highlight erb %}
 <!doctype html>
@@ -71,98 +71,99 @@ Start by adding a general skeleton for your HTML by writing the below into the `
 </html>
 {% endhighlight %}
 
-__COACH__: Explain the two main parts of HTML, `<head>` and `<body>`. Explain the `<title>` tag and (briefly) `<meta>` , `<link>` and `<script>` if needed. Bootstrap is there so that CSS can be skipped altogether (unless participants want to cover it).
+__COACH__: HTMLのメインパーツである`<head>`と`<body>`について説明してください。`<title>`タグに加え、必要に応じて`<meta>`、`<link>`、`<script>`について簡単に説明してください。参加者の希望が無い場合は、CSSについてはBootstrapがあるので省略可能です。
 
-### First visible content
+### 最初に表示される内容
 
-Add the following HTML between the `<body>` and `</body>` tags (feel free to adjust the contents…):
+`<body>`と`</body>`の間にHTMLを追加します(内容は自由に調整してください)。
 
 {% highlight erb %}
 <h1>My Rails Girls Diary</h1>
-  <div>
-    <h2>Submitted a Rails Girls application</h2>
-      <p>1.02.2014</p>
-      <p>Just submitted an application to a Rails Girls workshop. Can’t wait to see whether I’ll get in!</p>
-      <h2>Got in!</h2>
-      <p>15.02.2014</p>
-      <p>Received an email that my application got accepted! I’ll be at a RG workshop next week!</p>
-    <h2>The first day starts…</h2>
-      <p>22.02.2014</p>
-      <p>Today is the first day of the Rails Girls workshop. My coach is quite strange but it seems we all have Rails installed now and can start learning.</p>
-  </div>
+<div>
+  <h2>Submitted a Rails Girls application</h2>
+  <p>1.02.2014</p>
+  <p>Just submitted an application to a Rails Girls workshop. Can’t wait to see whether I’ll get in!</p>
+  <h2>Got in!</h2>
+  <p>15.02.2014</p>
+  <p>Received an email that my application got accepted! I’ll be at a RG workshop next week!</p>
+  <h2>The first day starts…</h2>
+  <p>22.02.2014</p>
+  <p>Today is the first day of the Rails Girls workshop. My coach is quite strange but it seems we all have Rails installed now and can start learning.</p>
+</div>
 {% endhighlight %}
 
-These are your first three diary entries. Note how the different tags get displayed and note the recurring structure.
+これらがあなたの最初の3つの日記です。繰り返しの構成や、タグが違うとどのように表示されるのかに注目してください。
 
-__COACH__: Tell a bit about HTML tags and their semantic meaning.
+__COACH__: HTMLタグとその意味について簡単に説明してください。
 
-### More HTML
+### HTMLを追加する
 
-Add the following either before or after the above diary entries (again, do adjust to taste):
+先ほど`index.html`に追加したものの前後どちらかに以下を追加しましょう（これも好みで調整してください）。
 
 {% highlight erb %}
 <div>
   <h1>My favourite websites</h1>
-    <ul>
-      <li><a href="http://railsgirls.com">Rails Girls</a></li>
-      <li><a href="https://en.wikibooks.org/wiki/Ruby_Programming">Wikibooks</a></li>
-      <li><a href="http://guides.rubyonrails.org">Ruby on Rails Guides</a></li>
-    </ul>
-  </div>
-  <img src="https://railsgirls.com/images/rg-warsaw.png" />
+  <ul>
+    <li><a href="http://railsgirls.com">Rails Girls</a></li>
+    <li><a href="https://en.wikibooks.org/wiki/Ruby_Programming">Wikibooks</a></li>
+    <li><a href="http://guides.rubyonrails.org">Ruby on Rails Guides</a></li>
+  </ul>
+</div>
+<img src="https://railsgirls.com/images/rg-warsaw.png" />
 {% endhighlight %}
 
-This is an HTML unordered list with some list items containing anchors (links) with hypertext references (URLs) to other pages. It’s followed by a paragraph containing an image – and the image’s source is at the given URL.
+これはHTMLの順序なしリストで、各項目には他ページへのハイパーテキスト参照（URL）をもつリンクが貼られています。その後に画像を含む段落があり、画像のソースは指定されたURLにあります。
 
-__COACH__: Explain how the Web works and talk a bit about HTML elements and attributes.
+__COACH__: Webの仕組みと、HTMLの要素や属性について簡単に説明してください。
 
-[Here](https://github.com/krzysztofbialek/Rails-Girls-Warsaw-App)'s a link to repo with styled basic app you can use.
+CSSが適用された、ベースとなるアプリのレポジトリへのリンクは[こちら](https://github.com/krzysztofbialek/Rails-Girls-Warsaw-App)です。
 
-## Moving to Rails
+## Railsで動かそう
 
-__COACH__: If your students are on Windows, consider using Nitrous.IO as the basis for the following parts.
+__COACH__: もし参加者がWindowsを使用している場合、これより先をベースにしてNitrous.IOを使用することを検討してください。
 
-### New Rails application
+### Railsアプリケーションを新規作成
 
-Open a terminal window (Command Prompt on Windows), change to the directory where your files are (using the `cd` command) and run `rails new diary` – this will take some time and end up creating a new Rails application. Run `cd diary` to change to the app’s directory.
+ターミナル（Windowsではコマンドプロンプト）を開き、アプリを作成するディレクトリに`cd`コマンドで移動し、`rails new diary`を実行します。（新しいRailsアプリケーションの作成には時間がかかることがあります。）`cd diary`を実行し、作成されたアプリケーションのディレクトリに移動します。
 
-__COACH__: Explain how to navigate directories and run commands.
+__COACH__: コマンドを実行してディレクトリを移動する方法について説明してください。
 
-### Running the server
+### サーバーを起動する
 
-Once in the `diary` directory run `rails server` and (once it finishes starting up) go to [http://localhost:3000](http://localhost:3000) in your browser. You should see the ‘Welcome aboard’ page. Stop the server by pressing `ctrl-c`.
+`diary`ディレクトリで`rails server`を実行してサーバーを起動します。サーバーが起動したら、ブラウザで[http://localhost:3000](http://localhost:3000)にアクセスします。「Welcome aboard」のページが表示されます。また、`ctrl-c`を押すことでサーバーを停止できます。
 
-__COACH__: Explain what has happened and what’s the output in the terminal window. If the server fails to start due to a missing JavaScript runtime, `gem install therubyracer` and uncomment the relevant line in `Gemfile`.
+__COACH__: 何が起きたのか、ターミナルの出力はどのようになっているのかを説明してください。JavaScriptのランタイムが原因でサーバーの起動に失敗した場合は、`gem install therubyracer`を実行し、`Gemfile`の該当行のコメントを外してください。
 
-### First route and view
+### 最初のルーティングとビュー
 
-Create the controller and the route
+コントローラーとルーティングを作成します。
 
-Run `rails generate controller welcome index` – this will generate your first controller and a route that leads to it. Start your server and go to [http://localhost:3000](http://localhost:3000) to see that your application indeed does support the `/welcome/index` route.
+`rails generate controller welcome index`を実行します。これによって、最初のコントローラーとそれへのルーティングが生成されます。
+サーバーを起動し、[http://localhost:3000](http://localhost:3000)から`/welcome/index`のルーティングが作られていることを確認してください。
 
-Stop the server and run `rake routes` to see all the routes supported by your application.
+サーバーを停止し、`rake routes`を実行することでアプリケーションのルーティングを確認できます。
 
-__COACH__: Explain URLs and the URL hierarchy. Explain how in Rails URLs map to ‘what happens behind the scene’.
+__COACH__: URLとURLの階層について説明してください。RailsにおけるURLに対応する裏側でおきていることについて説明してください。
 
-### Move the view to be the top of your site
+### ビューをトップページにする
 
-Edit the `config/routes.rb` file and uncomment (remove the `#` from the front) the `root ’welcome#index’` line (this will probably be the 7th line). This will make the root of your application be the view rendered by the `Welcome#index` action. Go to [http://localhost:3000](http://localhost:3000) and see that indeed the main page of your application now serves this view (rather than the ‘Welcome aboard’ page).
+`config/routes.rb`を編集し、`root 'welcome#index'`のコメントアウトを削除（先頭の`#`を削除）します。これにより、アプリケーションのルートは`Welcome#index`によってレンダリングされるビューになります。[http://localhost:3000](http://localhost:3000)にアクセスし、アプリケーションのトップページがこのビューになっていることを確認してください。（「Welcome aboard」のページではなくなっているでしょう）
 
-__COACH__: Explain how the main page of an application is the root of the URL hierarchy and that it’s the page that people visit when they just put the host name into the browser’s address bar.
+__COACH__: なぜURLのルートがアプリケーションのメインページになり、ブラウザのアドレスバーにホスト名を入力したときに表示されるページになるのかを説明してください。
 
-### Move the existing HTML to the right view
+### HTMLを追加する
 
-Edit the `app/views/welcome/index.html.erb` file and copy the contents of the `<body>` tags from your original `index.html` file (i.e., the list of diary entries and the website links) there, replacing the two lines (with `<h1>` and `<p>`) in the view. Refresh the browser to see that the page now indeed contains the right contents.
+先ほど作成した`index.html`の`<body>`タグの内容（日記やリンク）をコピーして、`app/views/welcome/index.html.erb`の`<h1>`と`<p>`と置き換えてください。ブラウザを更新すると、ページが正しい内容になっていることを確認してください。
 
-__COACH__: Explain that the view only contains the part between `<body>` and `</body>`, as the rest is common to the whole application and is defined elsewhere.
+__COACH__: ビューには`<body>`と`</body>`の間の部分しか含まれず、それ以外はアプリケーション全体に共通で、別のファイルで定義されていることを説明してください。
 
-## Iteration
+## 繰り返し処理
 
-### Repeated content
+### 内容を繰り返す
 
-If you look at the structure of your list of links, it seems that every list item looks similar to the others – it contains a URL (where the link should take the user when clicked) and a name (what should the user see and be able to click on). Rather than writing the links as raw HTML (and potentially make a mistake with some of them) let’s abstract this a bit and iterate over a collection of URL-and-name pairs.
+リンクのリストの構造を見てみると、どれも他の項目と似ています。リンクをHTMLとしてそのまま記述するのではなく、抽象化してURLと名前の組み合わせを繰り返し処理することにします。
 
-Replace the contents of the `<ul>` tags with the following:
+`<ul>`タグの内容を以下のように書き換えてください:
 
 {% highlight html %}
 <%
@@ -177,11 +178,11 @@ Replace the contents of the `<ul>` tags with the following:
 <% end %>
 {% endhighlight %}
 
-Refresh the browser window to see whether your page still has the same links.
+ブラウザを更新すると、先ほどまでと同じように、名前とそのリンクが貼られていることが確認できます。
 
-__COACH__: Explain what happened – what is an array, what do `<%` and `<%=` ERb tags mean (and how they differ), how iteration works.
+__COACH__: 配列とは何か、`<%`や`<%=`のERBタグの意味、繰り返し処理の仕組みについて説明してください。
 
-Keeping code or data (like the above `@websites` array) in views is simple, but a bad practice and can bite in the long run. For starters let’s move the `@websites` array from the view to the controller. Remove it from the view and put it in `app/controllers/welcome_controller.rb` in the `index` method so it looks like this:
+`@websites`配列のように、データをビューで定義できますが、これは長期的に見た時問題になります。まずは`@websites`配列をビューからコントローラーに移動させます。ビューから削除し、`app/controllers/welcome_controller.rb`の`index`メソッドに以下のように追加してください。
 
 {% highlight ruby %}
 class WelcomeController < ApplicationController
@@ -195,25 +196,25 @@ class WelcomeController < ApplicationController
 end
 {% endhighlight %}
 
-Note that after refreshing your browser window nothing should change – this is because variables starting with @ (called ‘instance variables’) can be accessed by both the view and the controller.
+この`@`で始まる変数はインスタンス変数と呼ばれ、ビューとコントローラーの両方からアクセスできます。ブラウザを更新しても変化しないのはこのためです。
 
-__COACH__: Explain the connection between the `WecomeController#index` action and the view; note and emphasise the difference between @-starting `@websites` and plain `url` or `name`.
+__COACH__: `WelcomeController#index`のアクションとビューの関係について説明してください。`@websites`の配列で処理した場合と、`<ul>``<li>`でURLとリンク名を記載した場合の違いに注意し強調してください。
 
-### Create the model
+### モデルを作成する
 
-With the website links out of the hard-coded way, let’s do something with the diary entries. This time we won’t (ab)use a simple Ruby structure like an array, but a proper model that represents a given entry’s data. Let’s start with generating the model – run `rails generate model Entry title:string date:date contents:text` to create an `Entry` model that can represent a diary entry with a title, a publication date and some contents.
+リンクがviewに直接書かれていたものを修正したので、次は日記の記事についてです。今回は配列のようなRubyの構造体ではなく、日記の記事を表すモデルを作成します。まずはモデルを生成します。`rails generate model Entry title:string date:date contents:text`を実行して、タイトル、日付、内容を扱える`Entry`モデルを作成してください。
 
-__COACH__: Explain what models are and the `field:type` notation for generating them; explain the difference between `string` and `text` types if necessary.
+__COACH__: モデルとは何なのか、それを生成するための`field:type`の記法について説明してください。必要に応じて、`string`と`text`の違いについても説明してください。
 
-### Migrate the database
+### データベースをマイグレーションする
 
-Run `rake db:migrate` to migrate the database so that its structure contains a table for entries.
+`rake db:migrate`を実行してデータベースをマイグレーションし、日記の記事のためのテーブルを作成してください。
 
-__COACH__: Explain what databases are (in abstract terms, as vessels for storing our application’s data and providing model structures) and why they are needed. Explain that things which are in memory won’t get persisted by default and they need to be persisted explicitly to be available on the next request.
+__COACH__: データベースとは何なのか（抽象的に説明すると、データを保存しモデル構造を提供するためのもの）、なぜ必要なのかについて説明してください。メモリ上にあるものはデフォルトでは永続化されないので、次で書かれているような手法で永続化する必要があることを説明してください。
 
-### Play with the model in the Rails console
+### Railsコンソールでモデルを操作する
 
-Now that we have a model, we can start creating instances of that model – i.e., actual diary entries that aren’t hard-coded in the HTML view. For this, we’ll learn a new tool: the Rails console. Start it with `rails console` and, once it boots and shows: you the `>>` prompt, create a few entries:
+モデルができたので、次はそのモデルのインスタンス、つまりHTMLビューにハードコーディングされていない実際の日記エントリーを作成することにしましょう。そのためにRailsコンソールについて学びます。`rails console`を実行してRailsコンソールを起動し`>>`が表示されたら、次のようにしていくつか記事を作成してください。
 
 {% highlight sh %}
 >> Entry.create "title" => "Submitted a Rails Girls application", "date" => Date.new(2014, 2, 1), "contents" => "Just submitted an application to a Rails Girls workshop. Can’t wait to see whether I’ll get in!"
@@ -223,64 +224,64 @@ Now that we have a model, we can start creating instances of that model – i.e.
 >> Entry.create "title" => "The first day starts…", "date" => Date.new(2014, 2, 22), "contents" => "Today is the first day of the Rails Girls workshop. My coach is quite strange but it seems we all have Rails installed now and can start learning."
 {% endhighlight %}
 
-Note how the console – just like `rails server` – shows you a log of what happens in the background. You can always get an array of all existing entries via `Entry.all`.
+Railsコンソールでは、`rails server`と同様に、バックグラウンドで何が起こっているかをログとして表示してくれます。例えば、`Entry.all`を実行すると、すべての記事の配列を取得できます。
 
-__COACH__: Explain what’s going on. Slowly.
+__COACH__: 何が起きているのかをゆっくり説明してください。
 
-## Viewing the persisted contents
+## DBに保存された内容を表示する
 
-### Add the model instances to the existing view
+### モデルのインスタンスを既存のビューに追加する
 
-Edit the `WelcomeController#index` action (in the `app/controllers/welcome_controller.rb` file) and add the following either before or after the lines containing `@websites` definition:
+`WelcomeController#index`アクション（`app/controllers/welcome_controller.rb`）を編集し、`@websites`を定義した前後に次の行を追加してください。
 
 {% highlight ruby %}
 @entries = Entry.all
 {% endhighlight %}
 
-Edit the `app/views/welcome/index.html.erb` view and replace the lines with the diary entries with the following:
+`app/views/welcome/index.html.erb`ビューを編集し、日記の記事を表示している部分を次のように置き換えてください。
 
 {% highlight erb %}
 <% for entry in @entries %>
   <h2><%= entry.title %></h2>
-    <p><%= entry.date %></p>
-    <p><%= entry.contents %></p>
+  <p><%= entry.date %></p>
+  <p><%= entry.contents %></p>
 <% end %>
 {% endhighlight %}
 
-__COACH__: Discuss what happened; discuss what’s the order of the entries and how they can be reordered (say, by reverse date) and where it should happen.
+__COACH__: 何が起きたのかを話し合ってください。記事の順番はどのようになっているのか、どのように並び替えることができるのか（日付の降順にするなど）、どこで並び替えるべきかについて話し合いましょう。
 
-### Create a controller for diary entries
+### 日記の記事を操作するためのコントローラを作成する
 
-Now that we have a model we need to create a controller for handling actions related to the instances of the model (creating new entries, showing, editing and deleting existing ones). Run `rails generate controller Entries` – this should generate the `EntriesController` class. Check `rake routes` – notice that the controller isn’t enough, we still need to point URLs to the controller’s actions.
+モデルができたので、モデルのインスタンスに関連する処理するためのコントローラが必要です。（新しい記事の作成、表示、編集、削除など）。`rails generate controller Entries`を実行してください。これにより、`EntriesController`クラスが生成されます。`rake routes`を確認しましょう。コントローラを作成するだけでは不十分で、URLをコントローラのアクションに指定する必要があることに注意してください。
 
-Edit `config/routes.rb` and add a `resources "entries"` line somewhere inside the `Diary::Application.routes.draw` block. Run `rake routes` again: notice how now your application has all kinds of new routes.
+`config/routes.rb`を編集し、`Diary::Application.routes.draw`ブロックの中に`resources "entries"`を追加してください。再度`rake routes`を実行すると、新しいルートが追加されていることが確認できると思います。
 
-__COACH__: Explain how Rails’ route resources work and how they make URLs spring to existence and map to controller actions by default.
+__COACH__: Railsのルートリソースがどのように動作して、URLを作成し、コントローラのアクションにマッピングするのかを説明してください。
 
-### A view of all the entries
+### 全ての記事を表示するビューを作成する
 
-As can be seen in the `rake routes` output, the URLs are wired to their relative controller actions. Let’s see what’s missing – visit [http://localhost:3000/entries](http://localhost:3000/entries) in your browser. Uh-oh, it seems like the ‘index’ action is missing – let’s add it – open `app/controllers/entries_controller.rb` and add the below empty method inside the class definition:
+`rake routes`の出力を見ると、URLがそれぞれのコントローラのアクションにマッピングされていることがわかります。では、何が足りないのかを確認しましょう。ブラウザで[http://localhost:3000/entries](http://localhost:3000/entries)を開いてください。どうやら`index`アクションがないので追加しましょう。`app/controllers/entries_controller.rb`を開き、クラスの中に次の空のメソッドを追加してください。
 
 {% highlight ruby %}
 def index
 end
 {% endhighlight %}
 
-Now refresh the browser – we no longer have an ‘unknown action’ problem, we now have a ‘template is missing’ problem. Save an empty file as `app/views/entries/index.html.erb` (note it’s just like the `index.html.erb` file in the ‘welcome’ directory before, but this time it’s in the ‘entries’ directory) and refresh the browser again – it should display an empty page. This is good, as our view is quite empty at the moment.
+ブラウザを更新すると、「unknown action」のエラーは出なくなりましたが、「template is missing」のエラーが出るようになりました。`app/views/entries/index.html.erb`という空のファイルを作成し、ブラウザを更新してください。ビューには何も入力していないため空のページが表示されるはずです。
 
-__COACH__: Explain how actions render the related views by default.
+__COACH__: アクションがデフォルトで関連するビューをレンダリングする仕組みを説明してください。
 
-Now go to the `app/controllers/welcome_controller.rb` file and find the `WelcomeController#index` method (the one that starts with `def index`). Find the line that sets the `@entries` variable (it should start with `@entries =`) and copy it to `EntriesController#index` (so to the `index` method of the `EntriesController`, which can be found in `app/controllers/welcome_controller.rb`). Similarly, go to the `app/views/welcome/index.html.erb` view and copy the `@entries.each` block (all of the indented lines up to and including the matching `end`) to the `app/views/entries/index.html.erb` view. Refresh the browser: it should now show the list of all your diary entries.
+`app/controllers/welcome_controller.rb`ファイルを開き、（`def index`で始まる）`WelcomeController#index`メソッドを探してください。`@entries`変数を定義している行（`@entries =`で始まる行）を、`EntriesController#index`（`app/controllers/entries_controller.rb`にある`EntriesController`の`index`メソッド）にコピーしてください。同様に、`app/views/welcome/index.html.erb`ビューの、`@entries.each`ブロック（インデントされたすべての行と対応する`end`を含む）を`app/views/entries/index.html.erb`ビューにコピーしてください。ブラウザを更新すると、日記の記事の一覧が表示されるはずです。
 
-__COACH__: Explain that even though this might look like little to no progress, there is a significant change: we’re no longer operating in the context of the main page of our app, but rather a list of diary entries only (without the links to other websites, for example).
+__COACH__: ほとんど変化がないように見えますが、重要な変化があることを説明してください。これまではアプリケーションのメインページのコンテキストで動作していましたが、今は日記の記事の一覧のコンテキストで動作しています（例えば、メインページで表示していた他のウェブサイトへのリンクなどはありません）。
 
-### A view of a single entry
+### 一つの記事を表示するビューを作成する
 
-Note how, when you run `rake routes`, the output says that the `/entries/:id(.:format)` pattern maps to the `entries#show` controller action. Go to [http://localhost:3000/entries/1](http://localhost:3000/entries/1) – the URL for your first diary entry; notice how we’re, again, missing an action of the `EntriesController`. Add that (empty for now) action, then refresh the browser and add the (likewise, empty) missing view.
+`rake routes`を実行すると、`/entries/:id(.:format)`が`entries#show`アクションにマッピングされていることがわかります。一つ目の日記の記事のURLである[http://localhost:3000/entries/1](http://localhost:3000/entries/1)にアクセスしてください。`EntriesController`に`show`アクションがないことに気づくと思います。空のアクションとビューを追加し、ブラウザを更新してください。
 
-__COACH__: Guide through adding the missing action and view if needed; make sure the process (all the way from deciphering the right `rake routes` line) is well understood.
+__COACH__: 必要であれば、足りないアクションとビューを追加するプロセスを説明してください。`rake routes`の出力を理解することから始めてください。
 
-Now, let’s figure out how to interpret the `1` from the end of the URL to display the right entry. Make the `EntriesController#show` action look like this:
+これでURLの末尾の`1`を解釈して、表示することができるようになりました。`EntriesController#show`アクションを次のように変更してください。
 
 {% highlight ruby %}
 def show
@@ -288,55 +289,57 @@ def show
 end
 {% endhighlight %}
 
-This line means ‘take the `id` parameter and use it in the `Entry.find` method to find the right entry’. Now edit the `app/views/entries/show.html.erb` view and put there the following:
+これは、「`id`パラメータを取得し、`Entry.find`メソッドで該当する記事を見つける」という意味です。次に、`app/views/entries/show.html.erb`ビューを編集し、次のコードを追加してください。
 
 {% highlight erb %}
 <h2><%= @entry.title %></h2>
-  <p><%= @entry.date %></p>
-  <p><%= @entry.contents %></p>
+<p><%= @entry.date %></p>
+<p><%= @entry.contents %></p>
 {% endhighlight %}
 
-Visit [http://localhost:3000/entries/1](http://localhost:3000/entries/1) and compare it with [http://localhost:3000/entries/2](http://localhost:3000/entries/2) to see how using `params[’id’]` means that different diary entries get displayed.
+[http://localhost:3000/entries/1](http://localhost:3000/entries/1)と[http://localhost:3000/entries/2](http://localhost:3000/entries/2)で表示される内容を比較し、`params['id']`を使用することでどう違いがあるかを確認します。
 
-__COACH__: Explain that the `:id` part of the URL template from `rake routes` is made into a key for the `params` hash; discuss what else can be found in the `params` hash.
+__COACH__: `rake routes`のURLテンプレートの`:id`部分が、`params`ハッシュのキーになること、`params`ハッシュには他に何が含まれるのかについて説明してください。
 
-### Linking entries
+### 記事へのリンクを作成する
 
 Run `rake routes` again; notice how the row for the `entries#show` action starts with `entry` in the ‘prefix’ column. Go to the `app/views/entries/index.html.erb` view and change the line responsible for displaying the title to the below:
+
+再度 `rake routes`を実行し、`entries#show`アクションの行は’prefix’列が`entry`で始まっていることを確認してください。`app/views/entries/index.html.erb`ビューに移動し、タイトルを表示する行を以下のように変更してください。
 
 {% highlight erb %}
 <h2><%= link_to(entry.title, entry_path(entry)) %></h2>
 {% endhighlight %}
 
-Note how we use the `link_to` method that takes two parameters, the text to display (`entry.title`) and the path to link to. Check the source of the page to see what is the path for subsequent titles. Note how the path is created by calling the `entry_path` method with `entry` as its argument.
+表示するテキスト(`entry.title`)とリンク先のパスを2つのパラメータとして受け取る`link_to`メソッドを使用しています。パスは、引数として`entry`を渡して`entry_path`メソッドを呼び出すことで作成されます。
 
-__COACH__: Remind how the HTML for links looks like. Explain the relation between `entry_path` and the `entry` prefix from `rake routes`. Explain why the `entry_path` method needs the `entry` argument. Explain what the `entry_url` method does (and how it differs from the `entry_path`  method) if you want to.
+__COACH__: `link_to`メソッドのHTMLがどのようになるかを説明してください。`rake routes`の`entry`プレフィックスと`entry_path`の関係を説明してください。`entry_path`メソッドが`entry`引数を必要とする理由を説明してください。`entry_path`メソッドと異なる`entry_url`メソッドが何をするのかを説明してください。
 
-Now let’s try to get back from an entry screen to the index of all entries: edit the `app/views/entries/show.html.erb` template and add a link to the entries index, like this:
+次に、各記事の画面から全記事の一覧に戻れるようにしてみましょう。`app/views/entries/show.html.erb`テンプレートを編集し、次のように全記事の一覧へのリンクを追加してください。
 
 {% highlight erb %}
 <p><%= link_to("Back to all entries", entries_path) %></p>
 {% endhighlight %}
 
-Note, again, how the `entries` prefix from `rake routes` is used to construct the `entries_path` method name. Note how this method does not need a parameter.
+`rake routes`の`entries`というプレフィックスが`entries_path`のメソッド名に使用されていることに注目してください。このメソッドはパラメータは必要ありません。
 
-## Creating entries via the UI
+## ビューから記事を作成する
 
-### Adding the ‘new entry’ form
+### 「新しい記事」のフォームを追加する
 
-Now that we have a way to display a list of all entries and a single entry, let’s add a way to create new diary entries. Run `rake routes` and try to figure out which URL (and action) is responsible for new entry creation.
+全記事の一覧と1つの記事を表示できるようになったため、新しい日記の記事を作成できるようにしましょう。`rake routes`を実行し、新しい記事の作成を担当するURLとアクションを確認してください。
 
-Go to the index of all entries and add a link for creating new entry:
+全記事の一覧に移動し、新しい記事を作成するためのリンクを追加してください。
 
 {% highlight erb %}
 <%= link_to("New entry", new_entry_path) %>
 {% endhighlight %}
 
-Click the link – and add the missing action and view.
+リンクをクリックすると、アクションとビューが不足しているエラーが表示されます。
 
-__COACH__: Make sure this process is well understood by now.
+__COACH__: この過程をしっかりと理解できるようにしましょう。
 
-Edit the `app/views/entries/new.html.erb` view and paste in the below:
+`app/views/entries/new.html.erb`ビューを作成し、以下のコードを追加してください。
 
 {% highlight erb %}
 <%= form_for(Entry.new) do |form| %>
@@ -349,13 +352,13 @@ Edit the `app/views/entries/new.html.erb` view and paste in the below:
 <p><%= link_to("Back to all entries", entries_path) %></p>
 {% endhighlight %}
 
-**Note:** we can skip labels for now
+**Note:** ここではlabelについては省略可能です。
 
-__COACH__: Show how the HTML produced by the `form_for` helper looks like and try to explain how it works.
+__COACH__: `form_for`のヘルパーが生成するHTMLは、どのように表示され動作するのかを説明してください。
 
-### Handling the ‘new entry’ form
+### 「新しい記事」のフォームを扱う
 
-Refresh the browser and try adding a new entry – you should see the well-known-by-now ‘unknown action’ error. Add the action to the `EntriesController`, but for starters let’s display what the action receives:
+ブラウザを更新し、新しい記事を追加してみてください。これまでに何度も目にした「unknown action」エラーが表示されるはずです。`EntriesController`にアクションを追加し、まずはアクションが受け取るものを表示してみましょう。
 
 {% highlight ruby %}
 def create
@@ -363,13 +366,13 @@ def create
 end
 {% endhighlight %}
 
-Refresh the browser and inspect what exactly the action gets as its params.
+ブラウザを更新し、アクションがどのようなパラメータを受け取るかを確認してください。
 
-__COACH__: Explain how filling a text field and a text area and submitting the form ends up with all the params being POSTed to the controller’s action. Explain what .inspect does.
+__COACH__: テキストエリアとテキストフィールドを入力してフォームを送信すると、すべてのパラメータがコントローラのアクションにPOSTされることを説明してください。.inspectは何をするものなのかを説明してください。
 
-### Creating and persisting the new entry
+### 新しい記事を作成して永続化する
 
-Edit the `create` action and make it look like this:
+`create`アクションを以下のように編集してください。
 
 {% highlight ruby %}
 def create
@@ -379,41 +382,40 @@ def create
 end
 {% endhighlight %}
 
-Note how we try to get the parameters of the new entry (its title and contents) from the `params` hash and then create a new entry from them, just like in the console. Try submitting the form again – notice that we’re still not there yet, as we get a `ActiveModel::ForbiddenAttributesError`.
+Railsコンソールでの作成と同じように、新しい記事のパラメータ（タイトルと内容）を`params`ハッシュから取得し、それらから新しい記事を作成しています。フォームを再度送信し`ActiveModel::ForbiddenAttributesError`が表示されることを確かめてください。
 
-- Note: we can skip strong_parameters in the beginning, keeping the application not secure from parameter injection.
+- 注意: strong_parametersを省略すると、パラメータのインジェクションに対してアプリケーションを保護できません。
 - config.action_controller.permit_all_parameters = true
-- ^^ yeah, but it will be removed soon.
-- maybe not before workshops ;)
+- これはすぐに削除されるでしょう
+- しかしワークショップの前には削除されないかもしれません ;)
 
-This error is because of security measures – it’s relatively simple to POST whatever parameters a user wants to, and Rails protects us from a rogue user that would want to set parameters that they’re not supposed to set (like ‘id’). We need to declare which parameters can be set by the user; change the first line of the `create` action to the below:
+このエラーはセキュリティ対策のためです。ユーザーがPOSTしたいパラメータを簡単に設定できるため、Railsはユーザーが設定すべきでないパラメータ（例えば'id'）を設定しようとする悪意のあるユーザーから保護してくれます。`create`アクションの最初の行を以下のように変更して、ユーザーが設定できるパラメータを宣言する必要があります。
 
 {% highlight ruby %}
 entry_params = params["entry"].permit("title", "contents")
 {% endhighlight %}
 
-Now try submitting the form again – this time it should work and you should get redirected to the newly-created entry.
+再度フォームを送信すると、今度はうまくいき、新しく作成された記事にリダイレクトされるはずです。
 
-__COACH__: Make sure the plucking of the new entry’s parameters from `params` is well understood and that it’s accepted that certain fields need to be permitted explicitly.
-Editing via the UI
+__COACH__: 新しい記事のパラメータを`params`から取得することが理解できていることを確認し、明示的に許可したフィールドが受け入れられていることを確認してください。
 
-### Adding the ‘edit entry’ form
+### 「記事の編集」フォームを追加する
 
-Now that we can view and create entries, let’s also add the option to edit them. Run `rake routes` and try to guess which route is responsible for editing an entry.
+記事の表示と作成ができるようになったので、記事の編集も追加しましょう。`rake routes`を実行し、記事の編集の役割を持つルートを確認してみてください。
 
-__COACH__: Make sure this is well understood by now.
+__COACH__: これまでの過程を今一度よく理解できるようにしましょう。
 
-Edit the `app/views/entries/show.html.erb` view and add the below line somewhere:
+`app/views/entries/show.html.erb`ビューを編集し、以下のコードを追加してください。
 
 {% highlight erb %}
 <p><%= link_to("Edit this entry", edit_entry_path(@entry)) %></p>
 {% endhighlight %}
 
-Refresh a given entry’s view and click the link. Add the missing action and an empty view.
+ブラウザを更新し、リンクをクリックしてください。’Unknown action’のエラーが表示されるので、アクションと空のビューを追加してください。
 
-__COACH__: Again, make sure this is well understood.
+__COACH__: ここでもしっかりと理解を深めましょう。
 
-Let’s first make sure our `edit` action exposes the right entry to the view. Make sure the `edit` action looks just like the `show` action – i.e., it grabs the right entry based on the id from the URL:
+では、`edit`アクションが正しい記事を表示していることをビューで確認しましょう。`edit`アクションがURLのidに基づいて正しい記事を取得するようにしてください。
 
 {% highlight ruby %}
 def edit
@@ -421,7 +423,7 @@ def edit
 end
 {% endhighlight %}
 
-Now copy the contents of the `app/views/entries/new.html.erb` view to the `app/views/entries/edit.html.erb` view, but change the first line so that it’s a form for this particular entry – and, optionally, add a link back to this entry’s show screen:
+`app/views/entries/new.html.erb`の内容を`app/views/entries/edit.html.erb`にコピーしてください。ただし、最初の行を指定の記事のフォームに変更し、オプションでこの記事の表示画面へのリンクを追加してください。
 
 {% highlight erb %}
 <%= form_for(@entry) do |form| %>
@@ -435,9 +437,9 @@ Now copy the contents of the `app/views/entries/new.html.erb` view to the `app/v
 <p><%= link_to("Back to all entries", entries_path) %></p>
 {% endhighlight %}
 
-__COACH__: Make sure all of this is well understood.
+__COACH__: これまでの過程をここでしっかりと理解できるようにしましょう。
 
-Now try to submit the form – which action is still missing? Create it in the controller:
+では、フォームを送信してみましょう。どのアクションが不足していますか？ コントローラに追加してください。
 
 {% highlight ruby %}
 def update
@@ -448,21 +450,21 @@ def update
 end
 {% endhighlight %}
 
-Check whether this all works and whether you can now edit the entries.
+全てが動作し、記事の編集ができるようになったことを確認してください。
 
-__COACH__: Make sure the `update` action’s contents are well understood – from permitting params through finding entries to redirecting to the right path.
+__COACH__: パラメータの許可から記事の検索、リダイレクトまで、`update`アクションの内容が理解できていることを確認してください。
 
-## Further ideas
+## その他機能のアイデア
 
-Play with your application! Here are some further ideas you might want to add:
+初めて作成したアプリケーションで遊んでみましょう! 以下の機能を追加してみてください。
 
-- extract form to a partial
-- links for editing an entry straight from the index of entries,
-- a way to delete an entry,
-- a way to edit entry dates,
-- a model for tracking website URLs and names (the list on the main page),
-- setting entry dates to the future and not displaying future entries in the index until their day comes,
-- automatic embedding of video URLs,
-- support for different entry authors,
-- support for different categories of entries,
-- upload and display of images.
+- パーシャルにフォームを抽出する
+- 記事の一覧から記事の編集へのリンク
+- 記事の削除
+- 記事の日付の編集
+- ウェブサイトのURLと名前に関するモデル（メインページのリスト）
+- 記事の日付を未来に設定し、その日が来るまで一覧に表示しない
+- 動画URLの自動埋め込み
+- 記事の著者をサポート
+- 記事のカテゴリをサポート
+- 画像のアップロードと表示
