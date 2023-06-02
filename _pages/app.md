@@ -130,9 +130,9 @@ $
 コマンドプロンプトが表示されていないときは、新しいコマンドは実行できません。`cd` や他のコマンドを実行しようとしても動作しません。同じターミナルウィンドウで、Railsサーバを止めたり、通常のコマンドプロンプトに戻す場合は、Terminalで Commandキーを押しながら、Cを押して( <kbd>Ctrl</kbd>+<kbd>C</kbd> )、Railsサーバを終了します。
 
 {% coach %}
-- Make sure it's clear what each command does: `cd`, `dir`/`ls`, `mkdir`.
+- それぞれのコマンドが何をするのか明確になっているか確認してください。 `cd`, `dir`/`ls`, `mkdir`
 - `rails new` によって何が生成されるのか簡潔に説明してください
-- Briefly explain what the `rails server` command does and why we need it.
+- `rails server`コマンドが何をするのか、なぜそれが必要なのかを簡単に説明してください
 - どうやってサーバを止めるのか簡潔に説明してください
 
 Resources: Guide to the Guide [creating the application](https://guides.railsgirls.com/guide-to-the-guide#1_create_the_application), Rails Guides [rails new](https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application)
@@ -141,7 +141,7 @@ Resources: Guide to the Guide [creating the application](https://guides.railsgir
 
 ## Idea の scaffold を作る
 
-You now have your own app, but it doesn't do anything yet. It only shows the Rails logo.
+今あなたは自分のアプリを持っています。でも、このアプリはまだ何もしません。Railsのロゴを表示するだけです。
 
 次に、一覧を表示したり、追加、削除、編集、閲覧できるようにするための出発点(この場合は *ideas* の出発点)を作るために、Railsのscaffoldという機能を使います。
 次のコマンドをターミナルで実行してください:
@@ -167,7 +167,7 @@ rails server
 {% endhighlight %}
 
 {% coach %}
-What are database migrations and why do you need them?
+データベースマイグレーションとはなんでしょうか？なぜ、それが必要なのでしょうか？
 
 Resource: Guide to the guide [scaffolding](https://guides.railsgirls.com/guide-to-the-guide#2_create_idea_scaffold) or Rails Beginner [rails commands](https://www.pragtob.info/rails-beginner-cheatsheet#rails-commands)
 {% endcoach %}
