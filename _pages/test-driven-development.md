@@ -96,7 +96,7 @@ permalink: test-driven-development
 
 ## *1.* 最初のコード
 
-このコードを`roman.rb`にコピーして下さい:
+このコードを`roman.rb`にコピーして下さい。
 
 {% highlight ruby %}
 def roman(n)
@@ -123,7 +123,7 @@ ruby roman.rb
 
 **出力**
 
-次の実行結果が確認できます:
+次の実行結果が確認できます。
 
 {% highlight sh %}
 roman#test_0001_converts the number 1 to the string I [tdd1.rb:11]:
@@ -135,7 +135,7 @@ Expected: "I"
 
 注意して読んでください。かなり端的です。
 
-テストは **red**です。 つまり、最低一つテストが失敗しています。最後の要約を確認することで、テストが失敗していることを確認できます: `1 tests, 1
+テストは **red**です。 つまり、最低一つテストが失敗しています。最後の要約を確認することで、テストが失敗していることを確認できます。 `1 tests, 1
 assertions, 1 failures, 0 errors, 0 skips`.
 
 **席替え** 次の人に籍を譲ってください。
@@ -147,7 +147,7 @@ assertions, 1 failures, 0 errors, 0 skips`.
 テストをパスさせる時が来ました。  
 ここでは必要なことだけをしてください。変更が単純な`if`文や1文字の追加であれば特に問題はありません。実際、一般論として不要なコードは記述すべきではないからです。困ったら周りの人の意見をきいてみるといいでしょう。
 
-最初にテストに合格する方法を示します。これによりスムーズに進めることができるでしょう:
+最初にテストに合格する方法を示します。これによりスムーズに進めることができるでしょう。
 
 {% highlight ruby %}
 def roman(n)
@@ -178,7 +178,7 @@ end
 
 グループのメンバーと一緒に質問をしあったり、問題を見つけたりできます。
 
-拡張したテストスイートの例を示します。:
+拡張したテストスイートの例を示します。
 
 {% highlight ruby %}
 describe "roman" do
@@ -227,4 +227,4 @@ end
 `14`       | `"XIV"`
 `2896`     | `"MMDCCCXCVI"`
 
-[Roman numerals]: http://www.math.tsukuba.ac.jp/~tasaki/explanation/roman.html
+[Roman numerals]: https://www.math.tsukuba.ac.jp/~tasaki/explanation/roman.html
