@@ -58,9 +58,9 @@ rails generate rspec:install
 Rubyistはよく「テスト」と「仕様」という言葉を区別せずに使っていますが、それはテストを「specs」フォルダに格納するためです。
 そのためには、以下の手順を実行します。
 
-ideaモデルのテストを作成しますが、Railsで簡潔に行うには
+`idea`モデルのテストを作成しますが、Railsで簡潔に行うには
 
-* specフォルダの中に`models`フォルダを作成するため以下をターミナルで実行します。
+* `spec`フォルダの中に`models`フォルダを作成するため以下をターミナルで実行します。
 {% highlight sh %}
 mkdir spec/models
 {% endhighlight %}
@@ -84,7 +84,7 @@ end
 rspec spec/models/idea_spec.rb
 {% endhighlight %}
 
-これは、テストがまだ実装されていないため保留中であることを出力されます。
+これは、テストがまだ実装されていないため保留中であることが出力されます。
 
 __COACH__: ターミナル出力についてグーグル検索するよう説明してください。
 
