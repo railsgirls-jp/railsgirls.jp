@@ -7,6 +7,8 @@ permalink: install/linux
 
 # Linux 用セットアップ
 
+*翻訳者: kyokucho1989, [@kyokucho1989](https://twitter.com/kyokucho_1989)*
+
 {% include main-guide-intro.html %}
 
 Ruby on Railsの開発環境をインストールするためには、ただ、あなたが使っているLinuxディストリビューション(Ubuntu または Fedora)向けの以下の行をコピーし、貼り付けてEnterを押すだけです。スクリーンに飛び交うテキストをお楽しみください。インストールにはかなり時間がかかります。作業を始める前に飲み物をとることをおすすめします。
