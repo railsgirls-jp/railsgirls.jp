@@ -28,7 +28,7 @@ div.photos .caption {
 </style>
 
 Rails Girls Japanでは、2017年より
-Rails Girlsイベントの参加者の中から、RubyKaigiへの支援を行っております。
+Rails Girlsイベントの参加者の中から、RubyKaigiへの参加支援を行っております。
 
 <blockquote>
   <p>
