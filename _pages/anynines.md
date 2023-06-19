@@ -29,7 +29,7 @@ cf login
 
 ... メールアドレスとパスワードの入力を求められるでしょう。
 
-`cf`とは何でしょうか？これは[Cloud Foundry](https://www.cloudfoundry.com/)の略で、anynines の裏側で使用しているシステムです。
+`cf`とは何でしょうか？これは[Cloud Foundry](https://www.cloudfoundry.org/)の略で、anynines の裏側で使用しているシステムです。
 
 ### アプリをオンラインにプッシュする
 
