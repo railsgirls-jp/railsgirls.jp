@@ -24,52 +24,63 @@ One way to speed up page loads is by displaying images in a smaller size. The sm
 ## ImageMagick をインストールしよう
 
 We'll be using the ImageMagick tool to resize the pictures uploaded to your ideas.
+アイデアにアップロードした画像のサイズを変更するために ImageMagick を使います。
 
 <div class="os-specific">
   <div class="mac">
 <p>Run the following command in the Terminal app:</p>
+<p>ターミナルで次のコマンドを実行してください:</p>
 {% highlight sh %}
 brew install imagemagick
 {% endhighlight %}
   </div>
   <div class="nix">
 <p>If you are on Ubuntu, run the following command in the Terminal app:</p>
+<p>Ubuntu を使っている場合、ターミナルで次のコマンドを実行してください:</p>
 {% highlight sh %}
 sudo apt-get install imagemagick
 {% endhighlight %}
   </div>
   <div class="win">
 <p>Download and run the <a href="https://www.imagemagick.org/script/download.php#windows">ImageMagick installer</a> (use the first <em>download</em> link). In the installation wizard, make sure you check the checkbox to install legacy binaries.</p>
+<p><a href="https://www.imagemagick.org/script/download.php#windows">ImageMagick のインストーラー</a>をダウンロードし(最初の <em>download</em> リンクをクリックしてください)、実行してください。インストーラーのウィザードで「Install legacy utilities」のチェックボックスを必ずチェックしてください。</p>
   </div>
 </div>
 
 {% coach %}
 Explain what is ImageMagick and how is it different from libraries/gems we used before?
+ImageMagick とは何か、以前使ったライブラリや gem とどう違うのかを説明してください。
 {% endcoach %}
 
 ## Install a Ruby gem for ImageMagick
+## ImageMagick 用の Ruby gem をインストールしよう
 
 For Ruby to talk with ImageMagick, we'll be using the `mini_magick` Ruby gem. First we will need to add it to our app and install it.
+Ruby が ImageMagick とやり取りできるようにするために、Ruby gem `mini_magick` を使います。まずアプリに追加してインストールする必要があります。
 
 Open `Gemfile` in your Text Editor and add this line:
+`Gemfile` をテキストエディタで開き、この行を追加してください:
 
 {% highlight ruby %}
 gem "mini_magick"
 {% endhighlight %}
 
 below the line:
+以下の行の下です:
 
 {% highlight ruby %}
 gem "carrierwave"
 {% endhighlight %}
 
 In the Terminal app run this command:
+ターミナルでこのコマンドを実行してください:
 
 {% highlight sh %}
 bundle install
 {% endhighlight %}
 
 Make sure to (re)start your Rails server after installation.
+インストール後、Rails サーバーを必ず(再)起動してください。
 
 ## Tell your app to create thumbnails
 ## *2.*画像をアップロードした時にサムネイルを作成しよう
