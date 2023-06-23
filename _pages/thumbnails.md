@@ -93,7 +93,6 @@ Open `app/uploaders/picture_uploader.rb` and find the line that looks like this:
 
 {% highlight ruby %}
 # include CarrierWave::MiniMagick
-  # include CarrierWave::MiniMagick
 {% endhighlight %}
 
 Remove the `#` sign at the front of the line.
@@ -111,9 +110,6 @@ Below the line you just changed, add these lines:
 version :thumb do
   process :resize_to_fit => [150, 150]
 end
-version :thumb do
-  process :resize_to_fill => [50, 50]
-end
 {% endhighlight %}
 
 The images uploaded from now on will be resized to a smaller size, but the ones we already have haven't been updated. Instead, let's edit an idea and add a new picture. When saved the idea now has a thumbnail for the uploaded picture.
@@ -130,7 +126,6 @@ Open `app/views/ideas/index.html.erb` and change the line:
 
 {% highlight erb %}
 <%= image_tag(@idea.picture_url, width: 150, height: 150, class: "img-thumbnail flex-shrink-0") if @idea.picture? %>
-<%= image_tag idea.picture_url, width: '100%' if idea.picture.present? %>
 {% endhighlight %}
 
 to this line:
@@ -138,7 +133,6 @@ to this line:
 
 {% highlight erb %}
 <%= image_tag(@idea.picture_url(:thumb), width: 150, height: 150, class: "img-thumbnail flex-shrink-0") if @idea.picture? %>
-<%= image_tag idea.picture_url(:thumb) if idea.picture.present? %>
 {% endhighlight %}
 
 Take a look at the [list of ideas](http://localhost:3000/ideas) in the Browser to see if your ideas now have a thumbnail.
