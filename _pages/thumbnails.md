@@ -15,7 +15,7 @@ permalink: thumbnails
 {% include main-guide-intro.html %}
 
 The Internet is all about speed. The faster your page loads, the less likely people are to click away. And we want people to stick around to share our great ideas with our ideas app! Also, people with data plans visiting your website will thank you for requiring less data to be transmitted.
-インターネットはスピードがすべてです。ページが読み込まれるスピードが速ければ速いほど、ページから離れていく人は少なくなります。そして、私たちはアイデアアプリで素晴らしいアイデアを共有したいので、人々に留まっていてほしいと考えています！また、データの転送量が少なくて済むと、データプランを契約している訪問してくれた人たちから感謝されます。
+インターネットはスピードがすべてです。ページが読み込まれるスピードが速ければ速いほど、ページから離れていく人は少なくなります。そして、私たちはアイデアアプリで素晴らしいアイデアを共有したいので、人々に留まっていてほしいと考えています！また、データの転送量が少なくて済むと、データプランを契約している訪問してくれた人たちから感謝されると思います。
 
 One way to speed up page loads is by displaying images in a smaller size. The smaller an image is, the fast it will be transmitted over the Internet.
 ページの読み込みを速くする方法の1つは、小さいサイズの画像を表示することです。画像のサイズが小さければ小さいほど、インターネット上の転送速度は速くなります。
