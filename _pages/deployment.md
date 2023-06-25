@@ -6,6 +6,7 @@ permalink: deployment
 ---
 
 # あなたのアプリをインターネットに公開しよう
+*翻訳者: Yugo Fukano, [@yukyu30](https://github.com/yukyu30)*
 
 {% include main-guide-intro.html %}
 
