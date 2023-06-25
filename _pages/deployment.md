@@ -1,20 +1,20 @@
 ---
 layout: main_guide
-title: Put your app online
-description: "Publish your app online on one of the many available web hosting services."
+title: あなたのアプリをインターネットに公開しよう
+description: "ウェブホスティングサービスを利用してアプリを公開してみよう。"　
 permalink: deployment
 ---
 
-# Put your app online
+# あなたのアプリをインターネットに公開しよう
 
 {% include main-guide-intro.html %}
 
-Now that you have you very first app made, let's share it with others by putting it online!
+最初のアプリが作成できたので、インターネットに公開して、他の人にシェアしてみましょう。
 
-Once you're done with one of the following guides, you'll have a URL that people can enter in their browser and see what you made today. During the workshop you can continue working on your app (by following these guides), and deploying new and improved versions of your app.
+以下のガイドのいずれかを完了すると、あなたが今日作ったものを人々がブラウザで見ることができるURLが取得できます。ワークショップの間、あなたは(これらのガイドに従って)アプリの開発を進め、新しいバージョンや改良されたバージョンのアプリをデプロイすることができます。
 
-There are many services that can host your app. They all are slightly different. Ask your coach which service they recommend.
+あなたのアプリをホストできる多数のサービスが存在します。それらはすべて少し異なります。どのサービスがお勧めか、あなたのコーチに聞いてみてください。
 
 {% coach %}
-Please help choose the best, and possibly free, service to deploy the app. Preferably a PaaS like Heroku.
+アプリをデプロイするのに最適で、できれば無料のサービスを選ぶのを手伝ってください。HerokuのようなPaaSが好ましいです。
 {% endcoach %}
