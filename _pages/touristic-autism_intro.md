@@ -4,125 +4,125 @@ title: Touristic Autism-friendly Spots App
 permalink: touristic-autism_intro
 ---
 
-# Rails Girls Touristic Autism-friendly Spots App Tutorial
+# 自閉症に優しい観光地のアプリを作ろう
 
 *Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
 *for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
+*Translated by Satomi Nishiyama, [nyancat3](https://github.com/nyancat3)*
+
+このガイドでは、自閉症に優しいかどうかという観点から、観光地を説明、表示、コメント、そして評価できるようにするシナリオを考えましょう。そのシナリオのために、RailsGirlsガイド基礎のいくつかを統合、適用、そして拡張します。このアプリケーションは、自閉症の大人を旅行中にサポートするために、 [Galway Autism Partnership](https://galwayautismpartnership.com/) からリクエストされたアプリです。
+
+今回の拡張には以下の**新しい特徴**が含まれています。
+
+* TDD使用ガイド
+* 評価機能を準備する
+* 認証ユーザー（デバイス経由）の権限設定
+
+統合されて適用された基礎ガイドは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [CarrierWave を使ってサムネイルを作ってみよう](/thumbnails)、[Devise で認証機能を追加](/devise)、[HTML & CSS を使ってデザインしてみよう](/design)、[OpenShiftでアプリを公開する](/openshift/)、[コメント機能を追加しよう](/commenting) のチュートリアルです。
 
 
-This guide merges, adapts and extends some of the basic RailsGirls guides **for the scenario**: description, displaying and commenting touristic places and rate them with respect to their autism-friendliness. This application was requested by the [Galway Autism Partnership](https://galwayautismpartnership.com/) to support autistic adults during their travelings.
 
-The extension comprises of the following **new features**:
+### [*0.* インストール](/install)
 
-* TDD using Guide
-* Resource Rating
-* Authenticated User (via devise) permission setting
-
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](https://www.railstutorial.org/book), the [basic RailsGirls app](/app) and the tutorials for [creating thumbnails](/thumbnails), [authenticating users](/devise), [adding design](/design), [deploying to OpenShift](/openshift/) and [adding comments](/commenting).
-
-
-
-### [*0.* Installation](/install)
-
-**Make sure you have Rails and Git installed.** [**Follow the installation guide**](/install), the [**Installing Git section of Pro Git**](https://www.git-scm.com/book/en/Getting-Started-Installing-Git) to get set up. Then configure GitHub by typing the following in your terminal:
+**まずは、RailsとGitがインストールされていることを確認してください。** [**インストールガイド**](/install)や、[**Pro GitのGitインストールの章**](https://www.git-scm.com/book/en/Getting-Started-Installing-Git)に従ってセットアップをしましょう。次に、ターミナルに以下を入力してGitHubを設定します。
 
 {% highlight sh %}
 git config --global user.name "Your Name"
 git config --global user.email your.email@example.com
 {% endhighlight %}
 
-<p>one-time setup steps for GitHub.</p>
+<p>これは初回のみ必要な、GitHubのセットアップ手順です。</p>
 
-Sign up for a [free GitHub account](https://github.com/signup/free) if you don’t have one already.
-
-
-### [*1.* Basic Web Application](/touristic-autism_basic-app)
-
-### [*2.* Version control with Git](/touristic-autism_git)
-
-### [*3.* Resource Modeling](/touristic-autism_resource-modeling)
-
-### [*4.* Resource Rating](/touristic-autism_resource-rating)
-
-### [*5.* Design](/touristic-autism_design)
-
-### [*6.* Image upload and Thumbnails](/touristic-autism_image-upload)
-
-**Optional - for advanced Rails Girls:**
-
-### [*7.* Continuous Deployment](/touristic-autism_continuous-deployment)
-
-### [*8.* Continuous Testing and Integration](/touristic-autism_static-pages-tdd)
+もしGitHubアカウントをまだ持っていない場合は、[GitHubの無料アカウント](https://github.com/signup/free)へサインアップしてください。
 
 
+### [*1.* 基本的なWEBアプリケーション](/touristic-autism_basic-app)
+
+### [*2.* Gitによるバージョン管理](/touristic-autism_git)
+
+### [*3.* モデルを準備する](/touristic-autism_resource-modeling)
+
+### [*4.* 評価機能を準備する](/touristic-autism_resource-rating)
+
+### [*5.* デザイン](/touristic-autism_design)
+
+### [*6.* イメージのアップロードとサムネイル](/touristic-autism_image-upload)
+
+**オプション - 上級Rails Girls向け:**
+
+### [*7.* 継続的デプロイ](/touristic-autism_continuous-deployment)
+
+### [*8.* 継続的テストとインテグレーション](/touristic-autism_static-pages-tdd)
 
 
-## Additional Guides
-
-* Guide 0: [Handy cheatsheet for Ruby, Rails, console etc.](https://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guide 1: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift) / [Put your app online with anynines](/anynines) / [Put your app online with Trucker.io](/trucker)
-* Guide 2: [Adding profile pictures with Gravatar](/gravatar)
-* Guide 3: [Go through additional explanations for the App by Lucy Bain](https://github.com/lbain/railsgirls)
 
 
-# Appendices
+## 追加ガイド
 
-## Undoing things
+* Guide 0: [Ruby、Rails、コンソール、テキストエディターについての便利なチートシート](https://www.pragtob.info/rails-beginner-cheatsheet/)
+* Guide 1: [Heroku に Rails アプリを deploy しよう](/heroku) / [OpenShiftでアプリを公開する](/openshift) / [anyninesを使用してインターネットに公開しよう!](/anynines) / [Put your app online with Trucker.io](/trucker)
+* Guide 2: [Gravatarでプロフィール写真を追加する](/gravatar)
+* Guide 3: [Lucy Bainによるアプリの追加説明を見る](https://github.com/lbain/railsgirls)
 
-Rails has some facilities to help you recover from mistakes.
 
-For instance, you may decide to change the name of a controller. Since, when generating a controller, Rails creates many more files than the controller file itself, undoing the generation means removing a whole set of files. In Rails, this can be accomplished with rails destroy. In particular, these two commands cancel each other out:
+# 付録
+
+## 変更を元に戻す
+
+Railsには、ミスからの復旧を助けてくれる機能がいくつかあります。
+
+例えば、コントローラの名前を変更すると決めたとしましょう。コントローラを生成するとき、Railsはコントローラファイル自体よりも多くのファイルを作成するため、生成を取り消すことはそのファイル一式を削除することを意味します。Railsでは、これをrails destroyで実現できます。具体的には、これらの2つのコマンドは互いを取り消し合うことになります。
 
 {% highlight sh %}
 rails generate controller FooBars baz quux
 rails destroy  controller FooBars baz quux
 {% endhighlight %}
 
-Similarly, after we generate a model as follows:
+同様に、次のコマンドでモデルを生成した後で、
 
 {% highlight sh %}
 rails generate model Foo bar:string baz:integer
 {% endhighlight %}
 
-This can be undone using
+次のコマンドによりモデル生成を取り消すことができます。
 
 {% highlight sh %}
 rails destroy model Foo
 {% endhighlight %}
 
-Migrations change the state of the database using
+次のコマンドにより、マイグレーションがデータベースの状態を変更します。
 
 {% highlight sh %}
 rails db:migrate
 {% endhighlight %}
 
-We can undo a single migration step using
+次のコマンドにより、マイグレーションを1段階取り消すことができます。
 
 {% highlight sh %}
 rake db:rollback
 {% endhighlight %}
 
-To go all the way back to the beginning, we can use
+全段階を取り消して最初の状態に戻すには、次のコマンドを使えます。
 
 {% highlight sh %}
 rails db:migrate VERSION=0
 {% endhighlight %}
 
-As you might guess, substituting any other number for 0 migrates to that version number, where the version numbers come from listing the migrations sequentially.
+ご想像の通り、0に他の数字を代入すると、そのバージョン番号までマイグレーションされます。このバージョン番号は、マイグレーションを順番に並べたときの番号となります。
 
-To drop a table from the db enter
+データベースからテーブルを削除するには、次のコマンドを入力します。
 
 {% highlight sh %}
 rails console
 {% endhighlight %}
 
-Then just type:
+そして次のコマンドを入力してください。
 
 {% highlight ruby %}
 ActiveRecord::Migration.drop_table(:<table-name>)
 {% endhighlight %}
 
-You can browse directly the database (if sqlite3 type ".quit" to exit afterwards) by typing
+次のコマンドを入力することで、データベースを直接閲覧できます (sqlite3の場合は、その後 ".quit " を入力すると終了します) 。
 
 {% highlight sh %}
 rails db
