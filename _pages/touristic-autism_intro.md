@@ -6,19 +6,18 @@ permalink: touristic-autism_intro
 
 # 自閉症に優しい観光地のアプリを作ろう
 
-*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
+*Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr) Translated by Satomi Nishiyama, [nyancat3](https://github.com/nyancat3)*
 *for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-*Translated by Satomi Nishiyama, [nyancat3](https://github.com/nyancat3)*
 
-このガイドでは、自閉症に優しいかどうかという観点から、観光地を説明、表示、コメント、そして評価できるようにするシナリオを考えましょう。そのシナリオのために、RailsGirlsガイド基礎のいくつかを統合、適用、そして拡張します。このアプリケーションは、自閉症の大人を旅行中にサポートするために、 [Galway Autism Partnership](https://galwayautismpartnership.com/) からリクエストされたアプリです。
+このガイドでは**次のシナリオを想定して**RailsGirlsガイドの基礎的なものをいくつか統合、適用し、そして拡張します: 自閉症に優しいかどうかという観点から、観光地を説明、表示、コメント、そして評価できるようにします。このアプリケーションは、自閉症の成人を旅行中にサポートするために、 [Galway Autism Partnership](https://galwayautismpartnership.com/) からリクエストされたアプリです。
 
 今回の拡張には以下の**新しい特徴**が含まれています。
 
-* TDD使用ガイド
+* TDDで開発するためのガイド
 * 評価機能を準備する
 * 認証ユーザー（デバイス経由）の権限設定
 
-統合されて適用された基礎ガイドは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [CarrierWave を使ってサムネイルを作ってみよう](/thumbnails)、[Devise で認証機能を追加](/devise)、[HTML & CSS を使ってデザインしてみよう](/design)、[OpenShiftでアプリを公開する](/openshift/)、[コメント機能を追加しよう](/commenting) のチュートリアルです。
+このガイドでは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [CarrierWave を使ってサムネイルを作ってみよう](/thumbnails)、[Devise で認証機能を追加](/devise)、[HTML & CSS を使ってデザインしてみよう](/design)、[OpenShiftでアプリを公開する](/openshift/)、[コメント機能を追加しよう](/commenting) のチュートリアルといった基礎的なガイドを統合、適用しています。
 
 
 
@@ -46,7 +45,7 @@ git config --global user.email your.email@example.com
 
 ### [*5.* デザイン](/touristic-autism_design)
 
-### [*6.* イメージのアップロードとサムネイル](/touristic-autism_image-upload)
+### [*6.* 画像のアップロードとサムネイル](/touristic-autism_image-upload)
 
 **オプション - 上級Rails Girls向け:**
 
@@ -60,7 +59,7 @@ git config --global user.email your.email@example.com
 ## 追加ガイド
 
 * Guide 0: [Ruby、Rails、コンソール、テキストエディターについての便利なチートシート](https://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guide 1: [Heroku に Rails アプリを deploy しよう](/heroku) / [OpenShiftでアプリを公開する](/openshift) / [anyninesを使用してインターネットに公開しよう!](/anynines) / [Put your app online with Trucker.io](/trucker)
+* Guide 1: [Heroku に Rails アプリを deploy しよう by Terence Lee](/heroku) / [OpenShiftでアプリを公開する by Katie Miller](/openshift) / [anyninesを使用してインターネットに公開しよう!](/anynines) / [Put your app online with Trucker.io](/trucker)
 * Guide 2: [Gravatarでプロフィール写真を追加する](/gravatar)
 * Guide 3: [Lucy Bainによるアプリの追加説明を見る](https://github.com/lbain/railsgirls)
 
@@ -102,13 +101,13 @@ rails db:migrate
 rake db:rollback
 {% endhighlight %}
 
-全段階を取り消して最初の状態に戻すには、次のコマンドを使えます。
+全てを取り消して最初の状態に戻すには、次のコマンドを使えます。
 
 {% highlight sh %}
 rails db:migrate VERSION=0
 {% endhighlight %}
 
-ご想像の通り、0に他の数字を代入すると、そのバージョン番号までマイグレーションされます。このバージョン番号は、マイグレーションを順番に並べたときの番号となります。
+ご想像の通り、0の代わりに他の数字を代入すると、そのバージョン番号までマイグレーションされます。このバージョン番号は、マイグレーションを実行順に並べたときの番号です。
 
 データベースからテーブルを削除するには、次のコマンドを入力します。
 
@@ -122,7 +121,7 @@ rails console
 ActiveRecord::Migration.drop_table(:<table-name>)
 {% endhighlight %}
 
-次のコマンドを入力することで、データベースを直接閲覧できます (sqlite3の場合は、その後 ".quit " を入力すると終了します) 。
+次のコマンドを入力することで、データベースを直接閲覧できます (sqlite3の場合は ".quit " を入力すると終了します) 。
 
 {% highlight sh %}
 rails db
