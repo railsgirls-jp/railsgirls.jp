@@ -14,7 +14,7 @@ permalink: touristic-autism_intro
 今回の拡張には以下の**新しい特徴**が含まれています。
 
 * TDDで開発するためのガイド
-* 評価機能を準備する
+* 評価機能
 * 認証ユーザー（デバイス経由）の権限設定
 
 このガイドでは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [CarrierWave を使ってサムネイルを作ってみよう](/thumbnails)、[Devise で認証機能を追加](/devise)、[HTML & CSS を使ってデザインしてみよう](/design)、[OpenShiftでアプリを公開する](/openshift/)、[コメント機能を追加しよう](/commenting) のチュートリアルといった基礎的なガイドを統合、適用しています。
@@ -39,9 +39,9 @@ git config --global user.email your.email@example.com
 
 ### [*2.* Gitによるバージョン管理](/touristic-autism_git)
 
-### [*3.* モデルを準備する](/touristic-autism_resource-modeling)
+### [*3.* モデリング](/touristic-autism_resource-modeling)
 
-### [*4.* 評価機能を準備する](/touristic-autism_resource-rating)
+### [*4.* 評価機能](/touristic-autism_resource-rating)
 
 ### [*5.* デザイン](/touristic-autism_design)
 
