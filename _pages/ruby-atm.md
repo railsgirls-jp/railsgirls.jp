@@ -6,42 +6,42 @@ permalink: ruby-atm
 
 # Ruby ATM
 
-*Created by Joshua Paling, [@joshuapaling](https://twitter.com/joshuapaling)*
+*Created by Joshua Paling, [@joshuapaling](https://twitter.com/joshuapaling)* *翻訳者: kyokucho1989, [@kyokucho1989](https://twitter.com/kyokucho_1989)*
 
-In this exercise you will write a function to handle withdrawing money from an ATM. It is intended to challenge you! Be prepared to ask lots of questions, Google things, and take a step back from the computer. But you'll learn a lot!
+この演習では、ATMから預金を引き出す関数を作成します。やっていきましょう！　たくさん質問をしたり、Googleで検索したり、コンピュータから一歩離れて考える覚悟をしておきましょう。難しいですが、得るものは多いはずです！
 
-You should use pair, group, or remote programming so you have other programmers to bounce ideas off. You'll use Test Driven Development. However, all the tests have been pre-written for you, so you can focus on the code itself.
+他のプログラマと意見を交換できるよう、ペア、グループもしくはリモートでのプログラミングをしたほうがいいです。テスト駆動開発を用いることになるでしょう。しかし、すべてのテストはあらかじめ書かれています。そのため、コードを書くことに集中できます。
 
-We'll start simple, but ramp the difficulty up pretty steeply toward the end!
+はじめは簡単ですが、難易度は徐々に上がり、最後はかなり難しくなります！
 
-## Workflow
+## ワークフロー
 
-For each step, you will need to take the following actions:
+それぞれのステップについて、以下のアクションを行う必要があります。
 
-**1. Run the new tests:** Delete tests from the previous step, and paste in the pre-written tests for the current step. *(Tests for each step are show at the bottom of that step.)* Run the tests to see which ones fail. In sublime text, you can hit <kbd>Ctrl</kbd>+<kbd>B</kbd> to run the tests. Or, you can open a terminal, `cd` into your working directory, and run `ruby atm.rb`.
+**1. 新しいテストを実行する:**  前回のテストを削除し、現在の手順のテストを貼り付けてください。*(それぞれの手順のテストは、その手順の終わりに記載してます。)* テストを実行し、どのテストが失敗するか確認してください。テキストエディタの SublimeTextでは、 <kbd>Ctrl</kbd>+<kbd>B</kbd> でテストを実行できます。または、ターミナルを開き `cd` コマンドでワーキングディレクトリに入り、`ruby atm.rb` を実行します。
 
-**2. Make the tests pass:** Edit your code to meet the functionality requirements of the current step. You'll know you've got it right when all your tests are green.
+**2. テストをパスさせる:** 現在のステップの機能的な要件を満たすようにコードを編集します。全てのテストがパスしたとき、あなたの書いたコードが正しいことがわかります。
 
-**3. Refactor:** See if there are any edits you can make to ensure your code is as clean and easy to understand as possible. Some steps have discussion points. Discuss them with your pair - they'll help you moving forward.
+**3. リファクタリングする:** コードができるだけきれいでわかりやすくなるように編集できる部分がないか、確認してください。一部のステップには議論すべきポイントがあります。それについて、相手と話し合ってください。理解が進みますよ。
 
-You may recognise these steps as the **red, green, refactor** workflow of TDD.
+これらのステップはテスト駆動開発における**レッド、グレーン、リファクタリング** のワークフローとして確認できるかもしれません。
 
-## *1.* $5 bills
+## *1.* 5ドル紙幣
 
-Imagine an ATM that holds only $5 notes. Write a function that returns `true` if an amount can be returned, and `false` otherwise.
+5ドル紙幣しか入っていないATMを考えてください。現金として引き出すことができれば `true` を、 そうでないなら `false` を返す関数を作りましょう。
 
-**Examples:**
+**例:**
 
-* `withdraw(15)` should return `true`
-* `withdraw(18)` should return `false`, because $18 cannot be made up of $5 notes
+* `withdraw(15)` ならば、 `true` を返します。
+* `withdraw(18)` ならば、 `false` を返します。18ドルは5ドル紙幣だけでは作れないためです。
 
-**Tips for getting tests green:**
+**テストをパスさせるヒント:**
 
-The modulus operator, `%` gets the remainder of a division. Eg, `9 % 4` results in `1` (nine divided by four has a remainder of 1).
+剰余演算子 `%` は余りを出力します。例えば `9 % 4` は `1` になります。(9を4で割った時の余りは1のため)。
 
-**Starting code:**
+**コーディング開始:**
 
-Create a file called `atm.rb`. paste the following code into it. This contains the shell of your `withdraw()` function, along with tests.
+`atm.rb` というファイルを作成し、以下のコードを貼り付けます。これはテストと一緒に`withdraw()`のシェルも含まれています。
 
 {% highlight ruby %}
 def withdraw(amount)
@@ -53,7 +53,7 @@ end
 {% endhighlight %}
 
 
-### Tests for step 1:
+### テスト step 1:
 
 {% highlight ruby %}
 # import required testing libraries
@@ -81,25 +81,25 @@ describe 'atm' do
 end
 {% endhighlight %}
 
-## *2.* How many bills?
-Now, modify your function so that if the amount *can* be withdrawn, it will return the appropriate number of notes, rather than simply `true`
+## *2.* 紙幣は何枚？
+それでは、ここから関数を修正します。引数が引き出せる金額なら、単純に `true` を返すのではなく、紙幣の枚数を返すようにします。
 
-**Examples:**
+**例:**
 
-* `withdraw(15)` should return `3`, since three $5 notes makes $15
-* `withdraw(20)` should return `4`, since four $5 notes makes $20
-* `withdraw(11)` should return `false`, because $11 cannot be made up of $5 notes
+* `withdraw(15)` ならば、 `3` を返します。5ドル紙幣3枚で15ドルになるためです。
+* `withdraw(20)` ならば、 `4` を返します。5ドル紙幣4枚で20ドルになるためです。
+* `withdraw(11)` ならば、 `false` を返します。11ドルは5ドル紙幣だけでは作れないためです。
 
-**Tips for getting tests green:**
+**テストをパスさせるヒント:**
 
-The `/` operator performs a division. For example, if you wanted to get half your age, and store it in a variable, you'd do this:
+`/` 演算子は割り算を行います。例えば、自分の年齢の半分に割り、それを変数に保存させたい場合、このように書きます。
 
 {% highlight ruby %}
 my_age = 28
 half_my_age = my_age / 2
 {% endhighlight %}
 
-In ruby, when you do division with two whole numbers (integers), the result is rounded down to the nearest whole number.
+Rubyでは、正の整数で割り算を行う場合、結果は最も近い整数に切り捨てられます。
 
 {% highlight ruby %}
 new_number = 25/10
@@ -107,7 +107,7 @@ new_number = 25/10
 {% endhighlight %}
 
 
-### Tests for step 2:
+### テスト step 2:
 
 {% highlight ruby %}
 # Replace your existing tests with the ones below.
@@ -129,26 +129,26 @@ describe 'atm' do
 end
 {% endhighlight %}
 
-## *3.* Array of notes
+## *3.* 紙幣の配列
 
-In programming, an `array` is basically a collection of things. It's like a list.
+プログラムにおいて、`array` は基本的にものの集合です。リストのようなものです。
 
-Rather than returning the number of notes, modify the code so that it returns an array of notes (in this case, all $5's).
+紙幣の枚数を返すのではなく、紙幣そのものの配列を返すようにコードを修正します（この場合では、全て5ドル紙幣です）。
 
-**Examples**
+**例**
 
-* `withdraw(15)` should return an array, `[5, 5, 5]`. (That's basically a collection of three $5 notes)
-* `withdraw(11)` should return `false`, because $11 cannot be made up of $5 notes
+* `withdraw(15)` ならば、配列 `[5, 5, 5]` を返します。これは基本的に3枚の5ドル紙幣の集合です。
+* `withdraw(11)` ならば、 `false` を返します。11ドルは5ドル紙幣だけでは作れないためです。
 
-**Tips for getting tests green:**
+**テストをパスさせるヒント:**
 
-`[]` defines an empty array. `[1, 2]` defines an array with two elements (1 and 2).
+`[]` は空の配列と定義します。`[1, 2]` は二つの要素（1と2）をもつ配列として定義されています。
 
-The shovel operator (`<<`) adds an element to an array. Eg. `[10, 20] << 30` will add 30 to the array, resulting in `[10, 20, 30]`.
+シャベル演算子 (`<<`) を使えば、配列に要素を加えることができます。例えば、 `[10, 20] << 30` は30を配列に追加させ、結果として `[10, 20, 30]` という配列が得られます。
 
-The `times` method executes a block of code several times - eg. `5.times { puts 'hello' }` will print 'hello' 5 times.
+`times` メソッドはコードのブロックを数回繰り返して実行します。例えば、 `5.times { puts 'hello' }` は 'hello' を5回出力します。
 
-Bringing it all together:
+全てをまとめると、以下のようになります。
 
 {% highlight ruby %}
 my_array = [] # create an empty array and store it in my_array
@@ -158,7 +158,7 @@ remainder = 13 % 5 # remainder is 3
 remainder.times { my_array << 5 } # now my_array contains [20, 30, 5, 5, 5]
 {% endhighlight %}
 
-### Tests for step 3:
+### テスト step 3:
 {% highlight ruby %}
 # Replace your existing tests with the ones below.
 describe 'atm' do
@@ -177,16 +177,16 @@ describe 'atm' do
 end
 {% endhighlight %}
 
-## *4.* $10 notes
+## *4.* 10ドル紙幣
 
-Now imagine the ATM returns only $10 notes. Modify your function to accommodate this.
+次に、ATMから10ドル紙幣だけが返されることを想定してください。これに対応できるように関数を変更しましょう。
 
-**Examples**
+**例**
 
-* `withdraw(20)` should return an array, `[10, 10]`
-* `withdraw(15)` should return `false`, because $15 cannot be made up of $10 notes
+* `withdraw(20)` ならば、配列 `[10, 10]` を返します。
+* `withdraw(15)` ならば、 `false` を返します。15ドルは10ドル紙幣だけでは作れないためです。
 
-### Tests for step 4:
+### テスト step 4:
 
 {% highlight ruby %}
 # Replace your existing tests with the ones below.
@@ -206,12 +206,12 @@ describe 'atm' do
 end
 {% endhighlight %}
 
-### Refactor
-Once you have your tests passing, it's time to refactor.
+### リファクタリングする
+一度テストをパスできたら、次にリファクタリングを行います。
 
-In programming, ['Magic Numbers'](http://en.wikipedia.org/wiki/Magic_number_(programming)) are a bad thing (don't be fooled by the name!). They refer to a hard-coded value that just sort of *appears* out of thin air, with no clear explanation of what that particular number represents.
+プログラミングでは、['マジックナンバー'](http://en.wikipedia.org/wiki/Magic_number_(programming)) は、悪いものとされています（名前に騙されないで！）。マジックナンバーは、何を表しているのか明確な説明がないため、まるで何もないところから *現れた* ような、プログラムに直接入力された(ハードコーディングされた)値のことです。
 
-Consider how easy / hard it is to understand the following code snippets:
+次のコードが理解するのにどれほど簡単か、または難しいか考えてください。
 
 {% highlight ruby %}
 # BAD - magic number!
@@ -230,21 +230,21 @@ interest_rate = 4.45
 balance = balance * interest_rate
 {% endhighlight %}
 
-Magic numbers are particularly troublesome when the same hard-coded value appears in multiple places.
+複数の箇所で同じ値がハードコーディングされていると、マジックナンバーは特に問題になります。
 
-Did you use magic numbers? Can you refactor your code to eliminate them?
+あなたはマジックナンバーを使いましたか？ それをなくすようにリファクタリングできますか？
 
 
-## *5.* $5 and $10 notes
+## *5.* 5ドル紙幣と10ドル紙幣
 
-Imagine your ATM now holds $5 and $10. People want as few notes as possible.
+ATMに5ドル紙幣と10ドル紙幣がある場合を想定してください。利用者は、紙幣を可能な限り少なくしたいとします。
 
-**Examples**
+**例**
 
-* `withdraw(25)` should return `[10, 10, 5]`
-* `withdraw(11)` should return `false`, because $11 cannot be made up of $5 and $10 notes
+* `withdraw(25)` ならば、配列 `[10, 10, 5]` を返します。
+* `withdraw(11)` ならば、 `false` を返します。11ドルは5ドル紙幣と10ドル紙幣だけでは作れないためです。
 
-### Tests for step 5:
+### テスト step 5:
 
 {% highlight ruby %}
 # Replace your existing tests with the ones below.
@@ -264,28 +264,28 @@ describe 'atm' do
 end
 {% endhighlight %}
 
-## *6.* $5, $10, and $20 notes
+## *6.* 5ドル紙幣、10ドル紙幣、そして20ドル紙幣
 
-Your ATM now holds $5, $10, and $20 notes. Modify your function to accommodate this.
+ATMには5ドル紙幣と10ドル紙幣と20ドル紙幣が入っています。これに対応できるように、関数を修正してください。
 
-**Note:** at this point, each higher denomination can be evenly divided by each lower denomination - eg. $20 / $10 = 2. Things get much trickier when that's not the case (eg, $50's and $20's). For this step, we'll intentionally not deal with this case to make it easier.
+**注意:** この時点では、高額な紙幣の金額は低額な紙幣の金額を割り切ることができます。（例：20ドル/10ドル = 2）そうでない場合（50ドルと20ドル）はより事態が複雑になってしまいます。簡単にするために、このステップではそのケースを意図的に扱いません。
 
-**Examples**
+**例**
 
-* `withdraw(15)` should return `[10, 5]`
-* `withdraw(25)` should return `[20, 5]`
-* `withdraw(35)` should return `[20, 10, 5]`
-* `withdraw(11)` should return `false`, because $11 cannot be made up of $5 and $10 notes
+* `withdraw(15)` ならば、配列 `[10, 5]` を返します。
+* `withdraw(25)` ならば、配列 `[20, 5]` を返します。
+* `withdraw(35)` ならば、配列 `[20, 10, 5]` を返します。
+* `withdraw(11)` ならば、 `false` を返します。11ドルは5ドル紙幣と10ドル紙幣だけでは作れないためです。
 
-**Tips for getting tests green:**
+**テストをパスさせるヒント:**
 
-To tell if an array is empty: `my_array.empty?`
+配列が空であることを判定する：`my_array.empty?`
 
-To tell if an array is not empty: `!my_array.empty?`
+配列が空でないことを判定する：`!my_array.empty?`
 
-To remove the first element off an array: `my_array.shift`. Eg, `[1, 2, 3].shift` results in `[2, 3]`
+配列の最初の要素を除去する： `my_array.shift`  例: `[1, 2, 3].shift` は `[2, 3]` を返す
 
-### Tests for step 6:
+### テスト step 6:
 
 {% highlight ruby %}
 # Replace your existing tests with the ones below.
@@ -309,23 +309,23 @@ end
 {% endhighlight %}
 
 
-### Refactor
+### リファクタリングする
 
-* How many lines did you have to change, going from step 5 to step 6?
-* What if we made $100 notes available, as well? Could you do this in a single line?
-* Refactor your code so that you could change to $100, $20 and $10 notes, by changing a single line.
-* What is the most future-proof solution?
-
-
-## *7.* Final Discussion Points
-* Given a particular solution *works*, what makes it 'good' or 'bad' code?
-* Can you think of any take-home best practices or principles? Is code structure important? Why?
-* Did you have any 'Aha!' moments? What were they?
-* Let's say you started a little ATM company, which quickly expanded to become a global success. How suitable is your code for dealing with all denominations of currency, in all nations of the world? Did it get more suitable with each step?
+* ステップ5からステップ6までに、何行変更する必要がありますか？
+* 100ドル紙幣が使用可能だとしたらどうなるでしょうか？　それは1行で実装できますか？
+* 100ドル紙幣と20ドル紙幣、10ドル紙幣が使用できるように、あなたのコードを1行だけ変更してください。
+* もっとも拡張性のある解決策はなんですか？
 
 
-## Challenge! $50 and $20 notes
+## *7.* 最終的な議論のポイント
+* 特定の解決策が *機能する* とすると、そのコードの良し悪しを決定するのはなんでしょうか？
+* 参考になるベストプラクティスまたは原則はありますか？コードの構造は重要ですか？それはなぜですか？
+* 'なるほど！' と思った瞬間はありましたか？　それはどのようなものでしたか？
+* あなたが小さなATM会社を設立し、すぐに会社が成長して世界的な成功を収めたとします。あなたが書いたコードは世界のあらゆる国の、あらゆる通貨を処理するのにどれほど適していますか？　段階を追うごとに適切になってきましたか？
 
-Up til now, we've intentionally avoided the case where a smaller note cannot fit evenly into each larger one. For example, we've avoided the case of having only $50s and $20s (where 20 does not divide evenly into 50). Can you see why this case will be harder? If your current code were to include only $50s and $20s, what would happen when you try to withdraw $60, or $110? In your head, or on paper, can you think of what logic would be needed to be in place to handle these cases correctly? If you're up for a challenge, try to handle this case in your code! (You'll need to write the tests yourself for this step).
+
+## 挑戦しよう！ 50ドル紙幣と20ドル紙幣
+
+これまで、私たちはATMで扱える紙幣のうち、低額の種類の紙幣がそれより高額の紙幣の倍数にならないことを意識的に避けてきました。例えば、50ドルと20ドル紙幣のみ扱う、のように(50は20で割り切ることはできない)。なぜこのケースが困難かわかりますか？ もしあなたの現在のコードが50ドル紙幣と20ドル紙幣しか利用可能でない場合、60ドルまたは110ドルを引き出す場合はなにが起こりますか？ 自分の頭の中で、あるいは紙の上で、このケースを正しく処理するにはどのようなロジックを導入する必要があるか考えられますか？　挑戦しようと思うなら、コード中で処理をしてみてください！（テストの内容は自分で考える必要があります）
 
 
