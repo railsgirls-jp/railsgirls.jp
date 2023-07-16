@@ -205,9 +205,6 @@ end
 <p><a href='/'>Cast more votes!</a></p>
 {% endhighlight %}
 
-Run `ruby suffragist.rb`, check
-your results and shut down the server with <kbd>Ctrl</kbd>+<kbd>C</kbd>.
-
 `ruby suffragist.rb`を実行し、結果を確認したら <kbd>Ctrl</kbd>+<kbd>C</kbd> でサーバを停止してください。
 
 __COACH__: HTMLテーブルについて説明してください。ハッシュの値が見つからないときにデフォルトで0になる理由についても説明してください。
