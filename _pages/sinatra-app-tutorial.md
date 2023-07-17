@@ -61,28 +61,33 @@ POSTメソッドとGETメソッドについて説明してください。さら�
 `views`ディレクトリに`index.erb`というファイルを作り、以下のコードを入力してください。
 
 {% highlight erb %}
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Suffragist</title>
-    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body class='container'>
-    <p>What's for dinner?</p>
-    <form action='cast' method='post'>
-      <ul class='unstyled'>
-        <% Choices.each do |id, text| %>
-          <li>
-            <label class='radio'>
-              <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
-              <%= text %>
-            </label>
-          </li>
-        <% end %>
-      </ul>
-      <button type='submit' class='btn btn-primary'>Cast this vote!</button>
-    </form>
+  <body>
+    <div class="container">
+      <p>What's for dinner?</p>
+
+      <form action="cast" method="post">
+        <div class="mb-3">
+          <% Choices.each do |id, text| %>
+            <div class="form-check">
+              <input type="radio" name="vote" value="<%= id %>" class="form-check-input" id="vote_<%= id %>" />
+              <label class="form-check-label" for="vote_<%= id %>">
+                <%= text %>
+              </label>
+            </div>
+          <% end %>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Cast this vote!</button>
+      </form>
+    </div>
   </body>
 </html>
 {% endhighlight %}
@@ -122,9 +127,10 @@ HTMLとerbについて簡単に話してください。テンプレートにつ�
 `<h1>…</h1>` の行を追加してください。
 
 {% highlight erb %}
-  <body class='container'>
-    <h1><%= @title %></h1>
-    <p>What's for dinner?</p>
+  <body>
+    <div class="container">
+      <h1><%= @title %></h1>
+      <p>What's for dinner?</p>
 {% endhighlight %}
 
 `get`アクションを以下のように変更してください。
@@ -159,17 +165,20 @@ end
 Rubyのコードが埋め込まれたHTMLを入力してください。
 
 {% highlight erb %}
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Suffragist</title>
-    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body class='container'>
-    <h1><%= @title %></h1>
-    <p>You cast: <%= Choices[@vote] %></p>
-    <p><a href='/results'>See the results!</a></p>
+  <body>
+    <div class="container">
+      <h1><%= @title %></h1>
+      <p>You cast: <%= Choices[@vote] %></p>
+      <p><a href="/results">See the results!</a></p>
+    </div>
   </body>
 </html>
 {% endhighlight %}
@@ -187,16 +196,20 @@ POSTがどのように動作するのかを説明してください。フォー�
 そこに次のコードを入力してください。
 
 {% highlight erb %}
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Suffragist</title>
-    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body class='container'>
-    <h1><%= @title %></h1>
-    <%= yield %>
+  <body>
+    <div class="container">
+      <h1><%= @title %></h1>
+      <%= yield %>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
 {% endhighlight %}
@@ -225,7 +238,7 @@ end
 `views`ディレクトリに`results.erb`という新しいファイルを作成してください。
 
 {% highlight erb %}
-<table class='table table-hover table-striped'>
+<table class="table table-hover table-striped">
   <% Choices.each do |id, text| %>
     <tr>
       <th><%= text %></th>
@@ -234,7 +247,7 @@ end
     </tr>
   <% end %>
 </table>
-<p><a href='/'>Cast more votes!</a></p>
+<p><a href="/">Cast more votes!</a></p>
 {% endhighlight %}
 
 `ruby suffragist.rb`を実行し、
@@ -260,11 +273,21 @@ require 'yaml/store'
 `suffragist.rb`にさらにコードを追加します。
 `post '/cast'` と `get '/results'` を以下のコードに置き換えてください。
 
+<!--
+Do not change the .yaml extension to .yml.
+
+rerun, the most popular solution for restarting Sinatra if source files change, watches for .yml
+files by default.
+
+As a result, if after an attendee starts using rerun, rerun will restart the server any time a vote
+is cast, leading to unexpected behavior from the app.
+-->
+
 {% highlight ruby %}
 post '/cast' do
   @title = 'Thanks for casting your vote!'
   @vote  = params['vote']
-  @store = YAML::Store.new 'votes.yml'
+  @store = YAML::Store.new 'votes.yaml'
   @store.transaction do
     @store['votes'] ||= {}
     @store['votes'][@vote] ||= 0
@@ -275,7 +298,7 @@ end
 
 get '/results' do
   @title = 'Results so far:'
-  @store = YAML::Store.new 'votes.yml'
+  @store = YAML::Store.new 'votes.yaml'
   @votes = @store.transaction { @store['votes'] }
   erb :results
 end
@@ -288,7 +311,7 @@ YAMLが何なのかを説明してください。
 
 ### 投票時のYAMLファイルの変化を確認する
 
-`votes.yml`を開きましょう。そして投票してください。それからもう一度確認してください。
+`votes.yaml`を開きましょう。そして投票してください。それからもう一度確認してください。
 
 {% coach %}
 サーバを再実行する前に
@@ -310,4 +333,5 @@ YAMLが何なのかを説明してください。
 * ビューにロジックを追加してみる
 * resultsに直接リダイレクトしてみる
 * さらに投票してみる。YAMLファイルはどう変化するか？
+* Sort the results by the number of votes.
 * いろんな方法でファイルにスタイルを適用してみる
