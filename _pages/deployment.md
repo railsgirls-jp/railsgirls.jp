@@ -1,7 +1,7 @@
 ---
 layout: main_guide
 title: あなたのアプリをインターネットに公開しよう
-description: "ウェブホスティングサービスを利用してアプリを公開してみよう。"　
+description: "ウェブホスティングサービスを利用してアプリを公開してみよう。"
 permalink: deployment
 ---
 
