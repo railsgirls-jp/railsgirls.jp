@@ -142,7 +142,7 @@ end
 GET /?what=flat+white&cost=3.50 HTTP/1.1
 {% endhighlight %}
 
-**Coach:** パラメータ名がどこから来ているのか、クエスチョンマークは何をしているのかについて話します。
+**Coach:** パラメータ名がどこから来ているのか、クエスチョンマークは何をしているのかについて話しましょう。
 
 なかなかうまくいかない場合は、[このファイル](http://tjmcewan.github.io/coffeecalc/snippets/html_form.rb.txt)のようなコードになるようにしてください。
 
@@ -163,7 +163,7 @@ Accept-Encoding: gzip,deflate,sdch
 Accept-Language: en-US,en;q=0.8
 {% endhighlight %}
 
-**Coach:** HTTPヘッダーとは何か、その意味を説明します。
+**Coach:** HTTPヘッダーとは何か、その意味を説明しましょう。
 
 注目すべきは1行目で、HTTP動詞と呼び出されたURLを示しています。
 
