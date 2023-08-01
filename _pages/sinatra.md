@@ -64,7 +64,7 @@ gem install sinatra-contrib
 {% endhighlight %}
 
 ## *1.* "Hello World"
-`app.rb`というファイルを作成し、以下をSublime Textに貼り付ける：
+`app.rb`というファイルを作成し、以下をSublime Textに貼り付けます：
 
 {% highlight ruby %}
 require "sinatra"
@@ -80,7 +80,7 @@ end
 ruby app.rb
 {% endhighlight %}
 
-現在のサイトを見る： [http://localhost:4567](http://localhost:4567)
+次のURLにアクセスして、現在のサイトを確認します： [http://localhost:4567](http://localhost:4567)
 
 今ブラウザに表示されている情報は、GETリクエストに対するレスポンスです。
 
