@@ -206,7 +206,7 @@ paramsハッシュからそれらを取り出し、`$coffees`に追加するコ�
 これで、ブラウザのHTMLに`$coffees`が表示され、`$coffees`にコーヒーが追加されているかどうか（つまり、あなたのコードが機能しているかどうか）がわかるようになります。
 
 **Hint:**
-グローバル変数は配列なので、行き詰まった場合は、[Rubyのドキュメント](http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-3C-3C)を参照してください。
+グローバル変数は配列なので、行き詰まった場合は、[Rubyの配列に関するドキュメント](http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-3C-3C)を参照してください。
 
 もし行き詰まったら、[ここをチェック](http://tjmcewan.github.io/coffeecalc/snippets/store_coffees.rb.txt)してください。
 
