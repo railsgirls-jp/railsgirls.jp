@@ -316,7 +316,7 @@ Location: http://localhost:4567/
 遊んでくれてありがとうございました！
 
 ## 追加ガイド
-続けてみたいという方は、ぜひお試しください：
+もし早く終わった、続けてみたいという方は、ぜひお試しください：
 
 * [rendering our coffee list in proper HTML](/sinatra-html)
 **LUCY-TODO**
