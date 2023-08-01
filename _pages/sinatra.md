@@ -12,7 +12,7 @@ permalink: sinatra
 
 情報がどのようにWebブラウザとやり取りされているか考えたことがありますか？このチュートリアルでは、HTTPについて調べることで、その仕組みを見ていきます。
 
-今回は、[**Sinatra**](http://www.sinatrarb.com/)をツールとして使い、Webの基本的な原則をいくつか紹介します。Sinatraは、Rubyで最小限の労力でWebアプリケーションを作成するための小さなフレームワークです。[Sinatraで作られたものはこちら](http://www.sinatrarb.com/wild.html)にリストアップされています。
+今回は、[**Sinatra**](http://www.sinatrarb.com/)をツールとして使い、Webの基本的な原則をいくつか紹介します。Sinatraは、Rubyを使って最小限の労力でWebアプリケーションを作成するための小さなフレームワークです。[Sinatraで作られたものはこちら](http://www.sinatrarb.com/wild.html)にリストアップされています。
 
 SinatraはRailsとは異なります。どちらもWebアプリを書くのに役立つフレームワークですが、Sinatraには少ない機能と少ない魔法しかありません。
 
