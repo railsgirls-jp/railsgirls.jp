@@ -1,22 +1,21 @@
 ---
 layout: main_guide
-title: HTML と CSS を使ってデザインしてみよう
+title: HTML と CSS を使ってアイデアのページをデザインしてみよう
+description: "Bootstrap を使ってアイデアのページをデザインし、アプリをもっと美しくしてみよう。"
 permalink: design
 ---
 
-# HTML & CSS を使ってデザインしてみよう
+# HTML と CSS を使ってアイデアのページをデザインしてみよう
 
-*Created by Alex Liao, [@alexliao](http://bannka.com/alex), Translated by Hiroshi SHIBATA [@hsbt](http://twitter.com/hsbt)
+*Originally created by Alex Liao, @alexliao / Translated by Hiroshi SHIBATA [@hsbt](http://twitter.com/hsbt), Goh Matsumoto [@urimaro](http://twitter.com/urimaro)*
 
 {% include main-guide-intro.html %}
 
-アプリケーションは完成しましたが、まだ scaffold で自動生成した状態です。いくつかのデザインを追加してよく見かける Web サイトのようにしてみましょう。このチュートリアルが終わった時に、あなたのアプリケーションは[この](http://railsgirlsapp.herokuapp.com/ideas)ようになるはずです。
+## アイデアの一覧をデザインしよう
 
-## Style the idea list page
+Rails のデフォルトの scaffold で、画面をとても速く構築して、アプリを動くようにしてくれます。一方、デザインは改善の余地があります。このために、もう一度 [Bootstrap](https://getbootstrap.com/docs/5.2/) を使います。独自のコンポーネントやスタイリッシュなリンク、ボタンを作るために既存の Bootstrap のクラスを使います。
 
-The default Rails scaffolding allow us to build pages very quickly and get our app working. The design could use some work. For this we're going to be using [Bootstrap](https://getbootstrap.com/docs/5.2/) again. We'll be using some existing Bootstrap classes to make our own components, style links and buttons.
-
-`app/views/ideas/index.html.erb` を開いて以下の内容に置きかえます。
+`app/views/ideas/index.html.erb` をテキストエディタで開いて、以下の内容ですべてを置き換えます。
 
 {% highlight erb %}
 <p style="color: green"><%= notice %></p>
@@ -31,9 +30,9 @@ The default Rails scaffolding allow us to build pages very quickly and get our a
 </div>
 {% endhighlight %}
 
-This alone isn't all the styling we'll need, but this will show all the ideas in a nice list in a moment. At the top we'll have a new blue button with the label "Add a new idea".
+これだけで必要なデザインがすべてそろう訳ではありませんが、あっという間に、すべてのアイデアを素敵な一覧で表示できるようになります。画面上部に、「Add a new idea」というラベルの新しい青いボタンが表示されます。
 
-Open `app/views/ideas/_idea.html.erb` in your Text Editor and replace all the lines with these lines:
+`app/views/ideas/_idea.html.erb` をテキストエディタで開いて、以下の内容ですべてを置き換えます。
 
 {% highlight erb %}
 <div id="<%= dom_id idea %>" class="list-group-item list-group-item-action d-flex gap-3 py-3">
@@ -46,19 +45,19 @@ Open `app/views/ideas/_idea.html.erb` in your Text Editor and replace all the li
 </div>
 {% endhighlight %}
 
-This will style each idea in the list to show their idea name as a link to the idea itself, it shows when the idea was last updated, the idea description and a thumbnail of the picture you uploaded.
+これにより、一覧の各アイデアには、詳細画面へのリンクになった名前が表示され、最終更新日時、アイデアの説明、アップロードした画像のサムネイルが表示されます。
 
-Visit the <http://localhost:3000/ideas> page to see your new idea app design.
+<http://localhost:3000/ideas> を表示して、アイデアアプリの新しいデザインを確認してみましょう。
 
 {% coach %}
-Explain how the design works line by line. What is HTML, what is CSS and what parts are Bootstrap?
+1行ずつデザインの仕組みを説明しましょう。HTMLとは何か、CSSとは何か、どの部分が Bootstrap なのか。
 {% endcoach %}
 
-## Style the idea detail page
+## 詳細画面をデザインしよう
 
-idea のタイトルをクリックすると、idea の詳細画面を見ることができます。今はまだ Rails によって作られた scaffold ページのままです。さあ、これをもっとよくしてみましょう。
+アイデアのタイトルをクリックすると、アイデアの詳細画面を見ることができます。部分的にRails によって作られた scaffold ページが使われたままになっていて、今はちょっと壊れたように見えるかもしれません。さあ、これをもっとよくしてみましょう。
 
-`app/views/ideas/show.html.erb` をテキストエディタで開いて、以下の内容で全てを置きかえます。
+`app/views/ideas/show.html.erb` をテキストエディタで開いて、以下の内容ですべてを置き換えます。
 
 {% highlight erb %}
 <p style="color: green"><%= notice %></p>
@@ -79,23 +78,23 @@ idea のタイトルをクリックすると、idea の詳細画面を見るこ�
 </div>
 {% endhighlight %}
 
-The new page should look a lot better and a lot like how the ideas are shown on the index page. The actions you can perform on the idea now also are shown in highly visible buttons below the idea details.
+アイデアの一覧画面と同じように、新しいページはずっとよく見えるはずです。また、アイデアに対して行える操作は、アイデアの詳細の下にわかりやすいボタンで表示されます。
 
 {% coach %}
-Explain how the design works line by line. What is HTML, what is CSS and what parts are Bootstrap?
+1行ずつデザインの仕組みを説明しましょう。HTMLとは何か、CSSとは何か、どの部分が Bootstrap なのか。
 {% endcoach %}
 
-## References
+## 参考資料
 
-To style the pages we've used the following Bootstrap components. Check out the documentation to learn more.
+ページをデザインするのに使った Bootstrap のコンポーネントは以下のとおりです。より深く学ぶためにドキュメント確認してみましょう。
 
 - [Bootstrap list groups](https://getbootstrap.com/docs/5.2/components/list-group/)
 - [Bootstrap buttons](https://getbootstrap.com/docs/5.2/components/buttons/)
 - [Bootstrap images](https://getbootstrap.com/docs/5.2/content/images/)
 
-## What next?
+## 次は？
 
-Did the design and styling catch your eye? Do you want to unleash your inner designer and style more pages?
+目を引くようなデザインやスタイルでしたか？あなたの内なるデザイナーを解き放ち、より多くのページをデザインしたいですか？
 
-* Use your new knowledge to design the new idea form located at `app/views/ideas/_form.html.erb`
-* Add more design to the other pages as you wish.
+* `app/views/ideas/_form.html.erb` にあるアイデアを登録するフォームをデザインするために新しい知識を使ってみましょう。
+* お好みで他のページももっとデザインしてみましょう。
