@@ -4,67 +4,67 @@ title: Web Fundamentals Tutorial
 permalink: sinatra
 ---
 
-# Web Fundamentals Tutorial
+# Web基礎チュートリアル
 
-*Created by Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan)*
+*Created by Tim McEwan, [@tjmcewan](https://twitter.com/tjmcewan) / Translated by Daiki Kato, [@DAIKI__0381](https://twitter.com/DAIKI__0381)*
 
-##Goal
+## 目標
 
-Have you ever thought about how information gets to and from your web browser? In this tutorial we're going to look at how it all works by exploring HTTP.
+情報がどのようにWebブラウザとやり取りされているか考えたことがありますか？このチュートリアルでは、HTTPについて調べることで、その仕組みを見ていきます。
 
-We're going to use [**Sinatra**](http://www.sinatrarb.com/) as a tool to demonstrate some basic web principles. Sinatra is a small framework for creating web applications in Ruby with minimal effort. You can find a list of [things built with Sinatra here](http://www.sinatrarb.com/wild.html).
+今回は、[**Sinatra**](http://www.sinatrarb.com/)をツールとして使い、Webの基本的な原則をいくつか紹介します。Sinatraは、Rubyを使って最小限の労力でWebアプリを作成するための小さなフレームワークです。[Sinatraで作られたものはこちら](http://www.sinatrarb.com/wild.html)にリストアップされています。
 
-Sinatra is different from Rails. They're both frameworks for helping you to write web apps, but Sinatra contains fewer features and less magic.
+SinatraはRailsとは異なります。どちらもWebアプリを書くのに役立つフレームワークですが、Sinatraには少ない機能と少ない魔法しかありません。
 
-## Introduction
+## はじめに
 
-HTTP is used to send information between an application (like your Rails Girls app) and a browser.
-The basis of communication with HTTP is a request/response pair. Requests are sent by the browser to the server (e.g. your app) and the response is sent back from the server to your browser for a user to view.
+HTTPは、アプリ（Rails Girlsアプリなど）とブラウザの間で情報を送るために使用されます。
+HTTPによる通信の基本は、リクエストとレスポンスがペアになっています。リクエストはブラウザからサーバー（あなたのアプリなど）に送られ、レスポンスはサーバーからあなたのブラウザに返され、ユーザーが閲覧することができます。
 
-To make a request in a browser, you need to use a URL. A URL contains a lot of information about what information you are requesting so that the server can send you the correct response.
+ブラウザでリクエストを送るには、URLを使用する必要があります。URLには、サーバーが正しいレスポンスを送れるように、どのような情報をリクエストしているのか、多くの情報が含まれています。
 
-A URL will contain;
+URLには、以下の内容が含まれます；
 
-* The protocol you will communicate with
-* The domain that has the information you want
-* The path to the resource on that server
-* Optionally there might be parameters on the end of the url, as key/value pairs, containing extra information about the request
-* The // towards the beginning of the URL specifies that this request wants to make contact with a server.
-* The ? towards the end of the url signals the end of the file path, and the beginning of any optional parameters.
+* 通信するプロトコル
+* 必要な情報を持っているドメイン
+* サーバー上のリソースへのパス
+* オプションとして、リクエストに関する追加情報を含むパラメータが、キーと値のペアとして、URLの末尾にある場合があります。
+* URLの先頭の//は、このリクエストがサーバーとの接続を希望していることを指しています。
+* URLの末尾の？は、ファイルパスの終わりと、オプションのパラメーターの始まりを示しています。
 
 <img src="../images/url-breakdown.png" alt="Breakdown of a URL" />
 
-URLs reveal the resource you want, but the action that needs to be performed on that resource needs to be specified using HTTP verbs.
+URLは欲しいリソースを示しますが、そのリソースに対して実行する必要のあるアクションは、HTTP動詞を使って指定する必要があります。
 
-The most common HTTP verbs are
+HTTPの代表的な動詞は
 
-* GET: fetch an existing resource
-* POST: create a new resource. (Usually includes data needed to create the new resource)
-* PUT: update an existing resource.
-* DELETE: delete an existing resource.
+* GET: 既存のリソースを取得する。
+* POST: 新しいリソースを作成する。 (通常、新しいリソースを作成するために必要なデータが含まれます)
+* PUT: 既存のリソースを更新する。
+* DELETE: 既存のリソースを削除する。
 
-You would have used all these verbs on your Rails Girls app when you enabled it to show, create, edit and delete posts or notes.
+Rails Girlsアプリで投稿やノートの表示、作成、編集、削除をできるようにしたとき、これらの動詞をすべて使ったことでしょう。
 
-A request to a server needs to include both a URL and HTTP verb.
+サーバーへのリクエストは、URLとHTTP動詞の両方を含める必要があります。
 
-In the following exercises you will build a small coffee listing application that uses a combination of resource folder names and HTTP verbs to show how browsers communicate with your application.
+以下の演習では、どのようにブラウザがアプリと通信するのかを示すために、リソースフォルダ名とHTTP動詞の組み合わせを使った簡単なコーヒーリストアプリケーションを作成します。
 
-Your app will look something like this in the browser:
+あなたのアプリは、ブラウザ上でこのように表示されます：
 
 <img src="../images/coffee-app.png" alt="Sinatra Coffee App" />
 
-## *0.*Install Sinatra - "Hello World"
+## *0.* Sinatraをインストール - "Hello World"
 
-Let's start off by getting Sinatra running.
+まずはSinatraを起動させるところから始めましょう。
 
-In your terminal, install the gem:
+ターミナルで、gemをインストールします：
 {% highlight sh %}
 gem install sinatra
 gem install sinatra-contrib
 {% endhighlight %}
 
-## *1.*"Hello World"
-Create a file called `app.rb` and paste the following into Sublime Text:
+## *1.* "Hello World"
+`app.rb`というファイルを作成し、以下をSublime Textに貼り付けます：
 
 {% highlight ruby %}
 require "sinatra"
@@ -75,22 +75,22 @@ get "/" do
 end
 {% endhighlight %}
 
-And back in your terminal, run this code with:
+そして、ターミナルに戻って、このコードを実行します：
 {% highlight sh %}
 ruby app.rb
 {% endhighlight %}
 
-View your current site at: [http://localhost:4567](http://localhost:4567)
+次のURLにアクセスして、現在のサイトを確認します： [http://localhost:4567](http://localhost:4567)
 
-The information showing now in your browser is the response to a GET request.
+今ブラウザに表示されている情報は、GETリクエストに対するレスポンスです。
 
-When you enter http://localhost:4567 you're sending a GET request to your Sinatra server.
+http://localhost:4567 にアクセスすると、SinatraサーバーにGETリクエストを送信することになります。
 
-What you see in the browser is the response from your Sinatra server.
+ブラウザに表示されるのは、Sinatraサーバーからのレスポンスです。
 
-Where you've written "/", you are just specifying the root url, but you can create any path name you want.
+"/"と書いたところは、ルートURLを指定していますが、好きなパス名にすることができます。
 
-In the same file, try creating more pages to visit, using the same syntax as the block above. You can add as many pages as you like, and have them say whatever you want.
+同じファイルに、上のブロックと同じ構文を使用して、さらに訪問するページを作ってみてください。好きなだけページを追加して、好きなように表示させることができます。
 
 e.g.
 {% highlight sh %}
@@ -99,19 +99,19 @@ get "/page-name" do
  end
 {% endhighlight %}
 
-If you need to you can hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in your command prompt to stop your app. (Just like for your Rails app!), however you don't need to stop and start to see your changes.
+必要であれば、コマンドプロンプトで<kbd>Ctrl</kbd>+<kbd>C</kbd>を押してアプリを停止することができます。（Railsアプリの場合と同様です！）しかし、変更を確認するために停止したり開始したりする必要はありません。
 
-If you get stuck, make sure your app.rb looks like [this one](http://tjmcewan.github.io/coffeecalc/snippets/install_sinatra.rb.txt).
+もし行き詰まったら、`app.rb`が[このファイル](http://tjmcewan.github.io/coffeecalc/snippets/install_sinatra.rb.txt)のようになっていることを確認してください。
 
-## *3.* HTML Form - Get Parameters
+## *3.* HTML フォーム - パラメータを取得
 
-To start listing coffees in our app, we'll need an HTML form to send through which coffee we want and how much it costs.
+アプリにコーヒーを掲載するには、どのコーヒーが欲しいのか、いくらなのかを送信するためのHTMLフォームが必要です。
 
-This means sending a request to the Sinatra server, including some information.
+これは、いくつかの情報を含むリクエストをSinatraサーバーに送信することを意味します。
 
-To send information to the server, we can use a form.
+サーバーに情報を送るには、フォームを使用します。
 
-Replace your `get "/"` from above with this:
+先程の`get "/"`を次のように置き換えてください：
 
 {% highlight ruby %}
 get "/" do
@@ -132,25 +132,25 @@ end
 
 {% endhighlight %}
 
-For simplicity, this form sends the information to the same URL ("/").
+分かりやすくするために、このフォームでは同じURL（"/"）に情報を送信しています。
 
-Refresh your browser and you should see the form you just created.
+ブラウザを更新すると、先程作成したフォームが表示されるはずです。
 
-Now let's see what the browser sends to the server when you submit the form. Put some text into the form and click the 'add coffee' button. Check out your Sinatra logs back in your terminal and you should see something like this:
+では、フォームを送信したときに、ブラウザがサーバーに送信する内容を確認してみましょう。フォームにテキストを入力し、「add coffee」ボタンをクリックします。ターミナルに戻ってSinatraのログをチェックすると、次のようなものが表示されるはずです：
 
 {% highlight HTTP %}
 GET /?what=flat+white&cost=3.50 HTTP/1.1
 {% endhighlight %}
 
-**Coach:** Talk about where the parameter names come from and what the question mark is doing.
+**Coach:** パラメータ名がどこから来ているのか、クエスチョンマークは何をしているのかについて話しましょう。
 
-If it's not quite working, make sure your code looks like [this code](http://tjmcewan.github.io/coffeecalc/snippets/html_form.rb.txt).
+なかなかうまくいかない場合は、[このファイル](http://tjmcewan.github.io/coffeecalc/snippets/html_form.rb.txt)のようなコードになるようにしてください。
 
-## *4.*Web Inspector - Request Headers
+## *4.* Webインスペクタ - リクエストヘッダー
 
-In your browser, open up your web console. (For most browsers, this can be accessed by *right clicking something on the page and choosing "Inspect Element"*.) I recommend you use Chrome for this; if you are using Chrome, you're looking for the 'Network' tab.
+ブラウザで、Webコンソールを開きます。（ほとんどのブラウザでは、ページ上で右クリックし、「検証」を選択することで開くことができます。）Chromeを使用している場合は、「ネットワーク」タブを探してください。
 
-Refresh your browser, then click on the 'localhost' line in the web inspector, then in the Headers tab, click 'view source'. You should see something similar to this:
+ブラウザを更新し、Webインスペクタで「localhost」の行をクリックし、「ヘッダー」タブで「ソースを表示」をクリックします。これと似たようなものが表示されるはずです：
 
 {% highlight HTTP %}
 GET / HTTP/1.1
@@ -163,60 +163,59 @@ Accept-Encoding: gzip,deflate,sdch
 Accept-Language: en-US,en;q=0.8
 {% endhighlight %}
 
-**Coach:** Explain what HTTP headers are and they mean.
+**Coach:** HTTPヘッダーとは何か、その意味を説明しましょう。
 
-The important part to note is the first line, which shows you the HTTP verb and the URL it was called on.
+注目すべきは1行目で、HTTP動詞と呼び出されたURLを示しています。
 
-**Note:** If Sinatra says it has "backup from WEBrick", Ruby's built-in webserver, then you may see multiple GET requests each time you refresh.  Only one request is actually being issued, you can safely ignore the other.
+**Note:** もしSinatraのログに"backup from WEBrick"（WEBrickはRubyに組み込まれているWebサーバーです）と表示されている場合、更新するたびに複数のGETリクエストが表示されるかもしれません。実際に発行されているのは1つのリクエストだけなので、他のリクエストは無視しても大丈夫です。
 
+## *5.* グローバル変数
 
-## *5.* Global Variable
+フォームからアプリにコーヒーの情報が送信されていますが、まだ何もしていません。コーヒーの情報がサーバーに送信されたら、それを保存する必要があります。
 
-So our form is sending the coffee information to our app, but we're not doing anything with it yet. We should save the coffee information after it is sent to the server.
+分かりやすくするために、コーヒーの詳細を変数に格納することにします。リクエスト間で利用できるように、[**グローバル変数**](http://en.wikipedia.org/wiki/Global_variable)を使用する必要があります。これは、Railsがモデル層を呼び出す処理を大幅に簡略化したものです。
 
-For simplicity, let's just store the coffee details in a variable. So that they'll be available between requests, we'll need to use a [**global**](http://en.wikipedia.org/wiki/Global_variable) variable. This is a drastically simplified version of what Rails calls the Model layer.
-
-Add this to your `app.rb` somewhere (convention says it should be near the top, under the `require` lines):
+これを `app.rb` のどこかに追加します（慣例では、一番上の `require` 行の下にあるはずです）：
 {% highlight ruby %}
 $coffees = []
 {% endhighlight %}
 
-This creates an empty array when your app first starts up.
+これにより、アプリの初回起動時に空の配列が作成されます。
 
-**Hint:** This global variable won't be around for very long - it will be reset to the empty array each time the server restarts.  Because we're using Sinatra's reloader, this will be every time you save your `app.rb` file.  Don't worry though, it will suit our purposes nicely.
+**Hint:** このグローバル変数は、サーバーが再起動するたびに空の配列にリセットされるため、あまり長い間存在することはありません。今回はSinatraのreloaderを使っているので、`app.rb`ファイルを保存するたびにリセットされることになります。しかし、心配する必要はありません、今回の目的にはうまく合致しています。
 
-## *6.* Receiving information - Storing Coffees
+## *6.* 情報の受信 - コーヒーの保存
 
-Now you'll need to get the information into that `$coffees` array when the request is received. When you fill in your form and click the submit button, remember that your information is put on the end of the URL, after the ?, to be sent back to the server.
+ここで、リクエストを受け取ったときに、その情報を `$coffees` で定義した配列に格納する必要があります。フォームに必要事項を入力して送信ボタンをクリックすると、サーバーに送信される情報がURLの末尾の?の後に配置され、サーバーに送り返されることに注意してください。
 
- Sinatra grabs that information from the end of the URL and makes it available as a Hash called `params`. For example:
+SinatraはURLの末尾からその情報を取得し、`params`というハッシュとして利用できるようにします。例えば、以下のような感じです：
 
- {% highlight ruby %}
- params = {coffee = 'flat white', value ='2'}
+{% highlight ruby %}
+params = {coffee = 'flat white', value ='2'}
 {% endhighlight %}
 
-You will need to write some code to take them from the params hash and add them to your  $coffees variable.
+paramsハッシュからそれらを取り出し、`$coffees`に追加するコードを書く必要があります。
 
-Before you start, first replace `<!-- coffees go here -->` in your form with:
+始める前に、まずフォーム内の `<!-- Coffees go here -->` を次のように置き換えます:
 
 {% highlight ruby %}
 #{ $coffees.inspect }
 {% endhighlight %}
 
-This will display the `$coffees` variable in the HTML in your browser so we can tell if coffees are being added to your $coffees variable (i.e. that your code is working).
+これで、ブラウザのHTMLに`$coffees`が表示され、`$coffees`にコーヒーが追加されているかどうか（つまり、あなたのコードが機能しているかどうか）がわかるようになります。
 
 **Hint:**
-Your global variable is an array, so if you get stuck, try [Ruby's Array documentation ](http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-3C-3C) to find out how you can add information to an array.  
+グローバル変数は配列なので、行き詰まった場合は、[Rubyの配列に関するドキュメント](http://www.ruby-doc.org/core-2.1.0/Array.html#method-i-3C-3C)を参照してください。
 
-If you're still stuck, [check here](http://tjmcewan.github.io/coffeecalc/snippets/store_coffees.rb.txt).
+もし行き詰まったら、[ここをチェック](http://tjmcewan.github.io/coffeecalc/snippets/store_coffees.rb.txt)してください。
 
-If you're storing your params correctly, you should be able to refresh the browser and see that a new hash gets added to the `$coffees` array each time.
+パラメータが正しく格納されていれば、ブラウザを更新して、毎回新しいハッシュが配列 `$coffees` に追加されることを確認できるはずです。
 
-## *6.* Tidy Up
+## *7.* 整える
 
-That big chunk of HTML in our `get` code is making it a bit hard to see what our app does. Let's move it to its own method.
+`get`コードの中にある大きなHTMLの塊のせいで、このアプリが何をするのかがちょっとわかりにくくなっています。これを独自のメソッドに移しましょう。
 
-Cut the HTML form out of your `get` code and paste it into a method called `template` (keep all your code in the same file). Like so:
+HTMLフォームを`get`コードから切り取って、`template`というメソッドに貼り付けます（すべてのコードを同じファイルに保存してください）。こんな感じで：
 
 {% highlight ruby %}
 def template
@@ -224,7 +223,7 @@ def template
 end
 {% endhighlight %}
 
-Now replace the form from your `get` code with a simple call to the template method, like this:
+ここで、`get`コードのフォームを、次のように`template`というメソッドの単純な呼び出しに置き換えてください：
 
 {% highlight ruby %}
 get "/" do
@@ -233,24 +232,24 @@ template
 end
 {% endhighlight %}
 
-This will also make it easier to re-use the form, should we ever need to.
+これにより、フォームを再利用することが容易になります。
 
-**Hint:** [Check here](http://tjmcewan.github.io/coffeecalc/snippets/template_method.rb.txt) if something went awry.
+**Hint:** 何か問題が発生した場合は、 [ここをチェック](http://tjmcewan.github.io/coffeecalc/snippets/template_method.rb.txt)してください。
 
-## *7.* Moving Beyond GET
+## *8.* GETを乗り越える
 
-As you saw in the store coffees section, if you refresh your browser, your app adds the information into the `$coffees` global variable repeatedly. This is because we're storing the params from the URL each time our `get` code is requested.
+コーヒーの保存のところで見たように、ブラウザを更新すると、アプリは繰り返しグローバル変数である`$coffees`に情報を追加します。これは、`get`コードがリクエストされるたびに、URLからパラメータを保存しているためです。
 
-This is a good point to mention that `GET` requests should not do things that add information to our app - while it does work, like in this instance, it's too easy for unintended side-effects to occur. In this case it's better to use a `POST` request.
+これは、`GET`リクエストはアプリに情報を追加するようなことをしてはいけないということを言及する良いポイントです。この例のようにうまくいくこともありますが、意図しない副作用が簡単に発生してしまいます。この場合は `POST` リクエストを使用するのがよいでしょう。
 
-Remember `GET` requests are asking to fetch a resource, whereas POST requests are asking to create a resource.
+`GET`リクエストはリソースの取得を求めるもので、`POST`リクエストはリソースの作成を求めるものであることを覚えておいてください。
 
-So armed with that knowledge, let's change our form's method to `POST`:
+では、この知識をもとに、フォームのメソッドを `POST` に変更してみましょう：
 
-* Locate the section in the form that specifies the method as `get` and change it to `post`.
-* Now refresh your browser and submit a new coffee.
+* フォームの中でメソッドを `get` としている箇所を探し、それを `post` に変更します。
+* ブラウザを更新して、新しいコーヒーを投稿してください。
 
-**Uh oh!** Welcome to Sinatra's lovely error page, if you haven't encountered it yet today. The message at the bottom should say this:
+**Uh oh!** Sinatraのエラーページを見たことのない方は、Sinatraの素敵なエラーページへようこそ。下のほうにあるメッセージにはこう書いてあるはずです：
 
 {% highlight ruby %}
 Try this:
@@ -259,45 +258,43 @@ post '/' do
 end
 {% endhighlight %}
 
-This is Sinatra's way of telling you that the route you requested doesn't exist. You may also know this as HTTP error number 404: *page not found*.
+これは、リクエストされたルートが存在しないことを伝えるSinatraの方法です。HTTPエラー番号404 *page not found* として、ご存知の方もいるかもしれません。
 
+## *9.* 投稿を追加
 
-## *8.* Add Post
+Sinatraに`post`コードを*追加*してみましょう（getは外さないでね！）：
 
-Let's *add* our `post` code into Sinatra (don't remove the get one!):
+* Sinatraの404ページから"Hello world"の`post`コードを取得し、`get`の後に配置します。(**Hint:** 上からコピーしないでください。このページはスマートクォートを使っているので、コードが壊れてしまいます)
+* "Hello world"を`template`メソッドの呼び出しに置き換えます。 (**Hint:** `get`コードから`template`への呼び出しを削除しないでください)
+* 次に、コーヒーのパラメータを保存する行を`get`コードから*移動*します。 (これは`template`への呼び出しの*上*にあることを確認してください)
 
-* Grab the "Hello world" `post` code from Sinatra's 404 page and put it after our `get`. (**Hint:** Do not copy from above; this page uses smart quotes & will break your code.)
-* Replace the "Hello world" with a call to our `template` method. (**Hint:** Don't remove the call to `template` from our `get` code.)
-* Now *move* the line that stores the coffee params over from the `get` code (ensure this goes *above* the call to `template`).
+いつものように、進捗状況を[こちら](http://tjmcewan.github.io/coffeecalc/snippets/get_vs_post.rb.txt)で確認することができます。
 
-As usual, you can check your progress [over here](http://tjmcewan.github.io/coffeecalc/snippets/get_vs_post.rb.txt).
-
-Now if you refresh the page after submitting a coffee, you should see a warning from your browser that it needs to resubmit the form in order to load the page:
+コーヒーを送信した後にページを更新すると、ページを読み込むためにフォームの再送信が必要であるというブラウザからの警告が表示されるはずです：
 
 <img src="../images/chrome-confirm-resubmission.png" alt="Chrome's confirm resubmission dialog" />
 
-You might have seen this sometimes when you've submitted forms online. Having this warning prompts us to think about the consequences of our refresh and we will probably avoid inadvertently adding the same coffee multiple times.
+フォームを送信する際に、このような警告が表示されることがあります。この警告があることで、更新の結果について考えるようになり、同じコーヒーを不用意に何度も追加することを避けられるでしょう。
 
-Remember GET requests are asking to fetch a resource, whereas POST requests are asking to create a resource. If you refresh a page on a GET request, you are simply asking repeatedly to see the same page, which usually won't be a problem.
+GETリクエストはリソースの取得を依頼するもので、POSTリクエストはリソースの作成を依頼するものであることを忘れないでください。GETリクエストでページを更新する場合、同じページを繰り返し表示するように要求しているだけなので、通常は問題ないでしょう。
 
-However, if you refresh a page on a POST request, this means you are resending the POST request, and could be creating a new resource each time you refresh. That's why the browser gives you a warning before allowing you to do it.
+しかし、POSTリクエストでページを更新した場合、POSTリクエストを再送することになり、更新するたびに新しいリソースを作成する可能性があります。そのため、ブラウザは更新を許可する前に警告を表示します。
 
+## *10.* リダイレクトを追加
 
-## *9.* Add a Redirect
+このフォームの再送信問題を回避するために、`POST`に対するレスポンスを受け取るとすぐに別のページを読み込むようにブラウザに指示することができます。 これは、"リダイレクト"として知られる特別なHTTPレスポンスを使用して行います。
 
-In order to get around this form-resubmission problem, lets tell the browser to load a different page as soon as it receives the response to our `POST`.  We do this using a special HTTP response known as a "redirect".
+`template`メソッドの呼び出しの代わりに、ブラウザを別の場所にリダイレクトすることができます。
 
-Instead of the call to our `template` method, we can redirect the browser to another location.
-
-In Sinatra, it looks like this:
+Sinatraでは、このようになります：
 
 {% highlight ruby %}
 redirect "/"
 {% endhighlight %}
 
-Try first, then [check it here](http://tjmcewan.github.io/coffeecalc/snippets/post_redirect.rb.txt).
+まずは試してみてから、[こちら](http://tjmcewan.github.io/coffeecalc/snippets/post_redirect.rb.txt)を確認してください。
 
-This sends back a special redirect response (HTTP 303) with a `location` header that specifies where the browser should go:
+これは、ブラウザが移動すべき場所を指定する `location` ヘッダを持つ特別なリダイレクトレスポンス (HTTP 303) を送り返すものです：
 
 {% highlight HTML %}
 HTTP/1.1 303 See Other
@@ -305,20 +302,20 @@ HTTP/1.1 303 See Other
 Location: http://localhost:4567/
 {% endhighlight %}
 
-To see this in action, have a look in Chrome's Web Inspector (Network tab) and send your app a coffee:
+この動作を確認するには、ChromeのWebインスペクタ（ネットワークタブ）を見て、アプリにコーヒーを送ってみてください：
 
 <img src="../images/chrome-post-redirect.png" alt="Chrome's network tab showing a post/redirect/get" />
 
-The first line shows the browser submitting the form via the `POST` request method. The response it receives is an HTTP 303, containing the `Location` header. It then issues a `GET` request for that location (which corresponds to our root URL, "/") and renders the response it gets from there - which is our HTML template.
+最初の行は、ブラウザが `POST` リクエストメソッドでフォームに送信していることを示しています。受け取ったレスポンスはHTTP 303で、`Location`ヘッダを含んでいます。そして、その場所（ルートURLである"/"）に対して `GET` リクエストを発行し、そこから得られたレスポンス（これがHTMLテンプレートです）をレンダリングしています。
 
-Now you can refresh all you want and all you're doing is requesting using `GET`, not `POST`. Your browser doesn't have to submit the form any more to display that page.
+これで、好きなだけ更新することができます。やっていることは `POST` ではなく `GET` を使ったリクエストです。ブラウザは、ページを表示するためにフォームを送信する必要はもうありません。
 
-This is the end of the tutorial - you've done an excellent job!
+これでチュートリアルは終了です。あなたは素晴らしい仕事をしました！
 
-Thanks for playing!
+遊んでくれてありがとうございました！
 
-## Additional Guides
-If you were fast and would like to continue on, you can try:
+## 追加ガイド
+もし早く終わった、続けてみたいという方は、ぜひお試しください：
 
 * [rendering our coffee list in proper HTML](/sinatra-html)
 **LUCY-TODO**
