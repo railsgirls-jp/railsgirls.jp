@@ -33,7 +33,7 @@ sudo apt-get install imagemagick
 {% endhighlight %}
   </div>
   <div class="win">
-<p><a href="https://www.imagemagick.org/script/download.php#windows">ImageMagick のインストーラー</a> をダウンロードし(最初の <em>download</em> リンクをクリックしてください)、実行してください。インストーラーのウィザードで「Install legacy utilities」のチェックボックスを必ずチェックしてください。</p>
+<p><a href="https://www.imagemagick.org/script/download.php#windows">ImageMagick のインストーラー</a> をダウンロードし(最初の <em>download</em> リンクをクリックしてください)、実行してください。インストーラーのウィザードで「Install legacy utilities」のチェックボックスをチェックしてください。</p>
   </div>
 </div>
 
@@ -63,7 +63,7 @@ gem "carrierwave"
 bundle install
 {% endhighlight %}
 
-インストール後、Rails サーバーを必ず(再)起動してください。
+インストール後、Rails サーバーを(再)起動してください。
 
 ## サムネイルを作成するようアプリに指示しよう
 
