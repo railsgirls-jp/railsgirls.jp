@@ -103,6 +103,8 @@ mount_uploader :picture, PictureUploader
 <%= form.file_field :picture %>
 {% endhighlight %}
 
+`rails server`を実行してRailsサーバーを起動します。
+
 ブラウザで<http://localhost:3000/ideas/new>を開きましょう。 新しいフォームでは、 `picture` フィールドに初めとは異なる要素が表示されるようになりました。テキストフィールドの代わりにファイル選択ツールが表示され、「参照...」または「ファイルを選択」ボタンに変更されています。
 新しいデータを登録するためにフォームに情報を記入し、今回は新たに実装した画像アップロード機能を使って画像も選択します。あなたのパソコンにある任意の画像で構いません。
 場合によっては、 *TypeError: can't cast ActionDispatch::Http::UploadedFile to string* というエラーが起きることもあります。エラーになった場合は、 `app/views/ideas/_form.html.erb` の
