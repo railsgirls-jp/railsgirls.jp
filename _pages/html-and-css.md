@@ -17,7 +17,7 @@ permalink: html-and-css
 
 HTML（HyperText Markup Language）は、アプリのコンテンツの構造を作るために使います。ウェブサイト上の見出し、リスト、テーブル、リンクなどが何であるかをブラウザに伝える役割を担っています。[前のガイド](/app)で生成されたファイルもHTMLで構成されており、さらに拡張するためにRubyのコードを追加しています。
 
-`app/views/ideas/index.html`ファイルを開くと、以下が表示されるでしょう。例えばこのファイルの `<div>` タグで始まる部分はHTMLタグの開始を表し、スラッシュ記号で始まる部分 `</div>` はHTMLタグの終了を表します。このHTMLタグに対して `style`、`id`、`class` などのあらゆるプロパティを追加することができます。
+`app/views/ideas/index.html.erb`ファイルを開くと、以下が表示されるでしょう。例えばこのファイルの `<div>` タグで始まる部分はHTMLタグの開始を表し、スラッシュ記号で始まる部分 `</div>` はHTMLタグの終了を表します。このHTMLタグに対して `style`、`id`、`class` などのあらゆるプロパティを追加することができます。
 
 {% highlight erb %}
 <h1>Ideas</h1>
