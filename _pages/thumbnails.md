@@ -29,7 +29,8 @@ brew install imagemagick
   <div class="nix">
 <p>Ubuntu を使っている場合、ターミナルで次のコマンドを実行してください:</p>
 {% highlight sh %}
-sudo apt-get install imagemagick
+sudo apt-get update
+sudo apt-get install -y imagemagick
 {% endhighlight %}
   </div>
   <div class="win">
