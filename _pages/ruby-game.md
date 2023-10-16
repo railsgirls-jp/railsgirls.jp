@@ -4,54 +4,56 @@ title: Write a little game in Ruby!
 permalink: ruby-game
 ---
 
-# Write a little game in Ruby!
+# Ruby で簡単なゲームを作ってみよう
 
-*Created by Patrick Huesler, [@phuesler](https://twitter.com/phuesler) & Floor Drees, [@floordrees](https://twitter.com/floordrees) for [Rails Girls The Hague](https://railsgirls.com/thehague)*
+*Created by Patrick Huesler, [@phuesler](https://twitter.com/phuesler) & Floor Drees, [@floordrees](https://twitter.com/floordrees) for [Rails Girls The Hague](https://railsgirls.com/thehague)*　/ _翻訳者: maimu, [@maimux2x](https://twitter.com/maimux2x)_
 
-[gosu](http://www.libgosu.org/) is a 2D game development library. Gosu features easy to use and game-friendly interfaces to 2D graphics and text (accelerated by 3D hardware), sound samples and music as well as keyboard, mouse and gamepad/joystick input. Also includes demos for integration with RMagick, Chipmunk and OpenGL.
+[gosu](http://www.libgosu.org/)は 2D ゲーム開発ライブラリです。Gosu は 2D グラフィックスやテキスト（3D ハードウェアによる高速化）、音源のサンプルや音楽、キーボード、マウス、ゲームパッド/ジョイスティックの入力に対して、使いやすくゲームに適したインタフェースを提供しているという特徴があります。また，RMagick、Chipmunk、OpenGL 一体化したデモも含まれています。
 
-The actual source code, wiki, issue tracker etc. are all [hosted on GitHub](http://github.com/jlnr/gosu/). The best entry point into Gosu's documentation is the [wiki home page](http://github.com/jlnr/gosu/wiki).
-Install:
+実際のソースコード、wiki や issue tracker は[GitHub 上に公開されています](http://github.com/jlnr/gosu/)。Gosu のドキュメントは[wiki のホームページ](http://github.com/jlnr/gosu/wiki)を参照することが最適です。
+インストール方法はこちらです。
 {% highlight sh %}
 gem install gosu
 {% endhighlight %}
 
-or add `gem "gosu", "~> 0.7.48"` to your Gemfile and run `bundle`.
-Play around with the example games:
+もしくは、`gem "gosu", "~> 0.7.48"` を Gemfile に追加して `bundle` を実行してください。
+サンプルゲームを試してみましょう。
 {% highlight sh %}
 cd $GEM_HOME/gems/gosu-0.7.48/examples
 {% endhighlight %}
 
-and then: `ruby CptnRuby.rb`
+続いて`ruby CptnRuby.rb`
 
-or: `ruby RMagickIntegration.rb`
+または `ruby RMagickIntegration.rb`
 
-or: `ruby Tutorial.rb`
+または `ruby Tutorial.rb`
 
-### Enough with those examples already!
+を実行します。
 
-Copy the repository by opening (a new tab in your) terminal. If you were working on the Rails Girls app in the mean time, make sure you're in your home directory by running ```cd```.
+### 例はもう十分です！
 
-Now run
+ターミナルで新しいタブを開いてリポジトリをコピーします。 もしもその間に Rails Girls アプリで作業していた場合は、`cd`を実行してホームディレクトリにいることを確認しましょう。
+
+さあ、実行しましょう。
 {% highlight sh %}
 git clone https://github.com/FloorD/gosu_tutorial_RG_TH.git
 {% endhighlight %}
 
-aaand change into the proper directory using
+そして以下を実行して適切なディレクトリに移動しましょう。
 {% highlight sh %}
 cd gosu_tutorial_RG_TH/jumpingem
 {% endhighlight %}
 
-### Run!
+### 実行します！
 
-To play our little game, open it using the terminal:
+私たちの小さなゲームで遊ぶために、ターミナルを使ってファイルを実行します。
 {% highlight sh %}
 ruby game.rb
 {% endhighlight %}
 
-### So how does this work?
+### それでは、このゲームはどのように動いているか分かりますか？
 
-Let's inspect some code, shall we? Open `game.rb` in your texteditor. See the
+いくつかコードを見てみましょう。 `game.rb` をテキストエディタで開きます。
 
 {% highlight ruby %}
 !/usr/bin/env ruby -w
@@ -60,49 +62,48 @@ require 'gosu'
 include Gosu
 {% endhighlight %}
 
-... right at the top of your file? Here we make sure we 'call' the necessary gem, so we can move on to our `class` (or multiple classes).
-So we have our
+こちらと同じものがファイルの一番上にありますか？ ここで必要な gem を「呼び出している」のです。そうすることで、クラス（または複数のクラス） に進むことができます。
+ここでは以下のように
 
 {% highlight ruby %}
 class Game < Window
 end
 {% endhighlight %}
 
-... thing going on. The `def`'s you see within this Game class, are  methods. Here we **def**ine which instructions the program should follow. Just take a look at the following snippet:
+... という具体的な内容が書かれています。 Game クラスに含まれる`def`はメソッドです。 ここでは、プログラムがどの命令に従うかを**_定義_**します。以下のスニペットをご覧ください。
 {% highlight ruby %}
 def draw
-  draw_quad 0, 400, Color::WHITE, 640, 400, Color::WHITE, 640, 500, Color::WHITE, 0, 500, Color::WHITE
-    if @dir == :left then
-      offs_x = -25
-      factor = 1.0
-    else
-      offs_x = 25
-      factor = -1.0
-  end
-  @cur_image.draw(@x + offs_x, @y - 49, 0, factor, 1.0)
+draw_quad 0, 400, Color::WHITE, 640, 400, Color::WHITE, 640, 500, Color::WHITE, 0, 500, Color::WHITE
+if @dir == :left then
+offs_x = -25
+factor = 1.0
+else
+offs_x = 25
+factor = -1.0
+end
+@cur_image.draw(@x + offs_x, @y - 49, 0, factor, 1.0)
 end
 {% endhighlight %}
 
-Want to play around a bit? Copy the contents of `game.rb` in a new `.rb` file. Save it and name it as you'd like. Now try and change some stuff in the game and run it in your terminal to see the changes.
+少し遊んでみませんか？ `game.rb` の内容を新しい `.rb` ファイルにコピーしてください。 好みの名前で命名して保存しましょう。 そして、ゲーム内のいくつかの要素を変更して、ターミナルで実行して変更内容を確認してみてください。
 
-Think you have more graphic skills than Patrick (you probably do)? Then you can try and create a new `sprites.png`! Don't forget to call it here:
+Patrick よりもグラフィックスのスキルがあると思いますか（多分そうでしょう）？ それなら、新しい `sprites.png` を作成してみてください！ こちらで呼び出すのを忘れないでください。
 
 {% highlight ruby %}
 def initialize
-    super(640, 480, false)
-    self.caption = "Jump 'n Run"
-    @standing, @walk1, @walk2, @jump = *Image.load_tiles(self, "sprites.png", 100, 160, false)
-    @x, @y = 400, 0
-    @vy = 0
-    @dir = :left
-    @cur_image = @standing
-  end
+super(640, 480, false)
+self.caption = "Jump 'n Run"
+@standing, @walk1, @walk2, @jump = \*Image.load_tiles(self, "sprites.png", 100, 160, false)
+@x, @y = 400, 0
+@vy = 0
+@dir = :left
+@cur_image = @standing
+end
 {% endhighlight %}
 
-And see the `Game.new.show`? That creates a new instance. It has no memory, so when you get stuck in the game, you can just start a new game. Have fun!
+そして`Game.new.show`を見てください。これは新しいインスタンスを作成します。メモリは持っておらず、ゲームで詰まったときには新しいゲームを始めることができます。楽しんでください！
 
-#### Credits
+#### クレジット
 
-The assets used in vim adventures, you can find them [here](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
-
-The sounds usedm you'll find over at [Matthew Klingensmith (www.matthewklingensmith.com)](http://opengameart.org/content/matts-creative-commons-music)
+Vim Adventures で使用されているアセットは[こちら](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)で見つけることができます。
+使用されている音声は [Matthew Klingensmith (www.matthewklingensmith.com)](http://opengameart.org/content/matts-creative-commons-music)で入手できます。
