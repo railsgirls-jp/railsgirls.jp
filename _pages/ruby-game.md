@@ -8,6 +8,8 @@ permalink: ruby-game
 
 *Created by Patrick Huesler, [@phuesler](https://twitter.com/phuesler) & Floor Drees, [@floordrees](https://twitter.com/floordrees) for [Rails Girls The Hague](https://railsgirls.com/thehague)*　/ _翻訳者: maimu, [@maimux2x](https://twitter.com/maimux2x)_
 
+<div class="help-notice">このガイドは2014年当時のものです。リポジトリで使用されているgemのバージョンが最新ではないため動作しない可能性があります。 </div>
+
 [gosu](http://www.libgosu.org/)は 2D ゲーム開発ライブラリです。Gosu は 2D グラフィックスやテキスト（3D ハードウェアによる高速化）、音源のサンプルや音楽、キーボード、マウス、ゲームパッド/ジョイスティックの入力に対して、使いやすくゲームに適したインタフェースを提供しているという特徴があります。また，RMagick、Chipmunk、OpenGL 一体化したデモも含まれています。
 
 実際のソースコード、wiki や issue tracker は[GitHub 上に公開されています](http://github.com/jlnr/gosu/)。Gosu のドキュメントは[wiki のホームページ](http://github.com/jlnr/gosu/wiki)を参照することが最適です。
