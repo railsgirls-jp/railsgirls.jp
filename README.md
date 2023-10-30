@@ -32,7 +32,7 @@ $ bundle exec jekyll serve --watch
 $ bundle exec rake post title="my fabulous post"
 ```
 
-を実行すると、`YYYY-MM-DD-my-fabulous-post.markdown` というテンプレートが `_posts` ディレクトリに作られるので、これを編集します。`_posts` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われます。permalink がある場合は、どこかのページから permalink で指定した URL へリンクします。
+を実行すると、`YYYY-MM-DD-my-fabulous-post.markdown` というテンプレートが `_pages` ディレクトリに作られるので、これを編集します。`_pages` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われます。permalink がある場合は、どこかのページから permalink で指定した URL へリンクします。
 
 ## 独立したページを追加
 
