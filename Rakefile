@@ -7,15 +7,16 @@ SOURCE = "."
 CONFIG = {
   'version' => "0.2.13",
   'layouts' => File.join(SOURCE, "_layouts"),
-  'posts' => File.join(SOURCE, "_pages"),
+  'pages' => File.join(SOURCE, "_pages"),
+  'posts' => File.join(SOURCE, "_posts"),
   'post_ext' => "markdown",
   'page_ext' => "markdown"
 }
 
 # Usage: rake post title="A Title" [date="2012-02-09"]
-desc "Begin a new post in #{CONFIG['posts']}"
+desc "Begin a new post in #{CONFIG['pages']}"
 task :post do
-  abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
+  abort("rake aborted: '#{CONFIG['pages']}' directory not found.") unless FileTest.directory?(CONFIG['pages'])
   title = ENV["title"] || "new-post"
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
@@ -24,7 +25,7 @@ task :post do
     puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
     exit -1
   end
-  filename = File.join(CONFIG['posts'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
+  filename = File.join(CONFIG['pages'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
