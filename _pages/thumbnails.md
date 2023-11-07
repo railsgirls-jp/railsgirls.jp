@@ -96,16 +96,16 @@ end
 
 アイデアの画像の表示方法は変えていないので、まだ元の大きな画像が表示されるはずです。ビューを変更してサムネイルを表示するように変えてみましょう。
 
-`app/views/ideas/index.html.erb` を開いて、以下の行を変更してください:
+`app/views/ideas/_idea.html.erb` を開いて、以下の行を変更してください:
 
 {% highlight erb %}
-<%= image_tag(@idea.picture_url, width: 150, height: 150, class: "img-thumbnail flex-shrink-0") if @idea.picture? %>
+<%= image_tag(idea.picture_url, width: 150, height: 150, class: "img-thumbnail flex-shrink-0") if idea.picture? %>
 {% endhighlight %}
 
 このように変更します。
 
 {% highlight erb %}
-<%= image_tag(@idea.picture_url(:thumb), width: 150, height: 150, class: "img-thumbnail flex-shrink-0") if @idea.picture? %>
+<%= image_tag(idea.picture_url(:thumb), width: 150, height: 150, class: "img-thumbnail flex-shrink-0") if idea.picture? %>
 {% endhighlight %}
 
 サムネイルが表示されるようになったことを確かめるために、ブラウザで [アイデアの一覧](http://localhost:3000/ideas) を表示してください。
