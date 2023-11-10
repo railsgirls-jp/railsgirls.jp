@@ -71,15 +71,18 @@ Rails Girls Japan は日本での Rails Girls イベントの継続開催のサ�
 
 Rails Girls Japan のメンバーは以下のメンバーです。
 
- * 柴田 博志: [hsbt](https://github.com/hsbt) (会計)
- * 鳥井 雪: [yakitorii](https://github.com/yakitorii)
+ * 柴田 博志: [hsbt](https://github.com/hsbt)
  * 江森 真由美: [emorima](https://github.com/emorima)
- * 秋元 利春: [springaki](https://github.com/springaki)(会計)
+ * 秋元 利春: [springaki](https://github.com/springaki)
  * やだ けいこ: [yada-ITA](https://github.com/yada-ITA)
+ * 小林 智恵: [cobachie](https://github.com/cobachie)
+ * 今野 夕貴: [thatblue](https://github.com/thatblue)
+
+## 卒業生
+
+ * 原田 洋子 : [yokolet](https://github.com/yokolet)
+ * 鳥井 雪: [yakitorii](https://github.com/yakitorii)
  * Sho Hashimoto: [sho-h](https://github.com/sho-h)
- * 原田　洋子 : [yokolet](https://github.com/yokolet)<br/>
- * 辻田　さとみ : [satomicchy](https://github.com/satomicchy)<br/>
- * 小林 智恵: [cobachie](https://github.com/cobachie)<br/>
- * 今野 夕貴: [thatblue](https://github.com/thatblue)<br/>
+ * 辻田 さとみ : [satomicchy](https://github.com/satomicchy)
 
 <hr />
