@@ -22,11 +22,19 @@ $ bundle install
 $ bundle exec jekyll serve --watch
 ```
 
-## 既存のページを編集
+## ディレクトリ構成
 
-`_posts` ディレクトリ以下にある、各ページのファイルを編集してください。
+各コンテンツは以下で管理されています。
 
-## ページを追加
+| ページ | 管理ディレクトリ |
+|---|---|
+| ガイド | `_pages` |
+| 独自コンテンツ | `_pages-jp` | 
+| ブログ | `_posts` |
+
+既存のページを編集したい場合は内容に応じて管理ディレクトリ配下をご確認ください。
+
+## ガイドを追加
 
 ```
 $ bundle exec rake post title="my fabulous post"
@@ -34,7 +42,7 @@ $ bundle exec rake post title="my fabulous post"
 
 を実行すると、`YYYY-MM-DD-my-fabulous-post.markdown` というテンプレートが `_pages` ディレクトリに作られるので、これを編集します。`_pages` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われます。permalink がある場合は、どこかのページから permalink で指定した URL へリンクします。
 
-## 独立したページを追加
+## 独自コンテンツを追加
 
 このサイトの About や Event のような独立したページを作りたい場合は
 
