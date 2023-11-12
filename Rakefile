@@ -9,15 +9,18 @@ CONFIG = {
   'layouts' => File.join(SOURCE, "_layouts"),
   'pages' => File.join(SOURCE, "_pages"),
   'posts' => File.join(SOURCE, "_posts"),
+  'pages-jp' => File.join(SOURCE, "_pages-jp"),
   'post_ext' => "markdown",
   'page_ext' => "markdown"
 }
 
-# Usage: rake post title="A Title" [date="2012-02-09"]
-desc "Begin a new post in #{CONFIG['pages']}"
-task :post do
+desc <<~DESK
+  Begin a new guide in #{CONFIG['pages']}
+  Usage: rake guide title="A Title" [date="2012-02-09"]
+DESK
+task :guide do
   abort("rake aborted: '#{CONFIG['pages']}' directory not found.") unless FileTest.directory?(CONFIG['pages'])
-  title = ENV["title"] || "new-post"
+  title = ENV["title"] || "new-guide"
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
@@ -30,21 +33,23 @@ task :post do
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
 
-  puts "Creating new post: #{filename}"
-  open(filename, 'w') do |post|
-    post.puts "---"
-    post.puts "layout: page"
-    post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts 'description: ""'
-    post.puts "category: "
-    post.puts "tags: []"
-    post.puts "---"
-    post.puts ""
+  puts "Creating new guide: #{filename}"
+  open(filename, 'w') do |guide|
+    guide.puts "---"
+    guide.puts "layout: page"
+    guide.puts "title: \"#{title.gsub(/-/,' ')}\""
+    guide.puts 'description: ""'
+    guide.puts "category: "
+    guide.puts "tags: []"
+    guide.puts "---"
+    guide.puts ""
   end
-end # task :post
+end # task :guide
 
-# Usage: rake blog title="A Title" [date="2012-02-09"] [post_ext="html"]
-desc "Begin a new post in #{CONFIG['posts']}/blog"
+desc <<~DESK
+  Begin a new post in #{CONFIG['posts']}/blog
+  Usage: rake blog title="A Title" [date="2012-02-09"] [post_ext="html"]
+DESK
 task :blog do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
   title = ENV["title"] || "new-post"
@@ -73,11 +78,44 @@ task :blog do
   end
 end # task :blog
 
-# Usage: rake page name="about.html"
-# You can also specify a sub-directory path.
-# If you don't specify a file extension we create an index.markdown at the path specified
-desc "Create a new page."
-task :page do
+desc <<~DESK
+  Begin a new original_content in #{CONFIG['pages-jp']}
+  Usage: rake original_content title="A Title" [date="2012-02-09"]
+DESK
+task :original_content do
+  abort("rake aborted: '#{CONFIG['pages-jp']}' directory not found.") unless FileTest.directory?(CONFIG['pages-jp'])
+  title = ENV["title"] || "new-oroginal_contents"
+  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  begin
+    date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
+  rescue Exception => e
+    puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
+    exit -1
+  end
+  post_ext = ENV['post_ext'] || CONFIG['post_ext']
+  filename = File.join(CONFIG['pages-jp'], "#{date}-#{slug}.#{post_ext}")
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+
+  puts "Creating new post: #{filename}"
+  open(filename, 'w') do |original_content|
+    original_content.puts "---"
+    original_content.puts "layout: original_content"
+    original_content.puts "title: \"#{title.gsub(/-/,' ')}\""
+    original_content.puts "permalink: "
+    original_content.puts "---"
+    original_content.puts ""
+  end
+end # task :original_contents
+
+desc <<~DESK
+  Create a new directory and page.
+  Usage: rake page name="about.html"
+  You can also specify a sub-directory path.
+  If you don't specify a file extension we create an index.markdown at the path specified
+DESK
+task :directory_with_page do
   name = ENV["name"] || "new-page.md"
   filename = File.join(SOURCE, "#{name}")
   filename = File.join(filename, "index.markdown") if File.extname(filename) == ""
@@ -96,7 +134,7 @@ task :page do
     post.puts "---"
     post.puts ""
   end
-end # task :page
+end # task :directory_with_page
 
 desc "Launch preview environment"
 task :preview do
