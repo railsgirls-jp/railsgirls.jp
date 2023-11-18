@@ -4,51 +4,52 @@ title: Continuous Deployment - cuz less hassle
 permalink: continuous
 ---
 
-# Continuous Deployment with the Codeship
+# Codeshipを使用した継続的デプロイ
 
-*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)* 
+*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)* / *翻訳者: [@peno022](https://twitter.com/peno022)*
 
-### What is this Continuous Deployment thing?
+## 継続的デプロイとは何でしょうか？
 
-Continuous deployment is part of the continuous delivery 'movement'. The idea behind continuous delivery is to automate the software delivery process as far as possible. 
+継続的デプロイは、継続的デリバリーという「ムーブメント」の一環です。継続的デリバリーの背後にある考え方は、ソフトウェアのデリバリープロセスをできるだけ自動化しようというものです。
 
-With a working continuous deployment chain in place you'll enforce Git deployments (everything must be committed to be tested and everything must be tested to be deployed), making collaboration easier and deployment faster. So you can focus on making your app even more awesome!
+継続的デプロイのチェーンを構築することで、Gitデプロイが強化されます（テストするためには全てがコミットされなければならず、デプロイするためには全てがテストされなければなりません）。これにより共同作業が容易になり、素早くデプロイできるようになります。その結果、あなたはアプリをより良いものにすることに集中できます！
 
-There are a few great companies sailing the continuous wave, in this guide we'll set up continuous deployment for our Ruby on Rails app from GitHub to Heroku, using the [Codeship](http://www.codeship.io). 
+数々の先進的な企業が、継続的デプロイの潮流に乗っています。このガイドにおいては、[Codeship](http://www.codeship.io)を使用して、GitHubからHerokuへのRuby on Railsアプリの継続的デプロイを設定していきます。
 
-__COACH__: Talk about the benefits of continuous deployment.
+__COACH__: 継続的デプロイの利点について話してください。
 
-### Sign up for Codeship
+## Codeshipにサインアップする
 
-First, you need [a Codeship account](https://www.codeship.io/). Sign in to the Codeship with GitHub. The Codeship needs access to your GitHub repositories to be able to set them up, so make sure you allow access.  
+まず、[Codeshipアカウント](https://www.codeship.io/)を取得します。GitHubでCodeshipにサインインしてください。Codeshipはセットアップを行うためにあなたのGitHubリポジトリにアクセスする必要があるため、アクセスを許可するようにしてください。
 
-Back at the Codeship, let’s create your first project. The first step is to select GitHub as your repository provider. In the list of your GitHub repositories, search for the repository you want to set up and select it. In our case, that's the one called something like “railsgirls”.
+Codeshipに戻り、最初のプロジェクトを作成しましょう。最初のステップは、リポジトリの提供元としてGitHubを選択することです。GitHubリポジトリのリストから設定したいリポジトリを探して選択します。例えば今回なら「railsgirls」といった名前のものです。
 
-Now your repository is connected and you can set up your test commands. We've created a Ruby on Rails application. So choose “Ruby on Rails” as the framework used. This configures the setup commands and the test commands for you. By deleting the hash key (`#`) you can uncomment test commands you want to use for your application. For now you probably don't have tests set up yet, so you can skip this step and get back to it later.
+リポジトリが接続されると、テストコマンドを設定できるようになります。私たちはRuby on Railsアプリケーションを作成したので、使用するフレームワークとして「Ruby on Rails」を選択します。これにより、セットアップコマンドとテストコマンドが構成されます。ハッシュキー（`#`）を削除することで、アプリケーションで使用するテストコマンドのコメントアウトを解除できます。今はまだテストを設定していないので、この手順はスキップして後で戻ってくれば大丈夫です。
 
-Now let's finish your setup and go to the dashboard. You can trigger a so-called 'new build' for your application by changing something and then pushing to your repository: 
+では、セットアップを完了してダッシュボードに移動しましょう。以下のコマンドを使用してリポジトリに変更をプッシュすることにより、アプリケーションのいわゆる「新しいビルド」をトリガーできます：
 {% highlight sh %}
 git add .  
 git commit -m "test Codeship integration"  
 git push origin master
 {% endhighlight %}
 
-You can access the build details by clicking the arrow on the right. Here you can follow the build while it's still running. Better than reality tv - promised. 
+右側の矢印をクリックしてビルドの詳細にアクセスできます。ここでは、ビルドがまだ実行中である様子を確認できます。リアリティ番組よりも面白いでしょう、約束しますよ。
 
-... and a few seconds later your build succeeded! You see all the commands that were run. After a few initial preparation commands the Codeship ran the commands that you specified a few moments ago. You can inspect the output of a single command by clicking on it. 
+そして数秒後……ビルドが成功しました！実行されたすべてのコマンドを見ることができます。いくつかの初期準備コマンドの後、Codeshipは先ほどあなたが指定したコマンドを実行しました。1つ1つのコマンドの出力を、クリックして詳細に確認することができます。
 
-You've already pushed to your repository, watched your build log and got a green build. So you can finish the assistant at the top by clicking on the "click to finish" button.
+ここまでで、リポジトリにプッシュし、ビルドログを確認し、成功を示す緑色のビルドを取得できました。「click to finish」ボタンをクリックして一番上のアシスタントを終了することができます。
 
-### Setup Continuous Deployment
+## 継続的デプロイのセットアップ
 
-Now let's deploy your application to Heroku. Go to your project settings by clicking on the settings icon in the projects dropdown on the Codeship. Then navigate to the "Deployment" section. As you want to deploy to Heroku, click on the "Heroku" button.
+次に、Herokuにアプリケーションをデプロイしましょう。Codeshipのプロジェクトのドロップダウンから設定アイコンをクリックしてプロジェクト設定を開き、「Deployment」セクションに移動します。Herokuにデプロイしたい場合は、「Heroku」ボタンをクリックします。
 
-You are asked to enter the name of your Heroku application and your API key. I sure hope you wrote that down somewhere! Enter your application's name and API key (to retrieve your Heroku API key, go to your Heroku account and click "Show API key") and save your deployment configuration.
+Herokuアプリケーションの名前と、あなたのAPIキーを入力するよう求められます。どこかに書き留めてあるといいのですが！　アプリケーションの名前とAPIキーを入力して（Heroku APIキーを取得するには、Herokuアカウントにアクセスして「Show API key」をクリックします）、デプロイ構成を保存してください。
 
-From now on the Codeship will deploy your application to Heroku, everytime you push to your GitHub repository. Neat! 
+これからは、GitHubリポジトリにプッシュするたびに、CodeshipがHerokuにアプリケーションをデプロイします。素敵ですね！
 
-### Give it a try
-Now let's push a change and see if it gets deployed. Change something in your application first, then commit and push the change.
+## 試してみよう
+
+それでは、何か変更をプッシュして、それがデプロイされるか確認しましょう。最初にアプリケーションに何か変更を加えてから、その変更をコミットしてプッシュします。
 
 {% highlight sh %}
 git add .  
@@ -56,4 +57,4 @@ git commit -m "this changes everything"
 git push
 {% endhighlight %}
 
-And immediately another build will start running on the Codeship. Go back to your project overview and you'll see the commands we already know from your first build. Plus: your application gets deployed to Heroku now and should be online after a minute or two.
+すると、すぐに別のビルドがCodeship上で動き出します。プロジェクトの概要に戻ると、最初のビルドでも見たコマンドが表示されます。さらに、あなたのアプリケーションはHerokuにデプロイされ、1、2分後にはオンライン上で利用可能になっているはずです。
