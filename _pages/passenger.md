@@ -4,35 +4,35 @@ title: Rails Girls on Passenger
 permalink: passenger
 ---
 
-# Ease up development with Phusion Passenger
+# Phusion Passengerでスムーズに開発しよう
 
-*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)*
+*作成者： Floor Drees, [@floordrees](https://twitter.com/floordrees)*
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
 
-### There's an app server for that
+### そのためのアプリケーションサーバー
 
-Make sure you followed the [Push Your App to GitHub][github-guide] guide before you continue.
+このまま続ける前に [GitHubに自分のアプリをPushする][github-guide] のガイドを確認しておきましょう。
 
-What follows is a guide to eases up developing your app (you know, the adding functionality and then checking if it actually works), with Passenger. The Ruby on Rails framework provides a builtin server tool, which you can access with the `rails server` command. The "rails server" is not an application server by itself, but just a small wrapper that launches your application in an application server. People do not use "rails server" in production (where other people can access and use your app). They use an application server such as Passenger.
+以下は、Passengerを使ったアプリの開発（機能を追加し、実際に動くかどうかをチェックすること）をスムーズにするためのガイドです。Ruby on Railsフレームワークには、`rails server` コマンドでアクセスできる組み込みのサーバーツールが提供されています。「rails server」自体はアプリケーションサーバーではなく、単なる小さなラッパーで、アプリをアプリケーションサーバーで起動させるものです。「rails server」を本番環境（他の人がアクセスしてアプリを使用できる場所）では使用しません。Passengerなどのアプリケーションサーバーを使用します。
 
 {% coach %}
-Passenger is an open source web application server. It handles HTTP requests, manages processes and resources, and enables administration, monitoring and problem diagnosis. For big shot developers there's an Enterprise Edition as well.
+Passengerはオープンソースのアプリケーションサーバーです。 それはHTTPリクエストを処理し、プロセスとリソースを管理し、管理、モニタリング、および問題の診断を可能にします。 大手の開発者向けには、エンタープライズエディションもあります。
 {% endcoach %}
-
 
 [github-guide]: /github
 
-### Preparing your app
+### アプリの準備をしよう
 
-#### Install the Passenger gem
+#### Passenger gem をインストールします
 
-Open your app's Gemfile and add "passenger":
+あなたのアプリのGemfileを開いて `passenger` を追加します。
 
 {% highlight ruby %}
 gem "passenger"
 {% endhighlight %}
 
-By adding Passenger to your Gemfile, `rails server` will launch Passenger instead of Puma.
-You get virtual bonus points from the Phusion Passenger team for deleting the following lines (if present at all in your Gemfile):
+PassengerをGemfileに追加することで、`rails server` はPumaに代わってPassengerを起動します。
+以下の行を削除すると（もしもGemfileに存在する場合）、Phusion Passengerチームから仮想ボーナスポイントがもらえます。
 
 {% highlight ruby %}
 gem "unicorn"
@@ -40,9 +40,9 @@ gem "thin"
 gem "puma"
 {% endhighlight %}
 
-Run `bundle install` to update your gem bundle.
+`bundle inatall` を実行してあなたが使用するgemを更新します。
 
-The text in your terminal should say something like this:
+ターミナルには次のように表示されるでしょう。
 
 {% highlight sh %}
 bundle install
@@ -52,63 +52,67 @@ Installing passenger x.x.x
 Your bundle is complete!
 {% endhighlight %}
 
-Nginx and Apache are web servers. They provide HTTP transaction handling and serve static files. Application servers make it possible for Ruby apps to speak HTTP. Ruby apps (and frameworks like Rails) can't do that by themselves. In a typical production stack, one would use Nginx or Apache as the web server, Passenger as application server, and Capistrano as release automation tool. Passenger integrates with Nginx or Apache and manages the application and its resources.
+NginxとApacheはwebサーバーです。 それらはHTTPトランザクションの処理と静的ファイルの提供を行います。アプリケーションサーバーは、RubyアプリがHTTPで通信することを可能にします。Rubyのアプリケーション（そしてRailsのようなフレームワーク）自体はHTTP通信ができません。よくある本番環境の構成では、ウェブサーバーとしてNginxまたはApache、アプリケーションサーバーとしてPassenger、リリースの自動化ツールとしてCapistranoが使用されます。PassengerはNginxまたはApacheと統合し、アプリケーションとそのリソースを管理します。
 
 {% coach %}
-Sometimes you will need to specify the gem's version: `gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"`
+gemのバージョンを指定する必要がある場合もあります。
+`gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"`
 {% endcoach %}
 
-#### Let's check if that worked
+#### 動作の確認をしましょう
 
-Run the Passenger server with the following command:
+以下のコマンドでPassengerサーバーを実行します。
 
 {% highlight sh %}
 bundle exec passenger start
 {% endhighlight %}
 
-Passenger is serving your app on <http://0.0.0.0:3000/>.
-Try and use your app a bit and then run `bundle exec passenger-status` to check your activity. Big (friendly, promised!) brother is watching you.
+Passengerが<http://0.0.0.0:3000/>上であなたのアプリを提供しています。
+アプリを少し使ってから、`bundle exec passenger-status` を実行してアクティビティを確認してみてください。
 
-There are two ways to stop the server. The first is by pressing Ctrl-C in the terminal. The second way is by running `passenger stop` in a new terminal window:
+<!-- 原文にある以下は英語のジョークであるため翻訳にあたっては訳出していません。
+Big (friendly, promised!) brother is watching you. -->
+
+サーバーを停止する方法は２つあります。 一つ目はターミナルでCtrl-Cを押します。二つ目は以下のように新しいターミナルウィンドウで `passenger stop` を実行します。
 
 {% highlight sh %}
 cd /path-to-your-app
 bundle exec passenger stop
 {% endhighlight %}
 
-When you switch back to the first terminal, you should see that Passenger has indeed stopped.
+最初のターミナルに切り替えると、Passengerが確かに停止していることが確認できるはずです。
 
-Passenger restarts processes that crash, load balances traffic between processes and scales processes up and down in order to handle more traffic or to conserve resources. All this is handled automatically, without you having to specify anything in your code! It might not make too much sense right now, but your future developer you will thank us.
+Passengerはクラッシュしたプロセスを再起動し、トラフィックをプロセス間で負荷分散し、トラフィックの増減に応じてプロセスを増やしたり、減らしたりして、より多くのトラフィックを処理したり、リソースを節約したりします。これはすべて自動的に処理され、コードで何かを指定する必要はありません！ 今はあまり意味がないかもしれませんが、将来の開発者は私たちに感謝するでしょう。
 
-For future reference you can use the `passenger-config restart-app` command to restart your application. This is more convenient than stopping and starting Passenger, which requires two commands.
+今後のために、`passenger-config restart-app`コマンドを使ってアプリケーションを再起動することができます。Passengerを停止して起動するのに2回コマンドを実行しなければいけないことと比べると、これは便利です。
 
 #### tmp/always_restart.txt
 
-Passenger also supports the magic file `tmp/always_restart.txt`. With this file, Passenger will restart your application after every request. This way you do not have to invoke the restart command often.
+Passenger は `tmp/always_restart.txt` というマジックファイルもサポートしています。このファイルを使うと、Passenger はリクエストのたびにアプリケーションを再起動します。こうすることで、再起動コマンドを頻繁に実行する必要がなくなります。
 
-Activate this mechanism by creating the file:
+このメカニズムを有効にするには以下のようにファイルを作成します。
 
 {% highlight sh %}
 mkdir -p tmp
 touch tmp/always_restart.txt
 {% endhighlight %}
 
-Deactivate this mechanism by removing the file:
+このメカニズムを無効にするには以下のようにファイルを削除します。
 
 {% highlight sh %}
 rm tmp/always_restart.txt
 {% endhighlight %}
 
 {% coach %}
-Sometimes the carrierwave gem causes trouble. Adding `require 'carrierwave/orm/activerecord'` to the `environment.rb` file will often do the trick.
+時々、carrierwave gemが問題を起こすことがあリます。`environment.rb` ファイルに `require 'carrierwave/orm/activerecord'` を追加すると、問題が解消されることがよくあります。
 {% endcoach %}
 
 
-### Deploying your app
+### アプリをデプロイしましょう
 
-#### Hosting your app
+#### アプリのホスティング
 
-Before you select your host(ing infrastructure) and [follow the guide to put your app online][passenger-guide], let's commit the changes we've made:
+ホスト（インフラ）を選択し、[アプリをオンラインに公開するためのガイドに従う][passenger-guide]前に、これまでの変更をコミットしましょう。
 
 {% highlight sh %}
 git add .
@@ -116,18 +120,19 @@ git commit -m "add passenger"
 git push
 {% endhighlight %}
 
-You can also choose to follow the [Heroku guide][heroku-guide] from here on.
+ここからは[Herokuガイド][heroku-guide]に従うこともできます。
 
 [passenger-guide]: https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/
 [heroku-guide]: /heroku
 
-#### Troubleshooting
+#### トラブルシューティング
 
-Use the `passenger --help` command in your terminal to browse all available commands and their functionality. Most commands (like `passenger start`) have many 'sub-commands'. For instance: run `passenger start --help` to see all the add-ons for the 'start' command.
+ターミナルで `passenger --help` コマンドを使って、利用可能なすべてのコマンドとその機能を参照することができます。 多くのコマンド（例: `passenger start`）には多くの「サブコマンド」があります。たとえば、 `passenger start --help` を実行して、「start」コマンドのすべてのアドオンを表示できます。
 
-Lost? Phusion Passenger has extensive documentation, including beginner's guides: [Passenger Guide][passenger-documentation]
+迷いましたか？ Phusion Passengerには初心者向けのガイドを含む詳細なドキュメンテーションがあります。
+ [Passenger Guide][passenger-documentation]
 
-Knee-deep? Crawl through [Passenger's Troubleshooting guide][troubleshooting-guide] with your coach.
+難航していますか？ コーチと一緒に[Passengerのトラブルシューティングガイド][troubleshooting-guide]を進めてみてください。
 
 [passenger-documentation]: https://www.phusionpassenger.com/library/
 [troubleshooting-guide]: https://www.phusionpassenger.com/library/admin/nginx/troubleshooting/ruby/
