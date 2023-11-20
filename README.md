@@ -37,20 +37,31 @@ $ bundle exec jekyll serve --watch
 ## ガイドを追加
 
 ```
-$ bundle exec rake post title="my fabulous post"
+$ bundle exec rake guide title="my fabulous guide"
 ```
 
-を実行すると、`YYYY-MM-DD-my-fabulous-post.markdown` というテンプレートが `_pages` ディレクトリに作られるので、これを編集します。`_pages` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われます。permalink がある場合は、どこかのページから permalink で指定した URL へリンクします。
+を実行すると、`YYYY-MM-DD-my-fabulous-guide.markdown` というテンプレートが `_pages` ディレクトリに作られるので、これを編集します。`_pages` ディレクトリ以下のファイルは最初の部分に permalink の記述がなければ、ブログポストして扱われます。permalink がある場合は、どこかのページから permalink で指定した URL へリンクします。
 
 ## 独自コンテンツを追加
 
-このサイトの About や Event のような独立したページを作りたい場合は
+独立したページを作成する場合以下の２通りの方法があります。
+
+### Event のような独自ディレクトリ配下にページを作りたい場合
 
 ```
-$ bundle exec rake page name="something"
+$ bundle exec rake directory_with_page name="something"
 ```
 
-を実行します。この場合、`something/index.html` という名前でテンプレートが作られるので、これを編集します。このファイルも、どこかのページからリンクします。
+を実行します。この場合、`something/index.html` という名前でテンプレートが作られるので、これを編集します。編集完了後、Homeなどのページからリンクさせます。
+
+### CoC や About のようなドメイン直下のページを作りたい場合
+
+```
+$ bundle exec rake original_content title="new original content"
+```
+
+を実行します。
+`YYYY-MM-DD-new_original_content.markdown` というテンプレートが `_pages-jp` ディレクトリに作られるので、これを編集します。Homeなどのページから permalink で指定した URL へリンクさせます。
 
 ## ブログを書く
 
