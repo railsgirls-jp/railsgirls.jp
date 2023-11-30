@@ -1,0 +1,199 @@
+---
+layout: post
+title: Rails Girls Matsue 5th 開催レポート
+date: 2023-11-30
+image: /images/blog/matsue5th/group-shot.jpeg
+---
+
+<style type="text/css">
+div.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+div.photos img.photo {
+    max-width: 480px;
+    width: 100%;
+    object-fit: cover;
+}
+
+div.photos img.vertically-photo {
+    max-width: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+div.photos .caption {
+    font-size:smaller;
+    color: #444;
+    margin-top: 0.5em;
+}
+</style>
+
+## はじめに
+
+この記事は、2023年11月11日（土）に松江オープンソースラボにて開催されたRail Girl Matsue 5thの開催レポートです。記事の内容は、その様子をお伝えいたします。
+<div class="photos">
+  <div>
+    <img class="vertically-photo" src="/images/blog/matsue5th/whiteboard.jpg" alt="歓迎メッセージが書かれたホワイトボード">
+  </div>
+</div>
+
+## Rails Girls とは 
+
+Rails Girls は、より多くの女性がプログラミングに親しみ、アイデアを形にできる技術を身に着けるきっかけ作りと手助けをするコミュニティです。2010年にフィンランドのヘルシンキにてリンダ・リウカス氏らによって設立された団体であり、今では世界各国で活動が行われています。  
+そして、Rails Girls Matsueは、5年ぶりに松江にて開催いたしました。松江ではこれまでに４回開催されており、今回で5回目となります。
+
+## Rails Girls Matsue5th開催きっかけ
+
+松江市では、毎年Rubyの最大級のイベントRubyWorld Conferenceが2日間開催され、そのイベントの前日にはRuby biz pixも開催されます。その3日間はRuby色に染まる松江。だったら、「Ruby Week」と題して、Rubyに関連するイベントを色々企画しようと島根県、松江市、Ruby Associationで決まりました。その中で、ぜひ「Rails Girlsを松江で復活させてほしい」と言うお声がかかり、11月11日（土）ポッキーの日に開催することになりました。
+
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/ruby-week.png" alt="Ruby Weekのロゴ">
+    <img class="photo" src="/images/blog/matsue5th/pocky-day.jpeg" alt="ポッキーやプリッツ">
+  </div>
+</div>
+
+## Rails Girls Matsue準備段階
+
+オーガナイザーには、地域イベントに興味がある方や過去のRail Girls Matsueに参加され開催したいという熱い思いの方全員で5名が集まりました！
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/organizers.jpeg" alt="オーガナイザーの5名">
+  </div>
+</div>
+しかし、準備期間はたったの3か月弱。毎週定例MTGを開催し、ファーエンドテクノロジー株式会社様のMy Redmineを活用し、毎週ごとのタスク管理を実施。日々オーガナイザーの皆で進捗確認をしながら準備を進めました。  
+5名とも運営は初めてということもあり、不明点ばかり。前回のオーガナイザーへのヒアリングやRails Girls JAPANの皆さまにご協力頂きながら準備をしました。  
+参加者に寄り添ったイベントを開催したいと思い、ワークショップのガイドが正しいのか確認のため、事前に協力者を募り、本番さながらの確認作業も行いました。初心者の方がどの部分で立ち止まりやすいのか、分からなくなるのかを一つずつ確認をし、課題を整理！ご協力いただいた皆様、誠にありがとうございました！
+
+## Rails Girls Matsue 5th当日について
+
+ついに本番！コーチ陣にはなんと、第１回からコーチをしてくださっている心強い方々に協力いただきました。そして、ＩＴエンジニアとして第一線で活躍されている方々や前日のRubyworld conferenceに参加されて急遽コーチとしてご参加してくださった方々と大変豪華なコーチ陣にご協力頂きました。ご協力いただき、ありがとうございました！
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/coaches.jpg" alt="RailsGirls 1stのTシャツを着たコーチたち">
+    <img class="photo" src="/images/blog/matsue5th/meeting.jpeg" alt="当日朝のミーティングの様子">
+  </div>
+</div>
+
+今回の参加者の半数は高校生ということで島根の次世代を担う方々が参加してくださいました！参加者が集まった松江オープンソースラボは華やか！
+
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/registration.jpeg" alt="レジストレーションの様子">
+  </div>
+</div>
+
+## 開会
+
+まず初めにオーガナイザーの紹介、Rails Girlsについての説明、一日のスケジュール確認の紹介を行いました。
+
+## アイスブレイク
+
+今回は、トランプを使ったアイスブレイクを実施しました。机の真ん中にトランプの山を置きスライドに移った並びに並べ替えるというもの。どのチームが最も早く並べ替えられるか。  
+第１回戦目は、何も知らされずにスライド通りに並べます。  
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/icebreak1.jpeg" alt="アイスブレイクの様子1">
+    <img class="photo" src="/images/blog/matsue5th/icebreak2.jpeg" alt="アイスブレイクの様子2">
+    <img class="photo" src="/images/blog/matsue5th/icebreak3.jpeg" alt="アイスブレイクの様子3">
+  </div>
+</div>
+そして仕組みが分かった第２回戦は戦略をチームで練ります。そして、２回目では、最も早く並び替えたチームから今回のスペシャルゲスト江森真由美氏からご提供いただいた本を景品をプレゼント。  
+１回戦目とは違うスライドがスクリーンに映りだされると皆さんめちゃめちゃ真剣に！白熱した試合が繰り広げられました！
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/icebreak-prize1.jpeg" alt="アイスブレイクの賞品を受け取った様子1">
+    <img class="photo" src="/images/blog/matsue5th/icebreak-prize2.jpeg" alt="アイスブレイクの賞品を受け取った様子2">
+    <img class="photo" src="/images/blog/matsue5th/icebreak-prize3.jpeg" alt="アイスブレイクの賞品を受け取った様子3">
+  </div>
+</div>
+
+## ワークショップ
+
+アイスブレイクで各チームの雰囲気が温まったところで本番であるワークショップを開催。  
+オーガナイザーがひと工程ずつに説明をしていきます。
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/workshop1.jpeg" alt="ワークショップの様子1">
+    <img class="photo" src="/images/blog/matsue5th/workshop2.jpeg" alt="ワークショップの様子2">
+    <img class="photo" src="/images/blog/matsue5th/workshop3.jpeg" alt="ワークショップの様子3">
+  </div>
+</div>
+分からないところがあると隣のコーチがすぐさまサポート。今回ありがたいことにほぼ１対１でサポートできる手厚い体制となり、誰一人取り残されることなくサクサクとWebアプリケーションを作成されていました。  
+参加者の皆さんも情報系の学科や授業を受けられていることもあり、理解も早い！  
+想像以上の早さで進めることができました。  
+途中、ポッキーの日にちなんで色んな味のポッキーを準備したので、お菓子休憩では味比べをしてもらいながら、みんなで和気あいあいとワークショップが進みました♡
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/sweets-drinks.jpg" alt="会場にあったお菓子・飲み物">
+    <img class="photo" src="/images/blog/matsue5th/sweets.jpg" alt="会場にあったお菓子">
+  </div>
+</div>
+
+## スペシャルゲスト江森真由美氏によるLT
+
+今年のRubyworld conference基調講演者、江森真由美氏が松江にお越しということで特別にLTを行ってくれることに！Rubyコミュニティの結束と、Rails Girlsが提供するIT初心者のためのキッカケについて語ってくださり、コミュニティの異色な活動も紹介してくださいました（今はやっているのは、ルービックキューブにけん玉・自作キーボードとのこと！）。 Rubyの魅力を新たな視点で感じさせられるLTをしていただき、初めてRubyのコミュニティを知る参加者も興味津々で聞いておられました。
+
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/emori-session1.jpeg" alt="江森さんの講演の様子">
+    <img class="photo" src="/images/blog/matsue5th/emori-session2.jpeg" alt="江森さんの講演の様子">
+  </div>
+</div>
+
+## スポンサーLT
+
+さらに、スポンサーLTとして、「フィヨルドブートキャンプ」様からの動画LT、そして今年のRuby Biz Prix大賞を受賞された「PIXIV」様からの現地LT（法被を身にまとったLTでした！）、さらに「Tokyo Dev」様は、Rail Girl Matsueのために松江に足を運んで発表してくださったことに感謝申し上げます。
+また、松江からのスポンサーとして「株式会社パソナ」様より企業紹介LTをいただきました。多くの企業様からのご協力に心より感謝いたします。（今回も皆様のおかげで素晴らしいイベントとなりました！）
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/sponser-session1.jpeg" alt="フィヨルドブートキャンプ様の動画が流れている様子">
+    <img class="photo" src="/images/blog/matsue5th/sponser-session2.jpeg" alt="Pixiv様のLT">
+    <img class="photo" src="/images/blog/matsue5th/sponser-session3.jpeg" alt="Tokyo Dev様のLT">
+    <img class="photo" src="/images/blog/matsue5th/sponser-session4.jpeg" alt="株式会社パソナ様のLT">
+  </div>
+</div>
+
+## ワークショップ２
+
+残りの工程を進めていきます。やはり、後半もみなさまスムーズに取り組んでくださり、思い思いに自分仕様にカスタマイズするところまで、あっという間に進みました！  
+想像以上に早く進んだので、急遽みんなでどんなところを工夫したか共有する時間を設けました！それぞれ色んな思いを持って工夫・改善をされ、「おぉ～」や「すごい！」「かわいい！」など色々な声が飛び交う良いシェアタイムとなりました。
+<div class="photos">
+  <div>
+    <img class="photo" src="/images/blog/matsue5th/workshop4.jpeg" alt="ワークショップの様子4">
+    <img class="photo" src="/images/blog/matsue5th/workshop5.jpeg" alt="ワークショップの様子5">
+    <img class="photo" src="/images/blog/matsue5th/workshop6.jpeg" alt="ワークショップの様子6">
+    <img class="photo" src="/images/blog/matsue5th/workshop7.jpeg" alt="ワークショップの様子7">
+    <img class="photo" src="/images/blog/matsue5th/share-time1.jpeg" alt="作ったものを共有する様子">
+    <img class="photo" src="/images/blog/matsue5th/share-time2.jpeg" alt="作ったものを共有する様子">
+  </div>
+</div>
+
+## アフターパーティ
+
+アフターパーティには、更にお菓子や飲み物を追加し、自由に話しながら親睦を深めてもらいました！高校生たちも普段なかなか話す機会がないエンジニア（コーチ）の方々と話したり、楽しそうに過ごしてくださいました。
+<div class="photos">
+  <img class="photo" src="/images/blog/matsue5th/after-party.jpeg" alt="アフターパーティーの様子">
+</div>
+途中には、松江のRubyコミュニティ「Matsue.rb」の佐田さんよりコミュニティやイベントのご紹介があり、Rails Girls をやってさらに深めたいという方がいらっしゃったらぜひこちらのコミュニティにご参加ください！とご案内してくださいました。
+<div class="photos">
+  <img class="photo" src="/images/blog/matsue5th/sada-session.jpeg" alt="佐田さんのLT">
+</div>
+そして、オーガナイザーの一人である大皷さんは「参加者からオーガナイザー」になられ、その経緯や思いを語ってくれました。
+<div class="photos">
+  <img class="photo" src="/images/blog/matsue5th/taiko-session.jpeg" alt="大皷さんのLT">
+</div>
+アフターパーティ中には、「次Rails Girlsをやりたい」と言ってくれる方も居られ、オーガナイザーの我々にとってとても嬉しく、開催したかいがありました！
+
+最後、参加者の方からのアンケートでは、すべての方が「満足した」と回答いただき、「とても楽しかった」「コーチと一対一で丁寧に教えてもらえて良かった」などのありがたい感想をいただき非常に嬉しく思っています！
+スポンサーの皆さま、コーチの皆さま、そして参加者の皆さまのおかげでRailsGirlsを無事に開催することができました。重ね重ね御礼申し上げます！
+<div class="photos">
+  <img class="photo" src="/images/blog/matsue5th/group-shot.jpeg" alt="集合写真">
+</div>
+
+これを機にITやプログラミングに興味を持ってもらえたらうれしいです！
+また別の機会で皆さまにお会いできることを楽しみにしております！
