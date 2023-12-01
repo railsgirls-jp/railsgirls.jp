@@ -18,7 +18,7 @@ permalink: continuous-travis
 
 __COACH__: 継続的デプロイの利点について話しましょう。
 
-###Github、Travis CIとanynines
+### Github、Travis CIとanynines
 
 まずGithubにリポジトリが必要です。私たちには既にそれがありますね！次にanyninesを使ってデプロイする方法のガイドを最後の手順まで終えたことを確認してください。
 
@@ -53,7 +53,6 @@ git push origin master
 {% endhighlight %}
 
 実際のデプロイを設定できるようになりました。travis gemを使ってみましょう。
-Let's use the travis gem:
 {% highlight sh %}
 gem install travis
 {% endhighlight %}
