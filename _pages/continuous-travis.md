@@ -52,7 +52,8 @@ git commit -m "test Travis integration"
 git push origin master
 {% endhighlight %}
 
-実際のデプロイを設定できるようになりました。travis gemを使ってみましょう。
+実際のデプロイを設定できるようになりました。
+travis gemを使ってみましょう。
 {% highlight sh %}
 gem install travis
 {% endhighlight %}
