@@ -6,7 +6,7 @@ permalink: continuous-travis
 
 # Travisを使用した継続的デプロイ
 
-*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)* / *翻訳者: [@monyatto](https://twitter.com/monyatto)*
+*Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)* / *翻訳者: [@monya_tto](https://twitter.com/monya_tto)*
 
 ### 継続的デプロイとは何でしょうか？
 
