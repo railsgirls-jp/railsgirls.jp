@@ -4,46 +4,48 @@ title: Remote Pairing For the Win!
 permalink: remote
 ---
 
-# Rails Girls Remote Pairing Tutorial
+# Rails Girls リモートペア作業チュートリアル
 
 *Created by Ed Drain, [@SoldierCoder](https://twitter.com/soldiercoder)*
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
 
-## Why is Remote Pairing so great?
+<div class="help-notice">このガイドは2013年当時のものです。ガイドで言及されているmadeyeをはじめとするリンクの情報は古い可能性があります。</div>
 
-First things first, what is my motivation for sharing this?  If you are reading this, you are already aware of the power of [Rails Girls](http://railsgirls.com).  In case you did not know, let me give you a few facts.  Rails Girls is an organization that introduces women to web application development using Ruby on Rails.  For many women around the world, it is a **powerful, emotional experience** that shows them that they can create something new for the Web and that they have support of other women who extended their privilege to them.
+## どうしてリモートペア作業はとても素晴らしいのでしょうか？
 
-I said "around the world", didn't I?  Indeed, Rails Girls is on **every continent** and in **130 \+ cities!**  I know this is true because, through the generosity of Ryan Bates ([@RBates](https://twitter.com/rbates)), I have had the honor of distributing coupons good for three months free of [RailsCasts.com](http://railscasts.com) to so many of those cities. So there is part of the promise of Rails Girls -- that women, around the world, who need some way of lifting themselves up out of possibly dire circumstances and thru study and application of what they have learned, get the pot of gold at the end of the rainbow -- a high paying job where they are **respected for their creations**.
+まず初めに、この話題を共有する動機はなんでしょうか？もしこのチュートリアルを読まれているなら、あなたはすでに[Rails Girls](http://railsgirls.com)の力を理解しているでしょう。もしまだ知らない場合は、いくつかの事実をお伝えしましょう。Rails Girlsは、Ruby on Railsを使用したウェブアプリケーション開発を女性に紹介する組織です。世界中の多くの女性にとって、Rails Girlsのサポートは**パワフルで感動的な経験**であり、自分たちがウェブ上に新しい何かを創造できること、そして自分たちに特権を与えてくれる他の女性たちのサポートがあることを示しています。
 
-## But seriously, why is Remote Pairing so great?
+私は「世界中で」と言いましたね？実際、Rails Girlsは**すべての大陸**に、そして**130以上**の都市に存在しています！ 私がこの事実を知っているのは、Ryan Bates氏([@RBates](https://twitter.com/rbates))のご厚意により、[RailsCasts.com](http://railscasts.com)の3ヶ月無料クーポンをこれらの都市の多くに配布させていただいたからです。 世界中の女性たちが、自分の困難な状況から抜け出すための何らかの手段が必要で、学習と学んだことの実践を通して、虹の終わりにある金の壺、つまり自分の創造物に対して尊重される高収入の仕事を手に入れることができること。これがRails Girlsの約束の一部です。
 
-Remote-pairing is so great because people who can benefit from people who would coach them are not always near to them.  I know this because as a coach for [Rails Girls Summer of Code](http://railsgirlssummerofcode.org) who lived in Virginia, while the team I coached lived in London and Pennsylvania.  If it weren't for remote pairing, I'd have to get on a plane or drive twelve hours just to show how to write a "hello, world!" example app!
+## でも真面目な話、どうしてリモートペア作業がそんなに素晴らしいのでしょうか？
 
-## Ok, I'm sold!  What do I need to remote pair?
-* An Internet connection.
-* One or more programming friends that want to remote pair with you
-* [Madeye](https://madeye.io) -- this is really important! This will let you and your friends work on the same code and SEE what the other person is changing AS they change it!
-* Optionally either Google accounts for you and your friends so you can hear each other or Skype accounts or anything that lets you all hear what the other says.
+リモートペア作業がとても素晴らしいのは、指導してくれる人とその恩恵を受けることができる人が、それぞれの近くに常にいるわけではないからです。というのも、[Rails Girls Summer of Code](http://railsgirlssummerofcode.org)のコーチとして、バージニアに住んでいた私が指導したチームはロンドンとペンシルバニアに住んでいたからです。もしリモートペア作業がなかったら、「Hello, World!」のサンプルアプリの書き方を説明するためだけに、飛行機に乗ったり、12時間かけてドライブしたりしなければならなかったでしょう！
 
-## How do I install Madeye?
-1. Install [Node.js](http://howtonode.org/how-to-install-nodejs)
-2. If you are installing to Linux or Mac, at the  terminal type: `curl https://madeye.io/install | sh`.  Otherwise, if you are installing to a Windows machine, type:  `npm install -g madeye`.
-3. Now Madeye is installed!
-3. Again, at the terminal type `madeye` in the directory you want to share.
-4. Madeye will report in your terminal the URL to share with your teammates and all of you can go there in your browser and edit code.
+## なるほど、納得しました！リモートペア作業を始めるには、何が必要でしょうか？
+* インターネット接続
+* 1名以上のリモートペアを組みたいプログラミング仲間
+* [Madeye](https://madeye.io) -- これは非常に重要です！これにより、あなたと友達は同じコードで作業し、相手が変更している様子を変更されると同時に見ることができます！
+* オプションとして、あなたと友達のGoogleアカウントか、Skypeアカウント、もしくは他の手段でも良いですが、お互いの声を聞くことができるものが必要です。
 
-If
- you are coaching, you and the person you are coaching can look on the left side of their browsers screen and see your icon in a particular directory.  If the coachee clicks on that directory they will see your icon again on either a file or another directory.  You can follow those down to whatever file you want to edit and look in the code for their cursor.  Its **that** easy!
+## Madeyeをどのようにインストールしますか？
+1. [Node.js](http://howtonode.org/how-to-install-nodejs)をインストールします。
+2. LinuxまたはMacにインストールする場合は、ターミナルで次のようにタイプしてください: `curl https://madeye.io/install | sh`。 Windowsマシンにインストールする場合は、次のように入力します:  `npm install -g madeye`。
+3. Madeyeがインストールされました！
+4. ターミナルで共有したいディレクトリに`madeye`と入力しましょう。
+5. Madeyeがあなたのターミナルに、チームメイトと共有するためのURLを表示します。
 
-## Alternatives to Madeye
+もし、あなたがコーチングしている場合、あなたとコーチング対象の人は自分達のブラウザ画面の左側を見て、特定のディレクトリにあるあなたのアイコンを見ることができます。コーチング対象者がそのディレクトリをクリックすると、ファイルまたは別のディレクトリにおいても、再びあなたのアイコンが表示されます。コーチング対象者はコーチのアイコンを辿って編集したいファイルに移動し、コーチはコード内で対象者のカーソルを見ることができます。とても簡単ですね！
 
-It is the guide author's belief that Madeye is the best thing going for pair programming.  However, this guide is  a gift to you, the reader as well as to those you may pair with, and so, not to shirk my duty to the Pair Programming World, I offer this one link that contains so many other options: [PairProgramWith.Me](http://pairprogramwith.me).  I hope you find the best way for you and your pair-programming buddies.
+## Madeyeの代替手段
 
-## My last thought
-The Ruby community is such a great example of people helping others.  One has only to look at the folks nominated every year as [Ruby Heros](http://rubyheroes.com/) to see  this in action.
-What a great and generous world this would be, if all of us extended some of our privilege to someone who has less.  It would be a world that reflects that most common of sayings that you probably hear at meetings of your local Ruby/Rails meet-up: "MINSWAN" -- Matz is nice, so we are nice!  Let's get started being nice to each other!
+ガイドの作者は、Madeyeがペアプログラミングにとって最も優れたものだと信じています。ただし、このガイドは読者のみなさんへの贈り物であり、またペアプログラミングの世界への貢献であるため、Pair Programming Worldへの責任を怠らないように、以下のリンクを提供します。
+[PairProgramWith.Me](http://pairprogramwith.me)
+あなたとペアプログラミングを行う仲間たちにとって最適な方法を見つけていただければ幸いです。
 
+## 私が最後に思うこと
+Rubyコミュニティは、他者を助ける人々の素晴らしい例です。毎年[Ruby Heros](http://rubyheroes.com/)としてノミネートされる人々を見れば、このことが実践されていることがわかります。
+もし私たち全員が自分達の特権の一部をそれが少ない人に提供するなら、どれほど素晴らしく寛大な世界になるでしょうか。それはおそらく、ローカルのRuby/Railsミートアップのミーティングで聞くことの多い言葉が反映された世界だと思います。
 
+「MINSWAN」― Matz is nice, so we are nice!
 
-
-
-
+さあ、お互いに親切であることを始めましょう！
