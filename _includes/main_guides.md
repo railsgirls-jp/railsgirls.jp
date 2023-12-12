@@ -20,7 +20,7 @@
 * ガイド 7: [あなたのアプリに新しいホーム画面を追加しよう](/new-homepage) {% if page.permalink == 'new-homepage' %}(このページです！){% endif %}
 * ガイド 8: [画像アップロード機能を追加しよう](/uploads) {% if page.permalink == 'uploads' %}(このページです！){% endif %}
 * ガイド 9: [GitHub であなたのアプリのコードを公開しよう](/github) {% if page.permalink == 'github' %}(このページです！){% endif %}
-* ガイド 10: [あなたのアプリをインターネットに公開しよう](/deployment) {% if page.permalink == 'deployment' %}(このページです！){% endif %} with one of these services:
+* ガイド 10: これらのサービスのどれかで [あなたのアプリをインターネットに公開しよう](/deployment) {% if page.permalink == 'deployment' %}(このページです！){% endif %}
   - [Fly.io](/deployment/fly-io) {% if page.permalink == 'deployment/fly-io' %}(このページです！){% endif %}
   - [Heroku](/heroku) {% if page.permalink == 'heroku' %}(このページです！){% endif %}
   - [DigitalOcean](/digitalocean) {% if page.permalink == 'digitalocean' %}(このページです！){% endif %}
@@ -30,6 +30,6 @@
 * ガイド 11: [HTML & CSS を使ってデザインしてみよう](/design) {% if page.permalink == 'design' %}(このページです！){% endif %}
 * ガイド 12: [あなたのアプリにコメント出来るようにしましょう](/commenting) {% if page.permalink == 'commenting' %}(このページです！){% endif %}
 * ガイド 13: [Carrierwave を使って画像をリサイズしよう](/thumbnails) {% if page.permalink == 'thumbnails' %}(このページです！){% endif %}
-* ガイド 14: [Test your app with RSpec](/testing-rspec) {% if page.permalink == 'testing-rspec' %}(このページです！){% endif %}
+* ガイド 14: [RSpecでアプリをテストしよう](/testing-rspec) {% if page.permalink == 'testing-rspec' %}(このページです！){% endif %}
 
 [全てのガイドを見る](/)
