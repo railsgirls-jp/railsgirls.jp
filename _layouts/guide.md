@@ -5,5 +5,5 @@ layout: default
 <article class="guide">
 {{ content }}
 <hr>
-Want to learn more? <a href="/">View more guides!</a>
+もっと学びたいですか？ <a href="/">他のガイドも見てみましょう！</a>
 </article>
