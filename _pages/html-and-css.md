@@ -46,7 +46,7 @@ Resources: Guide to the guide [Design](https://guides.railsgirls.com/guide-to-th
 
 CSS（Cascading Style Sheets）を利用すると、HTMLがどのように見えるか、要素にどんなテキストや背景色が必要か、どんなフォントを使うか、どんなサイズか、ページ内のどこにあるかなどを指定することができます。
 
-このガイドでは、アプリのスタイルを決めるために自分でCSSを記述するのではなく、[Bootstrap](Bootstrap)というフレームワークを導入します。Bootstrapは、CSSのフレームワークを提供し、あなたのアプリにスタイル、デザインを適用します。HTMLに適用できる多くのCSSクラスが用意されているため、手軽に導入することができます。
+このガイドでは、アプリのスタイルを決めるために自分でCSSを記述するのではなく、[Bootstrap](https://getbootstrap.com/)というフレームワークを導入します。Bootstrapは、CSSのフレームワークを提供し、あなたのアプリにスタイル、デザインを適用します。HTMLに適用できる多くのCSSクラスが用意されているため、手軽に導入することができます。
 
 CSSについてもっと知りたい方は、このワークショップの後、[CSSのチュートリアル](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started)をご覧になることをお勧めします。
 

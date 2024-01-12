@@ -17,7 +17,7 @@ permalink: touristic-autism_intro
 * 評価機能
 * 認証ユーザー（デバイス経由）の権限設定
 
-このガイドでは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [CarrierWave を使ってサムネイルを作ってみよう](/thumbnails)、[Devise で認証機能を追加](/devise)、[HTML & CSS を使ってデザインしてみよう](/design)、[OpenShiftでアプリを公開する](/openshift/)、[コメント機能を追加しよう](/commenting) のチュートリアルといった基礎的なガイドを統合、適用しています。
+このガイドでは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [CarrierWave を使ってサムネイルを作ってみよう](/thumbnails)、[Devise で認証機能を追加](/devise)、[HTML & CSS を使ってデザインしてみよう](/design)、[OpenShiftでアプリを公開する](/openshift)、[コメント機能を追加しよう](/commenting) のチュートリアルといった基礎的なガイドを統合、適用しています。
 
 
 
@@ -59,7 +59,7 @@ git config --global user.email your.email@example.com
 ## 追加ガイド
 
 * Guide 0: [Ruby、Rails、コンソール、テキストエディターについての便利なチートシート](https://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guide 1: [Heroku に Rails アプリを deploy しよう by Terence Lee](/heroku) / [OpenShiftでアプリを公開する by Katie Miller](/openshift) / [anyninesを使用してインターネットに公開しよう!](/anynines) / [Put your app online with Trucker.io](/trucker)
+* Guide 1: [Heroku に Rails アプリを deploy しよう by Terence Lee](/heroku) / [OpenShiftでアプリを公開する by Katie Miller](/openshift) / [anyninesを使用してインターネットに公開しよう!](/anynines)
 * Guide 2: [Gravatarでプロフィール写真を追加する](/gravatar)
 * Guide 3: [Lucy Bainによるアプリの追加説明を見る](https://github.com/lbain/railsgirls)
 
