@@ -14,7 +14,7 @@ Rubyコミュニティの楽しさを体験して欲しいという思いから�
 <a href="/2017/09/23/rubykaigi2017-support-for-alumni/">2017年</a> /
 <a href="/2018/12/04/rubykaigi2018-support-for-alumni/">2018年</a> /
 <a href="/2019/06/04/rubykaigi2019-support-for-alumni/">2019年</a> /
-<a href="/2021/11/21/rubykaigi2021-support-for-alumni/">2021年</a> /
+<a href="/2021/11/21/rubykaigi-takeout-2021-support-for-alumni/">2021年</a> /
 <a href="/2022/12/01/rubykaigi2022-support-for-alumni/">2022年</a> /
 <a href="/2023/06/16/rubykaigi2023-support-for-alumni/">2023年</a>
 
