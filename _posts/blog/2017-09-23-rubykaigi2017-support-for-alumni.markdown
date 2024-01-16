@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RubyKaigi2017 参加支援についてのご報告
-date: 2017-09-23 16:16:22 GMT
+date: 2017-09-23
 image: /images/blog/DKJjw4LVAAAeWAj.jpg
 ---
 <p><p>Rails Girls Japan では、この度、これまでのRails Girls イベントの参加者の中から、
