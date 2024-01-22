@@ -4,69 +4,70 @@ title: The Guide to the Guide
 permalink: guide-to-the-guide
 ---
 
-# Your guide to the Rails Girls Guide!
+# Railsガールズ・ガイドへのご案内です！
 
 *Created by H Salmon to accompany the [app guide](/app).*
+*翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
 
-This guide is an accompaniment to the [Rails Girls Guide](/app) you will be using to build your first Rails application. Its purpose is to provide background information about the structure of a Rails application, Rails terminology and commands, so you can understand what is happening when you are implementing the code in the Rails Girls Guide. We hope that this guide will provide you with a way to retain what you learn over the course of this workshop, and to maintain your interest in Rails development. Welcome!
+このガイドは、最初のRailsアプリケーションを構築するために使用する[Rails Girls Guide](/app)を補足するものです。 このガイドの目的は、Railsアプリケーションの構造、Railsの用語、コマンドに関する背景情報を提供し、Rails Girls Guideのコードを実装するときに何が起こっているかを理解できるようにすることです。このガイドが、このワークショップで学んだことを定着させ、Rails開発への興味を維持するための一助となれば幸いです。ようこそ！
 
-### [**1.** Creating the application](#1_create_the_application)
-Commands you need to know
+### [**1.** アプリケーションの作成](#1_create_the_application)
+知っておくべきコマンド
 
-### [**2.** Creating Idea scaffold](#2_create_idea_scaffold)
-Scaffolding, models, migrations
+### [**2.** Idea の scaffold を作る](#2_create_idea_scaffold)
+scaffold、モデル、マイグレーション
 
-### [**3.** Designing](#3_design)
-The design layers ( HTML, CSS, ERB)
-MVC Architecture
+### [**3.** デザイン](#3_design)
+デザインレイヤー（HTML、CSS、ERB）
+MVCアーキテクチャ
 
-### [**4.** Adding picture uploads](#4_add_picture_uploads)
-Libraries, gems and open-source
+### [**4.** 画像アップロード機能の追加](#4_add_picture_uploads)
+ライブラリ、gems、オープンソース
 
-### [**5.** Finetuning the routes](#5_finetune_the_routes)
-routes, HTTP Methods: GET, POST, PUT and DELETE
+### [**5.** routesの調整](#5_finetune_the_routes)
+routes, HTTPメソッド： GET、POST、PUT、DELETE
 
 
 
-## <a id="1_create_the_application">*1.* Create the application</a>
+## <a id="1_create_the_application">*1.* アプリケーションの作成</a>
 
-`mkdir projects` - makes a *directory* (folder) called “projects” in the folder you are currently in, most likely your home folder.
+`mkdir projects` - 現在いるフォルダ（おそらくホームフォルダ）に「projects」という*ディレクトリ*（フォルダ）を作成します。
 `mkdir` = **m**a**k**e **dir**ectory.
 
-`cd projects` - navigates to the “projects” folder you just created. `cd` = **c**hange **d**irectory.
+`cd projects` - あなたが作成した「projects」フォルダに移動します。 `cd` = **c**hange **d**irectory.
 
-`rails new railsgirls` - creates a new Ruby on Rails application called **railsgirls** containing various auto-generated folders, in your *working directory* (the folder you are working in at the moment).
+`rails new railsgirls` - **作業ディレクトリ**（現在作業しているフォルダ）に、自動生成された様々なフォルダを含む**railsgirls**という新しいRuby on Railsアプリケーションを作成します。
 
-`cd railsgirls` - navigates to the “railsgirls” folder.
+`cd railsgirls` - 「railsgirls」フォルダに移動します。
 
-`ruby script\rails server` - starts a local web server on your computer. This web server is accessed through the web address [http://localhost:3000](http://localhost:3000).
+`ruby script\rails server` - あなたのコンピュータ上でローカルWebサーバーを起動します。このWebサーバーは、Webアドレス[http://localhost:3000](http://localhost:3000)からアクセスできます。
 
-“Localhost” refers specifically to your computer (considered the “local host”), from which a server is being launched. Localhost provides a way for developers to see their application in a browser and test the functionality while it is still in development.
+「Localhost」は具体的にはあなたのコンピュータ（「ローカルホスト」と呼ばれる）を指し、そこからサーバーが起動されます。ローカルホストは、開発者がアプリケーションをブラウザで確認し、開発中に機能をテストする手段を提供します。
 
-## <a id="2_create_idea_scaffold">*2.* Create Idea scaffold</a>
+## <a id="2_create_idea_scaffold">*2.* Idea の scaffold を作る</a>
 
-### What is Rails scaffolding?
+### Railsのscaffoldとは何でしょうか？
 
-Every web application consists of many different concepts or resources (such as “users”, “ideas”, “posts”, “comments”, etc.).
-Rails scaffolding is a command (`rails generate scaffold`) for introducing a new resource into your application. It generates all of the code files necessary for representing and interacting with this resource.
+すべてのウェブアプリケーションは多くの異なる概念やリソース（例: "users"、"ideas"、"posts"、"comments"など）から構成されています。
+Railsのscaffoldは、アプリケーションに新しいリソースを導入するためのコマンド（`rails generate scaffold`）です。これにより、このリソースを表現し、それとやり取りするために必要なすべてのコードファイルが生成されます。
 
-### What is a model?
+### モデルとは何でしょうか？
 
-In Rails, a model represents a definition of a resource in your application, and how it should interact with other parts of the application. Depending on the nature of the website, these resources could be users, posts, groups etc. When a model is generated, a corresponding *database table* is created. This database table contains information that represents specified attributes of the model, e.g. for a User model, there might be a ‘name’ column and an ‘email’ column, and there will be rows for each subsequent user created. In the application you are creating, these resources are ideas and the model is ‘Idea’.
+Railsでは、モデルはアプリケーション内のリソースの定義を表し、そのリソースがアプリケーションの他の部分とどのようにやりとりすべきかを表します。ウェブサイトの性質に応じて、これらのリソースはusers、posts、groupsなどになります。モデルが生成されると、対応する*データベーステーブル*が作成されます。このデータベーステーブルには、モデルの指定された属性を表す情報が含まれています。例えば、Userモデルの場合、「name」というカラムや「email」というカラムがあるかもしれません。そして、ユーザーが作成されるたびに、これらはレコードになります。あなたが作成しようとしているアプリケーションでは、ideasがリソースに、「Idea」がモデルに当てはまります。
 
 {% highlight rb %}
 rails generate scaffold idea name:string description:text picture:string
 {% endhighlight %}
 
-In order to create our idea model, we use the `scaffold` command which includes an argument with the singular version of the model name (`idea`), and an argument with parameters (specifications) for the model’s attributes. This means that the `idea` model corresponds to a table in the database with columns for the attributes specified in the command: `name`, `description` and `picture`. The `scaffold` command also auto-generates an `id` attribute, referred to as the `primary key`, which is used to establish relationships between database tables.
+Ideaモデルを作成するために、単数系のモデル名（`idea`）と、モデルの属性に関するパラメータ（仕様）を引数に指定して、`scaffold`コマンドを使います。これは`idea`モデルが、コマンドで指定した属性(`name`、`description`、および`picture`)の列/カラムを持つテーブルに対応することを意味します。また、`scaffold`コマンドは`primary key`と呼ばれる`id`属性も自動生成します。この属性はデータベーステーブル間の関連付けをするために使用されます。
 
-`rails generate scaffold` - this calls the scaffold command.
+`rails generate scaffold` - これはscaffoldコマンドを呼び出します。
 
-`idea` - this tells the scaffold command what we want to call our model.
+`idea` - scaffoldコマンドに対して、モデルの名前をどう呼びたいかを指定します。
 
-`name:string description:text picture:string` - provides a list of attributes we want our model (and the database table that goes with it) to have. The `string` and `text` parts of the argument determine the nature of each attribute, i.e. each description needs to be ‘text’, and not, for example, an ‘integer’ (or any other type of information).
+`name:string description:text picture:string` - モデル（およびそれに関連するデータベーステーブル）が持つ属性のリストを提供します。 引数の中の`string`と`text`の部分は、各属性の性質を決定します。つまり、descriptionは「text」である必要があり、例えば「integer」（または他の任意の情報の型）であってはいけません。
 
-### The ideas table
+### ideasテーブル
 
 <table class="table table-hover table-bordered">
 	<thead>
@@ -80,14 +81,14 @@ In order to create our idea model, we use the `scaffold` command which includes 
 	<tbody>
 		<tr>
 			<td>1</td>
-			<td>“Money-spinner”</td>
-			<td>“Open a moveable shop!”</td>
+			<td>“儲かるもの”</td>
+			<td>“移動可能な店舗をオープンする！”</td>
 			<td>“GreatIdea.jpg”</td>
 		</tr>
 		<tr>
 			<td>2</td>
-			<td>“Champagne For Breakfast!”</td>
-			<td>“We should do this every Friday!”</td>
+			<td>“朝食にシャンパン！”</td>
+			<td>“毎週金曜日にやろう！”</td>
 			<td>“Champagne.jpg”</td>
 		</tr>
 		<tr>
@@ -99,71 +100,72 @@ In order to create our idea model, we use the `scaffold` command which includes 
 	</tbody>
 </table>
 
-### Naming conventions
+### 命名規則
 
 #### Active Record
-In Rails, the default system for communicating with an application’s database is called *Active Record*, which provides various methods for creating, saving, and finding data. To retrieve information from the database, *Active Record* establishes relationships between different parts of the application using naming conventions:
+Railsでは、アプリケーションのデータベースとやり取りするためのデフォルトのシステムは*Active Record*と呼ばれ、データを作成、保存、および検索するためのさまざまなメソッドを提供しています。データベースから情報を取得するにあたり、*Active Record*は異なるアプリケーションの部分間に関連付けするために命名規則を使用します。
 
-- Table names have all lowercase letters and underscores between words, e.g. “ideas”, “invoice\_items”
-- The model is named using the convention of unbroken MixedCase and is always the singular of the table name, e.g. if the table name is “invoice\_items”, the model name would be “InvoiceItem”. So, in this case our table name is "ideas" and our model is "Idea".
+- テーブル名はすべて小文字で、単語間はアンダースコアで区切ります。例： “ideas”, “invoice\_items”
+- モデルは、MixedCase(各単語の先頭が大文字で表記される)の規約を使用して命名され、常にテーブル名の単数形です。たとえば、テーブル名が「invoice\_items」の場合、モデル名は「InvoiceItem」になります。したがって、今回の場合、テーブル名は 「ideas」であり、モデルは「Idea」となります。
 
-#### Model attributes and types
+#### モデルの属性とタイプ
 
-As we’ve already discussed, a model can have attributes (properties) represented by columns in the corresponding database table. To be supported by the Active Record system, these attributes must conform to a list of appropriate types:
+既に説明したように、モデルは対応するデータベーステーブルのカラムで表される属性（プロパティ）を持つことができます。 Active Recordシステムでサポートを受けるためには、これらの属性は適切な型のリストに従っている必要があります。
 
-- `:binary` - stores data such as images, audio files or movies
+- `:binary` - 画像、音声ファイル、動画などのデータを格納します。
 
-- `:boolean` - stores true or false values (such as whether a particular user is an administrator of an application or not)
+- `:boolean` - 真偽値を格納します（特定のユーザーがアプリケーションの管理者であるかどうかなど）。
 
-- `:date` - stores only a date (year, month, day)
+- `:date` - 日付（年、月、日）のみを格納します。
 
-- `:datetime` - stores both a date and a time
+- `:datetime` - 日付と時刻の両方を格納します。
 
-- `:decimal` - stores decimal numbers with precision that varies according to your specifications
+- `:decimal` - 仕様に応じて変動する精度で10進数を格納します。
 
-- `:float` - stores decimal points with fixed precision i.e. you can’t specify the precision (`:decimal` is better for mathematical operations in which precision is required, but `:float` is processed faster and is better in situations where speed is required and accuracy is secondary)
+- `:float` - 固定された精度で小数点を格納します。つまり、精度を指定することはできません（`:decimal`は精度が必要な数学演算に適していますが、`:float`のほうが処理が早いです。このため、正確さよりも速度が優先される場合に適しています）。
 
-- `:integer` - stores whole numbers
+- `:integer` - 整数を格納します。
 
-- `:primary_key` - the primary key of a table is assumed to be the id
+- `:primary_key` - テーブルの主キーは、通常、idとされます。
 
-- `:string` - stores 255 characters of text information, i.e. is used for short text fields (names, emails etc)
+- `:string` - 255文字のテキスト情報を格納し、例えば、短いテキストフィールド（名前、メールアドレスなど）に使用されます。
 
-- `:text` - stores text information with no character limit (used for comments, blog posts etc)
+- `:text` - 文字数制限のないテキスト情報を格納します（コメントやブログ記事などに使用します）。
 
-- `:time` - stores only a time
+- `:time` - 時刻のみを格納します。
 
-- `:timestamp` - stores both a time and date. `:timestamp` is different from `:datetime` and serves a different purpose, but there’s no need to go into that here
+- `:timestamp` - 時刻と日付の両方を格納します。`:timestamp`は`:datetime`とは異なり、別の目的に役立ちますが、ここでは必要がないため詳しくは説明しません。
 
-### What are migrations and why do you need them?
+### マイグレーションとは何で、なぜ必要なのでしょうか？
 
-Migrations change the state of the database. When you run the `scaffold` command, a migration file containing instructions for the database table relevant to your command is added to the `db/migrate` folder of your application. For example, when you ran the `rails generate scaffold` command, a migration containing instructions for our ideas table was created. There are other commands that create migrations such as the `rails generate model` command and the `rails generate migration` command.
+マイグレーションはデータベースの状態を変更します。`scaffold`コマンドを実行すると、コマンドに関連するデータベーステーブルへの指示が含まれたマイグレーションファイルが、アプリケーションの`db/migrate`フォルダに追加されます。例えば、`rails generate scaffold`コマンドを実行すると、ideasテーブルへの指示を含むマイグレーションファイルが作成されます。`rails generate model` コマンドや `rails generate migration` コマンドなどのマイグレーションファイルを生成するコマンドが他にもあります。
 
-The `rake db:migrate` command updates the database according to the specifications in the migration file. This command, known as “migrating up”, ensures that your idea model is added to the database. Migrations can also be undone (“migrating down”) using the command `rake db:rollback`.
+`rake db:migrate` コマンドはマイグレーションファイルの仕様に従ってデータベースを更新します。このコマンドは 「migrating up」として知られており、あなたのIdeaモデルがデータベースに追加されることを保証します。コマンド `rake db:rollback` を使えば、マイグレーションを取り消す（「migrating down」）こともできます。
 
-## <a id="3_design">*3.* Design</a>
-In a Ruby on Rails application, the user interface (what someone visiting the website will see), is often written in HTML with Embedded Ruby (ERB) code. This code is contained in a specific directory called ‘views’, located in the `app` folder of your Rails application directory.
+## <a id="3_design">*3.* デザイン</a>
+Ruby on Railsアプリケーションでは、Webサイトを訪れるユーザーが見ることになるユーザーインターフェースは、通常、HTMLと埋め込みRuby（ERB）コードで書かれることが多いです。このコードは、Railsアプリケーションディレクトリ内の`app`フォルダにある特定のディレクトリである「views」に含まれています。
 
 ### HTML
-HTML, which stands for HyperText Markup Language, is the primary language for creating web pages and other information that can be displayed in a web browser. HTML is written using tags, angle brackets which tend to come in pairs (a “start tag” and an “end tag”), enclosing text-based content. In paired tags, the end tag also has a slash after the opening angle bracket, to distinguish it from the start tag. A paragraph (represented in HTML by the letter ‘p’) would use a start tag like this: `<p>` and an end tag like this: `</p>`, to enclose the text intended for display. Unpaired tags that are opened but don’t need to be closed (e.g. `<br>`, which defines a single line break) are known as “empty elements”. The web browser uses HTML tags to interpret how the contents will be displayed.
+HTMLとは、ハイパーテキスト・マークアップ・ランゲージ（HyperText Markup Language）の略で、Webブラウザで表示できるWebページやその他の情報を作成するための主要な言語です。HTMLはタグを使って記述され、山括弧はテキストベースのコンテンツを囲む2つのタグ（開始タグと終了タグ）で構成されることが多いです。対になるタグでは、開始タグと区別するために、終了タグは開始山括弧の後にスラッシュも付けます。段落（HTMLでは`p`で表される）は`<p>`のような開始タグおよび`</p>`のような終了タグを使って、表示するテキストを囲みます。開始しているけれど閉じる必要のないタグ（例：単一の改行を定義する`<br>`など）は、「空要素」として知られています。WebブラウザはHTMLタグを使用して、コンテンツの表示方法を解釈します。
 
-### ERB: Embedded Ruby
-ERB is a system supplied by Ruby that allows you to insert pure Ruby code into files written in other languages, such as Javascript or HTML. The Ruby code is contained within specific angle brackets (`<%` and `%>`) which instruct the system to execute the contents. If an `=` sign accompanies the angle brackets, (`<%=` and %`>`) then the contents are executed and rendered on the page.
+### ERB: 埋め込みRuby
+ERBは、Rubyが提供するシステムで、JavascriptやHTMLなど他の言語で書かれたファイルに純粋なRubyコードを挿入することができます。Rubyコードは特定の山括弧（`<%`および`%>`）内に含まれており、システムにその内容を実行するように指示します。山括弧に`=`記号が付いている場合（`<%=`および`%>`）、山括弧に囲まれた内容が実行され、ページに表示されます。
 
-For example, if you had 25 active ideas in your application, the code:
+<!-- Rails Girlsガイドでは多言語対応について解説されていないため、英語表記の例のままにしています -->
+例えば、アプリケーションに25のアクティブなアイディアがあった場合、コードは次のようになります。
 `There are currently <%= Idea.count %> active ideas`
-would render as:
+そして次のようにレンダリングされます。
 > There are currently 25 active ideas
 
-### MVC Architecture
-In a standard Rails application (like you one you have generated), the `app/` folder of your application starts out with three folders (or directories): ‘models’ (which we have already discussed), ‘controllers’ and ‘views’. The relationship between these directories is the foundation (known as MVC Architecture) of the application, and of Rails development.
+### MVCアーキテクチャ
+標準的なRailsアプリケーション（今回あなたが生成したようなもの）は、アプリケーションの`app/`フォルダは3つのフォルダ（ディレクトリ）で構成されます。「models」（既に説明しましたね）、「controllers」「views」です。これらのディレクトリ間の関係は、アプリケーションおよびRails開発の基盤で、MVCアーキテクチャとして知られています。
 
-When you ran the `rails generate scaffold` command, in addition to creating the idea model, you also created an accompanying ideas controller (`ideas_controller.rb`), located in the controllers folder, and an ideas views folder containing several files that you will use to create a dynamic application.
+`rails generate scaffold`コマンドを実行するとideaモデルの作成に加えて、対応するideasコントローラー (`ideas_controller.rb`)も作成されます。このファイルはcontrollersフォルダにあります。さらにideasのviewsフォルダも作成され、そこには動的なアプリケーションを作成するために使用するいくつかのファイルが含まれています。
 
-When attempting to display a Rails website, a web browser sends a request via the server which eventually hits the Rails *controller*. *Controllers* act as mediators between the *views* and the *models*. When the *controller* receives the information, it communicates with a *model* representing a resource of the application (in our case, an “idea”) which in turn communicates with the database. Upon retrieving the required information from the *model*, the *controller* renders the *view* which returns the complete web page to the browser as HTML.
+RailsのWebサイトを表示しようとすると、Webブラウザはサーバーを介してリクエストを送信し、最終的にRailsの*コントローラー*に到達します。*コントローラー*は*ビュー*と*モデル*の仲介役として機能します。*コントローラー*が情報を受け取ると、アプリケーションのリソースを表す*モデル*と通信し（今回の例では「idea」）、そこから順次データベースに問い合わせます。*コントローラー*は*モデル*から必要な情報を取得したら、Webページ全体をHTMLとしてブラウザに返す*ビュー*をレンダリングします。
 
-### CSS and layouts
-CSS (Cascading Style Sheets) is a language used to describe the formatting of pages written in a ‘markup language’, i.e. a language for processing, defining and presenting text with a prescribed formatting code e.g. tags, that distinguish it from plain text. The most common application of CSS is in conjunction with HTML.
+### CSSとレイアウト
+CSS (Cascading Style Sheets)は「マークアップ言語」で書かれたページの体裁を記述するために利用される言語です。すなわち、テキストを処理し、定義し、タグのように決められた書式で表示するための言語でプレーンテキストとは区別されます。CSSは、HTMLと組み合わせて使われることが一般的です。
 {% highlight css %}
 body { padding-top: 100px; }
 footer { margin-top: 100px; }
@@ -171,24 +173,24 @@ table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 {% endhighlight %}
 
-Within the CSS you have applied:
+CSSの中で適用されたのは以下のとおりです。
 
-`body` - this part is known as the selector and refers to the HTML element you wish to style.
-`{ padding-top: 100px; }` - this part is known as the declaration; each declaration has a property which is the style attribute you wish to change (`padding-top`), and an associated value (`100px`). Declarations always end with a semicolon and declaration groups are always enclosed by curly brackets.
+`body` - この部分はセレクターです。スタイルを適用したいHTML要素を指定します。
+`{ padding-top: 100px; }` - この部分は宣言です。各宣言は、変更したいスタイル属性 (`padding-top`)と関連する値(`100px`)をプロパティとして持ちます。宣言は常にセミコロンで終わり、宣言グループは常に波括弧で囲われています。
 
-For each Rails application there is a default layout file called `application.html.erb`, located in the layouts folder of your views directory. With this file you can create a default format for all of the pages in your application.
+各Railsアプリケーションには、viewsディレクトリのlayoutsフォルダに`application.html.erb`というデフォルトのレイアウトファイルがあります。このファイルを使用して、アプリケーション内のすべてページに対してデフォルトフォーマットを作成することができます。
 
 {% highlight html %}
 <link rel="stylesheet" href="https://railsgirls.com/assets/bootstrap.css">
 {% endhighlight %}
 
-In the above code, the `link rel` (link relation) is defining the nature of the URL that the `href` (hypertext reference) attribute is requesting content from. This argument indicates that the external source requested is a stylesheet and the web browser will need to fetch this file to render the page properly.
+上記のコードでは、`link rel`(link relation)は`href`(hypertext reference)属性がコンテンツを要求するURLの性質を定義しています。この引数は、要求された外部ソースがスタイルシートであり、Webブラウザがページを適切に表示するために、このファイルを取得する必要があることを示しています。
 
 {% highlight erb %}
 <%= stylesheet_link_tag "application" %>
 {% endhighlight %}
 
-This code returns a stylesheet link tag for the source, in this case “application”, i.e. `application.css`. This means that the styling you implemented in application.css will be applied to the various pages of your application.
+このコードは指定されたソース、今回の場合「application」、つまり`application.css`に対するスタイルシートリンクタグを返します。これは、application.css で実装したスタイルがアプリケーションのさまざまなページに適用されることを意味します。
 
 
 {% highlight erb %}
@@ -197,51 +199,51 @@ This code returns a stylesheet link tag for the source, in this case “applicat
 </div>
 {% endhighlight %}
 
-In this code:
+このコードでは
 
-- The HTML `div` tag divides the code into parts.
-- The *container class* adds additional styling to everything inside the div tags
-- The `<%= yield %>` argument is responsible for inserting the unique content from each page into the container `div`. This means that in your application the overall layout can be consistent even though the content will differ from page to page.
+- HTMLの`div`タグはコードをパーツに分割します。
+- *containerクラス*は、このdivタグ内の全ての要素にスタイリングを追加します。
+- `<%= yield %>`引数は、各ページに対して固有のコンテンツを`div`に挿入する役割を担います。つまり、ページごとにコンテンツが異なっていても、アプリケーション全体のレイアウトは一貫しているということです。
 
-## <a id="4_add_picture_uploads">*4.* Add picture uploads</a>
+## <a id="4_add_picture_uploads">*4.* 画像アップロード機能の追加</a>
 
-### Libraries
-Many programming languages, including Ruby, use a wide range of libraries. In Ruby’s case, most of these libraries are released in the form of self-contained packages called *gems*, which contain all the information required to install and implement them. These gems are contained in your application’s `Gemfile` and if you look in this file you’ll notice that when you created your first Rails application it came with several gems that ensure your application functions correctly.
+### ライブラリ
+Rubyを含む多くのプログラミング言語は幅広いライブラリを使用しています。Rubyの場合、これらのライブラリのほとんどは*gem*と呼ばれる自己完結型パッケージの形でリリースされていて、そのパッケージにはライブラリをインストールして実装するために必要なすべての情報が含まれています。これらのgemはアプリケーションの`Gemfile`に含まれていて、このファイルを見てみると、最初のRailsアプリケーションを作成した際にアプリケーションが正しく機能するようにgemがいくつか同梱されたことに気がつくでしょう。
 
-Gems help simplify and prevent repetition in a developer’s code, in keeping with the DRY (Don’t Repeat Yourself) principle of software development. Gems may solve specific problems, add specific functionality, or address specific requirements, meaning that should another developer encounter a similar scenario, instead of writing new code, they can install a gem containing pre-written code. For example, “CarrierWave”, the gem you are adding to your gemfile is designed to make it easy to upload files to your application.
+Gemはソフトウェア開発の原則であるDRY (Don’t Repeat Yourself)に従って、開発者のコードを簡素化し、コードの重複を防ぐことに役立ちます。Gemは特定の問題を解決したり、特定の機能を追加したり、特定の要件に対処したりします。これは、他の開発者が同じようなシナリオに遭遇した際に、新たなコードを書く代わりに予め書かれたコードを含むGemをインストールすることができるということを意味します。例えば、Gemfileに追加した「CarrierWave」は、ファイルをアプリケーションに簡単にアップロードできるように設計されています。
 
-“Bundler” is the software Ruby uses to track and manage gems. The `bundle` command runs Bundler and installs the gems specified in your Gemfile. You’ll notice the code `source 'https://rubygems.org'` at the top of your Gemfile. Whenever you add a gem to your gemfile and run the `bundle` command, this code tells your application to fetch the gem from [https://rubygems.org](https://rubygems.org). “RubyGems” is a Ruby-specific packaging system, the purpose of which is to simplify the creation, sharing and installation of gems.
+「Bundler」はRubyがgemを追跡・管理するために使用するソフトウェアです。`bundle`コマンドはBundlerを実行し、Gemfileで指定されたgemをインストールします。Gemfileの先頭に`source 'https://rubygems.org'`というコードがあります。Gemfileにgemを追加して、`bundle`コマンドを実行するとこのコードはアプリケーションに[https://rubygems.org](https://rubygems.org)からgemを取得するように指示をします。「RubyGems」はRuby固有のパッケージングシステムで、gemの作成、共有、インストールを簡単にすることを目的としています。
 
-### Open-source software
+### オープンソースソフトウェア
 
-Both the Rails framework and the Ruby language are examples of open-source software. Open-source software is released under a licence which ensures universal access; anyone has the right to change, study and distribute the software. Making the source code accessible enables the establishment of a diverse, reflexive, collaborative and consequently ever-evolving interactive community of programmers who all benefit from each others’ developments.
+RailsフレームワークとRuby言語の両方は、オープンソースソフトウェアの一例です。オープンソースソフトウェアは誰もがアクセスできることを保証するライセンスのもとでリリースされていて、誰でもソフトウェアを変更、研究、配布する権利があります。ソースコードを公開することで、お互いの開発から恩恵を受けるプログラマーたちによる、多様で、思慮深く、協力的であり、その結果、進化し続ける双方向的なコミュニティを形成することができます。
 
-### More HTML
+### その他のHTML
 
-The file `app/views/ideas/_form.html.erb` contains HTML code that determines the look and feel of the form used for editing and creating ideas (the `edit.html.erb` and `new.html.erb` views). A partial is a snippet of HTML and Ruby code that can be reused in multiple locations. The form for editing existing ideas and the form for creating new ideas will look pretty much the same, so it makes sense to have one form for both files to use. If you look in these files you’ll notice that they have a customised heading (e.g. `<h1>Editing idea</h1>`) and then they simply say `<%= render 'form' %>` which tells Rails to render the partial `_form.html.erb`.
+`app/views/ideas/_form.html.erb`ファイルにはideasの編集と作成に使用されるフォーム(`edit.html.erb`と`new.html.erb`ビュー)の見た目を定めるHTMLコードが含まれています。パーシャルとは、複数の場所で再利用できるHTMLとRubyのコードのスニペットです。既存のideasを編集するフォームと新規にideasを作成するフォームはほぼ同じなため、両方のファイルで使用するフォームを一つにすることは理にかなっています。これらのファイルを見ると、カスタマイズされた見出し (例えば `<h1>ideaの編集</h1>`) があり、単に `<%= render 'form' %>` と書かれていて、Rails にパーシャルである `_form.html.erb` をレンダリングするように指示していることに気づくでしょう。
 
-If you take a look in the `_form.html.erb` file, you will see the code `form_for` in the first line of code. This is a block used to create an HTML form. Using this block, we can access methods to put different input fields in the form.
+`_form.html.erb`ファイルを見てみると、最初の行に`form_for`というコードがあるのが分かります。これはHTMLフォームを作成するために使用されるブロックです。このブロックを使用するとフォームに様々な入力フィールドを設けるメソッドにアクセスすることが可能です。
 
-The code we are implementing, `<%= f.file_field :picture %>`, tells Rails to create a file input on the form and map the submitted information to the ‘picture’ attribute of an ‘idea’ in our ideas database table. We changed the code from `<%= f.text_field :picture %>` to `<%= f.file_field :picture %>` because `file_field` makes it easier for the user to select the image they wish to upload.
+実装しているコード`<%= f.file_field :picture %>`は、Railsに対してフォームにファイル添付用の入力欄を作成し、送信された情報をideasデータベーステーブルの「idea」の「picture」属性に対応させるように指示しています。コードを`<%= f.text_field :picture %>`から`<%= f.file_field :picture %>`に変更したのは、`file_field`を使うとユーザーがアップロードしたい画像を選択しやすくなるからです。
 
-In the code `<%= @idea.picture %>`, `@idea` is known as an *instance variable*. Instance variables are prefixed with an @ symbol and are defined in the controller action that corresponds with the view in which they are referenced. For the purposes of the code we are implementing, `@idea` is defined in the ‘show’ action of the `Ideas` controller, with the code `@idea = Idea.find(params[:id])`. This makes it available for us to use in the view `show.html.erb`. It could be defined differently in different controller actions (e.g. index or new). The code `@idea = Idea.find(params[:id])` uses the Rails `find` method to retrieve specific ideas from the database.
+コード`<%= @idea.picture %>`の中の`@idea`は*インスタンス変数*です。インスタンス変数には先頭に@記号がつき、それらが参照されるビューに対応するコントローラーアクションで定義されます。今回実装しているコードでは`@idea`は`Ideas`コントローラの「show」アクションで`@idea = Idea.find(params[:id])`のように定義されています。これにより、`show.html.erb`ビューで使用できるようになります。異なるコントローラーのアクション（例えばindexやnew）では異なる定義が可能です。コード`@idea = Idea.find(params[:id])`は、Railsの`find`メソッドを使ってデータベースから特定のideasを取得します。
 
-The code that follows the `@idea` variable (`.picture`) tells Rails to access the ‘picture’ attribute of our resource (idea). By replacing the code  `<%= @idea.picture %>` with `<%= image_tag(@idea.picture_url...)` we are using the Ruby `image_tag` *helper* which translates to an HTML `<img>` tag (used to define images in HTML) but by default retrieves images from the folder public/images, which is where our uploaded images are stored. The `image_tag` helper also allows us to insert a block of code which creates a path to an image associated with a particular idea (`@idea.picture_url`).
+`@idea`変数に続くコード(`.picture`)は、Railsに対してリソース（idea）の「picture」属性にアクセスするように指示しています。 コード`<%= @idea.picture %>`を`<%= image_tag(@idea.picture_url...)`に置き換えることによって、Rubyの`image_tag`*ヘルパー*を使用するようになります。これはHTMLの`<img>`タグ（HTMLで画像を定義するために使用される）に変換されます。ただし、デフォルトではアップロードされた画像が保存されているpublic/imagesフォルダから画像を取得します。また、`image_tag`ヘルパーを使うと、特定のideaに関連する画像へのパスを作成するコードブロック（`@idea.picture_url`）を挿入することが可能です。
 
-You will notice that within this block of code you are implementing we are also able to set a default width for each image (`:width => 600`). The final line of code `if @idea.picture.present?` tells Rails to check the corresponding database table to see whether a picture exists before rendering the code underneath.
+あなたが実装しているこのコードブロックの中で、各画像のデフォルト幅も設定できることにお気づきでしょう(`:width => 600`)。最後の行にある`if @idea.picture.present?`コードは、関連するデータベースのテーブルをチェックしてこの下にあるコードををレンダリングする前に画像が存在するかを確認するようにRailsに指示をしています。
 
-## <a id="5_finetune_the_routes">*5.* Finetune the routes</a>
+## <a id="5_finetune_the_routes">*5.* routesの調整</a>
 
-In a functional Rails application, there is an inbuilt system in place for translating incoming requests from the browser in order to return the intended response. This system is called *routing*. Requests from the browser are interpreted as specific HTTP methods. HTTP (Hypertext Transfer Protocol) is the protocol that defines how information (usually webpages or webpage components composed of text with hyperlinks - ‘hypertext’), is formatted and transmitted across the internet. There are four primary HTTP methods, each of which is a request to perform an operation on a specific resource (e.g. users, posts); GET, POST, PUT and DELETE. Rails’ inbuilt routing system automatically generates routes for each resource that map to specific actions (index, show, new, edit, create, update, delete) defined in the controller. So, for each of our models, there are seven related actions defined in the associated controller, `ideas_controller.rb`. These actions specify the appropriate response (a ‘method’) which is most likely to render the corresponding view, e.g. `ideas/index.html.erb`.
+機能的なRailsアプリケーションでは、適切なレスポンスを返すためにブラウザから受信したリクエストを変換するシステムが組み込まれています。このシステムは*ルーティング*と呼ばれます。ブラウザからのリクエストは特定のHTTPメソッドとして解釈されます。HTTP（ハイパーテキスト・トランスファー・プロトコル）とは、情報（通常、Webページや、ハイパーリンクを持つテキストで構成されたWebページ・コンポーネント、つまり「ハイパーテキスト」）がどのようにフォーマットされ、インターネット上で転送されるかを定義するプロトコルです。主なHTTPメソッドは4つあり、それぞれ特定のリソース（ユーザーや投稿など）に対して操作を実行するリクエストです。その4つのメソッドとはGET、POST、PUT、DELETEです。Railsに内蔵されたルーティングシステムは、コントローラーで定義された特定のアクション（index、show、new、edit、create、update、delete）に対応するルートを各リソースに対して自動的に生成します。このため、各モデルに対して、関連する7つのアクションがコントローラー(例えば `ideas_controller.rb`)で定義されることになります。これらのアクションは、対応するビュー（例：`ideas/index.html.erb`）をレンダリングするための適切なレスポンス（メソッド）を指定します。
 
 
 <table class="table table-bordered table-hover">
 	<thead>
 		<tr>
-			<td>HTTP Method</td>
-			<td>Path</td>
-			<td>Action</td>
-			<td>used for</td>
+			<td>HTTPメソッド</td>
+			<td>パス</td>
+			<td>アクション</td>
+			<td>用途</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -249,49 +251,49 @@ In a functional Rails application, there is an inbuilt system in place for trans
 			<td>GET</td>
 			<td>/ideas</td>
 			<td>index</td>
-			<td>displaying a list of all ideas</td>
+			<td>すべてのideasのリストを表示</td>
 		</tr>
 		<tr>
 			<td>GET</td>
 			<td>/ideas/new</td>
 			<td>new</td>
-			<td>returning an HTML form for creating a new idea</td>
+			<td>新しいideaを作成するためのHTMLフォームを返す</td>
 		</tr>
 		<tr>
 			<td>POST</td>
 			<td>/ideas</td>
 			<td>create</td>
-			<td>creating a new idea</td>
+			<td>新しいideaを作成する</td>
 		</tr>
 		<tr>
 			<td>GET</td>
 			<td>/photos/:id</td>
 			<td>show</td>
-			<td>displaying a specific photo</td>
+			<td>特定の画像を表示する</td>
 		</tr>
 		<tr>
 			<td>GET</td>
 			<td>/photos/:id/edit</td>
 			<td>edit</td>
-			<td>returning an HTML form for editing a specific photo</td>
+			<td>特定の画像を編集するためのHTMLフォームを返す</td>
 		</tr>
 		<tr>
 			<td>PUT</td>
 			<td>/photos/:id</td>
 			<td>update</td>
-			<td>updating a specific photo</td>
+			<td>特定の画像を更新する</td>
 		</tr>
 		<tr>
 			<td>DELETE</td>
 			<td>/photos/:id</td>
 			<td>destroy</td>
-			<td>deleting a specific photo</td>
+			<td>特定の画像を削除する</td>
 		</tr>
 	</tbody>
 </table>
 
 
-If you look in your `ideas_controller.rb` you can see these actions and the associated behaviour, and the HTTP method that corresponds with each action:
+`ideas_controller.rb`を見ると、これらのアクションと関連する振る舞い、および各アクションに対応するHTTPメソッドが確認できます。
 
 {% highlight rb %}
 def show
@@ -307,7 +309,7 @@ def show
   # GET /ideas/new.json
 {% endhighlight %}
 
-`show` - the controller action
+`show` - コントローラーのアクション
 
 {% highlight rb %}
 respond_to do |format|
@@ -315,12 +317,12 @@ respond_to do |format|
       format.json { render json: @idea }
 {% endhighlight %}
 
-(This code is difficult to dissect with much clarity at this stage but if you persist with Rails you will get a better understanding as time progresses.)
+（このコードを今の段階で明確に深掘りするのは難しいですが、Railsを使い続けていれば時間の経過とともに理解が深まるでしょう。）
 
-In the above definition of the show action, Rails is using a `respond_to` helper method, which tells Rails to execute the subsequent *block* of code (the code enclosed by the `do...end` syntax). This code contains two different formatting options depending on the nature of the request. If the browser requests HTML then the HTML code contained in the view that corresponds with this controller action (`show.html.erb`) is rendered. If json is requested then the view is bypassed and limited information is provided.
+上記のshowアクションの定義では、Railsは`respond_to`ヘルパーメソッドを使って、それに続く*ブロック*のコード(`do...end`構文で囲まれたコード)を実行するよう指示しています。このコードには、リクエストの性質に応じて2つの異なるフォーマットオプションが含まれています。ブラウザがHTMLを要求した場合は、このコントローラーアクションに対応するビュー (`show.html.erb`) に含まれるHTMLコードがレンダリングされます。jsonが要求された場合は、ビューは考慮されず、限られた情報が提供されます。
 
-`GET` - this is a comment to let us know which HTTP method is being executed.
+`GET` - この部分はどのHTTPメソッドが実行されているかを伝えるためのコメント行です。
 
-So, URL requests, translated into HTTP methods, are mapped to controller actions which tell Rails to return a view.
+このように、URLリクエストはHTTPメソッドに変換され、Railsにビューを返すよう伝えるコントローラーのアクションに関連づけられます。
 
-When we insert the code `root :to => redirect('/ideas')` into our `config.rb`, it tells Rails to make the default root of our application [http://localhost:3000/ideas](http://localhost:3000/ideas) (note Localhost is being used as the domain because our application is still in development, when you launch your application this domain will be different). This URL contains a path (`/ideas`) which, by default, maps the URL to the ‘index’ action of our ideas controller and renders the associated view; `index.html.erb`. The code `rm public/index.html` removes (`rm`) the `public/index.html` file, containing the “Welcome Aboard” code, which was the previous default root for our application.
+`root :to => redirect('/ideas')`コードを`config.rb`に挿入すると、アプリケーションのデフォルトルートを[http://localhost:3000/ideas](http://localhost:3000/ideas) にするよう Rails に指示します （このアプリケーションはまだ開発中なので、ドメインとして Localhost が使用されていることに注意してください。アプリケーションをローンチした場合、このドメインは異なるものになります）。 このURLにはideasコントローラーの「index」アクションに対応したパス(`/ideas`)がデフォルトで含まれており、関連するビュー(`index.html.erb`)がレンダリングされます。`rm public/index.html`は、以前のアプリケーションのデフォルトルートである「Welcome Aboard」コードが含まれている`public/index.html`ファイルを削除(removeの略語 `rm`)します。
