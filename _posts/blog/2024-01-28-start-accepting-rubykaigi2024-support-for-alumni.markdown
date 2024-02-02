@@ -19,6 +19,10 @@ div.past-supoorts img.photo {
     object-fit: cover;
 }
 
+img.photo:hover {
+  opacity: 0.8;
+}
+
 div.past-supoorts span.event-name {
   color: #fff;
   background-color: #d3360b;
