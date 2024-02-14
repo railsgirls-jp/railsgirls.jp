@@ -99,7 +99,7 @@ Let's check whether Rails was installed successfully. Open the Windows Command P
 rails --version
 {% endhighlight %}
 
-This should output `Rails 7.0.4.2`, but a higher version is also good.
+This should output `Rails 7.1.3`, but a higher version is also good.
 
 _If you run into any problems during this step, check the [Possible errors] section for possible solutions._
 
