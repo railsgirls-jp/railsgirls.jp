@@ -22,7 +22,7 @@ If you run into any problems during this guide, check the [Possible errors] sect
 We'll start by installing Ruby, the primary programming language used during the workshop. This can be done using the RubyInstaller described below.
 
 - Download the [RubyInstaller](https://rubyinstaller.org/downloads/) for Windows.
-  - [Direct link to Ruby 3.2.1 installer with Devkit](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.1-1/rubyinstaller-devkit-3.2.1-1-x64.exe) for 64-bit architecture.
+  - [Direct link to Ruby 3.3.0 installer with Devkit](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.3.0-1/rubyinstaller-devkit-3.3.0-1-x64.exe) for 64-bit architecture.
 - Run the installer. Click through the installer using all the default options.
   - Make sure the "Run 'ridk install'" checkmark is checked partway through the installer before continuing.
   - When prompted with the "MSYS2" installer, enter `1` and press Enter.
