@@ -110,8 +110,8 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 Bashウィンドウで以下のコマンドを実行してください。
 
 {% highlight sh %}
-rbenv install 3.3.0
-rbenv global 3.3.0
+rbenv install 3.2.3
+rbenv global 3.2.3
 {% endhighlight %}
 
 作業完了後に、以下のコマンドを実行してください。
@@ -123,7 +123,7 @@ ruby -v
 以下のように、インストールされたRubyのバージョンが表示されればOKです。
 
 {% highlight sh %}
-ruby 3.3.0 (2023-12-25 revision 5124f9ac75) [x86_64-linux]
+ruby 3.2.3 (2024-01-18 revision 52bb2ac0a6) [x86_64-linux]
 {% endhighlight %}
 
 ### *3.* Railsのインストール
