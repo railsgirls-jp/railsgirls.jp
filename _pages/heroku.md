@@ -145,20 +145,20 @@ Heroku のアプリを作りましょう。
 例えば、アプリの名前を"my-first-app"と決めた場合、ターミナルで次のコマンドを実行してください。 :
 
 {% highlight sh %}
-heroku create your-app-name -t railsgirls-japan
+heroku create my-first-app -t railsgirls-japan
 {% endhighlight %}
 
 次のようなものが見られます。 :
 
 {% highlight sh %}
-Creating ⬢ your-app-name... done
+Creating ⬢ my-first-app... done
 http://my-first-app.herokuapp.com/ | https://git.heroku.com/my-first-app.git
 {% endhighlight %}
 
 もし、決めたアプリの名前が既に使われていたら、以下のようなメッセージが表示されます。 :
 {% highlight sh %}
-Creating ⬢ your-app-name... !
- ▸    Name your-app-name is already taken
+Creating ⬢ my-first-app... !
+ ▸    Name my-first-app is already taken
 {% endhighlight sh %}
 
 この場合は、もう一度アプリの名前を考えてなおしてみてください。
