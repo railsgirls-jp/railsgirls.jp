@@ -15,7 +15,7 @@ permalink: digitalocean
 
 ### pg gemをインストールしよう
 
-テキストエディターで`Gemfile`ファイルを開き、以下の行を
+テキストエディタで`Gemfile`ファイルを開き、以下の行を
 
 {% highlight ruby %}
 gem "sqlite3"
