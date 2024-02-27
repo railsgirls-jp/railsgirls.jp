@@ -22,7 +22,7 @@ Gemfileを開いて、 `devise` の下に次の一行を追加します。
 gem 'gravtastic'
 {% endhighlight %}
 
-Terminal で、次のコマンドを実行してください。
+ターミナルで、次のコマンドを実行してください。
 
 {% highlight sh %}
 bundle
