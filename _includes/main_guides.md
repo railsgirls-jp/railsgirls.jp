@@ -9,6 +9,7 @@
 * ガイド 3: [Railsインストールガイド](/install) {% if page.permalink == 'install' %}(このページです！){% endif %}
   - [macOS 用セットアップ](/install/macos) {% if page.permalink == 'install/macos' %}(このページです！){% endif %}
   - [Windows 用セットアップ](/install/windows) {% if page.permalink == 'install/windows' %}(このページです！){% endif %}
+  - [Windows 用セットアップ（WSL）](/install/windows-wsl) {% if page.permalink == 'install/windows-wsl' %}(このページです！){% endif %}
   - [Linux 用セットアップ](/install/linux) {% if page.permalink == 'install/linux' %}(このページです！){% endif %}
   - [仮想マシンにセットアップする](/install/virtual-machine) {% if page.permalink == 'install/virtual-machine' %}(このページです！){% endif %}
   - [クラウドサービス Replit を使う](/install/replit) {% if page.permalink == 'install/replit' %}(このページです！){% endif %}
