@@ -65,7 +65,7 @@ Resource: W3Schools [What is Bootstrap](https://www.w3schools.com/whatis/whatis_
 
 Bootstrapはいくつかの異なるパーツから構成されていますが、最初に使用するのはCSSです。そのためには、アプリのHTMLに対して何行かのコードを追加する必要があります。具体的には、レイアウトのファイルに対してです。レイアウトファイルは、Railsのすべてのビューに対して共通のレイアウトパーツを提供します。これにより、すべてのページで同じ基本レイアウトとCSSが読み込まれるようになります。
 
-テキストエディターで `app/views/layouts/application.html.erb` ファイルを開きます
+テキストエディタで `app/views/layouts/application.html.erb` ファイルを開きます
 
 {% highlight erb %}
 <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>

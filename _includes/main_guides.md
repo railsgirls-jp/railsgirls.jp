@@ -1,6 +1,6 @@
 <hr>
 
-ガイドを進めていて行き詰まったときはコーチに助けてもらいましょう。また [Ruby、Rails、コンソール、テキストエディターについての便利なチートシート](https://www.pragtob.info/rails-beginner-cheatsheet/) も参考にしてみてください。
+ガイドを進めていて行き詰まったときはコーチに助けてもらいましょう。また [Ruby、Rails、コンソール、テキストエディタについての便利なチートシート](https://www.pragtob.info/rails-beginner-cheatsheet/) も参考にしてみてください。
 
 ## ガイド
 
