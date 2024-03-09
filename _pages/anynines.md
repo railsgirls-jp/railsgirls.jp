@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main_guide
 title: Rails Girls on anynines
 permalink: anynines
 ---
@@ -7,7 +7,9 @@ permalink: anynines
 # anyninesを使用してインターネットに公開しよう!
 *Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)* / *Translated by moegi, [@moegi_web](https://twitter.com/moegi_web)*
 
-コーチの方へ: anyninesを導入した場合とアメリカのデータセンターを利用した場合の利点について話してみましょう。
+{% coach %}
+anyninesを導入した場合とアメリカのデータセンターを利用した場合の利点について話してみましょう。
+{% endcoach %}
 
 ### anyninesをインストールしよう
 1. [anyninesのアカウントを作成します。](https://anynines.com/)
@@ -73,7 +75,9 @@ git add .
 git commit -m "add anynines deployment"
 {% endhighlight %}
 
-コーチの方へ : バージョン管理システムと git についてまだ話していない場合は、この機会に話してみましょう。
+{% coach %}
+バージョン管理システムと git についてまだ話していない場合は、この機会に話してみましょう。
+{% endcoach %}
 
 ### ヘルプ
 `cf help`と入力すると、使用可能なすべてのcfサブコマンドを確認できます。あなたのターミナルに答えが見つからない場合、anyninesチームが答えを持っているでしょう。support@anynines.com にメールを送信してください。
