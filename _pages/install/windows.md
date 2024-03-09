@@ -30,15 +30,19 @@ We'll start by installing Ruby, the primary programming language used during the
 
 ライセンス認証画面が表示されます。  
 確認の上、同意いただけるなら、「I accept the License」をチェックし、'Next'ボタンをクリックします。
+
 ![RubyInstaller Install Lincese](/images/windows_install/rubyinstaller_license.png "rubyinstaller license")
 
 選択肢は全てデフォルトを選択し、'Install'ボタンをクリックします。
+
 ![RubyInstaller Install options](/images/windows_install/rubyinstaller_install_options1.png "rubyinstaller install options")
 
 表示された画面で、選択肢は全てデフォルトを選択し、'Next'ボタンをクリックします。
+
 ![RubyInstaller Install options](/images/windows_install/rubyinstaller_install_options2.png "rubyinstaller install options")
 
 Rubyのインストールが終了すると、以下の画面が表示されるので、'Finish'ボタンをクリックします。
+
 ![RubyInstaller Install Finish](/images/windows_install/rubyinstaller_install_finish.png "rubyinstaller install finish")
 
 コマンドプロンプトが立ち上がってMSYS2のインストールに進みますのでデフォルトの選択肢(何も入力せずにエンター)を選びます。
