@@ -143,7 +143,7 @@ rails -v
 以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
 
 {% highlight sh %}
-Rails 7.0.4
+Rails 7.1.3.2
 {% endhighlight %}
 
 <hr />
