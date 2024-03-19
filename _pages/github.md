@@ -186,6 +186,8 @@ git commit -m "Type your commit message here"
 git push origin master
 {% endhighlight %}
 
+_アプリのブランチ名は `main` のように異なる場合があります。引数 "master" を `git branch` にリストされているブランチ名に変更します。 現在のブランチには、行の先頭に `*` 記号がつけられて表示されます。_
+
 ## 次に何をする？
 
 ### Gitについてもっと学ぶ
