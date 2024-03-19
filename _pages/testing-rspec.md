@@ -16,7 +16,9 @@ permalink: testing-rspec
 
 [RSpec](https://github.com/rspec/rspec-rails)は Ruby のテストフレームワークで、Rubyとは少し違うような文法でアプリケーションの動作を記述します。ターミナルにテスト結果が出力されるので、自分の読解力も試されます(冗談です笑)
 
-__COACH__: テストと行動駆動型開発について説明してください。
+{% coach %}
+テストと行動駆動型開発について説明してください。
+{% endcoach %}
 
 ## *1.*RSpecのgemを追加しよう
 
@@ -25,7 +27,7 @@ __COACH__: テストと行動駆動型開発について説明してください
 {% highlight ruby %}
 group :development, :test do
   ...
-  gem 'rspec-rails', '~> 3.5'
+  gem "rspec-rails"
 end
 {% endhighlight %}
 
@@ -72,7 +74,7 @@ mkdir spec/models
 {% highlight ruby %}
 require "rails_helper"
 
-RSpec.describe Idea, type: :model do
+RSpec.describe Idea do
   it "has a name" do
     skip
   end
@@ -86,13 +88,15 @@ rspec spec/models/idea_spec.rb
 
 これは、テストがまだ実装されていないため保留中であることが出力されます。
 
-__COACH__: ターミナル出力についてグーグル検索するよう説明してください。
+{% coach %}
+ターミナル出力についてグーグル検索するよう説明してください。
+{% endcoach %}
 
 ではテストを実装しましょう！
 {% highlight ruby %}
 require "rails_helper"
 
-RSpec.describe Idea, type: :model do
+RSpec.describe Idea do
   it "has a name" do # yep, you can totally use 'it'
     idea = Idea.create!(name: "My Awesome Idea Name") # creating a new idea 'instance'
     expect(idea.name).to eq("My Awesome Idea Name") # this is our expectation
@@ -111,7 +115,7 @@ end
 {% highlight ruby %}
 require "rails_helper"
 
-RSpec.describe Idea, type: :model do
+RSpec.describe Idea do
   it "has a name" do # yep, you can totally use 'it'
     idea = Idea.create!(name: "My Awesome Idea Name") # creating a new idea 'instance'
     second_idea = Idea.create!(name: "My Second Idea Name") # creating another new idea 'instance'
@@ -122,7 +126,9 @@ end
 
 というように、より多くのことをテストすることができます。
 
-__COACH__: リファクタリングについて説明してください。
+{% coach %}
+リファクタリングについて説明してください。
+{% endcoach %}
 
 ## *4.*テストにTo Doマークを付けてみよう
 
@@ -140,7 +146,9 @@ it "has a description"
 このテストを完成させますか？それとも他のテストについて考えますか？
 
 ## *5.*ビヘイビア駆動開発をしてみよう
-__COACH__: ビヘイビア駆動開発について説明してください。
+{% coach %}
+ビヘイビア駆動開発について説明してください。
+{% endcoach %}
 
 もう一人でいろんなテストを作れるようになったのではないでしょうか。もっといろんなテストを書きたい時はコーチに遠慮なく相談してください。
 
