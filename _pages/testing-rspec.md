@@ -17,7 +17,7 @@ permalink: testing-rspec
 [RSpec](https://github.com/rspec/rspec-rails)は Ruby のテストフレームワークで、Rubyとは少し違うような文法でアプリケーションの動作を記述します。ターミナルにテスト結果が出力されるので、自分の読解力も試されます(冗談です笑)
 
 {% coach %}
-テストと行動駆動型開発について説明してください。
+テストとビヘイビア駆動開発について説明してください。
 {% endcoach %}
 
 ## *1.*RSpecのgemを追加しよう
