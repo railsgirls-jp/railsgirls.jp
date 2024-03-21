@@ -12,12 +12,12 @@ permalink: testing-rspec
 
 *翻訳者: Ryoki Inoue, [@r_i_engineer](https://twitter.com/r_i_engineer)*
 
-**このガイドでは、Rails Girlsアプリをすでに構築していることを前提に説明します。** [**アプリ構築の方法はこちら**](/app)
+{% include main-guide-intro.html %}
 
 [RSpec](https://github.com/rspec/rspec-rails)は Ruby のテストフレームワークで、Rubyとは少し違うような文法でアプリケーションの動作を記述します。ターミナルにテスト結果が出力されるので、自分の読解力も試されます(冗談です笑)
 
 {% coach %}
-テストと行動駆動型開発について説明してください。
+テストとビヘイビア駆動開発について説明してください。
 {% endcoach %}
 
 ## *1.*RSpecのgemを追加しよう
