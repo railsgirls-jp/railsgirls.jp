@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main_guide
 title: Rails Girls on OpenShift
 permalink: openshift
 ---
@@ -21,7 +21,9 @@ rhc setup
 
 上記の手順は、RubyをRVM、RailsInstallerなどでインストールした人の場合を想定しています。他の手順でインストールした場合は、[こちらのguide](https://www.openshift.com/developers/rhc-client-tools-install) にそれぞれの手順があります ( `sudo gem install rhc` と、sudoを付ける必要があるかも知れません)。
 
-__Coachより__: OpenShiftのようなPaaSにアプリをデプロイするメリットについて話してください。特に、伝統的なサーバ管理と比べて。SSHについて、またなぜセキュアにサーバ通信をするために公開鍵をなぜアップロードしなければいかねいかについても議論してください。
+{% coach %}
+OpenShiftのようなPaaSにアプリをデプロイするメリットについて話してください。特に、伝統的なサーバ管理と比べて。SSHについて、またなぜセキュアにサーバ通信をするために公開鍵をなぜアップロードしなければいかねいかについても議論してください。
+{% endcoach %}
 
 ### アプリケーションの準備
 
@@ -46,7 +48,9 @@ rhc app create openshiftapp ruby-2.0 postgresql-9.2 --from-code=https://github.c
 
 アウトプットにはURLが含まれています。ブラウザを開き、そのアプリケーションURLを入力して、サンプルアプリケーションを見てみましょう (http://openshiftapp-*yourdomain*.rhcloud.com というURLになるでしょう)
 
-__Coachへ__: Gitとは何か、なぜバージョンコントロールシステムを使うのかを説明してください。
+{% coach %}
+Gitとは何か、なぜバージョンコントロールシステムを使うのかを説明してください。
+{% endcoach %}
 
 #### バージョンコントロールをする
 
@@ -72,7 +76,9 @@ git add --all
 git commit -m "アイデアメモアプリの最初のコミット"
 {% endhighlight %}
 
-__Coachより__: 使ったGitのコマンドと `.gitignore` について説明しましょう。
+{% coach %}
+使ったGitのコマンドと `.gitignore` について説明しましょう。
+{% endcoach %}
 
 #### サンプルアプリのコードをコピーする
 
@@ -133,7 +139,9 @@ git add --all
 git commit -m "本番環境のデータベースをPostgreSQLに変更"
 {% endhighlight %}
 
-__Coachより__: RDB（リレーショナルデータベース）と、 SQLite と PostgreSQL の違いについて話してください。
+{% coach %}
+RDB（リレーショナルデータベース）と、 SQLite と PostgreSQL の違いについて話してください。
+{% endcoach %}
 
 ### OpehShiftにアプリをデプロイする
 
@@ -152,7 +160,9 @@ git push -f --set-upstream openshift master
 
 ブラウザ上のアプリを更新して、結果を見てみましょう！
 
-__Coachより__: Gitのリモートリポジトリについて話してください。
+{% coach %}
+Gitのリモートリポジトリについて話してください。
+{% endcoach %}
 
 ### トラブルシュート
 
@@ -190,7 +200,9 @@ rhc app restart openshiftapp
 
 アプリはとてもいい感じに見えます。ですが、デプロイの「はかない側面」が由来の、潜在的な問題があります。私たちが新しいバージョンのアプリをプッシュした時、OpenShift側のリポジトリ内に保存されていたあらゆるファイルは、新しいファイルを使えるようにするために消去されます。このとき、ユーザーがアップロードした画像も一緒に消されてしまいます。この挙動を直すには、画像ファイルをOpenShiftの「永続的な」ディレクトリに保存しなければなりません。そのディレクトリのパスは、環境変数から参照することができます。
 
-__Coachより__: 環境変数を利用することの背景やメリットを説明しましょう。
+{% coach %}
+環境変数を利用することの背景やメリットを説明しましょう。
+{% endcoach %}
 
 アップロードされた画像が保存されるディレクトリは現在アプリのリポジトリ内部です。そのため再起動したら消えてしまいます。アップロードディレクトリを永続的に保管可能な場所に変更するためには、 `app/uploaders/picture_uploader.rb` というファイルを開き、
 
@@ -234,7 +246,9 @@ git push
 
 この変更の前までにあなたのアップロードした画像はもう見ることができません。ですが、今度アップロードされたものは、アプリのデプロイを繰り返しても、永続的に見ることが可能です。
 
-__Coachより__: シンボリックリンクについて説明してください。
+{% coach %}
+シンボリックリンクについて説明してください。
+{% endcoach %}
 
 #### コードをGitHubにプッシュする
 
@@ -249,7 +263,9 @@ git push github master
 
 'master'ブランチが、GitHubにプッシュされます。GitHubのウェブサイトに行って反映をチェックしましょう。
 
-__Coachより__: Gitのブランチについてと、オープンソースコードの利点について話してください。
+{% coach %}
+Gitのブランチについてと、オープンソースコードの利点について話してください。
+{% endcoach %}
 
 ### まとめ
 

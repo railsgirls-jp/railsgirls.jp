@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main_guide
 title: Rails Girls Heroku に deploy
 permalink: heroku
 ---
@@ -57,7 +57,9 @@ Ubuntuを起動して、次のコマンドを入力しましょう。
 curl https://cli-assets.heroku.com/install.sh | sh
 {% endhighlight %}
 
-__Coachへ__: [Heroku CLIのページ](https://devcenter.heroku.com/articles/heroku-cli) を見るとUbuntuではsnapを使う手順を説明していますが、WSLではsnapの利用が困難であるため、Other installation methodsで紹介されている上記のコマンドでインストールします。
+{% coach %}
+[Heroku CLIのページ](https://devcenter.heroku.com/articles/heroku-cli) を見るとUbuntuではsnapを使う手順を説明していますが、WSLではsnapの利用が困難であるため、Other installation methodsで紹介されている上記のコマンドでインストールします。
+{% endcoach %}
 
 ##### Windows（コマンドプロンプト）の場合
 
@@ -85,7 +87,9 @@ WSL環境ではブラウザが開かないことがありますので、その�
 
 <img src="../images/heroku_logged_in.png" />
 
-__Coachより__: Heroku か、従来のサーバーか、デプロイの利点について話してみましょう。
+{% coach %}
+Heroku か、従来のサーバーか、デプロイの利点について話してみましょう。
+{% endcoach %}
 
 ### アプリの準備
 
@@ -99,24 +103,26 @@ git add .
 git commit -m "initial commit"
 {% endhighlight %}
 
-__Coachより__: バージョン管理システムと git について説明するちょうどいいタイミングです。`.gitignore` の説明と上記のファイルを管理対象外にしたい理由についても説明しましょう。
+{% coach %}
+バージョン管理システムと git について説明するちょうどいいタイミングです。`.gitignore` の説明と上記のファイルを管理対象外にしたい理由についても説明しましょう。
+{% endcoach %}
 
 #### データベースのアップデート
 
 まず、 Heroku で動くデータベースが必要です。いつものデータベースとは違います。 Gemfile を次のように変更しましょう。 :
 
 {% highlight ruby %}
-gem 'sqlite3', '~> 1.4'
+gem "sqlite3", "~> 1.4"
 {% endhighlight %}
 
 ↓
 
 {% highlight ruby %}
 group :development do
-  gem 'sqlite3', '~> 1.4'
+  gem "sqlite3", "~> 1.4"
 end
 group :production do
-  gem 'pg'
+  gem "pg"
 end
 {% endhighlight %}
 
@@ -127,12 +133,35 @@ bundle config set --local without 'production'
 bundle install
 {% endhighlight %}
 
-{% highlight sh %}
-git add .
-git commit -m "Added pg gem and updated Gemfile.lock"
+次に `config/database.yml` を更新します。以下の箇所を:
+
+{% highlight ruby %}
+production:
+  <<: *default
+  database: db/production.sqlite3
 {% endhighlight %}
 
-__Coachより__: RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
+を次のように変更してください。:
+
+{% highlight ruby %}
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: railsgirls_production
+  pool: 5
+{% endhighlight %}
+
+そして、新しいコミットを作成して Git に変更を保存します。Heroku へ更新をデプロイするには Git で私達が作成しているアプリケーションを更新する必要があります。
+
+{% highlight sh %}
+git add .
+git commit -m "Use postgres as production database"
+{% endhighlight %}
+
+
+{% coach %}
+RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
+{% endcoach %}
 
 ### アプリのデプロイ
 
@@ -205,7 +234,9 @@ To https://git.heroku.com/my-first-app.git
 
 アプリのプッシュが終わってるのがわかりますか？ "Launching..." というテキストのところです。プッシュが成功したら **データベースのマイグレート** へ進んで下さい。
 
-__Coachより__: どのようなファイルがプッシュされ、どのようなファイルがされなかったか話してみてください。まだであればアップロードされるファイルについて話してみたり、config以下のいくつかのファイルについて可能な範囲で話してみてください。
+{% coach %}
+どのようなファイルがプッシュされ、どのようなファイルがされなかったか話してみてください。まだであればアップロードされるファイルについて話してみたり、config以下のいくつかのファイルについて可能な範囲で話してみてください。
+{% endcoach %}
 
 ##### ・ pushで認証が要求された場合
 
@@ -238,7 +269,7 @@ Password for 'https://git.heroku.com':   ← 上でコピーした文字列を�
 herokuの動作環境と設定が異なる場合に起きます。設定を追加して git push ... してみましょう。
 
 {% highlight sh %}
-bundle lock --add-platform x86_64-linux
+bundle lock --add-platform x86_64-linux --add-platform ruby
 git add .
 git commit -m "Added platform"
 git push heroku main
