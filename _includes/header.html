@@ -7,11 +7,11 @@
   </a>
   <div class="container">
     <!-- Desktop -->
-    <div class="visible-desktop">
-      <a class="span3" href="/" id="logo">
-        <img alt="Rails Girls ガイド" src="/images/railsgirls-guides.png">
+    <div class="visible-lg visible-md row row-no-gutters">
+      <a class="col-md-3" href="/" id="logo">
+        <img class="header" alt="Rails Girls ガイド" src="/images/railsgirls-guides.png">
       </a>
-      <nav class="nav pull-right">
+      <nav class="pull-right">
         <span>日本語版</span>
         <a href="/">Home</a>
         <a href="/events/">Events</a>
@@ -23,18 +23,17 @@
     </div>
 
     <!-- Phone/Tablet -->
-    <div class="visible-tablet visible-phone">
-      <div class="nav navbar nav-pills">
-
-        <a class="btn btn-link btn-navbar collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-
-        <a class="brand" href="/">Rails Girls Guides</a>
-
-        <div class="nav-collapse navbar-responsive-collapse collapse" style="height: 0px;">
+    <div class="visible-sm visible-xs">
+      <div class="navbar nav-pills">
+        <div class="container">
+          <a class="btn btn-link btn-navbar navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">Rails Girls Guides</a>
+        </div>
+        <div class="navbar-responsive-collapse collapse">
           <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/events/">Events</a></li>
