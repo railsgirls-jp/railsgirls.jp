@@ -190,6 +190,7 @@ Webアプリ開発完了後、チームメンバーで集合写真を撮りま�
 - [コーチ：えりりんさんのブログ](https://note.com/sq_engch5/n/nd8622327a857)
 - [コーチ：金子さんのブログ](https://note.com/b4a/n/n2a17587dde06)
 - [コーチ：りさきゃんさんのブログ](https://tech.smarthr.jp/entry/2024/03/15/150211)
+- [コーチ：はるなさんのブログ](https://napple29.hatenablog.com/entry/2024/03/30/235736)
 
 - [デザイナー：moegiさんのブログ](https://divka-design.com/rails-girls-tokyo-16th_design/)
 - [オーガナイザー：えんじぇるさんのブログ](https://product.st.inc/entry/2024/03/19/135907)
