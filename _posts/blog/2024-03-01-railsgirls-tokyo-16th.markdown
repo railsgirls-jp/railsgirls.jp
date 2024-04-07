@@ -80,42 +80,42 @@ Girls一人一人にマンツーマンでコーチがつき、3月1日はPCの�
 
 <div class="photos">
   <div>
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_0.jpg" alt="スポンサーLTの様子">
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_1.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_0.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_1.jpg" alt="スポンサーLTの様子">
   </div>
 </div>
 
 <div class="photos">
   <div>
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_2.jpg" alt="スポンサーLTの様子">
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_3.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_2.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_3.jpg" alt="スポンサーLTの様子">
   </div>
 </div>
 
 <div class="photos">
   <div>
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_4.jpg" alt="スポンサーLTの様子">
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_5.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_4.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_5.jpg" alt="スポンサーLTの様子">
   </div>
 </div>
 
 <div class="photos">
   <div>
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_6.jpg" alt="スポンサーLTの様子">
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_7.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_6.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_7.jpg" alt="スポンサーLTの様子">
   </div>
 </div>
 
 <div class="photos">
   <div>
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_8.jpg" alt="スポンサーLTの様子">
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_9.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_8.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_9.jpg" alt="スポンサーLTの様子">
   </div>
 </div>
 
 <div class="photos">
   <div>
-    <img class="photo" src="/images/blog/tokyo16th/sponcer_lt_10.jpg" alt="スポンサーLTの様子">
+    <img class="photo" src="/images/blog/tokyo16th/sponsor_lt_10.jpg" alt="スポンサーLTの様子">
   </div>
 </div>
 
