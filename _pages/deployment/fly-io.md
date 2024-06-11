@@ -59,7 +59,7 @@ Railsの複数ある環境が何かを説明しましょう。`Production` と�
 {% highlight yaml %}
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: storage/production.sqlite3
 {% endhighlight %}
 
 以下のように変更します。
