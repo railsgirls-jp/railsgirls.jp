@@ -138,7 +138,7 @@ bundle install
 {% highlight ruby %}
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: storage/production.sqlite3
 {% endhighlight %}
 
 を次のように変更してください。:
