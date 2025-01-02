@@ -26,7 +26,6 @@ Ruby on Rails でアプリや他のものを作るために、いくつかソフ
     - [仮想マシンにセットアップする](/install/virtual-machine)
     - [クラウドサービス Replit を使う - 何もインストールする必要はありません](/install/replit)
     - [GitHub Codespaces を使う](/install/codespaces)
-    - [AWS Cloud9 を使う](/install/cloud9)
 
 {% coach %}
 インストール中に問題が発生した場合、この [Troubleshooting](https://github.com/railsgirls-jp/railsgirls-jp.github.io/wiki/Troubleshooting) のページを参考にしてください。
