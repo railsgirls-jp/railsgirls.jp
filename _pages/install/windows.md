@@ -22,7 +22,7 @@ If you run into any problems during this guide, check the [Possible errors] sect
 We'll start by installing Ruby, the primary programming language used during the workshop. This can be done using the RubyInstaller described below.
 
 - Download the [RubyInstaller](https://rubyinstaller.org/downloads/) for Windows.
-  - [Direct link to Ruby 3.2.3 installer with Devkit](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.3-1/rubyinstaller-devkit-3.2.3-1-x64.exe) for 64-bit architecture.
+  - [Direct link to Ruby 3.4.1 installer with Devkit](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.1-2/rubyinstaller-devkit-3.4.1-2-x64.exe) for 64-bit architecture.
 - Run the installer. Click through the installer using all the default options.
   - Make sure the "Run 'ridk install'" checkmark is checked partway through the installer before continuing.
   - When prompted with the "MSYS2" installer, enter `1` and press Enter.
@@ -41,7 +41,7 @@ We'll start by installing Ruby, the primary programming language used during the
 Rubyのインストールが終了すると、以下の画面が表示されるので、'Finish'ボタンをクリックします。
 ![RubyInstaller Install Finish](/images/windows_install/rubyinstaller_install_finish.png "rubyinstaller install finish")
 
-コマンドプロンプトが立ち上がってMSYS2のインストールに進みますのでデフォルトの選択肢(何も入力せずにエンター)を選びます。
+コマンドプロンプトが立ち上がってMSYS2のインストールに進みますので `1` を選びます。
 
 ![RubyInstaller MSYS2 install](/images/windows_install/rubyinstaller_msys2_install.png "rubyinstaller msys2 install")
 
@@ -99,7 +99,7 @@ Let's check whether Rails was installed successfully. Open the Windows Command P
 rails --version
 {% endhighlight %}
 
-This should output `Rails 7.1.3.2`, but a higher version is also good.
+This should output `Rails 8.0.1`, but a higher version is also good.
 
 _If you run into any problems during this step, check the [Possible errors] section for possible solutions._
 
