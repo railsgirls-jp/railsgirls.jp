@@ -107,20 +107,34 @@ git commit -m "initial commit"
 バージョン管理システムと git について説明するちょうどいいタイミングです。`.gitignore` の説明と上記のファイルを管理対象外にしたい理由についても説明しましょう。
 {% endcoach %}
 
-#### データベースのアップデート
+#### Rubyのバージョンを指定
 
-まず、 Heroku で動くデータベースが必要です。いつものデータベースとは違います。 Gemfile を次のように変更しましょう。 :
+まず、Heroku にどのバージョンのRubyが必要か教えて上げる必要があります。Gemfile を次のように変更しましょう。：
+
 
 {% highlight ruby %}
-gem "sqlite3", "~> 1.4"
+source "https://rubygems.org"
 {% endhighlight %}
 
 ↓
 
 {% highlight ruby %}
-group :development do
-  gem "sqlite3", "~> 1.4"
-end
+source "https://rubygems.org"
+
+ruby "3.4.1"
+{% endhighlight %}
+
+そして、ターミナル上で次のコマンドを実行してください。
+
+{% highlight sh %}
+bundle update --ruby
+{% endhighlight %}
+
+#### データベースのアップデート
+
+次に、 Heroku で動くデータベースが必要です。いつものデータベースとは違います。 Gemfile の末尾に次のコードを追加しましょう :
+
+{% highlight ruby %}
 group :production do
   gem "pg"
 end
@@ -137,18 +151,44 @@ bundle install
 
 {% highlight ruby %}
 production:
-  <<: *default
-  database: storage/production.sqlite3
+  primary:
+    <<: *default
+    database: storage/production.sqlite3
+  cache:
+    <<: *default
+    database: storage/production_cache.sqlite3
+    migrations_paths: db/cache_migrate
+  queue:
+    <<: *default
+    database: storage/production_queue.sqlite3
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *default
+    database: storage/production_cable.sqlite3
+    migrations_paths: db/cable_migrate
 {% endhighlight %}
 
 を次のように変更してください。:
 
 {% highlight ruby %}
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: railsgirls_production
-  pool: 5
+  primary:
+    adapter: postgresql
+    encoding: unicode
+    database: railsgirls_production
+    pool: 5
+  cache:
+    <<: *default
+    database: storage/production_cache.sqlite3
+    migrations_paths: db/cache_migrate
+  queue:
+    <<: *default
+    database: storage/production_queue.sqlite3
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *default
+    database: storage/production_cable.sqlite3
+    migrations_paths: db/cable_migrate
 {% endhighlight %}
 
 そして、新しいコミットを作成して Git に変更を保存します。Heroku へ更新をデプロイするには Git で私達が作成しているアプリケーションを更新する必要があります。
@@ -162,6 +202,29 @@ git commit -m "Use postgres as production database"
 {% coach %}
 RDBMS とそうでないものについて話してみましょう。Heroku 上の PostgreSQL の制限についても少し取り上げてみてください。
 {% endcoach %}
+
+#### Procfile を作成
+
+最後に、Heroku に実行してほしいコマンドを教えてあげる必要があります。  
+
+まず、 `Procfile` というファイルを作成します。
+
+{% highlight sh %}
+touch Procfile
+{% endhighlight %}
+
+次に、作成した `Procfile` に次のコマンドを追加しましょう。
+
+{% highlight sh %}
+web: bundle exec puma -C config/puma.rb
+{% endhighlight %}
+
+最後に、`Procfile` を Git にコミットしましょう。
+{% highlight sh %}
+git add .
+git commit -m "create Procfile"
+{% endhighlight %}
+
 
 ### アプリのデプロイ
 
