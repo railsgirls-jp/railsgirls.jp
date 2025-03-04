@@ -164,15 +164,11 @@ footer a {
   font-weight: bold;
   border-radius: 70px;
   transition: 0.10s background-color ease-in;
-  -webkit-transition: 0.10s background-color ease-in;
-  -moz-transition: 0.10s background-color ease-in;
 }
 
 .home li:hover i {
   background-color: #d3360b;
   transition: 0.10s background-color ease-in;
-  -webkit-transition: 0.10s background-color ease-in;
-  -moz-transition: 0.10s background-color ease-in;
 }
 
 .home li > a,
@@ -275,11 +271,11 @@ i.icon-small-browser {
   margin-bottom:40px;
   margin-left: 10px;
   max-width: 320px;
-  -webkit-transition:0.4s box-shadow;
+  transition:0.4s box-shadow;
 }
 
 .event:hover {
-  -webkit-transition:0.4s all;
+  transition:0.4s all;
   box-shadow:0 2px 3px #999;
   border-color: #ddd;
 }
@@ -553,8 +549,6 @@ i.icon-small-browser {
   background-color: #d0d0d0;
   border-radius: 70px;
   transition: 0.1s background-color ease-in;
-  -webkit-transition: 0.1s background-color ease-in;
-  -moz-transition: 0.1s background-color ease-in;
 }
 .guide-icon:before {
   content: attr(data-icon);
@@ -572,8 +566,6 @@ a:hover .guide-icon,
 .guide-icon:hover {
   background-color: #d3360b;
   transition: 0.1s background-color ease-in;
-  -webkit-transition: 0.1s background-color ease-in;
-  -moz-transition: 0.1s background-color ease-in;
 }
 
 .os-specific .picker {
