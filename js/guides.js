@@ -1,9 +1,20 @@
 function saveOs(os) {
-  Cookies.set("os", os, { expires: 1825, path: '/' }); // expires in 5 years
+  var expirationDate = new Date();
+  expirationDate.setFullYear(expirationDate.getFullYear() + 5);
+  document.cookie = "os=" + os + ";expires=" + expirationDate.toUTCString() + ";path=/";
+}
+
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length === 2) {
+    return parts.pop().split(";").shift();
+  }
+  return null;
 }
 
 function loadOs() {
-  var osFromCookie = Cookies.get("os");
+  var osFromCookie = getCookie("os");
   if(osFromCookie) {
     $(".os-specific").find("." + osFromCookie + "-link").click();
   } else if(detectOs()) {
