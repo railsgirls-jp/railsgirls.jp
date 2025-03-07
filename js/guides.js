@@ -16,12 +16,17 @@ function getCookie(name) {
 function loadOs() {
   var osFromCookie = getCookie("os");
   if(osFromCookie) {
-    $(".os-specific").find("." + osFromCookie + "-link").click();
+    activateOsLink(osFromCookie);
   } else if(detectOs()) {
-    $(".os-specific").find("." + detectOs() + "-link").click();
+    activateOsLink(detectOs());
   } else {
-    $(".os-specific").find(".win-link").click();
+    activateOsLink("win");
   }
+}
+
+function activateOsLink(os) {
+  const osLinks = document.querySelectorAll(".os-specific ." + os + "-link");
+  osLinks.forEach(link => link.click());
 }
 
 function detectOs() {
@@ -40,57 +45,95 @@ function detectOs() {
 }
 
 function addIcons() {
-  $("code.language-sh, code.language-bat").closest('.highlight').before('<i class="icon-small-prompt"></i>');
-  $("code.language-erb, code.language-html, code.language-ruby, code.language-css").closest('.highlight').before('<i class="icon-small-text-editor"></i>');
-  $("code.language-browser").closest('.highlight').before('<i class="icon-small-browser"></i>');
+  document.querySelectorAll("code.language-sh, code.language-bat").forEach(el => {
+    const highlight = el.closest('.highlight');
+    if (highlight) {
+      const icon = document.createElement('i');
+      icon.className = 'icon-small-prompt';
+      highlight.parentNode.insertBefore(icon, highlight);
+    }
+  });
+  
+  document.querySelectorAll("code.language-erb, code.language-html, code.language-ruby, code.language-css").forEach(el => {
+    const highlight = el.closest('.highlight');
+    if (highlight) {
+      const icon = document.createElement('i');
+      icon.className = 'icon-small-text-editor';
+      highlight.parentNode.insertBefore(icon, highlight);
+    }
+  });
+  
+  document.querySelectorAll("code.language-browser").forEach(el => {
+    const highlight = el.closest('.highlight');
+    if (highlight) {
+      const icon = document.createElement('i');
+      icon.className = 'icon-small-browser';
+      highlight.parentNode.insertBefore(icon, highlight);
+    }
+  });
 }
 
 function initializeOsSwitchers() {
-  var osInstructions = $(".os-specific");
-  var switcher = osInstructions.prepend(
-    "<span class='picker'><span class='picker-label'>オペレーティングシステムを選択:</span> " +
-      "<span class='picker-options'>" +
-        "<span><a href='#' class='os-link win-link'>Windows</a></span>" +
-        "<span><a href='#' class='os-link mac-link'>Mac</a></span>" +
-        "<span><a href='#' class='os-link nix-link'>Linux</a></span>" +
-      "</span>" +
-    "</span>"
-  );
-
-  switcher.find(".win-link").click(function(event) {
-    event.preventDefault();
-    saveOs("win");
-
-    $(".os-specific .os-link").removeClass("active");
-    $(".os-specific .win-link").addClass("active");
-    $(".os-specific").children("div").hide().filter(".win").show();
-  });
-  switcher.find(".mac-link").click(function(event) {
-    event.preventDefault();
-    saveOs("mac");
-
-    $(".os-specific .os-link").removeClass("active");
-    $(".os-specific .mac-link").addClass("active");
-    $(".os-specific").children("div").hide().filter(".mac").show();
-  });
-  switcher.find(".nix-link").click(function(event) {
-    event.preventDefault();
-    saveOs("nix");
-
-    $(".os-specific .os-link").removeClass("active");
-    $(".os-specific .nix-link").addClass("active");
-    $(".os-specific").children("div").hide().filter(".nix").show();
+  const osInstructions = document.querySelectorAll(".os-specific");
+  
+  osInstructions.forEach(osInstruction => {
+    // ピッカーHTMLの作成と挿入
+    const pickerHTML = `
+      <span class='picker'>
+        <span class='picker-label'>オペレーティングシステムを選択:</span>
+        <span class='picker-options'>
+          <span><a href='#' class='os-link win-link'>Windows</a></span>
+          <span><a href='#' class='os-link mac-link'>Mac</a></span>
+          <span><a href='#' class='os-link nix-link'>Linux</a></span>
+        </span>
+      </span>
+    `;
+    
+    osInstruction.insertAdjacentHTML('afterbegin', pickerHTML);
+    
+    // Windowsリンクのイベントリスナー
+    osInstruction.querySelector('.win-link').addEventListener('click', function(event) {
+      event.preventDefault();
+      saveOs("win");
+      document.querySelectorAll(".os-specific .os-link").forEach(link => link.classList.remove("active"));
+      document.querySelectorAll(".os-specific .win-link").forEach(link => link.classList.add("active"));
+      document.querySelectorAll(".os-specific > div").forEach(div => {
+        div.style.display = div.classList.contains("win") ? "block" : "none";
+      });
+    });
+    
+    // Macリンクのイベントリスナー
+    osInstruction.querySelector('.mac-link').addEventListener('click', function(event) {
+      event.preventDefault();
+      saveOs("mac");
+      document.querySelectorAll(".os-specific .os-link").forEach(link => link.classList.remove("active"));
+      document.querySelectorAll(".os-specific .mac-link").forEach(link => link.classList.add("active"));
+      document.querySelectorAll(".os-specific > div").forEach(div => {
+        div.style.display = div.classList.contains("mac") ? "block" : "none";
+      });
+    });
+    
+    // Linuxリンクのイベントリスナー
+    osInstruction.querySelector('.nix-link').addEventListener('click', function(event) {
+      event.preventDefault();
+      saveOs("nix");
+      document.querySelectorAll(".os-specific .os-link").forEach(link => link.classList.remove("active"));
+      document.querySelectorAll(".os-specific .nix-link").forEach(link => link.classList.add("active"));
+      document.querySelectorAll(".os-specific > div").forEach(div => {
+        div.style.display = div.classList.contains("nix") ? "block" : "none";
+      });
+    });
   });
 }
 
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
   addIcons();
   initializeOsSwitchers();
   loadOs();
-
-  var osLabelElement = $(".js-detected-os-label");
-  if (osLabelElement.length > 0) {
-    var osLabel;
+  
+  const osLabelElement = document.querySelector(".js-detected-os-label");
+  if (osLabelElement) {
+    let osLabel;
     switch (detectOs()) {
       case "win":
         osLabel = "Windows";
@@ -98,12 +141,12 @@ $(document).ready(function() {
       case "mac":
         osLabel = "Mac";
         break;
-      case "linux":
+      case "nix":
         osLabel = "Linux";
         break;
       default:
         osLabel = "エラー: 未知のオペレーティングシステム"
     }
-    osLabelElement.text(osLabel);
+    osLabelElement.textContent = osLabel;
   }
 });
