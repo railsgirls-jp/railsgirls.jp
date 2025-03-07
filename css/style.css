@@ -71,12 +71,13 @@ hr {
   margin: 2em 0;
 }
 
-
 header {
-  min-height: 70px;
+  min-height: 90px;
   color: #fff;
-  padding-top: 50px;
+  padding: 30px 0;
   background: #d3360b;
+  margin-bottom: 40px;
+  position: relative;
 }
 
 header #logo {
@@ -85,20 +86,27 @@ header #logo {
 }
 
 nav {
-  margin: 0 0 0 200px;
-  padding-top: 0px;
+  margin: 12px 0 0 200px;
   float: right;
   color: #ffffcc;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
 }
 
+nav span,
 nav a {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
   color: #ffffff;
   text-decoration: none;
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 1px;
   margin-left: 15px;
+  padding-bottom: 3px;
 }
 
 nav a:after {
@@ -271,7 +279,10 @@ i.icon-small-browser {
   background-size: contain;
   background-repeat: no-repeat;
   margin-bottom: 40px;
+  margin-left: 20px;
   max-width: 300px;
+  padding-left: 0px;
+  padding-right: 0px;
   transition: 0.4s box-shadow;
   flex: 0 0 300px;
 }
@@ -637,12 +648,21 @@ a:hover .guide-icon,
   font-weight: bold;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 article.container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px;
   box-sizing: border-box;
+  margin-top: 20px;
 }
 
 .col-lg-10 {
