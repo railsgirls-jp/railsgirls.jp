@@ -27,9 +27,16 @@ GEM
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     ffi (1.17.1)
+    ffi (1.17.1-aarch64-linux-gnu)
+    ffi (1.17.1-aarch64-linux-musl)
+    ffi (1.17.1-arm-linux-gnu)
+    ffi (1.17.1-arm-linux-musl)
     ffi (1.17.1-arm64-darwin)
+    ffi (1.17.1-x86-linux-gnu)
+    ffi (1.17.1-x86-linux-musl)
     ffi (1.17.1-x86_64-darwin)
     ffi (1.17.1-x86_64-linux-gnu)
+    ffi (1.17.1-x86_64-linux-musl)
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
       fiber-storage
@@ -38,7 +45,13 @@ GEM
     google-protobuf (4.30.0)
       bigdecimal
       rake (>= 13)
+    google-protobuf (4.30.0-aarch64-linux)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.30.0-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.30.0-x86-linux)
       bigdecimal
       rake (>= 13)
     google-protobuf (4.30.0-x86_64-darwin)
@@ -100,11 +113,21 @@ GEM
     nokogiri (1.18.3)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    nokogiri (1.18.3-aarch64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.3-aarch64-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.18.3-arm-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.3-arm-linux-musl)
+      racc (~> 1.4)
     nokogiri (1.18.3-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.18.3-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.18.3-x86_64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.3-x86_64-linux-musl)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -128,11 +151,33 @@ GEM
     sass-embedded (1.85.1)
       google-protobuf (~> 4.29)
       rake (>= 13)
+    sass-embedded (1.85.1-aarch64-linux-android)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.85.1-aarch64-linux-gnu)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.85.1-aarch64-linux-musl)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.85.1-arm-linux-androideabi)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.85.1-arm-linux-gnueabihf)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.85.1-arm-linux-musleabihf)
+      google-protobuf (~> 4.29)
     sass-embedded (1.85.1-arm64-darwin)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.85.1-riscv64-linux-android)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.85.1-riscv64-linux-gnu)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.85.1-riscv64-linux-musl)
       google-protobuf (~> 4.29)
     sass-embedded (1.85.1-x86_64-darwin)
       google-protobuf (~> 4.29)
+    sass-embedded (1.85.1-x86_64-linux-android)
+      google-protobuf (~> 4.29)
     sass-embedded (1.85.1-x86_64-linux-gnu)
+      google-protobuf (~> 4.29)
+    sass-embedded (1.85.1-x86_64-linux-musl)
       google-protobuf (~> 4.29)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
@@ -147,11 +192,28 @@ GEM
     zeitwerk (2.7.2)
 
 PLATFORMS
-  arm64-darwin-21
-  arm64-darwin-22
+  aarch64-linux
+  aarch64-linux-android
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-androideabi
+  arm-linux-gnu
+  arm-linux-gnueabihf
+  arm-linux-musl
+  arm-linux-musleabihf
+  arm64-darwin
+  riscv64-linux-android
+  riscv64-linux-gnu
+  riscv64-linux-musl
   ruby
-  x86_64-darwin-20
+  x86-linux
+  x86-linux-gnu
+  x86-linux-musl
+  x86_64-darwin
   x86_64-linux
+  x86_64-linux-android
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
   html-proofer
