@@ -71,12 +71,13 @@ hr {
   margin: 2em 0;
 }
 
-
 header {
-  min-height: 70px;
+  min-height: 90px;
   color: #fff;
-  padding-top: 50px;
+  padding: 30px 0;
   background: #d3360b;
+  margin-bottom: 40px;
+  position: relative;
 }
 
 header #logo {
@@ -85,20 +86,27 @@ header #logo {
 }
 
 nav {
-  margin: 0 0 0 200px;
-  padding-top: 0px;
+  margin: 12px 0 0 200px;
   float: right;
   color: #ffffcc;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
 }
 
+nav span,
 nav a {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
   color: #ffffff;
   text-decoration: none;
   font-weight: 300;
   font-size: 20px;
   letter-spacing: 1px;
   margin-left: 15px;
+  padding-bottom: 3px;
 }
 
 nav a:after {
@@ -264,14 +272,19 @@ i.icon-small-browser {
 }
 
 .event {
-  box-shadow:0 2px 3px #ddd;
-  border:1px solid #eee;
-  height:200px;
-  background-position:0 -100px;
-  margin-bottom:40px;
-  margin-left: 10px;
-  max-width: 320px;
-  transition:0.4s box-shadow;
+  box-shadow: 0 2px 3px #ddd;
+  border: 1px solid #eee;
+  height: 200px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  max-width: 300px;
+  padding-left: 0px;
+  padding-right: 0px;
+  transition: 0.4s box-shadow;
+  flex: 0 0 300px;
 }
 
 .event:hover {
@@ -312,20 +325,19 @@ i.icon-small-browser {
 .row-eq-height {
   display: flex;
   flex-wrap: wrap;
-  float: left;
+  gap: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .entry {
   position: relative;
   overflow: hidden;
-  margin: 1em 1em 0;
+  margin: 0;
   box-sizing: border-box;
   border-radius: .2em;
-  background: rgba(247, 244, 237, .8);
-  transition: ease .14s;
-  font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
+  flex: 0 0 calc(33.333% - 14px);
 }
 
 .entry-header {
@@ -449,64 +461,48 @@ i.icon-small-browser {
   }
 }
 
-.navbar .btn-navbar {
-  display: block;
-  float: left;
-  height: 24px;
-  padding: 7px 10px;
-  margin-right: 5px;
-  margin-left: 5px;
-  color: #ffffff;
-  text-shadow: none;
-  background-color: inherit;
-  border: none;
-  box-shadow: none;
-  background-image: none;
+.navbar {
+  padding: 0.5rem 1rem;
 }
 
+.navbar-toggler {
+  border-color: rgba(255,255,255,0.5);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar .nav-link {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+  color: #f6e58d;
+}
+
+.navbar-brand {
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* Remove old Bootstrap 3 specific navbar styles */
+.navbar .btn-navbar,
 .navbar .btn-navbar:hover,
 .navbar .btn-navbar:focus,
 .navbar .btn-navbar:active,
 .navbar .btn-navbar.active,
 .navbar .btn-navbar.disabled,
-.navbar .btn-navbar[disabled] {
-  color: #ffffff;
-  background-color: inherit;
-  *background-color: inherit;
-}
-
-.navbar .btn-navbar .icon-bar {
-  display: block;
-  width: 18px;
-  height: 4px;
-  background-color: #fff;
-  box-shadow: none;
-}
-
-.navbar .brand {
-  display: block;
-  float: left;
-  height: 24px;
-  line-height: 24px;
-  font-size: 22px;
-  font-weight: 400;
-  color: #fff;
-  text-shadow: none;
-}
-
+.navbar .btn-navbar[disabled],
+.navbar .btn-navbar .icon-bar,
+.navbar .brand,
 .navbar .nav > li > a {
-  float: none;
-  color: #fff;
-  font-weight: 400;
-  text-decoration: none;
-  text-shadow: none;
-}
-
-.navbar .nav > li > a:focus,
-.navbar .nav > li > a:hover {
-  color: #f6e58d;
-  text-decoration: none;
-  background-color: transparent;
+  /* Remove these styles as they're replaced by Bootstrap 5 classes */
+  all: unset;
 }
 
 .guides-list {
@@ -650,4 +646,37 @@ a:hover .guide-icon,
   content: "Warning";
   display: block;
   font-weight: bold;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+article.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.col-lg-10 {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  article.container {
+    padding: 20px;
+  }
+  
+  .col-lg-10 {
+    padding: 0;
+  }
 }
