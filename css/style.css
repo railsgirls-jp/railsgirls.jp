@@ -264,14 +264,16 @@ i.icon-small-browser {
 }
 
 .event {
-  box-shadow:0 2px 3px #ddd;
-  border:1px solid #eee;
-  height:200px;
-  background-position:0 -100px;
-  margin-bottom:40px;
-  margin-left: 10px;
-  max-width: 320px;
-  transition:0.4s box-shadow;
+  box-shadow: 0 2px 3px #ddd;
+  border: 1px solid #eee;
+  height: 200px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 40px;
+  max-width: 300px;
+  transition: 0.4s box-shadow;
+  flex: 0 0 300px;
 }
 
 .event:hover {
@@ -312,20 +314,19 @@ i.icon-small-browser {
 .row-eq-height {
   display: flex;
   flex-wrap: wrap;
-  float: left;
+  gap: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .entry {
   position: relative;
   overflow: hidden;
-  margin: 1em 1em 0;
+  margin: 0;
   box-sizing: border-box;
   border-radius: .2em;
-  background: rgba(247, 244, 237, .8);
-  transition: ease .14s;
-  font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
+  flex: 0 0 calc(33.333% - 14px);
 }
 
 .entry-header {
@@ -634,4 +635,28 @@ a:hover .guide-icon,
   content: "Warning";
   display: block;
   font-weight: bold;
+}
+
+article.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.col-lg-10 {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  article.container {
+    padding: 20px;
+  }
+  
+  .col-lg-10 {
+    padding: 0;
+  }
 }

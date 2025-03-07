@@ -314,3 +314,25 @@ div.post_content p {
     margin-bottom: 0;
 }
 
+.blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.blog-post {
+  flex: 0 0 calc(33.333% - 14px);
+  margin: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px #ddd;
+  transition: 0.4s box-shadow;
+}
+
+.blog-post:hover {
+  box-shadow: 0 2px 3px #999;
+  border-color: #ddd;
+}
