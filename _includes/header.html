@@ -7,11 +7,11 @@
   </a>
   <div class="container">
     <!-- Desktop -->
-    <div class="visible-desktop">
-      <a class="span3" href="/" id="logo">
+    <div class="d-none d-lg-block">
+      <a class="col-3" href="/" id="logo">
         <img alt="Rails Girls ガイド" src="/images/railsgirls-guides.png">
       </a>
-      <nav class="nav pull-right">
+      <nav class="nav float-end">
         <span>日本語版</span>
         <a href="/">Home</a>
         <a href="/events/">Events</a>
@@ -21,30 +21,26 @@
         <a href="/about">About</a>
       </nav>
     </div>
-
     <!-- Phone/Tablet -->
-    <div class="visible-tablet visible-phone">
-      <div class="nav navbar nav-pills">
-
-        <a class="btn btn-link btn-navbar collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-
-        <a class="brand" href="/">Rails Girls Guides</a>
-
-        <div class="nav-collapse navbar-responsive-collapse collapse" style="height: 0px;">
-          <ul class="nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/events/">Events</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/sponsors/">Sponsors</a></li>
-            <li><a href="/code-of-conduct">CoC</a></li>
-            <li><a href="/about">About</a></li>
-          </ul>
+    <div class="d-lg-none">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Rails Girls Guides</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/events/">Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="/sponsors/">Sponsors</a></li>
+              <li class="nav-item"><a class="nav-link" href="/code-of-conduct">CoC</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </nav>
     </div>
   </div>
 </header>
