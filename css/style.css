@@ -9,6 +9,7 @@ body {
   text-rendering: optimizeLegibility;
   font-size: 15px;
   line-height: 1.6;
+  font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
 
 h1 {
@@ -22,6 +23,7 @@ h2 {
   font-size: 2em;
   margin: 1em 0 0.5em;
 }
+
 h2 em {
   display: inline-block;
   width: 50px;
@@ -42,6 +44,16 @@ h4 {
   margin: 2em 0 0.5em;
 }
 
+h5 {
+  font-size: 17px;
+  margin: 2em 0 0.5em;
+}
+
+h6 {
+  font-size: 15px;
+  margin: 2em 0 0.5em;
+}
+
 p {
   font-size: 16px;
   margin-bottom: 1em;
@@ -49,10 +61,19 @@ p {
 }
 
 h3, h4, h5, a {
-  line-height:1.1;
+  line-height: 1.1;
 }
 
-ul li {
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul li, ol li {
+  margin-left: 30px;
   margin-bottom: 0.5em;
   line-height: 1.5;
 }
@@ -61,16 +82,29 @@ a, a:focus {
   color: #E0330C;
 }
 
+a:focus {
+  outline: 1px dotted;
+}
+
 a:hover {
   color: #E0330C;
   text-decoration: underline;
 }
 
 hr {
-  border-top-color: #ddd;
+  border: 0;
+  border-top: 1px solid #ddd;
   margin: 2em 0;
+  clear: both;
+  height: 0;
 }
 
+/* Common margin for block elements */
+dl, table, address, fieldset {
+  margin-bottom: 20px;
+}
+
+/* Header and Navigation */
 header {
   min-height: 90px;
   color: #fff;
@@ -132,7 +166,6 @@ footer {
   line-height: 1.5;
   text-align: center;
 }
-
 
 footer a {
   color: #111;
@@ -214,9 +247,11 @@ footer a {
   padding: 20px 320px 20px 0;
   background: url(../images/guides-hero.png) right 80px no-repeat;
 }
+
 .highlight {
   margin-left: 40px;
 }
+
 /* Icons for the guide */
 i.icon-text-editor, i.icon-prompt, i.icon-browser {
   background-position: 0 0;
@@ -229,6 +264,7 @@ i.icon-text-editor, i.icon-prompt, i.icon-browser {
   line-height: 50px;
   background-repeat: no-repeat;
 }
+
 i.icon-text-editor {
   background-image: url("/images/icon-text-editor.png");
 }
@@ -240,6 +276,7 @@ i.icon-prompt{
 i.icon-browser {
   background-image: url("/images/icon-browser.png");
 }
+
 i.icon-small-text-editor, i.icon-small-prompt, i.icon-small-browser {
   background-position: 0 0;
   display: inline-block;
@@ -250,12 +287,15 @@ i.icon-small-text-editor, i.icon-small-prompt, i.icon-small-browser {
   line-height: 20px;
   background-repeat: no-repeat;
 }
+
 i.icon-small-text-editor {
   background-image: url("/images/icon-small-text-editor.png");
 }
+
 i.icon-small-prompt{
   background-image: url("/images/icon-small-prompt.png");
 }
+
 i.icon-small-browser {
   background-image: url("/images/icon-small-browser.png");
 }
@@ -440,10 +480,12 @@ i.icon-small-browser {
   padding: 1em .3em;
   margin: .2em;
 }
+
 .github-corner:hover .octo-arm {
   animation:octocat-wave 560ms ease-in-out
 }
- @keyframes octocat-wave {
+
+@keyframes octocat-wave {
   0%, 100% {
     transform:rotate(0)
   }
@@ -454,6 +496,7 @@ i.icon-small-browser {
     transform:rotate(10deg)
   }
 }
+
 @media (max-width:500px) {
   .github-corner:hover .octo-arm {
     animation:none
@@ -512,18 +555,22 @@ i.icon-small-browser {
   padding: 0;
   list-style: none;
 }
+
 .guides-list li {
   padding: 20px 0;
   min-height: 84px;
 }
+
 .guides-list li:not(:last-child) {
   border-bottom: 1px solid #ddd;
 }
+
 .guides-list h3 {
   margin: 0;
   margin-left: 90px;
   color: var(--highlight);
 }
+
 .guides-list p {
   margin-left: 90px;
   font-size: 18px;
@@ -533,33 +580,34 @@ i.icon-small-browser {
   position: relative;
   top: 3px;
   margin-right: 20px;
-
   width: 70px;
   height: 70px;
   float: left;
-
   color: #fff;
   font-size: 1.8em;
   line-height: 70px;
   font-weight: bold;
   text-align: center;
-
   background-color: #d0d0d0;
   border-radius: 70px;
   transition: 0.1s background-color ease-in;
 }
+
 .guide-icon:before {
   content: attr(data-icon);
   font-size: 120%;
 }
+
 .guide-icon-meta:before {
   content: "?";
   position: relative;
 }
+
 .guide-icon-other:before {
   content: "❯";
   position: relative;
 }
+
 a:hover .guide-icon,
 .guide-icon:hover {
   background-color: #d3360b;
@@ -571,44 +619,54 @@ a:hover .guide-icon,
   float: none; /* override upstream */
   text-align: right;
 }
+
 .os-specific .picker-options .active {
   font-weight: bold;
 }
+
 .os-specific .picker-options > span:not(:last-child):after {
   content: " | ";
 }
+
 .os-specific.big {
   margin-bottom: 20px;
 }
+
 .os-specific.big .picker {
   display: block;
   text-align: center;
 }
+
 .os-specific.big .picker > span {
   display: block;
 }
+
 .os-specific.big .picker-label {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
 .os-specific.big .picker-options > span:not(:last-child) {
   margin-right: 15px;
 }
+
 .os-specific.big .picker-options > span:after {
   content: "";
 }
+
 .os-specific.big .picker-options {
   padding-top: 20px;
   font-size: 1.3rem;
 }
+
 .os-specific.big .picker-options a {
   display: inline-block;
   margin-bottom: 20px;
   padding: 2px 10px;
-
   border: 2px solid #DDD;
   border-radius: 10px;
 }
+
 .os-specific.big .picker-options a.active,
 .os-specific.big .picker-options a:focus,
 .os-specific.big .picker-options a:hover {
@@ -621,6 +679,7 @@ a:hover .guide-icon,
   font-size: 120%;
   border-radius: 10px;
 }
+
 [class*=-notice] :last-child {
   margin-bottom: 0;
 }
@@ -628,22 +687,28 @@ a:hover .guide-icon,
 .guide-notice {
   background-color: #FEF8EA;
 }
+
 .help-notice {
   background-color: #FEF8EA;
 }
+
 .help-notice:before {
   content: "ℹ️";
   margin-right: 10px;
 }
+
 .coach-notice {
   border: 2px solid #8102BB;
 }
+
 .coach-notice > div {
   cursor: help;
 }
+
 .warning-notice {
   border: 2px solid var(--highlight);
 }
+
 .warning-notice:before {
   content: "Warning";
   display: block;
