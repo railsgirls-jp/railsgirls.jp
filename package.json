@@ -1,8 +1,12 @@
 {
   "name": "railsgirls.jp",
   "version": "1.0.1",
-  "comment": "このファイルはダミーです。GitHubに脆弱性を検知してもらうためだけに置いています。利用するJavaScriptのバージョン更新にあわせて、本ファイルのバージョンを更新して使用する事を想定しています。",
+  "description": "Rails Girls Japan website",
   "dependencies": {
-    "bootstrap": "3.1.1"
+    "bootstrap": "^5.3.2"
+  },
+  "scripts": {
+    "build": "mkdir -p js/vendor && cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js js/vendor/ && cp node_modules/bootstrap/dist/css/bootstrap.min.css js/vendor/",
+    "postinstall": "npm run build"
   }
 }
