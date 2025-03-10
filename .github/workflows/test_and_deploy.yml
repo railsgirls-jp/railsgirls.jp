@@ -36,6 +36,15 @@ jobs:
         ruby-version: 3.2
         bundler-cache: true
 
+    - name: 📦 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: 🔧 Install npm dependencies and build Bootstrap
+      run: npm install
+
     - name: 📜 Setup GitHub Pages
       id: pages
       uses: actions/configure-pages@v5
