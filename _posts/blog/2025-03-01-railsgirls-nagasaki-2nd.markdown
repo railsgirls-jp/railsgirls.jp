@@ -36,7 +36,7 @@ div.photos .caption {
 
 Rails Girls Nagasaki 2nd のオーガナイザーをやらせていただいた[@obregonia1](https://x.com/obregonia1)です！
 
-この記事は、2025年2月14日（金）と2月14日（土）に DEJIMA MEDIA CENTER で開催されたRails Girls Nagasaki 2nd の開催レポートです。
+この記事は、2025年2月14日（金）と2月15日（土）に DEJIMA MEDIA CENTER で開催されたRails Girls Nagasaki 2nd の開催レポートです。
 
 ## Rails Girls Nagasaki 2nd 開催のきっかけ
 長崎在住でチーフオーガナイザーの [@siro](https://x.com/siroemk) さんが長崎でイベントに行くきっかけやRubyistを増やしたいとのことで開催することになりました。
