@@ -30,6 +30,10 @@ div.photos .caption {
     color: #444;
     margin-top: 0.5em;
 }
+
+ul.sponsor {
+    padding-left: 0;
+}
 </style>
 
 ## はじめに
@@ -44,7 +48,7 @@ Rails Girls Nagasaki 2nd のオーガナイザーをやらせていただいた[
 
 [長崎でのRails Girls挑戦 \- siroemk’s blog](https://siroemk.hatenablog.com/entry/2024/12/21/153552)
 
-自分はフィヨルドブートキャンプや Ruby コミュニティのおかげで Web エンジニアになることができたので、少しでもコミュニティ恩返しができたらと思いチーフオーガナイザーの siro さんからお誘いいただいたときには二つ返事で引き受けました。
+自分はフィヨルドブートキャンプや Ruby コミュニティのおかげで Web エンジニアになることができたので、少しでもコミュニティに恩返しができたらと思い、チーフオーガナイザーの siro さんからお誘いいただいたときには二つ返事で引き受けました。
 
 2023年の Rails Girls Nagasaki 1st のときにはコーチとして参加しており、まさか2年後オーガナイザーをやることになるとは思っていませんでしたが無事開催することができてよかったです。
 
@@ -73,6 +77,22 @@ Rails Girls Nagasaki 2nd のオーガナイザーをやらせていただいた[
 ## スポンサーLTの様子
 
 各社にスポンサーLT をやっていただきました。スポンサーのみなさまありがとうございます！
+
+ご支援いただいたスポンサー企業様は以下の通りです！
+
+(敬称略・順不同)
+
+<ul class="sponsor">
+  <li>株式会社えにしテック</li>
+  <li>TokyoDev株式会社</li>
+  <li>STORES株式会社</li>
+  <li>ピクシブ株式会社</li>
+  <li>株式会社エス・エム・エス</li>
+  <li>フィヨルドブートキャンプ</li>
+  <li>SmartHR</li>
+  <li>GMOペパボ株式会社</li>
+  <li>一般社団法人 日本Rubyの会</li>
+</ul>
 
 <div class="photos">
   <div>
