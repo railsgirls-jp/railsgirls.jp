@@ -10,10 +10,13 @@ Rails Girls Tokyo 開催に向けて話しあうメーリングリストは http
 
 Rails Girls JP (Japanese) のサイトを編集したい場合は、このリポジトリの "Fork" ボタンをクリックして fork してください。以下の手順でローカルにファイルをダウンロードし、環境をつくります。
 
+CSSのビルドを行うのに[Node.js(npm)](https://nodejs.org/)が必要なので、あらかじめインストールしておいてください。
+
 ```
 $ git clone git@github.com:YOURNAME/railsgirls.jp.git
 $ cd railsgirls.jp
 $ bundle install
+$ npm install
 ```
 
 閲覧する場合は、以下の手順で Web サーバを起動し、ブラウザから http://localhost:4000 へアクセスします。
