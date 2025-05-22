@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rails Girls Japan 2023 年活動報告と2024年の活動計画"
+title: "Rails Girls Japan 2024 年活動報告と2025年の活動計画"
 date: 2025-05-22
 image: /images/railsgirls-sq.png
 ---
