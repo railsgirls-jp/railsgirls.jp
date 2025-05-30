@@ -517,9 +517,15 @@ i.icon-small-browser {
   color: #f6e58d;
 }
 
-@media (max-width: 480px) {
-  #mobile-navbar .logo {
-    display: none;
+.navbar-brand {
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+}
+
+@media (max-width: 350px) {
+  .navbar-brand {
+    font-size: 15px;
   }
 }
 
@@ -709,6 +715,10 @@ a:hover .guide-icon,
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
+}
+
+.navbar .container-fluid {
+  flex-wrap: nowrap;
 }
 
 article.container {
