@@ -131,7 +131,7 @@ nav a {
   padding-bottom: 3px;
 }
 
-nav a:after {
+nav a.nav-link:after {
   margin-left: 10px;
   content: url(/images/star.png);
 }
