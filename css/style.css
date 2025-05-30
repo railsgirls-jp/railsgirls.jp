@@ -713,10 +713,6 @@ a:hover .guide-icon,
   box-sizing: border-box;
 }
 
-.navbar .container-fluid {
-  flex-wrap: nowrap;
-}
-
 article.container {
   width: 100%;
   max-width: 1200px;
