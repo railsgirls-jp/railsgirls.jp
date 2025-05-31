@@ -68,7 +68,7 @@ Bootstrapはいくつかの異なるパーツから構成されていますが�
 テキストエディタで `app/views/layouts/application.html.erb` ファイルを開きます
 
 {% highlight erb %}
-<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+<%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
 {% endhighlight %}
 
 上記が記述されている1行前に次のタグを追記してください。
