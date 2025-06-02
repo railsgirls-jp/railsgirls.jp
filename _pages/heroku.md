@@ -121,7 +121,7 @@ source "https://rubygems.org"
 {% highlight ruby %}
 source "https://rubygems.org"
 
-ruby "3.4.1"
+ruby "3.4.4"
 {% endhighlight %}
 
 そして、ターミナル上で次のコマンドを実行してください。
