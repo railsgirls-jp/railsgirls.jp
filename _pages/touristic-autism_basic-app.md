@@ -95,7 +95,7 @@ rails server
 
   <div class="win">
 {% highlight sh %}
-md projects
+mkdir projects
 {% endhighlight %}
 
     <div>
