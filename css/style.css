@@ -73,8 +73,6 @@ ol {
 }
 
 ul li, ol li {
-  margin-left: 30px;
-  margin-bottom: 0.5em;
   line-height: 1.5;
 }
 
@@ -106,30 +104,19 @@ dl, table, address, fieldset {
 
 /* Header and Navigation */
 header {
-  min-height: 90px;
   color: #fff;
-  padding: 30px 0;
+  padding: 10px 0;
   background: #d3360b;
   margin-bottom: 40px;
   position: relative;
 }
 
-header #logo {
+header .logo {
   width: 240px;
   float: left;
 }
 
-nav {
-  margin: 12px 0 0 200px;
-  float: right;
-  color: #ffffcc;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  padding-bottom: 5px;
-}
-
-nav span,
+nav span:not(.navbar-toggler-icon),
 nav a {
   display: inline-flex;
   align-items: center;
@@ -137,18 +124,18 @@ nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1px;
-  margin-left: 15px;
+  margin-left: 10px;
   padding-bottom: 3px;
 }
 
-nav a:after {
-  margin-left: 15px;
+nav a.nav-link:after {
+  margin-left: 10px;
   content: url(/images/star.png);
 }
 
-nav a:last-child: after {
+nav a:last-child:after {
   content: none;
 }
 
@@ -506,10 +493,6 @@ i.icon-small-browser {
   }
 }
 
-.navbar {
-  padding: 0.5rem 1rem;
-}
-
 .navbar-toggler {
   border-color: rgba(255,255,255,0.5);
 }
@@ -533,6 +516,12 @@ i.icon-small-browser {
   font-size: 22px;
   font-weight: 400;
   color: #fff;
+}
+
+@media (max-width: 350px) {
+  .navbar-brand {
+    font-size: 15px;
+  }
 }
 
 /* Remove old Bootstrap 3 specific navbar styles */
