@@ -76,7 +76,7 @@ rails new railsgirls-galway-2014
 {% endhighlight %}
 
     <div>
-<p>これにより、<code>railsgirls</code>フォルダ内に新しいアプリが作成されます。現在、Railsアプリの内部にいるディレクトリに変更するため、以下を実行します：</p>
+<p>これにより、<code>railsgirls</code>フォルダ内に新しいアプリが作成されます。現在いるディレクトリをRailsアプリの内部に変更するため、以下を実行します：</p>
     </div>
 
 {% highlight sh %}
@@ -115,7 +115,7 @@ rails new railsgirls-galway-2014
 {% endhighlight %}
 
     <div>
-<p>これにより、<code>railsgirls</code>フォルダ内に新しいアプリが作成されます。これで、再度Railsアプリの内部にいるディレクトリに変更し、以下を実行します：</p>
+<p>これにより、<code>railsgirls</code>フォルダ内に新しいアプリが作成されます。現在いるディレクトリをRailsアプリの内部に変更するため、以下を実行します：</p>
     </div>
 
 {% highlight sh %}
