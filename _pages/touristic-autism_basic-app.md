@@ -60,7 +60,7 @@ mkdir projects
 {% endhighlight %}
 
     <div>
-<p><code>projects</code>という名前のディレクトリが作成されたことを確認するには、ディレクトリを一覧できるコマンド<code>ls</code>を使用します。出力に<code>projects</code>ディレクトリが表示されるはずです。これで、現在いるディレクトリを<code>projects</code>フォルダに変更します：</p>
+<p><code>projects</code>という名前のディレクトリが作成されたことを確認するには、ディレクトリを一覧できるコマンド<code>ls</code>を使用します。出力に<code>projects</code>ディレクトリが表示されるはずです。以下を実行して、現在いるディレクトリを<code>projects</code>フォルダに変更します：</p>
     </div>
 
 {% highlight sh %}
@@ -99,7 +99,7 @@ mkdir projects
 {% endhighlight %}
 
     <div>
-<p><code>projects</code>という名前のディレクトリが作成されたことを確認するには、ディレクトリを一覧できるコマンド<code>dir</code>を使用します。出力に<code>projects</code>ディレクトリが表示されるはずです。これで、現在いるディレクトリを<code>projects</code>フォルダに変更します：</p>
+<p><code>projects</code>という名前のディレクトリが作成されたことを確認するには、ディレクトリを一覧できるコマンド<code>dir</code>を使用します。出力に<code>projects</code>ディレクトリが表示されるはずです。以下を実行して、現在いるディレクトリを<code>projects</code>フォルダに変更します：</p>
     </div>
 
 {% highlight sh %}
