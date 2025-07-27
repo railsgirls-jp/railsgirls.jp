@@ -756,3 +756,15 @@ pre {
 img {
   max-width: 100%;
 }
+
+.blog-post blockquote {
+  margin: 1rem auto;
+  border-left: #d3360b solid 3px;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+.blog-post figcaption::before {
+  content: "――"
+}
