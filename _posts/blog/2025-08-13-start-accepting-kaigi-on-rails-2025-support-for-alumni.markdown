@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kaigi on Rails 2025 参加支援募集のお知らせ"
-date: 2025-07-27
+date: 2025-08-13
 image: /images/railsgirls-sq.png
 ---
 
