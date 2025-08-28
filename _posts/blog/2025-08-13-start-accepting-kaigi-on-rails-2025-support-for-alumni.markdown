@@ -55,8 +55,8 @@ Kaigi on Railsは、Railsに関する国内の主要カンファレンスの一�
 
 1. 現在女性として生活しており、以下のいずれかの経験を有すること<br>
   ※Rails Girls イベントは [http://railsgirls.jp/events/](http://railsgirls.jp/events/) に掲載されているものを指します
-    * 過去に Rails Girls イベントをオーガナイザー・スタッフとして運営したことがある
     * 過去に Rails Girls イベントに参加したことがある
+    * 過去に Rails Girls イベントをオーガナイザー・スタッフとして運営したことがある
     * 過去に Rails Girls More! のようなフォローアップイベントに参加したことがある
 1. 過去に Rails Girls Japanによるカンファレンス参加支援を受けたことがないこと
 1. 参加支援費振込のための銀行口座等の情報を Rails Girls Japan メンバーに開示できること
