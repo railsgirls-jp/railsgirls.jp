@@ -4,60 +4,65 @@ title: Touristic Autism-friendly Spots App
 permalink: touristic-autism_resource-modeling
 ---
 
-# Resource Modeling
+# モデリング
 
 *Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
 *for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
 
-What do we want our app to do? As a first thing, we would like to 
-* authenticate **users**
-* allow authenticated users to create a new touristic **place** description
-* allow authenticated users to **comment** those places
-* allow authenticated users to **rate** up to which extent those places are autism-friendly or not.
+アプリに何をさせたいですか？
 
-Note that these requirements help us identify 4 different resources: user, place, comment, rating. We are now going to model them specifying their properties and their associations with each other.
+まず、はじめに
 
-We will enable the rating in the next tutorial.
+* ユーザー(**users**) を認証する
+* 認証されたユーザーが観光地 (**place**) の説明文を作成できるようにする
+* 認証されたユーザーが観光地にコメント (**comment**) できるようにする
+* 認証されたユーザーが観光地が自閉症に優しいかどうかを評価 (**rate**) できるようにする
 
+これらの要件は、user、place、comment、ratingという4つの異なるリソースを識別するのに**役立** ちます。
 
-## Authenticated Tourists/Users
+次のチュートリアルでは、評価(rating)できるようにします。
 
-Let's generate our first resource: user and require its authentication.
+## 旅行者/ユーザーの認証
 
-## Step 0: Add devise gem
+最初のリソースUserを作成し、認証を必須にしましょう。
 
-Open up your `Gemfile` and add this line
+## Step 0: devise gem を追加
+
+`Gemfile` を開いて、下記を追加してください。
 
 {% highlight ruby %}
 gem 'devise'
 {% endhighlight %}
-and run
+下記を実行して、gemをインストールします。
 {% highlight sh %}
 bundle install
 {% endhighlight %}
-to install the gem. **Also remember to restart the Rails server**.
+**Railsサーバーの再起動も忘れずに行ってください**
 
-## Step 1: Set up devise in your app
+## Step 1: deviseのセットアップ
 
-Run the following command in the terminal.
+ターミナル上で次のコマンドを実行してください。
 
 {% highlight sh %}
 rails g devise:install
 {% endhighlight %}
 
+## Step 2: deviseの設定
 
-## Step 2: Configure Devise
-
-Ensure you have defined default url options in your environments files. Open up `config/environments/development.rb` and add this line:
+environmentsファイルにデフォルトのURLオプションを定義しましょう。 `config/environments/development.rb`を開いて、
 {% highlight ruby %}
    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 {% endhighlight %}
 
-before the `end` keyword.
+`end`の前に上記の行を追加しましょう。
 
-Open up `app/views/layouts/application.html.erb` and add:
+`app/views/layouts/application.html.erb`を開いて、
 
+{% highlight ruby %}
+   <%= yield %>
+{% endhighlight %}
+の真上に
 {% highlight erb %}
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
@@ -66,34 +71,32 @@ Open up `app/views/layouts/application.html.erb` and add:
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 {% endhighlight %}
-right above
-{% highlight ruby %}
-   <%= yield %>
-{% endhighlight %}
+上記のコードを追記しましょう。
 
+## Step 3: Userモデルのセットアップ
 
-
-## Step 3: Setup the User model
-
-We'll use a bundled generator script to create the User model.
+ジェネレータを使用してUserモデルを作成しましょう。
 {% highlight sh %}
    rails g devise user
    rake db:migrate
 {% endhighlight %}
 
-**Coach:** Explain what user model has been generated. What are the fields? Note that a model inherits abilities to interact with the DB from its ActiveRecord::Base super-class (ref. MVC). 
+{% coach %}
+作成されたUserモデルについて説明してください。フィールドとは何でしょうか？モデルは`ActiveRecord::Base` というスーパークラスからDBと対話する能力を継承しています。(参照: MVC)
+{% endcoach %}
 
-## Step 4: Create your first user
+## Step 4: 最初のuserの作成
 
-Now that you have set everything up you can create your first user. Devise creates all the code and routes required to create accounts, log in, log out, etc.
+これで準備が整ったので、最初のユーザーを作成できます。
+deviseはアカウントの作成、ログイン、ログアウトなどに必要なすべてのコードとルートを生成します。
 
-Make sure your rails server is running, open [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up) and create your user account.
+Railsサーバーが起動中であることを確認して、 [http://localhost:3000/users/sign_up](http://localhost:3000/users/sign_up)にアクセスしてユーザーアカウントを作成してください。
 
-## Step 5: Add sign-up and login links
+## Step 5: サインインとログインのリンクを追加
 
-All we need to do now is to add appropriate links or notice about the user being logged in in the top right corner of the navigation bar.
+あとは、ナビゲーションバーの右上に適切なリンクや、ユーザーがログインしていることに関するお知らせを追加するだけです。
+`app/views/layouts/application.html.erb`を編集し、`body`の冒頭に次のコードを追加してください。
 
-In order to do that, edit `app/views/layouts/application.html.erb` by adding at the beginning of the body:
 {% highlight erb %}
 <p class="navbar-text pull-right">
 <% if user_signed_in? %>
@@ -106,36 +109,43 @@ In order to do that, edit `app/views/layouts/application.html.erb` by adding at 
 <% end %></p>
 {% endhighlight %}
 
-
-Finally, force the user to redirect to the login page if the user was not logged in. Open up `app/controllers/application_controller.rb` and add:
+次に、ユーザーがログインしていない場合に強制的にログインページにリダイレクトするようにします。`app/controllers/application_controller.rb`を開き、以下のコードを
 
 {% highlight ruby %}
   before_action :authenticate_user!
 {% endhighlight %}
 
-after `protect_from_forgery with: :exception`.
+`protect_from_forgery with: :exception`の後に追加してください。
 
-Open your browser and try logging in and out from.
+ブラウザを開いて、ログインとログアウトを試してみましょう。
 
-**Coach:** Talk about the `user_signed_in?` and `current_user` helpers. Why are they useful?
+{% coach %}
+`user_signed_in?`と`current_user` ヘルパーについて説明してください。これらはなぜ便利なのでしょうか？
+{% endcoach %}
 
-Let's add-commit-push to your GitHub repo! See how nicely all the changes are now on your GitHub profile? :)
+変更をGitHubにadd,commit,pushしましょう!
+すべての変更がGitHubに反映されているのを確認しましょう:)
 
-## Touristic Places
+## place
 
-We now use Rails' scaffold functionality to generate and set up all that is necessary to list, add, remove, edit, and view our second resource: "touristic places".
+Railsのscaffold機能を使用して、2つめのリソース"place"の一覧表示、作成、削除、変更、表示するために必要なものすべてを作成できます。
 
 <div class="os-specific">
   <div class="nix">
 {% highlight sh %}
 rails generate scaffold place name:string address:string latitude:decimal longitude:decimal description:text picture:string user_id:integer
 {% endhighlight %}
-</div>
-Note the column user:references that is created to support the 1-to-many association with Users.
+  </div>
 </div>
 
-The scaffold creates new files in your project directory. However, we have defined (modeled) a "structure" for our "place" resource and we want all the future instances of this resource to stick to this structure and get stored somewhere, i.e., in a database. 
-We are already using a database (see `gem 'sqlite'` in your Gemfile). Let's add the structure of "place" as a table to our database with the following.
+`users`と1対多の関連をサポートする user:references カラムが作成されることに注目してください。
+
+`scaffold`はプロジェクトディレクトリに新しいファイルを作成します。しかし、私たちは構造を定義(モデル化)しており、今後作成されるこのリソースのインスタンスがその構造に従い、どこかに保存される必要があります。それが、データベースです。
+
+
+私たちはすでにデータベースを使用しています。(Gemfileに`gem 'sqlite'`が記述されています)
+次のコマンドを実行して、"place"構造体をテーブルとしてデータベースに追加しましょう。
+
 
 <div class="os-specific">
   <div class="nix">
@@ -149,72 +159,74 @@ bin/rake db:migrate
 ruby bin/rake db:migrate
 {% endhighlight %}
   </div>
-
-
-Then start the server again. Open [http://localhost:3000/places](http://localhost:3000/places) in your browser and check out all the new functionalities that our web application is now providing to handle "place" resources. All thanks to what Ruby on Rails automatically generates with `generate scaffold`.
-Each new instance of "place" that will be stored in the database, will be automatically assigned a unique identifier called "primary key", with no need for us to specify it as one of the fields (along with picture, name, etc.)
 </div>
 
+ここでサーバーを再起動させましょう。[http://localhost:3000/places](http://localhost:3000/places)にアクセスして、"place"を扱うためのすべての機能があることを確認しましょう。Ruby on Railsの`generate scaffold`が自動生成してくれたおかげです。
+"place"の新しいインスタンスごとに、一意の識別子 "primary key"が自動的に割り当てられるため、開発者が特に指定する必要はありません。
+{% coach %}
+Railsのscaffoldとは何でしょうか? migrationとは何で、なぜ必要なのでしょうか？
+{% endcoach %}
 
-**Coach:** What is Rails scaffolding? What are migrations and why do you need them?
-Note the pages that have been created to manipulate the "place" resources and their naming convention.
-Look at the server logging and explain it as a report of the following interaction (in the context of the MVC pattern):
-* The browser issues a request for the /places URL.
-* Rails routes /places to the index action in the Places controller.
-* The index action asks the Place model to retrieve all places (Place.all).
-* The Place model pulls all the places from the database.
-* The Place model returns the list of places to the controller.
-* The controller captures the users in the @users variable, which is passed to the index view.
-* The view uses embedded Ruby to render the page as HTML.
-* The controller passes the HTML back to the browser
+"place"リソースを操作するために作成されたページとその命名規則に注目してください。サーバーのログを確認して、以下のインタラクションがどのように処理されているのかを説明してください。(MVCパターンのコンテキストで)
 
-Note that the controller created is RESTful (explain)
+* ブラウザは/places URL へのリクエストを行う
+* Railsは/placesをplacesコントローラのindexアクションにルーティングする
+* indexアクションはplaceモデルにすべてのplaceを取得するように依頼します(Place.all)
+* Placeモデルはデータベースからすべてのplaceを取得します。
+* Placeモデルはplaceの一覧をコントローラに返します。
+* コントローラはユーザーを@users変数に保存し、indexビューに渡します。
+* ビューはERBを使用してHTMLとしてレンダリングします。
+* コントローラはHTMLをブラウザに返します。
 
-Note that the controller inherits abilities (large amount of functionality, such as the ability to manipulate model objects, filter inbound HTTP requests, and render views as HTML) from its ApplicationController super-class (ref. MVC).
+作成されたコントローラがRESTfulであることに注目してください。
 
-Open up `app/views/places/show.html.erb` and remove the line that says:
+コントローラは `ApplicationController` スーパークラスから機能(モデルオブジェクトを操作したり、HTTPリクエストをフィルタリングしたり、ビューをHTMLとしてレンダリングするなどの多くの機能)を継承していることに注目してください。(参考: MVC)
+
+`app/views/places/show.html.erb`を開いて次の行を削除してください:
 
 {% highlight erb %}
 <p id="notice"><%= notice %></p>
 {% endhighlight %}
 
-This line is not necessary as we've already put the authenticated user notice in the `app/views/layouts/application.html.erb` file.
+認証されたユーザーへの通知は既に`app/views/layouts/application.html.erb`ファイルに追加しているので、この行は不要です。
 
+GitHubリポジトリにadd、commit、pushを行いましょう!
 
-Let's add-commit-push to your GitHub repo! 
+### リソースの関連付け
 
-### Resource Associations
+placesはusersとまだ正しく関連付けられていないことに注意してください。例えば、新しいplaceを作成する場合、Userフィールドも入力する必要があります。そして、Userのプロフィールを表示する際、userが作成した場所の一覧は表示されず、その逆も同様です。また、userアカウントを削除しても、userが作成したplacesは自動的に削除されません。
 
-Note that places aren't yet properly associated with users. For instance, when creating a new place the field "User" is expected to be filled by ourselves and when viewing a user profile there isn't any list of places created by him/her and viceversa. Also, when deleting a user account all the places he/she created do not get deleted automatically. 
+UserとPlacesの間の1対多の関連を作成しましょう。
 
-Let's properly create the 1-to-many association between User and Places.
+#### Step 1. 1対多の関連を追加
 
-#### Step 1. Add 1-to-many association 
+UserとPlaceリソースの関連を適切に定義する必要があります。
+userモデルに1つのuserとしてたくさんのplaceを作成できることを定義する必要があります。
+app/models/user.rbを開いて、次のコードの後に
 
-You need to make sure that Rails knows the relation between the User and Place resources. 
-As one user can create many places we need to make sure the user model knows that. 
-Open app/models/user.rb and after the row
 {% highlight ruby %}
 class User < ActiveRecord::Base
 {% endhighlight %}
-add
+
+下記のコードを追加してください。
 {% highlight ruby %}
 has_many :places
 {% endhighlight %}
 
-The place also has to know that it belongs to a user. So open app/models/place.rb and after
+placeが、どのuserに属しているかを定義する必要があります。app/models/place.rb を開いて、次のコードの後に
+
 {% highlight ruby %}
 class Place < ActiveRecord::Base
 {% endhighlight %}
 
-add the row
+以下のコードを追加してください
 {% highlight ruby %}
 belongs_to :user
 {% endhighlight %}
 
-#### Step 2: Render the views
+#### Step 2: ビューをレンダリングする
 
-Open app/views/places/_form.html and after
+app/views/places/_form.htmlを開いて、次のコードの後に
 {% highlight erb %}
 <div class="field">
   <%= f.label :user_id %><br>
@@ -222,12 +234,12 @@ Open app/views/places/_form.html and after
 </div>
 {% endhighlight %}
 
-add the row
+以下のコードを追加してください
 {% highlight erb %}
 <%= f.hidden_field :user_id, :value => current_user.id %>
 {% endhighlight %}
 
-next, remove
+次に、以下のコードを削除してください
 {% highlight erb %}
 <div class="field">
   <%= f.label :user_id %><br>
@@ -235,20 +247,18 @@ next, remove
 </div>
 {% endhighlight %}
 
-## Step 3: Set edit/delete permissions
+## Step 3: 編集/削除の権限を設定する
 
-Allow only the place creator to edit/delete a place.
+placeの作成者だけがそのplaceを編集/削除できるようにします。
 
-Open app/views/places/index.html.erb and substitute
-
+app/views/places/index.html.erbを開いて、次のコードを
 
 {% highlight sh %}
 <td><%= link_to 'Edit', edit_place_path(place) %></td>
 		<td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 {% endhighlight %}
 
-with
-
+下記のコードに書き換えてください。
 
 {% highlight sh %}
  <% if user_signed_in? %>
@@ -260,14 +270,14 @@ with
 	<% end %>
 {% endhighlight %}
 
-That's it. Now view a user you have inserted to your application and there you should see the form for creating a place as well as deleting older places.
+これで完了です。アプリケーションに登録したuserを表示すると、placeを作成するためのフォームが表示され、作成済みのplaceを削除することもできます。
 
 
 
 
-## Place's Comments
+## Placeのコメント
 
-Just as well as we created a "place" resource and associated it with users, we can create a "comment" resource and associate it with places 9and with its author).
+placeリソースの作成、placeとusersの関連付けを行ったのと同様に、commentリソースを作成し、commentとauthorを関連付けることができます。
 
 <div class="os-specific">
   <div class="nix">
@@ -276,40 +286,43 @@ rails generate scaffold comment body:text user_id:integer place_id:integer
 bin/rake db:migrate
 {% endhighlight %}
   </div>
-Start the server, check out the new service in your browser. Then, add-commit-push to github.
 </div>
 
+サーバーを起動し、ブラウザで新しいサービスを確認してください。
+その後、githubにadd, commit, pushを行ってください。
 
-**Coach:** show that the scaffold generator has updated the Rails routes file with a rule for the Review resource
+{% coach %}
+scaffoldがRailsのrouteファイルを更新し、Reviewリソースのルールが追加されたことを示してください。
+{% endcoach %}
 
 
 ##Resource Association
 
-#### Step 1. Add 1-to-many association 
+#### Step 1. 1対多の関連付け
 
-Open app/models/place.rb and after the row
+app/models/place.rbを開いて、次のコードの後に
 {% highlight ruby %}
 belongs_to :user
 {% endhighlight %}
-add
+以下のコードを追加してください
 {% highlight ruby %}
 has_many :comments
 {% endhighlight %}
 
-Open app/models/comment.rb and after
+app/models/comment.rbを開いて、次のコードの後に
 {% highlight ruby %}
 class Comment < ActiveRecord::Base
 {% endhighlight %}
 
-add the rows
+以下のコードを追加してください
 {% highlight ruby %}
 belongs_to :user
 belongs_to :place
 {% endhighlight %}
 
-#### Step 2: Render the views
+#### Step 2: ビューをレンダリングする
 
-Open app/views/comments/_form.html and substitute
+app/views/comments/_form.htmlを開いて、次のコードを
 {% highlight erb %}
 <div class="field">
   <%= f.label :user_id %><br>
@@ -317,12 +330,12 @@ Open app/views/comments/_form.html and substitute
 </div>
 {% endhighlight %}
 
-with the row
+下記のコードに書き換えてください
 {% highlight erb %}
 <%= f.hidden_field :user_id, :value => current_user.id %>
 {% endhighlight %}
 
-next, substitute
+次に、下記のコードを
 {% highlight erb %}
   <div class="field">
     <%= f.label :place_id %><br>
@@ -330,16 +343,12 @@ next, substitute
   </div>
 {% endhighlight %}
 
-with the row
+下記のコードに書き換えてください
 {% highlight erb %}
 <%= f.hidden_field :place_id%>
 {% endhighlight %}
 
-
-
-
-
-Open app/views/places/show.html.erb and just before the bottom links add
+app/views/places/show.html.erbを開いて、一番下のリンクの直前に下記のコードを追加してください
 {% highlight erb %}
 <h3>Comments</h3>
 <% @comments.each do |comment| %>
@@ -353,33 +362,30 @@ Open app/views/places/show.html.erb and just before the bottom links add
 <%= render 'comments/form' %>
 {% endhighlight %}
 
-In app/controllers/places_controller.rb add to show action after the row
+app/controllers/places_controller.rbを開いて、showアクション内の次のコードの後に
+add to show action after the row
 {% highlight ruby %}
 @place = Place.find(params[:id])
 {% endhighlight %}
 
-this
+以下のコードを追加してください
 {% highlight ruby %}
 @comments = @place.comments.all
 @comment = @place.comments.build
 {% endhighlight %}
 
 
+## Step 3: 編集/削除の権限を設定する
 
+commentの作成者だけがそのcommentを編集/削除できるようにします。
 
-
-## Step 3: Set edit/delete permissions
-
-Allow only the comment creator to edit/delete a comment.
-
-Open app/views/places/show.html.erb and substitute
-
+app/views/places/show.html.erbを開いて、下記のコードを
 
 {% highlight sh %}
 <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
 {% endhighlight %}
 
-with
+下記のコードに書き換えてください
 
 
 {% highlight sh %}
@@ -393,16 +399,13 @@ with
 {% endhighlight %}
 
 
-
-
-
 ## Resource Field Validation
 
-At the moment comments, places and users are characterized by information that is never validated for its correctness. Still, for instance, there should be a limit on the length of comments in review or on the format of a user's email address.
+現時点では、comment、place、userはその情報が正しいかどうかの検証が行われていません。レビューのcommentの長さの制限やuserのemailアドレスのフォーマットには制限があるべきです。
 
+commentのbodyフィールドに長さの制限を追加しましょう。(validatesを使用します)
+app/models/comment.rbを開いて、'class'と'end'の間に下記のコードを追加しましょう。
 
-Then let's add a constraint over the length of the comment's body field (we'll use the 'validates' keyword).
-Open app/models/comment.rb and add between 'class' and 'end':
 
 <div class="os-specific">
   <div class="nix">
@@ -410,24 +413,25 @@ Open app/models/comment.rb and add between 'class' and 'end':
   validates :body, length: { maximum: 140 }
 {% endhighlight %}
   </div>
-If we now try to enter more than 140 characters we'll get an error. (try it out! ;) )
 </div>
+140文字以上のコメントを入力しようとするとエラーが出るはずです。(試してみてください)
 
 ## Finetune the routes
+## ルーティングの微調整
 
-If you try to open [http://localhost:3000](http://localhost:3000) it still shows the "Welcome aboard" page. Let's make it redirect to the places page.
+もし [http://localhost:3000](http://localhost:3000) にアクセスしても"Welcome aboard" のページが表示される場合、placesページにリダイレクトさせましょう。
 
-Open `config/routes.rb` and after the first line add
+`config/routes.rb`を開いて最初の行の後に以下のコードを追加しましょう
 
 {% highlight ruby %}
 root :to => redirect('/places')
 {% endhighlight %}
 
-Test the change by opening the root path (that is, http://localhost:3000/) in your browser.
+ルートパス(http://localhost:3000/)にアクセスして、変更されたことを確認しましょう。
 
-**Coach:** Talk about routes, and include details on the order of routes and their relation to static files.
+{% coach %}
+ルーティングについて、教えてください。ルーティングの順序や静的ファイルとの関係についても説明してください。
+{% endcoach %}
 
-**Rails 3 users:** You will need to delete the index.html from the `/public/` folder for this to work.
-
-
+**Rails 3 をお使いの方へ:** この変更を適用するには、`/public/` フォルダーからindex.htmlを削除する必要があります。
 
