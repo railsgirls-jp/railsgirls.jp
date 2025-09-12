@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Rails Girls Izumo 1st 開催レポート
-date: 2025-9-12
+date: 2025-09-12
+image: /images/blog/izumo1st/poster_board.jpg
 ---
 
 <style type="text/css">
