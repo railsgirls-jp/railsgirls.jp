@@ -118,7 +118,7 @@ Bootstrapはいくつかの異なるパーツから構成されていますが�
 </nav>
 {% endhighlight %}
 
-さらに、ファイル末尾の `</body>` の直前に以下を追加してください。`<footer></fotter>` 部分により、「Rails Girls」というフッターと現在の年が追加され、`<script></script>` 部分によってナビゲーションバーを機能させるために必要なBootstrap JavaScriptを読み込んでいます。
+さらに、ファイル末尾の `</body>` の直前に以下を追加してください。`<footer></footer>` 部分により、「Rails Girls」というフッターと現在の年が追加され、`<script></script>` 部分によってナビゲーションバーを機能させるために必要なBootstrap JavaScriptを読み込んでいます。
 
 {% highlight erb %}
 <footer class="mt-5 text-center">
