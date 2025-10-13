@@ -110,21 +110,17 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 Bashウィンドウで以下のコマンドを実行してください。
 
 {% highlight sh %}
-rbenv install 3.4.4
-rbenv global 3.4.4
+rbenv install 3.4.7
+rbenv global 3.4.7
 {% endhighlight %}
 
 作業完了後に、以下のコマンドを実行してください。
 
 {% highlight sh %}
-ruby -v
+ruby --version
 {% endhighlight %}
 
-以下のように、インストールされたRubyのバージョンが表示されればOKです。
-
-{% highlight sh %}
-ruby 3.4.4 (2025-05-14 revision a38531fd3f) +PRISM [x86_64-linux]
-{% endhighlight %}
+`3.4.7` という数字が含まれた結果になるはずです。
 
 ### *3.* Railsのインストール
 
@@ -137,14 +133,10 @@ gem install rails --no-document
 作業完了後に、以下のコマンドを実行してください。
 
 {% highlight sh %}
-rails -v
+rails --version
 {% endhighlight %}
 
-以下のように、インストールされたRailsのバージョンが表示されればOKです（バージョンの番号は違うかもしれません）。
-
-{% highlight sh %}
-Rails 8.0.2
-{% endhighlight %}
+`Rails 8.0.3` と表示されるはずですが、それ以上のバージョンでも良いです。
 
 <hr />
 
