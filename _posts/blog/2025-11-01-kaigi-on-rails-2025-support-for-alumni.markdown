@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kaigi on Rails 2024 参加支援についてのご報告"
+title: "Kaigi on Rails 2025 参加支援についてのご報告"
 date: 2025-11-01
 image: /images/blog/kaigi-on-rails2025-support-for-alumni.jpg
 ---
