@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rails Girls Izumo 1st 開催レポート
-date: 2025-09-12
+date: 2025-11-11
 image: /images/blog/izumo1st/poster_board.jpeg
 ---
 
@@ -25,10 +25,11 @@ div.photos img.vertically-photo {
     object-fit: cover;
 }
 
-div.photos .caption {
-    font-size:smaller;
-    color: #444;
-    margin-top: 0.5em;
+div.flex-photos img.vertically-photo {
+    max-width: 350px;
+    width: 100%;
+    object-fit: cover;
+    margin-right: 0.5rem;
 }
 </style>
 
@@ -71,12 +72,21 @@ Rails Girls Izumo 1st は、Rails Girls Japan の江森さんにご協力いた�
 ## Rails Girls Izumo 1st のグッズ
 
 ロゴはオーガナイザーの1人である三島さんに作成いただきました！  
-このロゴを使ってグッズも作成しました。会場に掲示していたポスターやオーガナイザーやコーチが着用するTシャツは 
-GMOペパボ株式会社様の SUZURI から提供いただきました。
+
+また、ノベルティスポンサーのGMOペパボ株式会社様にご協力・ご提供いただき、  
+同社が運営するサービス「SUZURI」を使ってオーガナイザーやコーチが着用するロゴ入りTシャツやポスターを制作しました。  
+ご支援いただきありがとうございました。
+<div class="photos flex-photos">
+  <div>
+    <img class="vertically-photo" src="/images/blog/izumo1st/poster.jpeg" alt="Rails Girls Izumo ポスター">
+    <img class="photo" src="/images/blog/izumo1st/t-shirt.jpeg" alt="Rails Girls Izumo Tシャツ">
+  </div>
+</div>
+
+上記のほかに、配布用のグッズとしてクリアファイルとステッカーも製作しました！
 <div class="photos">
   <div>
-    <img class="vertically-photo" src="/images/blog/izumo1st/items.jpg" alt="RailsGirls Izumo クリアファイルとステッカー">
-    <img class="photo" src="/images/blog/izumo1st/t-shirt.jpeg" alt="RailsGirls Izumo Tシャツ">
+    <img class="vertically-photo" src="/images/blog/izumo1st/items.jpg" alt="Rails Girls Izumo クリアファイルとステッカー">
   </div>
 </div>
 
@@ -198,8 +208,8 @@ nekoさん、お話しいただきありがとうございました！
 
 アフターパーティー中にもコミュニティによるミニプレゼンテーションをしていただき、とても盛り上がりました。
 
-◎Rails Girls Japan設立者 / 江森さん  
-◎mruby / 羽角さん
+◎Rails Girls Japanメンバー / 江森さん  
+◎mruby committer / 羽角さん
 
 <div class="photos">
   <div>
