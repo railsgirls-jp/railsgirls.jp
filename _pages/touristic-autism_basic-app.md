@@ -1,67 +1,66 @@
 ---
-layout: default
+layout: guide
 title: Touristic Autism-friendly Spots App
 permalink: touristic-autism_basic-app
 ---
 
-# Basic Web Application
+# 基本的なWEBアプリケーション
 
 *Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
 *for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
-The basic guides that have been merged and adapted are the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), the [basic RailsGirls app](http://guides.railsgirls.com/app/) and the tutorials for [creating thumbnails](http://guides.railsgirls.com/thumbnails), [authenticating users](http://guides.railsgirls.com/devise/), [adding design](http://guides.railsgirls.com/design), [deploying to OpenShift](http://guides.railsgirls.com/openshift/) and [adding comments](http://guides.railsgirls.com/commenting).
+
+このガイドでは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [CarrierWave を使ってサムネイルを作ってみよう](/thumbnails)、[Devise で認証機能を追加](/devise)、[HTML & CSS を使ってデザインしてみよう](/design)、[OpenShiftでアプリを公開する](/openshift)、[コメント機能を追加しよう](/commenting) のチュートリアルといった基礎的なガイドを統合、適用しています。
 
 
-
-## Get to know the tools
+## ツールを知る
 
 <div class="indent" markdown="1">
 
 <h3><i class="icon-text-editor">&nbsp;</i></h3>
 
-<h3>Text Editor</h3>
+<h3>テキストエディタ</h3>
 
-<p><a href="http://www.sublimetext.com">Sublime Text</a>, <a href="http://www.activestate.com/komodo-edit">Komodo Edit</a>, Vim, Emacs, and Gedit are examples of text editors your can use for writing code and editing files.</p>
+<p><a href="http://www.sublimetext.com">Sublime Text</a>、<a href="http://www.activestate.com/komodo-edit">Komodo Edit</a>、Vim、Emacs、Geditなどのテキストエディタを使用して、コードを書くことやファイルを編集することができます。</p>
 
 <h3><i class="icon-prompt">&nbsp;</i></h3>
 
-<h3>Terminal (known as Command Prompt on Windows)</h3>
-Where you start the rails server and run commands.
+<h3>ターミナル（Windowsではコマンドプロンプトと呼ばれています）</h3>
+Railsサーバーを起動し、コマンドを実行する場所です。
 
 <h3><i class="icon-browser">&nbsp;</i></h3>
 
-<h3>Web browser</h3>
-(Firefox, Safari, Chrome) for viewing your application.
+<h3>ウェブブラウザ</h3>
+（Firefox、Safari、Chrome）アプリケーションを表示するために使用します。
 
 <h3>GitHub</h3>
 [Slides - by Kevin Lyda @]()
 
 </div>
 
-### Important
+### 重要
 
-It is important that you select the instructions specific to your operating system - the commands you need to run on a Windows computer are slightly different to Mac or Linux. If you're having trouble check the Operating System switcher at the bottom of the commands.
+自身のオペレーティングシステムの手順で進めることが重要です。Windowsコンピュータで実行する必要があるコマンドは、MacやLinuxとは異なります。問題が起きた場合は、コマンド欄で適切なオペレーティングシステムが選択されているか確認してください。
 
+## *1.* アプリケーションの作成
 
-## *1.*Creating the application
+新しいRailsアプリを*railsgirls-galway-2014*という名前で作成します。
 
-We're going to create a new Rails app called *railsgirls-galway-2014*.
+まず、ターミナルを開きましょう：
 
-First, let's open a terminal:
+* macOS: Spotlightを開き、*Terminal*と入力して*Terminal*アプリケーションをクリックします。
+* Windows: スタートをクリックし、*Command Prompt*を探して、*Command Prompt with Ruby and Rails*をクリックします。
+* Linux（Ubuntu/Fedora）: ダッシュから*Terminal*を検索し、*Terminal*をクリックします。
 
-* macOS: Open Spotlight, type *Terminal* and click the *Terminal* application.
-* Windows: Click Start and look for *Command Prompt*, then click *Command Prompt with Ruby and Rails*.
-* Linux (Ubuntu/Fedora): Search for *Terminal* on the dash and click *Terminal*.
-
-Next, type these commands in the terminal:
+次に、ターミナルに以下のコマンドを入力します：
 
 <div class="os-specific">
-  <div class="nix">
+  <div class="mac nix">
 {% highlight sh %}
 mkdir projects
 {% endhighlight %}
 
     <div>
-<p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>ls</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
+<p><code>projects</code>という名前のディレクトリが作成されたことを確認するには、ディレクトリを一覧できるコマンド<code>ls</code>を使用します。出力に<code>projects</code>ディレクトリが表示されるはずです。以下を実行して、現在いるディレクトリを<code>projects</code>フォルダに変更します：</p>
     </div>
 
 {% highlight sh %}
@@ -69,7 +68,7 @@ cd projects
 {% endhighlight %}
 
     <div>
-<p>You can verify you are now in an empty directory or folder by again running the <code>ls</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
+<p>再度<code>ls</code>コマンドを実行することで、空のディレクトリやフォルダにいることが確認できます。次に、<code>railsgirls</code>という名前の新しいアプリを作成するために、以下を実行します：</p>
     </div>
 
 {% highlight sh %}
@@ -77,7 +76,7 @@ rails new railsgirls-galway-2014
 {% endhighlight %}
 
     <div>
-<p>This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our rails app by running:</p>
+<p>これにより、<code>railsgirls</code>フォルダ内に新しいアプリが作成されます。現在いるディレクトリをRailsアプリの内部に変更するため、以下を実行します：</p>
     </div>
 
 {% highlight sh %}
@@ -86,7 +85,7 @@ cd railsgirls-galway-2014
 {% endhighlight %}
 
     <div>
-<p>If you run <code>ls</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. You can then start the rails server by running:</p>
+<p>ディレクトリ内で<code>ls</code>を実行すると、<code>app</code>や<code>config</code>などのフォルダが見えるはずです。その後、以下を実行してRailsサーバーを起動します：</p>
     </div>
 
 {% highlight sh %}
@@ -100,7 +99,7 @@ mkdir projects
 {% endhighlight %}
 
     <div>
-<p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>dir</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
+<p><code>projects</code>という名前のディレクトリが作成されたことを確認するには、ディレクトリを一覧できるコマンド<code>dir</code>を使用します。出力に<code>projects</code>ディレクトリが表示されるはずです。以下を実行して、現在いるディレクトリを<code>projects</code>フォルダに変更します：</p>
     </div>
 
 {% highlight sh %}
@@ -108,7 +107,7 @@ cd projects
 {% endhighlight %}
 
     <div>
-<p>You can verify you are now in an empty directory or folder by again running the <code>dir</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
+<p>再度<code>dir</code>コマンドを実行することで、空のディレクトリやフォルダにいることが確認できます。次に、<code>railsgirls</code>という名前の新しいアプリを作成するために、以下を実行します：</p>
     </div>
 
 {% highlight sh %}
@@ -116,7 +115,7 @@ rails new railsgirls-galway-2014
 {% endhighlight %}
 
     <div>
-<p>This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our rails app by running:</p>
+<p>これにより、<code>railsgirls</code>フォルダ内に新しいアプリが作成されます。現在いるディレクトリをRailsアプリの内部に変更するため、以下を実行します：</p>
     </div>
 
 {% highlight sh %}
@@ -125,7 +124,7 @@ cd railsgirls
 {% endhighlight %}
 
     <div>
-<p>If you run <code>dir</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. You can then start the rails server by running:</p>
+<p>ディレクトリ内で<code>dir</code>を実行すると、<code>app</code>や<code>config</code>などのフォルダが見えるはずです。その後、以下を実行してRailsサーバーを起動します：</p>
     </div>
 
 {% highlight sh %}
@@ -134,12 +133,12 @@ rails server
   </div>
 </div>
 
-Open [http://localhost:3000](http://localhost:3000) in your browser. You should see "Welcome aboard" page, which means that the generation of your new app worked correctly.
+ブラウザで[http://localhost:3000](http://localhost:3000)を開きます。「ようこそ」というページが表示されれば、新しいアプリの生成が正しく行われたことを示します。
 
-Notice in this window the command prompt is not visible because you are now in the Rails server, the command prompt looks like this:
+このウィンドウではコマンドプロンプトが表示されていないことに注意してください。なぜなら、現在Railsサーバー内にいるためです。コマンドプロンプトは次のように表示されます：
 
 <div class="os-specific">
-  <div class="nix">
+  <div class="mac nix">
 {% highlight sh %}
 $
 {% endhighlight %}
@@ -151,11 +150,14 @@ $
   </div>
 </div>
 
-When the command prompt is not visible you cannot execute new commands. If you try running `cd` or another command it will not work. To return to the normal command prompt:
+コマンドプロンプトが表示されていない状態では新しいコマンドを実行することはできません。`cd`や他のコマンドを実行しても機能しません。通常のコマンドプロンプトに戻るには：
 
-Hit <kbd>Ctrl</kbd>+<kbd>C</kbd> in the terminal to quit the server.
+ターミナルで <kbd>Ctrl</kbd>+<kbd>C</kbd> を押し、サーバーを終了します。
 
-**Coach:** Explain what each command does.
+{% coach %}
+各コマンドが何をするのか説明してください。
+{% endcoach %}
+
 [What is a web application and a server - Slides by @]()
 The skeleteon generated by "rails new" reflects the [Model-View-Controller - Slides by @]() architectural pattern.
 
