@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rails Girls Sapporo 2nd 開催レポート
-date: 2025-12-16
+date: 2025-12-22
 image: /images/blog/sapporo2nd/syugo.webp
 ---
 
