@@ -260,3 +260,10 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 
 たくさん笑って、おしゃべりして、学びの多い一日になりました。
 本イベントを通じて得られた出会いや気づきが、今後の皆さまの挑戦や成長につながり、また思わぬ「えにし」として結ばれることを、オーガナイザー一同願っております。
+
+
+### 関連リンク
+
+[公式Twitter](https://x.com/railsgsapporo)
+[#railsgirlssapporo ポスト一覧](https://x.com/search?q=%23railsgirlssapporo&f=live)
+[Rails Girls Sapporo 2nd公式ウェブサイト](https://railsgirls.com/sapporo-2nd.html)
