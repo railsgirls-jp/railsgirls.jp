@@ -4,7 +4,7 @@ title: RubyKaigi2017 参加支援についてのご報告
 date: 2017-09-23
 image: /images/blog/DKJjw4LVAAAeWAj.jpg
 ---
-<p><p>Rails Girls Japan では、この度、これまでのRails Girls イベントの参加者の中から、
+<p>Rails Girls Japan では、この度、これまでのRails Girls イベントの参加者の中から、
 RubyKaigi2017 への参加希望を募り、
 お申し出のあった2名の方への参加支援を行いました。</p>
 
