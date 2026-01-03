@@ -27,7 +27,7 @@
   - [OpenShift](/openshift) {% if page.permalink == 'openshift' %}(このページです！){% endif %}
   - [anynines](/anynines) {% if page.permalink == 'anynines' %}(このページです！){% endif %}
   - [Engine Yard](/engineyard) {% if page.permalink == 'engineyard' %}(このページです！){% endif %}
-* ガイド 11: [HTML & CSS を使ってデザインしてみよう](/design) {% if page.permalink == 'design' %}(このページです！){% endif %}
+* ガイド 11: [HTML と CSS を使ってアイデアのページをデザインしてみよう](/design) {% if page.permalink == 'design' %}(このページです！){% endif %}
 * ガイド 12: [あなたのアプリにコメント出来るようにしましょう](/commenting) {% if page.permalink == 'commenting' %}(このページです！){% endif %}
 * ガイド 13: [Carrierwave を使って画像をリサイズしよう](/thumbnails) {% if page.permalink == 'thumbnails' %}(このページです！){% endif %}
 * ガイド 14: [RSpecでアプリをテストしよう](/testing-rspec) {% if page.permalink == 'testing-rspec' %}(このページです！){% endif %}

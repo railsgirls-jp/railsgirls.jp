@@ -17,7 +17,7 @@ permalink: touristic-autism_intro
 * 評価機能
 * 認証ユーザー（デバイス経由）の権限設定
 
-このガイドでは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [CarrierWave を使ってサムネイルを作ってみよう](/thumbnails)、[Devise で認証機能を追加](/devise)、[HTML & CSS を使ってデザインしてみよう](/design)、[OpenShiftでアプリを公開する](/openshift)、[コメント機能を追加しよう](/commenting) のチュートリアルといった基礎的なガイドを統合、適用しています。
+このガイドでは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [CarrierWave を使ってサムネイルを作ってみよう](/thumbnails)、[Devise で認証機能を追加](/devise)、[HTML と CSS を使ってアイデアのページをデザインしてみよう](/design)、[OpenShiftでアプリを公開する](/openshift)、[コメント機能を追加しよう](/commenting) のチュートリアルといった基礎的なガイドを統合、適用しています。
 
 
 
