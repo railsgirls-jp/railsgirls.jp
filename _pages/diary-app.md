@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Rails Girls Diary tutorial
+title: Ruby on Railsで初めての日記アプリを作ろう
 permalink: diary-app
 ---
 
