@@ -18,7 +18,7 @@ Ruby on Rails でアプリや他のものを作るために、いくつかソフ
 
 一覧にある、あなたのオペレーティングシステムに合った手順に従ってください。何か問題に遭遇しても、慌てないでください。[知られているエラーの節](#possible-errors-during-installation) を確認するか、イベントのオーガナイザーやコーチたちに知らせてください。一緒に解決しましょう。
 
-- [Mac 用セットアップ](/install/macos)
+- [macOS 用セットアップ](/install/macos)
 - [Windows 用セットアップ](/install/windows)
 - [Windows 用セットアップ（WSL）](/install/windows-wsl)
 - [Linux 用セットアップ](/install/linux)
