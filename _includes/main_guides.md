@@ -6,7 +6,7 @@
 
 * ガイド 1: [はじめに](/start) {% if page.permalink == 'start' %}(このページです！){% endif %}
 * ガイド 2: [ツールについて知ろう](/tools) {% if page.permalink == 'tools' %}(このページです！){% endif %}
-* ガイド 3: [Railsインストールガイド](/install) {% if page.permalink == 'install' %}(このページです！){% endif %}
+* ガイド 3: [Rails Girls インストール・レシピ](/install) {% if page.permalink == 'install' %}(このページです！){% endif %}
   - [macOS 用セットアップ](/install/macos) {% if page.permalink == 'install/macos' %}(このページです！){% endif %}
   - [Windows 用セットアップ](/install/windows) {% if page.permalink == 'install/windows' %}(このページです！){% endif %}
   - [Windows 用セットアップ（WSL）](/install/windows-wsl) {% if page.permalink == 'install/windows-wsl' %}(このページです！){% endif %}
