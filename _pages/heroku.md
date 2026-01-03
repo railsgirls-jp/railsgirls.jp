@@ -1,10 +1,10 @@
 ---
 layout: main_guide
-title: Rails Girls Heroku に deploy
+title: Herokuであなたのアプリをオンラインにあげよう
 permalink: heroku
 ---
 
-# Heroku に Rails アプリを deploy しよう
+# Herokuであなたのアプリをオンラインにあげよう
 
 *Created by Terence Lee, [@hone02](https://twitter.com/hone02)*
 

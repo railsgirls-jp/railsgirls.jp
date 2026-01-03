@@ -1,10 +1,10 @@
 ---
 layout: main_guide
-title: Rails Girls on Engine Yard
+title: Engine Yardであなたのアプリをオンラインにあげよう
 permalink: engineyard
 ---
 
-# Engine Yardを使用してインターネットに公開しよう!
+# Engine Yardであなたのアプリをオンラインにあげよう
 
 *Created by Mary Jenn, [@mfjenn](https://twitter.com/mfjenn), Translated by Hiroshi SHIBATA*
 

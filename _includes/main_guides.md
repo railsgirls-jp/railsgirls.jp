@@ -25,7 +25,7 @@
   - [Heroku](/heroku) {% if page.permalink == 'heroku' %}(このページです！){% endif %}
   - [DigitalOcean](/digitalocean) {% if page.permalink == 'digitalocean' %}(このページです！){% endif %}
   - [OpenShift](/openshift) {% if page.permalink == 'openshift' %}(このページです！){% endif %}
-  - [Anynines](/anynines) {% if page.permalink == 'anynines' %}(このページです！){% endif %}
+  - [anynines](/anynines) {% if page.permalink == 'anynines' %}(このページです！){% endif %}
   - [Engine Yard](/engineyard) {% if page.permalink == 'engineyard' %}(このページです！){% endif %}
 * ガイド 11: [HTML & CSS を使ってデザインしてみよう](/design) {% if page.permalink == 'design' %}(このページです！){% endif %}
 * ガイド 12: [あなたのアプリにコメント出来るようにしましょう](/commenting) {% if page.permalink == 'commenting' %}(このページです！){% endif %}
