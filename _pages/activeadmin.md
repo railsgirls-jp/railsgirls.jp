@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Active Adminを使用したバックエンドの追加
+title: アプリにバックエンドを追加しよう(管理画面)
 permalink: backend-with-active-admin
 ---
 
-# Active Adminを使用したバックエンドの追加
+# アプリにバックエンドを追加しよう(管理画面)
 
 *Created by [Rasmus Kjellberg](https://www.rasmuskjellberg.se) / 翻訳者: Nana Matsuoka*
 
