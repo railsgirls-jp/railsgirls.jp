@@ -1,10 +1,10 @@
 ---
 layout: guide
-title: Devise で認証機能を追加
+title: Deviseによる認証を追加してみよう
 permalink: devise
 ---
 
-# Devise で認証機能を追加
+# Deviseによる認証を追加してみよう
 
 *Created by Piotr Steininger, [@polishprince](https://twitter.com/polishprince). Updated by Ernesto Jimenez, [@ernesto_jimenez](https://twitter.com/ernesto_jimenez)*, and [Hasan Diwan](https://units.d8u.us/twitter?src`=railsgirlsGuide)*
 
