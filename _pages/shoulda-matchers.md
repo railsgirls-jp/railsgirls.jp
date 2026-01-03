@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: shoulda matchersでテストを簡潔にしよう
+title: Shoulda Matchersでテストを簡潔にしよう
 permalink: testing-shoulda-matchers
 ---
 

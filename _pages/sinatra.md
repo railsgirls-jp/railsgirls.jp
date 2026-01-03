@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Web Fundamentals Tutorial
+title: Web基礎チュートリアル
 permalink: sinatra
 ---
 

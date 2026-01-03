@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Test Driven Development
+title: テスト駆動開発
 permalink: test-driven-development
 ---
 
 # テスト駆動開発
 
-*Written by Gregory McIntyre, [@gregmcintyre](https://twitter.com/gregmcintyre)*  
+*Written by Gregory McIntyre, [@gregmcintyre](https://twitter.com/gregmcintyre)*
 *Translated by Toshiki Iwama, [@avenue2115](https://twitter.com/avenue2115)*
 
 この演習では、*テスト駆動開発* (TDD)という言葉を使うとき、どのようなことを意図しているのかを学びます。
