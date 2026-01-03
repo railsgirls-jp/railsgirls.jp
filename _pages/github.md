@@ -1,10 +1,10 @@
 ---
 layout: main_guide
-title: GitHubにpushしてみよう ( How to Push to GitHub )
+title: GitHub であなたのアプリのコードを公開しよう
 permalink: github
 ---
 
-# GitHubに自分のアプリをPushする
+# GitHub であなたのアプリのコードを公開しよう
 
 *作成者： Alyson La, [@realalysonla](https://www.twitter.com/realalysonla)*
 *[Original page](https://railsgirls.com/)*
