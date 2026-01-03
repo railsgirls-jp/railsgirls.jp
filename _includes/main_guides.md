@@ -17,7 +17,7 @@
 * ガイド 4: [はじめてのアプリを作る](/app) {% if page.permalink == 'app' %}(このページです！){% endif %}
 * ガイド 5: [HTMLとCSSを使ってアプリをスタイリングしよう](/html-and-css) {% if page.permalink == 'html-and-css' %}(このページです！){% endif %}
 * ガイド 6: [アプリに新しいページを追加しよう](/new-page) {% if page.permalink == 'new-page' %}(このページです！){% endif %}
-* ガイド 7: [あなたのアプリに新しいホーム画面を追加しよう](/new-homepage) {% if page.permalink == 'new-homepage' %}(このページです！){% endif %}
+* ガイド 7: [新しいホーム画面を追加しよう](/new-homepage) {% if page.permalink == 'new-homepage' %}(このページです！){% endif %}
 * ガイド 8: [画像アップロード機能を追加しよう](/uploads) {% if page.permalink == 'uploads' %}(このページです！){% endif %}
 * ガイド 9: [GitHub であなたのアプリのコードを公開しよう](/github) {% if page.permalink == 'github' %}(このページです！){% endif %}
 * ガイド 10: これらのサービスのどれかで [あなたのアプリをインターネットに公開しよう](/deployment) {% if page.permalink == 'deployment' %}(このページです！){% endif %}
