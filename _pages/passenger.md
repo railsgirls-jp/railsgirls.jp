@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Rails Girls on Passenger
+title: Phusion Passengerでスムーズに開発しよう
 permalink: passenger
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Continuous Deployment - cuz less hassle
+title: Travis（およびanynines）を使用した継続的デプロイ
 permalink: continuous-travis
 ---
 
-# Travisを使用した継続的デプロイ
+# Travis（およびanynines）を使用した継続的デプロイ
 
 *Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)* / *翻訳者: [@monya_tto](https://twitter.com/monya_tto)*
 
