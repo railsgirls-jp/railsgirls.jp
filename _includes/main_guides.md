@@ -12,8 +12,8 @@
   - [Windows 用セットアップ（WSL）](/install/windows-wsl) {% if page.permalink == 'install/windows-wsl' %}(このページです！){% endif %}
   - [Linux 用セットアップ](/install/linux) {% if page.permalink == 'install/linux' %}(このページです！){% endif %}
   - [仮想マシンにセットアップする](/install/virtual-machine) {% if page.permalink == 'install/virtual-machine' %}(このページです！){% endif %}
-  - [クラウドサービス Replit を使う](/install/replit) {% if page.permalink == 'install/replit' %}(このページです！){% endif %}
-  - [GitHub Codespaces を使う](/install/codespaces) {% if page.permalink == 'install/codespaces' %}(このページです！){% endif %}
+  - [クラウドサービス Replit を利用する](/install/replit) {% if page.permalink == 'install/replit' %}(このページです！){% endif %}
+  - [GitHub Codespaces を利用する](/install/codespaces) {% if page.permalink == 'install/codespaces' %}(このページです！){% endif %}
 * ガイド 4: [はじめてのアプリを作る](/app) {% if page.permalink == 'app' %}(このページです！){% endif %}
 * ガイド 5: [HTMLとCSSを使ってアプリをスタイリングしよう](/html-and-css) {% if page.permalink == 'html-and-css' %}(このページです！){% endif %}
 * ガイド 6: [アプリに新しいページを追加しよう](/new-page) {% if page.permalink == 'new-page' %}(このページです！){% endif %}

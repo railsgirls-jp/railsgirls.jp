@@ -24,8 +24,8 @@ Ruby on Rails でアプリや他のものを作るために、いくつかソフ
 - [Linux 用セットアップ](/install/linux)
 - その他のインストール方法です。上記のガイドでうまくいかなかったら取り組んでみましょう。
     - [仮想マシンにセットアップする](/install/virtual-machine)
-    - [クラウドサービス Replit を使う - 何もインストールする必要はありません](/install/replit)
-    - [GitHub Codespaces を使う](/install/codespaces)
+    - [クラウドサービス Replit を利用する](/install/replit)
+    - [GitHub Codespaces を利用する](/install/codespaces)
 
 {% coach %}
 インストール中に問題が発生した場合、この [Troubleshooting](https://github.com/railsgirls-jp/railsgirls-jp.github.io/wiki/Troubleshooting) のページを参考にしてください。
