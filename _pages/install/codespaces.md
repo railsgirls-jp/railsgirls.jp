@@ -1,11 +1,11 @@
 ---
 layout: main_guide
-title: GitHub Codespaces を使う
+title: GitHub Codespaces を利用する
 description: "Install Ruby and Rails on your Linux computer and get prepared for the Rails Girls workshop."
 permalink: install/codespaces
 ---
 
-# GitHub Codespacesを利用する
+# GitHub Codespaces を利用する
 
 [GitHub Codespaces](https://github.co.jp/features/codespaces) はブラウザ上で開発できるサービスです。必要なものは GitHub アカウントです。無料のプランでも月60時間まで使えるため、有料の Pro プランなどへのアップグレードは不要です。
 

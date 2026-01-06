@@ -1,11 +1,11 @@
 ---
 layout: main_guide
-title: 画像アップロード機能を追加する
+title: 画像アップロード機能を追加しよう
 description: "Railsアプリで画像アップロードをできるようにしてアイデアを膨らませよう。"
 permalink: uploads
 ---
 
-# 画像アップロード機能を追加する
+# 画像アップロード機能を追加しよう
 
 *翻訳者: Mai Muta, [@maimux2x](https://twitter.com/maimux2x)*
 

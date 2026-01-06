@@ -18,14 +18,14 @@ Ruby on Rails でアプリや他のものを作るために、いくつかソフ
 
 一覧にある、あなたのオペレーティングシステムに合った手順に従ってください。何か問題に遭遇しても、慌てないでください。[知られているエラーの節](#possible-errors-during-installation) を確認するか、イベントのオーガナイザーやコーチたちに知らせてください。一緒に解決しましょう。
 
-- [Mac 用セットアップ](/install/macos)
+- [macOS 用セットアップ](/install/macos)
 - [Windows 用セットアップ](/install/windows)
 - [Windows 用セットアップ（WSL）](/install/windows-wsl)
 - [Linux 用セットアップ](/install/linux)
 - その他のインストール方法です。上記のガイドでうまくいかなかったら取り組んでみましょう。
     - [仮想マシンにセットアップする](/install/virtual-machine)
-    - [クラウドサービス Replit を使う - 何もインストールする必要はありません](/install/replit)
-    - [GitHub Codespaces を使う](/install/codespaces)
+    - [クラウドサービス Replit を利用する](/install/replit)
+    - [GitHub Codespaces を利用する](/install/codespaces)
 
 {% coach %}
 インストール中に問題が発生した場合、この [Troubleshooting](https://github.com/railsgirls-jp/railsgirls-jp.github.io/wiki/Troubleshooting) のページを参考にしてください。

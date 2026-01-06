@@ -1,6 +1,6 @@
 ---
 layout: main_guide
-title: Rails Girls on DigitalOcean
+title: DigitalOceanであなたのアプリをオンラインにあげよう
 description: "このガイドに沿ってDigitalOceanであなたのアプリをデプロイしよう"
 permalink: digitalocean
 ---

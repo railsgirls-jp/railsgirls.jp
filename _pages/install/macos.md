@@ -1,11 +1,11 @@
 ---
 layout: main_guide
-title: Mac 用セットアップ
+title: macOS 用セットアップ
 description: "Ruby と Rails をあなたの Mac コンピュータにインストールし、Rails Girls ワークショップの準備をしましょう。"
 permalink: install/macos
 ---
 
-# Mac 用セットアップ
+# macOS 用セットアップ
 
 *翻訳者: Goh Matsumoto, [@urimaro](https://twitter.com/urimaro)*
 

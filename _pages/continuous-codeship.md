@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Continuous Deployment - cuz less hassle
+title: Codeship（およびHeroku）を使用した継続的デプロイ
 permalink: continuous
 ---
 
-# Codeshipを使用した継続的デプロイ
+# Codeship（およびHeroku）を使用した継続的デプロイ
 
 *Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)* / *翻訳者: [@peno022](https://twitter.com/peno022)*
 

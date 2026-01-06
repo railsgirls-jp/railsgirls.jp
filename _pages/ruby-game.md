@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Write a little game in Ruby!
+title: Rubyで簡単なゲームを作ってみよう！
 permalink: ruby-game
 ---
 
-# Ruby で簡単なゲームを作ってみよう
+# Rubyで簡単なゲームを作ってみよう！
 
 *Created by Patrick Huesler, [@phuesler](https://twitter.com/phuesler) & Floor Drees, [@floordrees](https://twitter.com/floordrees) for [Rails Girls The Hague](https://railsgirls.com/thehague)*　/ _翻訳者: maimu, [@maimux2x](https://twitter.com/maimux2x)_
 

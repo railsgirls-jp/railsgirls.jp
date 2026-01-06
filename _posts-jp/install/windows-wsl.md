@@ -1,7 +1,7 @@
 ---
 layout: main_guide
-title: Setup on Windows with WSL
-description: "Install Ruby and Rails on your Windows computer and get prepared for the Rails Girls workshop."
+title: Windows 用セットアップ（WSL）
+description: "Ruby と Rails をあなたの Windows コンピュータにインストールし、Rails Girls ワークショップの準備をしましょう。"
 permalink: install/windows-wsl
 ---
 

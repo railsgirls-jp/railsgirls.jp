@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Rails Girls Sinatra tutorial
+title: Sinatraを使って初めての投票アプリを作ってみよう
 permalink: sinatra-app
 redirect_from:
   - sinatra-app-bg

@@ -1,10 +1,10 @@
 ---
 layout: main_guide
-title: Rails Girls on anynines
+title: anyninesであなたのアプリをオンラインにあげよう
 permalink: anynines
 ---
-　
-# anyninesを使用してインターネットに公開しよう!
+
+# anyninesであなたのアプリをオンラインにあげよう
 *Created by Floor Drees, [@floordrees](https://twitter.com/floordrees)* / *Translated by moegi, [@moegi_web](https://twitter.com/moegi_web)*
 
 {% coach %}

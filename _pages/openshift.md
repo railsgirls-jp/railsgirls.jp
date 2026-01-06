@@ -1,10 +1,10 @@
 ---
 layout: main_guide
-title: Rails Girls on OpenShift
+title: OpenShiftであなたのアプリをオンラインにあげよう
 permalink: openshift
 ---
 
-# OpenShiftでアプリを公開する
+# OpenShiftであなたのアプリをオンラインにあげよう
 
 *Created by Katie Miller, [@codemiller](https://twitter.com/codemiller) / 翻訳: Uchio Kondo [@udzura](https://github.com/udzura)*
 
