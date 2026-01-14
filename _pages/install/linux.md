@@ -47,13 +47,13 @@ bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/
 以下のアプリケーション生成コマンドを実行して、全てが動作していることを確認します。
 
 {% highlight sh %}
-rails new myapp
+rails new railsgirlsapp
 {% endhighlight %}
 
 アプリケーションのディレクトリに移動し、
 
 {% highlight sh %}
-cd myapp
+cd railsgirlsapp
 {% endhighlight %}
 
 Railsサーバーを起動します。

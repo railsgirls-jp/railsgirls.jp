@@ -60,7 +60,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 ### sqlite3 gem のインストールに失敗する
 
-`rails new myapp` を実行しているときに、gem `sqlite3` のインストールに失敗するかもしれません。そのときは、まず、Windows のコマンドプロンプトを閉じてください。そして Windows のコマンドプロンプトを再度起動してください。
+`rails new railsgirlsapp` を実行しているときに、gem `sqlite3` のインストールに失敗するかもしれません。そのときは、まず、Windows のコマンドプロンプトを閉じてください。そして Windows のコマンドプロンプトを再度起動してください。
 
 次に、以下のコマンドを実行して `sqlite3` を `rails` とは別にインストールします。
 
@@ -68,4 +68,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem install sqlite3
 {% endhighlight %}
 
-うまくいけば、railsインストーラーが作成したディレクトリ `myapp` を削除し、インストール手順に戻って、再度 `rails new myapp` を実行してください。
+うまくいけば、railsインストーラーが作成したディレクトリ `railsgirlsapp` を削除し、インストール手順に戻って、再度 `rails new railsgirlsapp` を実行してください。
