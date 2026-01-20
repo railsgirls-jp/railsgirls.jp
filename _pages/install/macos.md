@@ -60,7 +60,7 @@ brew install rbenv
 {% endhighlight %}
 
 {% highlight sh %}
-echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+rbenv init
 {% endhighlight %}
 
 {% highlight sh %}
