@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RubyKaigi 2026 参加支援募集のお知らせ"
-date: 2026-01-14
+date: 2026-01-21
 image: /images/railsgirls-sq.png
 ---
 
