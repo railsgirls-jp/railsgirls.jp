@@ -11,11 +11,12 @@ div.photos {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 1em;
+    gap: 5px;
 }
 
 div.photos img.photo {
-    max-width: 480px;
-    width: 100%;
+    max-width: calc(50% - 2.5px);
+    width: calc(50% - 2.5px);
     object-fit: cover;
 }
 
