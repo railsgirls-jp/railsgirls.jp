@@ -49,6 +49,7 @@ div.flex-photos img.vertically-photo {
 ## Rails Girls Sapporo 2nd 開催のきっかけ
 
 オーガナイザーのはるが、2024年6月末に [えにしテック15周年記念カンファレンス](https://enishi-tech-15th-anniv-conf.peatix.com/) に参加した際に、今回コーチ・LTもしていただいた島田さん（[@snoozer05](https://x.com/snoozer05)）が、Rails Girls Japanの江森さん（[@emorima](https://x.com/emorima)）を紹介してくださいました。
+
 そこで、札幌でのRails Girlsは10年以上開催されていないことを知りました。
 札幌でも女性がプログラミングに親しめる場や、Rubyコミュニティのイベントに参加できる機会を作りたいと思い、北海道のコミュニティ内で知り合った3人で開催することになりました！
 
@@ -58,6 +59,7 @@ div.flex-photos img.vertically-photo {
 
 ## 6回実施した「素振り会」
 12年ぶりの開催となる Rails Girls Sapporo 2nd に向けて、 オーガナイザーとしても、「本当に大丈夫だろうか」「当日をスムーズに迎えられるだろうか」という不安がありました。
+
 そんな中、江森さんから 「事前に素振り会をやるといいですよ」とアドバイスをいただいたことをきっかけに、 Sapporo 2nd では 結果的に 全6回の素振り会 を行いました。
 素振り会では、当日の進行や教材を確認しながら、 実際にどこでつまずきそうか、どんな声かけが必要かをみんなで確認しました。
 話し合った内容はナレッジとしてドキュメント化し、共有知にしていくことを心がけていました。
@@ -68,6 +70,7 @@ div.flex-photos img.vertically-photo {
 
 素振り会を通して、コーチの皆さんが自発的にドキュメントを読んで準備してくださっている様子を目にすることができました。
 「Girlsのために、よりよい時間を作りたい」という思いが伝わってきて、 オーガナイザー一同、ありがたいなあと感じる場面が何度もありました。
+
 振り返ってみると、この素振り会があったことで、 当日少し肩の力を抜いて迎えることができて、 温かい雰囲気のワークショップにつながったように感じています。
 
 ## オープニング・アイスブレイク
@@ -119,16 +122,16 @@ Girls一人一人にマンツーマンでコーチがつき、10月17日（金�
 ランチタイム中には、スポンサー企業の皆さんにLTもしていただきました。
 個人の学習方法のお話から、エンジニア転職を考える際に役立つ助成金の紹介まで、テーマはさまざま。どれも興味深く、聞いていて飽きない楽しい時間でした。
 
-○フリー株式会社 / 佐藤さん
-○株式会社MIERUNE / オーガナイザー 中川さん
-○株式会社えにしテック / オーガナイザー はるさん
-○STORES株式会社 / 橋本さん
-○株式会社ロッカ / 町田さん
-○株式会社SmartHR / 岸川さん
-○ピクシブ株式会社 / 野間口さん（joyさん）
+- フリー株式会社 / 佐藤さん
+- 株式会社MIERUNE / オーガナイザー 中川さん
+- 株式会社えにしテック / オーガナイザー はるさん
+- STORES株式会社 / 橋本さん
+- 株式会社ロッカ / 町田さん
+- 株式会社SmartHR / 岸川さん
+- ピクシブ株式会社 / 野間口さん（joyさん）
 
 また、オーガナイザーのえびもLTしました！
-○Middlemanに入門してみた！ / えび
+- Middlemanに入門してみた！ / えび
 
 <div class="photos">
   <img class="photo" src="/images/blog/sapporo2nd/sponsor1.webp" alt="フリー株式会社さんのLT">
@@ -189,7 +192,9 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 ## アフターパーティ
 
 アフターパーティでは、増田おはぎさんのおはぎや、オーガナイザーおすすめの北海道銘菓を準備しました！
+
 飲み物は、リボンナポリンや富良野ホップ炭酸水など、北海道ならではのものを選んでみました。
+
 「これどんな味なんだろう？」と参加者のみなさんが盛り上がりながらおしゃべりしている様子を見て、オーガナイザー一同、「開催してよかったなあ」としみじみ感じるひとときでした。
 
 <div class="photos">
@@ -200,13 +205,15 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 </div>
 
 アフターパーティでは、コーチLT・コミュニティ紹介のLTをしていただきました！
+
 17年以上コミュニティ活動をされている西原さんの「技術系の勉強会・コミュニティとは何か」というお話からスタートし、Girlsの皆さんが次のステップとしても参加できるSapporo Engineer Baseさんのイベントの紹介もありました。コーチLTの島田さんからは、こうした活動を通じて生まれ、継続していく「縁」についてのお話をしていただきました。
+
 どの発表も本当に素晴らしく、資料へのリンクも掲載しましたので、ぜひご覧ください！
 
-○[情報技術系の勉強会とコミュニティ文化](https://www.docswell.com/s/tomio2480/5JQVEN-introduction-to-study-group) / 西原さん（[@tomio2480](https://x.com/tomio2480)）
-○[Sapporo Engineer Baseについて](https://sapporo-engineer-base.dev/) / 特別協力Sapporo Engineer Base&コーチ 西村さん（[@_n13u_](https://x.com/_n13u_)）
-○[One Enishi After Another](https://speakerdeck.com/snoozer05/one-enishi-after-another) / コーチ 島田さん（[@snoozer05](https://x.com/snoozer05)）
-○Rails Girls Japanについて / 江森さん（[@emorima](https://x.com/emorima)）
+- [情報技術系の勉強会とコミュニティ文化](https://www.docswell.com/s/tomio2480/5JQVEN-introduction-to-study-group) / 西原さん（[@tomio2480](https://x.com/tomio2480)）
+- [Sapporo Engineer Baseについて](https://sapporo-engineer-base.dev/) / 特別協力Sapporo Engineer Base&コーチ 西村さん（[@_n13u_](https://x.com/_n13u_)）
+- [One Enishi After Another](https://speakerdeck.com/snoozer05/one-enishi-after-another) / コーチ 島田さん（[@snoozer05](https://x.com/snoozer05)）
+- Rails Girls Japanについて / 江森さん（[@emorima](https://x.com/emorima)）
 
 <div class="photos">
   <img class="photo" src="/images/blog/sapporo2nd/after1.webp" alt="西原さんのLT">
@@ -235,6 +242,6 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 
 ### 関連リンク
 
-[公式Twitter](https://x.com/railsgsapporo)
-[#railsgirlssapporo ポスト一覧](https://x.com/search?q=%23railsgirlssapporo&f=live)
-[Rails Girls Sapporo 2nd公式ウェブサイト](https://railsgirls.com/sapporo-2nd.html)
+- [公式Twitter](https://x.com/railsgsapporo)
+- [#railsgirlssapporo ポスト一覧](https://x.com/search?q=%23railsgirlssapporo&f=live)
+- [Rails Girls Sapporo 2nd公式ウェブサイト](https://railsgirls.com/sapporo-2nd.html)
