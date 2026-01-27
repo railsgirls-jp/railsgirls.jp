@@ -42,9 +42,7 @@ div.flex-photos img.vertically-photo {
 一般財団法人さっぽろ産業振興財団との共催という形で開催し、作業しやすく雰囲気の良い会場をお貸しいただきました。ありがとうございました！
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/zentai.webp" alt="会場全体の様子">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/zentai.webp" alt="会場全体の様子">
 </div>
 
 ## Rails Girls Sapporo 2nd 開催のきっかけ
@@ -54,9 +52,7 @@ div.flex-photos img.vertically-photo {
 札幌でも女性がプログラミングに親しめる場や、Rubyコミュニティのイベントに参加できる機会を作りたいと思い、北海道のコミュニティ内で知り合った3人で開催することになりました！
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/organizer.webp" alt="オーガナイザー紹介">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/organizer.webp" alt="オーガナイザー紹介">
 </div>
 
 ## 6回実施した「素振り会」
@@ -66,9 +62,7 @@ div.flex-photos img.vertically-photo {
 話し合った内容はナレッジとしてドキュメント化し、共有知にしていくことを心がけていました。
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/suburikai.webp" alt="素振り会">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/suburikai.webp" alt="素振り会">
 </div>
 
 素振り会を通して、コーチの皆さんが自発的にドキュメントを読んで準備してくださっている様子を目にすることができました。
@@ -82,18 +76,14 @@ div.flex-photos img.vertically-photo {
 お伝えさせていただきました。
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/opening.webp" alt="オープニング">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/opening.webp" alt="オープニング">
 </div>
 
 オープニングの後半はアイスブレイクで「以心伝心ゲーム」を行いました！お題に対してグループで同じ答えを出すことができるかを競うこのゲーム。
 グループ内で会話をするきっかけも生まれ、Girlsの皆さんやコーチの緊張もほぐれ楽しげな雰囲気になりました。
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/icebreak.webp" alt="アイスブレイク">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/icebreak.webp" alt="アイスブレイク">
 </div>
 
 ## ワークショップ開催の様子
@@ -104,16 +94,14 @@ Girls一人一人にマンツーマンでコーチがつき、10月17日（金�
 みなさん和気あいあいと、楽しそうにWebアプリの開発を進められており、とても温かい雰囲気でした。
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/workshop1.webp" alt="キタキツネグループの様子">
-    <img class="photo" src="/images/blog/sapporo2nd/workshop2.webp" alt="スケッチブックで図解しながらの説明">
-    <img class="photo" src="/images/blog/sapporo2nd/workshop3.webp" alt="マンツーマンでのサポートの様子">
-    <img class="photo" src="/images/blog/sapporo2nd/workshop4.webp" alt="ガイドの内容をアレンジしてピンク色のウェブサイトにしている様子">
-    <img class="photo" src="/images/blog/sapporo2nd/workshop5.webp" alt="エゾリスチームの様子">
-    <img class="photo" src="/images/blog/sapporo2nd/workshop6.webp" alt="たくさんの枚数のスケッチブック">
-    <img class="photo" src="/images/blog/sapporo2nd/workshop7.webp" alt="エゾユキウサギチームの様子">
-    <img class="photo" src="/images/blog/sapporo2nd/workshop8.webp" alt="マンツーマンで図解しながらの説明">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/workshop1.webp" alt="キタキツネグループの様子">
+  <img class="photo" src="/images/blog/sapporo2nd/workshop2.webp" alt="スケッチブックで図解しながらの説明">
+  <img class="photo" src="/images/blog/sapporo2nd/workshop3.webp" alt="マンツーマンでのサポートの様子">
+  <img class="photo" src="/images/blog/sapporo2nd/workshop4.webp" alt="ガイドの内容をアレンジしてピンク色のウェブサイトにしている様子">
+  <img class="photo" src="/images/blog/sapporo2nd/workshop5.webp" alt="エゾリスチームの様子">
+  <img class="photo" src="/images/blog/sapporo2nd/workshop6.webp" alt="たくさんの枚数のスケッチブック">
+  <img class="photo" src="/images/blog/sapporo2nd/workshop7.webp" alt="エゾユキウサギチームの様子">
+  <img class="photo" src="/images/blog/sapporo2nd/workshop8.webp" alt="マンツーマンで図解しながらの説明">
 </div>
 
 ## お昼休憩・スポンサーLTの様子
@@ -124,9 +112,7 @@ Girls一人一人にマンツーマンでコーチがつき、10月17日（金�
 ありがとうございます。
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/obento.webp" alt="お弁当">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/obento.webp" alt="お弁当">
 </div>
 
 ランチタイム中には、スポンサー企業の皆さんにLTもしていただきました。
@@ -144,16 +130,14 @@ Girls一人一人にマンツーマンでコーチがつき、10月17日（金�
 ○Middlemanに入門してみた！ / えび
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/sponsor1.webp" alt="フリー株式会社さんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/sponsor2.webp" alt="株式会社MIERUNEさんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/sponsor3.webp" alt="株式会社えにしテックさんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/sponsor4.webp" alt="STORES株式会社さんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/sponsor5.webp" alt="株式会社ロッカさんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/sponsor6.webp" alt="株式会社SmartHRさんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/sponsor7.webp" alt="ピクシブ株式会社さんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/ebilt.webp" alt="オーガナイザーえびさんのLT">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/sponsor1.webp" alt="フリー株式会社さんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/sponsor2.webp" alt="株式会社MIERUNEさんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/sponsor3.webp" alt="株式会社えにしテックさんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/sponsor4.webp" alt="STORES株式会社さんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/sponsor5.webp" alt="株式会社ロッカさんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/sponsor6.webp" alt="株式会社SmartHRさんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/sponsor7.webp" alt="ピクシブ株式会社さんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/ebilt.webp" alt="オーガナイザーえびさんのLT">
 </div>
 
 ## 本のコーナー
@@ -162,10 +146,8 @@ Girls一人一人にマンツーマンでコーチがつき、10月17日（金�
 ワークショップの合間に、本を手に取って読んでいる参加者の姿も見られて、「置いてよかったなぁ」とうれしい気持ちになりました。
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/book1.webp" alt="本のコーナーに並んでいる本1">
-    <img class="photo" src="/images/blog/sapporo2nd/book2.webp" alt="本のコーナーに並んでいる本2">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/book1.webp" alt="本のコーナーに並んでいる本1">
+  <img class="photo" src="/images/blog/sapporo2nd/book2.webp" alt="本のコーナーに並んでいる本2">
 </div>
 
 ## ノベルティグッズ
@@ -174,12 +156,10 @@ Girls一人一人にマンツーマンでコーチがつき、10月17日（金�
 多くの企業様からのご協力に心より感謝いたします。
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/novelty1.webp" alt="GMOペパボさん：アクリルブロック">
-    <img class="photo" src="/images/blog/sapporo2nd/novelty2.webp" alt="GMOペパボさん：吸着ポスター">
-    <img class="photo" src="/images/blog/sapporo2nd/novelty3.webp" alt="GMOペパボさん：スタッフTシャツ">
-    <img class="photo" src="/images/blog/sapporo2nd/novelty4.webp" alt="STORES株式会社さん：ツバメようかん">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/novelty1.webp" alt="GMOペパボさん：アクリルブロック">
+  <img class="photo" src="/images/blog/sapporo2nd/novelty2.webp" alt="GMOペパボさん：吸着ポスター">
+  <img class="photo" src="/images/blog/sapporo2nd/novelty3.webp" alt="GMOペパボさん：スタッフTシャツ">
+  <img class="photo" src="/images/blog/sapporo2nd/novelty4.webp" alt="STORES株式会社さん：ツバメようかん">
 </div>
 
 ## アプリ開発Done!！
@@ -188,13 +168,11 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 なんとか全チーム無事にデプロイすることができました。お疲れ様でした！
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/team1.webp" alt="ヒグマチームデプロイ完了！">
-    <img class="photo" src="/images/blog/sapporo2nd/team2.webp" alt="シマエナガチームデプロイ完了！">
-    <img class="photo" src="/images/blog/sapporo2nd/team3.webp" alt="キタキツネチームデプロイ完了！">
-    <img class="photo" src="/images/blog/sapporo2nd/team4.webp" alt="エゾリスチームデプロイ完了！">
-    <img class="photo" src="/images/blog/sapporo2nd/team5.webp" alt="エゾユキウサギチームデプロイ完了！">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/team1.webp" alt="ヒグマチームデプロイ完了！">
+  <img class="photo" src="/images/blog/sapporo2nd/team2.webp" alt="シマエナガチームデプロイ完了！">
+  <img class="photo" src="/images/blog/sapporo2nd/team3.webp" alt="キタキツネチームデプロイ完了！">
+  <img class="photo" src="/images/blog/sapporo2nd/team4.webp" alt="エゾリスチームデプロイ完了！">
+  <img class="photo" src="/images/blog/sapporo2nd/team5.webp" alt="エゾユキウサギチームデプロイ完了！">
 </div>
 
 ## クロージング
@@ -203,10 +181,8 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 全員がデプロイまでたどり着けていて、達成感のある締めくくりになりました。
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/closing.webp" alt="クロージング">
-    <img class="photo" src="/images/blog/sapporo2nd/syugo.webp" alt="全体集合写真">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/closing.webp" alt="クロージング">
+  <img class="photo" src="/images/blog/sapporo2nd/syugo.webp" alt="全体集合写真">
 </div>
 
 ## アフターパーティ
@@ -216,12 +192,10 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 「これどんな味なんだろう？」と参加者のみなさんが盛り上がりながらおしゃべりしている様子を見て、オーガナイザー一同、「開催してよかったなあ」としみじみ感じるひとときでした。
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/ohagi.webp" alt="増田おはぎのおはぎ">
-    <img class="photo" src="/images/blog/sapporo2nd/afteroyatsu.webp" alt="アフターパーティのおやつ（北海道銘菓）">
-    <img class="photo" src="/images/blog/sapporo2nd/afterkaijo.webp" alt="アフターパーティ会場の様子">
-    <img class="photo" src="/images/blog/sapporo2nd/afterparty.webp" alt="アフターパーティ交流中の様子">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/ohagi.webp" alt="増田おはぎのおはぎ">
+  <img class="photo" src="/images/blog/sapporo2nd/afteroyatsu.webp" alt="アフターパーティのおやつ（北海道銘菓）">
+  <img class="photo" src="/images/blog/sapporo2nd/afterkaijo.webp" alt="アフターパーティ会場の様子">
+  <img class="photo" src="/images/blog/sapporo2nd/afterparty.webp" alt="アフターパーティ交流中の様子">
 </div>
 
 アフターパーティでは、コーチLT・コミュニティ紹介のLTをしていただきました！
@@ -234,13 +208,11 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 ○Rails Girls Japanについて / 江森さん（[@emorima](https://x.com/emorima)）
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/after1.webp" alt="西原さんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/after2.webp" alt="西村さんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/after3.webp" alt="島田さんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/after4.webp" alt="江森さんのLT">
-    <img class="photo" src="/images/blog/sapporo2nd/afterlt.webp" alt="待機中のLT登壇者の方々">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/after1.webp" alt="西原さんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/after2.webp" alt="西村さんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/after3.webp" alt="島田さんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/after4.webp" alt="江森さんのLT">
+  <img class="photo" src="/images/blog/sapporo2nd/afterlt.webp" alt="待機中のLT登壇者の方々">
 </div>
 
 今回の Sapporo 2nd には、なんと Sapporo 1st のオーガナイザー・omega さんも見学に来てくれました。
@@ -248,9 +220,7 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 差し入れのお菓子までいただき、本当にありがとうございました🍪
 
 <div class="photos">
-  <div>
-    <img class="photo" src="/images/blog/sapporo2nd/sasiire.webp" alt="omegaさんからの差し入れのお菓子">
-  </div>
+  <img class="photo" src="/images/blog/sapporo2nd/sasiire.webp" alt="omegaさんからの差し入れのお菓子">
 </div>
 
 ## さいごに
