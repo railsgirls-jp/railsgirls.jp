@@ -166,7 +166,7 @@ Girls一人一人にマンツーマンでコーチがつき、10月17日（金�
   <img class="photo" src="/images/blog/sapporo2nd/novelty4.webp" alt="STORES株式会社さん：ツバメようかん">
 </div>
 
-## アプリ開発Done!！
+## アプリ開発Done!!
 
 Webアプリ開発完了後、チームごとに集合写真を撮りました。
 なんとか全チーム無事にデプロイすることができました。お疲れ様でした！
