@@ -12,6 +12,20 @@
   <link href="/css/style.css" rel="stylesheet"/>
   <link href="/favicon.png" rel="shortcut icon"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- OGP -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}"/>
+  <meta property="og:url" content="{{ page.url | absolute_url }}"/>
+  {% if page.image %}
+    <meta property="og:image" content="{{ page.image | absolute_url }}"/>
+  {% endif %}
+
+  <!-- Twitter -->
+  {% if page.image %}
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{ page.title }}"/>
+    <meta name="twitter:image" content="{{ page.image | absolute_url }}"/>
+  {% endif %}
 </head>
 <body>
   {% include header.html %}
