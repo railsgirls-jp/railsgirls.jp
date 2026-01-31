@@ -110,8 +110,8 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 Bashウィンドウで以下のコマンドを実行してください。
 
 {% highlight sh %}
-rbenv install 3.4.7
-rbenv global 3.4.7
+rbenv install 4.0.1
+rbenv global 4.0.1
 {% endhighlight %}
 
 作業完了後に、以下のコマンドを実行してください。
@@ -120,7 +120,7 @@ rbenv global 3.4.7
 ruby --version
 {% endhighlight %}
 
-`3.4.7` という数字が含まれた結果になるはずです。
+`4.0.1` という数字が含まれた結果になるはずです。
 
 ### *3.* Railsのインストール
 
