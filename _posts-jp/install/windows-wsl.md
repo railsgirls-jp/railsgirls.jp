@@ -136,7 +136,7 @@ gem install rails --no-document
 rails --version
 {% endhighlight %}
 
-`Rails 8.0.3` と表示されるはずですが、それ以上のバージョンでも良いです。
+`Rails 8.1.2` と表示されるはずですが、それ以上のバージョンでも良いです。
 
 <hr />
 
