@@ -23,7 +23,7 @@
 * ガイド 10: これらのサービスのどれかで [あなたのアプリをインターネットに公開しよう](/deployment) {% if page.permalink == 'deployment' %}(このページです！){% endif %}
   - [Fly.io](/deployment/fly-io) {% if page.permalink == 'deployment/fly-io' %}(このページです！){% endif %}
   - [Heroku](/deployment/heroku) {% if page.permalink == 'deployment/heroku' %}(このページです！){% endif %}
-  - [DigitalOcean](/digitalocean) {% if page.permalink == 'digitalocean' %}(このページです！){% endif %}
+  - [DigitalOcean](/deployment/digitalocean) {% if page.permalink == 'deployment/digitalocean' %}(このページです！){% endif %}
   - [OpenShift](/openshift) {% if page.permalink == 'openshift' %}(このページです！){% endif %}
   - [anynines](/anynines) {% if page.permalink == 'anynines' %}(このページです！){% endif %}
   - [Engine Yard](/engineyard) {% if page.permalink == 'engineyard' %}(このページです！){% endif %}
