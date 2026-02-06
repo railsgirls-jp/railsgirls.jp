@@ -15,15 +15,30 @@ div.photos {
 }
 
 div.photos img.photo {
-    max-width: calc(50% - 2.5px);
-    width: calc(50% - 2.5px);
+    width: 100%;
     object-fit: cover;
+    margin-bottom: 2.5px;
 }
 
 div.photos img.vertically-photo {
     max-width: 250px;
     width: 100%;
     object-fit: cover;
+    margin-bottom: 2.5px;
+}
+
+/* PC表示 */
+@media (min-width: 768px) {
+    div.photos img.photo {
+        max-width: calc(50% - 2.5px);
+        width: calc(50% - 2.5px);
+        margin-bottom: 5px;
+    }
+
+    div.photos img.vertically-photo {
+        max-width: 250px;
+        margin-bottom: 5px;
+    }
 }
 
 div.flex-photos img.vertically-photo {
