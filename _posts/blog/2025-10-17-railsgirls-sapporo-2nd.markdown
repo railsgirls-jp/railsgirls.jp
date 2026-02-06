@@ -226,7 +226,7 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 どの発表も本当に素晴らしく、資料へのリンクも掲載しましたので、ぜひご覧ください！
 
 - [情報技術系の勉強会とコミュニティ文化](https://www.docswell.com/s/tomio2480/5JQVEN-introduction-to-study-group) / 西原さん（[@tomio2480](https://x.com/tomio2480)）
-- [Sapporo Engineer Baseについて](https://sapporo-engineer-base.dev/) / 特別協力Sapporo Engineer Base&コーチ 西村さん（[@_n13u_](https://x.com/_n13u_)）
+- [Sapporo Engineer Baseについて](https://sapporo-engineer-base.dev/) / 特別協力Sapporo Engineer Base&コーチ 西村さん（[@\_n13u\_](https://x.com/_n13u_)）
 - [One Enishi After Another](https://speakerdeck.com/snoozer05/one-enishi-after-another) / コーチ 島田さん（[@snoozer05](https://x.com/snoozer05)）
 - Rails Girls Japanについて / 江森さん（[@emorima](https://x.com/emorima)）
 
