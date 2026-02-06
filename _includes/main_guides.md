@@ -26,7 +26,7 @@
   - [DigitalOcean](/deployment/digitalocean) {% if page.permalink == 'deployment/digitalocean' %}(このページです！){% endif %}
   - [OpenShift](/deployment/openshift) {% if page.permalink == 'deployment/openshift' %}(このページです！){% endif %}
   - [anynines](/deployment/anynines) {% if page.permalink == 'deployment/anynines' %}(このページです！){% endif %}
-  - [Engine Yard](/engineyard) {% if page.permalink == 'engineyard' %}(このページです！){% endif %}
+  - [Engine Yard](/deployment/engineyard) {% if page.permalink == 'deployment/engineyard' %}(このページです！){% endif %}
 * ガイド 11: [HTML と CSS を使ってアイデアのページをデザインしてみよう](/design) {% if page.permalink == 'design' %}(このページです！){% endif %}
 * ガイド 12: [コメント機能を追加しよう](/commenting) {% if page.permalink == 'commenting' %}(このページです！){% endif %}
 * ガイド 13: [画像のサムネイルを作ってみよう](/thumbnails) {% if page.permalink == 'thumbnails' %}(このページです！){% endif %}
