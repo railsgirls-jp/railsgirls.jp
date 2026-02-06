@@ -25,7 +25,7 @@
   - [Heroku](/deployment/heroku) {% if page.permalink == 'deployment/heroku' %}(このページです！){% endif %}
   - [DigitalOcean](/deployment/digitalocean) {% if page.permalink == 'deployment/digitalocean' %}(このページです！){% endif %}
   - [OpenShift](/deployment/openshift) {% if page.permalink == 'deployment/openshift' %}(このページです！){% endif %}
-  - [anynines](/anynines) {% if page.permalink == 'anynines' %}(このページです！){% endif %}
+  - [anynines](/deployment/anynines) {% if page.permalink == 'deployment/anynines' %}(このページです！){% endif %}
   - [Engine Yard](/engineyard) {% if page.permalink == 'engineyard' %}(このページです！){% endif %}
 * ガイド 11: [HTML と CSS を使ってアイデアのページをデザインしてみよう](/design) {% if page.permalink == 'design' %}(このページです！){% endif %}
 * ガイド 12: [コメント機能を追加しよう](/commenting) {% if page.permalink == 'commenting' %}(このページです！){% endif %}
