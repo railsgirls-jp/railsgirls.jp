@@ -7,45 +7,45 @@ image: /images/blog/sapporo2nd/syugo.webp
 
 <style type="text/css">
 div.photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 1em;
-    gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  gap: 5px;
 }
 
 div.photos img.photo {
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 2.5px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2.5px;
 }
 
 div.photos img.vertically-photo {
-    max-width: 250px;
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 2.5px;
+  max-width: 250px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2.5px;
 }
 
 /* PC表示 */
 @media (min-width: 768px) {
-    div.photos img.photo {
-        max-width: calc(50% - 2.5px);
-        width: calc(50% - 2.5px);
-        margin-bottom: 5px;
-    }
+  div.photos img.photo {
+    max-width: calc(50% - 2.5px);
+    width: calc(50% - 2.5px);
+    margin-bottom: 5px;
+  }
 
-    div.photos img.vertically-photo {
-        max-width: 250px;
-        margin-bottom: 5px;
-    }
+  div.photos img.vertically-photo {
+    max-width: 250px;
+    margin-bottom: 5px;
+  }
 }
 
 div.flex-photos img.vertically-photo {
-    max-width: 350px;
-    width: 100%;
-    object-fit: cover;
-    margin-right: 0.5rem;
+  max-width: 350px;
+  width: 100%;
+  object-fit: cover;
+  margin-right: 0.5rem;
 }
 </style>
 
