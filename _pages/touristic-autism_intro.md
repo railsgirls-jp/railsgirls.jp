@@ -59,7 +59,7 @@ git config --global user.email your.email@example.com
 ## 追加ガイド
 
 * Guide 0: [Ruby、Rails、コンソール、テキストエディタについての便利なチートシート](https://www.pragtob.info/rails-beginner-cheatsheet/)
-* Guide 1: [Herokuであなたのアプリをオンラインにあげよう by Terence Lee](/heroku) / [OpenShiftであなたのアプリをオンラインにあげよう by Katie Miller](/openshift) / [anyninesであなたのアプリをオンラインにあげよう](/anynines)
+* Guide 1: [Herokuであなたのアプリをオンラインにあげよう by Terence Lee](/deployment/heroku) / [OpenShiftであなたのアプリをオンラインにあげよう by Katie Miller](/openshift) / [anyninesであなたのアプリをオンラインにあげよう](/anynines)
 * Guide 2: [Gravatarでプロフィール写真を追加する](/gravatar)
 * Guide 3: [Lucy Bainによるアプリの追加説明を見る](https://github.com/lbain/railsgirls)
 

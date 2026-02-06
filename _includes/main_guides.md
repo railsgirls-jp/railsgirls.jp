@@ -22,7 +22,7 @@
 * ガイド 9: [GitHub であなたのアプリのコードを公開しよう](/github) {% if page.permalink == 'github' %}(このページです！){% endif %}
 * ガイド 10: これらのサービスのどれかで [あなたのアプリをインターネットに公開しよう](/deployment) {% if page.permalink == 'deployment' %}(このページです！){% endif %}
   - [Fly.io](/deployment/fly-io) {% if page.permalink == 'deployment/fly-io' %}(このページです！){% endif %}
-  - [Heroku](/heroku) {% if page.permalink == 'heroku' %}(このページです！){% endif %}
+  - [Heroku](/deployment/heroku) {% if page.permalink == 'deployment/heroku' %}(このページです！){% endif %}
   - [DigitalOcean](/digitalocean) {% if page.permalink == 'digitalocean' %}(このページです！){% endif %}
   - [OpenShift](/openshift) {% if page.permalink == 'openshift' %}(このページです！){% endif %}
   - [anynines](/anynines) {% if page.permalink == 'anynines' %}(このページです！){% endif %}

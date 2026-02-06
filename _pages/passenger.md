@@ -123,7 +123,7 @@ git push
 ここからは[Herokuガイド][heroku-guide]に従うこともできます。
 
 [passenger-guide]: https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/
-[heroku-guide]: /heroku
+[heroku-guide]: /deployment/heroku
 
 #### トラブルシューティング
 
