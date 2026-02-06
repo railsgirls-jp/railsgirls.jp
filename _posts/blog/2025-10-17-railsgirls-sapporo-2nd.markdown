@@ -260,6 +260,6 @@ Webアプリ開発完了後、チームごとに集合写真を撮りました�
 
 ### 関連リンク
 
-- [公式Twitter](https://x.com/railsgsapporo)
-- [#railsgirlssapporo ポスト一覧](https://x.com/search?q=%23railsgirlssapporo&f=live)
+- <a href="https://x.com/railsgsapporo" target="_blank">公式Twitter</a>
+- <a href="https://x.com/search?q=%23railsgirlssapporo&f=live" target="_blank">#railsgirlssapporo ポスト一覧</a>
 - [Rails Girls Sapporo 2nd公式ウェブサイト](https://railsgirls.com/sapporo-2nd.html)
