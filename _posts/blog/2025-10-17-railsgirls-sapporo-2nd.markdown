@@ -63,7 +63,7 @@ div.flex-photos img.vertically-photo {
 
 ## Rails Girls Sapporo 2nd 開催のきっかけ
 
-オーガナイザーのはるが、2024年6月末に [えにしテック15周年記念カンファレンス](https://enishi-tech-15th-anniv-conf.peatix.com/) に参加した際に、今回コーチ・LTもしていただいた島田さん（[@snoozer05](https://x.com/snoozer05)）が、Rails Girls Japanの江森さん（[@emorima](https://x.com/emorima)）を紹介してくださいました。
+オーガナイザーのはるが2024年6月末に [えにしテック15周年記念カンファレンス](https://enishi-tech-15th-anniv-conf.peatix.com/) に参加した際、今回コーチ・LTもしていただいた島田さん（[@snoozer05](https://x.com/snoozer05)）がRails Girls Japanの江森さん（[@emorima](https://x.com/emorima)）を紹介してくださいました。
 
 そこで、札幌でのRails Girlsは10年以上開催されていないことを知りました。
 札幌でも女性がプログラミングに親しめる場や、Rubyコミュニティのイベントに参加できる機会を作りたいと思い、北海道のコミュニティ内で知り合った3人で開催することになりました！
