@@ -1,7 +1,7 @@
 ---
 layout: main_guide
 title: OpenShiftであなたのアプリをオンラインにあげよう
-permalink: openshift
+permalink: deployment/openshift
 ---
 
 # OpenShiftであなたのアプリをオンラインにあげよう

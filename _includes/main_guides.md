@@ -24,7 +24,7 @@
   - [Fly.io](/deployment/fly-io) {% if page.permalink == 'deployment/fly-io' %}(このページです！){% endif %}
   - [Heroku](/deployment/heroku) {% if page.permalink == 'deployment/heroku' %}(このページです！){% endif %}
   - [DigitalOcean](/deployment/digitalocean) {% if page.permalink == 'deployment/digitalocean' %}(このページです！){% endif %}
-  - [OpenShift](/openshift) {% if page.permalink == 'openshift' %}(このページです！){% endif %}
+  - [OpenShift](/deployment/openshift) {% if page.permalink == 'deployment/openshift' %}(このページです！){% endif %}
   - [anynines](/anynines) {% if page.permalink == 'anynines' %}(このページです！){% endif %}
   - [Engine Yard](/engineyard) {% if page.permalink == 'engineyard' %}(このページです！){% endif %}
 * ガイド 11: [HTML と CSS を使ってアイデアのページをデザインしてみよう](/design) {% if page.permalink == 'design' %}(このページです！){% endif %}
