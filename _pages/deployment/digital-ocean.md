@@ -2,7 +2,7 @@
 layout: main_guide
 title: DigitalOceanであなたのアプリをオンラインにあげよう
 description: "このガイドに沿ってDigitalOceanであなたのアプリをデプロイしよう"
-permalink: digitalocean
+permalink: deployment/digitalocean
 ---
 
 # DigitalOceanであなたのアプリをオンラインにあげよう

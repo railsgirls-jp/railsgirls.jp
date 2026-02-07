@@ -1,7 +1,7 @@
 ---
 layout: main_guide
 title: Herokuであなたのアプリをオンラインにあげよう
-permalink: heroku
+permalink: deployment/heroku
 ---
 
 # Herokuであなたのアプリをオンラインにあげよう

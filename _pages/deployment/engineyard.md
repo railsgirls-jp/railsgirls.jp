@@ -1,7 +1,7 @@
 ---
 layout: main_guide
 title: Engine Yardであなたのアプリをオンラインにあげよう
-permalink: engineyard
+permalink: deployment/engineyard
 ---
 
 # Engine Yardであなたのアプリをオンラインにあげよう
