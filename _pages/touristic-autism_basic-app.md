@@ -9,7 +9,7 @@ permalink: touristic-autism_basic-app
 *Created by Myriam Leggieri, [@iammyr](https://twitter.com/iammyr)*
 *for [Rails Girls Galway](https://github.com/RailsGirlsGalway)*
 
-このガイドでは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [画像のサムネイルを作ってみよう](/thumbnails)、[Deviseによる認証を追加してみよう](/devise)、[HTML と CSS を使ってアイデアのページをデザインしてみよう](/design)、[OpenShiftであなたのアプリをオンラインにあげよう](/openshift)、[コメント機能を追加しよう](/commenting) のチュートリアルといった基礎的なガイドを統合、適用しています。
+このガイドでは、[Ruby on Rails Tutorial](https://www.railstutorial.org/book)、[はじめてのアプリを作る](/app)、そして [画像のサムネイルを作ってみよう](/thumbnails)、[Deviseによる認証を追加してみよう](/devise)、[HTML と CSS を使ってアイデアのページをデザインしてみよう](/design)、[OpenShiftであなたのアプリをオンラインにあげよう](/deployment/openshift)、[コメント機能を追加しよう](/commenting) のチュートリアルといった基礎的なガイドを統合、適用しています。
 
 
 ## ツールを知る

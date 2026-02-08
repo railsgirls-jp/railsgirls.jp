@@ -1,7 +1,7 @@
 ---
 layout: main_guide
 title: anyninesであなたのアプリをオンラインにあげよう
-permalink: anynines
+permalink: deployment/anynines
 ---
 
 # anyninesであなたのアプリをオンラインにあげよう
