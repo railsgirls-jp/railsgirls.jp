@@ -64,7 +64,7 @@ __COACH__: ローカルファイルはブラウザで開くことができ、URL
   <head>
     <title>My Little Webapp: Coding Is Magic</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://rawgithub.com/krzysztofbialek/Rails-Girls-Warsaw-App/master/style.css" />
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/krzysztofbialek/Rails-Girls-Warsaw-App/master/style.css" />
   </head>
   <body>
   </body>
