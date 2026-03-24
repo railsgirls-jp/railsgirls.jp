@@ -28,7 +28,7 @@ permalink: remote
 * オプションとして、あなたと友達のGoogleアカウントか、Skypeアカウント、もしくは他の手段でも良いですが、お互いの声を聞くことができるものがあると良いです。
 
 ## Madeyeをどのようにインストールしますか？
-1. [Node.js](http://howtonode.org/how-to-install-nodejs)をインストールします。
+1. [Node.js](https://nodejs.org/en/download/)をインストールします。
 2. LinuxまたはMacにインストールする場合は、ターミナルで次のようにタイプしてください: `curl https://madeye.io/install | sh`。 Windowsマシンにインストールする場合は、次のように入力します:  `npm install -g madeye`。
 3. Madeyeがインストールされました！
 4. ターミナルで共有したいディレクトリで`madeye`と入力しましょう。

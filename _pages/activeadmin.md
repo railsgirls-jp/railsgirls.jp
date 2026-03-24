@@ -72,7 +72,7 @@ $ rails generate active_admin:resource Idea
 *「Idea」を任意のモデルに置き換えて、そのモデルを Active Admin に登録することもできます。*
 
 ### ストロングパラメータの設定
-モデルを更新する際に、**ActiveModel::ForbiddenAttributesError in Admin::IdeasController#update** というエラーが発生するのを防ぐため、[permit_params](http://activeadmin.info/docs/2-resource-customization.html) メソッドを使用して、変更可能な属性を定義する必要があります。
+モデルを更新する際に、**ActiveModel::ForbiddenAttributesError in Admin::IdeasController#update** というエラーが発生するのを防ぐため、[permit_params](https://activeadmin.info/2-resource-customization.html) メソッドを使用して、変更可能な属性を定義する必要があります。
 
  `app/admin/idea.rb` ファイルを開き、 `:name`、`:description`、`:picture` を `permit_params` に追加します。
 {% highlight ruby %}
