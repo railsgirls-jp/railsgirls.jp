@@ -125,7 +125,7 @@ GitHubのパーソナルアクセストークンを作成するには、このUR
 
 「New personal access token (classic)」の設定画面が表示されたら、「Note」の欄に何用のトークンかの説明を入力し(例: RailsGirls)、有効期限を選びます。(有効期限を過ぎてもこのプロジェクトを使用する予定がある場合は、PATの有効期限が切れたときにこの手順を繰り返す必要があります)
 
-次に、「Select scopes」の設定箇所で、一番上の「repo」チェックボックスを選択すると、PATに「Full control of private repositories（プライベートリポジトリの完全制御）」が反映されます。
+次に、「Select scopes」の設定箇所で、一番上の「repo」チェックボックスを選択すると、PATに「Full control of private repositories（プライベートリポジトリの完全制御）」が反映されます。そして、その次の「workflow」チェックボックスを選択すると、PATに「Update GitHub Action workflow（GitHub Actionワークフローの更新）」が反映されます。
 
 最後に、ページ下部の「Generate token」をクリックします。
 
