@@ -48,7 +48,7 @@ Kaigi on Railsは、Railsに関する国内の主要カンファレンスの一�
 
 ### お申し込み方法
 
-支援を希望される方は、<a href="https://forms.gle/mE1DD2a3KotCbZup7" target="_blank" rel="noopener noreferrer">申し込みフォーム</a>へ
+支援を希望される方は、<a href="https://forms.gle/YwHMD3CgLN4Tdo3N8" target="_blank" rel="noopener noreferrer">申し込みフォーム</a>へ
 必要事項を記入の上、お申込みください。
 
 #### 応募要件
