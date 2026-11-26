@@ -16,10 +16,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   # Test job is always triggered as continuous integration
   build:
@@ -64,6 +60,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    concurrency:
+      group: "pages"
+      cancel-in-progress: true
     if: github.ref == 'refs/heads/master'
     steps:
       - name: 🚀 Deploy to GitHub Pages
